@@ -37,331 +37,187 @@
 		<p></p>
 		<p></p>
 		<li>
-			<p><span></span>
-			<span>AsyncTask&lt;String,
-                Void, String&gt;</span>
-			<span>doInBackground</span>
-			<span>onPostExecute</span>
-			<span>updateMessage</span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span></p>
 			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-
-		<li>
-			<p></p>
-			<p>Лабораторная работа «Использование AsyncTask»</p>
-			<p>1. Создайте проект AsyncTaskSample.</p>
-			<p>2. В разметке главной Активности создайте поле ввода (EditText) и две</p>
-			<p>кнопки: «Сохранить» и «Прочитать».</p>
-			<p>3. Реализуйте сохранение текста из поля ввода в SharedPreferences (при</p>
-			<p>нажатии кнопки «Сохранить») и чтение из SharedPreferences (при</p>
-			<p>нажатии кнопки</p>
-			<p>b12thread</p>
 			<listing>
-===================================================
-layout/activity_main.xml
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+=====================================	D:\programs\android\B11Notif\app\src\main\res\layout\activity_main.xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"&gt;
+    tools:context=".MainActivity">
 
-    &lt;EditText
+    <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp" /&gt;
+        android:background="#DDF"
+        android:text=""
+        android:textSize="18sp" />
 
-    &lt;Button
-        android:id="@+id/buttonSave"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editText"
-        android:layout_alignParentRight="true"
-        android:onClick="onClickSave"
-        android:text="Save" /&gt;
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="@android:string/ok"
+        android:textSize="18sp" />
 
-    &lt;Button
-        android:id="@+id/buttonRead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_toLeftOf="@id/buttonSave"
-        android:onClick="onClickRead"
-        android:text="Read" /&gt;
-    &lt;Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:text="Clear"
-        android:layout_toLeftOf="@id/buttonRead"
-        android:onClick="onClickClear"/&gt;
+</RelativeLayout>
 
-&lt;/RelativeLayout&gt;
-===================================================
-com/example/freon/b12thread/MainActivity.java
-package com.example.freon.b12thread;
+=====================================	D:\programs\android\B11Notif\app\src\main\java\study\com\b11notif\MainActivity.java	package study.com.b11notif;
 
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected EditText mEditText;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mEditText = (EditText) findViewById(R.id.editText);
-    }
-
-    void setmEditText(String s) {
-        mEditText.setText(s);
-    }
-
-    public void onClickSave(View view) {
-        Toast.makeText(this, "save ", Toast.LENGTH_LONG).show();
-        String string = mEditText.getText().toString();
-        updateMessage("save", string);
-    }
-
-    public void onClickRead(View view) {
-        Toast.makeText(this, "read ", Toast.LENGTH_LONG).show();
-        updateMessage("read", "");
-    }
-
-    void updateMessage(String string1, String string2) {
-        new SaveReadMessageTask().execute(string1, string2);
-    }
-
-    public void onClickClear(View view) {
-        mEditText.setText("");
-    }
-
-    private class SaveReadMessageTask extends AsyncTask&lt;String,
-            Void, String&gt; {
-
-        String stringDo, stringWhat;
-        SharedPreferences mSharedPreferences;
-
-        @Override
-        protected String doInBackground(String... strings) {
-            stringDo = strings[0];
-            stringWhat = strings[1];
-            String string = "";
-            mSharedPreferences = getSharedPreferences("words", MODE_PRIVATE);
-            if (stringDo.equals("save")) {
-                SharedPreferences.Editor editor = mSharedPreferences.edit();
-                editor.putString("stringWhat", stringWhat);
-                editor.commit();
-            } else if (stringDo.equals("read")) {
-                string = mSharedPreferences.getString("stringWhat", "");
-            }
-            return stringDo + " " + string;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            String[] list = s.split(" ");
-            if (list[0].equals("read")) {
-                String string = "";
-                int k = list.length;
-                for (int i = 1; i &lt; list.length; i++) {
-                    string += list[i];
-                    string += " ";
-                }
-                string = string.trim();
-                setmEditText(string);
-            }
-        }
-    }
-}
-===================================================
-			</listing>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p>B12Thread</p>
-			<p>Как это работает</p>
-			<p>В class MainActivity </p>
-			<p>вставляется субкласс LoadMessageTask </p>
-			<p>потомок от AsyncTask&lt;String,
-                Void, String&gt;</p>
-			<p>,где </p>
-			<p>String - то, что принимает</p>
-			<p>Void</p>
-			<p>String - то, что возвращает</p>
-			<table>
-				<tr>
-					<td>String</td>
-					<td>execute(string1, string2)</td>
-					<td>doInBackground(String... strings)</td>
-					<td>strings[0],strings[1]</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Void</td>
-					<td>onProgressUpdate</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>String</td>
-					<td>onPostExecute(String s)</td>
-					<td>String doInBackground</td>
-					<td>setmEditText(s)</td>
-					<td></td>
-				</tr>
-			</table>
-			<hr>
-			<p>        protected String doInBackground(String... strings)</p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p>B12Thread2</p>
-			<p>Поток принимает две строки updateMessage("1","2"), возвращает из сумму String doInBackground() и записывает в editText setmEditText(String s) из onPostExecute(String s)</p>
-			<p></p>
-			<listing>
-package com.example.freon.b12thread;
-
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
-public class MainActivity extends AppCompatActivity {
-
-    SharedPreferences mSharedPreferences;
-    protected EditText mEditText;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mEditText = (EditText)findViewById(R.id.editText);
-
-        String string="321";
-        updateMessage("1","2");
-
-    }
-
-    void setmEditText(String s){
-        mEditText.setText(s);
-    }
-
-    public void onClickSave(View view) {
-        Toast.makeText(this,"save ",Toast.LENGTH_LONG).show();
-
-
-    }
-
-    public void onClickRead(View view) {
-        Toast.makeText(this,"read ",Toast.LENGTH_LONG).show();
-    }
-
-    void updateMessage(String string1, String string2){
-
-        new LoadMessageTask().execute(string1, string2);
-    }
-
-    private class LoadMessageTask extends AsyncTask&lt;String,
-                Void, String&gt; {
-
-        @Override
-        protected String doInBackground(String... strings) {
-
-            return strings[0]+strings[1];
-        }
-        @Override
-        protected void onPostExecute(String s) {
-            setmEditText(s);
-        }
-    }
-
-}
-
-			</listing>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p>SharedPreferences</p>
-			<p>Для напоминания</p>
-			<listing>
-package com.example.freon.b12thread;
-
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-
-public class MainActivity extends AppCompatActivity {
-
-    SharedPreferences mSharedPreferences;
+    public static final String KEY_TEXT = "KEY_TEXT";
     EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mEditText = (EditText)findViewById(R.id.editText);
-        mSharedPreferences = getSharedPreferences("words",MODE_PRIVATE);
-
+        mEditText = findViewById(R.id.editText);
     }
 
-    public void onClickSave(View view) {
-        Toast.makeText(this,"save ",Toast.LENGTH_LONG).show();
-        String string = mEditText.getText().toString();
-        SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.putString("word1",string);
-        editor.commit();
-    }
-
-    public void onClickRead(View view) {
-        Toast.makeText(this,"read ",Toast.LENGTH_LONG).show();
-        String string;
-
-        string = mSharedPreferences.getString("word1","");
-        mEditText.setText(string);
+    public void onClick(View view) {
+        String string =
+                mEditText.getText().toString();
+        Intent intent = new Intent(view.getContext(), SecondActivity.class);
+        intent.putExtra(KEY_TEXT, string);
+        startActivity(intent);
     }
 }
 
+
+
+=====================================	D:\programs\android\B11Notif\app\src\main\res\layout\activity_second.xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DFE"
+        android:text=""
+        android:textSize="18sp" />
+
+</RelativeLayout>
+
+=====================================	D:\programs\android\B11Notif\app\src\main\java\study\com\b11notif\SecondActivity.javapackage study.com.b11notif;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class SecondActivity extends AppCompatActivity {
+
+    public static final String KEY_TEXT = "KEY_TEXT";
+    TextView mTextView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        mTextView = findViewById(R.id.textView);
+        Intent intent = getIntent();
+        String string =
+                intent.getStringExtra(KEY_TEXT);
+        if(string != null){
+            mTextView.setText(string);
+        }
+    }
+}
+=====================================	D:\programs\android\B11Notif\app\src\main\AndroidManifest.xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b11notif">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SecondActivity">
+
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+=====================================
+
+
+=====================================
+
+
+=====================================
+
+
+=====================================
+
+
+=====================================
+
+
+
 			</listing>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
 			<p></p>
 			<p></p>
 			<p></p>
