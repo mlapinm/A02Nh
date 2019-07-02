@@ -328,6 +328,63 @@ public class MyCoolService extends Service {
 		</li>
 		<li>
 			<p></p>
+			<p>
+			<snap>onEvent</snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			<snap></snap>
+			</p>
+<p>EventBus in 3 steps</p>
+<p>Define events:</p>
+<p>public static class MessageEvent { /* Additional fields if needed */ }</p>
+<p>Prepare subscribers: Declare and annotate your subscribing method, optionally specify a thread mode:</p>
+<p>@Subscribe(threadMode = ThreadMode.MAIN)</p>
+<p>public void onMessageEvent(MessageEvent event) {/* Do something */};</p>
+<p>Register and unregister your subscriber. For example on Android, activities and fragments should usually register according to their life cycle:</p>
+<p>@Override</p>
+<p>public void onStart() {</p>
+<p>super.onStart();</p>
+<p>EventBus.getDefault().register(this);</p>
+<p>}</p>
+<p>@Override</p>
+<p>public void onStop() {</p>
+<p>super.onStop();</p>
+<p>EventBus.getDefault().unregister(this);</p>
+<p>}</p>
+<p>Post events:</p>
+<p>EventBus.getDefault().post(new MessageEvent());</p>
+<p>Read the full <a href="http://greenrobot.org/eventbus/documentation/how-to-get-started/">getting started guide</a>.</p>
+
+
+			<p><a href=""></a></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p>Notification</p>
+			<listing>
+    private void showNotification() {
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle("Wow!");
+        builder.setContentText(""+mString+" "+mCounter);
+        builder.setSmallIcon(android.R.drawable.stat_sys_warning);
+
+        Notification notification = builder.build();
+
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+        managerCompat.notify(1, notification);
+    }
+			</listing>
 			<p></p>
 			<p></p>
 			<p></p>
@@ -337,18 +394,31 @@ public class MyCoolService extends Service {
 			<p></p>
 		</li>
 		<li>
+			<p>showNotification + PendingIntent</p>
 			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p></p>
-			<p></p>
+			<list>
+    private void showNotification() {
+        Intent intent = new Intent(this, SecondaryActivity.class);
+        intent.putExtra(KEY_TEXT, "" + mString + " " + mCounter);
+
+        mPendingIntent = PendingIntent.getActivity(this,
+                1,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle("Wow!");
+        builder.setContentText("" + mString + " " + mCounter);
+        builder.setSmallIcon(android.R.drawable.stat_sys_warning);
+        builder.setContentIntent(mPendingIntent);
+
+        Notification notification = builder.build();
+
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+        managerCompat.notify(1, notification);
+    }
+
+			</list>
 			<p></p>
 			<p></p>
 			<p></p>
