@@ -67,10 +67,77 @@
 			<p>sudo apt-get install matchbox-keyboard</p>
 			<p></p>
 			<p></p>
-			<p></p>
+			<p>wiki.ru.com</p>
 			<p></p>
 		</li>
 		<li>
+			<p>python</p>
+			<p><a href="https://www.youtube.com/watch?v=hVpCbcONYzA">Setup Pycharm to run on remote device Raspberry Board</a></p>
+			<p><a href="https://habr.com/ru/post/256433/">Удаленный запуск в PyCharm Community Edition</a></p>
+			<p><a href="https://pythonprogramming.net/terminal-navigation-raspberry-pi-tutorials/">Terminal Navigation - Raspberry Pi tutorial</a></p>
+			<p><a href="https://myraspberry.ru/programmirovanie-python-na-raspberry-pi.html">Программирование на Python на Raspberry Pi</a></p>
+			<p><a href="https://habr.com/ru/post/137369/">Знакомство с wxPython. Часть первая. Первые шаги</a></p>
+			<p>Установка wxPython на Linux</p>
+			<p>библиотеки</p>
+			<listing>
+apt-get install -y libgtk2.0-dev libgtk-3-dev \
+	libjpeg-dev libtiff-dev \
+	libsdl1.2-dev libgstreamer-plugins-base0.10-dev \
+	libnotify-dev freeglut3 freeglut3-dev libsm-dev \
+	libwebkitgtk-dev libwebkitgtk-3.0-dev
+			</listing>
+			<p>wxPython</p>
+			<p>pip3 install wxPython</p>
+			<p></p>
+			<p></p>
+
+			<listing>
+import platform
+import wx
+
+
+class MyFrame(wx.Frame):
+
+    def __init__(self):
+        """Constructor"""
+        wx.Frame.__init__(
+            self, None, size=(500, 200), title='Version Info'
+        )
+        panel = wx.Panel(self)
+
+        py_version = 'Python version: ' + platform.python_version()
+        wx_version = 'wxPython version: ' + wx.version()
+        os_version = 'Operating System: ' + platform.platform()
+
+        main_sizer = wx.BoxSizer(wx.VERTICAL)
+        size = (20, -1)
+        main_sizer.Add(
+            wx.StaticText(panel, label=py_version), 0, wx.ALL, 5
+        )
+
+        main_sizer.Add(
+            wx.StaticText(panel, label=wx_version), 0, wx.ALL, 5
+        )
+
+        main_sizer.Add(
+            wx.StaticText(panel, label=os_version), 0, wx.ALL, 5
+        )
+
+        panel.SetSizer(main_sizer)
+
+        self.Show()
+
+
+if __name__ == '__main__':
+    app = wx.App(False)
+    frame = MyFrame()
+    app.MainLoop()
+
+			</listing>
+			<p><a href=""></a></p>
+			<p><a href=""></a></p>
+			<p><a href=""></a></p>
+			<p><a href=""></a></p>
 			<p><a href=""></a></p>
 			<p></p>
 			<p></p>
@@ -81,9 +148,20 @@
 			<p></p>
 		</li>
 		<li>
-			<p></p>
-			<p></p>
-			<p></p>
+			<p>Pcharm + wxpython</p>
+			<p>File/Setting.../Project Interpreter/+</p>
+			<p>wxpython install package</p>
+			<listing>
+import wx
+
+
+print("hello")
+app = wx.App()
+wnd = wx.Frame(None, wx.ID_ANY, "I'm the title")
+wnd.Show(True)
+app.MainLoop()
+
+			</listing>
 			<p></p>
 			<p></p>
 			<p></p>
