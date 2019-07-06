@@ -41,7 +41,7 @@
                <span></span>
            </p>
            <p></p>
-           <listing>
+           <listing style="background-color: #DEF;">
 ===================================
 D:\programs\android\B21Fragm\app\src\main\res\layout\activity_main.xml
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
@@ -268,15 +268,113 @@ public class MyFragment extends Fragment {
     }
 }
 ===================================
+D:\programs\android\B22Pager\app\src\main\java\study\com\b22pager\Logger.java
+package study.com.b22pager;
+
+import android.util.Log;
+
+public class Logger {
+    public static void logAll() {
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        for (int i = 0; i < stack.length; i++) {
+            Log.d("happy", " " + i + " " +
+                    stack[i].getClassName() +
+                    " " + stack[i].getMethodName());
+        }
+    }
+
+    public static void logMe() {
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        Log.d("happy", stack[3].getClassName() +
+                " " + stack[3].getMethodName());
+    }
+}
+
+===================================
            </listing>
            <p></p>
            <p></p>
            <p></p>
        </li>
        <li>
-           <p></p>
-           <p></p>
-           <p></p>
+           <p>B22Pager</p>
+           <p>PagerView</p>
+           <p>AsingTask запихивает бизнес логику в Активити - плохо, нет полного разделения.</p>
+           <listing style="background-color: #FED;">
+===================================
+D:\programs\android\B22Pager\app\src\main\res\layout\activity_main.xml
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BBF"
+        android:text="123"
+        android:textSize="22sp" /&gt;
+
+    &lt;android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"&gt;
+
+    &lt;/android.support.v4.view.ViewPager&gt;
+
+&lt;/LinearLayout&gt;
+===================================
+D:\programs\android\B22Pager\app\src\main\java\study\com\b22pager\MainActivity.java
+package study.com.b22pager;
+
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
+    private MyPagerAdapter adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        viewPager = findViewById(R.id.viewPager);
+        adapter = new MyPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+
+    }
+}
+===================================
+D:\programs\android\B22Pager\app\src\main\java\study\com\b22pager\MyPagerAdapter.java
+package study.com.b22pager;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+public class MyPagerAdapter extends FragmentPagerAdapter {
+    public MyPagerAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public Fragment getItem(int i) {
+        return MyFragment.getInstance("page " + i);
+    }
+
+    @Override
+    public int getCount() {
+        return 5;
+    }
+}
+===================================
+           </listing>
            <p></p>
            <p></p>
            <p></p>
