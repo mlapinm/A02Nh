@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 	<base target="_blank">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style>
@@ -25,403 +24,326 @@
 
 	</style>
 </head>
-
 <body>
-	<ol>
-		<p>Android2.pdf</p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<li>
-			<p><span></span>
-			<span>AsyncTask&lt;String,
-                Void, String&gt;</span>
-			<span>doInBackground</span>
-			<span>onPostExecute</span>
-			<span>updateMessage</span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-
-		<li>
-			<p></p>
-			<p>Лабораторная работа «Использование AsyncTask»</p>
-			<p>1. Создайте проект AsyncTaskSample.</p>
-			<p>2. В разметке главной Активности создайте поле ввода (EditText) и две</p>
-			<p>кнопки: «Сохранить» и «Прочитать».</p>
-			<p>3. Реализуйте сохранение текста из поля ввода в SharedPreferences (при</p>
-			<p>нажатии кнопки «Сохранить») и чтение из SharedPreferences (при</p>
-			<p>нажатии кнопки</p>
-			<p>b12thread</p>
-			<listing>
-===================================================
-layout/activity_main.xml
+   <ol>
+       <li>
+           <p>B21Fragm</p>
+           <p><a href="https://medium.com/square-corner-blog/advocating-against-android-fragments-81fd0b462c97">Advocating Against Android Fragments</a></p>
+           <p><a href="https://www.vogella.com/tutorials/AndroidFragments/article.html">Building dynamic user interfaces in Android with fragments - Tutorial</a></p>
+           <p>
+               <span>рефакторинг</span>
+               <span>bundle</span>
+               <span>пачка</span>
+               <span>getInstance</span>
+               <span>экземпляр</span>
+               <span></span>
+               <span></span>
+               <span></span>
+           </p>
+           <p></p>
+           <listing>
+===================================
+D:\programs\android\B21Fragm\app\src\main\res\layout\activity_main.xml
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"&gt;
 
-    &lt;EditText
-        android:id="@+id/editText"
+    &lt;TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp" /&gt;
+        android:background="#BBF"
+        android:text="123"
+        android:textSize="22sp" /&gt;
 
-    &lt;Button
-        android:id="@+id/buttonSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_alignParentRight="true"
-        android:onClick="onClickSave"
-        android:text="Save" /&gt;
+    &lt;!--&lt;fragment--&gt;
+    &lt;!--android:id="@+id/fragment1"--&gt;
+    &lt;!--android:name="study.com.b21fragm.MyFragment"--&gt;
+    &lt;!--android:layout_width="match_parent"--&gt;
+    &lt;!--android:layout_height="wrap_content" /&gt;--&gt;
 
-    &lt;Button
-        android:id="@+id/buttonRead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_toLeftOf="@id/buttonSave"
-        android:onClick="onClickRead"
-        android:text="Read" /&gt;
-    &lt;Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:text="Clear"
-        android:layout_toLeftOf="@id/buttonRead"
-        android:onClick="onClickClear"/&gt;
+    &lt;FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"&gt;
 
-&lt;/RelativeLayout&gt;
-===================================================
-com/example/freon/b12thread/MainActivity.java
-package com.example.freon.b12thread;
+    &lt;/FrameLayout&gt;
 
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
+&lt;/LinearLayout&gt;
+
+===================================
+D:\programs\android\B21Fragm\app\src\main\java\study\com\b21fragm\MainActivity.java
+package study.com.b21fragm;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.util.Log;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected EditText mEditText;
+    private FrameLayout frameLayout;
+    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mEditText = (EditText) findViewById(R.id.editText);
+        frameLayout = findViewById(R.id.frameLayout);
+        Logger.logMe();
     }
 
-    void setmEditText(String s) {
-        mEditText.setText(s);
-    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(frameLayout.getChildCount() == 0) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
 
-    public void onClickSave(View view) {
-        Toast.makeText(this, "save ", Toast.LENGTH_LONG).show();
-        String string = mEditText.getText().toString();
-        updateMessage("save", string);
-    }
+            MyFragment fragment = MyFragment.getInstance("qqq  "
+                + hashCode());
+            fragmentTransaction.add(R.id.frameLayout, fragment);
 
-    public void onClickRead(View view) {
-        Toast.makeText(this, "read ", Toast.LENGTH_LONG).show();
-        updateMessage("read", "");
-    }
-
-    void updateMessage(String string1, String string2) {
-        new SaveReadMessageTask().execute(string1, string2);
-    }
-
-    public void onClickClear(View view) {
-        mEditText.setText("");
-    }
-
-    private class SaveReadMessageTask extends AsyncTask&lt;String,
-            Void, String&gt; {
-
-        String stringDo, stringWhat;
-        SharedPreferences mSharedPreferences;
-
-        @Override
-        protected String doInBackground(String... strings) {
-            stringDo = strings[0];
-            stringWhat = strings[1];
-            String string = "";
-            mSharedPreferences = getSharedPreferences("words", MODE_PRIVATE);
-            if (stringDo.equals("save")) {
-                SharedPreferences.Editor editor = mSharedPreferences.edit();
-                editor.putString("stringWhat", stringWhat);
-                editor.commit();
-            } else if (stringDo.equals("read")) {
-                string = mSharedPreferences.getString("stringWhat", "");
-            }
-            return stringDo + " " + string;
+            fragmentTransaction.commit();
+        }else{
+            Log.d("happy"," " + frameLayout.getChildCount()
+                    + " don't insert fragment");
         }
+        Logger.logMe();
+    }
 
-        @Override
-        protected void onPostExecute(String s) {
-            String[] list = s.split(" ");
-            if (list[0].equals("read")) {
-                String string = "";
-                int k = list.length;
-                for (int i = 1; i &lt; list.length; i++) {
-                    string += list[i];
-                    string += " ";
-                }
-                string = string.trim();
-                setmEditText(string);
-            }
-        }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Logger.logMe();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Logger.logMe();
     }
 }
-===================================================
-			</listing>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p>B12Thread</p>
-			<p>Как это работает</p>
-			<p>В class MainActivity </p>
-			<p>вставляется субкласс LoadMessageTask </p>
-			<p>потомок от AsyncTask&lt;String,
-                Void, String&gt;</p>
-			<p>,где </p>
-			<p>String - то, что принимает</p>
-			<p>Void</p>
-			<p>String - то, что возвращает</p>
-			<table>
-				<tr>
-					<td>String</td>
-					<td>execute(string1, string2)</td>
-					<td>doInBackground(String... strings)</td>
-					<td>strings[0],strings[1]</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Void</td>
-					<td>onProgressUpdate</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>String</td>
-					<td>onPostExecute(String s)</td>
-					<td>String doInBackground</td>
-					<td>setmEditText(s)</td>
-					<td></td>
-				</tr>
-			</table>
-			<hr>
-			<p>        protected String doInBackground(String... strings)</p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p>B12Thread2</p>
-			<p>Поток принимает две строки updateMessage("1","2"), возвращает из сумму String doInBackground() и записывает в editText setmEditText(String s) из onPostExecute(String s)</p>
-			<p></p>
-			<listing>
-package com.example.freon.b12thread;
 
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
+===================================
+D:\programs\android\B21Fragm\app\src\main\res\layout\fragment_my.xml
+ &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"&gt;
+
+    &lt;TextView
+        android:id="@+id/textViewFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfd"
+        android:text="I'm fragment."
+        android:textSize="25sp" /&gt;
+
+    &lt;TextView
+        android:id="@+id/textViewFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFE"
+        android:textSize="25sp"
+        android:textStyle="italic" /&gt;
+
+&lt;/LinearLayout&gt;
+===================================
+D:\programs\android\B21Fragm\app\src\main\java\study\com\b21fragm\MyFragment.java
+package study.com.b21fragm;
+
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
+import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MyFragment extends Fragment {
 
-    SharedPreferences mSharedPreferences;
-    protected EditText mEditText;
+    public static final String PARAMETER_1 = "parameter1";
+    TextView textView2;
+
+    public static MyFragment getInstance(String string){
+        Bundle bundle;
+        bundle = new Bundle();
+        bundle.putString(PARAMETER_1, string);
+
+        MyFragment fragment = new MyFragment();
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mEditText = (EditText)findViewById(R.id.editText);
-
-        String string="321";
-        updateMessage("1","2");
-
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        Logger.logMe();
     }
 
-    void setmEditText(String s){
-        mEditText.setText(s);
-    }
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
+        Logger.logMe();
 
-    public void onClickSave(View view) {
-        Toast.makeText(this,"save ",Toast.LENGTH_LONG).show();
-
-
-    }
-
-    public void onClickRead(View view) {
-        Toast.makeText(this,"read ",Toast.LENGTH_LONG).show();
-    }
-
-    void updateMessage(String string1, String string2){
-
-        new LoadMessageTask().execute(string1, string2);
-    }
-
-    private class LoadMessageTask extends AsyncTask&lt;String,
-                Void, String&gt; {
-
-        @Override
-        protected String doInBackground(String... strings) {
-
-            return strings[0]+strings[1];
+        textView2 = view.findViewById(R.id.textViewFragment2);
+        Bundle bundle = getArguments();
+        if(bundle != null && bundle.containsKey("parameter1")){
+            String string = bundle.getString("parameter1");
+            textView2.setText(string);
         }
-        @Override
-        protected void onPostExecute(String s) {
-            setmEditText(s);
-        }
+        Log.d("happy", "onCreate fragment " + hashCode());
+
+        return view;
     }
-
-}
-
-			</listing>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p>SharedPreferences</p>
-			<p>Для напоминания</p>
-			<listing>
-package com.example.freon.b12thread;
-
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-
-public class MainActivity extends AppCompatActivity {
-
-    SharedPreferences mSharedPreferences;
-    EditText mEditText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mEditText = (EditText)findViewById(R.id.editText);
-        mSharedPreferences = getSharedPreferences("words",MODE_PRIVATE);
-
+    public void onStart() {
+        super.onStart();
+        Logger.logMe();
     }
 
-    public void onClickSave(View view) {
-        Toast.makeText(this,"save ",Toast.LENGTH_LONG).show();
-        String string = mEditText.getText().toString();
-        SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.putString("word1",string);
-        editor.commit();
+    @Override
+    public void onResume() {
+        super.onResume();
+        Logger.logMe();
     }
 
-    public void onClickRead(View view) {
-        Toast.makeText(this,"read ",Toast.LENGTH_LONG).show();
-        String string;
+    @Override
+    public void onPause() {
+        super.onPause();
+        Logger.logMe();
+    }
 
-        string = mSharedPreferences.getString("word1","");
-        mEditText.setText(string);
+    @Override
+    public void onStop() {
+        super.onStop();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Logger.logMe();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Logger.logMe();
     }
 }
-
-			</listing>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-		<li>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-		</li>
-	</ol>
+===================================
+           </listing>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+   </ol>
 
 </body>
-
 </html>
