@@ -817,8 +817,111 @@ class ItemListAdapter extends ArrayAdapter&lt;String&gt; {
        </li>
        <li>
            <p></p>
+           <p><a href="https://developer.android.com/guide/topics/resources/providing-resources?hl=ru">land</a></p>
            <p></p>
-           <p></p>
+           <listing style="background-color: #FED;">
+========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\MainActivity.java
+package study.com.b23list;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    private PaneContaner mainActivity;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mainActivity = findViewById(R.id.mainActivity);
+
+    }
+
+    public PaneContaner getMainActivity() {
+        return mainActivity;
+    }
+}
+
+========================
+D:\programs\android\B23List\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;study.com.b23list.SinglePaneContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;study.com.b23list.ItemListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/study.com.b23list.SinglePaneContainer&gt;
+========================
+D:\programs\android\B23List\app\src\main\res\layout-land\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;study.com.b23list.DualPaneContaner
+    android:id="@+id/mainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"&gt;
+
+    &lt;study.com.b23list.ItemListView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" /&gt;
+
+    &lt;include
+        layout="@layout/detail_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7" /&gt;
+
+&lt;/study.com.b23list.DualPaneContaner&gt;
+========================
+========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\SinglePaneContainer.java
+package study.com.b23list;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.FrameLayout;
+
+public class SinglePaneContainer extends FrameLayout implements PaneContaner {
+    private View listView;
+
+    public SinglePaneContainer(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+         listView = getChildAt(0);
+    }
+
+    @Override
+    public void showItem(String string) {
+        removeViewAt(0);
+        View.inflate(getContext(), R.layout.detail_layout, this);
+        DetailView detailView = (DetailView)getChildAt(0);
+        detailView.showItem(string);
+    }
+}
+
+           </listing>
            <p></p>
            <p></p>
            <p></p>
@@ -826,8 +929,43 @@ class ItemListAdapter extends ArrayAdapter&lt;String&gt; {
            <p></p>
        </li>
        <li>
-           <p></p>
-           <p></p>
+           <p>Обработка кнопки. Надо при Single не закрываться и возвращаться в listView</p>
+           <p>в mainActivity при нажатии вызывается метод onBackPress(). В метод onBackPress() вставляем implements onBackPress() из PaneConteiner, который возвращает True, когда не надо вываливаться из программы. Mетод из Dual всегда возвращает false.Метод из Single, когда показывает list возвращает false. Метод из Single, когда показывает детали возвращает true. Метод из Single, когда показывает детали уничтажает текущее изображение и показывает list. </p>
+           <listing style="background-color: #BDF">
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\MainActivity.java
+    @Override
+    public void onBackPressed() {
+        if(mainActivity.onBackPressed())
+            return;
+        super.onBackPressed();
+    }
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\PaneContaner.java
+package study.com.b23list;
+
+interface PaneContaner {
+    void showItem(String string);
+    boolean onBackPressed();
+}
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\DualPaneContaner.java
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
+==========================
+D:\programs\android\B23List\app\src\main\java\study\com\b23list\SinglePaneContainer.java
+    @Override
+    public boolean onBackPressed() {
+        if(isListAttached())
+            return false;
+        removeViewAt(0);
+        addView(listView);
+        return true;
+    }
+==========================
+           </listing>
            <p></p>
            <p></p>
            <p></p>
