@@ -974,11 +974,249 @@ D:\programs\android\B23List\app\src\main\java\study\com\b23list\SinglePaneContai
            <p></p>
        </li>
        <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
+           <p>B25Lstdt</p>
+           <p>Здесь мы положили на будущее.</p>
+           <p>А здесь это будущее наступило.</p>
+           <p>не перерисовывает элементы у которых id не изменялся</p>
+           <listing style="background-color: #ВED;">
+     @Override
+    public long getItemId(int position) {
+        return getItem(position).hashCode();
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return true;
+    }
+
+           </listing>
+           <p>про Id забыть. В следующий раз.</p>
+           <p>B25Lstdt</p>
+           <listing style="background-color: #ВED;">
+============================================
+D:\programs\android\B25Lstdt\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+============================================
+D:\programs\android\B25Lstdt\app\src\main\java\com\example\freon\b25lstdt\MainActivity.java
+package com.example.freon.b25lstdt;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private MyAdapter adapter;
+    private String[] data;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        data = Data.values;
+
+        listView = findViewById(R.id.listView);
+
+        adapter = new MyAdapter();
+        adapter.setData(data);
+
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+                String string = "click on " + (position+1);
+                //Toast.makeText(view.getContext(), string, Toast.LENGTH_LONG).show();
+
+                String[] newData = new String[data.length + 1];
+                for(int i = 0;i&lt; data.length;i++){
+                    newData[i] = data[i];
+                }
+                newData[newData.length-1]=string;
+                data = newData;
+                adapter.setData(data);
+            }
+        });
+    }
+}
+
+============================================
+D:\programs\android\B25Lstdt\app\src\main\res\layout\item.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"&gt;
+
+    &lt;LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"&gt;
+
+        &lt;TextView
+            android:id="@+id/data1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFF80"
+            android:textSize="25sp" /&gt;
+
+        &lt;TextView
+            android:id="@+id/data2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="#DDFFD0"
+            android:textSize="25sp" /&gt;
+    &lt;/LinearLayout&gt;
+
+    &lt;TextView
+        android:id="@+id/data3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFAAFF"
+        android:textSize="25sp" /&gt;
+
+&lt;/LinearLayout&gt;
+============================================
+D:\programs\android\B25Lstdt\app\src\main\java\com\example\freon\b25lstdt\MyAdapter.java
+package com.example.freon.b25lstdt;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.zip.Inflater;
+
+public class MyAdapter extends BaseAdapter {
+    String[] data = new String[0];
+    LayoutInflater inflater;
+
+
+    public void setData(String[] newData){
+        data = newData;
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public int getCount() {
+        if(data != null)
+            return data.length;
+        return 0;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return data[position];
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return getItem(position).hashCode();
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return true;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if(inflater == null){
+            inflater = (LayoutInflater)parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+        View itemView;
+        MyHolder myHolder;
+        if(convertView == null){
+            itemView = inflater.inflate(R.layout.item, parent, false);
+            TextView data1 = (TextView) itemView.findViewById(R.id.data1);
+            TextView data2 = (TextView) itemView.findViewById(R.id.data2);
+            final TextView data3 = (TextView) itemView.findViewById(R.id.data3);
+            data3.setVisibility(View.GONE);
+            myHolder = new MyHolder(data1 , data2 , data3);
+
+            data1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(data3.getVisibility() == View.VISIBLE){
+                        data3.setVisibility(View.GONE);
+                    }else {
+                        data3.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
+            itemView.setTag(myHolder);
+        } else {
+            itemView = convertView;
+            myHolder = (MyHolder)convertView.getTag();
+        }
+        String item = (String)getItem(position);
+        myHolder.data1.setText("" + (position + 1));
+        myHolder.data2.setText(item);
+        String string = "/-\\|";
+        for(int i=0;i&lt;8;i++){
+            string += string;
+        }
+        myHolder.data3.setText(string);
+        itemView.setTag(myHolder);
+        return itemView;
+    }
+
+    public static final class MyHolder{
+        TextView data1;
+        TextView data2;
+        TextView data3;
+        public MyHolder(TextView data1, TextView data2, TextView data3 ){
+            this.data1 = data1;
+            this.data2 = data2;
+            this.data3 = data3;
+        }
+    }
+}
+
+============================================
+D:\programs\android\B25Lstdt\app\src\main\java\com\example\freon\b25lstdt\Data.java
+package com.example.freon.b25lstdt;
+
+public class Data {
+    public static final String[] values = new String[]{
+            "1 Республика Адыгея"
+            ,"2 Республика Башкортостан"
+            ,"3 Республика Бурятия"
+            ,"4 Республика Алтай"
+            ,"5 Республика Дагестан"
+            ,"6 Республика Ингушетия"
+    };
+}
+============================================
+		   </listing>
+           <p>Рассмотреть фрагменты. Жизненный цикл фрагментов. Создать фрагмент с помощью layout. Создать фрагмент с помощью фрагмент-мененджера. Разобрали view которая умеет листать фрагменты слева на право padding. Передать фрагменту параметры, которые используются при создании фрагмента. Определить методы для фрагмента, чтобы его можно было дернуть из activity. Кастомные view. Вьюха на базе listview. Вьюха на базе линейного layout. Вьюха на базе линейного layout и frame layout, которая умеет передавать сообщения. Научились из Вьюхи обращаться к ее активити. Удалять Вьюху из интерфейса и добавлять заново. Как работает адаптер и зачем нужен холдер.</p>
            <p></p>
            <p></p>
            <p></p>
