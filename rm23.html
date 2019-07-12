@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<base target="_blank">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+
+	</style>
+</head>
+<body>
+   <ol>
+       <li>
+           <p>B31Fragm</p>
+           <p></p>
+           <details>
+           <summary>B31Fragm</summary>
+           <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B31Fragm\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DED"
+        android:text="B31Fragm"
+        android:textSize="22sp" /&gt;
+
+    &lt;fragment
+        android:id="@+id/fragment1"
+        android:name="MyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B31Fragm\app\src\main\java\study\com\b31fragm\MainActivity.java
+package study.com.b31fragm;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+================================
+D:\programs\android\B31Fragm\app\src\main\res\layout\fragment_my.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFD"
+    android:orientation="vertical"&gt;
+
+    &lt;TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEF"
+        android:text="I'm fragment"
+        android:textSize="25sp" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B31Fragm\app\src\main\java\MyFragment.java
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import study.com.b31fragm.R;
+
+public class MyFragment extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
+
+        return view;
+    }
+}
+================================
+           </listing>
+       </details>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p><a href="https://developer.android.com/guide/components/fragments?hl=RU">fragments</a></p>
+           <p></p>
+           <p><a href="https://developer.android.com/guide/components/fragments?hl=RU#EventCallbacks"> Создание обратного вызова</a></p>
+           <p><a href="https://www.edx.org/course/introduction-to-functional-programming-2">Курс функциональное программирование</a></p>
+
+
+           <p></p>
+           <details>
+               <summary>_B31Fragm_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B31Fragm\javalib\src\main\java\study\com\javalib\MyClass.java
+package study.com.javalib;
+
+public class MyClass {
+    public static void main(String[] args) {
+        System.out.println("hello1");
+        MyThread myThread = new MyThread();
+        myThread.start();
+        System.out.println("wow1;");
+    }
+
+
+    public static class MyThread extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            try {
+                sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("MyThread run;");
+        }
+    }
+}
+================================
+"C:\Program Files\Android\Android Studio\jre\bin\java.exe" "-javaagent:C:\Program Files\Android\Android Studio\lib\idea_rt.jar=22433:C:\Program Files\Android\Android Studio\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Android\Android Studio\jre\jre\lib\charsets.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\cldrdata.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\dnsns.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\jaccess.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\localedata.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\nashorn.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunec.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunmscapi.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\ext\zipfs.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\jce.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\jsse.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\management-agent.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\resources.jar;C:\Program Files\Android\Android Studio\jre\jre\lib\rt.jar;D:\programs\android\B31Fragm\javalib\build\classes\java\main" study.com.javalib.MyClass
+hello1
+wow1;
+MyThread run;
+
+Process finished with exit code 0
+============================
+myThread.interrupt();
+
+hello1
+wow1;
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at study.com.javalib.MyClass$MyThread.run(MyClass.java:18)
+MyThread run;
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <details>
+               <summary>__</summary>
+               <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p>androiddevicemonitor</p>
+           <p><a href="https://github.com/piotrpolak/android-http-server#running-standalone-server-cli">server</a></p>
+           <p><a href="https://github.com/VoiSmart/pjsip-android">pjsip</a></p>
+           <p><a href="https://github.com/BelledonneCommunications/linphone-android">linphone</a></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+   </ol>
+
+</body>
+</html>

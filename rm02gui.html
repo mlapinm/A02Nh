@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<base target="_blank">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<ol>
+		<li>
+			<p>PyQt5 first application</p>
+			<p><a href="https://www.youtube.com/watch?v=AWOi89XgH3s">PyQt - Делаем текстовый редактор</a></p>
+			<p></p>
+			<p><a href="https://www.youtube.com/watch?v=DRWP-v7h9M8">Для друга: PyCharm Community и PyQt5 - первый проект</a></p>
+			<p>File/</p>
+			<p>Settings/</p>
+			<p>Settings for new project (Default settings)</p>
+			<p>Project Interpreter +</p>
+			<p>Available Packages</p>
+			<p><i style="background-color: #DFD;">PyQt5</i></p>
+			<p></p>
+			<p><a href="https://pythonworld.ru/gui/pyqt5-firstprograms.html">pythonworld</a></p>
+			<p></p>
+           <details>
+               <summary>_PyQt02_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\017python\PyQt02\main.py
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget
+
+
+if __name__ == '__main__':
+
+    app = QApplication(sys.argv)
+
+    w = QWidget()
+    w.resize(250, 150)
+    w.move(300, 300)
+    w.setWindowTitle('Simple')
+    w.show()
+
+    sys.exit(app.exec_())
+================================
+               </listing>
+			</details>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p><a href="http://embeddedlaboratory.blogspot.com/2018/04/design-gui-using-pyqt5-on-raspberry-pi.html">Design GUI using PyQt5 on Raspberry Pi</a></p>
+			<p>login:pi, psw:20;</p>
+			<p>sudo su</p>
+			<p>sudo apt-get install python3-pyqt5</p>
+			<p>apt-cache search PyQt5</p>
+           <details>
+               <summary>__</summary>
+               <listing style="background-color: #DEF;">
+================================
+pi@raspberrypi:~ $ apt-cache search PyQt5
+pyqt5-dev - Development files for PyQt5
+pyqt5-dev-tools - Development tools for PyQt5
+pyqt5-examples - Examples and demos for PyQt5
+pyqt5.qsci-dev - Development files for Python Qscintilla2 (Qt5)
+pyqt5chart-dev - Development files for PyQtCharts
+python-dbus-dev - main loop integration development files for python-dbus
+python-dbus.mainloop.pyqt5 - D-Bus Qt main loop support for Python 2
+python-dbus.mainloop.pyqt5-dbg - D-Bus Qt main loop support for Python 2 (debug extension)
+python-pyqt5 - Python 2 bindings for Qt5
+python-pyqt5-dbg - Python 2 bindings for Qt5 (debug extensions)
+python-pyqt5.qsci - Python bindings for QScintilla 2 with Qt 5
+python-pyqt5.qsci-dbg - Python bindings for QScintilla 2 (Qt 5 debug extensions)
+python-pyqt5.qtmultimedia - Python 2 bindings for Qt5's Multimedia module
+python-pyqt5.qtmultimedia-dbg - Python 2 bindings for Qt5's Multimedia module (debug extensions)
+python-pyqt5.qtopengl - Python 2 bindings for Qt5's OpenGL module
+python-pyqt5.qtopengl-dbg - Python 2 bindings for Qt5's OpenGL module (debug extension)
+python-pyqt5.qtpositioning - Python 2 bindings for QtPositioning module
+python-pyqt5.qtpositioning-dbg - Python 2 bindings for QtPositioning module (debug extension)
+python-pyqt5.qtquick - Python 2 bindings for QtQuick module
+python-pyqt5.qtquick-dbg - Python 2 bindings for QtQuick module (debug extensions)
+python-pyqt5.qtsensors - Python 2 bindings for QtSensors module
+python-pyqt5.qtsensors-dbg - Python 2 bindings for QtSensors module (debug extension)
+python-pyqt5.qtserialport - Python 2 bindings for QtSerialPort module
+python-pyqt5.qtserialport-dbg - Python 2 bindings for QtSerialPort module (debug extension)
+python-pyqt5.qtsql - Python 2 bindings for Qt5's SQL module
+python-pyqt5.qtsql-dbg - Python 2 bindings for Qt5's SQL module (debug extension)
+python-pyqt5.qtsvg - Python 2 bindings for Qt5's SVG module
+python-pyqt5.qtsvg-dbg - Python 2 bindings for Qt5's SVG module (debug extension)
+python-pyqt5.qtwebchannel - Python 2 bindings for Qt5's WebChannel module
+python-pyqt5.qtwebchannel-dbg - Python 2 bindings for Qt5's Webchannel module (debug extension)
+python-pyqt5.qtwebkit - Python 2 bindings for Qt5's WebKit module
+python-pyqt5.qtwebkit-dbg - Python 2 bindings for Qt5's WebKit module (debug extensions)
+python-pyqt5.qtwebsockets - Python 2 bindings for Qt5's WebSockets module
+python-pyqt5.qtwebsockets-dbg - Python 2 bindings for Qt5's WebSockets module (debug extension)
+python-pyqt5.qtx11extras - Python 2 bindings for QtX11Extras module
+python-pyqt5.qtx11extras-dbg - Python 2 bindings for QtX11Extras module (debug extension)
+python-pyqt5.qtxmlpatterns - Python 2 bindings for Qt5's XmlPatterns module
+python-pyqt5.qtxmlpatterns-dbg - Python 2 bindings for Qt5's XmlPatterns module (debug extension)
+python-pyqt5.qwt-doc - Python Qwt6 technical widget library, documentation and examples
+python-qtpy - abtraction layer for PySide/PyQt4/PyQt5 (Python 2)
+python3-dbus.mainloop.pyqt5 - D-Bus Qt main loop support for Python 3
+python3-dbus.mainloop.pyqt5-dbg - D-Bus Qt main loop support for Python 3 (debug extension)
+python3-pyqt5 - Python 3 bindings for Qt5
+python3-pyqt5-dbg - Python 3 bindings for Qt5 (debug extensions)
+python3-pyqt5.qsci - Python 3 bindings for QScintilla 2 with Qt 5
+python3-pyqt5.qsci-dbg - Python 3 bindings for QScintilla 2 (Qt 5 debug extensions)
+python3-pyqt5.qtchart - Python 3 bindings for Qt5's Charts module
+python3-pyqt5.qtchart-dbg - Python 3 bindings for Qt5's Charts module (debug extension)
+python3-pyqt5.qtmultimedia - Python 3 bindings for Qt5's Multimedia module
+python3-pyqt5.qtmultimedia-dbg - Python 3 bindings for Qt5's Multimedia module (debug extensions)
+python3-pyqt5.qtopengl - Python 3 bindings for Qt5's OpenGL module
+python3-pyqt5.qtopengl-dbg - Python 3 bindings for Qt5's OpenGL module (debug extension)
+python3-pyqt5.qtpositioning - Python 3 bindings for QtPositioning module
+python3-pyqt5.qtpositioning-dbg - Python 3 bindings for QtPositioning module (debug extension)
+python3-pyqt5.qtquick - Python 3 bindings for QtQuick module
+python3-pyqt5.qtquick-dbg - Python 3 bindings for QtQuick module (debug extension)
+python3-pyqt5.qtsensors - Python 3 bindings for QtSensors module
+python3-pyqt5.qtsensors-dbg - Python 3 bindings for QtSensors module (debug extension)
+python3-pyqt5.qtserialport - Python 3 bindings for QtSerialPort module
+python3-pyqt5.qtserialport-dbg - Python 3 bindings for QtSerialPort module (debug extension)
+python3-pyqt5.qtsql - Python 3 bindings for Qt5's SQL module
+python3-pyqt5.qtsql-dbg - Python 3 bindings for Qt5's SQL module (debug extension)
+python3-pyqt5.qtsvg - Python 3 bindings for Qt5's SVG module
+python3-pyqt5.qtsvg-dbg - Python 3 bindings for Qt5's SVG module (debug extension)
+python3-pyqt5.qtwebchannel - Python 3 bindings for Qt5's WebChannel module
+python3-pyqt5.qtwebchannel-dbg - Python 3 bindings for Qt5's Webchannel module (debug extension)
+python3-pyqt5.qtwebkit - Python 3 bindings for Qt5's WebKit module
+python3-pyqt5.qtwebkit-dbg - Python 3 bindings for Qt5's WebKit module (debug extensions)
+python3-pyqt5.qtwebsockets - Python 3 bindings for Qt5's WebSockets module
+python3-pyqt5.qtwebsockets-dbg - Python 3 bindings for Qt5's WebSockets module (debug extensions)
+python3-pyqt5.qtx11extras - Python 3 bindings for QtX11Extras module
+python3-pyqt5.qtx11extras-dbg - Python 3 bindings for QtX11Extras module (debug extension)
+python3-pyqt5.qtxmlpatterns - Python 3 bindings for Qt5's XmlPatterns module
+python3-pyqt5.qtxmlpatterns-dbg - Python 3 bindings for Qt5's XmlPatterns module (debug extension)
+python3-pyqt5.qwt - Python version of the Qwt6 technical widget library (Python3)
+python3-qtpy - abtraction layer for PySide/PyQt4/PyQt5 (Python 3)
+qutebrowser - Keyboard-driven, vim-like browser based on PyQt5
+qutebrowser-qtwebengine - QtWebEngine backend dependency package for qutebrowser
+qutebrowser-qtwebkit - QtWebKit backend dependency package for qutebrowser
+pi@raspberrypi:~ $
+================================
+               </listing>
+           </details>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p><a href="https://www.youtube.com/watch?v=_tk6qhnub9c">How to debug Qt5 applications with QtCreator for Raspberry pi</a></p>
+			<p></p>
+			<p></p>
+			<p>New Project/Name/Pasp/Options/</p>
+			<p>Device type: Generic Linux Device</p>
+			<p></p>
+			<p>Name: GCC</p>
+			<p>opt/qt5pi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64</p>
+			<p>arm-linux-gnueabihf-gcc</p>
+			<p>arm-linux-generic-elf-32bit</p>
+			<p>arm-linux-gnuebihf-g++</p>
+			<p>ABI:arm-linux</p>
+			<p>Debuggers/Add</p>
+			<p>Name:Rasp Debug</p>
+			<p>/usr/bin/gdb-multiarch GDB(arm-linux-gnuebihf-gdb)</p>
+			<p>/opt/qt4pi/sysroot</p>
+			<table>
+				<tr>
+					<td>Sysroot: </td>
+					<td>/opt/qt4pi/sysroot</td>
+				</tr>
+				<tr>
+					<td>C:</td>
+					<td>GCC rasp</td>
+				</tr>
+				<tr>
+					<td>C++:</td>
+					<td>GCC rasp</td>
+				</tr>
+				<tr>
+					<td>Debugger:</td>
+					<td>Rasp Debug</td>
+				</tr>
+				<tr>
+					<td>Qt version:</td>
+					<td>Qt 5.10.1 (qt5pi)</td>
+				</tr>
+			</table>
+			<p>Options/Devices</p>
+			<p>Add... Generic Linux Device</p>
+			<table>
+				<tr>
+					<td>The device-s hostname or IP address:</td>
+					<td>192.168.16.25</td>
+				</tr>
+				<tr>
+					<td>username:</td>
+					<td>root</td>
+				</tr>
+				<tr>
+					<td>password:</td>
+					<td>****</td>
+				</tr>
+			</table>
+			<p>Next</p>
+			<p></p>
+			<p>Build</p>
+			<p>No remote executable or Process ID Specified</p>
+			<p># path on device INSTAlls += target toyour .pro file.</p>
+			<p>target.path = /home/hdbExample # path on device</p>
+			<p>INSTALLS += target</p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+			<p>4. Make Python 3.7 as the default version</p>
+			<p>If you want to use python 3.7 as default version you can create an alias.</p>
+			<p>vim ~/.bashrc</p>
+			<p>and then add the following alias.</p>
+			<p>which python3.7</p>
+			<p>/usr/local/bin/python3.7</p>
+			<p>alias python='/usr/lcoal/bin/python3.7'</p>
+			<p>Then source the .bashrc file.</p>
+			<p>source ~/.bashrc</p>
+			<p></p>
+			<p></p>
+           <details>
+               <summary>__</summary>
+               <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+               </listing>
+           </details>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</li>
+	</ol>
+
+</body></html>
