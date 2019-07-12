@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
 	<base target="_blank">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
 	<style>
 		p {
 			margin: 0px;
@@ -21,16 +25,21 @@
 		.margin1 {
 			margin-left: 20px;
 		}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 
 	</style>
 </head>
 <body>
    <ol>
        <li>
+          <p>Просто фрагмент</p>
            <p>B31Fragm</p>
            <p></p>
            <details>
-           <summary>B31Fragm</summary>
+           <summary><u>B31Fragm</u></summary>
            <listing style="background-color: #DEF;">
 ================================
 D:\programs\android\B31Fragm\app\src\main\res\layout\activity_main.xml
@@ -124,9 +133,13 @@ public class MyFragment extends Fragment {
            <p><a href="https://www.edx.org/course/introduction-to-functional-programming-2">Курс функциональное программирование</a></p>
 
 
-           <p></p>
+
+
+
+          <p><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Знакомство с потоком</p>
+
            <details>
-               <summary>_B31Fragm_</summary>
+               <summary style="color: blueviolet">_B31Fragm_</summary>
                <listing style="background-color: #DEF;">
 ================================
 D:\programs\android\B31Fragm\javalib\src\main\java\study\com\javalib\MyClass.java
@@ -177,8 +190,71 @@ MyThread run;
            <p></p>
        </li>
        <li>
+           <p><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Передача данных из потока</p>
            <p></p>
-           <p></p>
+
+
+
+           <details>
+               <summary>_MainActivity_</summary>
+               <listing style="background-color: #DEF;">
+================================
+package study.com.b31fragm;
+
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button button2;
+    private Handler handler;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        button2 = findViewById(R.id.button2);
+
+        handler = new Handler();
+    }
+
+    public void doSomthingLong(){
+        try {
+            System.out.println("Thread start");
+            Thread.sleep(10000);
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    <span style="background-color: #FFF">button2.setText("done");</span>
+                }
+            });
+            System.out.println("Thread stop");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void onClickOk(View view) {
+        ThreadWorker threadWorker = new ThreadWorker();
+        threadWorker.start();
+    }
+
+    public class ThreadWorker extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            doSomthingLong();
+        }
+    }
+}
+================================
+               </listing>
+           </details>
            <p></p>
            <p></p>
            <p></p>
@@ -219,7 +295,7 @@ MyThread run;
        <li>
            <p></p>
            <details>
-               <summary>__</summary>
+               <summary style="color: blueviolet">__</summary>
                <listing style="background-color: #DEF;">
 ================================
 
