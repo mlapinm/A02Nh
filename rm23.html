@@ -429,6 +429,13 @@ public class MyFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        button3 = null;
+        textViewFragment = null;
+    }
+
     public class MyTask extends AsyncTask<Integer, Void, String> {
 
         @Override
@@ -448,7 +455,7 @@ public class MyFragment extends Fragment {
             Integer b = params[1];
 
             try {
-                Thread.sleep(5000);
+                Thread.sleep(15000);
                 Log.d("happy", "onPostExecute" + " "
                         + Thread.currentThread().getName() + " "
                         + Thread.currentThread().getId());
@@ -465,13 +472,13 @@ public class MyFragment extends Fragment {
             Log.d("happy", "onPostExecute" + " "
                     + Thread.currentThread().getName() + " "
                     + Thread.currentThread().getId());
-            textViewFragment.setText(sum);
+            if(textViewFragment != null) {
+                textViewFragment.setText(sum);
+            }
         }
     }
 }
 ================================
-
-
                </listing>
            </details>
            <p></p>
