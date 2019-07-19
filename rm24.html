@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<base target="_blank">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+	<style>
+		p {
+			margin: 0px;
+		}
+
+		.b1 {
+			border: dotted 1px;
+		}
+
+		td {
+			border: dotted 1px;
+		}
+
+		.margin1 {
+			margin-left: 20px;
+		}
+details summary::-webkit-details-marker {
+  display: none;
+}
+	</style>
+</head>
+<body>
+   <ol>
+       <li>
+           <p>Настраиваемые Представления (Custom Views)</p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">_B42List_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B42List\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\MainActivity.java
+package study.com.b42list;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ListView listView;
+    private Button button;
+    static final String[] data = new String[]{"one", "two", "three"};
+    private ArrayAdapter&lt;String&gt; adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listView = findViewById(R.id.listView);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doButton();
+            }
+        });
+
+        adapter = new ArrayAdapter&lt;String&gt;(this,
+                android.R.layout.simple_list_item_1, data);
+        listView.setAdapter(adapter);
+
+    }
+
+    private void doButton(){
+        //TODO
+
+    }
+}
+================================
+               </listing>
+           </details>
+
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <details>
+               <summary style="color: blueviolet">__</summary>
+               <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+               </listing>
+           </details>
+           <p></p>
+           <p></p>
+       </li>
+   </ol>
+
+</body>
+</html>
