@@ -21,6 +21,7 @@
 		td {
 			border: dotted 1px;
 		}
+		span {background-color: #FFF;}
 
 		.margin1 {
 			margin-left: 20px;
@@ -119,18 +120,179 @@ public class MainActivity extends AppCompatActivity {
        </li>
        <li>
            <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
+           <p><a href="http://www.activeandroid.com/">activeandroid</a></p>
+           <p><a href="https://github.com/pardom-zz/ActiveAndroid/wiki/Getting-started">Getting started</a></p>
+           <p> maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }</p>
+           <p>add to D:\programs\android\B42List\build.gradle allprojects/repositories</p>
+           <p>compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+</p>
+           <p>add to D:\programs\android\B42List\app\build.gradle dependencies</p>
+           <p>implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+</p>
+           <p>add to D:\programs\android\B42List\app\build.gradle dependencies</p>
+           <p><a href="https://github.com/pardom/ActiveAndroid/archive/master.zip"> download the ActiveAndroid library</a></p>
+           <p>activeandroid-3.0.jar</p>
+           <p>D:\programs\android\B42List\app\libs</p>
+		   <p>manifest</p>
+            <p>&lt;meta-data android:name="AA_DB_NAME" android:value="Pickrand" /&gt;</p>
+		   <p>&lt;meta-data android:name="AA_DB_VERSION" android:value="5" /&gt;</p>
+		   <p></p>
+		   <p></p>
+           <details>
+               <summary style="color: blueviolet">_B42List_</summary>
+               <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B42List\app\src\main\res\layout\activity_main.xml
+
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\MainActivity.java
+
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\MyApplication.java
+package study.com.b42list;
+
+import android.app.Application;
+
+import com.activeandroid.ActiveAndroid;
+
+public class MyApplication extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        <span>ActiveAndroid.initialize(this);</span>
+    }
+}
+
+================================
+D:\programs\android\B42List\app\src\main\AndroidManifest.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.com.b42list"&gt;
+
+    &lt;application
+        <span>android:name=".MyApplication"</span>
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"&gt;
+        &lt;activity android:name=".MainActivity"&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name="android.intent.action.MAIN" /&gt;
+
+                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+        <span>&lt;meta-data android:name="AA_DB_NAME" android:value="Pickrand" /&gt;
+            &lt;meta-data android:name="AA_DB_VERSION" android:value="5" /&gt;</span>
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;
+================================
+D:\programs\android\B42List\build.gradle
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+<span>//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }</span>
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+================================
+D:\programs\android\B42List\app\build.gradle
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "study.com.b42list"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+<span>//    implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'</span>
+}
+================================
+D:\programs\android\B42List\app\src\main\java\study\com\b42list\Sepulka.java
+package study.com.b42list;
+
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
+@Table(name = "Categories")
+public class Sepulka extends Model {
+
+    @Column(name = "foo")
+    public String foo;
+
+    @Column(name = "bar")
+    public String bar;
+}
+================================
+               </listing>
+           </details>
+		   <p>&lt;meta-data android:name="study.com.b42list.Sepulka" /&gt;
+</p>
+		   <p>SQL(query) error or missing database.</p>
+		   <p>Слишком старая. Для Delvik.</p>
+		   <p>ORM</p>
+		   <p></p>
+		   <p></p>
+
        </li>
        <li>
            <p></p>
-           <p></p>
-           <p></p>
+           <p><a href="https://github.com/codepath/android_guides/wiki/ActiveAndroid-Guide">Loading with Content Providers</a></p>
+           <listing>
+<application ...>
+    <provider android:authorities="com.example" android:exported="false"
+              android:name="com.activeandroid.content.ContentProvider" />
+    ...
+</application>
+           </listing>
            <p></p>
            <p></p>
            <p></p>
