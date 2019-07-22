@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base target="_blank">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <style>
+        p {
+            margin: 0px;
+        }
+
+        .b1 {
+            border: dotted 1px;
+        }
+
+        td {
+            border: dotted 1px;
+        }
+
+        span {
+            background-color: #FFF;
+        }
+
+        .margin1 {
+            margin-left: 20px;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <p>B51Image</p>
+            <p></p>
+            <p>D:\programs\android\B51Image\app\build.gradle</p>
+            <p>targetSdkVersion 22</p>
+            <p>28</p>
+            <p>07-22 10:48:33.483 4270-4270/study.com.b51image W/ImageView: Unable to open content: content://media/external/images/media/17</p>
+            <p>java.lang.SecurityException: Permission Denial: reading com.android.providers.media.MediaProvider uri content://media/external/images/media/17 from pid=4270, uid=10055 requires android.permission.READ_EXTERNAL_STORAGE, or grantUriPermission()</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">_B51Image_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B51Image\app\src\main\AndroidManifest.xml
+    &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"&gt;
+
+        &lt;android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" /&gt;
+
+    &lt;/android.support.design.widget.AppBarLayout&gt;
+
+    &lt;include layout="@layout/content_main" /&gt;
+
+    &lt;android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /&gt;
+
+&lt;/android.support.design.widget.CoordinatorLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\content_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"&gt;
+
+    &lt;TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA"
+        android:text="123"
+        android:textSize="18sp" /&gt;
+
+    &lt;ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\MainActivity.java
+package study.com.b51image;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Uri uri;
+    private ImageView image;
+    private TextView info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        image = findViewById(R.id.image);
+        info = findViewById(R.id.info);
+
+        info.setText("321");
+        image.setImageResource(android.R.drawable.ic_media_play);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                pickImage();
+
+            }
+        });
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent (Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode != 12){
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+        if(resultCode != RESULT_OK){
+            //пользователь отказался
+            return;
+        }
+
+        uri = data.getData();
+
+        info.setText(uri.toString());
+        image.setImageURI(uri);
+
+        Log.d("happy", uri.toString());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+================================
+                </listing>
+            </details>
+            <img src="irm25.png">
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+                    ================================
+
+
+                    ================================
+
+
+                    ================================
+                </listing>
+            </details>
+            <p></p>
+            <p></p>
+        </li>
+    </ol>
+</body>
+
+</html>
