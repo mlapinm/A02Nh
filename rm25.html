@@ -226,30 +226,547 @@ public class MainActivity extends AppCompatActivity {
             <p></p>
         </li>
         <li>
+            <p>Android device monitor -  depricated</p>
+            <p>View/Tool Windows/Device File Explorer</p>
+            <p></p>
+            <p></p>
+            <p>/data/data/study.com.b51image</p>
+            <p>/storage/sdcard/DCIM/Camera/IMG_20190722_034119.jpg</p>
+            <p>/data/user/0/study.com.b51image/files/img_1563820310220.png</p>
+            <p>/storage/sdcard/Android/data/study.com.b51image/files/Pictures/img_1563849595964.png</p>
+            <p>/storage/sdcard/Pictures/img_1563850003214.png</p>
+            <details>
+               <p></p>
+                <summary style="color: blueviolet">_B51Image_</summary>
+                <listing style="background-color: #DEF;">
+                    ================================
+D:\programs\android\B51Image\app\src\main\AndroidManifest.xml
+    &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+    &lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /&gt;
+    &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\activity_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"&gt;
+
+        &lt;android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" /&gt;
+
+    &lt;/android.support.design.widget.AppBarLayout&gt;
+
+    &lt;include layout="@layout/content_main" /&gt;
+
+    &lt;android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" /&gt;
+
+&lt;/android.support.design.widget.CoordinatorLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\res\layout\content_main.xml
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"&gt;
+
+    &lt;TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA"
+        android:text="123"
+        android:textSize="18sp" /&gt;
+
+    &lt;ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /&gt;
+
+&lt;/LinearLayout&gt;
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\MainActivity.java
+package study.com.b51image;
+
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Uri uri;
+    private ImageView image;
+    private TextView info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        image = findViewById(R.id.image);
+        info = findViewById(R.id.info);
+
+        info.setText("321");
+        image.setImageResource(android.R.drawable.ic_media_play);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                pickImage();
+
+            }
+        });
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != 12) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+        if (resultCode != RESULT_OK) {
+            //пользователь отказался
+            return;
+        }
+
+        uri = data.getData();
+
+
+        Log.d("happy", uri.toString());
+        copyImageWrapper();
+
+    }
+
+    private void copyImageWrapper(){
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if(result == PackageManager.PERMISSION_GRANTED){
+            copyImage();
+            return;
+        }
+
+        ActivityCompat.requestPermissions(this,
+                new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                42);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == 42){
+            int result = grantResults[0];
+            if(result == PackageManager.PERMISSION_GRANTED){
+                copyImage();
+            } else {
+                info.setText("permission denied");
+            }
+        }else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    private void copyImage() {
+        info.setText(uri.toString());
+        image.setImageURI(uri);
+        try {
+//        File dir = getFilesDir();
+//        File dir = getCacheDir();
+           //доступность внешнего накопителя
+          if(!Environment.MEDIA_MOUNTED.equals(
+                  Environment.getExternalStorageState())){
+              return;
+          }
+
+//        File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+            File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            dir.mkdir();
+
+            Log.d("happy", "free: " + dir.getFreeSpace());
+
+            Log.d("happy", dir.getAbsolutePath());
+            File out = new File(dir, "img_" +
+                    System.currentTimeMillis() +
+                    ".png");
+            FileOutputStream os = new FileOutputStream(out);
+            InputStream is = getContentResolver().openInputStream(uri);
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = is.read(buffer)) != -1) {
+                os.write(buffer, 0, len);
+            }
+            is.close();
+            os.close();
+            Log.d("happy", out.getAbsolutePath());
+            Log.d("happy", "len: " + out.length());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+================================
+
+
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
             <p></p>
             <p></p>
             <p></p>
-            <p></p>
+        </li>
+        <li>
+            <p>Приложение показывает в интерфейсе последнюю сохраненную картинку.</p>
+            <p>Последнее имя файла в SharedPreferences(общие настройки).</p>
+            <p>SharedPreferences PreferencesHelper вынесем в отдельный класс.</p>
+            <p>SharedPreferences - синглтон</p>
             <p></p>
             <p></p>
             <p></p>
             <p></p>
         </li>
         <li>
+            <p>https://stackoverflow.com</p>
+            <p>load image to imageview from file</p>
+            <listing>
+if(imgFile.exists()){
+    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+    ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
+    myImage.setImageBitmap(myBitmap);
+}
+            </listing>
             <p></p>
             <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </li>
-        <li>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <details>
+                <summary style="color: blueviolet">_B51Image_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\PreferencesHelper.java
+package study.com.b51image;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+public class PreferencesHelper {
+    private final SharedPreferences prefs;
+    Context context;
+
+    static PreferencesHelper instance = null;
+
+    public static PreferencesHelper getInstance(Context context) {
+        if (instance == null){
+            instance = new PreferencesHelper(context);
+        }
+        return instance;
+    }
+
+    public static final String PREFS_NAME = "MyPrefs";
+
+    public PreferencesHelper(Context context) {
+        this.context = context;
+
+        prefs = context.getSharedPreferences(PREFS_NAME, 0);
+    }
+
+    public static final String FILENAME_KEY = "FILENAME_KEY";
+    public  String getPrefsName(){
+        return prefs.getString(FILENAME_KEY,"");
+
+    }
+    public void setFilename(String name){
+        prefs.edit().putString(FILENAME_KEY, name).apply();
+    }
+}
+================================
+D:\programs\android\B51Image\app\src\main\java\study\com\b51image\MainActivity.java
+package study.com.b51image;
+
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Uri uri;
+    private ImageView image;
+    private TextView info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        image = findViewById(R.id.image);
+        info = findViewById(R.id.info);
+
+        info.setText("321");
+        image.setImageResource(android.R.drawable.ic_media_play);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                pickImage();
+
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        String filename = PreferencesHelper.getInstance(this)
+                .getPrefsName();
+        if(filename != null &&
+        ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        == PackageManager.PERMISSION_GRANTED){
+
+            Bitmap myBitmap = BitmapFactory.decodeFile(filename);
+            image.setImageBitmap(myBitmap);
+            info.setText(filename);
+        }
+
+    }
+
+    private void pickImage() {
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(intent, 12);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != 12) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+        if (resultCode != RESULT_OK) {
+            //пользователь отказался
+            return;
+        }
+
+        uri = data.getData();
+
+
+        Log.d("happy", uri.toString());
+        copyImageWrapper();
+
+    }
+
+    private void copyImageWrapper(){
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if(result == PackageManager.PERMISSION_GRANTED){
+            copyImage();
+            return;
+        }
+
+        ActivityCompat.requestPermissions(this,
+                new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                42);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == 42){
+            int result = grantResults[0];
+            if(result == PackageManager.PERMISSION_GRANTED){
+                copyImage();
+            } else {
+                info.setText("permission denied");
+            }
+        }else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    private void copyImage() {
+        info.setText(uri.toString());
+        image.setImageURI(uri);
+        try {
+//        File dir = getFilesDir();
+//        File dir = getCacheDir();
+           //доступность внешнего накопителя
+          if(!Environment.MEDIA_MOUNTED.equals(
+                  Environment.getExternalStorageState())){
+              return;
+          }
+
+//        File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+            File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            dir.mkdir();
+
+            Log.d("happy", "free: " + dir.getFreeSpace());
+
+            Log.d("happy", dir.getAbsolutePath());
+            File out = new File(dir, "img_" +
+                    System.currentTimeMillis() +
+                    ".png");
+            FileOutputStream os = new FileOutputStream(out);
+            InputStream is = getContentResolver().openInputStream(uri);
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = is.read(buffer)) != -1) {
+                os.write(buffer, 0, len);
+            }
+            is.close();
+            os.close();
+            Log.d("happy", out.getAbsolutePath());
+            Log.d("happy", "len: " + out.length());
+
+            PreferencesHelper.getInstance(this)
+                    .setFilename(out.getAbsolutePath());
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+================================
+                </listing>
+            </details>
             <p></p>
             <p></p>
             <p></p>
@@ -295,16 +812,25 @@ public class MainActivity extends AppCompatActivity {
             <details>
                 <summary style="color: blueviolet">__</summary>
                 <listing style="background-color: #DEF;">
-                    ================================
+================================
 
 
-                    ================================
+================================
 
 
-                    ================================
+================================
                 </listing>
             </details>
-            <p></p>
+            <p>
+                <span>QMediaPlayer</span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
             <p></p>
         </li>
     </ol>
