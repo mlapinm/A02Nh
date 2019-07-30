@@ -88,7 +88,187 @@
         </li>
         <li>
             <p></p>
+            <p>Kotlin: Урок 1. String Templates</p>
+    <listing>
+fun main(args: Array&lt;String&gt;){
+    var name: String = "Alex"
+    var name2 = "Yuri"
+    var a: Int = 1
+    var b: Int = 2
+    println("$name --- $name2")
+    println("a + b = ${a + b}")
+}
+    </listing>
             <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 2. Переменные var vs. val</p>
+            <p></p>
+            <p>var - mutable</p>
+            <p>val - non mutable</p>
+            <details>
+                <summary style="color: blueviolet">_E01Kot_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+fun main(args: Array&lt;String&gt;){
+    val userJava = UserJava("malapin@rambler.ru")
+    println("java " + userJava.email)
+
+    val userKotlin = UserKotlin("malapin@yandex.ru")
+    println("kotlin " + userKotlin.email)
+}
+================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\UserJava.java
+public class UserJava {
+
+   private final String email;
+
+    public UserJava(String email){
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}
+================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\UserKotlin.kt
+class UserKotlin (val email: String)
+================================
+================================
+                </listing>
+            </details>
+            <p></p>
+            <p>C:\Program Files\JetBrains\IntelliJ IDEA 2018.1\plugins\Kotlin\kotlinc\lib\kotlin-stdlib-jdk8.jar" MainKt</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 3. Типы данных Kotlin</p>
+            <p>Ctrl-B - на типе Primitives.kt</p>
+            <p></p>
+    <listing>
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    var a6: Byte   = 127    //8
+    var a0: Short = 123     //16
+    var a1: String = "123"
+    var a8: Char = '0'
+    var a2: Int = 123       //32
+    var a3: Long = 123      //64
+    var a4: Double = .2    //64
+    var a7: Double = .2e2    //64
+    var a5: Float = .2F    //32
+
+    var b1: Long = a2.toLong()
+    var b2: Int = a8.toInt()
+    var b3: Boolean = true
+    b3 = false
+
+
+    println("a1 = $a1, a2 = $a2, a3 = $a3, a4 = $a4, a5 = $a5 ")
+    println("b2 = $b2, b3 = $b3 " + b3.toString())
+}
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+ <p>Kotlin: Урок 4. Функции</p>
+           <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    println("f1 = ${firstFunction()} ")
+    println("function4(1,2) = ${function4(1,2.0)}")
+}
+
+fun firstFunction(): Int{
+
+    return 1;
+}
+
+fun secondFunction(a: Long):Int{
+
+    return a.toInt()
+}
+
+fun thirdFunction(){
+
+}
+
+fun function4(a:Long,b:Double) = a + b
+    </listing>
+           <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+<p>Kotlin: Урок 5. NPE и Null Safety</p>
+            <p>? - согласие на то, что переменная может быть null</p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+       <li>
+            <p></p>
+            <p></p>
+<p>Kotlin: Урок 6. Работа с классами и их свойствами</p>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -99,6 +279,14 @@
         <li>
             <p></p>
             <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -109,6 +297,14 @@
         <li>
             <p></p>
             <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -119,6 +315,14 @@
         <li>
             <p></p>
             <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -129,6 +333,14 @@
         <li>
             <p></p>
             <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -139,6 +351,156 @@
         <li>
             <p></p>
             <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+			<p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -209,12 +571,34 @@
     </table>
     <p>D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt</p>
     <listing>
-fun main(args: Array<String>){
-    println("Hello Kotlin")
+fun main(args: Array&.t;String&gt;){
+    var name: String = "Alex"
+    var name2 = "Yuri"
+    var a: Int = 1
+    var b: Int = 2
+    println("$name --- $name2")
+    println("a + b = ${a + b}")
 }
     </listing>
     <p></p>
-    <p></p>
+<p>Kotlin: Урок 0. Введение</p>
+<p>Kotlin: Урок 1. String Templates</p>
+<p>Kotlin: Урок 2. Переменные var vs. val</p>
+<p>Kotlin: Урок 3. Типы данных Kotlin</p>
+<p>Kotlin: Урок 4. Функции</p>
+<p>Kotlin: Урок 5. NPE и Null Safety</p>
+<p>Kotlin: Урок 6. Работа с классами и их свойствами</p>
+<p>Kotlin: Урок 7. Пакеты - Импорт методов и классов</p>
+<p>Kotlin: Урок 8. Enum - Перечесления и их роль</p>
+<p>Kotlin: Урок 9. When - Оператор выбора</p>
+<p>Kotlin: Урок 10. Интерфейсы</p>
+<p>Kotlin: Урок 11. Абстрактные классы и модификатор open</p>
+<p>Kotlin: Урок 12. Модификатор open и область его применения</p>
+<p>Kotlin: Урок 13. Модификаторы доступа</p>
+<p>Kotlin: Урок 14. Крутость и гибкость циклов</p>
+<p>Kotlin: Урок 15. Использование модификатора IN</p>
+<p>Kotlin: Урок 16. Как пишутся POJO в Kotlin?</p>
+<p>Kotlin: Урок 17. Sealed Классы</p>    <p></p>
     <p></p>
     <p></p>
     <p>
