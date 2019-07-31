@@ -687,8 +687,47 @@ abstract class BaseTemplate {
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import openexam.Driver
+import openexam.Person
 
 fun main(args: Array&lt;String&gt;){
+fun main(args: Array<String>) {
+    val person = Person("Vasya")
+    println("" + person
+            + " " + person.getAddress()
+            + " age =  " + person.age
+    )
+    val driver = Driver()
+    println("" + driver
+            + " " + driver.getAddress()
+            + " age = " + driver.age
+    )
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\openexam\Driver.ktD:\mailCloud\prjother\007Kotlin\E01Kot\src\openexam\Person.kt
+package openexam
+
+class Driver: Person() {
+
+    override val age:Int = 2
+
+    override fun getAddress():String{
+        return "Saint-Petersburg"
+    }
+}
+
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\openexam\Person.kt
+package openexam
+
+open class Person(val name: String = "Petya") {
+
+    open val age: Int = 0
+
+    open fun getAddress():String = "Moscow"
+
+    override fun toString(): String {
+        return "Person(name = '$name')"
+    }
 
 }
     </listing>
@@ -703,6 +742,9 @@ fun main(args: Array&lt;String&gt;){
         <li>
             <p></p>
 <p>Kotlin: Урок 13. Модификаторы доступа</p>
+            <p>public - All Все</p>
+            <p></p>
+            <p></p>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
