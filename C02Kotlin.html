@@ -630,6 +630,60 @@ class B:MyInterface {
         </li>
         <li>
             <p></p>
+<p>Kotlin: Урок 11. Абстрактные классы и модификатор open</p>
+            <p></p>
+            <p>final - не наследуется. По умолчанию все классы final.</p>
+            <p>open -  разрешено наследовать</p>
+            <p>Наследовать несколько классов нельзя.</p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import abstracts.BaseTemplate
+
+fun main(args: Array&lt;String&gt;){
+   val aTemplate : BaseTemplate = ATemplate()
+
+    aTemplate.metod1()
+    aTemplate.metod1()
+    aTemplate.metod1()
+    println(aTemplate.count)
+    aTemplate.minus()
+    println(aTemplate.count)
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\abstracts\ATemplate.kt
+package abstracts
+
+class ATemplate : BaseTemplate() {
+    override fun minus() {
+        count--
+    }
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\abstracts\BaseTemplate.kt
+package abstracts
+
+abstract class BaseTemplate {
+
+    var count = 0
+    fun metod1() {
+        count++
+        println("metod1")
+    }
+
+    abstract fun minus()
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 12. Модификатор open и область его применения</p>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
@@ -648,24 +702,7 @@ fun main(args: Array&lt;String&gt;){
         </li>
         <li>
             <p></p>
-            <p></p>
-           <listing>
- //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
-
-fun main(args: Array&lt;String&gt;){
-
-}
-    </listing>
-			<p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </li>
-        <li>
-            <p></p>
+<p>Kotlin: Урок 13. Модификаторы доступа</p>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
