@@ -325,10 +325,34 @@ class Car (private var weight: Int, private var size: Int) {
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import animals.cat.CatA
+import animals.superMethod1
+import animals.superMethod2
 
-fun main(args: Array&lt;String&gt;){
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\animals\cat\CatA.kt
+package animals.cat
 
+class CatA {
+    fun a1(){
+        println("CatA.a1")
+    }
+    fun a2(){
+        println("CatA.a2")
+    }
 }
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\animals\Utils2.kt
+package animals
+
+fun superMethod2(){
+    println("superMethod2")
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\animals\Utils.kt
+package animals
+
+fun superMethod1(){
+    println("superMethod1")
+}
+//
     </listing>
 			<p></p>
             <p></p>
@@ -347,11 +371,79 @@ fun main(args: Array&lt;String&gt;){
 
 fun main(args: Array&lt;String&gt;){
 
+    println(Colors.GREEN)
+    println(Colors.BLACK.name)
+    var message: Colors = Colors.WHITE
+    var message2: String = Colors.RED.name
+    println(message.toString() + " " + message2)
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Colors.kt
+enum class Colors {
+    RED,
+    BLACK,
+    GREEN,
+    WHITE,
 }
     </listing>
 			<p></p>
             <p></p>
+             <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+    println(Colors.GREEN)
+    println(Colors.BLACK.name)
+    var message: Colors = Colors.WHITE
+    var message2: String = Colors.RED.name
+    println(message.toString()  + " "
+            + message.colorHex  + " "
+            + message2)
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Colors.kt
+enum class Colors (var colorHex:String){
+    RED("#FF0000"),
+    BLACK("#000000"),
+    GREEN("#00FF00"),
+    WHITE("#FFFFFF"),
+}
+    </listing>
+          <p></p>
             <p></p>
+            <p></p>
+             <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+    println(Color.GREEN)
+    println(Color.BLACK.name)
+    var message: Color = Color.RED
+    var message2: String = Color.WHITE.name
+    println(message.toString()  + " "
+            + message.colorHex  + " "
+            + message.opacity  + " "
+            + message2)
+    message.some()
+
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\Colors.kt
+enum class Color (var colorHex:String, var opacity:Double?= 1.0){
+    RED("#FF0000", .5),
+    BLACK("#000000"),
+    GREEN("#00FF00"),
+    WHITE("#FFFFFF");
+
+    fun some() {
+        println(this.name
+                + " " + this.colorHex
+                + " " + this.opacity
+        )
+    }
+}
+    </listing>
+          <p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -359,17 +451,117 @@ fun main(args: Array&lt;String&gt;){
         </li>
         <li>
             <p></p>
+<p>Kotlin: Урок 9. When - Оператор выбора</p>
+            <p></p>
+			<p></p>
+           <listing>
+     var n = 8
+    var result = when(n){
+        1 -&gt; "One"
+       2 -&gt; "Two"
+       3 -&gt; "Three"
+       4 -&gt; "Four"
+       5 -&gt; "Five"
+       6 -&gt; "Six"
+       else -&gt; "None"
+    }
+    println(result)
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+import Color.*
+fun main(args: Array&lt;String&gt;){
+    val color = Color.GREEN
+    var result = when(color){
+        RED -&gt; "Красный"
+        BLACK -&gt; "Черный"
+        GREEN -&gt; "Зеленый"
+        WHITE -&gt; "Белый"
+
+       else -&gt; "None"
+    }
+    println(result)
+}
+    </listing>
+            <p></p>
+            <p></p>
+           <listing>
+ import Color.*
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+     println(getFavoriteColor(GREEN))
+}
+
+fun getFavoriteColor(color:Color)=when(color){
+    RED -&gt; "Красный"
+    BLACK -&gt; "Черный"
+    GREEN -&gt; "Зеленый"
+    WHITE -&gt; "Белый"
+
+    else -&gt; "None"
+}
+    </listing>
+            <p></p>
+           <listing>
+import Color.*
+
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+     println(getFavoriteColor(GREEN))
+}
+
+fun getFavoriteColor(color:Color)=when(color){
+    RED, BLACK -&gt; "Красный или Черный"
+    GREEN -&gt; "Зеленый"
+    WHITE -&gt; "Белый"
+
+    else -&gt; "None"
+}
+    </listing>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
 fun main(args: Array&lt;String&gt;){
+    var result = when(setOf(BLACK, RED)) {
+        setOf(RED, BLACK) -&gt; "Красный-Черный"
+        setOf(GREEN,WHITE) -&gt; "Зеленый-Белый"
+        else -&gt; "None"
+    }
+
+        println(result)
+}
+    </listing>
+            <p></p>
+            <p></p>
+			<p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+    var a = 2
+    var b = 4
+
+    when{
+        (a &gt; b) -> println("$a &gt; $b = true")
+        (a &lt; b) -> println("$a &lt; $b = true")
+        (a == b) -> println("$a == $b = true")
+    }
+    if( a &gt; b){
+        println("$a &gt; $b = true")
+    }
+    if( a &lt; b){
+        println("$a &lt; $b = true")
+    }
+    if( a == b){
+        println("$a == $b = true")
+    }
 
 }
     </listing>
-			<p></p>
-            <p></p>
-            <p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -377,15 +569,58 @@ fun main(args: Array&lt;String&gt;){
         </li>
         <li>
             <p></p>
-            <p></p>
+<p>Kotlin: Урок 10. Интерфейсы</p>
+            <p>override - переопределенный метод</p>
+			<p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
-
+import interfaces.A
+import interfaces.B
+import interfaces.MyInterface
 fun main(args: Array&lt;String&gt;){
 
+    var a: MyInterface = A()
+    var b: MyInterface = B()
+
+    a.fun1()
+    b.fun1()
+    println("a.property1 = ${a.property1}, " +
+            "b.property1 = ${b.property1}")
 }
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\interfaces\MyInterface.kt
+package interfaces
+
+interface MyInterface {
+
+    val property1:Int
+
+    fun fun1()
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\interfaces\A.kt
+package interfaces
+
+class A: MyInterface {
+    override val property1: Int
+        get() = 3
+
+    override fun fun1() {
+        println("A")
+    }
+}
+//D:\mailCloud\prjother\007Kotlin\E01Kot\src\interfaces\B.kt
+package interfaces
+
+class B:MyInterface {
+
+    override val property1: Int
+        get() = 4
+
+    override fun fun1() {
+        println("B")
+    }
+}
+//
     </listing>
-			<p></p>
             <p></p>
             <p></p>
             <p></p>
