@@ -227,14 +227,24 @@ fun function4(a:Long,b:Double) = a + b
             <p></p>
 <p>Kotlin: Урок 5. NPE и Null Safety</p>
             <p>? - согласие на то, что переменная может быть null</p>
-            <p></p>
+            <p>string!!. - согласие на то, что переменная может быть null</p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
 fun main(args: Array&lt;String&gt;){
 
+    var string: String? = null
+    string = getString(null)
+    val size = string!!.length
+
+    println("size string = $size")
 }
-    </listing>
+
+fun getString(string: String?):String?{
+    return string
+}
+//Exception in thread "main" kotlin.KotlinNullPointerException
+	//at MainKt.main(Main.kt:8)    </listing>
             <p></p>
             <p></p>
             <p></p>
@@ -250,9 +260,152 @@ fun main(args: Array&lt;String&gt;){
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
 fun main(args: Array&lt;String&gt;){
+    var people = People("12")
+
+    println(people.toString())
+    println(people.name)
+
+    val person = Person("Ivan",  "Petrov",3)
+    println(person.firstName + " " + person.age)
+
+    val car = Car(30, 20)
+    println(car.isNew)
+    car.isNew = true
+    println(car.isNew)
+
+}
+=================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\People.kt
+class People {
+
+
+
+    var name:String = ""
+    get() = field.toUpperCase()
+
+    override fun toString(): String {
+        return name
+    }
+
+    constructor(name:String){
+        this.name = name
+    }
+
+
+
+}
+=================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\Person.kt
+class Person (var firstName:String, var lastName:String,
+              var age: Int = 0){
+
+
+}
+=================================
+D:\mailCloud\prjother\007Kotlin\E01Kot\src\Car.kt
+class Car (private var weight: Int, private var size: Int) {
+    var isNew: Boolean = false
+        get() {
+            return weight > size
+        }
+        set(value){
+            field = value
+        }
+}
+=================================
+    </listing>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 7. Пакеты - Импорт методов и классов</p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
 
 }
     </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+<p>Kotlin: Урок 8. Enum - Перечесления и их роль</p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
+            <p></p>
             <p></p>
             <p></p>
             <p></p>
