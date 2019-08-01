@@ -691,6 +691,7 @@ import openexam.Driver
 import openexam.Person
 
 fun main(args: Array&lt;String&gt;){
+fun main(args: Array<String>) {
     val person = Person("Vasya")
     println("" + person
             + " " + person.getAddress()
@@ -756,24 +757,11 @@ v E01Kotlin01
 	Main.kt
 	&gt;Libraries
 
- //D:\mailCloud\prjother\007Kotlin\E01Kotlin\src\Main.kt
-fun main(args: Array&lt;String&gt;){
-    val mouse = Mouse()
-    mouse.funA()
-}
-//D:\mailCloud\prjother\007Kotlin\E01Kotlin\src\Mouse.kt
-internal class Mouse() {
-    fun funA(){
-        println("funA")
-    }
-}
-//D:\mailCloud\prjother\007Kotlin\E01Kotlin\E01Kotlin01\src\Main.kt
-fun main(args:Array&lt;String&gt;){
-    val mouse = Mouse()
-    mouse.funA()
-}
-//
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
+fun main(args: Array&lt;String&gt;){
+
+}
     </listing>
 			<p></p>
             <p>Error:(2, 17) Kotlin: Cannot access 'Mouse': it is internal in ''</p>
@@ -785,104 +773,11 @@ fun main(args:Array&lt;String&gt;){
         </li>
         <li>
             <p></p>
-<p>Kotlin: Урок 14. Крутость и гибкость циклов</p>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
 fun main(args: Array&lt;String&gt;){
-    val num: Int = 6
-    when (num) {
-        8 -&gt; {
-
-        }
-        7 -&gt; {
-
-        }
-        6 -&gt; {
-            val daysOfWeek = listOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
-            daysOfWeek.forEach {
-                println(it)
-            }
-        }
-        5 -&gt; {
-            for (i in 10 downTo 3) {
-                println(" $i ")
-            }
-        }
-        4 -&gt; {
-            var nums = 1..5
-            for (i in nums step 2) {
-                println(" $i ")
-            }
-        }
-        3 -&gt; {
-            var nums = 1..5
-            for (i in nums) {
-                println(" $i ")
-            }
-        }
-        2 -&gt; {
-            var index: Int = 0
-            do {
-                println("YO :) = $index")
-                index++
-            } while (false)
-        }
-        1 -&gt; {
-            var index: Int = 0
-            while (index &lt; 5) {
-                println("YO :) = $index")
-                index++
-            }
-        }
-    }
-}
-    </listing>
-			<p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-        </li>
-        <li>
-            <p></p>
- <p>Kotlin: Урок 15. Использование модификатора IN</p>
-           <p></p>
-           <listing>
- //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
-
-fun main(args: Array&lt;String&gt;){
-    val i = 4
-    when (i) {
-        4 -&gt; {
-            val characters = 'a'..'z'
-            println('/' in characters)
-            println('b' in characters)
-        }
-        3 -&gt; {
-            val characters = 'a'..'z'
-            characters.forEach(){
-                println(it)
-            }
-        }
-        2 -&gt; {
-            val nums = 1..10
-            var value = 14
-            println(value in nums)
-            value = 5
-            println(value in nums)
-        }
-        1 -&gt; {
-            for (i in 1..5) {
-                println("yo = $i")
-                if(i == 3)
-                    break
-            }
-        }
-    }
 
 }
     </listing>
@@ -896,90 +791,52 @@ fun main(args: Array&lt;String&gt;){
         </li>
         <li>
             <p></p>
-<p>Kotlin: Урок 16. Как пишутся POJO в Kotlin?</p>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
 fun main(args: Array&lt;String&gt;){
-    val person = Person("Vitya", 34)
-
-    val person2 = person
-    person2.age = 44
-
-    println(person)
-    println(person2)
-
-}
-//D:\mailCloud\prjother\007Kotlin\E01Kotlin\src\Person.kt
-data class Person(val name:String,var age:Int) {
 
 }
     </listing>
 			<p></p>
-           <listing>
- //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
-
-fun main(args: Array&lt;String&gt;){
-    val person = Person("Vitya", 34)
-
-    val person2 = person.copy(age = 1)
-    person2.age = 44
-
-    println(person)
-    println(person2)
-//    Person(name=Vitya, age=34)
-//    Person(name=Vitya, age=44)
-    val (name,age) = person
-    println("his age = $age , name = $name ")
-    val (age1, name1) = person
-//his age = 34 , name = Vitya
-    println("his age = $age1 , name = $name1 ")
-//his age = Vitya , name = 34
-}
-    </listing>
-			<p></p>
-            <p>Person@266474c2 - адрес в памяти</p>
-            <p>data class Person(val name:String,val age:Int) {</p>
-            <p>Person(name=Vitya, age=34)</p>
             <p></p>
-            <p>data class не могут быть open, abstract, internal, sealed</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
             <p></p>
         </li>
         <li>
             <p></p>
-<p>Kotlin: Урок 17. Sealed Классы</p>    <p></p>
             <p></p>
            <listing>
  //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
 
 fun main(args: Array&lt;String&gt;){
-    val e1 = Expr.Const(1.2)
-    val e2 = Expr.Const(2.2)
 
-    val sum = Expr.Sum(e1,e2)
-
-    println("eval(e1) = ${eval(e1)} " +
-            "eval(sum) = ${eval(sum)}")
-//eval(e1) = 1.2 eval(sum) = 3.4000000000000004
-}
-
-fun eval(expr: Expr): Double = when(expr){
-    is Expr.Const -&gt; expr.number
-    is Expr.Sum -&gt; eval(expr.e1)+ eval(expr.e2)
-
-    Expr.NotANumber -&gt; Double.NaN
-
-}
-//D:\mailCloud\prjother\007Kotlin\E01Kotlin\src\Expr.kt
-sealed class Expr {
-    class Const(val number: Double): Expr()
-    class Sum(val e1:Expr, val e2:Expr): Expr()
-    object NotANumber : Expr()
 }
     </listing>
 			<p></p>
-            <p>Sealed - Запечатанный</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </li>
+        <li>
+            <p></p>
+            <p></p>
+           <listing>
+ //D:\mailCloud\prjother\007Kotlin\E01Kot\src\Main.kt
+
+fun main(args: Array&lt;String&gt;){
+
+}
+    </listing>
+			<p></p>
+            <p></p>
             <p></p>
             <p></p>
             <p></p>
@@ -1224,16 +1081,6 @@ fun main(args: Array&.t;String&gt;){
     <p>
         <a href="https://www.youtube.com/watch?v=L9k_NdTaMeI&list=PLIU76b8Cjem4ZOt3tlWykUX1AjL9zE19t">Базовый курс по Kotlin</a>
         <a href="https://kotlinlang.org/">https://kotlinlang.org/</a>
-        <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem4ZOt3tlWykUX1AjL9zE19t">Базовый курс по Kotlin</a>
-        <a href="https://www.youtube.com/user/devcolibri/playlists">плейлисты</a>
-        <a href="https://www.youtube.com/watch?v=BqKlLk-SNmc&list=PLIU76b8Cjem4axtgg9DsrJ1y6tyrW9F2K">S4AA - Сервер для Android приложения [IntellijIdea][Spring]</a>
-        <a href="https://www.youtube.com/watch?v=mmUgcokRJ5k&list=PLIU76b8Cjem7oSU18zTKNfsyzrmf3Zubl">Базовый курс по Android</a>
-        <a href="https://www.youtube.com/watch?v=ve-aV1XmwHs&list=PLIU76b8Cjem4LHwAjioGdsYr_YXkizsfp">Первое Android приложение на Kotlin</a>
-        <a href="https://www.youtube.com/watch?v=ywdXqddLIa0&list=PLIU76b8Cjem5je97dnSIxaMG6EuM4Fkmu">Live Stream: Внутреннее общение приложения и Android EventBus</a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
         <a href=""></a>
         <a href=""></a>
         <a href=""></a>
@@ -1241,15 +1088,8 @@ fun main(args: Array&.t;String&gt;){
         <a href=""></a>
         <a href=""></a>
     </p>
-    <p>
-    	<span>Alt Enter</span><span></span>
-    	<span>Ctrl B</span><span></span>
-    	<span>wheel</span><span></span>
-    	<span>Live streaming</span><span>Прямая трансляция</span>
-    	<span></span><span></span>
-    	<span></span><span></span>
-    </p>
-    <p>Live streaming – Медиа сервер от NetUP</p>
+    <p></p>
+    <p></p>
     <p></p>
     <p></p>
     <p></p>
