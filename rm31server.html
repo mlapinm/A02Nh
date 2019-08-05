@@ -31,7 +31,7 @@
         }
 
         details summary::-webkit-details-marker {
-/*            display: none;*/
+            display: none;
         }
 
     </style>
@@ -100,20 +100,910 @@
         <p></p>
     </li>
     <li>
-        <p></p>
-        <p>src/main/java</p>
-        <p>new package/com.qoobico</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </li>
-    <li>
-        <p></p>
+    	<p></p>
+    	<p>src/main/java</p>
+    	<p>new package/com.qoobico</p>
+    	<p></p>
         <p>spring core maven</p>
+    	<p>tomcat</p>
+    	<p></p>
+    	<canvas height='320' width='480' id='first_example'>Пример</canvas>
+    	<script>
+    		var canvas = document.getElementById("first_example");
+    		var context = canvas.getContext('2d');
+    		context.strokeRect(0, 0, canvas.width, canvas.height);
+    		context.beginPath();
+    		context.arc(200, 50, 50, 0, Math.PI * 2, false);
+    		context.stroke();
+    		context.beginPath();
+    		context.arc(50, 200, 50, 0, Math.PI * 2, false);
+    		context.stroke();
+    		context.beginPath();
+    		context.arc(350, 200, 50, 0, Math.PI * 2, false);
+    		context.stroke();
+			context.font = "20px Arial"
+			context.strokeText("Model",180,50);
+			context.strokeText("Controller",10,200);
+			context.strokeText("View",320,200);
+    	</script>
+    	<p></p>
+    	<p></p>
+    </li>
+    <li>        <p></p>
+        <p></p>
+            <details>
+                <summary style="color: blueviolet">_httpserver_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\pom.xml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.study.remidme.server&lt;/groupId&gt;
+    &lt;artifactId&gt;com.study.remidme.server&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-core --&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+            &lt;version&gt;5.1.8.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+            &lt;version&gt;5.1.8.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+            &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;/dependency&gt;    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\config\WebConfig.java
+package com.qoobico.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.qoobico")
+public class WebConfig extends WebMvcConfigurerAdapter {
+
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\ApplicationInitializer.java
+package com.qoobico;
+
+
+import com.qoobico.config.WebConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
+import javax.servlet.ServletContext;
+
+public class ApplicationInitializer implements WebApplicationInitializer {
+    public static final String DISPATCHER = "dispatcher";
+
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+
+
+        ctx.register(WebConfig.class);
+        servletContext.addListener(new ContextLoaderListener( ctx));
+
+        ServletRegistration.Dynamic servlet = servletContext.addServlet(DISPATCHER, new DispatcherServlet( ctx));
+        servlet.addMapping("/");
+        servlet.setLoadOnStartup(1);
+
+    }
+}
+
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\controller\RemindController.java
+package com.qoobico.controller;
+
+import org.springframework.stereotype.Controller;
+
+
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@RequestMapping("/remind")
+@ResponseBody
+public class RemindController {
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public String getReminder(ModelMap model) {
+        return "May remender";
+    }
+}
+================================
+                </listing>
+            </details>
         <p></p>
         <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p>install/d:\programs/</p>
+        <p>postgresql-9.5.18-3-windows-x64</p>
+        <table>
+            <tr>
+                <td>password</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>port</td>
+                <td>5432</td>
+            </tr>
+            <tr>
+                <td>Local</td>
+                <td>[Default local]</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <p>D:\programs\PostgreSQL\9.5\bin\pgAdmin3.exe</p>
+        <p>file/new/.gitignore</p>
+        <p>POM - introduce property</p>
+        <p>ctrl alt v</p>
+        <p><a href="https://spring.io/projects/spring-data">spring-data</a></p>
+        <p>org.springframework.data » spring-data-jpa</p>
+        <p>jpa - интерфейс для работы фреймворков с базами данных</p>
+        <p>ORM - object relation mapping для работы с базами данных</p>
+        <p>ctrl - название улетаем в файл</p>
+        <p>@Bean - развернуть на момент разворачивания приложения</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p>dbcp2 - Database Connection Pools</p>
+        <p><a href="https://commons.apache.org/proper/commons-dbcp/configuration.html">https://commons.apache.org/proper/commons-dbcp/configuration.html</a></p>
+        <pre>
+Parameter	Default	Description
+initialSize	0	The initial number of connections that are created when the pool is started.
+Since: 1.2
+maxTotal	8	The maximum number of active connections that can be allocated from this pool at the same time, or negative for no limit.
+maxIdle	8	The maximum number of connections that can remain idle in the pool, without extra ones being released, or negative for no limit.
+minIdle	0	The minimum number of connections that can remain idle in the pool, without extra ones being created, or zero to create none.
+maxWaitMillis	indefinitely	The maximum number of milliseconds that the pool will wait (when there are no available connections) for a connection to be returned before throwing an exception, or -1 to wait indefinitely.
+        </pre>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p>Database</p>
+        <p></p>
+        <p></p>
+        <p></p>
+            <details>
+                <summary style="color: blueviolet">_httpserver_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\pom.xml
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.study.remidme.server&lt;/groupId&gt;
+    &lt;artifactId&gt;com.study.remidme.server&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+    &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-core --&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+            &lt;version&gt;5.1.8.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Web --&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+            &lt;version&gt;5.1.8.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+            &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- Database --&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-data-jpa&lt;/artifactId&gt;
+            &lt;version&gt;2.1.5.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager --&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+            &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+            &lt;version&gt;5.2.17.Final&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- https://mvnrepository.com/artifact/postgresql/postgresql --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;postgresql&lt;/groupId&gt;
+            &lt;artifactId&gt;postgresql&lt;/artifactId&gt;
+            &lt;version&gt;9.1-901.jdbc4&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-dbcp2&lt;/artifactId&gt;
+            &lt;version&gt;2.1.1&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+            &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+            &lt;version&gt;2.9.0&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\resources\db.properties
+db.driver = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost:5432/reminderdb
+db.username = postgres
+db.password = 1234
+db.entity.package = com.qoobico.entity
+
+
+db.initialSize = 30
+db.minIdle = 30
+db.maxIdle = 60
+db.timeBetweenEvictionRunsMillis = 30000
+db.minEvictableIdleTimeMillis = 60000
+db.testOnBorrow = true
+db.validationQuery = select version()
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\resources\hibernate.properties
+hibernate.dialect = org.hibernate.dialect.PostgreSQL9Dialect
+hibernate.show_sql = true
+
+hibernate.hbm2ddl.auto = create
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\config\DatabaseConfig.java
+package com.qoobico.config;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.jta.JtaTransactionManager;
+
+import javax.annotation.Resource;
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+@Configuration
+@EnableJpaRepositories("com.qoobico.repository")
+@EnableTransactionManagement
+@PropertySource("classpath:db.properties")
+@ComponentScan("com.qoobico")
+public class DatabaseConfig {
+
+    @Resource
+    private Environment env;
+
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+        em.setDataSource(dataSource());
+        em.setPackagesToScan(env.getRequiredProperty("db.entity.package"));
+        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+        em.setJpaProperties(getHibernateProperties());
+
+        return em;
+    }
+
+    @Bean
+    public PlatformTransactionManager platformTransactionManager(){
+        JpaTransactionManager manager = new JpaTransactionManager();
+        manager.setEntityManagerFactory(entityManagerFactory().getObject());
+        return manager;
+    }
+
+    private Properties getHibernateProperties() {
+        try {
+            Properties properties = new Properties();
+            InputStream is = getClass().getClassLoader().getResourceAsStream("hibernate.properties");
+            properties.load(is);
+            return properties;
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Can't find file...", e);
+        }
+    }
+
+    @Bean
+    public DataSource dataSource() {
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl(env.getRequiredProperty("db.url"));
+        ds.setDriverClassName(env.getRequiredProperty("db.driver"));
+        ds.setUsername(env.getRequiredProperty("db.username"));
+        ds.setPassword(env.getRequiredProperty("db.password"));
+
+        ds.setInitialSize(Integer.valueOf(env.getRequiredProperty("db.initialSize")));
+        ds.setMinIdle(Integer.valueOf(env.getRequiredProperty("db.minIdle")));
+        ds.setMaxIdle(Integer.valueOf(env.getRequiredProperty("db.maxIdle")));
+        ds.setTimeBetweenEvictionRunsMillis(Long.valueOf(env.getRequiredProperty("db.timeBetweenEvictionRunsMillis")));
+        ds.setMinEvictableIdleTimeMillis(Long.valueOf(env.getRequiredProperty("db.minEvictableIdleTimeMillis")));
+        ds.setTestOnBorrow(Boolean.valueOf(env.getRequiredProperty("db.testOnBorrow")));
+        ds.setValidationQuery(env.getRequiredProperty("db.validationQuery"));
+
+        return ds;
+    }
+
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\entity\Remind.java
+package com.qoobico.entity;
+
+
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "remind")
+public class Remind {
+
+    @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    private long id;
+
+    @Column(name = "Title", nullable = false, length = 50)
+    private String title;
+
+    @Column(name = "remind_date", nullable = false)
+    private Date remindDate;
+
+    public Remind() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getRemindDate() {
+        return remindDate;
+    }
+
+    public void setRemindDate(Date remindDate) {
+        this.remindDate = remindDate;
+    }
+}
+================================
+                </listing>
+            </details>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p>Jackson 2</p>
+        <p></p>
+        <p></p>
+            <details>
+                <summary style="color: blueviolet">_RemindController_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\controller\RemindController.java
+package com.qoobico.controller;
+
+import com.qoobico.entity.Remind;
+import org.springframework.stereotype.Controller;
+
+
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
+
+@RestController
+@RequestMapping("/remind")
+@ResponseBody
+public class RemindController {
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public Remind getReminder(ModelMap model) {
+        return CreateMockRemind();
+    }
+
+    private Remind CreateMockRemind() {
+        Remind remind = new Remind();
+        remind.setId(1);
+        remind.setRemindDate(new Date());
+        remind.setTitle("My first remind...");
+
+        return remind;
+    }
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\config\WebConfig.java
+package com.qoobico.config;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import java.util.Collections;
+import java.util.List;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.qoobico")
+public class WebConfig extends WebMvcConfigurerAdapter {
+
+
+    @Override
+    public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) {
+        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+        converter.setObjectMapper(new ObjectMapper());
+        converter.setSupportedMediaTypes(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+        converters.add(converter);
+    }
+}
+================================
+                </listing>
+            </details>
+        <p>{"id":1,"title":"My first remind...","remindDate":1564896810353}</p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+            <details>
+                <summary style="color: blueviolet">_repository_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\entity\Remind.java
+package com.qoobico.entity;
+
+
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "remind")
+public class Remind {
+
+    @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    private long id;
+
+    @Column(name = "Title", nullable = false, length = 50)
+    private String title;
+
+    @Column(name = "remind_date", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date remindDate;
+
+    public Remind() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getRemindDate() {
+        return remindDate;
+    }
+
+    public void setRemindDate(Date remindDate) {
+        this.remindDate = remindDate;
+    }
+}
+
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\repository\RemindRepository.java
+package com.qoobico.repository;
+
+import com.qoobico.entity.Remind;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RemindRepository extends JpaRepository&lt;Remind, Long&gt; {
+
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\config\DatabaseConfig.java
+package com.qoobico.config;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.jta.JtaTransactionManager;
+
+import javax.annotation.Resource;
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+@Configuration
+@EnableJpaRepositories("com.qoobico.repository")
+@EnableTransactionManagement
+@PropertySource("classpath:db.properties")
+@ComponentScan("com.qoobico")
+public class DatabaseConfig {
+
+    @Resource
+    private Environment env;
+
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+        em.setDataSource(dataSource());
+        em.setPackagesToScan(env.getRequiredProperty("db.entity.package"));
+        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
+        em.setJpaProperties(getHibernateProperties());
+
+        return em;
+    }
+
+    @Bean
+    public PlatformTransactionManager transactionManager(){
+        JpaTransactionManager manager = new JpaTransactionManager();
+        manager.setEntityManagerFactory(entityManagerFactory().getObject());
+        return manager;
+    }
+
+    private Properties getHibernateProperties() {
+        try {
+            Properties properties = new Properties();
+            InputStream is = getClass().getClassLoader().getResourceAsStream("hibernate.properties");
+            properties.load(is);
+            return properties;
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Can't find file...", e);
+        }
+    }
+
+    @Bean
+    public DataSource dataSource() {
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl(env.getRequiredProperty("db.url"));
+        ds.setDriverClassName(env.getRequiredProperty("db.driver"));
+        ds.setUsername(env.getRequiredProperty("db.username"));
+        ds.setPassword(env.getRequiredProperty("db.password"));
+
+        ds.setInitialSize(Integer.valueOf(env.getRequiredProperty("db.initialSize")));
+        ds.setMinIdle(Integer.valueOf(env.getRequiredProperty("db.minIdle")));
+        ds.setMaxIdle(Integer.valueOf(env.getRequiredProperty("db.maxIdle")));
+        ds.setTimeBetweenEvictionRunsMillis(Long.valueOf(env.getRequiredProperty("db.timeBetweenEvictionRunsMillis")));
+        ds.setMinEvictableIdleTimeMillis(Long.valueOf(env.getRequiredProperty("db.minEvictableIdleTimeMillis")));
+        ds.setTestOnBorrow(Boolean.valueOf(env.getRequiredProperty("db.testOnBorrow")));
+        ds.setValidationQuery(env.getRequiredProperty("db.validationQuery"));
+
+        return ds;
+    }
+
+}
+package com.qoobico.controller;
+
+import com.qoobico.entity.Remind;
+import com.qoobico.repository.RemindRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
+import java.util.List;
+
+@RestController
+@RequestMapping("/remind")
+@ResponseBody
+public class RemindController {
+
+    @Autowired
+    private RemindRepository remindRepository;
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public Remind getReminder(ModelMap model) {
+        List&lt;Remind&gt; list = remindRepository.findAll();
+        return CreateMockRemind();
+    }
+
+    private Remind CreateMockRemind() {
+        Remind remind = new Remind();
+        remind.setId(1);
+        remind.setRemindDate(new Date());
+        remind.setTitle("My first remind...");
+
+        return remind;
+    }
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\controller\RemindController.java
+package com.qoobico.controller;
+
+import com.qoobico.entity.Remind;
+import com.qoobico.repository.RemindRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
+import java.util.List;
+
+@RestController
+@RequestMapping("/remind")
+@ResponseBody
+public class RemindController {
+
+    @Autowired
+    private RemindRepository remindRepository;
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public Remind getReminder(ModelMap model) {
+        List&lt;Remind&gt; list = remindRepository.findAll();
+        return CreateMockRemind();
+    }
+
+    private Remind CreateMockRemind() {
+        Remind remind = new Remind();
+        remind.setId(1);
+        remind.setRemindDate(new Date());
+        remind.setTitle("My first remind...");
+
+        return remind;
+    }
+}
+
+================================
+                </listing>
+            </details>
+        <p></p>
+        <p>The possible values for hbm2ddl.auto:
+create
+validate
+update
+create-drop</p>
+        <p>[{"id":1,"title":"ddddddd","remindDate":1355259600000},{"id":2,"title":"sssssssss","remindDate":-23889697200000}]</p>
+        <listing>
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Remind> getReminder(ModelMap model) {
+        List<Remind> list = remindRepository.findAll();
+        return list;
+    }
+        </listing>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+            <details>
+                <summary style="color: blueviolet">_service_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\service\ReminderService.java
+package com.qoobico.service;
+
+import com.qoobico.entity.Remind;
+
+import java.util.List;
+
+public interface ReminderService {
+    List<Remind> getAll();
+    Remind getByID(long id);
+    Remind save(Remind remind);
+    void remove(long id);
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\service\ReminderServiceImpl.java
+package com.qoobico.service;
+
+import com.qoobico.entity.Remind;
+import com.qoobico.repository.RemindRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ReminderServiceImpl implements ReminderService {
+
+    @Autowired
+    private RemindRepository repository;
+
+    public List<Remind> getAll() {
+        return repository.findAll();
+    }
+
+    public Remind getByID(long id) {
+        return repository.findById(id).get();
+    }
+
+    public Remind save(Remind remind) {
+        return repository.saveAndFlush(remind);
+    }
+
+    public void remove(long id) {
+        repository.deleteById(id);
+
+    }
+}
+
+================================
+D:\mailCloud\prjother\007Kotlin\httpserver\src\main\java\com\qoobico\controller\RemindController.java
+package com.qoobico.controller;
+
+import com.qoobico.entity.Remind;
+import com.qoobico.service.ReminderService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
+import java.util.List;
+
+@RestController
+public class RemindController {
+
+    @Autowired
+    private ReminderService service;
+
+    @RequestMapping(value = "/reminders", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Remind> getAllReminders(ModelMap model) {
+        return service.getAll();
+    }
+
+    @RequestMapping(value = "/reminders/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Remind getReminder(@PathVariable("id") long remindID) {
+        return service.getByID(remindID);
+    }
+
+    @RequestMapping(value = "/reminders", method = RequestMethod.POST)
+    @ResponseBody
+    public Remind saveReminder(@RequestBody Remind remind) {
+        return service.save(remind);
+    }
+
+    @RequestMapping(value = "/reminders/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public void delete(@PathVariable long id) {
+         service.remove(id);
+    }
+
+}
+================================
+                </listing>
+            </details>
         <p></p>
         <p></p>
         <p></p>
@@ -144,34 +1034,26 @@
         <p></p>
         <p></p>
         <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </li>
-    <li>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </li>
-    <li>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
         <p></p>
         <p></p>
         <p></p>
         <p><a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <a href="https://cmder.net/">cmder</a>
+        <a href="https://www.postgresql.org/">www.postgresql.org</a>
+        <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">postgres-postgresql-downloads</a>
+        <a href="https://tomcat.apache.org/download-90.cgi">tomcat.apache.org</a>
         <a href="https://mvnrepository.com/artifact/org.springframework/spring-core/5.1.8.RELEASE">spring core maven</a>
         <a href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR">Базовый курс по Git</a>
         <a href="https://github.com/mlapinm/httpserver">github</a><a href="https://www.youtube.com/watch?v=BqKlLk-SNmc&list=PLIU76b8Cjem4axtgg9DsrJ1y6tyrW9F2K">S4AA - Сервер для Android приложения</a></p>
