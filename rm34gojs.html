@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!--
+    <script src="https://unpkg.com/gojs/release/go.js">
+    </script>
+-->
+   <script src="source/go.js"></script>
+    <script>
+var $ = go.GraphObject.make;
+var myDiagram =
+  $(go.Diagram, "myDiagramDiv");
+
+    </script>
+</head>
+<body>
+<p>Hello...</p>
+<p>Nothwoods software not for distribution</p>
+<p>GoJS - бесплатная альтернатива HTML-диаграммы маршрутизации</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div id="myDiagramDiv"
+     style="width:400px; height:150px; background-color: #FFF;"></div>
+
+    <script>
+var $ = go.GraphObject.make;
+var myDiagram =
+  $(go.Diagram, "myDiagramDiv",
+    {
+      "undoManager.isEnabled": true // enable Ctrl-Z to undo and Ctrl-Y to redo
+    });
+
+var myModel = $(go.Model);
+// in the model data, each node is represented by a JavaScript object:
+myModel.nodeDataArray = [
+  { key: "Alpha" },
+  { key: "Beta" },
+  { key: "Gamma" }
+];
+myDiagram.model = myModel;
+
+    </script>
+</body>
+</html>
