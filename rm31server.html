@@ -106,6 +106,7 @@
     	<p></p>
         <p>spring core maven</p>
     	<p>tomcat</p>
+    	<p><a href="https://tomcat.apache.org/download-80.cgi">8.5.43</a> <a href="http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43-windows-x64.zip">tomcat-8.5.43 zip download</a></p>
     	<p></p>
     	<canvas height='320' width='480' id='first_example'>Пример</canvas>
     	<script>
@@ -307,8 +308,74 @@ maxWaitMillis	indefinitely	The maximum number of milliseconds that the pool will
     </li>
     <li>
         <p></p>
-        <p>Database</p>
-        <p></p>
+        <p>Database pgAdmin</p>
+        <p>ALTER TABLE public.remind
+   ADD COLUMN "Id" bigint PRIMARY KEY;</p>
+       <p>Id сначала делается serial, и в SQL edit PRIMARY KEY. А потом надо integer поменять на biginteger. Значение по умолчанию станет nextval('"remind_Id_seq"'::regclass)</p>
+        <table>
+        	<tr>
+        		<td>Database name</td>
+        		<td>reminderdb</td>
+        	</tr>
+        	<tr>
+        		<td>Table name</td>
+        		<td>remind</td>
+        	</tr>
+        	<tr>
+        		<td></td>
+        		<td></td>
+        	</tr>
+        	<tr>
+        		<td>user</td>
+        		<td>postrges</td>
+        	</tr>
+        	<tr>
+        		<td>password</td>
+        		<td>1234</td>
+        	</tr>
+        	<tr>
+        		<td>table</td>
+        		<td>remind</td>
+        	</tr>
+        	<tr>
+        		<td>Id</td>
+        		<td>serial Id SERIAL PRIMARY KEY</td>
+        	</tr>
+        	<tr>
+        		<td>Title </td>
+        		<td>character 50</td>
+        	</tr>
+        	<tr>
+        		<td>remind_date</td>
+        		<td>timestamp without time zone</td>
+        	</tr>
+        	<tr>
+        		<td></td>
+        		<td></td>
+        	</tr>
+        	<tr>
+        		<td></td>
+        		<td></td>
+        	</tr>
+        </table>
+		<p>https://github.com/mlapinm/httpserver.git</p>
+        <p>#hibernate.hbm2ddl.auto = validate
+hibernate.hbm2ddl.auto = create</p>
+       <ol>
+       <p>создание базы и таблицы</p>
+       	<li>в pgAdmin делается база reminderdb</li>
+       	<p>база создана</p>
+       	<li>запускается сервер с create</li>
+       	<p>таблица создана</p>
+       	<li>в коде меняем create на validate</li>
+       	<li>заполняем колонки (просмотр данных)</li>
+       	<p>1 12121212 Title 1</p>
+       	<p>2 12121212 Title 2</p>
+       	<li>Перезапускаем сервер</li>
+       	<p>[{"id":1,"title":"Title 1","remindDate":-23889697200000},{"id":2,"title":"Title 2","remindDate":-23889697200000}]</p>
+       </ol>
+
+        <p>Ввод данных</p>
         <p></p>
         <p></p>
             <details>
