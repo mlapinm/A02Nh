@@ -1,1 +1,8 @@
-C:\Program Files\JetBrains\IntelliJ IDEA 2018.1
+
+C:\Program Files\JetBrains\WebStorm 2018.1.4
+
+Inkscape: обзор и основные функции
+120 
+
+1:26:25
+Ограничение прав доступа на PHP. Авторизация и аутентификация 

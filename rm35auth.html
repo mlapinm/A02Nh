@@ -45,8 +45,65 @@
 		<p>JetBrains WebStorm 2018.1.4 [2018,Eng] (Windows macOS Linux) [rutracker-5567709].torrent</p>
 		<p>D:\programs\OSPanel\domains</p>
 		<p><a href="https://ospanel.io/download/">https://ospanel.io/download/</a></p>
-		<p>12345</p>
 		<p></p>
+            <details>
+                <summary style="color: blueviolet">_cookie_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\OSPanel\domains\localhost\php02\p01cookie\cookie.php
+&lt;?php
+//1 - сброс Куки
+//2 - 1-й раз установка, 2-й раз отображение Куки
+switch (2) {
+    case 1: //сброс Куки
+               setcookie('myCookie','myValue', time() - 3600);
+        break;
+    default:
+        if (empty($_COOKIE[myCookie])) {
+            //Команда установки куки
+            setcookie('myCookie', 'myValue');
+        } else {
+            //Команда считывания куки
+            echo $_COOKIE['myCookie'];
+        }
+}
+================================
+Request Header=====
+GET /php02/p01cookie/cookie.php HTTP/1.1
+Host: localhost
+Cookie: visitCounter=1; lastVisit=1551851618; vc=3
+Response Header=============
+HTTP/1.1 200 OK
+Set-Cookie: myCookie=myValue
+
+Request Header=====
+GET /php02/p01cookie/cookie.php HTTP/1.1
+Host: localhost
+Cookie: myCookie=myValue; visitCounter=1; lastVisit=1551851618; vc=3
+Response Header====
+HTTP/1.1 200 OK
+
+
+================================
+                </listing>
+            </details>
+		<p></p>
+		<p>D:\programs\OSPanel\domains\localhost\php02\p01cookie\login.php</p>
+ 		<p>session_start();</p>
+		<p></p>
+		<p></p>
+		<p>$_SESSION['is_admin'] = 1;</p>
+		<p>Set-Cookie: PHPSESSID=5d4ta34i8qoi0spoh8bicucuq5; path=/</p>
+		<p></p>
+		<hr>
+		<p>Как понял. session_start() - работа с сессией как запись так и чтение значений. В Куку пишется соль сессии. И при получении соли клиента сервер может по этой соли сессии $_SESSION['is_admin'] отдать или принять значение.</p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p>1223</p>
 		<p></p>
 		<p></p>
 		<p></p>
@@ -107,17 +164,19 @@
 	<li>
 		<p></p>
 		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-	</li>
-	<li>
-		<p></p>
-		<p></p>
-		<p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
+ 		<p></p>
 		<p></p>
 		<p></p>
 		<p></p>
