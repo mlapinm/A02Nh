@@ -97,34 +97,94 @@ HTTP/1.1 200 OK
 		<p></p>
 		<hr>
 		<p>Как понял. session_start() - работа с сессией как запись так и чтение значений. В Куку пишется соль сессии. И при получении соли клиента сервер может по этой соли сессии $_SESSION['is_admin'] отдать или принять значение.</p>
+		<p>Sessions</p>
+		<p>Механизм условно свяывает файл сессий на сервере с конкретным клиентом (браузером).</p>
+		<p>Идентификатор сессии хранится в COOKIE</p>
+		<p>Идентификатор у каждого пользователя всегда уникальный</p>
+		<p>Ctrl-Alt-J - surround with tag</p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p>Авторизация. Логин, пароль нигде не хранятся. При неверном вводе ругается.</p>
+            <details>
+                <summary style="color: blueviolet">_login.php_</summary>
+                <listing style="background-color: #DEF;">
+================================
+D:\programs\OSPanel\domains\localhost\php02\Php03\login.php
+&lt;?php
+$errors = [];
+if (!empty($_POST['login']) && !empty($_POST['password'])) {
+    if ($_POST['login'] == 'admin' && $_POST['password'] == '20304050') {
+        header('Location: index.php');
+        die;
+    } else {
+        $errors[] = 'Неверный логин или пароль';
+    }
+}
+?&gt;
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+    &lt;?php foreach ($errors as $error) :?&gt;
+    &lt;li&gt;&lt;?= $error ?&gt;&lt;/li&gt;
+    &lt;?php endforeach; ?&gt;
+&lt;/ul&gt;
+&lt;form method="POST"&gt;
+    &lt;div&gt;
+        &lt;label for="login"&gt;Login:&lt;/label&gt;
+        &lt;input id="login" name="login"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for="password"&gt;Password&lt;/label&gt;
+        &lt;input id="password" name="password"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button type="submit"&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+================================
+
+
+================================
+                </listing>
+            </details>
+		<p></p>
+		<p></p>
+		<p></p>
 		<p></p>
 		<p></p>
 		<p></p>
 	</li>
 	<li>
 		<p></p>
-		<p>1223</p>
+		<p>Авторизация. Пароль, логин хранятся в файле. Доступ к паролю логину с помощью сессии.</p>
 		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-	</li>
-	<li>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-	</li>
-	<li>
-		<p></p>
-		<p></p>
-		<p></p>
+           <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
 		<p></p>
 		<p></p>
 		<p></p>
@@ -154,6 +214,526 @@ HTTP/1.1 200 OK
 	<li>
 		<p></p>
 		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p></p>
+           <details open='open'>
+                <summary style="color: blueviolet">_phpstorm jetbrains hotkeys_</summary>
+                <table style="background-color: #DEF;">
+================================
+<tr>
+	<td>Editing</td>
+	<td></td>
+	<td></td>
+	<td>Running</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Space</td>
+	<td>Basic code completion</td>
+	<td>автозавершение кода</td>
+	<td>Alt + Shift + F10</td>
+	<td>Select configuration and run</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + Enter</td>
+	<td>Show intention actions and quick-fixes</td>
+	<td>показать примеры действий и ввести </td>
+	<td>Alt + Shift + F9</td>
+	<td>Select configuration and debug</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + P</td>
+	<td>Parameter info (within method call
+arguments)</td>
+	<td>Информация о переменной </td>
+	<td>Shift + F10</td>
+	<td>Run</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Q</td>
+	<td>Quick documentation lookup</td>
+	<td>Краткий обзор документации</td>
+	<td>Shift + F9</td>
+	<td>Debug</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + mouse over code</td>
+	<td>Brief Info</td>
+	<td>Попасть в описание</td>
+	<td>Ctrl + Shift + F10</td>
+	<td>Run context configuration from editor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + Insert</td>
+	<td>Generate code... (Getters, Setters,
+Constructors)</td>
+	<td>Сгенерить код.</td>
+	<td>Ctrl + Alt + R</td>
+	<td>Run manage.py task</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + O</td>
+	<td>Override methods</td>
+	<td>Встроенные(оберточные) методы.</td>
+	<td>Debugging</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + I</td>
+	<td>Implement methods</td>
+	<td>Встроенные(оберточные) методы</td>
+	<td>F8 / F7</td>
+	<td>Step over/into</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + T</td>
+	<td>Surround with... (if..else, try..catch, for, etc.)</td>
+	<td>оборачивание стандартными элементами языка</td>
+	<td>Shift + F8</td>
+	<td>Step out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + /</td>
+	<td>Comment/uncomment with line comment</td>
+	<td>Закомментировать, раскомментировать строку.</td>
+	<td>Alt + F9</td>
+	<td>Run to cursor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + /</td>
+	<td>Comment/uncomment with block comment</td>
+	<td>Блок</td>
+	<td>Alt + F8</td>
+	<td>Evaluate expression</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + W</td>
+	<td>Select successively increasing code blocks</td>
+	<td>Несколько раз.</td>
+	<td>Ctrl + Alt + F8</td>
+	<td>Quick evaluate expression</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + W</td>
+	<td>Decrease current selection to previous state</td>
+	<td>Обратно.</td>
+	<td>F9</td>
+	<td>Resume program</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + L</td>
+	<td>Reformat code</td>
+	<td>Выровнять код.</td>
+	<td>Ctrl + F8</td>
+	<td>Toggle breakpoint</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + I</td>
+	<td>Auto-indent line(s)</td>
+	<td></td>
+	<td>Ctrl + Shift + F8</td>
+	<td>View breakpoints</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + D</td>
+	<td>Duplicate current line or selected block</td>
+	<td>Дублирование.</td>
+	<td>Navigation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Y</td>
+	<td>Delete line at caret</td>
+	<td></td>
+	<td>Ctrl + N</td>
+	<td>Go to class</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + J</td>
+	<td>Smart line join (HTML and JavaScript only)</td>
+	<td></td>
+	<td>Ctrl + Shift + N</td>
+	<td>Go to file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Enter</td>
+	<td>Smart line split (HTML and JavaScript only)</td>
+	<td></td>
+	<td>Ctrl + Alt + Shift + N</td>
+	<td>Go to symbol</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Shift + Enter</td>
+	<td>Start new line</td>
+	<td></td>
+	<td>Alt + Right</td>
+	<td>Go to next editor tab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + U</td>
+	<td>Toggle case for word at caret or selected block</td>
+	<td>Верхний, нижний регистр.</td>
+	<td>Alt + Left</td>
+	<td>Go to previous editor tab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + ] / [</td>
+	<td>Select till code block end/start</td>
+	<td>Выделение до начала/конца блока</td>
+	<td>F12</td>
+	<td>Go back to previous tool window</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Delete</td>
+	<td>Delete to word end</td>
+	<td></td>
+	<td>Esc</td>
+	<td>Go to editor (from tool window)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Backspace</td>
+	<td>Delete to word start</td>
+	<td></td>
+	<td>Shift + Esc</td>
+	<td>Hide active or last active window</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + NumPad+/-</td>
+	<td>Expand/collapse code block</td>
+	<td>развернуть свернуть блок </td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + F4</td>
+	<td>Close active editor tab</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + V</td>
+	<td>Paste from history</td>
+	<td>История буфера обмена clipboard</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Search/Replace</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + F/R</td>
+	<td>Find/Replace</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>F3/Shift + F3</td>
+	<td>Find next/previous</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+<tr>
+	<td>Ctrl + Shift + F</td>
+	<td>Find in path</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + R </td>
+	<td>Replace in path</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Usage Search</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + F7 / Ctrl + F7</td>
+	<td>Find usages / Find usages</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + F7</td>
+	<td>Highlight usages in file</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + F7</td>
+	<td>Show usages</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Refactoring</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>F5 / F6</td>
+	<td>Copy / Move</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + Delete</td>
+	<td>Safe Delete</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Shift + F6</td>
+	<td>Rename</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + F6</td>
+	<td>Change Signature</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + N</td>
+	<td>Inline</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + M</td>
+	<td>Extract Method</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + V</td>
+	<td>Extract Variable</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + F</td>
+	<td>Extract Field</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + C</td>
+	<td>Extract Constant</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + P</td>
+	<td>Extract Parameter</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Live Templates</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + J</td>
+	<td>Surround with Live Template</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + J</td>
+	<td>Insert Live Template</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>General</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + #[0-9]</td>
+	<td>Open corresponding tool</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + S</td>
+	<td>Save all</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + Y</td>
+	<td>Synchronize</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + F12</td>
+	<td>Toggle maximizing editor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + Shift + F</td>
+	<td>Add to Favorites</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Alt + Shift + I</td>
+	<td>Inspect current file with current profile</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + BackQuote (`)</td>
+	<td>Quick switch current scheme</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Alt + S</td>
+	<td>Open Settings dialog</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Shift + A</td>
+	<td>Find Action</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>Ctrl + Tab</td>
+	<td>Switch between tabs and tool window</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+================================
+
+
+================================
+                </table>
+            </details>
 		<p></p>
 		<p></p>
 		<p></p>
@@ -177,10 +757,61 @@ HTTP/1.1 200 OK
                 </listing>
             </details>
  		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
+<span></span>
+<table>
+<tr>
+	<td>actions</td>
+	<td>действия </td>
+	<td>implement</td>
+	<td>реализовать </td>
+	<td>paste</td>
+	<td>вставка </td>
+	<td>till</td>
+	<td>до </td>
+</tr>
+<tr>
+	<td>brief</td>
+	<td>краткий </td>
+	<td>intention</td>
+	<td>намерение </td>
+	<td>smart</td>
+	<td>умный </td>
+	<td>toggle</td>
+	<td>тумблер</td>
+</tr>
+<tr>
+	<td>caret</td>
+	<td>курсор </td>
+	<td>join</td>
+	<td>присоединяться </td>
+	<td>split</td>
+	<td>расщеплять </td>
+	<td>toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>collapse</td>
+	<td>свернуть </td>
+	<td>lookup</td>
+	<td>просмотр </td>
+	<td>successively</td>
+	<td>подряд </td>
+	<td>toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>completion</td>
+	<td>завершение </td>
+	<td>override</td>
+	<td>переопределение </td>
+	<td>surround</td>
+	<td>окружать </td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+<div style='display: none'></div>
+    	<p></p>
 		<p></p>
 	</li>
 </ol>
