@@ -1,4 +1,14 @@
 
+картошка
+лук
+масло подсолнечное
+
+
+
+sip 4.19
+
+C:\Users\argon\Downloads
+
 C:\Program Files\JetBrains\WebStorm 2018.1.4
 
 Inkscape: обзор и основные функции
