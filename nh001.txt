@@ -1,4 +1,9 @@
+C:\Users\argon\AppData\Roaming\jupyter\runtime
+pip install pip==9.0.3
+AttributeError: module 'pip' has no attribute 'main'
+pip install jupyter
 
+git clone https://github.com/mlapinm/client_voice.git
 картошка
 лук
 масло подсолнечное

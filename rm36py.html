@@ -37,80 +37,492 @@
 	</style>
 </head>
 <body>
+<p>D:\mailCloud\prjother\017python\utils</p>
    <ol>
        <li>
+           <p>strqu</p>
+           <p></p>
+           <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p>B03toTable.py</p>
+<table>
+<tr>
+	<td>actions</td>
+	<td>действия </td>
+	<td>collapse</td>
+	<td>свернуть </td>
+	<td>intention</td>
+	<td>намерение </td>
+	<td>override</td>
+	<td>переопределение </td>
+</tr>
+<tr>
+	<td>brief</td>
+	<td>краткий </td>
+	<td>completion</td>
+	<td>завершение </td>
+	<td>join</td>
+	<td>присоединяться </td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>caret</td>
+	<td>курсор </td>
+	<td>implement</td>
+	<td>реализовать </td>
+	<td>lookup</td>
+	<td>просмотр </td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+
+           <p>B03toTable.py</p>
+           <p></p>
+            <details>
+                <summary style="color: blueviolet">_B03toTable.py_</summary>
+                <listing style="background-color: #DEF;">
+================================
+#B03toTable.py
+# python in_txt out_txt sort
+# строки ключ '\t' значение
+# сортирует по ключу string2 = sort(string1)
+# переводит в таблицу string2 = listNtab(string1, NCOLUMN)
+# из NCOLUMN колонок поколоночно
+
+#IN_TXT
+# actions	действия
+# brief	краткий
+# caret	курсор
+# collapse	свернуть
+# completion	завершение
+# implement	реализовать
+# intention	намерение
+# join	присоединяться
+# lookup	просмотр
+# override	переопределение
+# OUT_TXT
+# &lt;table&gt;
+# &lt;tr&gt;
+# 	&lt;td&gt;actions&lt;/td&gt;
+# 	&lt;td&gt;действия &lt;/td&gt;
+# 	&lt;td&gt;collapse&lt;/td&gt;
+# 	&lt;td&gt;свернуть &lt;/td&gt;
+# 	&lt;td&gt;intention&lt;/td&gt;
+# 	&lt;td&gt;намерение &lt;/td&gt;
+# 	&lt;td&gt;override&lt;/td&gt;
+# 	&lt;td&gt;переопределение &lt;/td&gt;
+# &lt;/tr&gt;
+# &lt;tr&gt;
+# 	&lt;td&gt;brief&lt;/td&gt;
+# 	&lt;td&gt;краткий &lt;/td&gt;
+# 	&lt;td&gt;completion&lt;/td&gt;
+# 	&lt;td&gt;завершение &lt;/td&gt;
+# 	&lt;td&gt;join&lt;/td&gt;
+# 	&lt;td&gt;присоединяться &lt;/td&gt;
+# 	&lt;td&gt;&lt;/td&gt;
+# 	&lt;td&gt;&lt;/td&gt;
+# &lt;/tr&gt;
+# &lt;tr&gt;
+# 	&lt;td&gt;caret&lt;/td&gt;
+# 	&lt;td&gt;курсор &lt;/td&gt;
+# 	&lt;td&gt;implement&lt;/td&gt;
+# 	&lt;td&gt;реализовать &lt;/td&gt;
+# 	&lt;td&gt;lookup&lt;/td&gt;
+# 	&lt;td&gt;просмотр &lt;/td&gt;
+# 	&lt;td&gt;&lt;/td&gt;
+# 	&lt;td&gt;&lt;/td&gt;
+# &lt;/tr&gt;
+# &lt;/table&gt;
+# &lt;div style="display: none"&gt;
+# actions	действия
+# brief	краткий
+# caret	курсор
+# collapse	свернуть
+# completion	завершение
+# implement	реализовать
+# intention	намерение
+# join	присоединяться
+# lookup	просмотр
+# override	переопределение
+# &lt;/div&gt;
+
+import codecs
+
+NCOLUMN = 4
+OUT_TXT = "B03out.txt"
+IN_TXT = "B03in.txt"
+
+string1 = ""
+string2 = ""
+
+def readFile():
+    string1 = ''
+    with codecs.open(IN_TXT, 'r', 'utf-8') as file:
+        string1 = file.read()
+    return string1
+
+def writeFile(string1):
+    with codecs.open(OUT_TXT, 'w', 'utf-8') as file:
+        file.write(string1)
+
+def sort(string1):
+    string1 = string1.lower()
+    list = string1.split('\r\n')
+    list.sort()
+    string2 = '\r\n'.join(list)
+    return string2
+
+def to2tab(string1):
+    string1 = string1.strip()
+    list1 = string1.split('\r\n')
+    list2 = []
+    for i in list1:
+        # i = '&lt;tr&gt;' + i + '&lt;/tr&gt;'
+        isplit = i.split('\t')
+        if len(isplit) &lt; 2:
+            isplit.append('')
+        td1 = isplit[0]
+        td2 = isplit[1]
+        td1 = '&lt;td&gt;' + td1 + '&lt;/td&gt;'
+        td2 = '&lt;td&gt;' + td2 + '&lt;/td&gt;'
+        tr = '\t' + td1 + '\r\n\t' + td2
+        tr = '&lt;tr&gt;\r\n' + tr + '\r\n&lt;/tr&gt;'
+        list2.append(tr)
+    string2 = '\r\n'.join(list2)
+    string2 = '&lt;table&gt;\r\n' + string2 + '\r\n&lt;/table&gt;'
+    return string2
+
+def from2tab(string1, strMask):
+
+    strMask1 = '&lt;' + strMask + '&gt;'
+    strMask2 = '&lt;/' + strMask + '&gt;'
+    list=[]
+    n1 = -1
+    n2 = -1
+    while(True):
+        n1 = string1.find(strMask1, n1+1)
+        n2 = string1.find(strMask2, n2+1)
+        if(n1==-1 or n2==-1):
+            break
+        strFind = string1[(n1 + NCOLUMN):n2]
+        strFind = strFind.strip()
+        list.append(strFind)
+    return list
+
+
+
+def listNtab(string1, nColumn):
+    list1 = string1.split('\r\n')
+    list2 = []
+    k = 0
+    #10/4 =&gt; 3
+    count = int(len(list1)/nColumn)
+    temp = 1 if len(list1)%nColumn&gt;0 else 0
+    count += temp
+    for i in range(nColumn):
+        list2.append([])
+        for j in range(count):
+            if k&lt;len(list1):
+                list2[i].append(list1[k])
+            else:
+                list2[i].append('')
+            k += 1
+    # print(list2)
+    # print(len(list2),len(list2[0]))
+    icount = len(list2)
+    jcount = len(list2[0])
+    stringRow = ''
+    string2 = ''
+    for j in range(jcount):
+        stringRow = ''
+        listRow = []
+        stringRowTr = ''
+        whilecount = icount*2
+        for i in range(icount):
+            if i&lt;icount-1:
+                stringRow += list2[i][j] + '\t'
+            else:
+                stringRow += list2[i][j]
+
+        listRow = stringRow.split('\t')
+        for i in range(len(listRow),whilecount):
+            listRow.append('')
+        for i in listRow:
+            stringRowTr += '\t&lt;td&gt;' + i + '&lt;/td&gt;\r\n'
+        stringRowTr =  '\t' + stringRowTr.strip()
+        stringRowTr = '&lt;tr&gt;\r\n' + stringRowTr + '\r\n&lt;/tr&gt;'
+        string2 += stringRowTr + '\r\n'
+    string2 = string2.strip()
+    string2 = '&lt;table&gt;\r\n' + string2 + '\r\n&lt;/table&gt;'
+
+    return string2
+
+string1 = readFile()
+
+string2 = sort(string1)
+string1 = string2
+
+string2 = listNtab(string1, NCOLUMN)
+
+
+def appDivList(string1):
+    string2 = "&lt;div style=\"display: none\"&gt;\r\n" \
+                + string1\
+                + '\r\n&lt;/div&gt;'
+    return string2
+
+string2 += '\r\n' + appDivList(string1)
+writeFile(string2)
+================================
+                </listing>
+            </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+            <details>
+                <summary style="color: blueviolet">_B04frTab.py_</summary>
+                <listing style="background-color: #DEF;">
+================================
+# B04frTab.py
+# получение списка ключ '\t' значение
+# из таблицы
+# tab2list
+
+import codecs
+
+from B03toTable import from2tab
+
+OUT_LIST_TXT = "B04out.txt"
+IN_TABLE_TXT = "B04in.txt"
+
+def readFile():
+    string1 = ''
+    with codecs.open(IN_TABLE_TXT, 'r', 'utf-8') as file:
+        string1 = file.read()
+    return string1
+
+def writeFile(string1):
+    with codecs.open(OUT_LIST_TXT, 'w', 'utf-8') as file:
+        file.write(string1)
+
+
+def tab2list(string1):
+    listTr = from2tab(string1, 'tr')
+
+    listTd = []
+    listTrTd = []
+    k = 0
+    countTd = 0
+    for strListTr in listTr:
+        listTd = from2tab(strListTr, 'td')
+        if k == 0:
+            countTd = len(listTd)
+        listTrTd.append(listTd)
+    countTr = len(listTrTd)
+    list = []
+    strTd = ''
+    for i in range(int((countTd+1)/2)):
+        for j in range(countTr):
+            strTd = listTrTd[j][i*2] + '\t' + listTrTd[j][i*2+1]
+            list.append(strTd)
+
+    # print(list, listTrTd)
+
+    string2 = '\r\n'.join(list)
+    return string2
+
+
+print("Welcome...", type('a'))
+string1 = readFile()
+
+string2 = tab2list(string1)
+
+writeFile(string2)
+================================
+                </listing>
+            </details>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+           <p></p>
+       </li>
+       <li>
+           <p></p>
+           <p></p>
            <p><a href="https://www.youtube.com/watch?v=bGe7HQCglQc&list=PLwCnsQacFoW4XtU9RAtjZr_jJzHD3SdE7&index=4&frags=wn">Python и Jupyter Notebook: курс молодого бойца</a></p>
            <p></p>
            <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-       </li>
-       <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-       </li>
-       <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
            <p></p>
            <p></p>
            <p></p>
            <p></p>
        </li>
        <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-       </li>
-       <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-       </li>
-       <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-       </li>
-       <li>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
-       </li>
-       <li>
-           <p></p>
-           <p></p>
+           <p>base</p>
+           <p>codecs.open(filename,'r','utf-8')</p>
+           <table>
+           	<tr>
+           		<td>codecs.open(filename,'r','utf-8')</td>
+           		<td>открыл на чтение</td>
+           	</tr>
+           	<tr>
+           		<td>    with codecs.open(name, 'w', 'utf-8') as file:
+        file.write(string1)</td>
+           		<td>Открыл файл name на перезапись, записал строку string1</td>
+           	</tr>
+           	<tr>
+           		<td>strings = file.readlines()</td>
+           		<td>В список strings считываются строки из файла file</td>
+           	</tr>
+           	<tr>
+           		<td>file.read()</td>
+           		<td>возвращает строку - содержимое файла</td>
+           	</tr>
+           	<tr>
+           		<td>teList = '\r\n'.join(listFilesDirs)</td>
+           		<td>строка из листа</td>
+           	</tr>
+           	<tr>
+           		<td>a=4&gt;3?3:5 3 a=4&lt;3?3:5 5</td>
+           		<td>однострочный if в С++</td>
+           	</tr>
+           	<tr>
+           		<td>temp = 1 if len1%nColumn&gt;0 else 0</td>
+           		<td>Тернарный оператор</td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           	<tr>
+           		<td></td>
+           		<td></td>
+           	</tr>
+           </table>
            <p></p>
            <p></p>
            <p></p>
