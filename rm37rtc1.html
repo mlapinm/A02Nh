@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base target="_blank">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <style>
+        p {
+            margin: 0px;
+        }
+
+        .b1 {
+            border: dotted 1px;
+        }
+
+        td {
+            border: dotted 1px;
+        }
+
+        span {
+            background-color: #FFF;
+        }
+
+        .margin1 {
+            margin-left: 20px;
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<ol>
+    <li>
+        <p><a href="https://www.youtube.com/watch?v=h2YsyZmxb6s">WebRTC - Доступ к камере и микрофону через JavaScript
+            [#1]</a></p>
+        <p>D:\programs\OSPanel\domains\localhost\webrtc.html</p>
+        <p><a href="http://localhost/webrtc.html">http://localhost/webrtc.html</a></p>
+        <p></p>
+        <p></p>
+        <details>
+            <summary style="color: blueviolet">_webrtc.html_</summary>
+            <listing style="background-color: #DEF;">
+================================
+webrtc.html
+&lt;script&gt;
+    window.onload = function(){
+        navigator.webkitGetUserMedia({video:true}, getStream, noStream);
+//        navigator.mediaDevices.getUserMedia({video:true}).
+//  then((stream) =&gt; {video.srcObject = stream});
+
+    }
+    function getStream(stream){
+        video.srcObject = stream;
+    }
+    function noStream(faild){
+    }
+&lt;/script&gt;
+&lt;video id="video" autoplay="autoplay" width="400"&gt;&lt;/video&gt;
+================================
+            </listing>
+        </details>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p>Gaining access to an input device<a href="https://www.html5rocks.com/en/tutorials/getusermedia/intro/">Capturing Audio & Video in HTML5</a></p>
+        <p></p>
+        <details>
+            <summary style="color: blueviolet">_webrtc1.html_</summary>
+            <listing style="background-color: #DEF;">
+================================
+webrtc1.html
+&lt;script&gt;
+window.onload = function(){
+    navigator.mediaDevices.getUserMedia({video:true})
+    .then((stream) =&gt; {video.srcObject = stream});
+};
+&lt;/script&gt;
+&lt;video id="video" autoplay="autoplay" width="400"&gt;&lt;/video&gt;
+================================
+</listing>
+        </details>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <details>
+            <summary style="color: blueviolet">__</summary>
+            <listing style="background-color: #DEF;">
+                ================================
+
+
+                ================================
+
+
+                ================================
+            </listing>
+        </details>
+        <p></p>
+        <p><a href="https://javarush.ru/groups/posts/736-rukovodstvo-poljhzovatelja-intellij-idea-osnovih-ispoljhzovanija-redaktora-koda">javarush rukovodstvo-poljhzovatelja-intellij-idea</a><a href=""></a><a href=""></a><a href=""></a><a href=""></a><a
+                href=""></a><a href=""></a></p>
+        <p></p>
+        <table>
+            <tr>
+                <td>faild</td>
+                <td>неудачный</td>
+            </tr>
+            <tr>
+                <td>constraints</td>
+                <td>ограничения</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </li>
+</ol>
+
+</body>
+</html>
