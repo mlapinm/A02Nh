@@ -64,12 +64,73 @@
            <p></p>
        </li>
        <li>
+          <p><a href="https://www.youtube.com/watch?v=_gZXYjlBfnw">Медиа-возможности HTML5. WebRTC</a></p>
+           <p>WebRTC APIs</p>
+
+           <ol>
+               <li>
+                   <p>MediaStream (getUserMedia)</p>
+                   <p>a/v from device</p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+               </li>
+               <li>
+                   <p>RTCPeerConnection</p>
+                   <p>p2p without server</p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+               </li>
+               <li>
+                   <p>RTCDataChannel</p>
+                   <p>+ Data without a/v</p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+               </li>
+               <li>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+                   <p></p>
+               </li>
+           </ol>
+           <p>Получение медиа-потока</p>
            <p></p>
            <p></p>
+           <listing>
+navigator.getUserMedia(
+    {audio: true, video: true}, //constraints
+    function(mediaStream){      //callback
+        var src = window.URL.createObjectURL(mediaStream); //depricated
+        document.getElementById('myVideo').src = src;
+    },
+    function(err){
+        console.error(err);
+    }
+);
+           </listing>
+           <ul>Что можно сделать с потоком?
+               <li>Анализ, обработка</li>
+               <li>Передача через RTCPeerConnection</li>
+           </ul>
+           <p>Анализ, обработка</p>
            <p></p>
-           <p></p>
-           <p></p>
-           <p></p>
+           <img src="imContext.svg" alt="">
            <p></p>
            <p></p>
        </li>
