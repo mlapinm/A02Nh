@@ -131,6 +131,35 @@ navigator.getUserMedia(
            <p>Анализ, обработка</p>
            <p></p>
            <img src="imContext.svg" alt="">
+           <p><a href="http://webaudioplayground.appspot.com/#">webaudioplayground</a></p>
+           <p>Примеры обработки аудио</p>
+           <p><a href="http://webaudio.appspot.com">http://webaudio.appspot.com</a></p>
+           <p><a href="http://webaudioplayground.appspot.com">http://webaudioplayground.appspot.com</a></p>
+           <p><a href=""></a></p>
+
+           <p><a href="https://github.com/Theodeus/tuna">Theodeus/tuna</a> - пачки гитарных эффектов = )</p>
+           <p><a href="https://webaudio.github.io/web-audio-api/">https://webaudio.github.io/web-audio-api/</a></p>
+           <p><h5>Обработка видео</h5></p>
+           <p>Получение кадра</p>
+           <listing>
+var
+    video = document.getElementById('myVideo'),
+    canvas = document.createElement('canvas'),
+    context = canvas.getContext('2d'),
+    width = 640, height = 480
+
+setInterval(function(){
+    context.drawImage(video, 0, 0, width, height);
+    var pngData = canvas.toDataURL();
+    //do somthing with 'data:image/png;base64,&lt;base64_data&gt;'
+}, 1000/15)
+           </listing>
+           <p>Примеры обработки видео</p>
+           <p><a href="https://github.com/auduno/headtrackr/">https://github.com/auduno/headtrackr/</a></p>
+           <p><a href="https://github.com/idevelop/ascii-camera">https://github.com/idevelop/ascii-camera</a></p>
+           <p></p>
+           <p></p>
+           <p></p>
            <p></p>
            <p></p>
        </li>
