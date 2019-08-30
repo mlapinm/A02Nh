@@ -1,3 +1,10 @@
+
+
+https://tyapk.ru/blog/post/gitignore
+
+
+
+
 # list = from2tab(div1,"div")
 
 https://www.asus.com/supportonly/Eee%20PC%201001HAG/HelpDesk_Manual/
