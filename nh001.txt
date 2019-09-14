@@ -1,5 +1,167 @@
 
+<script>
+   function isEmail() {
 
+<p><input type="button" value="Проверить" onclick="isEmail()"></p>
+
+<script>
+//дожидаемся полной загрузки страницы
+window.onload = function () {
+
+    //получаем идентификатор элемента
+    var a = document.getElementById('switch');
+    
+    //вешаем на него событие
+    a.onclick = function() {
+        //производим какие-то действия
+        if (this.innerHTML=='On') this.innerHTML = 'Off';
+        else this.innerHTML = 'On';
+        //предотвращаем переход по ссылке href
+        return false;
+    }
+}
+</script>
+
+<a id="switch" href="#">On</a>
+==============================
+st = translate(si)
+
+ 
+ 
+     for i in l1:
+        for j in range(k, len(l2)):
+            if i<l2[j]:
+                l3.append(i)
+                print('i = ', i)
+            else:
+                l3.append(l2[j])
+                print('j = ', j)
+                k += 1
+            break
+
+ 
+import sympy as sp
+sp.init_printing() 
+x = sp.symbols('x') # Переменная x теперь содержит символ 'x'
+f = x**2 - 2*x + 1  - 4# Выражение для функции
+f
+𝑥2−2𝑥−3 
+# График функции
+%matplotlib inline
+sp.plot(f, (x, -2, 4)); #sympy содержит свою функцию для быстрого построения графико
+ 
+n = 270
+max = 100
+l = []
+k = n
+while True:
+    if k>max:
+        l.append(max)
+        k = k - max
+    else:
+        l.append(k)
+        break
+print(l)
+
+mReadMain - вся работа, что описано выше   
+sort - чтение сортировка убирает повторения(без перевода) сохранение  
+mFileTranslate - чтение и перевод  
+mFileToList() - ниж.рег. без точек, список без повторений
+mExclude(name1, name2)
+
+import codecs
+
+s = ''
+with codecs.open(r'template\dictknow1.txt', 'r', 'utf-8') as file:
+    s = file.read()
+s.strip()
+print(s)
+
+D:\mailCloud\tmp\PY\[Специалист] Python. Уровень 1-2\Python. Уровень 1. Базовый курс\Материалы.zip\python-1\read
+
+translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190909T123034Z.91e60547a2d5b3f5.bbf98325fde572ca3205b83b31a9034d9ff08f94&text=additional&lang=en-ru
+
+
+https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190909T123034Z.91e60547a2d5b3f5.bbf98325fde572ca3205b83b31a9034d9ff08f94&text=additional&lang=en-ru
+
+{"code":200,"lang":"en-ru","text":["дополнительные"]}
+
+
+
+ ? [key=<API-ключ>]
+ & [text=<переводимый текст>]
+ & [lang=<направление перевода>]
+ & [format=<формат текста>]
+ & [options=<опции перевода>]
+ & [callback=<имя callback-функции>]
+
+
+trnsl.1.1.20190909T123034Z.91e60547a2d5b3f5.bbf98325fde572ca3205b83b31a9034d9ff08f94
+
+
+
+'compression', 
+'compression'
+
+
+https://go4convert.com/to-txt
+
+Selecting Subsets of Data in Pandas: Part 1
+
+
+lclad,lchoice
+
+QTimer::singleShot(600000, &app, SLOT(quit()));
+
+
+QTimer::singleShot(10000, msgBox, SLOT(close()));
+
+	<p>нет";	//0
+	";	//\d+
+  D:\mailCloud\prjother\083qt\diag\diag\diag\tabcust2.cpp(791):void TabCust::slCoBoPort1AsincrProt(int index)
+
+
+
+
+
+
+list(s), l.append(x), l.extend(t), l.count(x), l.index(x [,start [,stop]]), l.insert(i,x), l.pop([i]), l.remove(x), l.reverse(), l.sort([key [, reverse]]),...
+
+local cp1251 и fromlocal( fromAscii)
+
+		str = QString::fromLocal8Bit(chName,k);
+//		str = QString::fromAscii(chName,k);
+
+
+		[0x0]	0xcf 'П'	char
+		[0x1]	0xd1 'С'	char
+		[0x2]	0xcf 'П'	char
+		[0x3]	0x31 '1'	char
+		[0x4]	0x00	char
+
+Сводная таблица кодов ASCII
+ASCII таблица кодов символов Windows (Win-1251)
+
+
+list.cpp
+int List::makeType(char* chStr1)
+{
+	int ret=0;
+	QString strPsp,strPsp0,strPs5,strPsm,strPiu,strPvi;
+
+	strPsp="ПСП1";
+	strPsp0="ПСП";			//5
+	strPs5="ПС5";			//2
+	strPsm="ПСМ";			//3
+	strPiu="ПИУ";			//6
+	strPvi="ПВИ";			//7
+	QTextCodec *codec = QTextCodec::codecForName("cp1251");
+	QTextDecoder *decoder = codec->makeDecoder();
+	QString chStr = decoder->toUnicode(chStr1);
+
+Дата время файла
+os.utime(path_to_file, (access_time, modification_time))
+os.path.getmtime(path) 
 https://tyapk.ru/blog/post/gitignore
 
 

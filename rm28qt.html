@@ -94,22 +94,247 @@
 	</li>
 	<li>
 		<p><a href="https://www.youtube.com/watch?v=j9uAfTAZrdM&list=RDQMHP11p3tpBS4&start_radio=1">C++ Qt 66 - QTCPSocket using signals and slots</a></p>
+		<p>D:\programs\android\Q66SignalSocket</p>
+		<p>new class SocketTest Object</p>
+		<p>Q66SignalSocket.pro</p>
+		<p>QT += network</p>
+		<p>socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n");</p>
+        <p>Connectiong...</p>
+        <p>Connected!</p>
+        <p>We wrote:  21</p>
+        <p>Reading...</p>
+        <p>"HTTP/1.1 200 OK\r\nDate: Sat, 31 Aug 2019 13:07:05 GMT\r\nServer: Apache\r\nUpg</p>
+        <p>rade: h2,h2c\r\nConnection: Upgrade, close\r\nCache-Control: no-cache\r\nContent</p>
+        <p>-Type: text/html\r\n\r\n"</p>
+        <p>Disconnected!</p>
+           <p></p>
+            <details>
+                <summary style="color: blueviolet">_Q66SignalSocket_</summary>
+                <listing style="background-color: #DEF;">
+================================
+main.cpp
+#include <QCoreApplication>
+#include "sockettest.h"
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+//    printf("123213");
+//    qDebug("dfsfsfs");
+
+    SocketTest* socketTest = new SocketTest();
+    socketTest->Test();
+
+    return a.exec();
+}
+
+================================
+sockettest.h
+#ifndef SOCKETTEST_H
+#define SOCKETTEST_H
+
+#include <QObject>
+#include <QDebug>
+#include <QTcpSocket>
+#include <QAbstractSocket>
+
+class SocketTest : public QObject
+{
+    Q_OBJECT
+public:
+    explicit SocketTest(QObject *parent = nullptr);
+    void Test();
+
+signals:
+
+public slots:
+    void connected();
+    void disconnected();
+    void bytesWritten(qint64 bytes);
+    void readyRead();
+
+
+public slots:
+
+private:
+    QTcpSocket *socket;
+};
+
+#endif // SOCKETTEST_H
+
+================================
+sockettest.cpp
+#include "sockettest.h"
+
+SocketTest::SocketTest(QObject *parent) : QObject(parent)
+{
+
+}
+
+void SocketTest::Test(){
+    socket = new QTcpSocket(this);
+
+
+    connect(socket, SIGNAL(connected()),
+            this, SLOT(connected()));
+    connect(socket, SIGNAL(disconnected()),
+            this, SLOT(disconnected()));
+    connect(socket, SIGNAL(readyRead()),
+            this, SLOT(readyRead()));
+    connect(socket, SIGNAL(bytesWritten(qint64)),
+            this, SLOT(bytesWritten(qint64)));
+
+    qDebug() << "Connectiong...";
+
+    socket->connectToHost("voidrealms.com", 80);
+
+    if(!socket->waitForConnected(1000)){
+        qDebug()<< "Error: " << socket->errorString();
+    }
+
+}
+
+void SocketTest::connected(){
+    qDebug()<<"Connected!";
+    socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n");
+}
+
+void SocketTest::disconnected(){
+    qDebug()<<"Disconnected!";
+}
+
+void SocketTest::bytesWritten(qint64 bytes){
+    qDebug() << "We wrote: " << bytes;
+}
+
+void SocketTest::readyRead(){
+    qDebug() << "Reading...";
+    qDebug() << socket->readAll();
+}
+================================
+Q66SignalSocket.pro
+QT -= gui
+QT += network
+
+CONFIG += c++11 console
+CONFIG -= app_bundle
+
+# The following define makes your compiler emit warnings if you use
+# any Qt feature that has been marked deprecated (the exact warnings
+# depend on your compiler). Please consult the documentation of the
+# deprecated API in order to know how to port your code away from it.
+DEFINES += QT_DEPRECATED_WARNINGS
+
+# You can also make your code fail to compile if it uses deprecated APIs.
+# In order to do so, uncomment the following line.
+# You can also select to disable deprecated APIs only up to a certain version of Qt.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+SOURCES += \
+        main.cpp \
+        sockettest.cpp
+
+# Default rules for deployment.
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
+!isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    sockettest.h
+================================
+                </listing>
+            </details>
 		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
+		<table>
+		    <tr>
+		        <td>to continue right where we left off and we're going to call this signal socket</td>
+		        <td>чтобы продолжить прямо там, где мы остановились, и мы собираемся вызвать этот сигнальный сокет</td>
+		    </tr>
+		    <tr>
+		        <td>did TCP socket basics and we did it procedurally meaning it's one line and what we're going to do today is object oriented we're going to use the acute signal slot methods</td>
+		        <td>основы сокета TCP, и мы сделали это процедурно, что означает, что это одна строка, и то, что мы собираемся сделать сегодня, является объектно-ориентированным, мы будем использовать методы слота острого сигнала</td>
+		    </tr>
+		    <tr>
+		        <td>so let's just see</td>
+		        <td>так что давайте просто посмотрим</td>
+		    </tr>
+		    <tr>
+		        <td>whereas</td>
+		        <td>поскольку</td>
+		    </tr>
+		    <tr>
+		        <td>explained</td>
+		        <td>объяснимый</td>
+		    </tr>
+		    <tr>
+		        <td>inherits</td>
+		        <td>наследники</td>
+		    </tr>
+		    <tr>
+		        <td>guessed</td>
+		        <td>предполагаемый</td>
+		    </tr>
+		    <tr>
+		        <td></td>
+		        <td></td>
+		    </tr>
+		</table>
 	</li>
 	<li>
 		<p><a href="https://www.youtube.com/watch?v=BSdKkZNEKlQ&list=RDQMHP11p3tpBS4&index=2">C++ Qt 67 - QTCPServer - a basic TCP server application</a></p>
+		<p>Q67Server</p>
+		<p>new class Server QObject</p>
+		<p>D:\programs\android\Q67Server>telnet</p>
+		<p>Server started!</p>
 		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
+        <p>Добро пожаловать в программу-клиент Microsoft Telnet</p>
+        <p>Символ переключения режима: 'CTRL+]'</p>
+        <p>Microsoft Telnet> open 127.0.0.1 1234</p>
+        <p>Подключение к 127.0.0.1...</p>
+        <p>hello client Подключение к узлу утеряно. Нажмите любую клавишу...</p>
+        <p><a href="https://habr.com/ru/post/131472/">Простой сервер на Qt/C++</a></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+		<table>
+		    <tr>
+		        <td>stuff</td>
+		        <td>материал</td>
+		    </tr>
+		    <tr>
+		        <td>guts</td>
+		        <td>внутренности</td>
+		    </tr>
+		    <tr>
+		        <td>performs</td>
+		        <td>выполняет</td>
+		    </tr>
+		    <tr>
+		        <td></td>
+		        <td></td>
+		    </tr>
+		    <tr>
+		        <td></td>
+		        <td></td>
+		    </tr>
+		    <tr>
+		        <td></td>
+		        <td></td>
+		    </tr>
+		    <tr>
+		        <td></td>
+		        <td></td>
+		    </tr>
+		    <tr>
+		        <td></td>
+		        <td></td>
+		    </tr>
+		</table>
 		<p></p>
 	</li>
 	<li>
@@ -151,6 +376,34 @@
 		<p>D:\mailCloud\vprj\Diag29\diag\diag</p>
 		<p>D:\mailCloud\vprj\Diag29\diag\diag\list.cpp</p>
 		<p>11</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+            <details>
+                <summary style="color: blueviolet">__</summary>
+                <listing style="background-color: #DEF;">
+================================
+
+
+================================
+
+
+================================
+                </listing>
+            </details>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
 	</li>
 </ol>
 

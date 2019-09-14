@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function fn() {
+			el = document.getElementById("id1")
+			console.log("log")
+			console.log(el.innerHTML)
+			el.innerHTML = "321"
+
+			var trs = document.getElementsByTagName('tr')
+			var s = ''
+			for (var tr of trs){
+				tds =tr.getElementsByTagName('td')
+				if(tds.length == 2){
+					var td1 = tds[0]
+					s += td1.innerHTML
+					s += '\r\n'
+//					console.log(td1.innerHTML)
+
+				}
+				console.log(s)
+			}
+
+//			console.log(trs.length, trs)
+
+			navigator.clipboard.writeText(s)
+				.then(() => {
+					// Получилось!
+				})
+		}
+
+	</script>
+</head>
+
+<body>
+	<p id="id1">123</p>
+	<p><input type="button" value="Проверить" onclick="fn()">
+	</p>
+	<div id="ref_004">ref_004</div>
+	<div>
+		<table id="table1">
+			<tbody>
+				<tr>
+					<td>[Chorus:]</td>
+					<td>[Припев:]</td>
+				</tr>
+				<tr>
+					<td>Ten o'clock postman</td>
+					<td>Почтальон, что приходит в десять,</td>
+				</tr>
+				<tr>
+					<td>Bring me her letter</td>
+					<td>Принеси мне письмо от неё.</td>
+				</tr>
+				<tr>
+					<td>Ten o'clock postman</td>
+					<td>Почтальон, что приходит в десять,</td>
+				</tr>
+				<tr>
+					<td>Make me feel better</td>
+					<td>Подними мне настроение.</td>
+				</tr>
+				<tr>
+					<td>Been so many days</td>
+					<td>Много дней прошло</td>
+				</tr>
+				<tr>
+					<td>Since that I've met her</td>
+					<td>С момента нашей встречи.</td>
+				</tr>
+				<tr>
+					<td>Ten o'clock postman</td>
+					<td>Почтальон, что приходит в десять,</td>
+				</tr>
+				<tr>
+					<td>Bring me her letter</td>
+					<td>Принеси мне письмо от неё,</td>
+				</tr>
+				<tr>
+					<td>Bring me her letter</td>
+					<td>Принеси мне письмо от неё.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>I'm walking all over the room</td>
+					<td>Я мечусь по комнате,</td>
+				</tr>
+				<tr>
+					<td>Wonder why I don't stop biting my nails</td>
+					<td>Недоумеваю, почему не могу прекратить грызть ногти,</td>
+				</tr>
+				<tr>
+					<td>Why carry this feeling of doom</td>
+					<td>Отчего чувствую себя обречённо.</td>
+				</tr>
+				<tr>
+					<td>A couple more hours and I'll get the mail</td>
+					<td>Ещё пара часов и я получу почту,</td>
+				</tr>
+				<tr>
+					<td>I'll get the mail</td>
+					<td>Я получу почту.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Finding it so hard to eat</td>
+					<td>Обнаруживаю, как трудно есть,</td>
+				</tr>
+				<tr>
+					<td>The toast and the eggs they just don't taste the same</td>
+					<td>Тосты и яичница на вкус не такие как раньше.</td>
+				</tr>
+				<tr>
+					<td>Hearing a noise in the street</td>
+					<td>Заслышав шум на улице,</td>
+				</tr>
+				<tr>
+					<td>I run to the window and cry out in vain</td>
+					<td>Я бегу к окну и молюсь напрасно...</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>[Chorus]</td>
+					<td>[Припев]</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Remembering that she said for sure</td>
+					<td>Помню, она точно говорила:</td>
+				</tr>
+				<tr>
+					<td>I'll write you the minute I'll get off the plane</td>
+					<td>"Я напишу тебе в ту же минуту, как только сойду с самолёта".</td>
+				</tr>
+				<tr>
+					<td>Nothing, not one single word</td>
+					<td>Ничего, ни единого словечка...</td>
+				</tr>
+				<tr>
+					<td>It must come this morning or I'll go insane</td>
+					<td>Оно должно придти этим утром или я сойду с ума,</td>
+				</tr>
+				<tr>
+					<td>I'll go insane</td>
+					<td>Я сойду с ума.</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Now it's been almost five days</td>
+					<td>Прошло уже почти пять дней.</td>
+				</tr>
+				<tr>
+					<td>Could she have sent it by air or by rail</td>
+					<td>Она отправила письмо по воздуху или поездом?</td>
+				</tr>
+				<tr>
+					<td>I hear someone's comin' this way</td>
+					<td>Я слышу, кто-то идёт знакомым маршрутом...</td>
+				</tr>
+				<tr>
+					<td>This must be it, yes it must be the mail</td>
+					<td>Это должно быть оно. Да, это должна быть почта!</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>[Chorus]</td>
+					<td>[Припев]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
+</body>
+
+</html>
