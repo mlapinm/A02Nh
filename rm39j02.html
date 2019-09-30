@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d2location">____</div>
+    <p><input type="button" value="openWin" onclick="openWin()"></p>
+    <p><input type="button" value="closeWin" onclick="closeWin()"></p>
+    <p><input type="button" value="writeDoc" onclick="writeDoc()"></p>
+    <p><input type="button" value="getDoc" onclick="getDoc()"></p>
+    <script>
+        var text=
+    '<html>\
+    <head>\
+    <title>Test</title>\
+    </head>\
+    <body>\
+        <p id = "p1">Welcome..</p>\
+    </body>\
+    </html>'
+
+    </script>
+    <script>
+    var win
+    function openWin(){
+        var p = "width=300,height=200,top=0,left=0"
+        win = window.open("","",p)
+
+        var s = 'openWin'
+        el = document.getElementById('d2location')
+        el.innerHTML = s
+    }
+    function closeWin(){
+        win.close()
+    }
+    function writeDoc(){
+        win.focus()
+        win.document.open()
+        win.document.write(text)
+        //win.document.close()
+    }
+    function getDoc(){
+        //win.document.open()
+        var el1 = win.document.getElementById('p1')
+        console.log(win.document, el1.innerHTML)
+
+//          el = document.getElementById('d1screen')
+//        el.innerHTML = s
+      win.document.close()
+    }
+    </script>
+</body>
+</html>
