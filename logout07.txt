@@ -1,0 +1,44 @@
+
+freonpc	..\04install\linx\vbox
+2019-09-26 08:55:40.376777
+
+freonpc	..\04install\Gumilev.rar
+freonpc	..\04install\linx\avbox
+freonpc	..\04install\linx\astra-linux-1.5.iso
+freonpc	..\04install\linx\astra-linux-dev-1.5.iso
+freonpc	..\04install\linx\LCD-show-190115.tar.gz
+freonpc	..\04install\linx\raspbx-04-04-2018.img
+freonpc	..\04install\linx\SNG7-FPBX-64bit-1904-2.iso
+freonpc	..\04install\linx\ubuntu-14.04.6-server-amd64.iso
+freonpc	..\04install\linx\ubuntu-mate-18.04.2-beta1-desktop-armhf+raspi-ext4.img
+freonpc	..\04install\linx\win32diskimager-1.0.0-install.exe
+2019-09-26 09:33:20.687258
+
+freonpc	..\02progr\01web\Уровень 2. Администрирование сервисов и сетей
+2019-09-26 10:20:09.520567
+
+freonpc	..\02progr\01web\Уровень 1. Основы администрирования и безопасности
+freonpc	..\02progr\01web\a_Уровень 2. Администрирование сервисов и сетей
+2019-09-26 10:52:24.644250
+
+freonpc	..\04install\jetbrains\JetBrains IntelliJ IDEA Ultimate 2018.1.4
+freonpc	..\02progr\01web\a_Уровень 1. Основы администрирования и безопасности
+2019-09-26 10:59:22.047124
+
+freonpc	..\07books\Gumilev.rar
+2019-09-26 11:06:24.495287
+
+kitchen	..\04install\0deposit\﻿apache-tomcat-8.5.43-windows-x64.zip
+kitchen	..\04install\jetbrains\JetBrains IntelliJ IDEA Ultimate 2018.1.4
+kitchen	..\02progr\01web\Уровень 1. Основы администрирования и безопасности
+kitchen	..\02progr\01web\Уровень 2. Администрирование сервисов и сетей
+kitchen	..\04install\linx\vbox
+kitchen	..\04install\linx\astra-linux-1.5.iso
+kitchen	..\04install\linx\astra-linux-dev-1.5.iso
+kitchen	..\04install\linx\LCD-show-190115.tar.gz
+kitchen	..\04install\linx\raspbx-04-04-2018.img
+kitchen	..\04install\linx\SNG7-FPBX-64bit-1904-2.iso
+kitchen	..\04install\linx\ubuntu-14.04.6-server-amd64.iso
+kitchen	..\04install\linx\ubuntu-mate-18.04.2-beta1-desktop-armhf+raspi-ext4.img
+kitchen	..\04install\linx\win32diskimager-1.0.0-install.exe
+2019-09-28 17:48:10.310641

@@ -1,5 +1,18 @@
-Brackets Git
 
+
+
+dpkg --configure -a 
+lenovo-B560
+lenovo
+noauto,x-systemd.automount,username=freon,password=20304050,iocharset=utf8,dir_mode=0777,file_mode=0777,vers=1.0
+================================
+//192.168.1.102/avi     /mnt/share      cifs    auto,username=freon,password=20304050,iocharset=utf8,dir_mode=0777,file_mode=0777,vers=1.0      0       0
+Brackets Git
+tpassword401
+
+
+
+============================
 https://wikival.bmstu.ru/doku.php
 https://wikival.bmstu.ru/doku.php
 ================================
