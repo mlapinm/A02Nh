@@ -1,5 +1,5 @@
 
-
+retry minlen difok dcredit
 
 dpkg --configure -a 
 lenovo-B560
