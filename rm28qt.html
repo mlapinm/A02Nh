@@ -113,7 +113,7 @@
                 <listing style="background-color: #DEF;">
 ================================
 main.cpp
-#include <QCoreApplication>
+#include &lt;QCoreApplication&gt;
 #include "sockettest.h"
 
 int main(int argc, char *argv[])
@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
 //    qDebug("dfsfsfs");
 
     SocketTest* socketTest = new SocketTest();
-    socketTest->Test();
+    socketTest-&gt;Test();
 
     return a.exec();
 }
@@ -133,10 +133,10 @@ sockettest.h
 #ifndef SOCKETTEST_H
 #define SOCKETTEST_H
 
-#include <QObject>
-#include <QDebug>
-#include <QTcpSocket>
-#include <QAbstractSocket>
+#include &lt;QObject&gt;
+#include &lt;QDebug&gt;
+#include &lt;QTcpSocket&gt;
+#include &lt;QAbstractSocket&gt;
 
 class SocketTest : public QObject
 {
@@ -184,32 +184,32 @@ void SocketTest::Test(){
     connect(socket, SIGNAL(bytesWritten(qint64)),
             this, SLOT(bytesWritten(qint64)));
 
-    qDebug() << "Connectiong...";
+    qDebug() &lt;&lt; "Connectiong...";
 
     socket->connectToHost("voidrealms.com", 80);
 
     if(!socket->waitForConnected(1000)){
-        qDebug()<< "Error: " << socket->errorString();
+        qDebug()&lt;&lt; "Error: " &lt;&lt; socket->errorString();
     }
 
 }
 
 void SocketTest::connected(){
-    qDebug()<<"Connected!";
+    qDebug()&lt;&lt;"Connected!";
     socket->write("HEAD / HTTP/1.0\r\n\r\n\r\n");
 }
 
 void SocketTest::disconnected(){
-    qDebug()<<"Disconnected!";
+    qDebug()&lt;&lt;"Disconnected!";
 }
 
 void SocketTest::bytesWritten(qint64 bytes){
-    qDebug() << "We wrote: " << bytes;
+    qDebug() &lt;&lt; "We wrote: " &lt;&lt; bytes;
 }
 
 void SocketTest::readyRead(){
-    qDebug() << "Reading...";
-    qDebug() << socket->readAll();
+    qDebug() &lt;&lt; "Reading...";
+    qDebug() &lt;&lt; socket->readAll();
 }
 ================================
 Q66SignalSocket.pro
@@ -404,6 +404,43 @@ HEADERS += \
 	<p></p>
 	<p></p>
 	<p></p>
+	</li>
+	<li>
+		<p></p>
+		<p>Компиляция.txt</p>
+		<p>//----------------</p>
+		<p>ssh - доступ к машине МСВС</p>
+		<p>putty</p>
+		<p>отладка с графикой</p>
+		<p>xming</p>
+		<p>//----------------------</p>
+		<p>копирование файлов</p>
+		<p>far 3</p>
+		<p>sftp</p>
+		<p>//----------------------</p>
+		<p>реч рег</p>
+		<p>gps</p>
+		<p>библиотека</p>
+		<p>Скомпилить под МСВС</p>
+		<p>1. если нет diag.pro</p>
+		<p>qmake -project</p>
+		<p>создается diag.pro</p>
+		<p>2. в diag.pro добавить</p>
+		<p>diag.pro</p>
+		<p>INCLUDEPATH += .</p>
+		<p>QT += network</p>
+		<p>3. Запускать по очереди</p>
+		<p>qmake4</p>
+		<p>создается Makefile(что-то вроде diag.pri)</p>
+		<p>make</p>
+		<p>создается исполняемый файл(компиляция)</p>
+		<p>//-----------------------</p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
 	</li>
 </ol>
 

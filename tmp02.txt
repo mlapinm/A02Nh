@@ -1,0 +1,19 @@
+NAME
+       ci - check in RCS revisions
+
+SYNOPSIS
+       ci [options] file ...
+
+DESCRIPTION
+       ci stores new revisions into RCS files.  Each file name matching an RCS
+       suffix is taken to be an RCS file.  All others are assumed to be  work‐
+       ing  files  containing new revisions.  ci deposits the contents of each
+       working file into the corresponding RCS file.  If only a  working  file
+       is  given, ci tries to find the corresponding RCS file in an RCS subdi‐
+       rectory and then in the working file's directory.   For  more  details,
+       see FILE NAMING below.
+
+       For  ci  to work, the caller's login must be on the access list, except
+       if the access list is empty or the caller is the superuser or the owner
+       of  the  file.  To append a new revision to an existing branch, the tip
+       revision on that branch must be locked by the caller.  Otherwise,  only
