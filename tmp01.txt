@@ -1,32 +1,20 @@
-root@linub:~# lshw -short<br/>
-H/W path      Device      Class       Description<br/>
-=================================================<br/>
-                          system      VirtualBox<br/>
-/0                        bus         VirtualBox<br/>
-/0/0                      memory      128KiB BIOS<br/>
-/0/1                      memory      985MiB System memory<br/>
-/0/2                      processor   Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz<br/>
-/0/100                    bridge      440FX - 82441FX PMC [Natoma]<br/>
-/0/100/1                  bridge      82371SB PIIX3 ISA [Natoma/Triton II]<br/>
-/0/100/1.1                storage     82371AB/EB/MB PIIX4 IDE<br/>
-/0/100/2                  display     SVGA II Adapter<br/>
-/0/100/3      enp0s3      network     82540EM Gigabit Ethernet Controller<br/>
-/0/100/4                  generic     VirtualBox Guest Service<br/>
-/0/100/5                  multimedia  82801AA AC'97 Audio Controller<br/>
-/0/100/6                  bus         KeyLargo/Intrepid USB<br/>
-/0/100/6/1    usb1        bus         OHCI PCI host controller<br/>
-/0/100/6/1/1              input       USB Tablet<br/>
-/0/100/7                  bridge      82371AB/EB/MB PIIX4 ACPI<br/>
-/0/100/d                  storage     82801HM/HEM (ICH8M/ICH8M-E) SATA Controlle<br/>
-/0/3          scsi1       storage<br/>
-/0/3/0.0.0    /dev/cdrom  disk        CD-ROM<br/>
-/0/4          scsi2       storage<br/>
-/0/4/0.0.0    /dev/sda    disk        10GB VBOX HARDDISK<br/>
-/0/4/0.0.0/1  /dev/sda1   volume      1023KiB BIOS Boot partition<br/>
-/0/4/0.0.0/2  /dev/sda2   volume      10237MiB EXT4 volume<br/>
-/0/5          scsi3       storage<br/>
-/0/5/0.0.0    /dev/sdb    disk        10GB VBOX HARDDISK<br/>
-/0/6          scsi4       storage<br/>
-/0/6/0.0.0    /dev/sdc    disk        10GB VBOX HARDDISK<br/>
-/0/7          scsi5       storage<br/>
-/0/7/0.0.0    /dev/sdd    disk        10GB VBOX HARDDISK<br/>
+В МИРЕ ЕСТЬ КРАСАВИЦА ОДНА
+
+Музыка: Э.Шентирмай
+Стихи: Н.Кархулеску
+Русский текст: А.Ефременков
+
+В мире есть красавица одна,—
+Это ты, души моей весна.
+Видно, счастье мне дано судьбой
+Быть любимым, милая, тобой.
+
+Много, много в небе ярких звёзд;
+Много, много в поле алых роз.
+Но ни звёздам, ни цветам полей
+Не сравниться с милою моей.
+
+Нам с тобой теперь не долго ждать
+Скоро скрипки будут нам играть
+Будет свадьба раннею весной
+Ты в мой дом войдешь тогда со мной.
