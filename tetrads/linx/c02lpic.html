@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -13072,14 +13072,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13145,7 +13145,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 
 <pre><code>Router(config)#int fa 0/0
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 Router(config-if)#ip address 192.168.1.1 255.255.255.0
 Router(config-if)#exit
 Router(config)#ip dhcp pool DHCP
@@ -13192,13 +13192,13 @@ Switch(config-vlan)#name VLAN3
 Switch(config)#vlan 4
 Switch(config-vlan)#name DHCP
 Switch(config)#int range fa 0/2-3
-Switch(config-if-range)#switchport mode access 
+Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#switchport access vlan 2
 Switch(config)#interface range fa 0/4-5
-Switch(config-if-range)#switchport mode access 
+Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#switchport access vlan 3
 Switch(config)#int fa 0/6
-Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 4</code></pre>
 
 </div>
@@ -13219,7 +13219,7 @@ Switch(config-if)#switchport trunk allowed vlan 2,3,4</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>Router#show ip dhcp binding 
+<pre><code>Router#show ip dhcp binding
 IP address       Client-ID/              Lease expiration        Type
                  Hardware address
 192.168.1.2      00E0.B020.16E5           --                     Automatic
@@ -13244,7 +13244,7 @@ IP address       Client-ID/              Lease expiration        Type
 <pre><code>Router(config)#int gi 0/0.2
 Router(config-subif)#encapsulation dot1Q 2
 Router(config-subif)#ip address 192.168.2.1 255.255.255.0
-Router(config-subif)#no shutdown 
+Router(config-subif)#no shutdown
 
 Router(config)#int gi 0/0
 Router(config-if)#no shutdown
@@ -13297,14 +13297,14 @@ Switch(config-vlan)#name users
 Switch(config)#vlan 3
 Switch(config-vlan)#name server
 Switch(config)#int fa0/2
-Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 3
 Switch(config)#int fa0/3
 Switch(config)#int range fa 0/3-5
-Switch(config-if-range)#switchport mode access 
+Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#switchport access vlan 2
 
-Switch(config-if)#switchport mode trunk 
+Switch(config-if)#switchport mode trunk
 Switch(config-if)#switchport trunk allowed vlan 2,3</code></pre>
 
 </div>
@@ -13316,12 +13316,12 @@ Switch(config-if)#switchport trunk allowed vlan 2,3</code></pre>
 <p>Router0</p>
 
 <pre><code>Router(config)#int fa 0/1
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 
 Router(config)#int fa 0/1.2
 Router(config-subif)#encapsulation dot1Q 2
 Router(config-subif)#ip address 192.168.2.1 255.255.255.0
-Router(config-subif)#no shutdown 
+Router(config-subif)#no shutdown
 
 Router(config)#int fa 0/1.3
 Router(config-subif)#encapsulation dot1Q 3
@@ -13338,7 +13338,7 @@ Router(config-subif)#no shutdown</code></pre>
 
 <pre><code>Router(config)#int fa 0/0
 Router(config-if)#ip address 213.234.10.1 255.255.255.252
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 
 Router(config)#int fa 0/1
 Router(config-if)#ip address 213.234.20.1 255.255.255.252
@@ -13364,16 +13364,16 @@ Router(config-if)#no shutdown</code></pre>
 
 <pre><code>Router(config)#int fa 0/0
 Router(config-if)#ip address 213.234.10.2 255.255.255.252
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 
 Router(config)#ip route 0.0.0.0 0.0.0.0 213.234.10.1
 
 Router(config)#int fa 0/0
-Router(config-if)#ip nat outside 
+Router(config-if)#ip nat outside
 Router(config)#int fa 0/1.2
-Router(config-subif)#ip nat inside 
+Router(config-subif)#ip nat inside
 Router(config)#int fa 0/1.3
-Router(config-subif)#ip nat inside 
+Router(config-subif)#ip nat inside
 
 Router(config)#ip nat inside source list FOR-NAT interface fa 0/0 overload</code></pre>
 <p><strong>Router(config)#ip nat inside source list FOR-NAT interface fa 0/0 overload </strong></p>
@@ -13395,7 +13395,7 @@ Router(config)#ip nat inside source list FOR-NAT interface fa 0/0 overload</code
 <p>192.168.2.2 C:&gt;ping -n 200 213.234.20.2<br>
 Reply from 213.234.20.2: bytes=32 time&lt;1ms TTL=126</p>
 
-<pre><code>Router#show ip nat translations 
+<pre><code>Router#show ip nat translations
 Pro  Inside global     Inside local       Outside local      Outside global
 icmp 213.234.10.2:360  192.168.2.2:360    213.234.20.2:360   213.234.20.2:360
 icmp 213.234.10.2:361  192.168.2.2:361    213.234.20.2:361   213.234.20.2:361
@@ -13430,14 +13430,14 @@ Router(config)#ip nat inside source static tcp 192.168.3.2 80 213.234.10.2 80</p
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>http://213.234.10.2  
+<pre><code>http://213.234.10.2
 
 Cisco Packet Tracer
 Welcome to Cisco Packet Tracer. Opening doors to new opportunities. Mind Wide Open.
-Quick Links: 
-A small page 
-Copyrights 
-Image page 
+Quick Links:
+A small page
+Copyrights
+Image page
 Image</code></pre>
 
 </div>
@@ -13641,7 +13641,7 @@ C       192.168.100.3/32 is directly connected, Loopback0</code></pre>
 Router(config-if)#shutdown</code></pre>
 <p><strong>Router3</strong></p>
 
-<pre><code>Router#show ip route 
+<pre><code>Router#show ip route
      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
 O       10.10.10.0/30 [110/2] via 10.10.12.1, 00:02:58, GigabitEthernet0/0
 C       10.10.12.0/30 is directly connected, GigabitEthernet0/0
@@ -13975,17 +13975,17 @@ show ip route</p>
 nat</p>
 
 <pre><code>Router(config)#int gi 0/0
-Router(config-if)#ip nat outside 
+Router(config-if)#ip nat outside
 Router(config)#int gi 0/1
-Router(config-if)#ip nat inside 
+Router(config-if)#ip nat inside
 Router(config)#int gi 0/2
 Router(config-if)#ip nat inside
 
-Router(config)#ip access-list standard FOR-NAT 
-Router(config-std-nacl)#permit 192.168.10.0 0.0.0.255 
-Router(config-std-nacl)#permit 192.168.20.0 0.0.0.255 
-Router(config-std-nacl)#permit 192.168.30.0 0.0.0.255 
-Router(config-std-nacl)#permit 192.168.40.0 0.0.0.255 
+Router(config)#ip access-list standard FOR-NAT
+Router(config-std-nacl)#permit 192.168.10.0 0.0.0.255
+Router(config-std-nacl)#permit 192.168.20.0 0.0.0.255
+Router(config-std-nacl)#permit 192.168.30.0 0.0.0.255
+Router(config-std-nacl)#permit 192.168.40.0 0.0.0.255
 
 Router(config)#ip nat inside source  list FOR-NAT interface gi 0/0 overload</code></pre>
 
@@ -14036,7 +14036,7 @@ icmp 210.214.1.2:1493  192.168.10.2:1493  210.214.2.2:1493   210.214.2.2:1493</c
 <p><strong>Router1</strong></p>
 
 <pre><code>Router(config)#router eigrp 1
-Router(config-router)#network 192.168.1.0 0.0.0.255 
+Router(config-router)#network 192.168.1.0 0.0.0.255
 Router(config-router)#network 10.10.10.0 0.0.0.3
 Router(config-router)#network 10.10.11.0 0.0.0.3
 Router(config-router)#no auto-summary</code></pre>
@@ -14050,7 +14050,7 @@ Router(config-router)#no auto-summary</code></pre>
 <p><strong>Router2</strong></p>
 
 <pre><code>Router(config)#router eigrp 1
-Router(config-router)#network 192.168.2.0 0.0.0.255 
+Router(config-router)#network 192.168.2.0 0.0.0.255
 Router(config-router)#network 10.10.10.0 0.0.0.3
 Router(config-router)#network 10.10.12.0 0.0.0.3
 Router(config-router)#no auto-summary</code></pre>
@@ -14290,14 +14290,14 @@ interface FastEthernet0/1
 <strong>Router0</strong></p>
 
 <pre><code>Router(config)#int fa 0/0
-Router(config-if)#ip nat outside 
+Router(config-if)#ip nat outside
 
 Router(config)#int fa 0/1.2
-Router(config-subif)#ip nat inside 
+Router(config-subif)#ip nat inside
 Router(config-subif)#int fa 0/1.3
-Router(config-subif)#ip nat inside 
+Router(config-subif)#ip nat inside
 Router(config-subif)#int fa 0/1.4
-Router(config-subif)#ip nat inside 
+Router(config-subif)#ip nat inside
 
 Router(config)#ip access-list standard FOR-NAT
 Router(config-std-nacl)#permit 192.168.2.0 0.0.0.255
@@ -14316,7 +14316,7 @@ Router(config)#ip nat inside source list FOR-NAT interface fa0/0</code></pre>
 
 <pre><code>ip nat inside source list FOR-NAT interface FastEthernet0/0 overload
 ip classless
-ip route 0.0.0.0 0.0.0.0 210.210.0.1 
+ip route 0.0.0.0 0.0.0.0 210.210.0.1
 !
 ip flow-export version 9
 !
@@ -14413,7 +14413,7 @@ Router(config)#line vty 0 4
 Router(config-line)#
 
   local           Local password checking
-Router(config-line)#login Local 
+Router(config-line)#login Local
 *************************************
 C:\&gt;telnet 210.210.0.2
 Trying 210.210.0.2 ...Open
@@ -14422,13 +14422,13 @@ Trying 210.210.0.2 ...Open
 User Access Verification
 
 Username: admin
-Password: 
+Password:
 Router#</code></pre>
 <p><em>no telnet outside</em></p>
 
 <pre><code>
 Router(config)#ip access-list extended FROM-OUTSIDE
-Router(config-ext-nacl)#deny tcp any host 210.210.0.2 eq telnet 
+Router(config-ext-nacl)#deny tcp any host 210.210.0.2 eq telnet
 
 ip access-list extended FROM-OUTSIDE
  permit ip any host 210.210.0.2
@@ -14458,7 +14458,7 @@ Trying 210.210.0.2 ...
 <h5 id="&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-VL5-192.168.5.2-1C-&#1090;&#1086;&#1083;&#1100;&#1082;&#1086;-&#1076;&#1083;&#1103;-VL2-192.168.2.2-&#1041;&#1091;&#1093;&#1075;&#1072;&#1083;&#1090;&#1077;&#1088;&#1080;&#1103;">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082; VL5 192.168.5.2 1C &#1090;&#1086;&#1083;&#1100;&#1082;&#1086; &#1076;&#1083;&#1103; VL2 192.168.2.2 &#1041;&#1091;&#1093;&#1075;&#1072;&#1083;&#1090;&#1077;&#1088;&#1080;&#1103;<a class="anchor-link" href="#&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-VL5-192.168.5.2-1C-&#1090;&#1086;&#1083;&#1100;&#1082;&#1086;-&#1076;&#1083;&#1103;-VL2-192.168.2.2-&#1041;&#1091;&#1093;&#1075;&#1072;&#1083;&#1090;&#1077;&#1088;&#1080;&#1103;">&#182;</a></h5><ol>
 <li>Создать 3 access-list:
 разрешить VL2 192.168.2.2 Бухгалтерия
-запретить 
+запретить
 VL3 192.168.3.100 Админ
 VL4 192.168.4.2 Администрация</li>
 <li>Создать 1 access-list:
@@ -14501,10 +14501,10 @@ ip access-list standard TO-1C
 <pre><code>http://210.210.1.2
 Cisco Packet Tracer
 Welcome to HOME Packet Tracer. Opening doors to new opportunities. Mind Wide Open.
-Quick Links: 
-A small page 
-Copyrights 
-Image page 
+Quick Links:
+A small page
+Copyrights
+Image page
 Image</code></pre>
 
 </div>
@@ -14525,9 +14525,9 @@ deny ip any any</p>
 
 <pre><code>Router(config)#ip access-list extended FROM-USERS
 Router(config-ext-nacl)#permit tcp 192.168.3.2 0.0.0.255 host 210.210.1.2 eq www
-Router(config-ext-nacl)#permit ip host 192.168.3.100 host 210.210.1.2 
+Router(config-ext-nacl)#permit ip host 192.168.3.100 host 210.210.1.2
 Router(config-ext-nacl)#deny ip 192.168.3.2 0.0.0.255  host 210.210.1.2
-Router(config-ext-nacl)#permit ip any any 
+Router(config-ext-nacl)#permit ip any any
 
 Router(config)#int fa 0/1.3
 Router(config-subif)#ip access-group FROM-USERS in</code></pre>
@@ -14701,7 +14701,7 @@ Reading from flash...
 Type help or '?' for a list of available commands.
 
 ciscoasa&gt;en
-Password: 
+Password:
 ciscoasa#show ver</code></pre>
 
 </div>
@@ -14711,7 +14711,7 @@ ciscoasa#show ver</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>ciscoasa#show version 
+<pre><code>ciscoasa#show version
 
 Cisco Adaptive Security Appliance Software Version 8.4(2)
 Device Manager Version 6.4(5)
@@ -14820,19 +14820,19 @@ username admin password EFzzo5IyMu79G/7u encrypted</code></pre>
 service password enciption<br>
 do show run</p>
 
-<pre><code>ciscoasa(config)#ssh 192.168.1.0 255.255.255.0 inside 
-ciscoasa(config)#aaa authentication ssh console LOCAL 
+<pre><code>ciscoasa(config)#ssh 192.168.1.0 255.255.255.0 inside
+ciscoasa(config)#aaa authentication ssh console LOCAL
 ciscoasa(config)#show run</code></pre>
 <p><em>ssh</em></p>
 
 <pre><code>C:\&gt;ssh -l admin 192.168.1.1
 
-Password: 
+Password:
 
 
 
 ciscoasa&gt;en
-Password: 
+Password:
 ciscoasa#</code></pre>
 
 </div>
@@ -14876,10 +14876,10 @@ ciscoasa(config-if)#security-level 95</code></pre>
 <p>**</p>
 
 <pre><code>Router(config)#int fa 0/0
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 Router(config-if)#ip address 210.210.0.1 255.255.255.252
 Router(config-if)#int fa 0/1
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 Router(config-if)#ip address 210.210.1.1 255.255.255.0</code></pre>
 
 </div>
@@ -15016,7 +15016,7 @@ ciscoasa(config)#ping 210.210.3.2</code></pre>
 <pre><code>ciscoasa(config)#access-list FROM-OUTSIDE extended permit icmp any host 210.210.3.2
 ciscoasa(config)#access-list FROM-OUTSIDE extended permit tcp any host 210.210.3.2 eq www
 
-ciscoasa(config)#access-group FROM-OUTSIDE in interface outside 
+ciscoasa(config)#access-group FROM-OUTSIDE in interface outside
 
 210.210.1.2 C:\&gt;ping 210.210.3.2
 210.210.1.2 http://210.210.3.2</code></pre>
@@ -15046,8 +15046,8 @@ ciscoasa(config)#access-group FROM-OUTSIDE in interface outside
 Router(config)#int fa 0/0
 Router(config-if)#description outside
 Router(config-if)#ip address 210.210.0.2 255.255.255.252
-Router(config-if)#no shutdown 
-Router(config-if)#ip nat outside 
+Router(config-if)#no shutdown
+Router(config-if)#ip nat outside
 
 Router(config-if)#int fa 0/1
 Router(config-if)#description dmz
@@ -15057,7 +15057,7 @@ Router(config-if)#no shutdown
 Router(config-if)#int fa 1/0
 Router(config-if)#description inside
 Router(config-if)#ip address 192.168.1.1 255.255.255.0
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 Router(config-if)#ip nat inside</code></pre>
 
 </div>
@@ -15078,7 +15078,7 @@ Router(config-if)#ip nat inside</code></pre>
 
 <pre><code>Router(config)#ip access-list standard FOR-NAT
 Router(config-std-nacl)#permit 192.168.1.0 0.0.0.255
-Router(config)#ip nat inside source list FOR-NAT interface fa0/0 overload 
+Router(config)#ip nat inside source list FOR-NAT interface fa0/0 overload
 Router(config)#ip route 0.0.0.0 0.0.0.0 210.210.0.1</code></pre>
 
 </div>
@@ -15093,8 +15093,8 @@ Router(config)#ip route 0.0.0.0 0.0.0.0 210.210.0.1</code></pre>
 
 Router(config)#ip access-list extended FROM-OUTSIDE
 Router(config-ext-nacl)#permit icmp any host 210.210.3.2
-Router(config-ext-nacl)#permit tcp any host 210.210.3.2 eq www 
-Router(config-ext-nacl)#deny ip any any 
+Router(config-ext-nacl)#permit tcp any host 210.210.3.2 eq www
+Router(config-ext-nacl)#deny ip any any
 
 Router(config-if)#ip access-group FROM-OUTSIDE in</code></pre>
 
@@ -15106,8 +15106,8 @@ Router(config-if)#ip access-group FROM-OUTSIDE in</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>инспектировать трафик</em></p>
 
-<pre><code>Router(config)#ip inspect name Inside-Outside http 
-Router(config)#ip inspect name Inside-Outside icmp 
+<pre><code>Router(config)#ip inspect name Inside-Outside http
+Router(config)#ip inspect name Inside-Outside icmp
 Router(config)#ip inspect name Inside-Outside tcp
 Router(config)#int fa 1/0
 Router(config-if)#ip inspect Inside-Outside in</code></pre>
@@ -15124,7 +15124,7 @@ Reply from 210.210.1.2: bytes=32 time=11ms TTL=126</p>
 
 <pre><code>Router(config)#ip access-list extended FROM-DMZ
 Router(config-ext-nacl)#deny ip host 210.210.3.2 192.168.1.0 0.0.0.255
-Router(config-ext-nacl)#permit ip any any 
+Router(config-ext-nacl)#permit ip any any
 
 Router(config)#int fa 0/1
 Router(config-if)#ip access-group FROM-DMZ in</code></pre>
@@ -15207,9 +15207,9 @@ ip address 210.210.2.1 255.255.255.252</code></pre>
 <p><em>Router0</em></p>
 
 <pre><code>int fa0/0
-ip nat outside 
+ip nat outside
 int fa0/1
-ip nat inside 
+ip nat inside
 ex
 ip access-list standard FOR-NAT
 permit 192.168.1.0 0.0.0.255
@@ -15226,9 +15226,9 @@ ip nat inside source list FOR-NAT int fa0/0 overload</code></pre>
 <p><em>Router1</em></p>
 
 <pre><code>int fa0/0
-ip nat outside 
+ip nat outside
 int fa0/1
-ip nat inside 
+ip nat inside
 ex
 ip access-list standard FOR-NAT
 permit 192.168.2.0 0.0.0.255
@@ -15259,7 +15259,7 @@ permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
 ex</code></pre>
 <h5 id="&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1082;&#1072;&#1088;&#1090;&#1099;">&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077; &#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1082;&#1072;&#1088;&#1090;&#1099;<a class="anchor-link" href="#&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1082;&#1072;&#1088;&#1090;&#1099;">&#182;</a></h5>
 <pre><code>crypto map CMAP 10 ipsec-isakmp
-set peer 210.210.2.2 
+set peer 210.210.2.2
 set transform-set TS
 match address FOR-VPN
 ex</code></pre>
@@ -15290,7 +15290,7 @@ permit ip 192.168.2.0 0.0.0.255 192.168.1.0 0.0.0.255
 ex</code></pre>
 <h5 id="&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1082;&#1072;&#1088;&#1090;&#1099;">&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077; &#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1082;&#1072;&#1088;&#1090;&#1099;<a class="anchor-link" href="#&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077;-&#1082;&#1088;&#1080;&#1087;&#1090;&#1086;&#1082;&#1072;&#1088;&#1090;&#1099;">&#182;</a></h5>
 <pre><code>crypto map CMAP 10 ipsec-isakmp
-set peer 210.210.1.2 
+set peer 210.210.1.2
 set transform-set TS
 match address FOR-VPN
 ex</code></pre>
@@ -15308,8 +15308,8 @@ crypto map CMAP</code></pre>
 
 <pre><code>no ip access-list standard FOR-NAT
 ip access-list extended FOR-NAT
-deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255 
-permit ip 192.168.1.0 0.0.0.255 any 
+deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+permit ip 192.168.1.0 0.0.0.255 any
 ex
 
 sh crypto ipsec sa</code></pre>
@@ -15324,8 +15324,8 @@ sh crypto ipsec sa</code></pre>
 
 <pre><code>no ip access-list standard FOR-NAT
 ip access-list extended FOR-NAT
-deny ip 192.168.2.0 0.0.0.255 192.168.1.0 0.0.0.255 
-permit ip 192.168.2.0 0.0.0.255 any 
+deny ip 192.168.2.0 0.0.0.255 192.168.1.0 0.0.0.255
+permit ip 192.168.2.0 0.0.0.255 any
 ex</code></pre>
 
 </div>
@@ -15458,7 +15458,7 @@ ex</code></pre>
 <h5 id="&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072;-&#1082;&#1086;&#1083;&#1102;&#1095;&#1072;-&#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;-&#1080;-&#1087;&#1080;&#1088;&#1072;">&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072; &#1082;&#1086;&#1083;&#1102;&#1095;&#1072; &#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080; &#1080; &#1087;&#1080;&#1088;&#1072;<a class="anchor-link" href="#&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072;-&#1082;&#1086;&#1083;&#1102;&#1095;&#1072;-&#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;-&#1080;-&#1087;&#1080;&#1088;&#1072;">&#182;</a></h5>
 <pre><code>tunnel-group 210.210.2.2 type ipsec-l2l
 tunnel-group 210.210.2.2 ipsec-attributes
-ikev1 pre-shared-key 11111 
+ikev1 pre-shared-key 11111
 ex</code></pre>
 <h5 id="&#1042;&#1090;&#1086;&#1088;&#1072;&#1103;-&#1092;&#1072;&#1079;&#1072;">&#1042;&#1090;&#1086;&#1088;&#1072;&#1103; &#1092;&#1072;&#1079;&#1072;<a class="anchor-link" href="#&#1042;&#1090;&#1086;&#1088;&#1072;&#1103;-&#1092;&#1072;&#1079;&#1072;">&#182;</a></h5>
 <pre><code>crypto ipsec ikev1 transform-set TS esp-3des esp-md5-hmac</code></pre>
@@ -15472,7 +15472,7 @@ crypto map To-Site2 1 set ikev1 transform-set TS</code></pre>
 <h5 id="&#1055;&#1088;&#1080;&#1074;&#1103;&#1079;&#1082;&#1072;-&#1082;-&#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;&#1091;">&#1055;&#1088;&#1080;&#1074;&#1103;&#1079;&#1082;&#1072; &#1082; &#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;&#1091;<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1074;&#1103;&#1079;&#1082;&#1072;-&#1082;-&#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;&#1091;">&#182;</a></h5>
 <pre><code>crypto map To-Site2 interface outside</code></pre>
 <h5 id="Access-list">Access list<a class="anchor-link" href="#Access-list">&#182;</a></h5>
-<pre><code>access-list FROM-VPN permit icmp 192.168.2.0 255.255.255.0 192.168.1.0 255.255.255.0 
+<pre><code>access-list FROM-VPN permit icmp 192.168.2.0 255.255.255.0 192.168.1.0 255.255.255.0
 access-group FROM-VPN out interface inside</code></pre>
 
 </div>
@@ -15493,7 +15493,7 @@ ex</code></pre>
 <h5 id="&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072;-&#1082;&#1086;&#1083;&#1102;&#1095;&#1072;-&#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;-&#1080;-&#1087;&#1080;&#1088;&#1072;">&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072; &#1082;&#1086;&#1083;&#1102;&#1095;&#1072; &#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080; &#1080; &#1087;&#1080;&#1088;&#1072;<a class="anchor-link" href="#&#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072;-&#1082;&#1086;&#1083;&#1102;&#1095;&#1072;-&#1072;&#1091;&#1090;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;-&#1080;-&#1087;&#1080;&#1088;&#1072;">&#182;</a></h5>
 <pre><code>tunnel-group 210.210.1.2 type ipsec-l2l
 tunnel-group 210.210.1.2 ipsec-attributes
-ikev1 pre-shared-key 11111 
+ikev1 pre-shared-key 11111
 ex</code></pre>
 <h5 id="&#1042;&#1090;&#1086;&#1088;&#1072;&#1103;-&#1092;&#1072;&#1079;&#1072;">&#1042;&#1090;&#1086;&#1088;&#1072;&#1103; &#1092;&#1072;&#1079;&#1072;<a class="anchor-link" href="#&#1042;&#1090;&#1086;&#1088;&#1072;&#1103;-&#1092;&#1072;&#1079;&#1072;">&#182;</a></h5>
 <pre><code>crypto ipsec ikev1 transform-set TS esp-3des esp-md5-hmac</code></pre>
@@ -15507,7 +15507,7 @@ crypto map To-Site1 1 set ikev1 transform-set TS</code></pre>
 <h5 id="&#1055;&#1088;&#1080;&#1074;&#1103;&#1079;&#1082;&#1072;-&#1082;-&#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;&#1091;">&#1055;&#1088;&#1080;&#1074;&#1103;&#1079;&#1082;&#1072; &#1082; &#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;&#1091;<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1074;&#1103;&#1079;&#1082;&#1072;-&#1082;-&#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;&#1091;">&#182;</a></h5>
 <pre><code>crypto map To-Site1 interface outside</code></pre>
 <h5 id="Access-list">Access list<a class="anchor-link" href="#Access-list">&#182;</a></h5>
-<pre><code>access-list FROM-VPN permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0 
+<pre><code>access-list FROM-VPN permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0
 access-group FROM-VPN out interface inside</code></pre>
 
 </div>
@@ -15547,7 +15547,7 @@ show crypto ipsec sa</code></pre>
 <p><em>Router0</em></p>
 
 <pre><code>Router(config)#int fa 0/0
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 Router(config-if)#ip address 192.168.1.1 255.255.255.0
 ex</code></pre>
 
@@ -15585,7 +15585,7 @@ ex</code></pre>
 <pre><code>logging monitor</code></pre>
 <p><em>syslog</em></p>
 
-<pre><code>logging trap debugging 
+<pre><code>logging trap debugging
 logging 192.168.1.4</code></pre>
 <p><em>address</em></p>
 
@@ -15599,11 +15599,11 @@ ex</code></pre>
 ex</code></pre>
 <p><em>192.168.1.4 syslog</em></p>
 
-<pre><code>03.01.1993 12:38:05.048 
-192.168.1.5 
+<pre><code>03.01.1993 12:38:05.048
+192.168.1.5
 %SYS-5-CONFIG_I: Configured from console by console
 
-Switch#show clock 
+Switch#show clock
 *0:39:30.227 UTC Mon Mar 1 1993</code></pre>
 <p>**</p>
 
@@ -15659,7 +15659,7 @@ C:\&gt;telnet 192.168.1.1
 Trying 192.168.1.1 ...Open
 User Access Verification
 Username: admin
-Password: 
+Password:
 Router#sh run</code></pre>
 <p><em>reload</em> - стереть все команды</p>
 
@@ -15672,7 +15672,7 @@ Router#sh run</code></pre>
 <p>*<em></em>Router0*</p>
 
 <pre><code>int fa 0/0
-no shutdown 
+no shutdown
 ip address 192.168.1.1 255.255.255.0
 ex
 
@@ -15794,7 +15794,7 @@ radius-server host 192.168.1.4 key 11111</code></pre>
 <code>sh version</code> - Cisco IOS Software, C2960 Software (C2960-LANBASE-M), Version 12.2(25)FX, RELEASE SOFTWARE (fc1)<br>
 <code>reload</code> - Loading "flash:/c2960-lanbase-mz.122-25.FX.bin"...</p>
 
-<pre><code>Switch#sh flash: 
+<pre><code>Switch#sh flash:
 Directory of flash:/
 
     1  -rw-     4414921          &lt;no date&gt;  c2960-lanbase-mz.122-25.FX.bin
@@ -15829,10 +15829,10 @@ c2960-lanbasek9-mz.150-2.SE4.bin</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>Switch0</em></p>
 
-<pre><code>Switch#copy tftp: flash: 
+<pre><code>Switch#copy tftp: flash:
 Address or name of remote host []? 192.168.1.4
 Source filename []? c2960-lanbasek9-mz.150-2.SE4.bin
-Destination filename [c2960-lanbasek9-mz.150-2.SE4.bin]? 
+Destination filename [c2960-lanbasek9-mz.150-2.SE4.bin]?
 
 Accessing tftp://192.168.1.4/c2960-lanbasek9-mz.150-2.SE4.bin...
 Loading c2960-lanbasek9-mz.150-2.SE4.bin from 192.168.1.4: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -15840,7 +15840,7 @@ Loading c2960-lanbasek9-mz.150-2.SE4.bin from 192.168.1.4: !!!!!!!!!!!!!!!!!!!!!
 
 4670455 bytes copied in 0.086 secs (4366136 bytes/sec)
 
-Switch#sh flash: 
+Switch#sh flash:
 Directory of flash:/
 
     1  -rw-     4414921          &lt;no date&gt;  c2960-lanbase-mz.122-25.FX.bin
@@ -15865,7 +15865,7 @@ Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>config</em></p>
 
-<pre><code>Switch#sh flash: 
+<pre><code>Switch#sh flash:
 Directory of flash:/
 
     1  -rw-     4414921          &lt;no date&gt;  c2960-lanbase-mz.122-25.FX.bin
@@ -15883,9 +15883,9 @@ Directory of flash:/
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>Switch0</em></p>
 
-<pre><code>Switch#copy startup-config tftp: 
+<pre><code>Switch#copy startup-config tftp:
 Address or name of remote host []? 192.168.1.4
-Destination filename [Switch-confg]? 
+Destination filename [Switch-confg]?
 
 Writing startup-config....!!
 [OK - 1131 bytes]
@@ -15920,10 +15920,10 @@ Writing startup-config....!!
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>Switch0 восстановить</em></p>
 
-<pre><code>sw1#copy tftp: running-config 
+<pre><code>sw1#copy tftp: running-config
 Address or name of remote host []? 192.168.1.4
 Source filename []? Switch-confg
-Destination filename [running-config]? 
+Destination filename [running-config]?
 
 Accessing tftp://192.168.1.4/Switch-confg...
 Loading Switch-confg from 192.168.1.4: !
@@ -15955,7 +15955,7 @@ microtic, Ubiquiti</p>
 <p><em>Router3 - Internet</em></p>
 
 <pre><code>Router(config)#int fa 0/0
-Router(config-if)#no shutdown 
+Router(config-if)#no shutdown
 Router(config-if)#ip address 210.210.0.1 255.255.255.252</code></pre>
 
 </div>
@@ -16465,14 +16465,14 @@ SW3 - 192.168.6.254</code></pre>
 
 <pre><code>C:\&gt;tracert 192.168.4.3
 
-Tracing route to 192.168.4.3 over a maximum of 30 hops: 
+Tracing route to 192.168.4.3 over a maximum of 30 hops:
 
   1   11 ms     0 ms      1 ms      192.168.6.1
   2   0 ms      0 ms      0 ms      192.168.10.5
   3   12 ms     *         0 ms      192.168.10.5
   4   *         1 ms      *         Request timed out.
 
-Router#sh ip route 
+Router#sh ip route
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
@@ -16502,7 +16502,7 @@ ip route 192.168.4.0 255.255.255.0 192.168.10.2
 
 C:\&gt;tracert 192.168.4.3
 
-Tracing route to 192.168.4.3 over a maximum of 30 hops: 
+Tracing route to 192.168.4.3 over a maximum of 30 hops:
 
   1   0 ms      0 ms      1 ms      192.168.6.1
   2   3 ms      0 ms      0 ms      192.168.10.5
@@ -16550,10 +16550,10 @@ Address:   192.168.4.3
 http://portal.netskills.ru
 Cisco Packet Tracer
 Welcome to NetSkills. Opening doors to new opportunities. Mind Wide Open.
-Quick Links: 
-A small page 
-Copyrights 
-Image page 
+Quick Links:
+A small page
+Copyrights
+Image page
 Image</code></pre>
 
 </div>
@@ -16613,7 +16613,7 @@ HOST: www.zz.kl.com.ua</code></pre>
 
 <pre><code>C:\&gt;tracert 192.168.6.254
 
-Tracing route to 192.168.6.254 over a maximum of 30 hops: 
+Tracing route to 192.168.6.254 over a maximum of 30 hops:
 
   1   1 ms      0 ms      1 ms      192.168.3.1
   2   1 ms      3 ms      0 ms      192.168.5.1
@@ -16627,7 +16627,7 @@ ip default-gateway 192.168.6.1
 
 C:\&gt;tracert 192.168.6.254
 
-Tracing route to 192.168.6.254 over a maximum of 30 hops: 
+Tracing route to 192.168.6.254 over a maximum of 30 hops:
 
   1   0 ms      0 ms      0 ms      192.168.3.1
   2   0 ms      0 ms      0 ms      192.168.5.1
@@ -16739,7 +16739,7 @@ ip address 210.210.2.1 255.255.255.252</p>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
     </div>
@@ -16751,7 +16751,7 @@ ip address 210.210.2.1 255.255.255.252</p>
   </div>
 </body>
 
- 
+
 
 
 </html>
