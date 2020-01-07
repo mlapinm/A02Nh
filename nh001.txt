@@ -1,10 +1,35 @@
-18207806196008609905
-12345678901234567890
-7806043316/780601001
-40101810200000010001
-044030001
-780637949975
-2
+
+D:\mailCloud\prjother\017python\utils\A03dict\ldict01.py
+
+
+//abcdefghijklmnopqrstuvwxyz
+
+прога генерировать details
+
+generic
+
+A03Nh
+
+e01pyprkt.ipynb
+e02pyprkt.ipynb
+
+
+
+
+https://vk.com/topic-103116043_34671966
+http://icecast.vgtrk.cdnvideo.ru/mayakfm_mp3_64kbps
+
+32.03 shield+breadboard	
+
+LCR-T4 полевой транзистор
+Добавить к сравнению
+LCR-T4 + корпус, Измеритель RLC электронных компонентов ...
+Китай
+LCR-T4
+
+1
+formFrels
+formDBSN copy not owerwrite
 autosave
 D:\mailCloud\prjother\017python\utils\A06test\test.py
 863,864
