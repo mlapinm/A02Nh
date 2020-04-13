@@ -1,12 +1,32 @@
-FILE_SRT e07en01r.txt - srt  
-FILE_EN e07en01en.txt - en   
-FILE_NUM_EN e07en01numen.txt - num + en  
-FILE_RU e07en01ru.txt - ru  
-FILE_NUM_EN_RU e07en01ner.txt - nun+en+ru  
-FILE_HTML e07tab.html  
+using System;
 
-
-mFrSrt(file_write,num_is) FILE_SRT -> FILE_EN, FILE_NUM_EN   
-mTranslate() FILE_EN -> FILE_RU  
-mMerge() FILE_NUM_EN, FILE_RU -> FILE_NUM_EN_RU  
-m2table() FILE_NUM_EN_RU -> FILE_HTML  
+namespace SwitchStatement
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+string genre = "Horror";
+switch(genre){
+  case "Drama":
+   Console.WriteLine("Citizen Kane");
+    break;
+  case "Comedy":
+   Console.WriteLine("Duck Soup");
+    break;
+  case "Adventure":
+    Console.WriteLine("King Kong");
+    break;
+  case "Horror":
+   Console.WriteLine("Psycho");
+    break;
+  case "Science Fiction":
+    Console.WriteLine("2001: A Space Odyssey
+");
+    break;
+  default:
+    Console.WriteLine("No movie found");    
+}
+    }
+  }
+}
