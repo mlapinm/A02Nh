@@ -6,7 +6,7 @@
 <a href="https://codepen.io/mlapin/full/xxwGprq" target="_blank">Product Landing Page</a>   
 [Technical Documentation](https://codepen.io/mlapin/full/RwWPyzE)  
 [Personal Portfolio](https://codepen.io/mlapin/full/OJyMVLr)  
-[]()  
+[Quote Random](https://codepen.io/mlapin/full/rNOxjyK)  
 []()  
 []()  
 []()  
