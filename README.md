@@ -12,7 +12,7 @@
 [e09Calculator](https://codepen.io/mlapin/full/eYpZxOO)  
 [e10PomodoroClock](https://codepen.io/mlapin/full/JjYKEMB)  
 [e11BarChart](https://codepen.io/mlapin/full/pojbPRm)  
-[]()  
+[e12Scatterplot](https://codepen.io/mlapin/full/YzyWBBe)  
 []()  
 []()  
 []()  
