@@ -1,4 +1,6 @@
 # A02Nh
+[CodePen Home
+d02ChartBar](https://codepen.io/mlapin/full/mderMqe)  
 [A02Nh](https://mlapinm.github.io/A02Nh/)
 [Tribute Page](https://codepen.io/mlapin/full/MWawwVr)  
 [Survey Form](https://codepen.io/mlapin/full/jObPbRJ)  
@@ -13,6 +15,11 @@
 [e10PomodoroClock](https://codepen.io/mlapin/full/JjYKEMB)  
 [e11BarChart](https://codepen.io/mlapin/full/pojbPRm)  
 [e12Scatterplot](https://codepen.io/mlapin/full/YzyWBBe)  
+[e13GlobalTemperature](https://codepen.io/mlapin/full/JjYRJOM)  
+[e14ChoroplethMap](https://codepen.io/mlapin/full/bGVwrRg)  
+[]()  
+[]()  
+[]()  
 []()  
 []()  
 []()  
