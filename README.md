@@ -1,4 +1,6 @@
 # A02Nh
+[bm20.md](https://github.com/mlapinm/A02Nh/blob/master/bm20.md)  
+[bm20.md](./bm20.md)  
 [CodePen Home
 d02ChartBar](https://codepen.io/mlapin/full/mderMqe)  
 [A02Nh](https://mlapinm.github.io/A02Nh/)
@@ -17,7 +19,6 @@ d02ChartBar](https://codepen.io/mlapin/full/mderMqe)
 [e12Scatterplot](https://codepen.io/mlapin/full/YzyWBBe)  
 [e13GlobalTemperature](https://codepen.io/mlapin/full/JjYRJOM)  
 [e14ChoroplethMap](https://codepen.io/mlapin/full/bGVwrRg)  
-[]()  
 []()  
 []()  
 []()  
