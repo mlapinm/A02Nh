@@ -1,3 +1,9 @@
+
+погода
+fr3
+проц
+
+
 tutorial.ipynb
 jupyter notebooks
 part 1: everything is a cell

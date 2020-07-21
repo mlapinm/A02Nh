@@ -1,5 +1,46 @@
 _|_|_|_|_|_
 --|--|--|--|--|--
+fashion|образом|shuffle|перестановка|estimator|оценка
+tweak|подправить|respectively|соответственно|dump batch|массив пакетов
+essentially|по существу|complicated|сложный|accidentally|случайно
+whatever|все|colon|двоеточие|embed|встроить
+right|прямо|sure|убедиться|decent considering|достойно рассмотрения
+matter|дело|stole|украл||
+probability|вероятность|mess|связаться||
+|||||
+|||||
+|||||
+
+
+_|_|_|_|_|_
+--|--|--|--|--|--
+arbitrarily|произвольно|split|отобрали|whatever|какой-бы
+deviation|отклонение|interchange|обмениваться|fairly|довольно
+considered|считается|rare|редко|pronounce|произношение
+vocabulary|словарь|mouthful|полный рот|batches|партии
+entirely|полностью|horrible |ужас||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+_|_|_|_|_|_
+--|--|--|--|--|--
+influential|влиятельный|opinion|мнение|unfortunately|к сожалению
+guess|предположить|unfortunately|к сожалению|fair|справедливый
+exactly|точно|sure|уверен|gonna|собираюсь
+hit|удар|impact|удар|alone|в одиночестве
+necessarily|необязательно|assume|предположить|stuff|материал
+straight|сразу|explanations|объяснения|fair|справедливы
+fresh|свежие|bias|предвзятости|it hasn't simply|это не просто
+essentially|по существу|popping|вынимаю|trick|трюк
+opposed|противоположна|yep|ага||
+|||||
+
+_|_|_|_|_|_
+--|--|--|--|--|--
 mean|означает|essence|сущность|kindly|любезно
 moreover|еще|ultimate|окончательный|offer|предложение
 although|хотя|assuming|при условии|nessessary|необходимые
