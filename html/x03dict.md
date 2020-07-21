@@ -1,6 +1,24 @@
 ### 1
 _|_|_|_|_|_
 --|--|--|--|--|--
+dissimilar|непохожий|issues|вопросы|Unfortunalty|к несчастью
+quite|довольно|assume|предполагать|mismatch|несоответствие
+Conclusion|испытание|essentially|по существу|obviously|очевидно
+behind|позади|stands|означает|denote|обозначить
+completely|полностью|assigned|назначается|eventually|до тех пор
+beyond|за|deal|дело|exact|точный
+huge|огромный|occurring|происходящих|outcome|исход
+finite|конечный|governed|управляемых||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
 |||||
 |||||
 |||||
