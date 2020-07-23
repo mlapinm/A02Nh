@@ -1,0 +1,1 @@
+all right so now it is time to create our first convolutional neural network now we're gonna be using Cara's to do this and we're also gonna be using the CIF AR image data set that contains 60,000 images of ten different classes of everyday objects these images are 32 by 32 which essentially means they are blurs and they are colorful
