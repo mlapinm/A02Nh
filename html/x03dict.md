@@ -1,12 +1,12 @@
 ### 1
 _|_|_|_|_|_
 --|--|--|--|--|--
-whatsoever|вообще||||
-|||||
-|||||
-|||||
-|||||
-|||||
+whatsoever|вообще|suited|подходящий|keep track|следить
+notion|понятие|meaningful|осмысленный|irrelevant|не имеют значения
+Since|поскольку|occurs|встречается|hope|надеюсь
+consider|рассматривать|sentence|фраза|intact|не трунутый
+Embeddings|встраиваемый|superior|превосходящий|messes up|портит
+||||let's say|допустим
 |||||
 |||||
 |||||
