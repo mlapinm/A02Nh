@@ -1,6 +1,13 @@
 
 [EnglishClass101](https://www.youtube.com/c/EnglishClass101/videos)  
 
+How Can You Learn English Alone? Self-Study Plan! Ask Alisha
+667 тыс. просмотров
+2 года назад
+Субтитры
+
+
+
 
 RU
 Введите запрос
@@ -4584,10 +4591,6 @@ Most Common Prefixes - Learn English Grammar
 2 года назад
 Субтитры
 
-How Can You Learn English Alone? Self-Study Plan! Ask Alisha
-667 тыс. просмотров
-2 года назад
-Субтитры
 
 
 6:47
