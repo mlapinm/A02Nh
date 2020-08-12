@@ -1,6 +1,5 @@
 a0295class.md  
-[Weekly English Words with Alisha - American Pizza
-](https://www.youtube.com/watch?v=5579WYrxbhc)  
+[Weekly English Words with Alisha - American Pizza](https://www.youtube.com/watch?v=5579WYrxbhc)  
 
 
 

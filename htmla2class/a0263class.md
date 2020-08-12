@@ -1,6 +1,5 @@
 a0263class.md
-[Weekly English Words with Alisha - Commonly Mispronounced Words
-](https://www.youtube.com/watch?v=QW4GlszU2PU)
+[Weekly English Words with Alisha - Commonly Mispronounced Words](https://www.youtube.com/watch?v=QW4GlszU2PU)
 
 
 

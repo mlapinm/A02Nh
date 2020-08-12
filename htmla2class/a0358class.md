@@ -1,6 +1,5 @@
 a0358class.md  
-[Simple Future Tense - WILL / GOING TO / BE+ING - Learn English Grammar
-](https://www.youtube.com/watch?v=4Ae7O57Itu8)  
+[Simple Future Tense - WILL / GOING TO / BE+ING - Learn English Grammar](https://www.youtube.com/watch?v=4Ae7O57Itu8)  
 
 
 

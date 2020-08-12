@@ -1,6 +1,5 @@
 a0281class.md
-[English THANKSGIVING Words with Alisha!
-](https://www.youtube.com/watch?v=64eFwnkiA78)
+[English THANKSGIVING Words with Alisha!](https://www.youtube.com/watch?v=64eFwnkiA78)
 
 
 

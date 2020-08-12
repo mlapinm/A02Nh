@@ -1,6 +1,5 @@
 a0271class.md
-[Weekly English Words with Alisha - Words with Strange Plural Forms
-](https://www.youtube.com/watch?v=5EYWmfiM-Zg)
+[Weekly English Words with Alisha - Words with Strange Plural Forms](https://www.youtube.com/watch?v=5EYWmfiM-Zg)
 
 
 

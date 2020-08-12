@@ -1,6 +1,5 @@
 a0273class.md
-[Weekly English Words with Alisha - Palindromes
-](https://www.youtube.com/watch?v=xBPAGI8ygKk)
+[Weekly English Words with Alisha - Palindromes](https://www.youtube.com/watch?v=xBPAGI8ygKk)
 
 
 

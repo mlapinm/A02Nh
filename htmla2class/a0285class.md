@@ -1,6 +1,5 @@
 a0285class.md
-[Weekly English Words with Alisha - Funny Sounding Words
-](https://www.youtube.com/watch?v=Uw_7D1_8Suc)
+[Weekly English Words with Alisha - Funny Sounding Words](https://www.youtube.com/watch?v=Uw_7D1_8Suc)
 
 
 

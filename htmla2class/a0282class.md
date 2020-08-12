@@ -1,6 +1,5 @@
 a0282class.md
-[Weekly English Words with Alisha - The Internet Today
-](https://www.youtube.com/watch?v=1KUf7U44NH4)
+[Weekly English Words with Alisha - The Internet Today](https://www.youtube.com/watch?v=1KUf7U44NH4)
 
 
 

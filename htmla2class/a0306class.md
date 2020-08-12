@@ -1,6 +1,5 @@
 a0306class.md  
-[Weekly English Words with Alisha - California English
-](https://www.youtube.com/watch?v=gSg9xTAqbYk)  
+[Weekly English Words with Alisha - California English](https://www.youtube.com/watch?v=gSg9xTAqbYk)  
 
 
 

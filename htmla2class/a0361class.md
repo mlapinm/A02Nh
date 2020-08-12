@@ -1,6 +1,5 @@
 a0361class.md  
-[Basic Adjective Comparisons - Learn English Grammar
-](https://www.youtube.com/watch?v=_DtDFaWTh2M)  
+[Basic Adjective Comparisons - Learn English Grammar](https://www.youtube.com/watch?v=_DtDFaWTh2M)  
 
 
 

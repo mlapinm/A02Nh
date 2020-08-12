@@ -1,6 +1,5 @@
 a0414class.md  
-[American Fast Food - English Topics
-](https://www.youtube.com/watch?v=_hixcsJN2-M)  
+[American Fast Food - English Topics](https://www.youtube.com/watch?v=_hixcsJN2-M)  
 
 
 

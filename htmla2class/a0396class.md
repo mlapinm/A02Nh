@@ -1,6 +1,5 @@
 a0396class.md  
-[When to use SOME and ANY? Learn English Grammar
-](https://www.youtube.com/watch?v=Q8fsh5mFSRk)  
+[When to use SOME and ANY? Learn English Grammar](https://www.youtube.com/watch?v=Q8fsh5mFSRk)  
 
 
 

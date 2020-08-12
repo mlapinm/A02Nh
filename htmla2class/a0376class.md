@@ -1,6 +1,5 @@
 a0376class.md  
-[How Can You Learn English Alone? Self-Study Plan! Ask Alisha
-](https://www.youtube.com/watch?v=2jRNVUcuiYw&t=228s)  
+[How Can You Learn English Alone? Self-Study Plan! Ask Alisha](https://www.youtube.com/watch?v=2jRNVUcuiYw&t=228s)  
 
 
 

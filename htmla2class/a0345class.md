@@ -1,6 +1,5 @@
 a0345class.md  
-[Learn the Top 10 "Gamer Speak" Words in English
-](https://www.youtube.com/watch?v=HjwtgnQbAkw)  
+[Learn the Top 10 "Gamer Speak" Words in English](https://www.youtube.com/watch?v=HjwtgnQbAkw)  
 
 
 

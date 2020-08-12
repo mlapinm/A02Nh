@@ -1,6 +1,5 @@
 a0296class.md  
-[Weekly English Words with Alisha - Baby Animals!
-](https://www.youtube.com/watch?v=rC-Qb7rPC0k)  
+[Weekly English Words with Alisha - Baby Animals!](https://www.youtube.com/watch?v=rC-Qb7rPC0k)  
 
 
 

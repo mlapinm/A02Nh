@@ -1,6 +1,5 @@
 a0412class.md  
-[Ways to Remember 10 Times More Vocabulary - English Topics
-](https://www.youtube.com/watch?v=-9ezwdqrGwQ&t=33s)  
+[Ways to Remember 10 Times More Vocabulary - English Topics](https://www.youtube.com/watch?v=-9ezwdqrGwQ&t=33s)  
 
 
 

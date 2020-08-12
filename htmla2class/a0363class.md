@@ -1,6 +1,5 @@
 a0363class.md  
-[Learn the Top 10 Ways to Invite Someone to Something in English
-](https://www.youtube.com/watch?v=HoIAuZzhamo)  
+[Learn the Top 10 Ways to Invite Someone to Something in English](https://www.youtube.com/watch?v=HoIAuZzhamo)  
 
 
 

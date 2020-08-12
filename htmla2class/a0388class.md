@@ -1,6 +1,5 @@
 a0388class.md  
-[Pets Word Association with English speakers
-](https://www.youtube.com/watch?v=Y_FmCApPyy0)  
+[Pets Word Association with English speakers](https://www.youtube.com/watch?v=Y_FmCApPyy0)  
 
 
 

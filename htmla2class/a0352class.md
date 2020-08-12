@@ -1,6 +1,5 @@
 a0352class.md  
-[Learn the Top 10 Phrases for Surviving Back to School in English
-](https://www.youtube.com/watch?v=kFvLJa5zgB0)  
+[Learn the Top 10 Phrases for Surviving Back to School in English](https://www.youtube.com/watch?v=kFvLJa5zgB0)  
 
 
 

@@ -1,6 +1,5 @@
 a0314class.md  
-[English MARTIN LUTHER KING JR. DAY Words with Alisha
-](https://www.youtube.com/watch?v=8AI6gGjw1O4)  
+[English MARTIN LUTHER KING JR. DAY Words with Alisha](https://www.youtube.com/watch?v=8AI6gGjw1O4)  
 
 
 

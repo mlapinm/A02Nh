@@ -1,6 +1,5 @@
 a0342class.md  
-[Learn the Top 10 Words for Connecting Thoughts in English
-](https://www.youtube.com/watch?v=WRx5ICjcRWg)  
+[Learn the Top 10 Words for Connecting Thoughts in English](https://www.youtube.com/watch?v=WRx5ICjcRWg)  
 
 
 

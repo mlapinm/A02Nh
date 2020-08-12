@@ -1,6 +1,5 @@
 a0270class.md
-[Weekly English Words with Alisha - Red Idioms
-](https://www.youtube.com/watch?v=rCKn7tuE6dI)
+[Weekly English Words with Alisha - Red Idioms](https://www.youtube.com/watch?v=rCKn7tuE6dI)
 
 
 

@@ -1,6 +1,5 @@
 a0274class.md
-[Weekly English Words with Alisha - Common Phobias
-](https://www.youtube.com/watch?v=dbEH6pS4l1U)
+[Weekly English Words with Alisha - Common Phobias](https://www.youtube.com/watch?v=dbEH6pS4l1U)
 
 
 

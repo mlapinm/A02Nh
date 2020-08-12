@@ -1,6 +1,5 @@
 a0407class.md  
-[Difference between USE TO and USED TO? Ask Alisha
-](https://www.youtube.com/watch?v=8QiJX5SRZLE)  
+[Difference between USE TO and USED TO? Ask Alisha](https://www.youtube.com/watch?v=8QiJX5SRZLE)  
 
 
 

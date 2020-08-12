@@ -1,6 +1,5 @@
 a0413class.md  
-[How to Use TO NOT and NOT TO? Basic English Grammar | Ask Alisha
-](https://www.youtube.com/watch?v=FbdyX_uIg_o)  
+[How to Use TO NOT and NOT TO? Basic English Grammar | Ask Alisha](https://www.youtube.com/watch?v=FbdyX_uIg_o)  
 
 
 

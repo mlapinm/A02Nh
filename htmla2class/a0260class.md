@@ -1,6 +1,5 @@
-a0260class.md
-[Weekly English Words with Alisha - German Words in English
-](https://www.youtube.com/watch?v=YHBe3_caRPk)
+﻿a0260class.md
+[Weekly English Words with Alisha - German Words in English](https://www.youtube.com/watch?v=YHBe3_caRPk)
 
 
 

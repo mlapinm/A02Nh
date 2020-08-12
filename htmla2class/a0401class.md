@@ -1,6 +1,5 @@
 a0401class.md  
-[Learn the Top 10 Phrases You'll Need for a Date in English
-](https://www.youtube.com/watch?v=yU9zN_pn5vY)  
+[Learn the Top 10 Phrases You'll Need for a Date in English](https://www.youtube.com/watch?v=yU9zN_pn5vY)  
 
 
 

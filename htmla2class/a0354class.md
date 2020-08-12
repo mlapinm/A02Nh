@@ -1,6 +1,5 @@
 a0354class.md  
-[Learn the Top 10 Autumn Words in English!
-](https://www.youtube.com/watch?v=tiLg18aUs0w)  
+[Learn the Top 10 Autumn Words in English!](https://www.youtube.com/watch?v=tiLg18aUs0w)  
 
 
 

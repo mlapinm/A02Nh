@@ -1,6 +1,5 @@
 a0312class.md  
-[Weekly English Words with Alisha - Discrete Insults
-](https://www.youtube.com/watch?v=QpOaY2nAjys)  
+[Weekly English Words with Alisha - Discrete Insults](https://www.youtube.com/watch?v=QpOaY2nAjys)  
 
 
 

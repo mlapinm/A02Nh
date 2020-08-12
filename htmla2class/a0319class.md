@@ -1,6 +1,5 @@
 a0319class.md  
-[How to Buy Items at a Register in English - Innovative English
-](https://www.youtube.com/watch?v=sj8K6CN9XVk)  
+[How to Buy Items at a Register in English - Innovative English](https://www.youtube.com/watch?v=sj8K6CN9XVk)  
 
 
 

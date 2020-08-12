@@ -1,6 +1,5 @@
 a0365class.md  
-[Learn the Top 10 Ways to Give Advice in English
-](https://www.youtube.com/watch?v=f0mnx0_LWko)  
+[Learn the Top 10 Ways to Give Advice in English](https://www.youtube.com/watch?v=f0mnx0_LWko)  
 
 
 

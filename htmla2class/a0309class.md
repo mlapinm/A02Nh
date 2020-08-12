@@ -1,6 +1,5 @@
 a0309class.md  
-[English LABOR DAY Words with Alisha
-](https://www.youtube.com/watch?v=9i41X5HGXbk)  
+[English LABOR DAY Words with Alisha](https://www.youtube.com/watch?v=9i41X5HGXbk)  
 
 
 

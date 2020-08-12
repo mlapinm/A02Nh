@@ -1,6 +1,5 @@
 a0265class.md
-[Weekly English Words with Alisha - Commonly Misspelled Words
-](https://www.youtube.com/watch?v=2o2PycoibhQ)
+[Weekly English Words with Alisha - Commonly Misspelled Words](https://www.youtube.com/watch?v=2o2PycoibhQ)
 
 
 

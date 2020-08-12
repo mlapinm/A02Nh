@@ -1,6 +1,5 @@
 a0337class.md  
-[Learn the Top 10 American English Phrases for Bad Students - English Vocabulary
-](https://www.youtube.com/watch?v=Xo9J_G1cTsk)  
+[Learn the Top 10 American English Phrases for Bad Students - English Vocabulary](https://www.youtube.com/watch?v=Xo9J_G1cTsk)  
 
 
 

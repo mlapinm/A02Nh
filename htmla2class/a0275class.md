@@ -1,6 +1,5 @@
 a0275class.md
-[Weekly English Words with Alisha - Animals as Descriptors
-](https://www.youtube.com/watch?v=1V_KJ0MG0Jc)
+[Weekly English Words with Alisha - Animals as Descriptors](https://www.youtube.com/watch?v=1V_KJ0MG0Jc)
 
 
 

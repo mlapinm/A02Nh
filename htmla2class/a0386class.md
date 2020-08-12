@@ -1,6 +1,5 @@
 a0386class.md  
-[How to Make Great English Sentences? Ask Alisha
-](https://www.youtube.com/watch?v=ZXz6Yvr4XLw)  
+[How to Make Great English Sentences? Ask Alisha](https://www.youtube.com/watch?v=ZXz6Yvr4XLw)  
 
 
 

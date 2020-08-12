@@ -1,6 +1,5 @@
 a0311class.md  
-[English HANUKKAH Words with Alisha
-](https://www.youtube.com/watch?v=z296yESJk3A)  
+[English HANUKKAH Words with Alisha](https://www.youtube.com/watch?v=z296yESJk3A)  
 
 
 

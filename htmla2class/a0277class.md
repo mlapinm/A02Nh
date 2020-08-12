@@ -1,6 +1,5 @@
 a0277class.md
-[Weekly English Words with Alisha - Words for Walking
-](https://www.youtube.com/watch?v=KO8vph8dFZQ)
+[Weekly English Words with Alisha - Words for Walking](https://www.youtube.com/watch?v=KO8vph8dFZQ)
 
 
 

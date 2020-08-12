@@ -1,6 +1,5 @@
 a0405class.md  
-[How to Explain Something in English - Basic English Phrases
-](https://www.youtube.com/watch?v=C6FhEonS-SU&t=18s)  
+[How to Explain Something in English - Basic English Phrases](https://www.youtube.com/watch?v=C6FhEonS-SU&t=18s)  
 
 
 

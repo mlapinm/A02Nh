@@ -1,6 +1,5 @@
 a0313class.md  
-[Weekly English Words with Alisha - Words that end with X
-](https://www.youtube.com/watch?v=3JaQi_ASLOs)  
+[Weekly English Words with Alisha - Words that end with X](https://www.youtube.com/watch?v=3JaQi_ASLOs)  
 
 
 

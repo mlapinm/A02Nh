@@ -1,6 +1,5 @@
 a028class.md
-[English CHRISTMAS Words with Alisha!
-](https://www.youtube.com/watch?v=XTpP3ZgufjA)
+[English CHRISTMAS Words with Alisha!](https://www.youtube.com/watch?v=XTpP3ZgufjA)
 
 
 
