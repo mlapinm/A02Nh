@@ -1,7 +1,143 @@
 
-погода
+htmla2class
+
+
+231 piu Рџ-18Рњ РљР°СЃС‚Р°-2-2 a01diagcpp17
+10.08.20
+РјР°СЃР»Р°РєРѕРІ
+РєСѓР»Р°РєРѕРІ
+
+С‚РµР»РµС„РѕРЅ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ
+Р±Рї 12Р’ 5Рђ
+
+
+7789000828238545
+
+
+Рџ-18 Рњ
+
+
+
+a0265verb.md
+
+
+ JQ6500-16p
+[JQ6500-16p MP3-player](https://roboshop.spb.ru/JQ6500-module)  
+
+
+rrd-102v2.0
+[rrd-102v2.0 FM100MHz](https://rcl-radio.ru/?p=53149)
+
+
+DS
+[MX25L8005MC](https://html.alldatasheet.com/html-pdf/267915/MCNIX/MX25L8005/152/1/MX25L8005.html)
+
+IRF540N (N)
+
+[25L8005MC 1Mbit](https://html.alldatasheet.com/html-pdf/267915/MCNIX/MX25L8005/152/1/MX25L8005.html)  
+
+c1815
+[mh ne555](https://roboshop.spb.ru/NE555-simple-module)
+
+64_BA
+
+UV
+34_063AD
+MX1508
+[MX1508 42KHZ](https://roboshop.spb.ru/modules/MX1508-module?filter=15)  58_AB
+[MC34063A 42KHZ](https://static.chipdip.ru/lib/302/DOC000302426.pdf)  
+
+HL
+a0261verb.txt
+a0262verb.md
+UV
+A1SHB P-Channel
+[2N2222A npn](https://html.alldatasheet.com/html-pdf/15068/PHILIPS/2N2222A/497/2/2N2222A.html)
+
+
+[LD1117A 1.25V](https://html.alldatasheet.com/html-pdf/173495/UTC/LD1117A/54/1/LD1117A.html)
+
+[A1SHB P-Channel](http://www.datasheetcafe.com/a1shb-datasheet-mosfet/)
+http://rones.su/techno/reference-designator.html
+
+РџРѕР·РёС†РёРѕРЅРЅС‹Рµ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РЅР° СЃС…РµРјР°С…
+
+РќР°Р·РІР°РЅРёРµ:
+ABI:
+РСЃС…РѕРґРЅРёРєРё:
+mkspec:
+qmake:
+Р’РµСЂСЃРёСЏ:
+QMAKE_SPEC
+QMAKE_VERSION
+QMAKE_XSPEC
+QT_HOST_BINS
+QT_HOST_DATA
+QT_HOST_LIBS
+QT_HOST_PREFIX
+QT_INSTALL_ARCHDATA
+QT_INSTALL_BINS
+QT_INSTALL_CONFIGURATION
+QT_INSTALL_DATA
+QT_INSTALL_DEMOS
+QT_INSTALL_DOCS
+QT_INSTALL_EXAMPLES
+QT_INSTALL_HEADERS
+QT_INSTALL_IMPORTS
+QT_INSTALL_LIBEXECS
+QT_INSTALL_LIBS
+QT_INSTALL_PLUGINS
+QT_INSTALL_PREFIX
+QT_INSTALL_QML
+QT_INSTALL_TESTS
+QT_INSTALL_TRANSLATIONS
+QT_SYSROOT
+QT_VERSION
+
+
+Qt 5.6.1 MSVC2013 32bit
+x86-windows-msvc2013-pe-32bit
+C:\Qt\Qt5.6.1\5.6\msvc2013
+win32-msvc2013
+C:\Qt\Qt5.6.1\5.6\msvc2013\bin\qmake.exe
+5.6.1
+win32-msvc2013
+3.0
+win32-msvc2013
+C:\Qt\Qt5.6.1\5.6\msvc2013\bin
+C:\Qt\Qt5.6.1\5.6\msvc2013
+C:\Qt\Qt5.6.1\5.6\msvc2013\lib
+C:\Qt\Qt5.6.1\5.6\msvc2013
+C:\Qt\Qt5.6.1\5.6\msvc2013
+C:\Qt\Qt5.6.1\5.6\msvc2013\bin
+
+C:\Qt\Qt5.6.1\5.6\msvc2013
+C:\Qt\Qt5.6.1\Examples\Qt-5.6
+C:\Qt\Qt5.6.1\Docs\Qt-5.6
+C:\Qt\Qt5.6.1\Examples\Qt-5.6
+C:\Qt\Qt5.6.1\5.6\msvc2013\include
+C:\Qt\Qt5.6.1\5.6\msvc2013\imports
+C:\Qt\Qt5.6.1\5.6\msvc2013\bin
+C:\Qt\Qt5.6.1\5.6\msvc2013\lib
+C:\Qt\Qt5.6.1\5.6\msvc2013\plugins
+C:\Qt\Qt5.6.1\5.6\msvc2013
+C:\Qt\Qt5.6.1\5.6\msvc2013\qml
+C:\Qt\Qt5.6.1\5.6\msvc2013\tests
+C:\Qt\Qt5.6.1\5.6\msvc2013\translations
+
+5.6.1
+
+D:\mailCloud\prjother\083qt\a02prj\a02prj.pro:7
+
+
+РџР»РѕС‰Р°РґРєРё РґР»СЏ РєСЂРµРїР»РµРЅРёСЏ СЂР°РјС‹ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёРµ СЃ 7СЋ РѕС‚РІРµСЂСЃС‚РёСЏРјРё.
+https://rollbay.ru/rolikovye-konjki-seba-fr2/
+
+310 & 325 frame compatible
+http://sebaskates.ru/products/accesories/frames
+РїРѕРіРѕРґР°
 fr3
-проц
+РїСЂРѕС†
 
 
 tutorial.ipynb
@@ -9,7 +145,7 @@ jupyter notebooks
 part 1: everything is a cell
 
 D:\mailCloud\prjother\083qt\diag\diag\diag\tabcust0.cpp:1243
-	str.append(QString("°%1'").arg(a2,2,10,QLatin1Char( '0' )));
+	str.append(QString("В°%1'").arg(a2,2,10,QLatin1Char( '0' )));
 	
 	
 	
@@ -18,24 +154,24 @@ D:\mailCloud\prjother\083qt\diag\diag\diag\tabcust0.cpp:1243
 
 
 ###### parent.left == taget
-- запись означает
-- нам надо выбрать левое или правое значение будет удалено
+- Р·Р°РїРёСЃСЊ РѕР·РЅР°С‡Р°РµС‚
+- РЅР°Рј РЅР°РґРѕ РІС‹Р±СЂР°С‚СЊ Р»РµРІРѕРµ РёР»Рё РїСЂР°РІРѕРµ Р·РЅР°С‡РµРЅРёРµ Р±СѓРґРµС‚ СѓРґР°Р»РµРЅРѕ
 
 
-2.2.4 ПЛС Диагностика Развертка Метки для коррекции градусы
+2.2.4 РџР›РЎ Р”РёР°РіРЅРѕСЃС‚РёРєР° Р Р°Р·РІРµСЂС‚РєР° РњРµС‚РєРё РґР»СЏ РєРѕСЂСЂРµРєС†РёРё РіСЂР°РґСѓСЃС‹
 
 
-развертка
+СЂР°Р·РІРµСЂС‚РєР°
 
-пробел
-черный экран
-
-
-деньги
-пылесос
+РїСЂРѕР±РµР»
+С‡РµСЂРЅС‹Р№ СЌРєСЂР°РЅ
 
 
-срв
+РґРµРЅСЊРіРё
+РїС‹Р»РµСЃРѕСЃ
+
+
+СЃСЂРІ
 
 Basic CSS: Override Styles in Subsequent CSS
 Our "pink-text" class overrode our body element's CSS declaration!
