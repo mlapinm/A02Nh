@@ -97,7 +97,7 @@
 1. [Learn the Top 10 Most Romantic Ideas for a Date in English](a0391class.md)  
 1. [Learn the Top 10 School Subjects in English](a0398class.md)  
 1. [Learn the Top 10 Phrases You'll Need for a Date in English](a0401class.md)  
-## [Learn English
+## Learn English
 1. [Learn English - Greetings in English, how to Answer the Question "How are you?"](a0240class.md)  
 1. [Learn English - Asking About Occupations, What is your Job?](a0241class.md)  
 1. [Learn English - Asking About Hobbies, What do you do for fun?](a0242class.md)  
