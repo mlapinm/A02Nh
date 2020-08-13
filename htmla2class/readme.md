@@ -230,6 +230,7 @@
 1. [SAY, TELL, SPEAK - What is the difference? Confusing English Verbs](a0392class.md)  
 1. [Pets Word Association with English speakers](a0388class.md)  
 
+[Verbling - современный способ изучения Английского языка](https://www.youtube.com/watch?v=zMjAtCwak60&list=PLIU76b8Cjem6NwisglQY6BqPBn9dTxuNJ&index=11)  
 [английский от Яндекс.Практикума](https://flow.yandex.ru/)  
 [quizlet для запоминания фраз](https://quizlet.com/)  
 [shawenglish.com subtitles Learn Present Continuous Tense | English Grammar Course](https://www.youtube.com/watch?v=CHCth_sWL1g&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=3)  
