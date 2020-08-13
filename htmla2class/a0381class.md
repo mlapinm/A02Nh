@@ -1,4 +1,4 @@
-a0381class.md  
+a0381class.md    
 [Learn the Top 8 Words Americans Overuse](https://www.youtube.com/watch?v=qJ_-VsHI6U4)
 
 

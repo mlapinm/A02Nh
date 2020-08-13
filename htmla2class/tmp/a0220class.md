@@ -2,7 +2,7 @@
 [EnglishClass101](https://www.youtube.com/c/EnglishClass101/videos)  
 
 
-a033class.md
+a033class.md  
 [Weekly English Words with Alisha - Cooking Terms
 ](https://www.youtube.com/watch?v=iGI1tmxdlLo)
 
@@ -10,7 +10,7 @@ a033class.md
 
 
 
-a032class.md
+a032class.md  
 [Weekly English Words with Alisha - Phrases From Movies
 ](https://www.youtube.com/watch?v=rVziuT0W-HQ)
 
@@ -18,7 +18,7 @@ a032class.md
 
 
 
-a031class.md
+a031class.md  
 [English GROUNDHOG DAY words with Alisha
 ](https://www.youtube.com/watch?v=OoWKlqWNJFg)
 
@@ -26,7 +26,7 @@ a031class.md
 
 
 
-a030class.md
+a030class.md  
 [Weekly English Words with Alisha - Hipster English
 ](https://www.youtube.com/watch?v=u2TkSWfpalw)
 
@@ -34,7 +34,7 @@ a030class.md
 
 
 
-a029class.md
+a029class.md  
 [English NEW YEARS Words with Alisha
 ](https://www.youtube.com/watch?v=-t3Ms1NHvZQ)
 
@@ -42,7 +42,7 @@ a029class.md
 
 
 
-a028class.md
+a028class.md  
 [English CHRISTMAS Words with Alisha!
 ](https://www.youtube.com/watch?v=XTpP3ZgufjA)
 
@@ -50,14 +50,14 @@ a028class.md
 
 
 
-a0288class.md
+a0288class.md  
 []()
 
 
 
 
 
-a0287class.md
+a0287class.md  
 [Weekly English Words with Alisha - Most Common English Idioms
 ](https://www.youtube.com/watch?v=QLE708Z0Lnc)
 
@@ -65,7 +65,7 @@ a0287class.md
 
 
 
-a0286class.md
+a0286class.md  
 [English Topics - Alisha and Michael's Favorite English
 ](https://www.youtube.com/watch?v=2pMg4mcNIyk)
 
@@ -73,7 +73,7 @@ a0286class.md
 
 
 
-a0285class.md
+a0285class.md  
 [Weekly English Words with Alisha - Funny Sounding Words
 ](https://www.youtube.com/watch?v=Uw_7D1_8Suc)
 
@@ -81,7 +81,7 @@ a0285class.md
 
 
 
-a0284class.md
+a0284class.md  
 [Weekly English Words with Alisha - Words with Weird Silent Letters
 ](https://www.youtube.com/watch?v=l_qCCMIeIgc)
 
@@ -89,14 +89,14 @@ a0284class.md
 
 
 
-a0283class.md
+a0283class.md  
 [Weekly English Words with Alisha - Commonly Misinterpreted Phrases](https://www.youtube.com/watch?v=Z7r9e9El8Dw)
 
 
 
 
 
-a0282class.md
+a0282class.md  
 [Weekly English Words with Alisha - The Internet Today
 ](https://www.youtube.com/watch?v=1KUf7U44NH4)
 
@@ -104,7 +104,7 @@ a0282class.md
 
 
 
-a0281class.md
+a0281class.md  
 [English THANKSGIVING Words with Alisha!
 ](https://www.youtube.com/watch?v=64eFwnkiA78)
 
@@ -112,14 +112,14 @@ a0281class.md
 
 
 
-a0280class.md
+a0280class.md  
 [Weekly English Words with Alisha - Sports Metaphors in Business](https://www.youtube.com/watch?v=ARJAQ0LOpWM)
 
 
 
 
 
-a0279class.md
+a0279class.md  
 [Weekly English Words with Alisha - Interjections!
 ](https://www.youtube.com/watch?v=abcJjIm5WHY)
 
@@ -127,7 +127,7 @@ a0279class.md
 
 
 
-a0278class.md
+a0278class.md  
 [Weekly English Words with Alisha - Commonly Looked-up Words
 ](https://www.youtube.com/watch?v=vRfMFoA26EM)
 
@@ -135,7 +135,7 @@ a0278class.md
 
 
 
-a0277class.md
+a0277class.md  
 [Weekly English Words with Alisha - Words for Walking
 ](https://www.youtube.com/watch?v=KO8vph8dFZQ)
 
@@ -143,7 +143,7 @@ a0277class.md
 
 
 
-a0276class.md
+a0276class.md  
 [Weekly English Words with Alisha - Really Long Words
 ](https://www.youtube.com/watch?v=_riR-KH3fGQ)
 
@@ -151,7 +151,7 @@ a0276class.md
 
 
 
-a0275class.md
+a0275class.md  
 [Weekly English Words with Alisha - Animals as Descriptors
 ](https://www.youtube.com/watch?v=1V_KJ0MG0Jc)
 
@@ -159,7 +159,7 @@ a0275class.md
 
 
 
-a0274class.md
+a0274class.md  
 [Weekly English Words with Alisha - Common Phobias
 ](https://www.youtube.com/watch?v=dbEH6pS4l1U)
 
@@ -167,7 +167,7 @@ a0274class.md
 
 
 
-a0273class.md
+a0273class.md  
 [Weekly English Words with Alisha - Palindromes
 ](https://www.youtube.com/watch?v=xBPAGI8ygKk)
 
@@ -175,7 +175,7 @@ a0273class.md
 
 
 
-a0272class.md
+a0272class.md  
 [Weekly English Words with Alisha - Love Idioms
 ](https://www.youtube.com/watch?v=H_n7gASzZGY)
 
@@ -183,7 +183,7 @@ a0272class.md
 
 
 
-a0271class.md
+a0271class.md  
 [Weekly English Words with Alisha - Words with Strange Plural Forms
 ](https://www.youtube.com/watch?v=5EYWmfiM-Zg)
 
@@ -191,7 +191,7 @@ a0271class.md
 
 
 
-a0270class.md
+a0270class.md  
 [Weekly English Words with Alisha - Red Idioms
 ](https://www.youtube.com/watch?v=rCKn7tuE6dI)
 
@@ -199,7 +199,7 @@ a0270class.md
 
 
 
-a0269class.md
+a0269class.md  
 [Weekly English Words with Alisha - Words that Don't Rhyme
 ](https://www.youtube.com/watch?v=bMLJzeV_FRk)
 
@@ -207,7 +207,7 @@ a0269class.md
 
 
 
-a0268class.md
+a0268class.md  
 [Weekly English Words with Alisha - Ism words
 ](https://www.youtube.com/watch?v=Qc_DxVGtzLI)
 
@@ -215,7 +215,7 @@ a0268class.md
 
 
 
-a0267class.md
+a0267class.md  
 [Weekly English Words with Alisha - Commonly Used Onomatopoeia
 ](https://www.youtube.com/watch?v=mHxaCR1IZ-U)
 
@@ -223,7 +223,7 @@ a0267class.md
 
 
 
-a0266class.md
+a0266class.md  
 [Weekly English Words with Alisha - Super Obscure Body Parts
 ](https://www.youtube.com/watch?v=Z5RSj4fY6ww)
 
@@ -231,7 +231,7 @@ a0266class.md
 
 
 
-a0265class.md
+a0265class.md  
 [Weekly English Words with Alisha - Commonly Misspelled Words
 ](https://www.youtube.com/watch?v=2o2PycoibhQ)
 
@@ -239,7 +239,7 @@ a0265class.md
 
 
 
-a0264class.md
+a0264class.md  
 [Weekly English Words with Alisha - Top SAT words
 ](https://www.youtube.com/watch?v=bWgWi0Zqzbc)
 
@@ -247,7 +247,7 @@ a0264class.md
 
 
 
-a0263class.md
+a0263class.md  
 [Weekly English Words with Alisha - Commonly Mispronounced Words
 ](https://www.youtube.com/watch?v=QW4GlszU2PU)
 
@@ -255,7 +255,7 @@ a0263class.md
 
 
 
-a0262class.md
+a0262class.md  
 [Weekly English Words with Alisha - Internet Lingo
 ](https://www.youtube.com/watch?v=3q1WXKwPY68)
 
@@ -263,7 +263,7 @@ a0262class.md
 
 
 
-a0261class.md
+a0261class.md  
 [Weekly English Words with Alisha - Heteronyms
 ](https://www.youtube.com/watch?v=Hq8u-JLouBk)
 
@@ -271,7 +271,7 @@ a0261class.md
 
 
 
-a0260class.md
+a0260class.md  
 [Weekly English Words with Alisha - German Words in English
 ](https://www.youtube.com/watch?v=YHBe3_caRPk)
 
@@ -279,14 +279,14 @@ a0260class.md
 
 
 
-a0259class.md
+a0259class.md  
 [Weekly English Words with Alisha - Generic Brand Names](https://www.youtube.com/watch?v=DUntXd9JUn0)
 
 
 
 
 
-a0258class.md
+a0258class.md  
 [Weekly English Words with Alisha - Words that Start with Z
 ](https://www.youtube.com/watch?v=ndf8jjuHFis)
 
@@ -294,42 +294,42 @@ a0258class.md
 
 
 
-a0257class.md
+a0257class.md  
 [Weekly English Words with Alisha - Words that Vary by Region](https://www.youtube.com/watch?v=pUFNb_Zz1aE)
 
 
 
 
 
-a0256class.md
+a0256class.md  
 [Weekly English Words with Alisha - Advanced Latin Phrases](https://www.youtube.com/watch?v=V8-3tn4LvIk)
 
 
 
 
 
-a0255class.md
+a0255class.md  
 [Weekly English Words with Alisha - Phrases that aren't cool anymore](https://www.youtube.com/watch?v=PM7FMNG4B5Y)
 
 
 
 
 
-a0254class.md
+a0254class.md  
 [Weekly English Words with Alisha - Overused Business Idioms](https://www.youtube.com/watch?v=_m6EMs8OOBw)
 
 
 
 
 
-a0253class.md
+a0253class.md  
 [Weekly English Words with Alisha - Intermediate Latin Phrases](https://www.youtube.com/watch?v=OG2AnxQzpwE)
 
 
 
 
 
-a0252class.md
+a0252class.md  
 [Weekly English Words with Alisha - Words to make you sound smart](https://www.youtube.com/watch?v=z_HBuePn7hI)
 
 
@@ -337,35 +337,35 @@ a0252class.md
 
 
 
-a0248class.md
+a0248class.md  
 [Learn English - Introduce Yourself in English - Innovative English](https://www.youtube.com/watch?v=tZOgdnKJ5Sc)
 
 
 
 
 
-a0251class.md
+a0251class.md  
 [Words Americans Overuse - Weekly Words with Alisha](https://www.youtube.com/watch?v=de9P7jtmPpg)
 
 
 
 
 
-a0247class.md
+a0247class.md  
 [Learn English - English in Three Minutes - Asking "Where did you go to school?"](https://www.youtube.com/watch?v=hALgUp2iwik)
 
 
 
 
 
-a0246class.md
+a0246class.md  
 [Learn English - English in Three Minutes - Asking "Where do you live?"](https://www.youtube.com/watch?v=Kbbn36T_R20)
 
 
 
 
 
-a0245class.md
+a0245class.md  
 [Learn English - English in Three Minutes - Getting Contact Details](https://www.youtube.com/watch?v=qWMhzm1Ruf4)
 
 
@@ -374,81 +374,81 @@ a0245class.md
 
 
 
-a0240class.md
+a0240class.md  
 [Learn English - Greetings in English, how to Answer the Question "How are you?"](https://www.youtube.com/watch?v=dmOKZLeFKCM)
 
 
 
 
-a0239class.md
+a0239class.md  
 [English Topics - English you say without thinking](https://www.youtube.com/watch?v=Vw8E3yjHUeU)  
 
 
 
-a0238class.md
+a0238class.md  
 [English Topics - Things we miss about America](https://www.youtube.com/watch?v=0WQeOwgN2xg)  
 
 
 
-a0237class.md
+a0237class.md  
 [English Topics - Tips to get good at English](https://www.youtube.com/watch?v=_LFOvRtqaFg)  
 
 
 
-a0236class.md
+a0236class.md  
 [English Topics - Weirdest English Idioms](https://www.youtube.com/watch?v=JjLhf_QqPh8)  
 
 
 
-a0235class.md
+a0235class.md  
 [Learn the Top 25 Must-Know English Phrases!](https://www.youtube.com/watch?v=WCpPYQuHkyM)  
 
 
 
-a0234class.md
+a0234class.md  
 [English Topics - Misconceptions about America](https://www.youtube.com/watch?v=--ky4axzxbY)  
 
 
 
-a0233class.md
+a0233class.md  
 [Learn the Top 25 Must-Know English Nouns!](https://www.youtube.com/watch?v=68vh4rgk0eI)
 
 
 
 
 
-a0232class.md
+a0232class.md  
 [Learn the Top 25 Must-Know English Verbs!](https://www.youtube.com/watch?v=pc67R1ekBJA)
 
 
 
 
 
-a0231class.md
+a0231class.md  
 [English Topics - Must-Know Business Buzzwords](https://www.youtube.com/watch?v=Z6wJcsspd-k)  
 
 
 
 
-a0230class.md
+a0230class.md  
 [English Topics - English Conversation Strategies](https://www.youtube.com/watch?v=AcVWQCJc0jk)  
 
 
 
 
-a0229class.md
+a0229class.md  
 [English Topics - Bad Habits in English](https://www.youtube.com/watch?v=2gGn-s_QkQc)  
 
 
 
 
 
-a0228class.md
+a0228class.md  
 [English Topics - Things Every American Child Knows](https://www.youtube.com/watch?v=rcZtBsXwqeU)  
 
 
 
-a0227class.md
+a0227class.md  
 [English Topics - Free Time Before Facebook](https://www.youtube.com/watch?v=OxVLNsebw_Q)  
 
 
@@ -457,7 +457,7 @@ a0227class.md
 
 
 
-a0226class.md
+a0226class.md  
 [Learn the Top 15 English Questions You Should Know](https://www.youtube.com/watch?v=MMMhpl2d6Ow)  
 
 
@@ -472,7 +472,7 @@ a0226class.md
 
 
 
-a0225class.md
+a0225class.md  
 
 0:01 / 10:07
 English Topics - Questions We've Been Asked

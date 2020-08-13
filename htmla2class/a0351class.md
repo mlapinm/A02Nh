@@ -1,4 +1,4 @@
-a0351class.md  
+a0351class.md    
 [Learn the Top 5 Sentence Patterns in English for Beginners](https://www.youtube.com/watch?v=ViEQdsW8B1w)  
 
 

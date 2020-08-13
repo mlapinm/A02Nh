@@ -1,4 +1,4 @@
-a0348class.md  
+a0348class.md    
 [Learn the Top 10 Most Common Tourist Vocabulary in American English](https://www.youtube.com/watch?v=fKZorzBW1b0)  
 
 

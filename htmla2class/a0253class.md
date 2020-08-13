@@ -1,4 +1,4 @@
-a0253class.md
+a0253class.md  
 [Weekly English Words with Alisha - Intermediate Latin Phrases](https://www.youtube.com/watch?v=OG2AnxQzpwE)
 
 

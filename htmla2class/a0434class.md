@@ -1,4 +1,4 @@
-a0434class.md  
+a0434class.md    
 [How to Study and Remember New English Words?
 ](https://www.youtube.com/watch?v=eDNbfHI0yds)  
 
