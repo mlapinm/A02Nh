@@ -1,8 +1,5 @@
 a0379class.md  
-[https://www.youtube.com/watch?v=IbqPgHka_Y4](English Topics - How to Start a Conversation
-)  
-
-
+[English Topics - How to Start a Conversation](https://www.youtube.com/watch?v=IbqPgHka_Y4)
 
 
 _|_

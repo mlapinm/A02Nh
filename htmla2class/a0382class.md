@@ -1,8 +1,5 @@
 a0382class.md  
-[https://www.youtube.com/watch?v=zcf9VQbichE](Present Perfect vs Simple Past Tense! Differences? Ask Alisha
-)  
-
-
+[Present Perfect vs Simple Past Tense! Differences? Ask Alisha](https://www.youtube.com/watch?v=zcf9VQbichE)
 
 
 _|_

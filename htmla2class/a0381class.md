@@ -1,8 +1,5 @@
 a0381class.md  
-[https://www.youtube.com/watch?v=qJ_-VsHI6U4](Learn the Top 8 Words Americans Overuse
-)  
-
-
+[Learn the Top 8 Words Americans Overuse](https://www.youtube.com/watch?v=qJ_-VsHI6U4)
 
 
 _|_
