@@ -123,13 +123,11 @@
 1. [Weekly English Words with Alisha - Phrases that aren't cool anymore](a0255class.md)  
 1. [Weekly English Words with Alisha - Advanced Latin Phrases](a0256class.md)  
 1. [Weekly English Words with Alisha - Words that Vary by Region](a0257class.md)  
-1. 
 1. [Weekly English Words with Alisha - Generic Brand Names](a0259class.md)  
 1. [Weekly English Words with Alisha - German Words in English](a0260class.md)  
 1. [Weekly English Words with Alisha - Heteronyms](a0261class.md)  
 1. [Weekly English Words with Alisha - Internet Lingo](a0262class.md)  
 1. [Weekly English Words with Alisha - Commonly Mispronounced Words](a0263class.md)  
-1. 
 1. [Weekly English Words with Alisha - Commonly Misspelled Words](a0265class.md)  
 1. [Weekly English Words with Alisha - Super Obscure Body Parts](a0266class.md)  
 1. [Weekly English Words with Alisha - Commonly Used Onomatopoeia](a0267class.md)  
