@@ -2,6 +2,7 @@ s0402class.md
 
 [Learn English with Songs - Perfect Tense - Lyric Lab](#Learn-English-with-Songs---Perfect-Tense---Lyric-Lab)  
 [Learn English with Songs - Winter Song - Lyric Lab](#Learn-English-with-Songs---Winter-Song---Lyric-Lab)  
+[Learn English with Songs - Danny Boy - Lyric Lab](#Learn-English-with-Songs---Danny-Boy---Lyric-Lab)  
   
 ## Learn English with Songs - Perfect Tense - Lyric Lab
 [Learn English with Songs - Perfect Tense - Lyric Lab](https://www.youtube.com/watch?v=w-JUNYwstpo&list=RDw-JUNYwstpo&start_radio=1)   
@@ -102,3 +103,26 @@ The greatest gift I ever had was you.|Ты был самым большим по
 This is my song for you.|Это моя песня для тебя.
 This is my song for you.|Это моя песня для тебя.
   
+  
+## Learn English with Songs - Danny Boy - Lyric Lab
+[Learn English with Songs - Danny Boy - Lyric Lab](https://www.youtube.com/watch?v=NZMDqsa8zMo&list=RDw-JUNYwstpo&index=15)   
+  
+  
+__|__
+--|--
+Oh Danny boy the pipes the pipes are calling|О, Дэнни, мальчик, трубы звонят
+from Glen to Glen and down the mountain side|от Глена до Глена и вниз по склону горы
+the summer's gone and all the roses falling|Лето прошло, и все розы падают
+it's you, it's you must go and I must bide.|это ты, ты должен уйти, а я должен подождать.
+But come ye back when summer's in the meadow|Но вернись, когда лето на лугу
+Or when the valley's hushed and white with snow|Или когда долина тишина и белая от снега
+It's I'll be here in sunshine or in shadow|Я буду здесь на солнце или в тени
+Oh Danny Boy, oh Danny boy, I love you so.|О, Дэнни, мальчик, о Дэнни, мальчик, я так тебя люблю.
+But when ye come, and all the flowers are dying,|Но когда вы приходите, и все цветы умирают,
+if I am dead, as dead I well may be|если я мертв, я вполне могу быть мертв
+he'll come and find the place where I am lying|он придет и найдет место, где я лежу
+And kneel and say an ave there for me|И встаньте на колени и скажите там мне
+And I shall hear though soft you tread above me|И я услышу, как ты мягко ступаешь надо мной
+and on my grave will warmer, sweeter be|и на могиле моей будет теплее, слаще будет
+for you will bend and tell me that you love me|потому что ты наклонишься и скажи мне, что любишь меня
+and I shall sleep in peace until you come to me.|и я буду спать спокойно, пока ты не придешь ко мне.
