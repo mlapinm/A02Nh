@@ -1,6 +1,7 @@
 s0402class.md  
 
 [Learn English with Songs - Perfect Tense - Lyric Lab](#Learn-English-with-Songs---Perfect-Tense---Lyric-Lab)  
+[Learn English with Songs - Winter Song - Lyric Lab](#Learn-English-with-Songs---Winter-Song---Lyric-Lab)  
   
 ## Learn English with Songs - Perfect Tense - Lyric Lab
 [Learn English with Songs - Perfect Tense - Lyric Lab](https://www.youtube.com/watch?v=w-JUNYwstpo&list=RDw-JUNYwstpo&start_radio=1)   
@@ -43,4 +44,61 @@ So I can better understand|Так я могу лучше понять
 How you want to be loved|Как ты хочешь, чтобы тебя любили
 How you want to be loved|Как ты хочешь, чтобы тебя любили
   
+  
+## Learn English with Songs - Winter Song - Lyric Lab
+[Learn English with Songs - Winter Song - Lyric Lab](https://www.youtube.com/watch?v=vX4rteO8qCQ&list=RDw-JUNYwstpo&index=6)   
+  
+  
+__|__
+--|--
+Winter Song|Зимняя песня
+The dusk is gaining ground,|Сумерки набирают силу,
+lights flicker all around|огни мерцают вокруг
+And as I walk the lonely streets,|И когда я иду по одиноким улицам,
+The snow is fallin' ever faster|Снег падает все быстрее
+Looking to the sky|Глядя в небо
+I wonder where you are,|Интересно, где ты,
+The way you came into my life|Как ты вошел в мою жизнь
+I'm feeling every day with laughter|Я чувствую каждый день смехом
+Almost blinded by the snowflakes on my face|Почти ослепленный снежинками на моем лице
+Despite the chill,|Несмотря на холод,
+I feel the warmth of your embrace|Я чувствую тепло твоих объятий
+Intoxicated now, I stagger like a fool|Пьяный сейчас, я шатаюсь как дурак
+I feel that surely I could float away|Я чувствую, что могу уплыть
+I want to show you everything I see  the way I'm feeling|Я хочу показать вам все, что вижу, как я себя чувствую
+I need to be with you tonight|Мне нужно быть с тобой сегодня вечером
+To hold your arms around me|Обнять меня руками
+My love for you is deeper than|Моя любовь к тебе глубже, чем
+The deepest snows of winter|Самые глубокие снега зимы
+The greatest gift I ever had was you,|Самым большим подарком, который у меня был, был ты,
+Tis sparkling crystal the world|Это сверкающий кристалл мир
+This magic winter land,|Эта волшебная зимняя земля,
+If I could share it all with you|Если бы я мог поделиться всем с тобой
+And make-believe forever after|И притворяться навсегда после
+Like a blanket over everything in sight,|Как одеяло поверх всего, что видно,
+In the hush I hear the silence of the night|В тишине я слышу тишину ночи
+The snow has covered all the streets we walk along|Снег покрыл все улицы, по которым мы идем
+I hope you still remember me tonight...|Надеюсь, ты все еще помнишь меня сегодня вечером ...
+I want to show you everything I see,|Я хочу показать тебе все, что вижу,
+the way I'm feeling|как я себя чувствую
+I need to be with you tonight,|Мне нужно быть с тобой сегодня вечером,
+to feel you all around me.|чувствовать тебя все вокруг меня.
+My love for you is deeper|Моя любовь к тебе глубже
+than the deepest snows of winter|чем самые глубокие снега зимы
+The greatest gift I ever had...|Самый лучший подарок, который у меня был ...
+Can't remember feeling this way before|Не могу вспомнить, что чувствовал это раньше
+Do you know, do you understand|Вы знаете, вы понимаете
+what's going through my heart|что происходит в моем сердце
+Well the way that I love you,|Ну, как я тебя люблю,
+I just hope you feel it too|Я просто надеюсь, что ты тоже это чувствуешь
+Tonight wherever you are...|Сегодня вечером где бы ты ни был ...
+I want to show you everything I see,  the way feeling|Я хочу показать вам все, что вижу, как чувство
+I need to be with you tonight|Мне нужно быть с тобой сегодня вечером
+to hold your arms around me|обнимать меня
+My love for you is deeper than|Моя любовь к тебе глубже, чем
+the deepest snows of winter|самые глубокие снега зимы
+The greatest gift I ever had was you.|Ты был самым большим подарком, который у меня когда-либо был.
+The greatest gift I ever had was you.|Ты был самым большим подарком, который у меня когда-либо был.
+This is my song for you.|Это моя песня для тебя.
+This is my song for you.|Это моя песня для тебя.
   
