@@ -1,9 +1,9 @@
+
 s0404abba.md  
 
 
-
-
 [Abba - Fernando](#Abba---Fernando)  
+[Abba - Dancing Queen (Official Video)](#Abba---Dancing-Queen-Official-Video)  
 [Abba - Money, Money, Money (Official Video)](#Abba---Money-Money-Money-Official-Video)  
 [Abba - Knowing Me, Knowing You (Official Video)](#Abba---Knowing-Me-Knowing-You-Official-Video)  
 [Abba - Take A Chance On Me (Official Video)](#Abba---Take-A-Chance-On-Me-Official-Video)  
@@ -11,7 +11,7 @@ s0404abba.md
 [Abba - Waterloo](#Abba---Waterloo)  
   
 ## Abba - Fernando
-[Abba - Fernando](youtube.com/watch?v=dQsjAbZDx-4&list=PLlb3q7unEBfPDh5GChvhqHISwPH23uYLC&index=7)   
+[Abba - Fernando](https://www.youtube.com/watch?v=dQsjAbZDx-4&list=PLlb3q7unEBfPDh5GChvhqHISwPH23uYLC&index=7)   
   
   
 __|__
@@ -60,6 +60,14 @@ If I had to do the same again|Если бы мне пришлось сделат
 I would, my friend, Fernando|Я бы, друг мой, Фернандо
 Yes, if I had to do the same again|Да, если бы мне пришлось сделать то же самое снова
 I would, my friend, Fernando...|Я бы, друг мой, Фернандо ...
+  
+  
+## Abba - Dancing Queen (Official Video)
+[Abba - Dancing Queen (Official Video)](https://www.youtube.com/watch?v=xFrGuyw1V8s&list=PLlb3q7unEBfPDh5GChvhqHISwPH23uYLC&index=8)   
+  
+  
+__|__
+--|--
 [Chorus]|[Хор]
 You can dance, you can jive|Вы можете танцевать, вы можете танцевать
 Having the time of your life|Имея время в своей жизни
@@ -100,46 +108,6 @@ Having the time of your life|Имея время в своей жизни
 Ooh, see that girl, watch that scene|Ох, посмотри на эту девушку, посмотри на эту сцену
 Digging the dancing queen|Копаем танцующую королеву
 [Outro]|[Outro]
-Digging the dancing queen|Копаем танцующую королеву
-[Abba - Dancing Queen (Official Video)|[Abba - Dancing Queen (Официальное видео)
-](https://www.youtube.com/watch?v=xFrGuyw1V8s&list=PLlb3q7unEBfPDh5GChvhqHISwPH23uYLC&index=8)|] (https://www.youtube.com/watch?v=xFrGuyw1V8s&list=PLlb3q7unEBfPDh5GChvhqHISwPH23uYLC&index=8)
-"Dancing Queen"|"Танцующая королева"
-Ooh, you can dance, you can jive|Ох, ты умеешь танцевать, можешь дживать
-Having the time of your life|Имея время в своей жизни
-Ooh, see that girl, watch that scene|Ох, посмотри на эту девушку, посмотри на эту сцену
-Digging the dancing queen|Копаем танцующую королеву
-Friday night and the lights are low|В пятницу вечером и свет приглушен
-Looking out for a place to go|Ищу куда пойти
-Where they play the right music, getting in the swing|Где они играют правильную музыку, в разгаре
-You come to look for a king|Вы приходите искать короля
-Anybody could be that guy|Кто угодно мог быть тем парнем
-Night is young and the music's high|Ночь молода и музыка высока
-With a bit of rock music, everything is fine|Немного рок-музыки, все хорошо
-You're in the mood for a dance|Вы в настроении танцевать
-And when you get the chance|И когда у тебя будет шанс
-You are the dancing queen|Ты королева танцев
-Young and sweet, only seventeen|Молодой и милый, всего семнадцать
-Dancing queen|Танцующая королева
-Feel the beat from the tambourine|Почувствуйте удар бубна
-Oh, yeah|О да
-You can dance, you can jive|Вы можете танцевать, вы можете танцевать
-Having the time of your life|Имея время в своей жизни
-Ooh, see that girl, watch that scene|Ох, посмотри на эту девушку, посмотри на эту сцену
-Digging the dancing queen|Копаем танцующую королеву
-You're a teaser, you turn 'em on|Ты тизер, ты их включаешь
-Leave them burning and then you're gone|Оставь их гореть, и тогда ты уйдешь
-Looking out for another, anyone will do|Ищу другого, подойдет любой
-You're in the mood for a dance|Вы в настроении танцевать
-And when you get the chance|И когда у тебя будет шанс
-You are the dancing queen|Ты королева танцев
-Young and sweet, only seventeen|Молодой и милый, всего семнадцать
-Dancing queen|Танцующая королева
-Feel the beat from the tambourine|Почувствуйте удар бубна
-Oh, yeah|О да
-You can dance, you can jive|Вы можете танцевать, вы можете танцевать
-Having the time of your life|Имея время в своей жизни
-Ooh, see that girl, watch that scene|Ох, посмотри на эту девушку, посмотри на эту сцену
-Digging the dancing queen|Копаем танцующую королеву
 Digging the dancing queen|Копаем танцующую королеву
   
   
