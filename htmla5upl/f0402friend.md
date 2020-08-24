@@ -1,10 +1,11 @@
-f0402friend.md
+f0402friend.md  
 
 
-[Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](#Friends-Ross-Finally-Reads-Rachel's-Letter-Season-4-Clip-|-TBS)  
-[Friends: The Friends Play a Stripping Game (Season 3 Clip) | TBS](#Friends-The-Friends-Play-a-Stripping-Game-Season-3-Clip-|-TBS)  
-[Friends: Monica Won't Be Chandler's Girlfriend (Season 3 Clip) | TBS](#Friends-Monica-Won't-Be-Chandler's-Girlfriend-Season-3-Clip-|-TBS)  
-[Friends: Best Moments From Season 2 (Mashup) | TBS](#Friends-Best-Moments-From-Season-2-Mashup-|-TBS)  
+
+[Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](#Friends-Ross-Finally-Reads-Rachels-Letter-Season-4-Clip--TBS)  
+[Friends: The Friends Play a Stripping Game (Season 3 Clip) | TBS](#Friends-The-Friends-Play-a-Stripping-Game-Season-3-Clip--TBS)  
+[Friends: Monica Won't Be Chandler's Girlfriend (Season 3 Clip) | TBS](#Friends-Monica-Wont-Be-Chandlers-Girlfriend-Season-3-Clip--TBS)  
+[Friends: Best Moments From Season 2 (Mashup) | TBS](#Friends-Best-Moments-From-Season-2-Mashup--TBS)  
   
 ## Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS
 [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](https://www.youtube.com/watch?v=bLAFQy_69oY&list=PLJBo3iyb1U0cGfTm1du_L8b81kiGioqJ7&index=1)   
