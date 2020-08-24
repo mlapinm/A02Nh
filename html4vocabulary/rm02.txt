@@ -10,7 +10,6 @@ a0204voc.md
 == === === a0204voc.md === === ==
 a0206voc.md
 [60 English Words for Everyday Life - Basic Vocabulary #3](https://www.youtube.com/watch?v=Am_mXyty_MM)
-[120 English Words for Everyday Life - Basic Vocabulary #4](https://www.youtube.com/watch?v=mJCqlJHkG5s)
 == === === a0206voc.md === === ==
 a0220voc.md
 [200 English Words for Everyday Life - Basic Vocabulary #10](https://www.youtube.com/watch?v=QedESClk7MA)
@@ -18,11 +17,9 @@ a0220voc.md
 a03018voc.md
 [2000 Words Every English Beginner Must Know](https://www.youtube.com/watch?v=J5BLOEwHs8M)
 == === === a03018voc.md === === ==
+a03019voc.md
+[2000 Words Every English Beginner Must Know](https://www.youtube.com/watch?v=J5BLOEwHs8M)
 _|_
---|--
-Rest.|Остальное.
-Truck.|Грузовая машина.
-Moped.|Мопед.
 == === === a03019voc.md === === ==
 a03020voc.md
 [2001 Words Every English Beginner Must Know](https://www.youtube.com/watch?v=J5BLOEwHs8M)
@@ -118,11 +115,14 @@ a03523voc.md
 a03524voc.md
 [Learn English - English Summer Vocabulary](https://www.youtube.com/watch?v=1zD0xS2BCec)
 == === === a03524voc.md === === ==
-[Learn English - English Dating Vocabulary 25](#Learn-English---English-Dating-Vocabulary-25)
+a03525voc.md
+[Learn English - English Dating Vocabulary 25](https://www.youtube.com/watch?v=8rnyxW5gG74)
+__|__
+== === === a03525voc.md === === ==
+a03604voc.md
 [d01 Learn English with Video - Farm Animals](#d01-Learn-English-with-Video---Farm-Animals)
 [d02 Learn English with Video - Marine Life](#d02-Learn-English-with-Video---Marine-Life)
 [d03 Learn English with Video - Safari](#d03-Learn-English-with-Video---Safari)
-[d04 Learn English with Video - Insects](#d04-Learn-English-with-Video---Insects)
 == === === a03604voc.md === === ==
 a03606voc.md
 [f01 Learn English with Video - Talking About Your Daily Routine](#f01-Learn-English-with-Video---Talking-About-Your-Daily-Routine)
