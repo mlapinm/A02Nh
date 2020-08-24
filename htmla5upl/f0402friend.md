@@ -1,5 +1,4 @@
-f0402friend.md  
-
+f0402friend.md
 
 
 [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](#Friends-Ross-Finally-Reads-Rachels-Letter-Season-4-Clip--TBS)  
@@ -19,11 +18,11 @@ Are you?|Ты?
 'Oh, that's so great!'|«О, это так здорово!»
 Ooh, not for Bonnie.|Ох, не для Бонни.
 But, for you, yay, oh.|Но для тебя, ура, ох.
-- Hey. - How was the beach?|- Привет. - Как пляж?
-- Oh, it was alright. - Nothing. I don't know.|- О, все было хорошо. - Ничего. Я не знаю.
-- What happened? - Nothing.|- Что произошло? - Ничего.
+Hey. - How was the beach?|- Привет. - Как пляж?
+Oh, it was alright. - Nothing. I don't know.|- О, все было хорошо. - Ничего. Я не знаю.
+What happened? - Nothing.|- Что произошло? - Ничего.
 I'm gonna take a shower.|Я собираюсь принять душ.
-- Me too. - Me too.|- Я тоже. - Я тоже.
+Me too. - Me too.|- Я тоже. - Я тоже.
 Okay, I'm gonna put this in the car.|Хорошо, я положу это в машину.
 Oh, I have to go pack!|О, мне пора собирать вещи!
 Oh!|Ой!
@@ -70,7 +69,7 @@ So, it was either this or strip bag of old knitting stuff.|Значит, это 
 Done.|Готово.
 Okay, "Fonzie gives you two thumbs up.|Хорошо, "Фонзи показывает вам два больших пальца вверх.
 Collect two cool points."|Набери два крутых очка. "
-- Yeah. - Yeah.|- Да. - Да.
+Yeah. - Yeah.|- Да. - Да.
 Monica, you get five cool points|Моника, ты получишь пять крутых баллов
 you get to make someone take off one item of clothing.|вы можете заставить кого-нибудь снять один предмет одежды.
 It hasn't happened yet but we're all very excited.|Этого еще не произошло, но мы все очень взволнованы.
@@ -103,18 +102,18 @@ Whoa, hey, what are you doing?|Эй, что ты делаешь?
 Trying to get me drunk?|Пытаешься напоить меня?
 I'm just making margaritas.|Я просто делаю маргариту.
 I think I'll help her out.|Думаю, я помогу ей.
-- What is going on here? - What?|- Что здесь происходит? - Какой?
-- You painting his toenails. - Oh, come on.|- Вы красите ему ногти на ногах. - Да ладно тебе.
-- Chasing him around the room. - Monica, please.|- Гнать его по комнате. - Моника, пожалуйста.
+What is going on here? - What?|- Что здесь происходит? - Какой?
+You painting his toenails. - Oh, come on.|- Вы красите ему ногти на ногах. - Да ладно тебе.
+Chasing him around the room. - Monica, please.|- Гнать его по комнате. - Моника, пожалуйста.
 He's totally flirting with you, too.|Он тоже полностью с тобой флиртует.
 He is, isn't he?|Он, не так ли?
 I don't know, I don't know.|Не знаю, не знаю.
 I mean, maybe it's just being here|Я имею в виду, может быть, он просто здесь
 at the beach together|на пляже вместе
 or I don't know, but it's like something..|или не знаю, но вроде как ..
-- Hey. - Hi.|- Привет. - Здравствуй.
+Hey. - Hi.|- Привет. - Здравствуй.
 [panting]|[тяжело дышит]
-- 'Hi, Bonnie.' - Hi.|- «Привет, Бонни». - Здравствуй.
+'Hi, Bonnie.' - Hi.|- «Привет, Бонни». - Здравствуй.
 My boss let me off early so I took the train.|Мой босс отпустил меня рано, поэтому я сел на поезд.
 What are you guys doing?|Что вы, ребята, делаете?
 I'm playing strip Happy Days game.|Я играю в игру «Счастливые дни».
@@ -133,7 +132,7 @@ I'm never going to find a boyfriend again.|Я больше никогда не �
 I'll die an old maid.|Я умру старой девой.
 Oh, you're not going to die an old maid.|О, ты не умрешь старой девой.
 Maybe an old... spinster cook.|Может, старый ... старый повар.
-- Thanks. - Hey, now besides.|- Спасибо. - Эй, а теперь еще.
+Thanks. - Hey, now besides.|- Спасибо. - Эй, а теперь еще.
 Worse comes to worst, I'll be your boyfriend.|Что еще хуже, я буду твоим парнем.
 [chuckles]|[смеется]
 Yeah, right.|Да правильно.
@@ -152,12 +151,12 @@ Say, it's a blind date, I show up at your door and I'm like, uh|Скажи, эт
 Hey, nice to meet you, hey..|Привет, приятно познакомиться, привет ..
 I'd probably be scared of the guy|Я бы, наверное, боялся этого парня
 using a fake voice.|используя фальшивый голос.
-- 'Hey.' - Oh, hey.|- 'Привет.' - Ой, привет.
+'Hey.' - Oh, hey.|- 'Привет.' - Ой, привет.
 Oh, good, you bought food.|О, хорошо, ты купил еду.
 No, just my luggage.|Нет, только мой багаж.
 [horn honking]|[гудок]
-- 'Hey.' - Hi.|- 'Привет.' - Здравствуй.
-- 'Hey, guys.' - 'Whoo!'|- 'Привет ребят.' - "Ух!"
+'Hey.' - Hi.|- 'Привет.' - Здравствуй.
+'Hey, guys.' - 'Whoo!'|- 'Привет ребят.' - "Ух!"
 (Chandler) 'Alright. yes.'|(Чендлер) Хорошо. да.'
 Oh, I am having the best karma this week.|О, у меня лучшая карма на этой неделе.
 First, I find this woman who knew my parents|Сначала я нахожу женщину, которая знала моих родителей
@@ -165,7 +164,7 @@ and then my client with the fuzzy back|а потом мой клиент с не
 gives me his beach house.|дает мне свой домик на пляже.
 Hmm, what about that bike messenger you hit?|Хм, а как насчет того велосипедного посыльного, которого ты ударил?
 Oh, I wasn't talking about his karma.|О, я не говорил о его карме.
-- Hey. - Hey.|- Привет. - Привет.
+Hey. - Hey.|- Привет. - Привет.
 (Joey) Hey, check out the hat.|(Джои) Эй, посмотри шляпу.
 Wait a minute, I know that hat.|Погодите, я знаю эту шляпу.
 I was taken aboard that hat.|Меня взяли на борт этой шляпы.
@@ -174,7 +173,7 @@ I can't have children!|Я не могу иметь детей!
 Seriously, where did you get the hat?|Серьезно, а где вы взяли шляпу?
 Ross gave it to me.|Росс дал его мне.
 I think she looks good.|Я думаю, она хорошо выглядит.
-- Oh, thank you.|- О, спасибо.
+Oh, thank you.|- О, спасибо.
 Did he buy it for you or..|Он купил это для вас или ..
 Or win it for you?|Или выиграть это для вас?
 Well, excuse me, my fashion-impaired friends.|Что ж, извините, друзья мои модные друзья.
@@ -190,8 +189,8 @@ and formed one giant superhat.|и образовал одну гигантску
   
 __|__
 --|--
-- Hey. - Hey.|- Hey. - Hey.
-- 'Where is everybody?' - They took Ben to the park.|- 'Where is everybody?' - They took Ben to the park.
+Hey. - Hey.|- Hey. - Hey.
+'Where is everybody?' - They took Ben to the park.|- 'Where is everybody?' - They took Ben to the park.
 Where have you been?|Where have you been?
 Just out.|Just out.
 Had some lunch, just me.|Had some lunch, just me.
@@ -199,8 +198,8 @@ Little quality time with me.|Little quality time with me.
 Hey, thanks for your jacket.|Hey, thanks for your jacket.
 Oh, it's no problem.|Oh, it's no problem.
 You can borrow it, by the way.|You can borrow it, by the way.
-- Oh, here are your keys, hon. - 'Thank you.'|- Oh, here are your keys, hon. - 'Thank you.'
-- Mon? - Hmm?|- Mon? - Hmm?
+Oh, here are your keys, hon. - 'Thank you.'|- Oh, here are your keys, hon. - 'Thank you.'
+Mon? - Hmm?|- Mon? - Hmm?
 If, uh, you were at lunch alone, how come it cost you $53?|If, uh, you were at lunch alone, how come it cost you $53?
 You know what probably happened?|You know what probably happened?
 Someone must have stolen my credit card.|Someone must have stolen my credit card.
@@ -209,8 +208,8 @@ Huh.|Huh.
 That is an excellent, excellent question.|That is an excellent, excellent question.
 That is excellent.|That is excellent.
 Monica, what's with you? Who did you have lunch with?|Monica, what's with you? Who did you have lunch with?
-- Judy. - Who?|- Judy. - Who?
-- Julie. - What?|- Julie. - What?
+Judy. - Who?|- Judy. - Who?
+Julie. - What?|- Julie. - What?
 Jody.|Jody.
 You were with Julie?|You were with Julie?
 Look. When it started|Look. When it started
@@ -225,7 +224,7 @@ We only did it once.|We only did it once.
 It didn't mean anything to me.|It didn't mean anything to me.
 Yeah.|Yeah.
 Yeah, right.|Yeah, right.
-- Really. - Sure.|- Really. - Sure.
+Really. - Sure.|- Really. - Sure.
 Rachel, I was thinking of you the whole time.|Rachel, I was thinking of you the whole time.
 Yeah, right.|Yeah, right.
 Look. I'm sorry, alright?|Look. I'm sorry, alright?
@@ -247,7 +246,7 @@ Well, you know what they say..|Well, you know what they say..
 ...ask your slippers a question.|...ask your slippers a question.
 You're going crazy.|You're going crazy.
 [telephone rings]|[telephone rings]
-- Hello? - 'Hey!'|- Hello? - 'Hey!'
+Hello? - 'Hey!'|- Hello? - 'Hey!'
 Hey!|Hey!
 Listen, I'm-I'm sorry I didn't make it|Listen, I'm-I'm sorry I didn't make it
 over there today.|over there today.
@@ -256,7 +255,7 @@ You, uh...you had a thing.|You, uh...you had a thing.
 Yeah, well, I hear the place looks great.|Yeah, well, I hear the place looks great.
 Oh, forget about it.|Oh, forget about it.
 I'm having a ball.|I'm having a ball.
-- How's the apartment doing? - Oh, hey, it's-it's terrific.|- How's the apartment doing? - Oh, hey, it's-it's terrific.
+How's the apartment doing? - Oh, hey, it's-it's terrific.|- How's the apartment doing? - Oh, hey, it's-it's terrific.
 I mean, it's a regular space..|I mean, it's a regular space..
 ...fest.|...fest.
 Oh. Well, great.|Oh. Well, great.
@@ -300,7 +299,7 @@ Look, I know you don't want to hear this right now, but..|Look, I know you don't
 and he's happy.|and he's happy.
 He's...he's decorated.|He's...he's decorated.
 Look, Chandler, he has moved on, okay?|Look, Chandler, he has moved on, okay?
-- You have to too. - But--|- You have to too. - But--
+You have to too. - But--|- You have to too. - But--
 No, you're just gonna have to accept the fact|No, you're just gonna have to accept the fact
 that you're just friends now, okay?|that you're just friends now, okay?
 You're not... roommates anymore.|You're not... roommates anymore.
@@ -312,7 +311,7 @@ when I open my eyes.|when I open my eyes.
 Alright. Open your eyes.|Alright. Open your eyes.
 Sweet mother of all that is good and pure.|Sweet mother of all that is good and pure.
 Huh? "Days of Our Lives" picked up my option.|Huh? "Days of Our Lives" picked up my option.
-- Congratulations! - I know.|- Congratulations! - I know.
+Congratulations! - I know.|- Congratulations! - I know.
 Now we can finally watch "Green Acres"|Now we can finally watch "Green Acres"
 the way it was meant to be seen.|the way it was meant to be seen.
 Uh-huh.|Uh-huh.
@@ -323,9 +322,9 @@ Whichever one you want.|Whichever one you want.
 Not that one.|Not that one.
 Oh, yes.|Oh, yes.
 Oh, yeah, that's the stuff.|Oh, yeah, that's the stuff.
-- Do we dare? - We dare.|- Do we dare? - We dare.
-- Ah. - Ah.|- Ah. - Ah.
-- Aah.. - Aah..|- Aah.. - Aah..
+Do we dare? - We dare.|- Do we dare? - We dare.
+Ah. - Ah.|- Ah. - Ah.
+Aah.. - Aah..|- Aah.. - Aah..
 I can't believe two cows made the ultimate sacrifice|I can't believe two cows made the ultimate sacrifice
 so you guys could watch TV with your feet up.|so you guys could watch TV with your feet up.
 Well they were chair-shaped cows.|Well they were chair-shaped cows.
@@ -334,10 +333,10 @@ This screen is amazing.|This screen is amazing.
 I mean, Dick Van Dyke is practically life-size.|I mean, Dick Van Dyke is practically life-size.
 [all gasping]|[all gasping]
 Rose Marie really belongs on a smaller screen, doesn't she?|Rose Marie really belongs on a smaller screen, doesn't she?
-- Hi, you guys. - 'Hey.'|- Hi, you guys. - 'Hey.'
+Hi, you guys. - 'Hey.'|- Hi, you guys. - 'Hey.'
 Hey, you.|Hey, you.
 Hey, you.|Hey, you.
-- Hey, yo. - Whoa, hey.|- Hey, yo. - Whoa, hey.
+Hey, yo. - Whoa, hey.|- Hey, yo. - Whoa, hey.
 So, uh, how was your day?|So, uh, how was your day?
 Oh, you know, pretty much the usual.|Oh, you know, pretty much the usual.
 Uh...sun shining, birds chirping.|Uh...sun shining, birds chirping.
@@ -345,7 +344,7 @@ Really? Mine too.|Really? Mine too.
 Hey, cool, mine too.|Hey, cool, mine too.
 [pager beeping] Yeah, yeah, yeah.|[pager beeping] Yeah, yeah, yeah.
 I got to get to the museum. So, um..|I got to get to the museum. So, um..
-- I'll see you tonight? - Okay.|- I'll see you tonight? - Okay.
+I'll see you tonight? - Okay.|- I'll see you tonight? - Okay.
 Oh.|Oh.
 Bye, guys.|Bye, guys.
 Well, we did it. We're here.|Well, we did it. We're here.
@@ -355,7 +354,7 @@ Would you come on? Come on!|Would you come on? Come on!
 Thank you.|Thank you.
 Well, there we go.|Well, there we go.
 I think we proved our point.|I think we proved our point.
-- You burn your mouth? - Cannot feel my tongue.|- You burn your mouth? - Cannot feel my tongue.
+You burn your mouth? - Cannot feel my tongue.|- You burn your mouth? - Cannot feel my tongue.
 Bullies. Big bullies.|Bullies. Big bullies.
 Oh, look who's here.|Oh, look who's here.
 It's the weenies.|It's the weenies.
@@ -363,10 +362,10 @@ Did we not make ourselves clear the other day?|Did we not make ourselves clear t
 Yes, and that's why we're here.|Yes, and that's why we're here.
 Yes. We're standing our ground.|Yes. We're standing our ground.
 Apparently.|Apparently.
-- Let's do this, already. - Oh, oh, oh.|- Let's do this, already. - Oh, oh, oh.
+Let's do this, already. - Oh, oh, oh.|- Let's do this, already. - Oh, oh, oh.
 What do you got, there? A weapon?|What do you got, there? A weapon?
 It's a nice watch. I don't want to break it on your ribs.|It's a nice watch. I don't want to break it on your ribs.
-- Huh. Alright, let's do this. - 'Alright.'|- Huh. Alright, let's do this. - 'Alright.'
+Huh. Alright, let's do this. - 'Alright.'|- Huh. Alright, let's do this. - 'Alright.'
 Question. If I don't care about my watch.|Question. If I don't care about my watch.
 Can I use it as a weapon?|Can I use it as a weapon?
 What do you mean?|What do you mean?
@@ -375,11 +374,11 @@ I think I can do some, you know|I think I can do some, you know
 serious damage with it.|serious damage with it.
 No, you can't use your watch.|No, you can't use your watch.
 Okay.|Okay.
-- Or your keys. - Okay.|- Or your keys. - Okay.
+Or your keys. - Okay.|- Or your keys. - Okay.
 Look, here's what we'll do.|Look, here's what we'll do.
 We'll put all keys and watches|We'll put all keys and watches
 in the hat over there.|in the hat over there.
-- 'Alright.' - Alright.|- 'Alright.' - Alright.
+'Alright.' - Alright.|- 'Alright.' - Alright.
 Alright, come on, man!|Alright, come on, man!
 Let's do this already!|Let's do this already!
 Before I forget, are we hitting faces?|Before I forget, are we hitting faces?
@@ -392,17 +391,17 @@ might not be a bad idea.|might not be a bad idea.
 Okay. Nothing from the neck up.|Okay. Nothing from the neck up.
 Alright.|Alright.
 Or the waist down.|Or the waist down.
-- Dana's ovulating. - Oh, really?|- Dana's ovulating. - Oh, really?
-- You guys trying again? - Yeah.|- You guys trying again? - Yeah.
+Dana's ovulating. - Oh, really?|- Dana's ovulating. - Oh, really?
+You guys trying again? - Yeah.|- You guys trying again? - Yeah.
 So let me just get this straight.|So let me just get this straight.
 So, we're strictly talking about the middle?|So, we're strictly talking about the middle?
-- Come on! - Hey! Hey! Whoa! Oh!|- Come on! - Hey! Hey! Whoa! Oh!
+Come on! - Hey! Hey! Whoa! Oh!|- Come on! - Hey! Hey! Whoa! Oh!
 You want some of this, huh?|You want some of this, huh?
 You want a piece of this, huh?|You want a piece of this, huh?
 I'm standing here! Huh?|I'm standing here! Huh?
 Hey, hey! Those guys are taking our stuff!|Hey, hey! Those guys are taking our stuff!
 Where? Hey!|Where? Hey!
-- Get out of the way! - Look out! Hey!|- Get out of the way! - Look out! Hey!
+Get out of the way! - Look out! Hey!|- Get out of the way! - Look out! Hey!
 God! That was, that was amazing.|God! That was, that was amazing.
 That was incredible.|That was incredible.
 You guys, you guys kicked butt.|You guys, you guys kicked butt.
@@ -412,17 +411,17 @@ gave it to ol' Mr. Clean back there.|gave it to ol' Mr. Clean back there.
 He was a big guy.|He was a big guy.
 Yeah, he was, wasn't he?|Yeah, he was, wasn't he?
 You know, I wouldn't know, having missed everything.|You know, I wouldn't know, having missed everything.
-- Oh! - Don't do that to yourself.|- Oh! - Don't do that to yourself.
+Oh! - Don't do that to yourself.|- Oh! - Don't do that to yourself.
 Anyone of us could have tripped over|Anyone of us could have tripped over
 that little girl's jump rope.|that little girl's jump rope.
 So, listen, guys, are we, uh..|So, listen, guys, are we, uh..
 ...are we okay here?|...are we okay here?
-- We're okay. - Alright.|- We're okay. - Alright.
+We're okay. - Alright.|- We're okay. - Alright.
 Okay, so..|Okay, so..
 ...can I have my hat back?|...can I have my hat back?
 No.|No.
 Huh.|Huh.
-- Hi. - Hey, Ross. Bah!|- Hi. - Hey, Ross. Bah!
+Hi. - Hey, Ross. Bah!|- Hi. - Hey, Ross. Bah!
 Hi, Russ.|Hi, Russ.
 I've just got two more tables to clean|I've just got two more tables to clean
 and then we'll go, okay?|and then we'll go, okay?
@@ -431,8 +430,8 @@ Okay, I'll just sit here and, uh..|Okay, I'll just sit here and, uh..
 ...friend...type..|...friend...type..
 ...people.|...people.
 [clears throat]|[clears throat]
-- Rachel. - Yeah.|- Rachel. - Yeah.
-- Um, hi. - Hi.|- Um, hi. - Hi.
+Rachel. - Yeah.|- Rachel. - Yeah.
+Um, hi. - Hi.|- Um, hi. - Hi.
 Okay, so you know what you're doing, right?|Okay, so you know what you're doing, right?
 [chuckles] Waitressing?|[chuckles] Waitressing?
 Well, yeah, but no.|Well, yeah, but no.
@@ -443,7 +442,7 @@ Huh?|Huh?
 Bob Saget?|Bob Saget?
 Oh, yeah.|Oh, yeah.
 No, no, no, no. Oh, oh.|No, no, no, no. Oh, oh.
-- Hi. - Oh, my, oh.|- Hi. - Oh, my, oh.
+Hi. - Oh, my, oh.|- Hi. - Oh, my, oh.
 Wha.. What's wrong?|Wha.. What's wrong?
 I.. Okay.|I.. Okay.
 She's just upset because she, uh, buttered|She's just upset because she, uh, buttered
@@ -451,7 +450,7 @@ a spider into her toast this morning.|a spider into her toast this morning.
 Alright.|Alright.
 Listen, Pheebs, this is gonna be okay.|Listen, Pheebs, this is gonna be okay.
 Ross, Russ. Russ, Ross.|Ross, Russ. Russ, Ross.
-- Hi. - Hi.|- Hi. - Hi.
+Hi. - Hi.|- Hi. - Hi.
 Are you a, uh, friend of Rachel's?|Are you a, uh, friend of Rachel's?
 Yes. Yes, I am.|Yes. Yes, I am.
 Are you a, uh, a friend of Rachel's?|Are you a, uh, a friend of Rachel's?
@@ -459,7 +458,7 @@ Actually, I'm, uh, kind of, uh..|Actually, I'm, uh, kind of, uh..
 ...you know, uh..|...you know, uh..
 ...date...type...thing|...date...type...thing
 of Rachel's.|of Rachel's.
-- A date? - Yeah.|- A date? - Yeah.
+A date? - Yeah.|- A date? - Yeah.
 I'm her date.|I'm her date.
 Oh, oh, you're, uh, you..|Oh, oh, you're, uh, you..
 Oh, you're the date?|Oh, you're the date?
@@ -475,7 +474,7 @@ Well, I am going to, uh, get a beverage.|Well, I am going to, uh, get a beverage
 Uh, it was nice-nice, uh, meeting you.|Uh, it was nice-nice, uh, meeting you.
 Ditto.|Ditto.
 Okay, can we watch Joey's show now, please?|Okay, can we watch Joey's show now, please?
-- Yeah. - Wait, he's not here yet.|- Yeah. - Wait, he's not here yet.
+Yeah. - Wait, he's not here yet.|- Yeah. - Wait, he's not here yet.
 So? He's on the show. He knows what happens.|So? He's on the show. He knows what happens.
 Oh, I'm fine about my problem now, by the way.|Oh, I'm fine about my problem now, by the way.
 Oh, good.|Oh, good.
@@ -494,23 +493,23 @@ Anyone else need to go on the elevator?|Anyone else need to go on the elevator?
 Dr. Horton? Dr. Wong?|Dr. Horton? Dr. Wong?
 No, no. They only said you.|No, no. They only said you.
 Well, okay.|Well, okay.
-- Alright. - I love you, Drake.|- Alright. - I love you, Drake.
+Alright. - I love you, Drake.|- Alright. - I love you, Drake.
 Yeah, whatever.|Yeah, whatever.
 Oh, no!|Oh, no!
 (Amber) 'Drake! Look out!'|(Amber) 'Drake! Look out!'
 [screaming]|[screaming]
-- Did they just kill off Joey? - No!|- Did they just kill off Joey? - No!
+Did they just kill off Joey? - No!|- Did they just kill off Joey? - No!
 [thud]|[thud]
 Now maybe.|Now maybe.
-- 'Come on! Open up!' - 'Joey!'|- 'Come on! Open up!' - 'Joey!'
+'Come on! Open up!' - 'Joey!'|- 'Come on! Open up!' - 'Joey!'
 (Ross) 'We want to talk to you.'|(Ross) 'We want to talk to you.'
 I don't feel like talking.|I don't feel like talking.
 (Rachel) 'Oh, come on, Joey. We care about you.'|(Rachel) 'Oh, come on, Joey. We care about you.'
 (Chandler) 'We're worried about you.'|(Chandler) 'We're worried about you.'
 (Monica) 'And some of us really have to pee.'|(Monica) 'And some of us really have to pee.'
-- Sorry, Joey. - Hey.|- Sorry, Joey. - Hey.
+Sorry, Joey. - Hey.|- Sorry, Joey. - Hey.
 Listen, sorry about your death.|Listen, sorry about your death.
-- That really sucks. - Yeah.|- That really sucks. - Yeah.
+That really sucks. - Yeah.|- That really sucks. - Yeah.
 We came over as soon as we saw.|We came over as soon as we saw.
 How could you not tell us?|How could you not tell us?
 I don't know, I was...kind of hoping|I don't know, I was...kind of hoping
@@ -546,7 +545,7 @@ Yeah. Joey, honey, I don't know if this will mean|Yeah. Joey, honey, I don't kno
 anything to you, but you'll always be pre-approved with us.|anything to you, but you'll always be pre-approved with us.
 No, that means nothing to me.|No, that means nothing to me.
 Hey, there.|Hey, there.
-- What? - Nothing.|- What? - Nothing.
+What? - Nothing.|- What? - Nothing.
 I just..|I just..
 ...heard something nice about you.|...heard something nice about you.
 Oh, really?|Oh, really?
@@ -559,7 +558,7 @@ why doesn't he give Monica a call?|why doesn't he give Monica a call?
 That..|That..
 That's an idea.|That's an idea.
 Well, actually, I'm already seeing someone.|Well, actually, I'm already seeing someone.
-- Oh? - Oh?|- Oh? - Oh?
+Oh? - Oh?|- Oh? - Oh?
 Oh..|Oh..
 [gasps]|[gasps]
 She never tells us anything.|She never tells us anything.
@@ -581,7 +580,7 @@ Mom, it's okay.|Mom, it's okay.
 It is, Judy.|It is, Judy.
 Jack.|Jack.
 Could you come in here for a moment?|Could you come in here for a moment?
-- Now! - Found it.|- Now! - Found it.
+Now! - Found it.|- Now! - Found it.
 I'll take that, dad.|I'll take that, dad.
 It seems your daughter and Richard|It seems your daughter and Richard
 are something of an item.|are something of an item.
@@ -596,7 +595,7 @@ Oh, please! A relationship?|Oh, please! A relationship?
 Yes, a relationship.|Yes, a relationship.
 For your information, I am crazy about this man.|For your information, I am crazy about this man.
 Really?|Really?
-- Yes. - Wow.|- Yes. - Wow.
+Yes. - Wow.|- Yes. - Wow.
 Am I supposed to stand here|Am I supposed to stand here
 and listen to this on my birthday?|and listen to this on my birthday?
 Dad, dad, this is a good thing for me.|Dad, dad, this is a good thing for me.
@@ -619,9 +618,9 @@ I'm getting ready for the water...skiing.|I'm getting ready for the water...skii
 Okay, big hug. One more big hug. Come on.|Okay, big hug. One more big hug. Come on.
 'Alright, darling.'|'Alright, darling.'
 How are you?|How are you?
-- Well, I.. - Dr. Green, where you going?|- Well, I.. - Dr. Green, where you going?
+Well, I.. - Dr. Green, where you going?|- Well, I.. - Dr. Green, where you going?
 To get my coat.|To get my coat.
-- No, no, no! - I'll get that!|- No, no, no! - I'll get that!
+No, no, no! - I'll get that!|- No, no, no! - I'll get that!
 Alright! Alright! I can get my own coat.|Alright! Alright! I can get my own coat.
 [cheering and whooping]|[cheering and whooping]
 Sorry. We're on a major flan high.|Sorry. We're on a major flan high.
@@ -645,7 +644,7 @@ Well..|Well..
 This is the best party I've been to in years.|This is the best party I've been to in years.
 Thank you!|Thank you!
 Did we speak on the phone last night?|Did we speak on the phone last night?
-- Did you call me? - No.|- Did you call me? - No.
+Did you call me? - No.|- Did you call me? - No.
 I stayed at Julie's last night.|I stayed at Julie's last night.
 Huh.|Huh.
 Oh, actually, I haven't even been home yet.|Oh, actually, I haven't even been home yet.
@@ -657,7 +656,7 @@ Oh, my God.|Oh, my God.
 Oh, my God, Ross, no. Hang up the phone!|Oh, my God, Ross, no. Hang up the phone!
 Give me the phone, Ross! Give me the phone!|Give me the phone, Ross! Give me the phone!
 Give me the phone! Give me the..!|Give me the phone! Give me the..!
-- You're over me? - Oh, God!|- You're over me? - Oh, God!
+You're over me? - Oh, God!|- You're over me? - Oh, God!
 Wha..you're uh..|Wha..you're uh..
 ...you're...you're over me?|...you're...you're over me?
 Oh my God!|Oh my God!
@@ -667,7 +666,7 @@ When...when were you..|When...when were you..
 (Ross) 'Rach?'|(Ross) 'Rach?'
 Rachel, do you..|Rachel, do you..
 '...I mean, were you, uh..'|'...I mean, were you, uh..'
-- What? - 'Okay, okay.'|- What? - 'Okay, okay.'
+What? - 'Okay, okay.'|- What? - 'Okay, okay.'
 Well..|Well..
 ...basically, lately I've, uh..|...basically, lately I've, uh..
 I've, uh, sort of had feelings for you.|I've, uh, sort of had feelings for you.
@@ -679,10 +678,10 @@ You know about my..|You know about my..
 I mean, you know I had..|I mean, you know I had..
 You-you know?|You-you know?
 You..|You..
-- Chandler told me. - Chandler.|- Chandler told me. - Chandler.
+Chandler told me. - Chandler.|- Chandler told me. - Chandler.
 When did he, when did he, when did he?|When did he, when did he, when did he?
-- When you were in China. - China.|- When you were in China. - China.
-- Meeting Julie. - Julie. Julie.|- Meeting Julie. - Julie. Julie.
+When you were in China. - China.|- When you were in China. - China.
+Meeting Julie. - Julie. Julie.|- Meeting Julie. - Julie. Julie.
 That's...oh, God.|That's...oh, God.
 Julie, Julie.|Julie, Julie.
 Right. Okay, I need to lie down.|Right. Okay, I need to lie down.
@@ -704,42 +703,42 @@ There.|There.
 I can't go to my own prom without a date.|I can't go to my own prom without a date.
 I can't. It's too late.|I can't. It's too late.
 You know, if you're not going, I don't wanna go either.|You know, if you're not going, I don't wanna go either.
-- Oh. - Oh, I'm gonna kick Chip's ass.|- Oh. - Oh, I'm gonna kick Chip's ass.
+Oh. - Oh, I'm gonna kick Chip's ass.|- Oh. - Oh, I'm gonna kick Chip's ass.
 I have a wonderful idea.|I have a wonderful idea.
 You should take Rachel to the prom.|You should take Rachel to the prom.
 Mom, uh...huh...doubtful.|Mom, uh...huh...doubtful.
 Jack, give me that.|Jack, give me that.
 Talk to your son.|Talk to your son.
-- I got it. This thing is heavy. - Okay, okay, okay.|- I got it. This thing is heavy. - Okay, okay, okay.
+I got it. This thing is heavy. - Okay, okay, okay.|- I got it. This thing is heavy. - Okay, okay, okay.
 Your mother's right. Take her.|Your mother's right. Take her.
 You could wear my tux.|You could wear my tux.
 Dad, she won't wanna go with me.|Dad, she won't wanna go with me.
 (Jack on tape) 'Of course, she would.'|(Jack on tape) 'Of course, she would.'
 'You're a college man.'|'You're a college man.'
-- I don't know. - Well, come on.|- I don't know. - Well, come on.
+I don't know. - Well, come on.|- I don't know. - Well, come on.
 Don't you wanna find out?|Don't you wanna find out?
 [sobbing] Oh, my God, I can't believe|[sobbing] Oh, my God, I can't believe
 I don't get to go to my own prom.|I don't get to go to my own prom.
 This is so harsh.|This is so harsh.
 Okay.|Okay.
-- Hold my board. - Atta boy. Atta boy.|- Hold my board. - Atta boy. Atta boy.
+Hold my board. - Atta boy. Atta boy.|- Hold my board. - Atta boy. Atta boy.
 (Ross) 'Okay, you guys, you know, I think we've seen enough.'|(Ross) 'Okay, you guys, you know, I think we've seen enough.'
-- Let's turn it off. - No, no, no.|- Let's turn it off. - No, no, no.
+Let's turn it off. - No, no, no.|- Let's turn it off. - No, no, no.
 Okay, fine. Well, I'm not gonna watch, alright.|Okay, fine. Well, I'm not gonna watch, alright.
 Come on, kid. Let's go.|Come on, kid. Let's go.
 (Judy) 'Boy! are you handsome.'|(Judy) 'Boy! are you handsome.'
-- 'Let's show them.' - Alright, just a sec, dad.|- 'Let's show them.' - Alright, just a sec, dad.
+'Let's show them.' - Alright, just a sec, dad.|- 'Let's show them.' - Alright, just a sec, dad.
 Just be cool. Just be cool.|Just be cool. Just be cool.
 Okay, dad.|Okay, dad.
 Rachel, ready or not..|Rachel, ready or not..
 ...here comes your knight in shining..|...here comes your knight in shining..
 Oh, no.|Oh, no.
-- Bye, don't wait up! - Bye, you guys!|- Bye, don't wait up! - Bye, you guys!
+Bye, don't wait up! - Bye, you guys!|- Bye, don't wait up! - Bye, you guys!
 Okay, Chip!|Okay, Chip!
 (Judy) 'Oh, dear.'|(Judy) 'Oh, dear.'
 'Jack, how do I turn this off?'|'Jack, how do I turn this off?'
-- 'Press the button.' - 'Which one? Which button?|- 'Press the button.' - 'Which one? Which button?
-- 'Jack?' - 'The button. The button.'|- 'Jack?' - 'The button. The button.'
+'Press the button.' - 'Which one? Which button?|- 'Press the button.' - 'Which one? Which button?
+'Jack?' - 'The button. The button.'|- 'Jack?' - 'The button. The button.'
 I can't believe you did that.|I can't believe you did that.
 Yeah, well..|Yeah, well..
 Okay, and then you take the poopy diaper|Okay, and then you take the poopy diaper
@@ -747,7 +746,7 @@ and you put it in the poopy diaper pail.|and you put it in the poopy diaper pail
 Okay, Ross, just so you know calling it a "Poopy diaper"|Okay, Ross, just so you know calling it a "Poopy diaper"
 doesn't make this process any cuter.|doesn't make this process any cuter.
 [intercom buzzes]|[intercom buzzes]
-- Hello. - 'It's us.'|- Hello. - 'It's us.'
+Hello. - 'It's us.'|- Hello. - 'It's us.'
 Come on up.|Come on up.
 I'm gonna get the rest of his stuff together.|I'm gonna get the rest of his stuff together.
 Okay, we can do this now, can't we, Ben?|Okay, we can do this now, can't we, Ben?
@@ -758,41 +757,41 @@ Oh-ho. I did it.|Oh-ho. I did it.
 Ooh!|Ooh!
 Look at that.|Look at that.
 Oh! It stays on and everything.|Oh! It stays on and everything.
-- Hi. - Hi.|- Hi. - Hi.
+Hi. - Hi.|- Hi. - Hi.
 I'm sorry.|I'm sorry.
 What did you just say?|What did you just say?
 Did you just say "Hi?" Oh, my God.|Did you just say "Hi?" Oh, my God.
 Ross, Ross, Ben just said "Hi."|Ross, Ross, Ben just said "Hi."
-- Wha-what? - Ben just said "Hi."|- Wha-what? - Ben just said "Hi."
+Wha-what? - Ben just said "Hi."|- Wha-what? - Ben just said "Hi."
 What, the word "Hi?"|What, the word "Hi?"
 Yeah, no, my Uncle Hy.|Yeah, no, my Uncle Hy.
 Great. Great. And I missed that too.|Great. Great. And I missed that too.
-- I miss everything. - Oh, I'm sorry.|- I miss everything. - Oh, I'm sorry.
+I miss everything. - Oh, I'm sorry.|- I miss everything. - Oh, I'm sorry.
 I guess I just bring it out in him.|I guess I just bring it out in him.
 [knock on door]|[knock on door]
 Hello. Where is he?|Hello. Where is he?
-- Yeah. - We missed you so much.|- Yeah. - We missed you so much.
+Yeah. - We missed you so much.|- Yeah. - We missed you so much.
 Come here, Ben.|Come here, Ben.
 Hi.|Hi.
 Guess what. Ben just said his first word.|Guess what. Ben just said his first word.
-- What did he say? - What did he say?|- What did he say? - What did he say?
+What did he say? - What did he say?|- What did he say? - What did he say?
 Something about "Hi."|Something about "Hi."
 Oh, that's so exciting.|Oh, that's so exciting.
 Mommy's so proud of you.|Mommy's so proud of you.
 Hi. Hi.|Hi. Hi.
 You know, actually, it's more like "Hi!"|You know, actually, it's more like "Hi!"
-- Hi. - Hi.|- Hi. - Hi.
-- Hi. - Hi.|- Hi. - Hi.
-- Hi. - Hi.|- Hi. - Hi.
+Hi. - Hi.|- Hi. - Hi.
+Hi. - Hi.|- Hi. - Hi.
+Hi. - Hi.|- Hi. - Hi.
 Okay, this could go on for a while.|Okay, this could go on for a while.
 You're right. We got a cab waiting downstairs.|You're right. We got a cab waiting downstairs.
 Well, this was fun.|Well, this was fun.
 Uh, we should really do it again sometime, Ben.|Uh, we should really do it again sometime, Ben.
 What do you say? Okay.|What do you say? Okay.
 So I've got him..|So I've got him..
-- Tuesday. - Tuesday, right.|- Tuesday. - Tuesday, right.
-- Okay, bye, you guys. - See you.|- Okay, bye, you guys. - See you.
-- Take care. - Bye, Ben.|- Take care. - Bye, Ben.
+Tuesday. - Tuesday, right.|- Tuesday. - Tuesday, right.
+Okay, bye, you guys. - See you.|- Okay, bye, you guys. - See you.
+Take care. - Bye, Ben.|- Take care. - Bye, Ben.
 (Ben) 'Bye.'|(Ben) 'Bye.'
 Did-did he just... did he just say "Bye?"|Did-did he just... did he just say "Bye?"
 He said "Bye." He said "Bye" to me!|He said "Bye." He said "Bye" to me!
@@ -801,20 +800,20 @@ Yes, he did.|Yes, he did.
 Suddenly I'm seeing him go off to college.|Suddenly I'm seeing him go off to college.
 We got to go. We got that cab downstairs.|We got to go. We got that cab downstairs.
 Okay. Alright, alright.|Okay. Alright, alright.
-- Okay. - See you later.|- Okay. - See you later.
-- Alright - Bye.|- Alright - Bye.
+Okay. - See you later.|- Okay. - See you later.
+Alright - Bye.|- Alright - Bye.
 (Ben) 'Bye.'|(Ben) 'Bye.'
 Bye!|Bye!
 (Ben) 'Bye.'|(Ben) 'Bye.'
-- Bye! - 'Bye.'|- Bye! - 'Bye.'
+Bye! - 'Bye.'|- Bye! - 'Bye.'
 Bye!|Bye!
 Ahh..|Ahh..
-- Hey, Erika. Come on in. - How did you get here so fast?|- Hey, Erika. Come on in. - How did you get here so fast?
-- I just saw you in Salem. - Right.|- I just saw you in Salem. - Right.
+Hey, Erika. Come on in. - How did you get here so fast?|- Hey, Erika. Come on in. - How did you get here so fast?
+I just saw you in Salem. - Right.|- I just saw you in Salem. - Right.
 They, uh, they choppered me in.|They, uh, they choppered me in.
 What's up?|What's up?
 And I see you're having a little party too.|And I see you're having a little party too.
-- Is she here? Huh, huh? - Who?|- Is she here? Huh, huh? - Who?
+Is she here? Huh, huh? - Who?|- Is she here? Huh, huh? - Who?
 Sabrina. I know about you two.|Sabrina. I know about you two.
 I saw you today, kissing in the doctors' lounge.|I saw you today, kissing in the doctors' lounge.
 That's not what you think. That was--|That's not what you think. That was--
@@ -828,12 +827,12 @@ I just pretend to be a doctor.|I just pretend to be a doctor.
 Oh, my God, do the people at the hospital know about this?|Oh, my God, do the people at the hospital know about this?
 Somebody want to help me out here?|Somebody want to help me out here?
 Oh, I know. I know.|Oh, I know. I know.
-- Where am I? - University Hospital.|- Where am I? - University Hospital.
+Where am I? - University Hospital.|- Where am I? - University Hospital.
 The same place you've been for the last 18 years.|The same place you've been for the last 18 years.
 How-how can you be here and there?|How-how can you be here and there?
 'Cause it's a television show.|'Cause it's a television show.
 Drake, what are you getting at?|Drake, what are you getting at?
-- I'm not Drake. - That's right.|- I'm not Drake. - That's right.
+I'm not Drake. - That's right.|- I'm not Drake. - That's right.
 He's not Drake.|He's not Drake.
 He's...Hans Ramoray, Drake's evil twin.|He's...Hans Ramoray, Drake's evil twin.
 Is this true?|Is this true?
@@ -855,7 +854,7 @@ Hans? Hans?|Hans? Hans?
 Yo, evil twin!|Yo, evil twin!
 Right. Uh, goodbye, Erika.|Right. Uh, goodbye, Erika.
 Good luck in Salem.|Good luck in Salem.
-- Take care. - I'll never forget you, Hans.|- Take care. - I'll never forget you, Hans.
+Take care. - I'll never forget you, Hans.|- Take care. - I'll never forget you, Hans.
 (Joey) 'Hey!'|(Joey) 'Hey!'
 Mr. Douglas, is looking for you.|Mr. Douglas, is looking for you.
 Why? W-w-why?|Why? W-w-why?
@@ -897,8 +896,8 @@ for sport and then laughs about it|for sport and then laughs about it
 the next day at the water cooler.|the next day at the water cooler.
 In fact, I have her panties|In fact, I have her panties
 right there in my drawer.|right there in my drawer.
-- Really? - No, freak show!|- Really? - No, freak show!
-- She's fictional! - Whoa! Hey!|- She's fictional! - Whoa! Hey!
+Really? - No, freak show!|- Really? - No, freak show!
+She's fictional! - Whoa! Hey!|- She's fictional! - Whoa! Hey!
 Take it easy.|Take it easy.
 If it means that much to you I'll, uh..|If it means that much to you I'll, uh..
 ...I'll go find something else.|...I'll go find something else.
@@ -911,14 +910,14 @@ Ow!|Ow!
 [whistling]|[whistling]
 [Chandler whistles]|[Chandler whistles]
 [Joey whistles]|[Joey whistles]
-- 'Joey?' - Ma?|- 'Joey?' - Ma?
+'Joey?' - Ma?|- 'Joey?' - Ma?
 (Chandler) 'Joey!'|(Chandler) 'Joey!'
 Chandler?|Chandler?
 What are you still doing here?|What are you still doing here?
 I thought you guys took off.|I thought you guys took off.
 'Oh, no, no. She took off.'|'Oh, no, no. She took off.'
 'With my clothes!'|'With my clothes!'
-- Are you naked in there? - 'Well, not exactly.'|- Are you naked in there? - 'Well, not exactly.'
+Are you naked in there? - 'Well, not exactly.'|- Are you naked in there? - 'Well, not exactly.'
 'I'm wearing panties.'|'I'm wearing panties.'
 Huh.|Huh.
 You, uh...you always wear panties?|You, uh...you always wear panties?
@@ -928,7 +927,7 @@ I mean, the first time you try panties|I mean, the first time you try panties
 and someone walks off with your clothes.|and someone walks off with your clothes.
 I was not trying them out.|I was not trying them out.
 Susie asked me to wear them.|Susie asked me to wear them.
-- Well, let me see. - No.|- Well, let me see. - No.
+Well, let me see. - No.|- Well, let me see. - No.
 'I'm not letting you or anybody else see ever.'|'I'm not letting you or anybody else see ever.'
 Alright, alright.|Alright, alright.
 Whoa.|Whoa.
@@ -946,12 +945,12 @@ Oh, I'm getting heat from the guy|Oh, I'm getting heat from the guy
 in the hot pink thong.|in the hot pink thong.
 Alright, look. Ross.|Alright, look. Ross.
 I'll give you $50 for your underpants.|I'll give you $50 for your underpants.
-- Hey. - Hey.|- Hey. - Hey.
+Hey. - Hey.|- Hey. - Hey.
 Come on, Chandler.|Come on, Chandler.
 I want this part so much.|I want this part so much.
 Just one kiss. I won't tell anyone.|Just one kiss. I won't tell anyone.
 Joey, no means no.|Joey, no means no.
-- Hey, hi. - Hey.|- Hey, hi. - Hey.
+Hey, hi. - Hey.|- Hey, hi. - Hey.
 I'm sorry. W-we don't have your sheep.|I'm sorry. W-we don't have your sheep.
 Oh, Rach, I think you look cute.|Oh, Rach, I think you look cute.
 And you, huh! You..|And you, huh! You..
@@ -960,7 +959,7 @@ Get away from me. I said no.|Get away from me. I said no.
 Hey, guys, Richard buzzed. He's waiting downstairs.|Hey, guys, Richard buzzed. He's waiting downstairs.
 Oh, Richard's here?|Oh, Richard's here?
 I should run down and say goodbye to him.|I should run down and say goodbye to him.
-- Bye. Good luck. - Bye.|- Bye. Good luck. - Bye.
+Bye. Good luck. - Bye.|- Bye. Good luck. - Bye.
 So, how's your date with your cyber-chick going?|So, how's your date with your cyber-chick going?
 Ooh, hey, what is all that?|Ooh, hey, what is all that?
 Oh, it's a web site.|Oh, it's a web site.
@@ -1004,7 +1003,7 @@ I mean, this book could-could have been called|I mean, this book could-could hav
 "Be Your Own Wind-Keeper, Rachel."|"Be Your Own Wind-Keeper, Rachel."
 I don't think it would have sold a million copies|I don't think it would have sold a million copies
 but it would've made a nice gift for you.|but it would've made a nice gift for you.
-- Hey, you guys. - Hey.|- Hey, you guys. - Hey.
+Hey, you guys. - Hey.|- Hey, you guys. - Hey.
 Uh, sweetie, we've got to go.|Uh, sweetie, we've got to go.
 No!|No!
 No?|No?
@@ -1025,7 +1024,7 @@ You, you know I...I don't have a..|You, you know I...I don't have a..
 Okay.|Okay.
 I just...I just really need to be|I just...I just really need to be
 with myself right now.|with myself right now.
-- I'm sorry. - Mm-mm-mm.|- I'm sorry. - Mm-mm-mm.
+I'm sorry. - Mm-mm-mm.|- I'm sorry. - Mm-mm-mm.
 Uh, you're right.|Uh, you're right.
 I don't have to apologize.|I don't have to apologize.
 Sorry. Damn it!|Sorry. Damn it!
@@ -1042,7 +1041,7 @@ Okay. Right.|Okay. Right.
 ♪ Is nirget ♪♪|♪ Is nirget ♪♪
 Uh, Rachel, sweetheart.|Uh, Rachel, sweetheart.
 Could I see you for a minute?|Could I see you for a minute?
-- What's up? - Uh.|- What's up? - Uh.
+What's up? - Uh.|- What's up? - Uh.
 FYI, I've decided to pay|FYI, I've decided to pay
 a professional musician to play in here on Sunday afternoons.|a professional musician to play in here on Sunday afternoons.
 Her name is Stephanie... something.|Her name is Stephanie... something.
@@ -1093,19 +1092,19 @@ I mean, I-I will clean it.|I mean, I-I will clean it.
 I mean, I will clean it.|I mean, I will clean it.
 Oh, alright. Fine.|Oh, alright. Fine.
 Fine, fine.|Fine, fine.
-- Done. - Really?|- Done. - Really?
+Done. - Really?|- Done. - Really?
 Yeah. Who's working for you, babe?|Yeah. Who's working for you, babe?
 Oh, oh, my God!|Oh, oh, my God!
-- This is so exciting. - I know.|- This is so exciting. - I know.
+This is so exciting. - I know.|- This is so exciting. - I know.
 How much am I going to get?|How much am I going to get?
-- What? - Well.|- What? - Well.
+What? - Well.|- What? - Well.
 You said he's paying the people who were playing, so..|You said he's paying the people who were playing, so..
 Oh, no. No, no. I-I meant..|Oh, no. No, no. I-I meant..
 He's going to be paying that other woman..|He's going to be paying that other woman..
 ...because she's a professional.|...because she's a professional.
 Well...I'm not going to be the only one|Well...I'm not going to be the only one
 who's not getting paid.|who's not getting paid.
-- Oh, but, Phoebes-- - No, uh-uh, I'm sorry.|- Oh, but, Phoebes-- - No, uh-uh, I'm sorry.
+Oh, but, Phoebes-- - No, uh-uh, I'm sorry.|- Oh, but, Phoebes-- - No, uh-uh, I'm sorry.
 No, no, I'm not some, like, sloppy second..|No, no, I'm not some, like, sloppy second..
 ...you know, charity band... and you know what?|...you know, charity band... and you know what?
 There are thousands of places in this city|There are thousands of places in this city
@@ -1113,13 +1112,13 @@ where people would be happy to pay to hear me play.|where people would be happy 
 ♪ When I play I play for me ♪|♪ When I play I play for me ♪
 ♪ I don't need your charity ♪|♪ I don't need your charity ♪
 Thank you.|Thank you.
-- Oh. - Hello.|- Oh. - Hello.
+Oh. - Hello.|- Oh. - Hello.
 Oh. Thanks. I couldn't, uh..|Oh. Thanks. I couldn't, uh..
-- Is everything okay? - Um, no.|- Is everything okay? - Um, no.
+Is everything okay? - Um, no.|- Is everything okay? - Um, no.
 (Phoebe) 'Huh-uh. Um..'|(Phoebe) 'Huh-uh. Um..'
 One of my clients died|One of my clients died
 on the massage table today.|on the massage table today.
-- Oh! - Oh, my God.|- Oh! - Oh, my God.
+Oh! - Oh, my God.|- Oh! - Oh, my God.
 That's a little more relaxed than you|That's a little more relaxed than you
 want them to get.|want them to get.
 Yeah, uh-huh.|Yeah, uh-huh.
@@ -1139,10 +1138,10 @@ And when, when her spirit left her body|And when, when her spirit left her body
 I don't think it went very far.|I don't think it went very far.
 What do you mean?|What do you mean?
 I, I, I think it went into me.|I, I, I think it went into me.
-- Ooh, that's him. - Damn.|- Ooh, that's him. - Damn.
+Ooh, that's him. - Damn.|- Ooh, that's him. - Damn.
 My mail-order grandfather hasn't come yet.|My mail-order grandfather hasn't come yet.
-- Phoebe? - Yes. Hi, Mr. Adelman.|- Phoebe? - Yes. Hi, Mr. Adelman.
-- Nice to see you. - Hi. Thanks for meeting me.|- Nice to see you. - Hi. Thanks for meeting me.
+Phoebe? - Yes. Hi, Mr. Adelman.|- Phoebe? - Yes. Hi, Mr. Adelman.
+Nice to see you. - Hi. Thanks for meeting me.|- Nice to see you. - Hi. Thanks for meeting me.
 Oh, that's alright, although you did|Oh, that's alright, although you did
 cut into my very busy day of sitting.|cut into my very busy day of sitting.
 Oh. Um, oh, do you want to sit?|Oh. Um, oh, do you want to sit?
@@ -1162,8 +1161,8 @@ Like, any reason she'd be hanging around?|Like, any reason she'd be hanging arou
 Well, I don't know what to tell you, dear.|Well, I don't know what to tell you, dear.
 The only thing I can think of is that she always used to say|The only thing I can think of is that she always used to say
 that before she died, she wanted to see everything.|that before she died, she wanted to see everything.
-- Everything? - Everything.|- Everything? - Everything.
-- Whoa. That's a lot of stuff. - Oh, wait, I, I, I remember.|- Whoa. That's a lot of stuff. - Oh, wait, I, I, I remember.
+Everything? - Everything.|- Everything? - Everything.
+Whoa. That's a lot of stuff. - Oh, wait, I, I, I remember.|- Whoa. That's a lot of stuff. - Oh, wait, I, I, I remember.
 She also said she wanted to sleep with me|She also said she wanted to sleep with me
 one last time.|one last time.
 Uh, I'm sorry.|Uh, I'm sorry.
@@ -1175,7 +1174,7 @@ Um, ahem, how about the fact|Um, ahem, how about the fact
 that the underwear out there on the telephone pole is yours|that the underwear out there on the telephone pole is yours
 from when you were having sex with Fun Bobby|from when you were having sex with Fun Bobby
 out on the terrace.|out on the terrace.
-- What? - What?|- What? - What?
+What? - What?|- What? - What?
 Wait a minute, who told you?|Wait a minute, who told you?
 You are dead meat.|You are dead meat.
 I didn't know it was a big secret.|I didn't know it was a big secret.
@@ -1186,7 +1185,7 @@ oh, I don't know, having a third nipple!|oh, I don't know, having a third nipple
 (Ross) 'What?'|(Ross) 'What?'
 You have a third nipple?|You have a third nipple?
 You bitch.|You bitch.
-- Whip it out. Whip it out. - Yeah, yeah, yeah.|- Whip it out. Whip it out. - Yeah, yeah, yeah.
+Whip it out. Whip it out. - Yeah, yeah, yeah.|- Whip it out. Whip it out. - Yeah, yeah, yeah.
 No! Come on!|No! Come on!
 There's nothing to see. It's just a tiny bump.|There's nothing to see. It's just a tiny bump.
 It's totally useless.|It's totally useless.
@@ -1197,12 +1196,12 @@ You told me it was a nubbin.|You told me it was a nubbin.
 Joey, what did you think a nubbin was?|Joey, what did you think a nubbin was?
 I don't know. You see something. You hear a word.|I don't know. You see something. You hear a word.
 I thought that's what it was.|I thought that's what it was.
-- Let me see it again. - Yeah, show it to us.|- Let me see it again. - Yeah, show it to us.
+Let me see it again. - Yeah, show it to us.|- Let me see it again. - Yeah, show it to us.
 Show us the nubbin. Your nubbin.|Show us the nubbin. Your nubbin.
 Joey was in a porno movie.|Joey was in a porno movie.
 [gasping]|[gasping]
 If I'm going down, I'm taking everybody with me.|If I'm going down, I'm taking everybody with me.
-- Oh, my God! - You were in a porno?|- Oh, my God! - You were in a porno?
+Oh, my God! - You were in a porno?|- Oh, my God! - You were in a porno?
 A-a-alright, alright, alright.|A-a-alright, alright, alright.
 I was young, and I just wanted a job, okay?|I was young, and I just wanted a job, okay?
 But at the last minute I couldn't go through with it.|But at the last minute I couldn't go through with it.
@@ -1220,20 +1219,20 @@ We're not making noise!|We're not making noise!
 [knock on floor]|[knock on floor]
 Oh, God.|Oh, God.
 [knock on floor]|[knock on floor]
-- We won. - We did?|- We won. - We did?
+We won. - We did?|- We won. - We did?
 [cheering]|[cheering]
 [groaning]|[groaning]
 Mr. Heckles.|Mr. Heckles.
 How did this happen?|How did this happen?
 Uh, he must have been sweeping.|Uh, he must have been sweeping.
 They found a broom in his hand.|They found a broom in his hand.
-- Oh. - Oh, God.|- Oh. - Oh, God.
-- That's terrible. - I know.|- That's terrible. - I know.
+Oh. - Oh, God.|- Oh. - Oh, God.
+That's terrible. - I know.|- That's terrible. - I know.
 I was sweepin' yesterday.|I was sweepin' yesterday.
-- It could have been me. - Yeah, yeah, yeah.|- It could have been me. - Yeah, yeah, yeah.
+It could have been me. - Yeah, yeah, yeah.|- It could have been me. - Yeah, yeah, yeah.
 (Joey) 'Sure, sure.'|(Joey) 'Sure, sure.'
-- Sweeping. - Right.|- Sweeping. - Right.
-- You never know. - Never know.|- You never know. - Never know.
+Sweeping. - Right.|- Sweeping. - Right.
+You never know. - Never know.|- You never know. - Never know.
 [instrumental music]|[instrumental music]
 [knock on door]|[knock on door]
 Uh-oh. It's Isaac Newton and he's pissed.|Uh-oh. It's Isaac Newton and he's pissed.
@@ -1260,7 +1259,7 @@ I can't believe that this whole time we thought he hated us.|I can't believe tha
 I mean, isn't it amazing|I mean, isn't it amazing
 how much you can touch someone's life|how much you can touch someone's life
 without even knowing it?|without even knowing it?
-- Would you look at this dump? - He hated us.|- Would you look at this dump? - He hated us.
+Would you look at this dump? - He hated us.|- Would you look at this dump? - He hated us.
 This was his final revenge.|This was his final revenge.
 Ever seen so much crap?|Ever seen so much crap?
 Actually, I think this apartment sullies the good name of crap.|Actually, I think this apartment sullies the good name of crap.
@@ -1270,7 +1269,7 @@ He's going to get my coat.|He's going to get my coat.
 He's going to get my coat!|He's going to get my coat!
 Oh, my God, you guys, I can't believe this!|Oh, my God, you guys, I can't believe this!
 This is unbelievable!|This is unbelievable!
-- What's that? - What? Nothing!|- What's that? - What? Nothing!
+What's that? - What? Nothing!|- What's that? - What? Nothing!
 What is that? I saw my name. What is it?|What is that? I saw my name. What is it?
 No, no. See? See?|No, no. See? See?
 [printer whirring]|[printer whirring]
@@ -1288,7 +1287,7 @@ Yes, yes, it is the short story..|Yes, yes, it is the short story..
 ...that I was writing.|...that I was writing.
 And I'm in it? Well, let me read it!|And I'm in it? Well, let me read it!
 (in unison) No!|(in unison) No!
-- Come on! - Hey!|- Come on! - Hey!
+Come on! - Hey!|- Come on! - Hey!
 Uh, why don't you read it to her?|Uh, why don't you read it to her?
 Alright!|Alright!
 "It was summer.|"It was summer.
@@ -1311,8 +1310,8 @@ I do not need to see it!|I do not need to see it!
 Go, go, go!|Go, go, go!
 (Joey) 'Ooh!'|(Joey) 'Ooh!'
 What is this?|What is this?
-- That is.. - That's, that's..|- That is.. - That's, that's..
-- Ross, what is this? - Thank you.|- Ross, what is this? - Thank you.
+That is.. - That's, that's..|- That is.. - That's, that's..
+Ross, what is this? - Thank you.|- Ross, what is this? - Thank you.
 (Joey) Good luck.|(Joey) Good luck.
 Okay, just-just remember how crazy I am about you, okay?|Okay, just-just remember how crazy I am about you, okay?
 "Kind of ditzy?"|"Kind of ditzy?"
@@ -1324,13 +1323,13 @@ He was supposed to type, little, the idiot.|He was supposed to type, little, the
 Now, that, that was, uh..|Now, that, that was, uh..
 I mean, as opposed to, uh..|I mean, as opposed to, uh..
 ...the, uh... okay, is-is this over yet?|...the, uh... okay, is-is this over yet?
-- Rach? - Oh!|- Rach? - Oh!
+Rach? - Oh!|- Rach? - Oh!
 I do not have chubby ankles!|I do not have chubby ankles!
 No, I, no, no, Rach!|No, I, no, no, Rach!
 Okay-okay, look at the other side.|Okay-okay, look at the other side.
 Look at Julie's column.|Look at Julie's column.
 "She's not rachem?"|"She's not rachem?"
-- No. - What the hell's a rachem?|- No. - What the hell's a rachem?
+No. - What the hell's a rachem?|- No. - What the hell's a rachem?
 Is that some stupid paleontology word that I wouldn't know|Is that some stupid paleontology word that I wouldn't know
 because I'm just a waitress?|because I'm just a waitress?
 Rach, come on! Rach..|Rach, come on! Rach..
@@ -1369,7 +1368,7 @@ No, you hang up.|No, you hang up.
 You. You. Y..|You. You. Y..
 I'm sorry, I thought you were talking to me.|I'm sorry, I thought you were talking to me.
 Rachel..|Rachel..
-- I'll just call her back. - Okay.|- I'll just call her back. - Okay.
+I'll just call her back. - Okay.|- I'll just call her back. - Okay.
 (Ross) 'I'm sorry, we got disconnected.'|(Ross) 'I'm sorry, we got disconnected.'
 Okay, okay, okay, okay, how did this happen to me?|Okay, okay, okay, okay, how did this happen to me?
 A week ago, two weeks ago, I was fine.|A week ago, two weeks ago, I was fine.
@@ -1410,7 +1409,7 @@ Alright. Alright, here's the chance.|Alright. Alright, here's the chance.
 Monica, give him cash. Rachel, give him your earrings.|Monica, give him cash. Rachel, give him your earrings.
 Uh, something. Now. Anything.|Uh, something. Now. Anything.
 No. I will not cave.|No. I will not cave.
-- Yeah, I'm with Mon. - Alright. Alright.|- Yeah, I'm with Mon. - Alright. Alright.
+Yeah, I'm with Mon. - Alright. Alright.|- Yeah, I'm with Mon. - Alright. Alright.
 You know how you say I never seize the day?|You know how you say I never seize the day?
 Well, alright, even though he's your super, I'm seizing.|Well, alright, even though he's your super, I'm seizing.
 Mr. Treeger?|Mr. Treeger?
@@ -1423,7 +1422,7 @@ Alright? Oh, hey.|Alright? Oh, hey.
 Do you think there's a chance you can fix that radiator now?|Do you think there's a chance you can fix that radiator now?
 Oh, no can do. Like I told the girl.|Oh, no can do. Like I told the girl.
 I can't get a new knob until Tuesday.|I can't get a new knob until Tuesday.
-- Ross? - Yeah.|- Ross? - Yeah.
+Ross? - Yeah.|- Ross? - Yeah.
 Looks like he's playing baseball.|Looks like he's playing baseball.
 You mean hardball?|You mean hardball?
 Whatever.|Whatever.
