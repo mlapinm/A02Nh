@@ -693,535 +693,533 @@ Eventually, the rhythm is going to get you.|В конце концов, ритм
   
 __|__
 --|--
-Hey. - Hey.|- Hey. - Hey.
-Ah, wow, I hope you don't take this the wrong way|Ah, wow, I hope you don't take this the wrong way
-but I know we had plans to meet up tonight and..|but I know we had plans to meet up tonight and..
-Ah, I'm just kinda worried about|Ah, I'm just kinda worried about
-what it might do to our friendship.|what it might do to our friendship.
-I know.|I know.
-Ugh, how could we have let this happen.|Ugh, how could we have let this happen.
-Seven times! - Uff!|- Seven times! - Uff!
-You know, look. We were away.|You know, look. We were away.
-In a foreign, romantic country.|In a foreign, romantic country.
-Right.|Right.
-I blame London.|I blame London.
-Bad London!|Bad London!
-So, look, um, while we're still in London|So, look, um, while we're still in London
-I mean we can keep doing it, right?|I mean we can keep doing it, right?
-Well, I don't see that we have a choice.|Well, I don't see that we have a choice.
-But when we're back home, we don't do it.|But when we're back home, we don't do it.
-No, only here.|No, only here.
-You know, I-I saw a wine cellar downstairs.|You know, I-I saw a wine cellar downstairs.
-I'll meet you there in two minutes.|I'll meet you there in two minutes.
-Okay.|Okay.
-Mon, honey, I gotta ask you something.|Mon, honey, I gotta ask you something.
-Now?|Now?
-Ross said my name up there, I mean, come on|Ross said my name up there, I mean, come on
-I can't just pretend that didn't happen, can I?|I can't just pretend that didn't happen, can I?
-Ugh, I-I don't know.|Ugh, I-I don't know.
-Monica, what should I do?|Monica, what should I do?
-Just, uh, do the right thing.|Just, uh, do the right thing.
-What?|What?
-T-Tow the line! Thread the needle, think outside the box!|T-Tow the line! Thread the needle, think outside the box!
-You know, maybe it's best we never got to do it again.|You know, maybe it's best we never got to do it again.
-Yeah, it kinda makes that, that one night special.|Yeah, it kinda makes that, that one night special.
-You know, technically, we still are over international waters.|You know, technically, we still are over international waters.
-I'm gonna go to the bathroom.|I'm gonna go to the bathroom.
-Maybe I'll see you there in a bit?|Maybe I'll see you there in a bit?
-Okay.|Okay.
-Hey, can I ask you something?|Hey, can I ask you something?
-Uh, no.|Uh, no.
-Felicity and I, we were watching "My Giant," and I was thinkin'|Felicity and I, we were watching "My Giant," and I was thinkin'
-I'm never gonna be as good an actor as that Giant.|I'm never gonna be as good an actor as that Giant.
-Do you think I'm just wasting my life with this acting thing?|Do you think I'm just wasting my life with this acting thing?
-No.|No.
-I mean, the Giant's like five years younger than me, you know.|I mean, the Giant's like five years younger than me, you know.
-You think I'll ever get there?|You think I'll ever get there?
-Yes.|Yes.
-Thanks, man. - Okay, man.|- Thanks, man. - Okay, man.
-But what about how much taller he is than me?|But what about how much taller he is than me?
-I mean, there's no way I can make myself|I mean, there's no way I can make myself
-taller now, you know.|taller now, you know.
-And who knows what science will come up with in the future|And who knows what science will come up with in the future
-but Chandler, what if I die an unsuccessful, regular-size man?|but Chandler, what if I die an unsuccessful, regular-size man?
-Hey, Monica. Why, you've been in the bathroom for a half-hour.|Hey, Monica. Why, you've been in the bathroom for a half-hour.
-I know!|I know!
-Had the beef tips, huh?|Had the beef tips, huh?
-[instrumental music]|[instrumental music]
-Well, we certainly are alone.|Well, we certainly are alone.
-Yes, good thing we have that not New York rule.|Yes, good thing we have that not New York rule.
-Oh, right.|Oh, right.
-Um, listen, since we're-we're on that subject|Um, listen, since we're-we're on that subject
-um, I just wanted to tell you that, um..|um, I just wanted to tell you that, um..
-Well, I.. I was going through a hard time in London|Well, I.. I was going through a hard time in London
-what with my brother getting married|what with my brother getting married
-and that guy thinking I was Ross' mother.|and that guy thinking I was Ross' mother.
-Right.|Right.
-Well, anyway, I just..|Well, anyway, I just..
-That night meant a lot to me|That night meant a lot to me
-and, guess I'm trying to say thanks.|and, guess I'm trying to say thanks.
-Oh.|Oh.
-You know, that night meant a lot to me too.|You know, that night meant a lot to me too.
-And it wasn't 'cause I was in a bad place or anything.|And it wasn't 'cause I was in a bad place or anything.
-It just meant a lot to me 'cause you're really hot.|It just meant a lot to me 'cause you're really hot.
-Is that okay?|Is that okay?
-That's okay.|That's okay.
-And I'm cute too?|And I'm cute too?
-And you're cute too. - Thank you.|- And you're cute too. - Thank you.
-Alright, I gotta go unpack. - Okay.|- Alright, I gotta go unpack. - Okay.
-Bye.|Bye.
-I'm still on London time. Does that count?|I'm still on London time. Does that count?
-Oh, that counts. - Oh, good.|- Oh, that counts. - Oh, good.
-[instrumental music]|[instrumental music]
-Cheers.|Cheers.
-You look cute in bubbles.|You look cute in bubbles.
-Nah, you're just all liquored up.|Nah, you're just all liquored up.
-[knock on door]|[knock on door]
-(Joey) 'Hey, it's me. I'm coming in.'|(Joey) 'Hey, it's me. I'm coming in.'
-I've had a very long, hard day.|I've had a very long, hard day.
-Uh, I'm gonna go get some chicken. You want some?|Uh, I'm gonna go get some chicken. You want some?
-Uh, no, thanks. No chicken.|Uh, no, thanks. No chicken.
-Bye-bye then.|Bye-bye then.
-Okay.|Okay.
-You sure? Some extra crispy?|You sure? Some extra crispy?
-Dirty rice? Beans?|Dirty rice? Beans?
-For the last time, no. Get out. Get out, Joey.|For the last time, no. Get out. Get out, Joey.
-Alright.|Alright.
-[gasping]|[gasping]
-Are you okay? I'm so sorry. He wouldn't leave.|Are you okay? I'm so sorry. He wouldn't leave.
-He kept asking me if I wanted chicken.|He kept asking me if I wanted chicken.
-Chicken?|Chicken?
-I could eat some chicken.|I could eat some chicken.
-Hey, Joe.|Hey, Joe.
-Yeah.|Yeah.
-Can I get a, uh, three-piece|Can I get a, uh, three-piece
-uh, some Coleslaw and some beans and a coke..|uh, some Coleslaw and some beans and a coke..
-[screams]|[screams]
-...diet coke.|...diet coke.
-Hey, Monica. - 'Mm-hmm?'|- Hey, Monica. - 'Mm-hmm?'
-Can I ask you a cooking question?|Can I ask you a cooking question?
-Sure.|Sure.
-If you're cooking on the stove..|If you're cooking on the stove..
-...does that mean that your new secret boyfriend|...does that mean that your new secret boyfriend
-is better in bed than Richard?|is better in bed than Richard?
-Chandler.|Chandler.
-Is he?|Is he?
-You know what, I-I think I'm going to respect the privacy|You know what, I-I think I'm going to respect the privacy
-of my new secret boyfriend.|of my new secret boyfriend.
-W-why?|W-why?
-I mean, if this guy was me|I mean, if this guy was me
-and it was me who had learned that it was me|and it was me who had learned that it was me
-who was the best you'd ever had..|who was the best you'd ever had..
-...I'd be going like this.|...I'd be going like this.
-Nice try. - 'Hm.'|- Nice try. - 'Hm.'
-Wait, wait, wait.|Wait, wait, wait.
-Look, Monica..|Look, Monica..
-This is not gonna work.|This is not gonna work.
-I bet this will work.|I bet this will work.
-[laughing]|[laughing]
-You are so great, I love you.|You are so great, I love you.
-What?|What?
-Nothing, I said, I said|Nothing, I said, I said
-you're so great, and then I just|you're so great, and then I just
-I just stopped talking.|I just stopped talking.
-You said, you loved me, I can't believe this.|You said, you loved me, I can't believe this.
-No, I didn't.|No, I didn't.
-Yes, you did.|Yes, you did.
-No, I didn't!|No, I didn't!
-You love me. - No, I don't!|- You love me. - No, I don't!
-Stop it! Stop it! Stop it!|Stop it! Stop it! Stop it!
-[screaming]|[screaming]
-[instrumental music]|[instrumental music]
-Oh, look! There's-there's Monica and Chandler.|Oh, look! There's-there's Monica and Chandler.
-'Hey!'|'Hey!'
-Hey, you guys!|Hey, you guys!
-Hey!|Hey!
-Oh!|Oh!
-Oh! Oh!|Oh! Oh!
-What? - Oh-oh!|- What? - Oh-oh!
-Chandler and Monica!|Chandler and Monica!
-Chandler and Monica!|Chandler and Monica!
-Oh, my God! - Oh!|- Oh, my God! - Oh!
-Chandler and Monica!|Chandler and Monica!
-Oh, my God! - Oh!|- Oh, my God! - Oh!
-Oh, my eyes! My eyes!|Oh, my eyes! My eyes!
-Phoebe! Phoebe!|Phoebe! Phoebe!
-Oh! - Okay! It's okay. It's okay!|- Oh! - Okay! It's okay. It's okay!
-No, they're doing it! - I know!|- No, they're doing it! - I know!
-I know! I know!|I know! I know!
-You know? - Yes, I know it.|- You know? - Yes, I know it.
-Joey knows, but Ross doesn't know|Joey knows, but Ross doesn't know
-so you have to stop screaming!|so you have to stop screaming!
-Hey, what's going on?|Hey, what's going on?
-[both screaming]|[both screaming]
-What? What? - Hi! Nothing!|- What? What? - Hi! Nothing!
-Oh, God, we're just so excited|Oh, God, we're just so excited
-that you want to get this apartment!|that you want to get this apartment!
-Actually it looks really good.|Actually it looks really good.
-[screaming] It looks pretty good!|[screaming] It looks pretty good!
-Get in here! Come on!|Get in here! Come on!
-[all screaming]|[all screaming]
-[telephone ringing]|[telephone ringing]
-Hello?|Hello?
-Oh, yeah, hold on a second, she's right here.|Oh, yeah, hold on a second, she's right here.
-Hey, it's Chandler.|Hey, it's Chandler.
-Oh!|Oh!
-Hello, you.|Hello, you.
-Hello, Phoebe, I've been thinking about you all day.|Hello, Phoebe, I've been thinking about you all day.
-Huh?|Huh?
-Well, you know that thing you said before?|Well, you know that thing you said before?
-I'd be lying if I said I wasn't intrigued.|I'd be lying if I said I wasn't intrigued.
-Really?|Really?
-Yeah, listen, Joey is not gonna be here tonight.|Yeah, listen, Joey is not gonna be here tonight.
-So why don't you come over and I'll let you, uh..|So why don't you come over and I'll let you, uh..
-...feel my bicep.|...feel my bicep.
-Or maybe more.|Or maybe more.
-I'll have to get back to you on that. Okay, bye.|I'll have to get back to you on that. Okay, bye.
-Oh, my God, he wants me to come over|Oh, my God, he wants me to come over
-and feel his bicep and more!|and feel his bicep and more!
-Are you kidding? - No.|- Are you kidding? - No.
-I cannot believe he would do that to Mon..|I cannot believe he would do that to Mon..
-What?|What?
-Joey? Do they know that we know?|Joey? Do they know that we know?
-No. - Joey?|- No. - Joey?
-They know you know. - Oh, I knew it!|- They know you know. - Oh, I knew it!
-Oh, I cannot believe those two!|Oh, I cannot believe those two!
-They thought that they could mess with us?|They thought that they could mess with us?
-They're trying to mess with us?|They're trying to mess with us?
-[chuckles]|[chuckles]
-They don't know that we know they know we know.|They don't know that we know they know we know.
-And, Joey, you can't say anything.|And, Joey, you can't say anything.
-Couldn't if I wanted to.|Couldn't if I wanted to.
-So..|So..
-...this is my bra.|...this is my bra.
-It's very, very nice.|It's very, very nice.
-Well, come here.|Well, come here.
-I'm very happy we're gonna have all the sex.|I'm very happy we're gonna have all the sex.
-You should be.|You should be.
-I'm very bendy.|I'm very bendy.
-I'm gonna kiss you now.|I'm gonna kiss you now.
-Not if I kiss you first.|Not if I kiss you first.
-Oh. - Oh!|- Oh. - Oh!
-Well, I guess there's nothing left for us to do but-but kiss.|Well, I guess there's nothing left for us to do but-but kiss.
-Here it comes.|Here it comes.
-Our first kiss.|Our first kiss.
-Okay, okay, okay. You win! You win!|Okay, okay, okay. You win! You win!
-I can't have sex with you! - And why not?|- I can't have sex with you! - And why not?
-Because I'm in love with Monica!|Because I'm in love with Monica!
-You're-you're what?|You're-you're what?
-Love her, that's right.|Love her, that's right.
-I love her!|I love her!
-I love her!|I love her!
-I love you, Monica.|I love you, Monica.
-I love you too, Chandler.|I love you too, Chandler.
-I just, I thought you were doing it.|I just, I thought you were doing it.
-I didn't know you were in love!|I didn't know you were in love!
-[giggling]|[giggling]
-Chandler! Chandler!|Chandler! Chandler!
-'Chandler!'|'Chandler!'
-I saw what you were doing through the window!|I saw what you were doing through the window!
-I saw what you were doing to my sister.|I saw what you were doing to my sister.
-Now, get out here!|Now, get out here!
-Well, listen, we had a good run.|Well, listen, we had a good run.
-You know, what was it? Four, five months?|You know, what was it? Four, five months?
-I mean, that's more than most people have in a lifetime.|I mean, that's more than most people have in a lifetime.
-So goodbye. Take care. Bye-bye, then.|So goodbye. Take care. Bye-bye, then.
-What are you doing? - Oh, I am going on the lam.|- What are you doing? - Oh, I am going on the lam.
-Come on, Chandler, come on. I can handle Ross.|Come on, Chandler, come on. I can handle Ross.
-Hold on!|Hold on!
-Hey, Ross. What's up, bro?|Hey, Ross. What's up, bro?
-What-the-hell-are you doing?|What-the-hell-are you doing?
-Hey, what's-what's going on?|Hey, what's-what's going on?
-Well, I think, I think|Well, I think, I think
-Ross knows about me and Monica.|Ross knows about me and Monica.
-Dude, he's right there.|Dude, he's right there.
-I thought you were my best friend! This is my sister!|I thought you were my best friend! This is my sister!
-My best friend and my sister! I-I cannot believe this!|My best friend and my sister! I-I cannot believe this!
-Look, we're not just messing around. I love her.|Look, we're not just messing around. I love her.
-Okay, I'm in love with her.|Okay, I'm in love with her.
-I'm so sorry that you had to find out this way.|I'm so sorry that you had to find out this way.
-I'm sorry, but it-it's true. I-I love him too.|I'm sorry, but it-it's true. I-I love him too.
-My best friend and my sister!|My best friend and my sister!
-I cannot believe this!|I cannot believe this!
-Alright, should we just, should we just get married?|Alright, should we just, should we just get married?
-You know, I mean, should we just do it?|You know, I mean, should we just do it?
-All the signs are telling us to do it.|All the signs are telling us to do it.
-I'm sick of the signs. It's too fast.|I'm sick of the signs. It's too fast.
-I'm happy the way things are. - Me, too.|- I'm happy the way things are. - Me, too.
-I don't want things to change, do you?|I don't want things to change, do you?
-No. - Alright, then!|- No. - Alright, then!
-Then nothing changes! Everything is great!|Then nothing changes! Everything is great!
-Everything stays the same! Now, you go and unpack.|Everything stays the same! Now, you go and unpack.
-'Cause it's been three days and it's driving me insane.|'Cause it's been three days and it's driving me insane.
-Ah, geez, relax. It's not like we're ma..|Ah, geez, relax. It's not like we're ma..
-Ah! Ah!|Ah! Ah!
-You know, I was thinking, what if I, uh..|You know, I was thinking, what if I, uh..
-...unpack here?|...unpack here?
-Then all your stuff would be here.|Then all your stuff would be here.
-Well..|Well..
-What if all my stuff was here?|What if all my stuff was here?
-Then you'd be going back and forth all the time.|Then you'd be going back and forth all the time.
-I mean..|I mean..
-Doesn't make any sense.|Doesn't make any sense.
-Okay.|Okay.
-What if we live together and you understand what I'm saying?|What if we live together and you understand what I'm saying?
-Live together?|Live together?
-There have been no signs for that.|There have been no signs for that.
-Me asking is kind of a sign.|Me asking is kind of a sign.
-Yes! Yes! Yes! - Okay!|- Yes! Yes! Yes! - Okay!
-Yes! Yes.|Yes! Yes.
-Okay. Okay, wait. Wait, wait, wait.|Okay. Okay, wait. Wait, wait, wait.
-Okay. Here's your key. - Okay.|- Okay. Here's your key. - Okay.
-Okay. - Here's your key.|- Okay. - Here's your key.
-Alright, now, you have to go out and christen it.|Alright, now, you have to go out and christen it.
-Now, go out and then come back in.|Now, go out and then come back in.
-The door hasn't been locked in five years, but, okay.|The door hasn't been locked in five years, but, okay.
-Alright. - 'Ready?'|- Alright. - 'Ready?'
-[clapping] Ready!|[clapping] Ready!
-'Okay, a little problem. The key broke in the lock.'|'Okay, a little problem. The key broke in the lock.'
-'And I can't get in.' - What?|- 'And I can't get in.' - What?
-Oh, my God. I can't get out.|Oh, my God. I can't get out.
-'This isn't a sign.' - No, no, no! It's not a sign.|- 'This isn't a sign.' - No, no, no! It's not a sign.
-It's a very old key. - 'It's just an old key!'|- It's a very old key. - 'It's just an old key!'
-Oh, my God! It's old.|Oh, my God! It's old.
-(Chandler) 'I love you.'|(Chandler) 'I love you.'
-I love you.|I love you.
-'Are you hugging the door right now?'|'Are you hugging the door right now?'
-No.|No.
-'Yeah, yeah, me neither.'|'Yeah, yeah, me neither.'
-Okay, so what do you-what do you wanna do?|Okay, so what do you-what do you wanna do?
-[panting] Let's do something crazy.|[panting] Let's do something crazy.
-I know. Let's rest and drink lots of fluids.|I know. Let's rest and drink lots of fluids.
-Okay, I'll rest.|Okay, I'll rest.
-But, you know, if I'm going to bed..|But, you know, if I'm going to bed..
-...then you're coming with me.|...then you're coming with me.
-[sniffling]|[sniffling]
-See, that would be impossible to resist if you weren't all..|See, that would be impossible to resist if you weren't all..
-...drippy here.|...drippy here.
-Are you saying that you don't want to get with this?|Are you saying that you don't want to get with this?
-Yeah, I don't think you should say that|Yeah, I don't think you should say that
-even when you're healthy.|even when you're healthy.
-Oh...come on.|Oh...come on.
-[coughing]|[coughing]
-Don't take this personally, okay?|Don't take this personally, okay?
-It's just that I just can't have sex with a sick person.|It's just that I just can't have sex with a sick person.
-[scoffs] I'm with you, Chandler.|[scoffs] I'm with you, Chandler.
-I mean, I can't have sex with a sick person either.|I mean, I can't have sex with a sick person either.
-That's disgusting!|That's disgusting!
-But I'm not sick!|But I'm not sick!
-Let me prove it to you.|Let me prove it to you.
-We are two healthy people in the prime of lime.|We are two healthy people in the prime of lime.
-See, that's the thing, I would like to stay|See, that's the thing, I would like to stay
-[babbling] in the prime of lime.|[babbling] in the prime of lime.
-You wanted it to be a surprise.|You wanted it to be a surprise.
-[door slams]|[door slams]
-Oh, my God.|Oh, my God.
-Chandler..|Chandler..
-...in all my life..|...in all my life..
-...I never thought I would be so lucky..|...I never thought I would be so lucky..
-[sobbing] ...as to fall in love with my best..|[sobbing] ...as to fall in love with my best..
-[sobbing] ...my best..|[sobbing] ...my best..
-There's a reason why girls don't do this!|There's a reason why girls don't do this!
-Okay, okay, okay.|Okay, okay, okay.
-I'll do it.|I'll do it.
-I thought..|I thought..
-[sobbing] Wait, I-I can do this.|[sobbing] Wait, I-I can do this.
-[chuckles]|[chuckles]
-I thought..|I thought..
-...that it mattered, what I said..|...that it mattered, what I said..
-...or where I said it.|...or where I said it.
-Then I realized..|Then I realized..
-...the only thing that matters is that you..|...the only thing that matters is that you..
-...you make me happier..|...you make me happier..
-...than I ever thought I could be.|...than I ever thought I could be.
-[chuckles]|[chuckles]
-And if you let me..|And if you let me..
-...I will spend the rest of my life|...I will spend the rest of my life
-trying to make you feel the same way.|trying to make you feel the same way.
-[chuckles]|[chuckles]
-[chuckling]|[chuckling]
-Monica? - Yeah.|- Monica? - Yeah.
-Will you marry me?|Will you marry me?
-[chuckles]|[chuckles]
-Yes.|Yes.
-"Chandler, for so long, I..|"Chandler, for so long, I..
-"I wondered if I would ever find my prince.|"I wondered if I would ever find my prince.
-"My soul mate.|"My soul mate.
-"Then three years ago, at another wedding|"Then three years ago, at another wedding
-"I turned to a friend for comfort|"I turned to a friend for comfort
-"and instead I found everything that I had ever been|"and instead I found everything that I had ever been
-"looking for my whole life.|"looking for my whole life.
-"And now..|"And now..
-"...here we are..|"...here we are..
-"...with our future before us.|"...with our future before us.
-"And I only want to spend it with you.|"And I only want to spend it with you.
-My prince, my soulmate, my friend."|My prince, my soulmate, my friend."
-Unless you don't want to.|Unless you don't want to.
-You go.|You go.
-Chandler.|Chandler.
-Uh, that's okay.|Uh, that's okay.
-Monica, I thought this was gonna be|Monica, I thought this was gonna be
-the most difficult thing I ever had to do.|the most difficult thing I ever had to do.
-But when I saw you walking down that aisle|But when I saw you walking down that aisle
-I realized how simple it was.|I realized how simple it was.
-I love you.|I love you.
-Any surprises that come our way|Any surprises that come our way
-it's okay, because I will always love you.|it's okay, because I will always love you.
-You are the person I was meant to spend|You are the person I was meant to spend
-the rest of my life with.|the rest of my life with.
-You wanna know if I'm sure?|You wanna know if I'm sure?
-You, uh, may now kiss the bride.|You, uh, may now kiss the bride.
-So..|So..
-...I guess by the powers vested in me|...I guess by the powers vested in me
-by the state of New York and the internet guys..|by the state of New York and the internet guys..
-...I now pronounce you husband and wife.|...I now pronounce you husband and wife.
-Oh, wait.|Oh, wait.
-Do you take each other?|Do you take each other?
-I do. - I do.|- I do. - I do.
-Yeah, you do.|Yeah, you do.
-Rings. - Oh, crap.|- Rings. - Oh, crap.
-Okay, um..|Okay, um..
-Uh, uh, let's do the rings.|Uh, uh, let's do the rings.
-We good? Yeah? Good?|We good? Yeah? Good?
-[clears throat]|[clears throat]
-Once again, I pronounce you husband and wife.|Once again, I pronounce you husband and wife.
-Now kiss her again.|Now kiss her again.
-[cheering]|[cheering]
-Oh, good God!|Oh, good God!
-If you want a baby so bad, just go steal it.|If you want a baby so bad, just go steal it.
-What is going on with you?|What is going on with you?
-Since when are you so crazy about babies?|Since when are you so crazy about babies?
-I'm not crazy about babies.|I'm not crazy about babies.
-I'm crazy about us.|I'm crazy about us.
-What? - Look..|- What? - Look..
-We've always talked about having babies someday.|We've always talked about having babies someday.
-I'm not saying it has to be right now, but I'm..|I'm not saying it has to be right now, but I'm..
-...starting to think that we can handle it.|...starting to think that we can handle it.
-We're good.|We're good.
-We're really good.|We're really good.
-We are pretty good.|We are pretty good.
-But nothing has to happen till you're ready.|But nothing has to happen till you're ready.
-Well, maybe I'm ready now.|Well, maybe I'm ready now.
-I mean, it's a little scary, but...maybe it's right.|I mean, it's a little scary, but...maybe it's right.
-What? It's not right.|What? It's not right.
-We're not ready to have a kid now.|We're not ready to have a kid now.
-What? - I'm kidding.|- What? - I'm kidding.
-This is gonna be fun.|This is gonna be fun.
-So, we're gonna try? I mean, we're trying?|So, we're gonna try? I mean, we're trying?
-We're trying to get pregnant.|We're trying to get pregnant.
-Mm..|Mm..
-You know what, I'm not really comfortable doing this|You know what, I'm not really comfortable doing this
-in front of the babies.|in front of the babies.
-So, when do you wanna start tryin'?|So, when do you wanna start tryin'?
-Alright, hold on a sec.|Alright, hold on a sec.
-Period math? - Yeah.|- Period math? - Yeah.
-Yeah.|Yeah.
-Well, we could start trying...now.|Well, we could start trying...now.
-Right here?|Right here?
-No, not here.|No, not here.
-Maybe here.|Maybe here.
-Wait a minute, it's perfect, we've got a lot of time to kill|Wait a minute, it's perfect, we've got a lot of time to kill
-and we're in a building that's full of beds.|and we're in a building that's full of beds.
-And it's so clean.|And it's so clean.
-I think we found our sperm.|I think we found our sperm.
-He does seem pretty perfect.|He does seem pretty perfect.
-Yeah? You think so?|Yeah? You think so?
-Well, should I ask him?|Well, should I ask him?
-No. - 'Why not?'|- No. - 'Why not?'
-Just because his great-grandmother was obese?|Just because his great-grandmother was obese?
-Our kid's gonna get that from you anyway.|Our kid's gonna get that from you anyway.
-No, that's not it.|No, that's not it.
-It's just that when we were asking him|It's just that when we were asking him
-all those questions before, I just..|all those questions before, I just..
-[sighs] ...I just realized I don't care|[sighs] ...I just realized I don't care
-if he is the most perfect guy in the world.|if he is the most perfect guy in the world.
-He's not you. - Yeah! He's better!|- He's not you. - Yeah! He's better!
-No, he's not.|No, he's not.
-And if I can't get pregnant with you|And if I can't get pregnant with you
-then I don't want to get pregnant by him|then I don't want to get pregnant by him
-or anyone else.|or anyone else.
-Really? Are-are you sure?|Really? Are-are you sure?
-Yeah, I'm sure. - Oh, thank God.|- Yeah, I'm sure. - Oh, thank God.
-Because I don't wanna do this either.|Because I don't wanna do this either.
-You know, I was just doing it because I thought|You know, I was just doing it because I thought
-that was what you wanted to do. You know, I'm the husband.|that was what you wanted to do. You know, I'm the husband.
-I'm supposed to bring the sperm.|I'm supposed to bring the sperm.
-That is so sweet.|That is so sweet.
-I love you.|I love you.
-So, you know, this leaves us with..|So, you know, this leaves us with..
-Adoption.|Adoption.
-How do you feel about that?|How do you feel about that?
-I think I feel okay about it.|I think I feel okay about it.
-Actually, I-I, I think I feel really good about it.|Actually, I-I, I think I feel really good about it.
-Me too.|Me too.
-I wanna find a baby that needs a home|I wanna find a baby that needs a home
-and I wanna raise it with you.|and I wanna raise it with you.
-[sighs] And I wanna mess it up|[sighs] And I wanna mess it up
-in our own specific way.|in our own specific way.
-So th-this is it? We're, we're really going to adopt?|So th-this is it? We're, we're really going to adopt?
-Yeah.|Yeah.
-Oh, my God, we're gonna be parents!|Oh, my God, we're gonna be parents!
-We are gonna be great parents.|We are gonna be great parents.
-And it could be soon. I mean, I mean, think about it.|And it could be soon. I mean, I mean, think about it.
-Right now, somewhere out there|Right now, somewhere out there
-our baby could be being conceived.|our baby could be being conceived.
-Wait, if we're lucky|Wait, if we're lucky
-and we're really, really, really quiet|and we're really, really, really quiet
-we may be able to hear the sound of a condom breaking.|we may be able to hear the sound of a condom breaking.
-[instrumental music]|[instrumental music]
-Look, look, look what the, look what|Look, look, look what the, look what
-look what floating heads did.|look what floating heads did.
-I don't care.|I don't care.
-What's going on?|What's going on?
-That was the adoption agency.|That was the adoption agency.
-And?|And?
-We're getting a baby!|We're getting a baby!
-Are you serious?|Are you serious?
-There's a pregnant woman in Ohio, and she picked us.|There's a pregnant woman in Ohio, and she picked us.
-[cheering]|[cheering]
-I'm so happy for you.|I'm so happy for you.
-This Thanksgiving kicks last Thanksgiving's ass.|This Thanksgiving kicks last Thanksgiving's ass.
-Whoo.|Whoo.
-And Rachel, this is yours.|And Rachel, this is yours.
-[squeals] What! What are these for?|[squeals] What! What are these for?
-You'll see.|You'll see.
-Alright. Everybody open them. - Okay.|- Alright. Everybody open them. - Okay.
-[gasps] Oh, wow, this is so beautiful!|[gasps] Oh, wow, this is so beautiful!
-Oh, these are the ones I was looking at in the store.|Oh, these are the ones I was looking at in the store.
-I know. - I love this.|- I know. - I love this.
-A meatball sub!|A meatball sub!
-Thanks!|Thanks!
-Seriously, you guys. What's going on?|Seriously, you guys. What's going on?
-Wha-what are these for?|Wha-what are these for?
-Well, I didn't know how to tell you before, but..|Well, I didn't know how to tell you before, but..
-...we got the house.|...we got the house.
-Enjoy!|Enjoy!
-What did they say?|What did they say?
-[instrumental music]|[instrumental music]
-Do you think they recognize each other from in there?|Do you think they recognize each other from in there?
-[chuckles] Maybe.|[chuckles] Maybe.
-Unless they're like two people who've lived in apartments|Unless they're like two people who've lived in apartments
-next to each other for years and then one day|next to each other for years and then one day
-they're pushed through a vagina and they meet.|they're pushed through a vagina and they meet.
-We're going to take Erica to recovery now.|We're going to take Erica to recovery now.
-(Monica) There's something that we want to tell you.|(Monica) There's something that we want to tell you.
-We decided to name the girl baby...Erica.|We decided to name the girl baby...Erica.
-Oh, my God. That's just like my name!|Oh, my God. That's just like my name!
-Son of a gun, it is.|Son of a gun, it is.
-Anyway, I'm gonna go get some rest.|Anyway, I'm gonna go get some rest.
-I'm really glad I picked you guys.|I'm really glad I picked you guys.
-You're gonna make great parents.|You're gonna make great parents.
-Even Chandler.|Even Chandler.
-Okay, well, bye. - Bye.|- Okay, well, bye. - Bye.
-We'll call you. - Okay.|- We'll call you. - Okay.
-Hey, have fun at church camp.|Hey, have fun at church camp.
-Oh, look at these little bunnies.|Oh, look at these little bunnies.
-I know.|I know.
-You ready to trade?|You ready to trade?
-Okay. - Okay.|- Okay. - Okay.
-Oh, wait, let's see.|Oh, wait, let's see.
-Take this little baby..|Take this little baby..
-We could trade later. - Yeah, I'm good.|- We could trade later. - Yeah, I'm good.
-[instrumental music]|[instrumental music]
-  
-  
+Hey. - Hey.|- Привет. - Привет.
+Ah, wow, I hope you don't take this the wrong way|Ах, вау, я надеюсь, ты не поймешь неправильно
+but I know we had plans to meet up tonight and..|но я знаю, что у нас были планы встретиться сегодня вечером и ...
+Ah, I'm just kinda worried about|Ах, я просто беспокоюсь о
+what it might do to our friendship.|что это может сделать с нашей дружбой.
+I know.|Я знаю.
+Ugh, how could we have let this happen.|Ух, как мы могли это допустить.
+Seven times! - Uff!|- Семь раз! - Уфф!
+You know, look. We were away.|Вы знаете, смотрите. Мы были далеко.
+In a foreign, romantic country.|В чужой, романтической стране.
+Right.|Правильно.
+I blame London.|Я виню Лондон.
+Bad London!|Плохой Лондон!
+So, look, um, while we're still in London|Итак, послушайте, пока мы все еще в Лондоне
+I mean we can keep doing it, right?|Я имею в виду, что мы можем продолжать это делать, верно?
+Well, I don't see that we have a choice.|Что ж, я не вижу, что у нас есть выбор.
+But when we're back home, we don't do it.|Но когда мы возвращаемся домой, мы этого не делаем.
+No, only here.|Нет, только здесь.
+You know, I-I saw a wine cellar downstairs.|Знаешь, я-я видел внизу винный погреб.
+I'll meet you there in two minutes.|Я встречусь с вами через две минуты.
+Okay.|Ладно.
+Mon, honey, I gotta ask you something.|Пн, милая, я должен тебя кое о чем спросить.
+Now?|Сейчас?
+Ross said my name up there, I mean, come on|Росс сказал мое имя там, я имею в виду, давай
+I can't just pretend that didn't happen, can I?|Я не могу просто притвориться, что этого не произошло, правда?
+Ugh, I-I don't know.|Ух, я не знаю.
+Monica, what should I do?|Моника, что мне делать?
+Just, uh, do the right thing.|Просто поступай правильно.
+What?|Какой?
+T-Tow the line! Thread the needle, think outside the box!|Т-буксируйте линию! Заправляйте нить в иглу, мыслите нестандартно!
+You know, maybe it's best we never got to do it again.|Знаешь, может быть лучше, чтобы нам больше никогда этого не делать.
+Yeah, it kinda makes that, that one night special.|Да, это делает эту ночь особенной.
+You know, technically, we still are over international waters.|Вы знаете, формально мы все еще находимся над международными водами.
+I'm gonna go to the bathroom.|Я пойду в ванную.
+Maybe I'll see you there in a bit?|Может быть, увидимся немного позже?
+Okay.|Ладно.
+Hey, can I ask you something?|Эй, могу я тебя кое о чем спросить?
+Uh, no.|Нет, нет.
+Felicity and I, we were watching "My Giant," and I was thinkin'|Мы с Фелисити смотрели «Мой великан», и я думала,
+I'm never gonna be as good an actor as that Giant.|Я никогда не стану таким хорошим актером, как этот Гигант.
+Do you think I'm just wasting my life with this acting thing?|Ты думаешь, я просто зря трачу свою жизнь на эту актерскую штуку?
+No.|Нет.
+I mean, the Giant's like five years younger than me, you know.|Я имею в виду, что Гигант на пять лет моложе меня.
+You think I'll ever get there?|Думаешь, я когда-нибудь доберусь туда?
+Yes.|Да.
+Thanks, man. - Okay, man.|- Спасибо чувак. - Хорошо, чувак.
+But what about how much taller he is than me?|Но как насчет того, насколько он выше меня?
+I mean, there's no way I can make myself|Я имею в виду, я не могу заставить себя
+taller now, you know.|вы знаете, теперь выше.
+And who knows what science will come up with in the future|И кто знает, что наука придумает в будущем
+but Chandler, what if I die an unsuccessful, regular-size man?|но Чендлер, что, если я умру неудачным мужчиной обычного роста?
+Hey, Monica. Why, you've been in the bathroom for a half-hour.|Привет, Моника. Да ведь вы уже полчаса в ванной.
+I know!|Я знаю!
+Had the beef tips, huh?|Были чаи из говядины, а?
+[instrumental music]|[инструментальная музыка]
+Well, we certainly are alone.|Что ж, мы, конечно, одни.
+Yes, good thing we have that not New York rule.|Да, хорошо, что у нас есть это не Нью-Йоркское правило.
+Oh, right.|О верно.
+Um, listen, since we're-we're on that subject|Гм, послушай, раз уж мы-мы на эту тему
+um, I just wanted to tell you that, um..|эм, я просто хотел тебе сказать, эм ..
+Well, I.. I was going through a hard time in London|Ну, я ... я переживала тяжелые времена в Лондоне
+what with my brother getting married|что с моим братом женится
+and that guy thinking I was Ross' mother.|и тот парень, думающий, что я мать Росс.
+Right.|Правильно.
+Well, anyway, I just..|Ну, в общем, я просто ..
+That night meant a lot to me|Эта ночь много значила для меня
+and, guess I'm trying to say thanks.|и, наверное, я пытаюсь сказать спасибо.
+Oh.|Ой.
+You know, that night meant a lot to me too.|Знаешь, эта ночь тоже много значила для меня.
+And it wasn't 'cause I was in a bad place or anything.|И не потому, что я был в плохом месте или что-то в этом роде.
+It just meant a lot to me 'cause you're really hot.|Это просто очень много значило для меня, потому что ты действительно горячий.
+Is that okay?|Все хорошо?
+That's okay.|Это нормально.
+And I'm cute too?|И я тоже симпатичный?
+And you're cute too. - Thank you.|- И ты тоже милый. - Спасибо.
+Alright, I gotta go unpack. - Okay.|- Хорошо, мне нужно распаковать вещи. - Ладно.
+Bye.|До свидания.
+I'm still on London time. Does that count?|Я все еще иду по лондонскому времени. Это считается?
+Oh, that counts. - Oh, good.|- О, это считается. - О, хорошо.
+[instrumental music]|[инструментальная музыка]
+Cheers.|Ура.
+You look cute in bubbles.|Ты мило выглядишь в пузырях.
+Nah, you're just all liquored up.|Нет, ты просто в восторге.
+[knock on door]|[стук в дверь]
+(Joey) 'Hey, it's me. I'm coming in.'|(Джои) «Эй, это я. Я захожу.'
+I've had a very long, hard day.|У меня был очень долгий и тяжелый день.
+Uh, I'm gonna go get some chicken. You want some?|Я пойду за цыпленком. Ты хочешь немного?
+Uh, no, thanks. No chicken.|Нет, спасибо. Нет курицы.
+Bye-bye then.|Тогда до свидания.
+Okay.|Ладно.
+You sure? Some extra crispy?|Вы уверены? Еще немного хрустящей корочки?
+Dirty rice? Beans?|Грязный рис? Фасоль?
+For the last time, no. Get out. Get out, Joey.|В последний раз нет. Убирайся. Уходи, Джоуи.
+Alright.|Хорошо.
+[gasping]|[задыхаясь]
+Are you okay? I'm so sorry. He wouldn't leave.|У тебя все нормально? Мне так жаль. Он не уйдет.
+He kept asking me if I wanted chicken.|Он все спрашивал, не хочу ли я курицу.
+Chicken?|Курица?
+I could eat some chicken.|Я мог бы съесть курицу.
+Hey, Joe.|Эй Джо.
+Yeah.|Да.
+Can I get a, uh, three-piece|Могу я получить тройку
+uh, some Coleslaw and some beans and a coke..|эээ, немного салата из капусты, бобов и колы ..
+[screams]|[кричит]
+...diet coke.|...диетическая кола.
+Hey, Monica. - 'Mm-hmm?'|- Привет, Моника. - Мммм?
+Can I ask you a cooking question?|Могу я задать вам кулинарный вопрос?
+Sure.|Конечно.
+If you're cooking on the stove..|Если готовишь на плите ...
+...does that mean that your new secret boyfriend|... означает ли это, что ваш новый тайный парень
+is better in bed than Richard?|лучше в постели, чем Ричард?
+Chandler.|Чендлер.
+Is he?|Он?
+You know what, I-I think I'm going to respect the privacy|Знаете что, я думаю, что буду уважать конфиденциальность
+of my new secret boyfriend.|моего нового тайного парня.
+W-why?|П-почему?
+I mean, if this guy was me|Я имею в виду, если бы этим парнем был я
+and it was me who had learned that it was me|и это я узнал, что это я
+who was the best you'd ever had..|кто был лучшим, что у тебя когда-либо было ...
+...I'd be going like this.|... Я бы так и поступил.
+Nice try. - 'Hm.'|- Хорошая попытка. - Хм.
+Wait, wait, wait.|Подожди, подожди, подожди.
+Look, Monica..|Смотри, Моника ..
+This is not gonna work.|Это не сработает.
+I bet this will work.|Бьюсь об заклад, это сработает.
+[laughing]|[смеющийся]
+You are so great, I love you.|Ты такой классный, я люблю тебя.
+What?|Какой?
+Nothing, I said, I said|Ничего, я сказал, я сказал
+you're so great, and then I just|ты такой классный, а потом я просто
+I just stopped talking.|Я просто замолчал.
+You said, you loved me, I can't believe this.|Ты сказал, что любил меня, я не могу в это поверить.
+No, I didn't.|Нет, не видел.
+Yes, you did.|Да вы сделали.
+No, I didn't!|Нет, не знал!
+You love me. - No, I don't!|- Ты любишь меня. - Нет, не знаю!
+Stop it! Stop it! Stop it!|Прекрати! Прекрати! Прекрати!
+[screaming]|[кричит]
+[instrumental music]|[инструментальная музыка]
+Oh, look! There's-there's Monica and Chandler.|О, посмотри! Вот-вот Моника и Чендлер.
+'Hey!'|'Привет!'
+Hey, you guys!|Эй ребята!
+Hey!|Привет!
+Oh!|Ой!
+Oh! Oh!|Ой! Ой!
+What? - Oh-oh!|- Какой? - Ох ох!
+Chandler and Monica!|Чендлер и Моника!
+Chandler and Monica!|Чендлер и Моника!
+Oh, my God! - Oh!|- О Боже! - Ой!
+Chandler and Monica!|Чендлер и Моника!
+Oh, my God! - Oh!|- О Боже! - Ой!
+Oh, my eyes! My eyes!|О, мои глаза! Мои глаза!
+Phoebe! Phoebe!|Фиби! Фиби!
+Oh! - Okay! It's okay. It's okay!|- Ой! - Ладно! Все нормально. Все нормально!
+No, they're doing it! - I know!|- Нет, они это делают! - Я знаю!
+I know! I know!|Я знаю! Я знаю!
+You know? - Yes, I know it.|- Знаешь? - Да, я знаю его.
+Joey knows, but Ross doesn't know|Джои знает, но Росс не знает
+so you have to stop screaming!|так что ты должен перестать кричать!
+Hey, what's going on?|Эй, что происходит?
+[both screaming]|[оба кричат]
+What? What? - Hi! Nothing!|- Какой? Какой? - Здравствуй! Ничего!
+Oh, God, we're just so excited|О, Боже, мы так взволнованы
+that you want to get this apartment!|что вы хотите получить в этой квартире!
+Actually it looks really good.|На самом деле выглядит действительно хорошо.
+[screaming] It looks pretty good!|[кричит] Выглядит неплохо!
+Get in here! Come on!|Иди сюда! Давай!
+[all screaming]|[все кричат]
+[telephone ringing]|[телефонный звонок]
+Hello?|Привет?
+Oh, yeah, hold on a second, she's right here.|О, да, погоди, она здесь.
+Hey, it's Chandler.|Эй, это Чендлер.
+Oh!|Ой!
+Hello, you.|Привет тебе.
+Hello, Phoebe, I've been thinking about you all day.|Привет, Фиби, я думала о тебе весь день.
+Huh?|А?
+Well, you know that thing you said before?|Ну, ты знаешь, что ты сказал раньше?
+I'd be lying if I said I wasn't intrigued.|Я бы солгал, если бы сказал, что не заинтригован.
+Really?|В самом деле?
+Yeah, listen, Joey is not gonna be here tonight.|Да, послушай, Джои сегодня здесь не будет.
+So why don't you come over and I'll let you, uh..|Так почему бы тебе не зайти, и я позволю тебе, ммм ..
+...feel my bicep.|... пощупай мой бицепс.
+Or maybe more.|А может и больше.
+I'll have to get back to you on that. Okay, bye.|Я должен вернуться к вам по этому поводу. Хорошо, пока.
+Oh, my God, he wants me to come over|Боже мой, он хочет, чтобы я приехал
+and feel his bicep and more!|и почувствуй его бицепс и многое другое!
+Are you kidding? - No.|- Ты смеешься? - Нет.
+I cannot believe he would do that to Mon..|Я не могу поверить, что он сделал бы это с Пн ..
+What?|Какой?
+Joey? Do they know that we know?|Джои? Знают ли они, что знаем мы?
+No. - Joey?|- Нет. - Джоуи?
+They know you know. - Oh, I knew it!|- Они знают, что вы знаете. - О, я знал это!
+Oh, I cannot believe those two!|О, я не могу поверить этим двоим!
+They thought that they could mess with us?|Они думали, что могут с нами связываться?
+They're trying to mess with us?|Они пытаются нас обмануть?
+[chuckles]|[смеется]
+They don't know that we know they know we know.|Они не знают, что мы знаем, они знают, что знаем.
+And, Joey, you can't say anything.|И, Джоуи, ты ничего не можешь сказать.
+Couldn't if I wanted to.|Не смог бы, если бы захотел.
+So..|Так..
+...this is my bra.|... это мой бюстгальтер.
+It's very, very nice.|Это очень и очень приятно.
+Well, come here.|Ну иди сюда.
+I'm very happy we're gonna have all the sex.|Я очень рад, что у нас будет весь секс.
+You should be.|Вы должны быть.
+I'm very bendy.|Я очень гибкая.
+I'm gonna kiss you now.|Я тебя сейчас поцелую.
+Not if I kiss you first.|Нет, если я сначала тебя поцелую.
+Oh. - Oh!|- Ой. - Ой!
+Well, I guess there's nothing left for us to do but-but kiss.|Что ж, думаю, нам больше нечего делать, кроме как целоваться.
+Here it comes.|Вот оно.
+Our first kiss.|Наш первый поцелуй.
+Okay, okay, okay. You win! You win!|Хорошо, хорошо, хорошо. Ты победил! Ты победил!
+I can't have sex with you! - And why not?|- Я не могу заниматься с тобой сексом! - И почему бы нет?
+Because I'm in love with Monica!|Потому что я влюблен в Монику!
+You're-you're what?|Ты-ты что?
+Love her, that's right.|Люби ее, верно.
+I love her!|Я ее люблю!
+I love her!|Я ее люблю!
+I love you, Monica.|Я люблю тебя, Моника.
+I love you too, Chandler.|Я тоже тебя люблю, Чендлер.
+I just, I thought you were doing it.|Я просто, я думал, ты это делаешь.
+I didn't know you were in love!|Я не знала, что ты влюблен!
+[giggling]|[хихикает]
+Chandler! Chandler!|Чендлер! Чендлер!
+'Chandler!'|"Чендлер!"
+I saw what you were doing through the window!|Я видел, что вы делаете в окно!
+I saw what you were doing to my sister.|Я видел, что вы делали с моей сестрой.
+Now, get out here!|А теперь иди сюда!
+Well, listen, we had a good run.|Что ж, послушайте, мы хорошо провели время.
+You know, what was it? Four, five months?|Вы знаете, что это было? Четыре, пять месяцев?
+I mean, that's more than most people have in a lifetime.|Я имею в виду, что это больше, чем у большинства людей есть за всю жизнь.
+So goodbye. Take care. Bye-bye, then.|Прощай. Береги себя. Тогда до свидания.
+What are you doing? - Oh, I am going on the lam.|- Что делаешь? - Ой, я иду в бега.
+Come on, Chandler, come on. I can handle Ross.|Давай, Чендлер, давай. Я могу справиться с Россом.
+Hold on!|Оставайтесь на линии!
+Hey, Ross. What's up, bro?|Привет, Росс. Как дела, братан?
+What-the-hell-are you doing?|Что, черт возьми, ты делаешь?
+Hey, what's-what's going on?|Эй, что-что происходит?
+Well, I think, I think|Ну я думаю я думаю
+Ross knows about me and Monica.|Росс знает обо мне и Монике.
+Dude, he's right there.|Чувак, он здесь.
+I thought you were my best friend! This is my sister!|Я думал, ты мой лучший друг! Это моя сестра!
+My best friend and my sister! I-I cannot believe this!|Мой лучший друг и моя сестра! Я не могу в это поверить!
+Look, we're not just messing around. I love her.|Послушайте, мы не просто бездельничаем. Я ее люблю.
+Okay, I'm in love with her.|Хорошо, я влюблен в нее.
+I'm so sorry that you had to find out this way.|Мне очень жаль, что вам пришлось это выяснить.
+I'm sorry, but it-it's true. I-I love him too.|Мне очень жаль, но это - правда. Я тоже его люблю.
+My best friend and my sister!|Мой лучший друг и моя сестра!
+I cannot believe this!|Я не могу в это поверить!
+Alright, should we just, should we just get married?|Хорошо, мы должны просто пожениться?
+You know, I mean, should we just do it?|Вы знаете, я имею в виду, мы должны просто сделать это?
+All the signs are telling us to do it.|Все знаки говорят нам делать это.
+I'm sick of the signs. It's too fast.|Я устал от знаков. Это слишком быстро.
+I'm happy the way things are. - Me, too.|- Я счастлив, как обстоят дела. - Я тоже.
+I don't want things to change, do you?|Я не хочу, чтобы что-то изменилось, а ты?
+No. - Alright, then!|- Нет. - Тогда хорошо!
+Then nothing changes! Everything is great!|Тогда ничего не меняется! Все отлично!
+Everything stays the same! Now, you go and unpack.|Все остается по-прежнему! Теперь идите и распаковывайте.
+'Cause it's been three days and it's driving me insane.|Потому что прошло три дня, и это сводит меня с ума.
+Ah, geez, relax. It's not like we're ma..|Ах, блин, расслабься. Не то чтобы мы ма ..
+Ah! Ah!|Ах! Ах!
+You know, I was thinking, what if I, uh..|Знаешь, я думал, а что, если я ...
+...unpack here?|... распаковать здесь?
+Then all your stuff would be here.|Тогда все твои вещи будут здесь.
+Well..|Хорошо..
+What if all my stuff was here?|Что, если бы все мои вещи были здесь?
+Then you'd be going back and forth all the time.|Тогда вы бы все время ходили туда-сюда.
+I mean..|Я имею в виду..
+Doesn't make any sense.|В этом нет никакого смысла.
+Okay.|Ладно.
+What if we live together and you understand what I'm saying?|Что, если мы будем жить вместе, и вы понимаете, о чем я говорю?
+Live together?|Жить вместе?
+There have been no signs for that.|Признаков этого не было.
+Me asking is kind of a sign.|Я спрашиваю, это своего рода знак.
+Yes! Yes! Yes! - Okay!|- Да! Да! Да! - Ладно!
+Yes! Yes.|Да! Да.
+Okay. Okay, wait. Wait, wait, wait.|Ладно. Хорошо, подожди. Подожди, подожди, подожди.
+Okay. Here's your key. - Okay.|- Ладно. Вот твой ключ. - Ладно.
+Okay. - Here's your key.|- Ладно. - Вот твой ключ.
+Alright, now, you have to go out and christen it.|Хорошо, теперь тебе нужно пойти и окрестить это.
+Now, go out and then come back in.|Теперь выйди, а потом возвращайся.
+The door hasn't been locked in five years, but, okay.|Дверь не запирали пять лет, но ладно.
+Alright. - 'Ready?'|- Хорошо. - 'Готов?'
+[clapping] Ready!|[аплодисменты] Готово!
+'Okay, a little problem. The key broke in the lock.'|«Хорошо, небольшая проблема. Ключ сломался в замке.
+'And I can't get in.' - What?|- «И я не могу войти». - Какой?
+Oh, my God. I can't get out.|О Боже. Я не могу выбраться.
+'This isn't a sign.' - No, no, no! It's not a sign.|- «Это не знак». - Нет нет нет! Это не знак.
+It's a very old key. - 'It's just an old key!'|- Это очень старый ключ. - «Это просто старый ключ!»
+Oh, my God! It's old.|О Боже! Это старый.
+(Chandler) 'I love you.'|(Чендлер) «Я люблю тебя».
+I love you.|Я тебя люблю.
+'Are you hugging the door right now?'|- Ты сейчас обнимаешь дверь?
+No.|Нет.
+'Yeah, yeah, me neither.'|«Да, да, я тоже».
+Okay, so what do you-what do you wanna do?|Ладно, так что ты-что хочешь делать?
+[panting] Let's do something crazy.|[задыхаясь] Давай сделаем что-нибудь безумное.
+I know. Let's rest and drink lots of fluids.|Я знаю. Давайте отдохнем и выпьем побольше жидкости.
+Okay, I'll rest.|Хорошо, я отдохну.
+But, you know, if I'm going to bed..|Но, знаете, если я пойду спать ...
+...then you're coming with me.|... тогда ты пойдешь со мной.
+[sniffling]|[всхлипывая]
+See, that would be impossible to resist if you weren't all..|Видите, этому было бы невозможно устоять, если бы вы не были всеми ..
+...drippy here.|... здесь капризно.
+Are you saying that you don't want to get with this?|Вы хотите сказать, что не хотите этого делать?
+Yeah, I don't think you should say that|Да, я не думаю, что тебе стоит так говорить
+even when you're healthy.|даже когда ты здоров.
+Oh...come on.|О ... давай.
+[coughing]|[кашляющий]
+Don't take this personally, okay?|Не принимай это на свой счет, хорошо?
+It's just that I just can't have sex with a sick person.|Просто я просто не могу заниматься сексом с больным человеком.
+[scoffs] I'm with you, Chandler.|[усмехается] Я с тобой, Чендлер.
+I mean, I can't have sex with a sick person either.|То есть, я тоже не могу заниматься сексом с больным человеком.
+That's disgusting!|Это отвратительно!
+But I'm not sick!|Но я не болен!
+Let me prove it to you.|Позвольте мне доказать вам это.
+We are two healthy people in the prime of lime.|Мы два здоровых человека в расцвете сил.
+See, that's the thing, I would like to stay|Видишь, вот в чем дело, я бы хотел остаться
+[babbling] in the prime of lime.|[лепет] в расцвете лайма.
+You wanted it to be a surprise.|Вы хотели сделать сюрприз.
+[door slams]|[хлопает дверью]
+Oh, my God.|О Боже.
+Chandler..|Чендлер ..
+...in all my life..|...за свою жизнь..
+...I never thought I would be so lucky..|... Никогда не думала, что мне так повезет ..
+[sobbing] ...as to fall in love with my best..|[всхлипывает] ... как влюбиться в лучшее ...
+[sobbing] ...my best..|[всхлипывает] ... мое лучшее ..
+There's a reason why girls don't do this!|Есть причина, по которой девушки этого не делают!
+Okay, okay, okay.|Хорошо, хорошо, хорошо.
+I'll do it.|Я сделаю это.
+I thought..|Я думал..
+[sobbing] Wait, I-I can do this.|[рыдания] Подожди, я могу это сделать.
+[chuckles]|[смеется]
+I thought..|Я думал..
+...that it mattered, what I said..|... то, что я сказал, имело значение ...
+...or where I said it.|... или где я это сказал.
+Then I realized..|Потом я понял ..
+...the only thing that matters is that you..|... важно только то, что вы ..
+...you make me happier..|... ты делаешь меня счастливее ..
+...than I ever thought I could be.|... чем я когда-либо думал, что могу быть.
+[chuckles]|[смеется]
+And if you let me..|И если вы позволите мне ..
+...I will spend the rest of my life|... я проведу остаток своей жизни
+trying to make you feel the same way.|пытаюсь заставить вас чувствовать то же самое.
+[chuckles]|[смеется]
+[chuckling]|[посмеивается]
+Monica? - Yeah.|- Моника? - Да.
+Will you marry me?|Ты выйдешь за меня?
+[chuckles]|[смеется]
+Yes.|Да.
+"Chandler, for so long, I..|"Чендлер, я так долго ...
+"I wondered if I would ever find my prince.|"Я задавался вопросом, найду ли я когда-нибудь своего принца.
+"My soul mate.|"Моя родственная душа.
+"Then three years ago, at another wedding|"Потом три года назад на другой свадьбе
+"I turned to a friend for comfort|"Я обратился к другу за утешением
+"and instead I found everything that I had ever been|"и вместо этого я нашел все, чем когда-либо был
+"looking for my whole life.|"ищу всю свою жизнь.
+"And now..|"И сейчас..
+"...here we are..|"...мы здесь..
+"...with our future before us.|"... с нашим будущим перед нами.
+"And I only want to spend it with you.|"И я хочу провести его только с тобой.
+My prince, my soulmate, my friend."|Мой принц, моя вторая половинка, мой друг ».
+Unless you don't want to.|Если только ты не хочешь.
+You go.|Ты иди.
+Chandler.|Чендлер.
+Uh, that's okay.|Ничего страшного.
+Monica, I thought this was gonna be|Моника, я думала, это будет
+the most difficult thing I ever had to do.|самое трудное, что мне приходилось делать.
+But when I saw you walking down that aisle|Но когда я увидел, как ты идешь по проходу
+I realized how simple it was.|Я понял, насколько это просто.
+I love you.|Я тебя люблю.
+Any surprises that come our way|Любые сюрпризы, которые встречаются на нашем пути
+it's okay, because I will always love you.|это нормально, потому что я всегда буду любить тебя.
+You are the person I was meant to spend|Ты человек, которого я должен был потратить
+the rest of my life with.|остаток моей жизни с.
+You wanna know if I'm sure?|Вы хотите знать, уверен ли я?
+You, uh, may now kiss the bride.|Теперь ты можешь поцеловать невесту.
+So..|Так..
+...I guess by the powers vested in me|... Я полагаю, что властью, предоставленной мне
+by the state of New York and the internet guys..|штат Нью-Йорк и интернет-ребята ..
+...I now pronounce you husband and wife.|... Я объявляю вас мужем и женой.
+Oh, wait.|Ой, подожди.
+Do you take each other?|Вы принимаете друг друга?
+I do. - I do.|- Я делаю. - Я делаю.
+Yeah, you do.|Да, знаешь.
+Rings. - Oh, crap.|- Кольца. - Вот дерьмо.
+Okay, um..|Ладно ..
+Uh, uh, let's do the rings.|Давай сделаем кольца.
+We good? Yeah? Good?|Мы хороши? Да? Хорошо?
+[clears throat]|[прочищает горло]
+Once again, I pronounce you husband and wife.|Еще раз объявляю вас мужем и женой.
+Now kiss her again.|А теперь поцелуй ее снова.
+[cheering]|[аплодисменты]
+Oh, good God!|О боже!
+If you want a baby so bad, just go steal it.|Если ты так сильно хочешь ребенка, просто иди и укради его.
+What is going on with you?|Что с тобой происходит?
+Since when are you so crazy about babies?|С каких это пор ты так без ума от младенцев?
+I'm not crazy about babies.|Я не без ума от младенцев.
+I'm crazy about us.|Я без ума от нас.
+What? - Look..|- Какой? - Смотреть..
+We've always talked about having babies someday.|Мы всегда говорили о том, что когда-нибудь родим детей.
+I'm not saying it has to be right now, but I'm..|Я не говорю, что это должно быть прямо сейчас, но я ...
+...starting to think that we can handle it.|... начинаю думать, что мы справимся.
+We're good.|Были хороши.
+We're really good.|Мы действительно хороши.
+We are pretty good.|У нас все хорошо.
+But nothing has to happen till you're ready.|Но ничего не должно происходить, пока вы не будете готовы.
+Well, maybe I'm ready now.|Ну, может, теперь я готов.
+I mean, it's a little scary, but...maybe it's right.|Я имею ввиду, это немного страшно, но ... может быть, это правильно.
+What? It's not right.|Какой? Это не правильно.
+We're not ready to have a kid now.|Мы не готовы сейчас иметь ребенка.
+What? - I'm kidding.|- Какой? - Я шучу.
+This is gonna be fun.|Это будет весело.
+So, we're gonna try? I mean, we're trying?|Итак, мы попробуем? Я имею в виду, мы пытаемся?
+We're trying to get pregnant.|Мы пытаемся забеременеть.
+Mm..|Мм ..
+You know what, I'm not really comfortable doing this|Знаете что, мне не очень комфортно это делать
+in front of the babies.|на глазах у младенцев.
+So, when do you wanna start tryin'?|Итак, когда вы хотите начать?
+Alright, hold on a sec.|Хорошо, подожди секунду.
+Period math? - Yeah.|- Математика периода? - Да.
+Yeah.|Да.
+Well, we could start trying...now.|Что ж, мы можем начать попытки ... сейчас.
+Right here?|Прямо здесь?
+No, not here.|Нет, не здесь.
+Maybe here.|Может быть здесь.
+Wait a minute, it's perfect, we've got a lot of time to kill|Подождите, это прекрасно, у нас есть много времени, чтобы убить
+and we're in a building that's full of beds.|и мы находимся в здании, полном кроватей.
+And it's so clean.|И это так чисто.
+I think we found our sperm.|Я думаю, мы нашли нашу сперму.
+He does seem pretty perfect.|Он действительно кажется довольно идеальным.
+Yeah? You think so?|Да? Ты так думаешь?
+Well, should I ask him?|Что ж, мне его спросить?
+No. - 'Why not?'|- Нет. - Почему бы и нет?
+Just because his great-grandmother was obese?|Просто потому, что его прабабушка страдала ожирением?
+Our kid's gonna get that from you anyway.|Наш ребенок все равно получит это от тебя.
+No, that's not it.|Нет, не то.
+It's just that when we were asking him|Просто когда мы его спрашивали
+all those questions before, I just..|все эти вопросы раньше, я просто ..
+[sighs] ...I just realized I don't care|[вздыхает] ... Я только что понял, что мне все равно
+if he is the most perfect guy in the world.|если он самый идеальный парень в мире.
+He's not you. - Yeah! He's better!|- Он не ты. - Да! Ему лучше!
+No, he's not.|Нет, он не.
+And if I can't get pregnant with you|И если я не могу забеременеть от тебя
+then I don't want to get pregnant by him|тогда я не хочу забеременеть от него
+or anyone else.|или кто-нибудь еще.
+Really? Are-are you sure?|В самом деле? Вы уверены?
+Yeah, I'm sure. - Oh, thank God.|- Да, я уверен. - О, слава богу.
+Because I don't wanna do this either.|Потому что я тоже не хочу этого делать.
+You know, I was just doing it because I thought|Знаешь, я просто делал это, потому что думал
+that was what you wanted to do. You know, I'm the husband.|это было то, что ты хотел сделать. Вы знаете, я муж.
+I'm supposed to bring the sperm.|Я должен принести сперму.
+That is so sweet.|Это так мило.
+I love you.|Я тебя люблю.
+So, you know, this leaves us with..|Итак, вы знаете, это оставляет нам ...
+Adoption.|Принятие.
+How do you feel about that?|Как вы к этому относитесь?
+I think I feel okay about it.|Я думаю, что это нормально.
+Actually, I-I, I think I feel really good about it.|На самом деле, я-я, я думаю, мне это очень нравится.
+Me too.|Я тоже.
+I wanna find a baby that needs a home|Я хочу найти ребенка, которому нужен дом
+and I wanna raise it with you.|и я хочу поднять это с тобой.
+[sighs] And I wanna mess it up|[вздыхает] И я хочу все испортить
+in our own specific way.|по-своему.
+So th-this is it? We're, we're really going to adopt?|Итак, это оно? Мы действительно собираемся усыновить?
+Yeah.|Да.
+Oh, my God, we're gonna be parents!|Боже мой, мы будем родителями!
+We are gonna be great parents.|Мы будем хорошими родителями.
+And it could be soon. I mean, I mean, think about it.|И это может быть скоро. Я имею в виду, я имею в виду, подумай об этом.
+Right now, somewhere out there|Прямо сейчас где-то там
+our baby could be being conceived.|наш ребенок может быть зачат.
+Wait, if we're lucky|Подожди, если нам повезет
+and we're really, really, really quiet|и мы очень, очень, очень тихо
+we may be able to hear the sound of a condom breaking.|мы можем услышать звук разрыва презерватива.
+[instrumental music]|[инструментальная музыка]
+Look, look, look what the, look what|Смотри, смотри, смотри, что, смотри, что
+look what floating heads did.|посмотрите, что сделали парящие головы.
+I don't care.|Мне все равно.
+What's going on?|В чем дело?
+That was the adoption agency.|Это было агентство по усыновлению.
+And?|И?
+We're getting a baby!|Мы рожаем!
+Are you serious?|Ты серьезно?
+There's a pregnant woman in Ohio, and she picked us.|В Огайо есть беременная женщина, и она выбрала нас.
+[cheering]|[аплодисменты]
+I'm so happy for you.|Я так рад за тебя.
+This Thanksgiving kicks last Thanksgiving's ass.|Этот День Благодарения надрал задницу последнему.
+Whoo.|Ого.
+And Rachel, this is yours.|И Рэйчел, это твое.
+[squeals] What! What are these for?|[визжит] Что! Для чего они нужны?
+You'll see.|Вот увидишь.
+Alright. Everybody open them. - Okay.|- Хорошо. Все открывают их. - Ладно.
+[gasps] Oh, wow, this is so beautiful!|[вздыхает] Ого, это так красиво!
+Oh, these are the ones I was looking at in the store.|О, это те, которые я искал в магазине.
+I know. - I love this.|- Я знаю. - Мне это нравится.
+A meatball sub!|Подводка с фрикадельками!
+Thanks!|Спасибо!
+Seriously, you guys. What's going on?|Серьезно, ребята. В чем дело?
+Wha-what are these for?|Для чего это?
+Well, I didn't know how to tell you before, but..|Ну, я не знал, как тебе сказать раньше, но ...
+...we got the house.|... у нас есть дом.
+Enjoy!|Наслаждайтесь!
+What did they say?|Что они сказали?
+[instrumental music]|[инструментальная музыка]
+Do you think they recognize each other from in there?|Как вы думаете, оттуда они узнают друг друга?
+[chuckles] Maybe.|[смеется] Может быть.
+Unless they're like two people who've lived in apartments|Если они не похожи на двух людей, которые жили в квартирах
+next to each other for years and then one day|рядом друг с другом в течение многих лет, а затем в один прекрасный день
+they're pushed through a vagina and they meet.|их проталкивают через влагалище, и они встречаются.
+We're going to take Erica to recovery now.|Мы собираемся вылечить Эрику сейчас.
+(Monica) There's something that we want to tell you.|(Моника) Мы хотим вам кое-что сказать.
+We decided to name the girl baby...Erica.|Мы решили назвать девочку малышкой ... Эрикой.
+Oh, my God. That's just like my name!|О Боже. Это прямо как мое имя!
+Son of a gun, it is.|Сын пистолета, это так.
+Anyway, I'm gonna go get some rest.|В любом случае, я пойду немного отдохнуть.
+I'm really glad I picked you guys.|Я действительно рад, что выбрал вас, ребята.
+You're gonna make great parents.|Из тебя будут хорошие родители.
+Even Chandler.|Даже Чендлер.
+Okay, well, bye. - Bye.|- Ладно, ну пока. - До свидания.
+We'll call you. - Okay.|- Мы вам перезвоним. - Ладно.
+Hey, have fun at church camp.|Эй, развлекайся в церковном лагере.
+Oh, look at these little bunnies.|О, посмотрите на этих маленьких кроликов.
+I know.|Я знаю.
+You ready to trade?|Вы готовы торговать?
+Okay. - Okay.|- Ладно. - Ладно.
+Oh, wait, let's see.|Ой, подожди, посмотрим.
+Take this little baby..|Возьми этого маленького ребенка ...
+We could trade later. - Yeah, I'm good.|- Мы могли бы торговать позже. - Да, я в порядке.
+[instrumental music]|[инструментальная музыка]
