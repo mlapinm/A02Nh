@@ -1,7 +1,7 @@
 Cisco CCNA (200-120)_ The Complete Course Subs   
 Course Curriculum   
 Welcome to the most COMPLETE CCNA (200-120) Course...get ready to be amazed!   
-[Your First Journey into the Cisco World](c01_Your.md)   
+[Your First Journey into the Cisco World](c01_Your First Journey into the Cisco World.md)   
 [Why acquire a CCNA certification](c02_Why acquire a CCNA certification.md)   
 [How would you get CCNA Certified](c03_How would you get CCNA Certified.md)   
 [Which CCNA test should I take](c04_Which CCNA test should I take.md)   
