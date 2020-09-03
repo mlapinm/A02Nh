@@ -8,6 +8,7 @@
 [Basic English Grammar](#Basic-English-Grammar)  
 [Ask Alisha](#Ask-Alisha)  
 [Mistakes](#Mistakes)  
+[Footer](#Footer)  
 
 ## How
 1. [3 Easy Ways to Improve Your English Everyday!](a0432class.md)  
@@ -229,6 +230,8 @@
 1. [Geography Word Association with English speakers](a0367class.md)  
 1. [SAY, TELL, SPEAK - What is the difference? Confusing English Verbs](a0392class.md)  
 1. [Pets Word Association with English speakers](a0388class.md)  
+
+## Footer
 
 [Verbling - современный способ изучения Английского языка](https://www.youtube.com/watch?v=zMjAtCwak60&list=PLIU76b8Cjem6NwisglQY6BqPBn9dTxuNJ&index=11)  
 [английский от Яндекс.Практикума](https://flow.yandex.ru/)  

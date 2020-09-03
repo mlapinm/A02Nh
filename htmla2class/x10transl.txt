@@ -1,0 +1,8 @@
+appropriate	соответствующий
+hint	намек
+sincere	искренний
+exciting	захватывающе
+embarrassing	смущающий
+mention	упомянуть
+so there's a big hint word here	так что здесь есть большое слово-подсказка
+This phrase is appropriate for both situations.	Эта фраза подходит для обеих ситуаций.
