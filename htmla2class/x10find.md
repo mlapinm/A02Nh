@@ -1,5 +1,32 @@
 __|__
 --|--
+a0241class.md cover|обложка 
+These cover job vocabulary and more, and include a picture and audio to help you perfect your pronunciation.|Они охватывают словарный запас о работе и многое другое, а также включают изображение и аудио, которые помогут вам улучшить свое произношение.
+a0242class.md cover|обложка 
+We’ll cover this and more in the next English in 3 minutes lesson.|Мы расскажем об этом и многом другом на следующем трехминутном уроке английского языка.
+a0280class.md cover|обложка 
+Next, “covering all bases.|Далее «покрытие всех баз.
+Make sure you have all bases covered.|Убедитесь, что у вас есть все основания.
+a0286class.md cover|обложка 
+But maybe in the East of Asia, they will cover up like in Vietnam, they will cover up everything because the whiter you are means the wealthier.|Но, может быть, на Востоке Азии они будут прикрывать, как во Вьетнаме, прикрывать все, потому что чем вы белее, тем богаче.
+a0302class.md cover|обложка 
+In an example sentence, one of my favorite practical jokes is covering a doorway with saran wrap so that when someone walks through it, they get caught in the saran wrap and are a little confused for a second.|В приведенном в качестве примера предложении одна из моих любимых розыгрышей - накрыть дверной проем саранской пленкой, чтобы, когда кто-то проходит через нее, они застревали в саранской пленке и на секунду были немного сбиты с толку.
+Plastic wrap is a clear – clear film that you usually use to cover food in your refrigerator or maybe if you put something in the Microwave but it is also commonly used on April fool’s|Пластиковая пленка - это прозрачная прозрачная пленка, которую вы обычно используете, чтобы накрыть еду в холодильнике или, может быть, если вы положите что-то в микроволновую печь, но ее также часто используют на первоапрельских дураках.
+So people can walk into it or I’ve heard of even like really cruelly some people covering like toilet seats with Saran wrap.|Так что люди могут войти в него, или я слышал о том, что некоторые люди, как сиденья унитаза, покрываются пленкой Saran.
+a0322class.md cover|обложка 
+I really had my walls just covered in Hanson posters.|Я действительно была моей стены просто покрыты плакатами Хэнсон.
+a0353class.md cover|обложка 
+I would always up late reading books, I would be, like, under the covers reading book, my parents would find me, go to bed!|Я всегда до конца читаю книги, я бы, например, под одеялом, читать книгу, Мои родители бы меня найти, иди спать!
+a0378class.md cover|обложка 
+And you can go there, maybe you need to buy tickets, but sometimes it covers like one or two days, a festival event does.|И вы можете пойти туда, может быть, вам нужно купить билеты, но иногда это занимает один или два дня, фестивальное мероприятие.
+a0423class.md cover|обложка 
+“Do we say ‘who invented the internet’ or ‘who discovered the internet?|“Do we say ‘who invented the internet’ or ‘who discovered the internet?
+Because generally, when we use the word “discovered,” we're using it for things that already existed.|Because generally, when we use the word “discovered,” we're using it for things that already existed.
+We can say, “I discovered that thing.|We can say, “I discovered that thing.
+“He discovered a new species,” “She discovered an island,” “They discovered the cure.|“He discovered a new species,” “She discovered an island,” “They discovered the cure.
+So, I hope that helps a little bit, the difference between “discover” and “invent.|So, I hope that helps a little bit, the difference between “discover” and “invent.
+a0302class.md to cover|покрывать 
+Plastic wrap is a clear – clear film that you usually use to cover food in your refrigerator or maybe if you put something in the Microwave but it is also commonly used on April fool’s|Пластиковая пленка - это прозрачная прозрачная пленка, которую вы обычно используете, чтобы накрыть еду в холодильнике или, может быть, если вы положите что-то в микроволновую печь, но ее также часто используют на первоапрельских дураках.
 a0244class.md appropriate|соответствующий 
 This phrase is appropriate for both formal and informal situations.|Эта фраза подходит как для формальных, так и для неформальных ситуаций.
 a0276class.md appropriate|соответствующий 
@@ -191,3 +218,5 @@ a0436class.md mention|упомянуть
 Um, but the second one here that you mentioned, uh, "to spoil an experience" means to make the experience bad.|Хм, но второй здесь, который вы упомянули, эм, «испортить впечатление» означает испортить впечатление.
 a0370class.md so there's a big hint word here|так что здесь есть большое слово-подсказка 
 Okay, so there's a big hint word here, I have the word "for" included in this sentence.|Хорошо, здесь есть большое слово-подсказка, у меня есть слово «для», включенное в это предложение.
+a0241class.md These cover job vocabulary|Они охватывают словарный запас 
+These cover job vocabulary and more, and include a picture and audio to help you perfect your pronunciation.|Они охватывают словарный запас о работе и многое другое, а также включают изображение и аудио, которые помогут вам улучшить свое произношение.

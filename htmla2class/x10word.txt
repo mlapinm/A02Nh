@@ -1,3 +1,5 @@
+cover	обложка
+to cover	покрывать
 appropriate	соответствующий
 hint	намек
 sincere	искренний
@@ -6,3 +8,4 @@ embarrassing	смущающий
 mention	упомянуть
 so there's a big hint word here	так что здесь есть большое слово-подсказка
 This phrase is appropriate for both situations.	Эта фраза подходит для обеих ситуаций.
+These cover job vocabulary	Они охватывают словарный запас
