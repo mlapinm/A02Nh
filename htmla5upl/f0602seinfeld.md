@@ -1,7 +1,4 @@
-
-f0602seinfeld.md
-
-
+f0602seinfeld.md  
 
 
 [Seinfeld: Not That There's Anything Wrong With That (Clip) | TBS](#Seinfeld-Not-That-Theres-Anything-Wrong-With-That-Clip--TBS)  

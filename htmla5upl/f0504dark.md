@@ -1,10 +1,4 @@
-
 f0504dark.md  
-
-
-
-
-
 
 
 [Miracle Workers: Dark Ages | Siege of the Century | TBS](#Miracle-Workers-Dark-Ages--Siege-of-the-Century--TBS)  

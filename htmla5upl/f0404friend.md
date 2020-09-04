@@ -1,13 +1,6 @@
 f0404friend.md  
 
 
-
-
-f0404friend.md  
-
-
-
-
 [Friends: Pete The Ultimate Fighting Champion (Season 3 Clip) | TBS](#Friends-Pete-The-Ultimate-Fighting-Champion-Season-3-Clip--TBS)  
 [Friends: Phoebe Sets Ross Up On a Date (Season 3 Clip) | TBS](#Friends-Phoebe-Sets-Ross-Up-On-a-Date-Season-3-Clip--TBS)  
 [Friends: Ross Gets Something Removed (Season 3 Clip) | TBS](#Friends-Ross-Gets-Something-Removed-Season-3-Clip--TBS)  

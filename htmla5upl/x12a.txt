@@ -1,16 +1,21 @@
+a0404lesson.md
 [Нажмите здесь, чтобы проверить некоторые курсы](#Нажмите-здесь,-чтобы-проверить-некоторые-курсы)
-## Нажмите здесь, чтобы проверить некоторые курсы
-[Нажмите здесь, чтобы проверить некоторые курсы](https://www.youtube.com/playlist?list=PLVO-NFD2wv2tWqq8NLYmnQTOzjd6w553P)
 == === === a0404lesson.md === === ==
 f0402friend.md
 [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](#Friends-Ross-Finally-Reads-Rachels-Letter-Season-4-Clip--TBS)
 [Friends: The Friends Play a Stripping Game (Season 3 Clip) | TBS](#Friends-The-Friends-Play-a-Stripping-Game-Season-3-Clip--TBS)
 == === === f0402friend.md === === ==
 f0404friend.md
+[Friends: Pete The Ultimate Fighting Champion (Season 3 Clip) | TBS](#Friends-Pete-The-Ultimate-Fighting-Champion-Season-3-Clip--TBS)
+[Friends: Phoebe Sets Ross Up On a Date (Season 3 Clip) | TBS](#Friends-Phoebe-Sets-Ross-Up-On-a-Date-Season-3-Clip--TBS)
 == === === f0404friend.md === === ==
 f0504dark.md
+[Miracle Workers: Dark Ages | Siege of the Century | TBS](#Miracle-Workers-Dark-Ages--Siege-of-the-Century--TBS)
+[Miracle Workers: Dark Ages | History of the Dark Ages | TBS](#Miracle-Workers-Dark-Ages--History-of-the-Dark-Ages--TBS)
 == === === f0504dark.md === === ==
 f0602seinfeld.md
+[Seinfeld: Not That There's Anything Wrong With That (Clip) | TBS](#Seinfeld-Not-That-Theres-Anything-Wrong-With-That-Clip--TBS)
+[Seinfeld: Marry Me (Clip) | TBS](#Seinfeld-Marry-Me-Clip--TBS)
 == === === f0602seinfeld.md === === ==
 m0440mult.md
 [Wheels On The Bus - Part 1 (Green Bus) 0:04](#Wheels-On-The-Bus---Part-1-Green-Bus-004)
@@ -19,22 +24,20 @@ m0442mult.md
 [101 One Hundred And One Dalmatians](#101-One-Hundred-And-One-Dalmatians)
 == === === m0442mult.md === === ==
 m0502dad.md
+[American Dad: Roger Finds a New Star for His Bar (Clip) | TBS](#American-Dad-Roger-Finds-a-New-Star-for-His-Bar-Clip--TBS)
+[American Dad: Steve's Secret Admirer (Clip) | TBS](#American-Dad-Steves-Secret-Admirer-Clip--TBS)
 == === === m0502dad.md === === ==
 m0504family.md
+[Family Guy: Joe's Son Returns from Iraq (Clip) | TBS](#Family-Guy-Joes-Son-Returns-from-Iraq-Clip--TBS)
+[Family Guy: Brian and Stewie's 3D Time Travel (Clip) | TBS](#Family-Guy-Brian-and-Stewies-3D-Time-Travel-Clip--TBS)
 == === === m0504family.md === === ==
 m0512story.md
+[Storyville with Kevin Garnett | Letting Rondo Choke Was The Motivation We Needed | TBS Digital](#Storyville-with-Kevin-Garnett--Letting-Rondo-Choke-Was-The-Motivation-We-Needed--TBS-Digital)
+[Storyville with Fat Joe: God Sent Us Mike Tyson | TBS Digital](#Storyville-with-Fat-Joe-God-Sent-Us-Mike-Tyson--TBS-Digital)
 == === === m0512story.md === === ==
-## UPL universal pictire language
-[]()
-[]()
-[]()
-[]()
-== === === README.md === === ==
+s0202upl.md
 [dido thank you Lyrics Subtitles UPL](#dido-thank-you-Lyrics-Subtitles-UPL) [Lilly Wood and the Prick Prayer in C Lyrics Subtitles UPL](#Lilly-Wood-and-the-Prick-Prayer-in-C-Lyrics-Subtitles-UPL)
 [Learn English with Songs - Danny Boy - Lyric Lab](#Learn-English-with-Songs---Danny-Boy---Lyric-Lab)
-[California Dreaming Mamas and Papas lyrics subtitles UPL](#California-Dreaming-Mamas-and-Papas-lyrics-subtitles-UPL)
-[John Lennon - Imagine Lyrics UPL](#John-Lennon---Imagine-Lyrics-UPL)
-[Help Beatles Lyrics Subtitles UPL](#Help-Beatles-Lyrics-Subtitles-UPL)
 == === === s0202upl.md === === ==
 s0402class.md
 [Learn English with Songs - Perfect Tense - Lyric Lab](#Learn-English-with-Songs---Perfect-Tense---Lyric-Lab)
