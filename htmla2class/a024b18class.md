@@ -1,11 +1,10 @@
 a024b18class.md  
 
 
-
-[Asking "What are you doing in this city?"](#Asking-"What-are-you-doing-in-this-city?")  
+[18 Asking "What are you doing in this city?"](#18-Asking-"What-are-you-doing-in-this-city?")  
   
-## Asking "What are you doing in this city?"
-[Asking "What are you doing in this city?"](https://www.englishclass101.com/lesson/learn-english-in-three-minutes-18-what-are-you-doing-in-tokyo/?lp=268)   
+## 18 Asking "What are you doing in this city?"
+[18 Asking "What are you doing in this city?"](https://www.englishclass101.com/lesson/learn-english-in-three-minutes-18-what-are-you-doing-in-tokyo/?lp=268)   
   
   
 __|__
