@@ -1,3 +1,7 @@
+a024b35class.md  
+
+
+
 [35 Buying Tickets for Public Transportation](#35-Buying-Tickets-for-Public-Transportation)  
   
 ## 35 Buying Tickets for Public Transportation
