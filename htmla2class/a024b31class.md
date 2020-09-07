@@ -1,10 +1,10 @@
 a024b31class.md  
 
 
-[How to Buy Items at a Register in English](#How-to-Buy-Items-at-a-Register-in-English)  
+[31 How to Buy Items at a Register in English](#31-How-to-Buy-Items-at-a-Register-in-English)  
   
-## How to Buy Items at a Register in English
-[How to Buy Items at a Register in English](https://www.englishclass101.com/lesson/innovative-english-6-how-to-buy-items-at-a-register-in-english/?lp=268)   
+## 31 How to Buy Items at a Register in English
+[31 How to Buy Items at a Register in English](https://www.englishclass101.com/lesson/innovative-english-6-how-to-buy-items-at-a-register-in-english/?lp=268)   
   
   
 __|__
