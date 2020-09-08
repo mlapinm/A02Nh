@@ -6,7 +6,7 @@ m0512story.md
 [Storyville with Big Boi: How His Boom Boom Room Became His Mother's Den | TBS Digital](#Storyville-with-Big-Boi-How-His-Boom-Boom-Room-Became-His-Mothers-Den--TBS-Digital)  
 [Storyville with Post Malone (feat. Justin Bieber) | TBS Digital](#Storyville-with-Post-Malone-feat-Justin-Bieber--TBS-Digital)  
 [Storyville with Diplo (feat. Kanye West) | TBS](#Storyville-with-Diplo-feat-Kanye-West--TBS)  
-[Storyville with Jensen Karp (feat. Jimmy Iovine) | TBS](#Storyville-with-Jensen-Karp-feat.-Jimmy-Iovine--TBS)  
+[Storyville with Jensen Karp (feat. Jimmy Iovine) | TBS](#Storyville-with-Jensen-Karp-feat-Jimmy-Iovine--TBS)  
 [Storyville with Common (feat. Prince) | TBS Digital](#Storyville-with-Common-feat-Prince--TBS-Digital)  
 [Storyville with DJ Nu-Mark (feat. Paul McCartney and Jurassic 5) | TBS Digital](#Storyville-with-DJ-Nu-Mark-feat-Paul-McCartney-and-Jurassic-5--TBS-Digital)  
   
