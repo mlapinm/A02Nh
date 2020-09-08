@@ -4,11 +4,11 @@ m0512story.md
 [Storyville with Kevin Garnett | Letting Rondo Choke Was The Motivation We Needed | TBS Digital](#Storyville-with-Kevin-Garnett--Letting-Rondo-Choke-Was-The-Motivation-We-Needed--TBS-Digital)  
 [Storyville with Fat Joe: God Sent Us Mike Tyson | TBS Digital](#Storyville-with-Fat-Joe-God-Sent-Us-Mike-Tyson--TBS-Digital)  
 [Storyville with Big Boi: How His Boom Boom Room Became His Mother's Den | TBS Digital](#Storyville-with-Big-Boi-How-His-Boom-Boom-Room-Became-His-Mothers-Den--TBS-Digital)  
-[Storyville with Post Malone (feat. Justin Bieber) | TBS Digital](#Storyville-with-Post-Malone-feat.-Justin-Bieber--TBS-Digital)  
-[Storyville with Diplo (feat. Kanye West) | TBS](#Storyville-with-Diplo-feat.-Kanye-West--TBS)  
+[Storyville with Post Malone (feat. Justin Bieber) | TBS Digital](#Storyville-with-Post-Malone-feat-Justin-Bieber--TBS-Digital)  
+[Storyville with Diplo (feat. Kanye West) | TBS](#Storyville-with-Diplo-feat-Kanye-West--TBS)  
 [Storyville with Jensen Karp (feat. Jimmy Iovine) | TBS](#Storyville-with-Jensen-Karp-feat.-Jimmy-Iovine--TBS)  
-[Storyville with Common (feat. Prince) | TBS Digital](#Storyville-with-Common-feat.-Prince--TBS-Digital)  
-[Storyville with DJ Nu-Mark (feat. Paul McCartney and Jurassic 5) | TBS Digital](#Storyville-with-DJ-Nu-Mark-feat.-Paul-McCartney-and-Jurassic-5--TBS-Digital)  
+[Storyville with Common (feat. Prince) | TBS Digital](#Storyville-with-Common-feat-Prince--TBS-Digital)  
+[Storyville with DJ Nu-Mark (feat. Paul McCartney and Jurassic 5) | TBS Digital](#Storyville-with-DJ-Nu-Mark-feat-Paul-McCartney-and-Jurassic-5--TBS-Digital)  
   
 ## Storyville with Kevin Garnett | Letting Rondo Choke Was The Motivation We Needed | TBS Digital
 [Storyville with Kevin Garnett | Letting Rondo Choke Was The Motivation We Needed | TBS Digital](https://www.youtube.com/watch?v=EZyOWkb5Q4s&list=PLJBo3iyb1U0fyCggqtRsAMhAY8Sgnk7dK)   
