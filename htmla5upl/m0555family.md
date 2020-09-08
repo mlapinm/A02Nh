@@ -1,6 +1,6 @@
-[Family Guy: Peter’s Night Out Takes a Crazy Turn (Clip) | TBS](#Family-Guy-Peter’s-Night-Out-Takes-a-Crazy-Turn-Clip--TBS)  
-[Family Guy: Peter and Quagmire Promote Goldman’s Pharmacy (Clip) | TBS](#Family-Guy-Peter-and-Quagmire-Promote-Goldman’s-Pharmacy-Clip--TBS)  
-[Family Guy: Peter and Quagmire Promote Goldman’s Pharmacy (Clip) | TBS](#Family-Guy-Peter-and-Quagmire-Promote-Goldman’s-Pharmacy-Clip--TBS)  
+[Family Guy: Peter’s Night Out Takes a Crazy Turn (Clip) | TBS](#Family-Guy-Peters-Night-Out-Takes-a-Crazy-Turn-Clip--TBS)  
+[Family Guy: Peter and Quagmire Promote Goldman’s Pharmacy (Clip) | TBS](#Family-Guy-Peter-and-Quagmire-Promote-Goldmans-Pharmacy-Clip--TBS)  
+[Family Guy: Peter and Quagmire Promote Goldman’s Pharmacy (Clip) | TBS](#Family-Guy-Peter-and-Quagmire-Promote-Goldmans-Pharmacy-Clip--TBS)  
 [Family Guy: Chris Enters a Hot Dog Eating Contest (Clip) | TBS](#Family-Guy-Chris-Enters-a-Hot-Dog-Eating-Contest-Clip--TBS)  
 [Family Guy: Chris Enters a Hot Dog Eating Contest (Clip) | TBS](#Family-Guy-Chris-Enters-a-Hot-Dog-Eating-Contest-Clip--TBS)  
 [Family Guy: Peter's New Mercedes Hood Ornament (Clip) | TBS](#Family-Guy-Peters-New-Mercedes-Hood-Ornament-Clip--TBS)  
@@ -861,3 +861,6 @@ Is this what black people see all the time?|Это то, что все врем�
 (gasps) Look!|(задыхается) Смотри!
 (screaming)|(кричит)
 He's dead.|Он мертв.
+
+  
+  
