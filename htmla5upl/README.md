@@ -7,7 +7,7 @@
 1. [Seinfeld: Not That There's Anything Wrong With That (Clip) | TBS](f0602seinfeld.md)  
 1. [Wheels On The Bus - Part 1 (Green Bus) 0:04](m0440mult.md)  
 1. [101 One Hundred And One Dalmatians](m0442mult.md)  
-1. [American Dad: Roger Finds a New Star for His Bar (Clip) | TBS](m0502dad.md)  
+1. [American Dad: Roger Finds a New Star for His Bar (Clip) | TBS](m0500dad.md)  
 1. [Family Guy: Joe's Son Returns from Iraq (Clip) | TBS](m0500family.md)  
 1. [Storyville with Kevin Garnett | Letting Rondo Choke Was The Motivation We Needed | TBS Digital](m0512story.md)  
 1. [dido thank you Lyrics Subtitles UPL](#dido-thank-you-Lyrics-Subtitles-UPL) 
