@@ -2,8 +2,7 @@
 []()  
 
 1. [Нажмите здесь, чтобы проверить некоторые курсы](a0404lesson.md)  
-1. [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](f0402friend.md)  
-1. [Friends: Pete The Ultimate Fighting Champion (Season 3 Clip) | TBS](f0404friend.md)  
+1. [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](f0400friend.md)  
 1. [Miracle Workers: Dark Ages | Siege of the Century | TBS](f0504dark.md)  
 1. [Seinfeld: Not That There's Anything Wrong With That (Clip) | TBS](f0602seinfeld.md)  
 1. [Wheels On The Bus - Part 1 (Green Bus) 0:04](m0440mult.md)  
