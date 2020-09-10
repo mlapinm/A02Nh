@@ -158,4 +158,19 @@
 
 
 
-
+1. [Friends: Ross Falls into a Grave at Nana’s Funeral (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-Falls-into-a-Grave-at-Nanas-Funeral-Season-1-Clip--TBS)  
+1. [Friends: Chandler’s Shocked that People Assume He’s Gay (Season 1 Clip) | TBS](f0422friend.md#Friends-Chandlers-Shocked-that-People-Assume-Hes-Gay-Season-1-Clip--TBS)  
+1. [Friends: Ross Gets Mauled by Cat (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-Gets-Mauled-by-Cat-Season-1-Clip--TBS)  
+1. [Friends: Ross Almost Confesses his Feelings for Rachel (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-Almost-Confesses-his-Feelings-for-Rachel-Season-1-Clip--TBS)  
+1. [Friends: Joey Loses the Role of Al Pacino’s Butt (Season 1 Clip) | TBS](f0422friend.md#Friends-Joey-Loses-the-Role-of-Al-Pacinos-Butt-Season-1-Clip--TBS)  
+1. [Friends: Monica Doesn’t Think She Has OCD (Season 1 Clip) | TBS](f0422friend.md#Friends-Monica-Doesnt-Think-She-Has-OCD-Season-1-Clip--TBS)  
+1. [Friends: Ross Teaches Rachel How To Do Laundry (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-Teaches-Rachel-How-To-Do-Laundry-Season-1-Clip--TBS)  
+1. [Friends: Chandler Decides To Break Up With Janice (Season 1 Clip) | TBS](f0422friend.md#Friends-Chandler-Decides-To-Break-Up-With-Janice-Season-1-Clip--TBS)  
+1. [Friends: Ross gets rushed to the Emergency Room (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-gets-rushed-to-the-Emergency-Room-Season-1-Clip--TBS)  
+1. [Friends: Rachel Get her First Paycheck from Central Perk (Season 1 Clip) | TBS](f0422friend.md#Friends-Rachel-Get-her-First-Paycheck-from-Central-Perk-Season-1-Clip--TBS)  
+1. [Friends: Monica Breaks Up with Alan (Season 1 Clip) | TBS](f0422friend.md#Friends-Monica-Breaks-Up-with-Alan-Season-1-Clip--TBS)  
+1. [Friends: Chandler’s Caught Smoking (Season 1 Clip) | TBS](f0422friend.md#Friends-Chandlers-Caught-Smoking-Season-1-Clip--TBS)  
+1. [Friends: Ross reveals his Ex-Wife Carol is Pregnant (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-reveals-his-Ex-Wife-Carol-is-Pregnant-Season-1-Clip--TBS)  
+1. [Friends: Ross Asks Rachel Out for the First Time (Season 1 Clip) | TBS](f0422friend.md#Friends-Ross-Asks-Rachel-Out-for-the-First-Time-Season-1-Clip--TBS)  
+1. [Friends: Rachel Runs Out on her Wedding to Barry (Season 1 Clip) | TBS](f0422friend.md#Friends-Rachel-Runs-Out-on-her-Wedding-to-Barry-Season-1-Clip--TBS)  
+ 
