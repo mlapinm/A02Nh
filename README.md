@@ -56,8 +56,7 @@
 ## UPL universal pictire language
 [UPL universal pictire language](htmla5upl/README.md)  
 1. [Нажмите здесь, чтобы проверить некоторые курсы](htmla5upl/a0404lesson.md)  
-1. [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](htmla5upl/f0402friend.md)  
-1. [Friends: Pete The Ultimate Fighting Champion (Season 3 Clip) | TBS](htmla5upl/f0404friend.md)  
+1. [Friends: Ross Finally Reads Rachel's Letter (Season 4 Clip) | TBS](htmla5upl/f0400friend.md)  
 1. [Miracle Workers: Dark Ages | Siege of the Century | TBS](htmla5upl/f0504dark.md)  
 1. [Seinfeld: Not That There's Anything Wrong With That (Clip) | TBS](htmla5upl/f0602seinfeld.md)  
 1. [Wheels On The Bus - Part 1 (Green Bus) 0:04](htmla5upl/m0440mult.md)  
