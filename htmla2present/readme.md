@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=0H1tm1SD7dA&list=RDCMUCTYQzAi6YOcgv2mkzsfzmpA&st
 
 d0100.txt
 x3  
-b0206ru.md  
+ 
 
 [English listening skills practice](https://youtu.be/uTueHiA1CKM)  
 
@@ -73,8 +73,8 @@ https://youtu.be/4IkM_Hb2B-A  |  Slow and Easy English Conversation Practice
 
 
 d0600.txt
-x2
-
+x2  
+b0206ru.md   
 [1000 Practical English Phrases](https://youtu.be/6u8mC8Wn6Cc)  
 
 https://youtu.be/6u8mC8Wn6Cc  |  1000 Practical English Phrases
