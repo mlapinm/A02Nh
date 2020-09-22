@@ -29,7 +29,9 @@ https://www.youtube.com/watch?v=0H1tm1SD7dA&list=RDCMUCTYQzAi6YOcgv2mkzsfzmpA&st
 
 
 d0100.txt
-x3
+x3  
+b0206ru.md  
+
 [English listening skills practice](https://youtu.be/uTueHiA1CKM)  
 
 https://youtu.be/uTueHiA1CKM  |  English listening skills practice
