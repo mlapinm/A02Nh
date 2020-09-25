@@ -1,47 +1,68 @@
-a1201present.md
-[Learn Present Simple Tense | English Grammar Course 1](https://www.youtube.com/watch?v=47LEelX7nhg&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=1)
-== === === a1201present.md === === ==
-a1202present.md
-[Practice Present Simple Tense | English Grammar Course](https://www.youtube.com/watch?v=876utrT3nE4&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=2)
-== === === a1202present.md === === ==
-a1203present.md
-[Learn Present Continuous Tense | English Grammar Course](https://www.youtube.com/watch?v=CHCth_sWL1g&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=3)
-== === === a1203present.md === === ==
-a1204present.md
-[Practice Present Continuous Tense | English Grammar Course Checkup](https://www.youtube.com/watch?v=nLrfembiT5s&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=4)
-== === === a1204present.md === === ==
-a1205present.md
-[Learn Present Perfect Tense | English Grammar Course](https://www.youtube.com/watch?v=-TsWSxGU5lc&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=5)
-== === === a1205present.md === === ==
-a1206present.md
-[Practice Present Perfect Tense | English Grammar Course #6 | CheckUp](https://www.youtube.com/watch?v=07ZvFiCE370&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=6)
-== === === a1206present.md === === ==
-a1207present.md
-[Learn Present Perfect Continuous Tense | English Grammar Course](https://www.youtube.com/watch?v=F6mYD6-mVP4&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=7)
-== === === a1207present.md === === ==
-a1208present.md
-[Practice Present Perfect Continuous Tense | English Grammar Course](https://www.youtube.com/watch?v=jN-H4nwyMBY&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=8)
-== === === a1208present.md === === ==
-a1209present.md
-[Learn Past Simple Tense English Grammar Course](https://www.youtube.com/watch?v=5rv9jKwC-cs&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=9)
-== === === a1209present.md === === ==
-a1210present.md
-[Practice Past Simple Tense | English Grammar Course](https://www.youtube.com/watch?v=urbf5_VEVhY&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=10)
-== === === a1210present.md === === ==
-a1211present.md
-[Learn Past Continuous Tense | Basic English Grammar Course](https://www.youtube.com/watch?v=6Y5bbgo8-HE&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=11)
-== === === a1211present.md === === ==
-a1212present.md
-[Practice Past Continuous Tense | Basic English Grammar Course](https://www.youtube.com/watch?v=-UvA1U2f4pQ&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=12)
-== === === a1212present.md === === ==
-a1213present.md
-[Learn Past Perfect Tense | Basic English Grammar Course](https://www.youtube.com/watch?v=llIOxwc57L0&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=13)
-== === === a1213present.md === === ==
-a1214present.md
-[Practice Past Perfect Tense | Basic English Grammar Course | Check Up](https://www.youtube.com/watch?v=OLy_I-tA8o8&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=14)
-== === === a1214present.md === === ==
-a1216present.md
-[Practice Past Perfect Continuous Tense | Basic English Grammar Course Check Up](https://www.youtube.com/watch?v=qsXCVWKHGiY&list=PL2IkMHFHWdEqcYNl-6yEpxJZ4m6dzDEmu&index=16)
-== === === a1216present.md === === ==
-### hello
-== === === readme.md === === ==
+b0102ru.md
+## Языковая школа Кендры - Kendra’s Language School
+[1000 English conversation phrases that seem easy but are not](https://www.youtube.com/watch?v=g9m7ezjEsMA)
+[Медленная и простая английская разговорная практика — для начинающих](https://www.youtube.com/watch?v=fxWQsn2dFgU)
+[]()
+== === === b0102ru.md === === ==
+b0104ru.md
+[1000 English conversation phrases that seem easy but are not](#1000-English-conversation-phrases-that-seem-easy-but-are-not)
+## 1000 English conversation phrases that seem easy but are not
+[1000 English conversation phrases that seem easy but are not](https://wwwyoutubecom/watch?v=g9m7ezjEsMA)
+== === === b0104ru.md === === ==
+b0106ru.md
+[1000 English conversation phrases that seem easy but are not](#1000-English-conversation-phrases-that-seem-easy-but-are-not)
+## 1000 English conversation phrases that seem easy but are not
+[1000 English conversation phrases that seem easy but are not](https://www.youtube.com/watch?v=g9m7ezjEsMA)
+== === === b0106ru.md === === ==
+b0108ru.md
+Everyday English Listening ||| Listen and Speak English Like a Native ||| American English Practice
+https://www.youtube.com/watch?v=-IS53K0q2VA
+what is your name my name is Pedro
+what is your name my name is Pedro
+== === === b0108ru.md === === ==
+b0110ru.md
+[500 Slightly Long English conversation phrases - Intermediate Level](https://www.youtube.com/watch?v=GAF3BDZZJQw)
+you needn't have taken an umbrella with you
+people are more educated now than they used to be
+== === === b0110ru.md === === ==
+b0112ru.md
+let's learn useful expressions in English [Music] hello hello hello
+good morning
+good afternoon
+good evening
+it's fine today
+== === === b0112ru.md === === ==
+b0114ru.md
+[English Listening & Speaking Practice - Listen and Repeat the Sentences](https://www.youtube.com/watch?v=0H1tm1SD7dA)
+let's learn English conversation at last the bus stop
+== === === b0114ru.md === === ==
+b0206ru.md
+[1000 Practical English Phrases](#1000-Practical-English-Phrases)
+## 1000 Practical English Phrases
+[1000 Practical English Phrases](https://youtu.be/6u8mC8Wn6Cc)
+== === === b0206ru.md === === ==
+b0208ru.md
+[English listening skills practice](#English-listening-skills-practice)
+## English listening skills practice
+[English listening skills practice](https://youtu.be/uTueHiA1CKM)
+== === === b0208ru.md === === ==
+b0210ru.md
+[1500 English Conversation Practice](#1500-English-Conversation-Practice)
+## 1500 English Conversation Practice
+[1500 English Conversation Practice](https://youtu.be/iXnA4d51vV8)
+== === === b0210ru.md === === ==
+b0212ru.md
+[1000 English Conversation Practice](#1000-English-Conversation-Practice)
+## 1000 English Conversation Practice
+[1000 English Conversation Practice](https://youtu.be/VOQ4Vby9SJM)
+== === === b0212ru.md === === ==
+b0214ru.md
+[1100 Basic English Phrases for Conversation](#1100-Basic-English-Phrases-for-Conversation)
+## 1100 Basic English Phrases for Conversation
+[1100 Basic English Phrases for Conversation](https://www.youtube.com/watch?v=X_FL6Ta_3WM&feature=youtu.be)
+== === === b0214ru.md === === ==
+b0216ru.md
+[1000 Useful Expressions in English](#1000-Useful-Expressions-in-English)
+## 1000 Useful Expressions in English
+[1000 Useful Expressions in English](https://youtu.be/r0npU0D51OA)
+== === === b0216ru.md === === ==
