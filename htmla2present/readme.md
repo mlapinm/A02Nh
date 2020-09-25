@@ -16,6 +16,18 @@
 1. [Learn Past Perfect Tense | Basic English Grammar Course](a1213present.md)  
 1. [Practice Past Perfect Tense | Basic English Grammar Course | Check Up](a1214present.md)  
 1. [Practice Past Perfect Continuous Tense | Basic English Grammar Course Check Up](a1216present.md)  
+1. [1000 English conversation phrases that seem easy but are not](b0102ru.md)
+1. [1000 English conversation phrases that seem easy but are not](b0104ru.md)
+1. [1000 English conversation phrases that seem easy but are not](b0106ru.md)
+1. [Everyday English Listening ||| Listen and Speak English Like a Native ||| American English Practice](b0108ru.md)
+1. [500 Slightly Long English conversation phrases - Intermediate Level](b0110ru.md)
+1. [English Listening & Speaking Practice - Listen and Repeat the Sentences](b0114ru.md)
+1. [1000 Practical English Phrases](b0206ru.md)
+1. [English listening skills practice - Listen and Read with slow speed](b0208ru.md)
+1. [1500 English Conversation Practice - Learn Basic English with dialogues](b0210ru.md)
+1. [1000 English Conversation Practice](b0212ru.md)
+1. [1100 Basic English Phrases for Conversation](b0214ru.md)
+1. [1000 Useful Expressions in English](b0216ru.md)
 
 
 
@@ -30,7 +42,7 @@ https://www.youtube.com/watch?v=0H1tm1SD7dA&list=RDCMUCTYQzAi6YOcgv2mkzsfzmpA&st
 
 d0100.txt
 x3  
- 
+d0208.txt   
 
 [English listening skills practice](https://youtu.be/uTueHiA1CKM)  
 
@@ -38,7 +50,7 @@ https://youtu.be/uTueHiA1CKM  |  English listening skills practice
 
 d0200.txt
 x1
-b0210ru.md
+b0210ru.md  
 [1500 English Conversation Practice](https://youtu.be/iXnA4d51vV8)  
 
 https://youtu.be/iXnA4d51vV8  |  1500 English Conversation Practice
@@ -46,8 +58,8 @@ https://youtu.be/iXnA4d51vV8  |  1500 English Conversation Practice
 
 
 d0300.txt
-x1
-b0212ru.md  
+x1  
+b0212ru.md   
 [1000 English Conversation Practice](https://youtu.be/VOQ4Vby9SJM)  
 
 https://youtu.be/VOQ4Vby9SJM  |  1000 English Conversation Practice
@@ -56,7 +68,7 @@ https://youtu.be/VOQ4Vby9SJM  |  1000 English Conversation Practice
 
 d0400.txt
 x2  
-b0214ru.md  
+b0214ru.md   
 [1100 Basic English Phrases for Conversation](https://youtu.be/X_FL6Ta_3WM)  
 
 https://youtu.be/X_FL6Ta_3WM  |  1100 Basic English Phrases for Conversation
@@ -91,8 +103,8 @@ https://youtu.be/r0npU0D51OA  |  1000 Useful Expressions in English
 
 
 d0800.txt
-x2
-
+x2  
+b0218ru.md   
 [Learn English Questions & Answers for Beginners](https://youtu.be/rwGqUvgTgpA)  
 
 https://youtu.be/rwGqUvgTgpA  |   Learn English Questions & Answers for Beginners
