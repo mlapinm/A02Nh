@@ -1,5 +1,5 @@
-[Языковая школа Кендры - Kendra's Language School](#Языковая-школа-Кендры---Kendras-Language-School) 
-[Английский Для Начинающих С Нуля, Уроки](#Английский-Для-Начинающих-С-Нуля,-Уроки)   
+[Языковая школа Кендры - Kendra's Language School](#Языковая-школа-Кендры---Kendras-Language-School)    
+[Английский Для Начинающих С Нуля, Уроки](#Английский-Для-Начинающих-С-Нуля-Уроки)   
 [Anh Ngu VIPS](#Anh-Ngu-VIPS)   
 [OXANA DOLINKA](#OXANA-DOLINKA)   
 [Shaw English Online](#Shaw-English-Online)   
