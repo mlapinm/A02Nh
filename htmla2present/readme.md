@@ -38,12 +38,11 @@
 
 ## Anh Ngu VIPS
 
-b0432vip.md
-[English Conversation 1](https://www.youtube.com/watch?v=m1-Bx3h4cio&list=RDCMUCVXM96yuiXY3ZT73Dy8HgCA&index=3)    
-[]()  
-[]()  
-[]()  
-[]()  
+[Разговорный английский 16](b0422vip.md)
+[English Speaking 02](b0424vip.md)
+[English Conversation 1](b0432vip.md)
+[English Conversation 02](b0434vip.md)
+[English Conversation 03](b0436vip.md)
 []()  
 []()  
 
