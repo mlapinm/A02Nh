@@ -21,6 +21,8 @@
 [1100 Basic English Phrases for Conversation](b0214ru.md)   
 [1000 Useful Expressions in English](b0216ru.md)   
 [Learn English Questions & Answers for Beginners](b0218ru.md)   
+[]()  
+[]()  
 
 
 
@@ -34,6 +36,7 @@
 [УРОК 4 - Учим Английские Слова - 110 СЛОВ с ПЕРЕВОДОМ для начинающих с нуля - Разговорный английский](g0150ru.md)  
 [УЧИМ САМЫЕ ВАЖНЫЕ АНГЛИЙСКИЕ СЛОВА ЛЕГКО из серии "Разговорный Английский для Начинающих с Нуля"](g0160ru.md)  
 [Учим Английские Слова - Английский для Начинающих - УРОК 6 с Переводом - Разговорный Английский-Ч1](g0170ru.md)  
+[Учим Английские Слова - УРОК 6 - Часть 2 - Английский для Начинающих , Разговорный Английский](g0180ru.md)  
 []()  
 []()  
 []()  
@@ -48,6 +51,15 @@
 [English Conversation 1](b0432vip.md)  
 [English Conversation 02](b0434vip.md)  
 [English Conversation 03](b0436vip.md)  
+[English Conversation 03](b0438vip.md)  
+[English Conversation 04](b0440vip.md)  
+[English Conversation 05](b0442vip.md)  
+[English Conversation 13](b0444vip.md)  
+[English Conversation 14](b0446vip.md)  
+[English Conversation 15](b0448vip.md)  
+[English Conversation 16](b0450vip.md)  
+[English Conversation 17](b0452vip.md)  
+[English Conversation 18](b0454vip.md)  
 []()  
 []()  
 
