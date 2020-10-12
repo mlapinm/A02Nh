@@ -114,9 +114,21 @@
 []()  
 []()  
 
+<hr>
 
+[English Conversation 01 - YouTube](https://www.youtube.com/watch?v=m1-Bx3h4cio&t=997s)   
+[English Conversation 07 - YouTube](https://www.youtube.com/watch?v=wQLt1BuXk08)   
+[English Conversation 08 - YouTube](https://www.youtube.com/watch?v=fmJDzyTQhbA)   
+[English Conversation 09 - YouTube](https://www.youtube.com/watch?v=5xMMgxgAgLk)   
+[English Conversation 10 - YouTube](https://www.youtube.com/watch?v=jW-du5HbwDo)   
+[English Conversation 11 - YouTube](https://www.youtube.com/watch?v=NQQrppQ938E&t=1361s)   
+[English Conversation 12 - YouTube](https://www.youtube.com/watch?v=M6IObQ4Rwtg&t=1478s)   
+[English Conversation 34 - YouTube](https://www.youtube.com/watch?v=_v0PzbdknAQ&t=213s)   
+[English Conversation 35 - YouTube](https://www.youtube.com/watch?v=_irVQ9xyOSQ)   
+[English Conversation 40 - YouTube](https://www.youtube.com/watch?v=ybEJ-ZVHjVo)   
+[English Conversation 41 - YouTube](https://www.youtube.com/watch?v=xo9e-EGV8eE)
 
-
+<hr>
 [English Listening & Speaking Practice - Listen and Repeat the Sentences](https://www.youtube.com/watch?v=0H1tm1SD7dA&list=RDCMUCTYQzAi6YOcgv2mkzsfzmpA&start_radio=1&t=2849)   
 
 
