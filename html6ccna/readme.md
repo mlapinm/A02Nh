@@ -157,3 +157,12 @@ Introduction to EtherChannel
 What is EtherChannel   
 EtherChannel Lab   
 Summary of Section   
+
+
+[CCNA Training Part 6 Navigating the Packet tracer tool](https://www.youtube.com/watch?v=7N0lZOQ3f48)   
+[]()   
+[]()   
+[]()   
+[]()   
+[]()   
+[]()   
