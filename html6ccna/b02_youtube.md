@@ -1,3 +1,9 @@
+[youtube](#youtube)  
+[other1](#other1)  
+
+
+## youtube
+
 [CCNA Training part 1 Your First Journey into the Cisco World - YouTube](https://www.youtube.com/watch?v=_r_ZpVBSBXU)   
 [CCNA Training part 2 Why acquire a CCNA certification - YouTube](https://www.youtube.com/watch?v=FGSYdcaFL3E)   
 [CCNA Training part 3 How would you get CCNA Certified - YouTube](https://www.youtube.com/watch?v=ece7ZRVNYSg&list=PLmF5d65Y0kmUtI6vaeW56HTKJ0iKaxUqi)   
@@ -115,3 +121,9 @@
 [115 NETFLOW and its Configuration - YouTube](https://www.youtube.com/watch?v=j9OowoGShJo)   
 [116 Course Summary - YouTube](https://www.youtube.com/watch?v=V2RgPO2Yra8&list=PLmF5d65Y0kmUtI6vaeW56HTKJ0iKaxUqi&index=68)   
 [117 Explaining the HSRP Protocol YouTube - YouTube](https://www.youtube.com/watch?v=V9lzdrIZb5Y&list=PLmF5d65Y0kmUtI6vaeW56HTKJ0iKaxUqi&index=67)
+
+
+## other1
+
+
+
