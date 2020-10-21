@@ -225,6 +225,7 @@ Welcome to the most COMPLETE CCNA (200-120) Course...get ready to be amazed!
 
 
 ## fcc
+[x08dict.ipynb](http://localhost:8888/notebooks/js/x08dict.ipynb)   
 [fcc](html2fcc/readme.md)  
 http://f0437348.xsph.ru/   
 [mongodb cloud](https://cloud.mongodb.com/v2/5ea44c39177e42591b408863#metrics/replicaSet/5ea44e51552ab536f68817e1/explorer/test/users/find)  
