@@ -2,6 +2,11 @@
 
 [englishclass101_com](#englishclass101_com)  
 [englishclasscom101_apendix](#englishclasscom101_apendix)  
+[Языковая школа Кендры - Kendra's Language School](#Языковая-школа-Кендры---Kendras-Language-School)    
+[Английский Для Начинающих С Нуля, Уроки](#Английский-Для-Начинающих-С-Нуля-Уроки)   
+[Anh Ngu VIPS](#Anh-Ngu-VIPS)   
+[OXANA DOLINKA](#OXANA-DOLINKA)   
+[Shaw English Online](#Shaw-English-Online)   
 [Vocabulary](#Vocabulary)  
 [UPL universal pictire language](#UPL-universal-pictire-language)  
 []()  
@@ -43,6 +48,122 @@
 1. [7 Ways to Improve Your English Speaking](htmla3class/a0449class.md)  
 1. [What’s Inside an American Convenience Store?](htmla3class/a0450class.md)  
 1. [160 English Words for Everyday Life - Basic Vocabulary #8](htmla3class/a0452class.md)  
+
+
+
+
+## Языковая школа Кендры - Kendra’s Language School
+
+[1000 English conversation phrases that seem easy but are not](htmla2present/b0102ru.md)   
+[1000 English conversation phrases that seem easy but are not](htmla2present/b0104ru.md)   
+[1000 English conversation phrases that seem easy but are not](htmla2present/b0106ru.md)   
+[Everyday English Listening ||| Listen and Speak English Like a Native ||| American English Practice](htmla2present/b0108ru.md)   
+[500 Slightly Long English conversation phrases - Intermediate Level](htmla2present/b0110ru.md)   
+[English Listening & Speaking Practice - Listen and Repeat the Sentences](htmla2present/b0114ru.md)   
+[1000 Practical English Phrases](htmla2present/b0206ru.md)   
+[English listening skills practice - Listen and Read with slow speed](htmla2present/b0208ru.md)   
+[1500 English Conversation Practice - Learn Basic English with dialogues](htmla2present/b0210ru.md)   
+[1000 English Conversation Practice](htmla2present/b0212ru.md)   
+[1100 Basic English Phrases for Conversation](htmla2present/b0214ru.md)   
+[1000 Useful Expressions in English](htmla2present/b0216ru.md)   
+[Learn English Questions & Answers for Beginners](htmla2present/b0218ru.md)   
+[](htmla2present/)  
+[](htmla2present/)  
+
+
+
+## Английский Для Начинающих С Нуля, Уроки
+
+
+[УЧИМ АНГЛИЙСКИЕ СЛОВА -УРОК 1 для начинающих с нуля - Разговорный английский - 100 СЛОВ с ПЕРЕВОДОМ](htmla2present/g0112ru.md)  
+[Английские Разговорные СЛОВА И ФРАЗЫ для Начинающих с Нуля -Изучаем Английский Словарный Запас](htmla2present/g0120ru.md)  
+[УРОК 2 - Учим Английские Слова для Начинающих с Нуля - Английский Язык Онлайн](htmla2present/g0130ru.md)  
+[УРОК 3 - Учим Английские Слова - 100 СЛОВ с ПЕРЕВОДОМ для начинающих - Разговорный английский](htmla2present/g0140ru.md)  
+[УРОК 4 - Учим Английские Слова - 110 СЛОВ с ПЕРЕВОДОМ для начинающих с нуля - Разговорный английский](htmla2present/g0150ru.md)  
+[УЧИМ САМЫЕ ВАЖНЫЕ АНГЛИЙСКИЕ СЛОВА ЛЕГКО из серии "Разговорный Английский для Начинающих с Нуля"](htmla2present/g0160ru.md)  
+[Учим Английские Слова - Английский для Начинающих - УРОК 6 с Переводом - Разговорный Английский-Ч1](htmla2present/g0170ru.md)  
+[Учим Английские Слова - УРОК 6 - Часть 2 - Английский для Начинающих , Разговорный Английский](htmla2present/g0180ru.md)  
+[](htmla2present/)  
+[](htmla2present/)  
+[](htmla2present/)  
+
+
+
+
+## Anh Ngu VIPS
+
+[Разговорный английский 16](htmla2present/b0422vip.md)  
+[English Speaking 02](htmla2present/b0424vip.md)  
+[English Conversation 1](htmla2present/b0432vip.md)  
+[English Conversation 02](htmla2present/b0434vip.md)  
+[English Conversation 03](htmla2present/b0436vip.md)  
+[English Conversation 03](htmla2present/b0438vip.md)  
+[English Conversation 04](htmla2present/b0440vip.md)  
+[English Conversation 05](htmla2present/b0442vip.md)  
+[English Conversation 06](htmla2present/b04431vip.md)  
+[English Conversation 07 - YouTube](htmla2present/b04432vip.md)  
+[English Conversation 08 - YouTube](htmla2present/b04433vip.md)  
+[English Conversation 09 - YouTube](htmla2present/b04434vip.md)  
+[English Conversation 10 - YouTube](htmla2present/b04435vip.md)  
+[English Conversation 11 - YouTube](htmla2present/b04436vip.md)  
+[English Conversation 12 - YouTube](htmla2present/b04437vip.md)  
+[English Conversation 13](htmla2present/b0444vip.md)  
+[English Conversation 14](htmla2present/b0446vip.md)  
+[English Conversation 15](htmla2present/b0448vip.md)  
+[English Conversation 16](htmla2present/b0450vip.md)  
+[English Conversation 17](htmla2present/b0452vip.md)  
+[English Conversation 18](htmla2present/b0454vip.md)  
+[English Conversation 31](htmla2present/b0462vip.md)  
+[English Conversation 32](htmla2present/b0464vip.md)  
+[English Conversation 33](htmla2present/b0466vip.md)  
+[English Conversation 34](htmla2present/b0468vip.md)  
+[English Conversation 35](htmla2present/b0470vip.md)  
+[](htmla2present/)  
+[](htmla2present/)  
+
+
+
+
+## OXANA DOLINKA
+
+[Английский Язык По Песням. Видео-Урок. Аэросмит. Английский Язык Для Начинающих.](https://www.youtube.com/watch?v=SKQ8FX7irV0&list=PLMuaOd5gEFbBXQxp-4PVTimOZbCHkSWd9&index=5)  
+[Урок Разговорного Английского по Легендарному Сериалу Друзья](https://www.youtube.com/watch?v=k5sAnTTQxFA)  
+[](htmla2present/)  
+[](htmla2present/)  
+
+
+
+## Shaw English Online
+
+1. [Learn Present Simple Tense | English Grammar Course 1](htmla2present/a1201present.md)  
+1. [Practice Present Simple Tense | English Grammar Course](htmla2present/a1202present.md)  
+1. [Learn Present Continuous Tense | English Grammar Course](htmla2present/a1203present.md)  
+1. [Practice Present Continuous Tense | English Grammar Course Checkup](htmla2present/a1204present.md)  
+1. [Learn Present Perfect Tense | English Grammar Course](htmla2present/a1205present.md)  
+1. [Practice Present Perfect Tense | English Grammar Course #6 | CheckUp](htmla2present/a1206present.md)  
+1. [Learn Present Perfect Continuous Tense | English Grammar Course](htmla2present/a1207present.md)  
+1. [Practice Present Perfect Continuous Tense | English Grammar Course](htmla2present/a1208present.md)  
+1. [Learn Past Simple Tense English Grammar Course](htmla2present/a1209present.md)  
+1. [Practice Past Simple Tense | English Grammar Course](htmla2present/a1210present.md)  
+1. [Learn Past Continuous Tense | Basic English Grammar Course](htmla2present/a1211present.md)  
+1. [Practice Past Continuous Tense | Basic English Grammar Course](htmla2present/a1212present.md)  
+1. [Learn Past Perfect Tense | Basic English Grammar Course](htmla2present/a1213present.md)  
+1. [Practice Past Perfect Tense | Basic English Grammar Course | Check Up](htmla2present/a1214present.md)  
+1. [Practice Past Perfect Continuous Tense | Basic English Grammar Course Check Up](htmla2present/a1216present.md)  
+1. [1000 English conversation phrases that seem easy but are not](htmla2present/b0102ru.md)
+1. [1000 English conversation phrases that seem easy but are not](htmla2present/b0104ru.md)
+1. [1000 English conversation phrases that seem easy but are not](htmla2present/b0106ru.md)
+1. [Everyday English Listening ||| Listen and Speak English Like a Native ||| American English Practice](htmla2present/b0108ru.md)
+1. [500 Slightly Long English conversation phrases - Intermediate Level](htmla2present/b0110ru.md)
+1. [English Listening & Speaking Practice - Listen and Repeat the Sentences](htmla2present/b0114ru.md)
+1. [1000 Practical English Phrases](htmla2present/b0206ru.md)
+1. [English listening skills practice - Listen and Read with slow speed](htmla2present/b0208ru.md)
+1. [1500 English Conversation Practice - Learn Basic English with dialogues](htmla2present/b0210ru.md)
+1. [1000 English Conversation Practice](htmla2present/b0212ru.md)
+1. [1100 Basic English Phrases for Conversation](htmla2present/b0214ru.md)
+1. [1000 Useful Expressions in English](htmla2present/b0216ru.md)
+1. [1000 Useful Expressions in English](htmla2present/b0216ru.md)
+
 
 ## Vocabulary
 
@@ -104,6 +225,7 @@ Welcome to the most COMPLETE CCNA (200-120) Course...get ready to be amazed!
 
 
 ## fcc
+[x08dict.ipynb](http://localhost:8888/notebooks/js/x08dict.ipynb)   
 [fcc](html2fcc/readme.md)  
 http://f0437348.xsph.ru/   
 [mongodb cloud](https://cloud.mongodb.com/v2/5ea44c39177e42591b408863#metrics/replicaSet/5ea44e51552ab536f68817e1/explorer/test/users/find)  
