@@ -1,0 +1,1312 @@
+
+packet tracer 7.3
+options-preferences
+Customize User Experence
+Interface
+always Show Port Labels in Logical Waarkspace
+Logging
+Enable Logging
+Font
+Dialogs
+CLI command line interface
+18 
+
+PART 8
+Router>ena
+Router#
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+r1(config)#hostname R1
+R1(config-if)#IP ADDRESS 192.168.1.254 255.255.255.0
+R1(config-if)#NO SHUT
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+R1(config-if)#^Z
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R1#
+R1#
+
+R1#shOW IP INT BRIEF
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        192.168.1.254   YES manual up                    up 
+FastEthernet0/1        unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1#
+ctrl z
+
+ 
+PART9 Configuring a switch
+
+Switch>EN
+Switch#CONFIG T
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#HOSTname SW1
+SW1(config)#
+
+SW1(config)#int vlan 1
+SW1(config-if)#ip address 192.168.1.253 255.255.255.0
+SW1(config-if)#
+
+SW1(config)#ip default-gateway 192.168.1.254
+SW1#?
+SW1#show 
+SW1#
+SW1#show running-config 
+
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 192.168.1.253 255.255.255.0
+ shutdown
+!
+ip default-gateway 192.168.1.254
+
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#interface vlan 1
+SW1(config-if)#no shutdown 
+
+SW1(config-if)#
+%LINK-5-CHANGED: Interface Vlan1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+
+SW1(config-if)#
+
+part 10 Configuring a PC
+
+part 17 The layers of the OSI model
+
+all people seem to need Domino's pizza
+application
+presentation
+session
+transport
+network
+data link
+physical
+all people seem to need data processing
+
+part 18 The 3 Upper Layers of the OSI
+PDU, a Protocol Data Unit
+
+
+part 19 The process of Encapsulation
+Don't don't don't stop pouring free beer
+data
+data
+data
+segments
+packets
+frames
+bits
+
+part 20 The tables we use when converting
+
+10000000	128
+11000000	192
+11100000	224
+11110000	240
+11111000	248
+11111100	252
+11111110	254
+11111111	255
+
+
+part 29 
+
+osi model	tcp/ip
+Application		Application
+Presentation	
+Session			
+Transport		Transport
+Network			Internet
+Data-Link		Network
+Physical		
+
+
+
+part 31
+802.3   CSMA/CD
+
+ 
+part 32 What cabling standards to we use
+EIA, TIA 568A and 568B.
+568B
+
+part 34 Classes of Addresses and their ranges
+CLASSES	RANGE		MASK			CIDR	DEFAULT HOSTS
+A		1-126		255.0.0.0		/8		16777214
+B		128-191		255.255.0.0		/16		65536
+C		192-223		255.255.255.0	/24 	254
+D		224-239		N/A				
+E		240-255		N/A				
+
+RIP		224.0.0.9
+EIGRP	224.0.0.10
+OSPF 	224.0.0.5 	224.0.0.6
+
+CIDR Classless Inter-Domain Routing
+169.254.X.X APIPA
+automatic private IP address
+
+
+part 36 Private Class A,B, C address range
+	CIDR CISCO
+A	/8		
+B	/16		/12
+C	/24		/16
+part 38 IPv6 addressing and Expressions
+2001:3200:cadd:1200::/64
+2001 USA
+3200 ISP provider
+cadd facebook
+1200 subnet
+ 
+part 39 IPv6 address types
+FF00::/8	multicast addresses
+FC00::/7	unicast addresses
+2000::/3	global unicast
+FC00::		anycast address
+FE80::/10	link local
+::			default address
+::1			loopback
+FF02::9		RIPNG
+FF02::A		EIGRP
+FF02::5 FF02::6	OSPFV3
+
+part 40 The Auto-configuration feature 
+PC2
+2001:4800:face:1000::1/56
+FE80::209:7CFF:FE05:2980
+2001:4800:face:1000::F
+....
+AUTOCONFIG
+
+router0
+en
+conf t
+hostname R1
+ex
+
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#do sh ip int brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        unassigned      YES unset  administratively down down 
+FastEthernet0/1        unassigned      YES unset  administratively down down 
+Serial0/0/0            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1(config)#
+R1#
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int f0/1
+R1(config-if)#ipv6 address 2001:4800:face:1000::f/56 eui-64
+R1(config-if)#do wr
+Building configuration...
+[OK]
+R1(config-if)#ex
+R1#sh ipv6 int brief
+FastEthernet0/0            [administratively down/down]
+    unassigned
+FastEthernet0/1            [up/down]
+    FE80::204:9AFF:FECC:5102
+    2001:4800:FACE:1000::F
+    2001:4800:FACE:1000:204:9AFF:FECC:5102R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int f0/1
+R1(config-if)#no sh
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+pc2
+C:\>ipv6config /all
+
+FastEthernet0 Connection:(default port)
+
+   Physical Address................: 00D0.5870.42DC
+   Link-local IPv6 Address.........: FE80::2D0:58FF:FE70:42DC
+   IPv6 Address....................: ::/0
+   Default Gateway.................: ::
+   DNS Servers.....................: ::
+   DHCPv6 Client DUID..............: 00-01-00-01-35-41-D7-2C-
+
+ipv6 unicast-routing
+
+part 41 
+DAD Duplicate address detection
+NS Neighbor solicitation
+NA, Neighbor advertisements
+
+
+
+part 42 
+Dual stack, 64 tunneling and NAT-PT
+
+C:\Users\User>ping loopback -6
+
+Обмен пакетами с LAPTOP-GRIR1G62 [::1] с 32 байтами данных:
+Ответ от ::1: время<1мс
+C:\Users\User>ping loopback -4
+
+Обмен пакетами с LAPTOP-GRIR1G62 [127.0.0.1] с 32 байтами данных:
+Ответ от 127.0.0.1: число байт=32 время<1мс TTL=128
+
+
+
+part 43
+10000000	128
+11000000	192
+11100000	224
+11110000	240
+11111000	248
+11111100	252
+11111110	254
+11111111	255
+
+255.255.240.0
+x.x.1111|0000
+subnet - 16
+hosts  - 4094
+172.16.10.33/16
+255.255.224.0
+x.x.111|00000
+x.x.32.0
+32.1 - 63.254
+x.x.63.255
+x.x.32 - нулевая подсеть
+ 
+part 44
+http://subnettingquestions.com/
+172.23.0.0/27
+
+172.23.11111111.11100000
+255.255.255.24.0
+2,046 subnets
+answer: 2046 subnets and 30 host
+ 
+part 45
+1 what valid host range is the ip address 172.16.10.22 255.255.255.240 a part of?
+a 172.16.10.20 -  172.16.10.22 
+b 172.16.10.1 -  172.16.10.255
+c 172.16.10.16 -  172.16.10.23
+d 172.16.10.17 -  172.16.10.31
+e 172.16.10.17 -  172.16.10.30
+172.16.10.0001|0110
+a 0001|0100 0001|0110 
+b 0000|0001 1111|1111 -
+c 0001|0000 0001|0111 - 
+d 0001|0001 0001|1111 -
+e 0001|0001 0001|1110 +
+2 what is the broadcast address of the subnet address 172.16.8.159/26? 
+a  172.16.255.255
+b 172.16.8.127
+c 172.16.8.191
+d 172.16.8.255
+
+192 - subnet
+11000000 
+159 = 128 + 31 
+10011111
+10111111 - broadcast
+128+64-1 = 191
+c 172.16.8.191 +
+
+3 what is the broadcast address of the subnet address 192.168.10.33 255.255.255.248
+a 192.168.10.40
+b 192.168.10.255 
+c 192.168.255.255
+d 192.168.10.39 +
+
+192.168.10.33
+248 = 256 - 8
+11111000
+33
+00100001
+00100111
+39
+d 192.168.10.39 +
+
+4. If you wanted to have 12 subnet with a class C network ID, which subnet
+a 255.255.255.252
+b 255.255.255.248 
+c 255.255.255.240 
+d 255.255.255.255 
+
+
+ 
+part 46
+VLSM 
+using th following assign the appropriate subnetmask for each broadcast
+nodes	net id	range	broadcast	cidr
+3500	172.20.0.0	172.20.0.1-172.20.15.254	172.20.15.255	/20
+725	172.20.16.0	172.20.16.1-172.20.19.254	172.20.19.255	/22
+100	172.20.20.0	172.20.20.1-172.20.20.126	172.20.20.127	/25
+2	172.20.20.128	172.20.20.129-172.20.20.130	172.20.20.131	/30
+2	172.20.20.132	172.20.20.133-172.20.20.134	172.20.20.135	/30
+2	172.20.20.136	172.20.20.137-172.20.20.138	172.20.20.139	/30
+
+3500	172.20.0.0	172.20.0.1-172.20.15.254	172.20.15.255	/20
+3500	172.20.0.0	172.20.0.1-172.20.15.254	172.20.15.255	/20
+CIDR, C-I-D-R stands for, it's classless interdomain routing
+725	172.20.16.0	172.20.16.1-172.20.19.254	172.20.19.255	/22
+000100|00.x 
+100	172.20.20.0	172.20.20.1-172.20.20.126	172.20.20.127	/25
+00010100.0|0000000 
+2	172.20.20.128	172.20.20.129-172.20.20.130	172.20.20.131	/30
+00010100.10000000 00010100.10000001-00010100.10000010 00010100.10000011 
+2	172.20.20.132	172.20.20.133-172.20.20.134	172.20.20.135	/30
+00010100.10000100 00010100.10000101-00010100.10000110 00010100.10000111 
+2	172.20.20.136	172.20.20.137-172.20.20.138	172.20.20.139	/30
+00010100.10001000 00010100.10001001-00010100.10001010 00010100.10001011 
+
+
+
+part 47
+192.168.1.0 
+192.168.2.0 
+192.168.3.0 
+192.168.0.0 /22
+ip summarry-address eigrp 
+100 192.168.0.0 255.255.252.0 5 
+
+192.168.101.0 
+192.168.102.0 
+192.168.103.0 
+192.168.100.0 /22
+192.168.103.255 broadcast address 
+
+
+ 
+part 48
+255.255.255.252 - 0.0.0.3
+255.255.255.240 - 0.0.0.15
+255.255.255.224 - 0.0.0.31
+255.255.192.0 - 0.0.63.255
+255.255.255.0 - 0.0.0.255
+255.255.111|00000.0 - 0.0.31.255
+
+ACCESS-LIST 10 DENY 192.168.1.0 - 0.0.0.255
+ACCESS-LIST 10 DENY 10.1.1.1 - 0.0.0.0
+ACCESS-LIST 10 DENY HOST 10.1.1.1
+
+ROUTER OSPF 1
+NETWORK 192.168.1.0 0.0.0.255 AREA 0
+NETWORK 10.1.1.4 0.0.0.3 AREA 0
+NETWORK 10.1.1.8 0.0.0.3 AREA 0
+NETWORK 1.1.1.1 0.0.0.0 AREA 0
+
+
+ 
+part 50
+			Network Prefix					interface ID
+Address		2001	4800	face	1000	1234	5678	9abc 	dead	/64
+Binary bits	16		16		16		16		16		16		16		16	
+Sections	First	Second	Third	Fourth
+				64 bits								64 bits
+				
+				Address Given
+		2001	4800	face	1000	::/52		
+		1		0		0		0		
+		1st Pos	2st Pos	3st Pos	4st Pos
+
+
+
+		
+part 52 
+
+		2001	4800	face	1000	::/56		
+		2001	4800	face	1100	::/56		
+		2001	4800	face	1200	::/56		
+		2001	4800	face	1300	::/56		
+		2001	4800	face	1400	::/56		
+		2001	4800	face	1500	::/56		
+		2001	4800	face	1600	::/56		
+		2001	4800	face	1700	::/56		
+		2001	4800	face	1800	::/56		
+
+
+
+part 53
+connect to router
+
+console line
+auxilary line
+vty lines: telnet or ssh
+
+ 
+part 54 
+ROM, POST, BOOTSTRAP, NINI-IOS, ROMMEN
+RAM, run arp cache,routing table, packet buffers
+NVRAM, start hdd
+Flash   ios
+
+part 55
+flash,tftp,rom
+ 
+part 56
+enter, ?
+conf t
+cdp run
+sh ip int brief
+Ctrl+Shift+6 is a break
+
+ 
+part 57
+
+Router(config)#hostname R1
+R1(config)#en
+R1(config)#enable password cisco
+R1(config)#enable secret student
+R1(config)#service password-encryption 
+
+username ldiaze privilege 15 password 0 cisco1
+R1(config)#banner motd # welcome to R1 #
+===
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R1
+R1(config)#enable password cisco
+R1(config)#enable secret student
+R1(config)#service password-encryption 
+R1(config)#username ldiaz privilege 15 password 0 cisco
+R1(config)#banner motd # welcome to R1 #
+R1(config)#ip domain-lookup 
+R1(config)#ip domain-name cisco.com
+R1(config)#ip name-server 192.168.1.2
+R1(config)#crypto key generate  rsa
+512
+R1(config)#line con 0
+R1(config-line)#password cisco
+R1(config-line)#login local 
+R1(config-line)#exec-timeout 0 0
+R1(config-line)#logging synchronous 
+R1(config-line)#line vty 0 15
+R1(config-line)#password cisco
+R1(config-line)#login local 
+R1(config-line)#exec-timeout 0 0
+R1(config-line)#loggin synchronous 
+R1(config-line)#exi
+R1(config)#ex
+R1#copy run start
+enter(start-config)
+
+
+====
+hostname R1
+enable password cisco
+enable secret student
+service password-encryption 
+username ldiaz privilege 15 password 0 cisco
+banner motd # welcome to R1 #
+ip domain-lookup 
+ip domain-name cisco.com
+ip name-server 192.168.1.2
+crypto key generate  rsa
+512
+line con 0
+password cisco
+login local 
+exec-timeout 0 0
+logging synchronous 
+line vty 0 15
+password cisco
+login local 
+exec-timeout 0 0
+loggin synchronous 
+exi
+
+R1(config)#ex
+R1#copy run start
+enter(start-config)
+
+
+
+part 58
+
+R1(config-if)#line vty 0 15
+R1(config-line)#transport input all
+R1#copy run start
+R1#sh ip int brief 
+R1(config)#int f0/0
+R1(config-if)#ip address 192.168.1.254 255.255.255.0
+R1(config-if)#description connection to lan
+R1(config-if)#no sh
+
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int s0/0/0
+R1(config-if)#ip address 10.1.1.5 255.255.255.252
+R1(config-if)#description connectio to R2
+R1(config-if)#clock rate 4000000
+R1(config-if)#no sh
+R1#copy run start
+R1#sh ip int brief
+
+
+
+
+enable
+config t
+hostname R1
+enable password cisco
+enable secret student
+service password-encryption
+username ldiaz privilege 15 password 0 cisco
+banner motd $ welcome to R1 $
+ip domain-lookup
+ip domain-name cisco.com
+ip name-server 192.168.1.2
+crypto key generate rsa
+512
+line con 0
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+line vty 0 15
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+transport input all
+exit
+int f0/0
+ip address 192.168.1.254 255.255.255.0
+description connection to lan
+no shut
+int s0/0/0
+ip address 10.1.1.5 255.255.255.252
+description connection to R1
+no shut
+line vty 0 15
+transport input all
+exit
+exit
+copy run start
+
+
+
+enable
+config t
+hostname R2
+enable password cisco
+enable secret student
+service password-encryption
+username ldiaz privilege 15 password 0 cisco
+banner motd $ welcome to R2 $
+ip domain-lookup
+ip domain-name cisco.com
+ip name-server 192.168.1.2
+crypto key generate rsa
+512
+line con 0
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+line vty 0 15
+password cisco
+login local
+exec-timeout 0 0
+logging synchronous
+transport input all
+exit
+int f0/0
+ip address 192.168.2.254 255.255.255.0
+description connection to lan
+no shut
+int s0/0/1
+ip address 10.1.1.6 255.255.255.252
+description connection to R1
+no shut
+line vty 0 15
+transport input all
+exit
+exit
+copy run start
+y
+
+
+R2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#line vty 0 15
+R2(config-line)#transport input all
+
+
+
+
+
+
+ 
+part 59 
+C:\>ipconfig /all
+C:\>ping 192.168.1.254
+C:\>telnet 192.168.1.254
+Trying 192.168.1.254 ...Open welcome to R1 
+
+
+User Access Verification
+
+Username: ldiaz
+Password: 
+R1#
+
+C:\>ssh -l ldiaz 192.168.1.254
+
+Password: 
+
+ welcome to R1 
+
+R1#
+
+
+part 60 
+R1#sh run 
+R1#sh start 
+R1#sh ip int brief
+R1#sh protocols 
+R1#sh flash: 
+R1#show version 
+R1#sh int f0/0
+R1#sh ip int f0/0
+
+
+part 61 
+R1(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.20
+R1(config)#ip dhcp pool laz
+R1(dhcp-config)#default-router 192.168.1.254
+R1(dhcp-config)#dns-server 192.168.1.2
+R1(dhcp-config)#network 192.168.1.0 255.255.255.0
+do wr
+R1#copy run start
+
+ 
+part 62 
+10.100.0.32/27
+11100000 224  
+00011111 31
+32 00100000 
+64 01000000
+96 01100000
+
+Switch(config)#hostname Classroom10
+Classroom10#sh vlan
+10 cls10 fa0/1, fa0/2
+sh ip trunc
+fa0/24 trunking
+
+Core#sh vlan
+fa0/19 - fa0/23 trunking
+
+
+
+Router(config)#int f0/0
+Router(config-if)#no sh
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config-if)#int f0/0.2
+Router(config-subif)#
+%LINK-5-CHANGED: Interface FastEthernet0/0.2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.2, changed state to up
+
+Router(config-subif)#encap dot1q 2
+Router(config-subif)#ip address 10.100.0.254 255.255.255.224
+Router(config-subif)#
+
+Router(config-subif)#int f0/0.2
+Router(config-subif)#ip address 10.100.0.30 255.255.255.224
+Router(config-subif)#int f0/0.10
+Router(config-subif)#encap dot1q 10
+Router(config-subif)#ip address 10.100.0.62 255.255.255.224
+
+Router(config-subif)#int f0/0.20
+Router(config-subif)#
+%LINK-5-CHANGED: Interface FastEthernet0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.20, changed state to up
+
+Router(config-subif)#encap dot1q 20
+Router(config-subif)#ip address 10.100.0.94 255.255.255.224
+
+
+Router(config-subif)#int f0/0.30
+Router(config-subif)#
+%LINK-5-CHANGED: Interface FastEthernet0/0.30, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.30, changed state to up
+
+Router(config-subif)#encap dot1q 30
+Router(config-subif)#ip address 10.100.0.126 255.255.255.224
+
+
+serv
+10.100.0.1
+10.100.0.30
+71.255.83.65
+
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int f0/0.10
+Router(config-subif)#ip helper-address 10.100.0.1
+
+
+
+ 
+part 63
+C:\Users\User\Cisco Packet Tracer 7.3.0 
+savesPacketTracer 
+
+R1(config)#ip host R1 192.168.1.254 10.1.1.5
+R1(config)#ip host R2 192.168.2.254 10.1.1.6
+
+ip host R2 192.168.2.254 10.1.1.6
+ip host R1 192.168.1.254 10.1.1.5
+do wr
+
+R2#ping R1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.1.254, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+
+R2(config)#ip route 0.0.0.0 0.0.0.0 s0/0/1
+R2(config)#do wr
+
+R1(config)#ip route 0.0.0.0 0.0.0.0 s0/0/0
+R1(config)#do wr
+
+
+ip route 0.0.0.0 0.0.0.0 s0/0/0
+do wr
+
+R2#ping R1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.1.254, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/8/37 ms
+
+C:\>ping 192.168.2.1
+
+R1#sh hosts
+Host                      Port  Flags      Age Type   Address(es)
+R1                        None  (perm, OK)  0   IP      192.168.1.254
+                                                        10.1.1.5
+R2                        None  (perm, OK)  0   IP      192.168.2.254
+                                                        10.1.1.6
+
+ip route 0.0.0.0 0.0.0.0 Serial0/0/0 
+
+ 
+part 64 
+R1(config)#cdp run
+R1#sh cdp neighbors 
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone
+Device ID    Local Intrfce   Holdtme    Capability   Platform    Port ID
+Switch       Fas 0/0          166            S       2960        Fas 0/24
+R2           Ser 0/0/0        146            R       C1841       Ser 0/0/1
+ 
+show CDP neighbor detail 
+
+globaly
+cdp run
+no cdp run
+
+int f0/1
+cdp enable
+no cdp enable
+
+
+
+ 
+part 65 
+register of the router
+0x2102: look at nvram(default)
+0x2142: bypass nvram
+
+R1#sh version  
+
+Configuration register is 0x2102
+R1(config)#config-register 0x2142
+
+Configuration register is 0x2102 (will be 0x2142 at next reload)
+
+R1#copy start run
+
+R1#reload
+
+int f0/0 
+no sh
+int s0/0/0
+no sh
+
+part 66
+#######
+ctrl c reload 
+#######################
+monitor: command "boot" aborted due to user interrupt
+rommon 1 >  
+rommon 10 > confreg 0x2142
+rommon 1 > reset
+chang password
+
+ 
+
+
+
+
+ 
+part 67
+10.1.1.4/30
+11111100 
+5 - 6 
+10.1.1.8/30
+11111100 
+9 - 10 
+ 
+part 69
+ip route 0.0.0.0 0.0.0.0 s0/0/0
+ip route 0.0.0.0 0.0.0.0 10.1.1.6 
+default route = gateway of last resort
+R1#sh ip route 
+R1(config)#ip route 0.0.0.0 0.0.0.0 s0/0/0
+R1#sh ip route 
+S*   0.0.0.0/0 is directly connected, Serial0/0/0
+
+R3
+conf t
+int f0/0
+ip address 192.168.3.254 255.255.255.0
+description connection to lan
+no shut
+int s0/0/1
+ip address 10.1.1.10 255.255.255.252
+description connection to R3
+no shut
+ex
+ip route 0.0.0.0 0.0.0.0 s0/0/1
+do wr
+
+R2
+conf t
+int s0/0/0
+ip address 10.1.1.9 255.255.255.252
+description connection to R2
+no shut
+do wr
+
+R2(config)#ip route 192.168.1.0 255.255.255.0 s0/0/1
+R2(config)#ip route 192.168.3.0 255.255.255.0 s0/0/0
+
+ 
+part 70 
+R1#10.1.1.6
+Trying 10.1.1.6 ...Open welcome to R2 
+R2#exit
+[Connection to 10.1.1.6 closed by foreign host]
+R1#
+
+R2(config)#ip route 192.168.1.0 255.255.255.0 s0/0/1 150 
+
+150
+<1-255>  Distance metric for this route
+R3#ping 192.168.1.254
+
+part 71
+ripv2: distance vector, hop 15, summarize automatically,
+       no auto-summary, network statements, every 30 sec send
+	   the entire routing table out on the u
+	   
+ripng: configure it on the interface
+
+eigrp: cisco specific, advanced dv, summarize automatically
+       no auto-summary, all updates first time, autonomous system
+	   
+ospf: link state, no limitation, single area, very processor intense
+
+ 
+part 72_RIPv2 & RIPng configurations
+ripv2 & ripng: 
+dv, bellman-ford algo., max
+hop count 15, admin distance 120
+update timer: 30sec
+holdown timer: 180
+invalid timer: 180
+flush timer: 240
+split horizon: dont send back updates
+               on the same int
+poison reverse: max hop count 16
+
+passive-interface f0/0: hold updates
+                        from beign sent out
+						
+multicast address: 224.0.0.9  ff02::9
+
+R1(config)#router rip
+R1(config-router)#version ?
+  <1-2>  version
+R1(config-router)#version 2
+R1(config-router)#net 10.1.1.4
+R1(config-router)#net 192.168.1.0
+R1(config-router)#no auto-summary 
+R1(config-router)#do wr
+
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.1.0
+ no auto-summary
+
+R2(config)#router rip
+R2(config-router)#ver 2
+R2(config-router)#net 10.0.0.0
+R2(config-router)#net 192.168.2.0
+R2(config-router)#no aut
+R2(config-router)#do wr
+
+R2(config)#no ip route 192.168.3.0 255.255.255.0 Serial0/0/0
+R2(config)#ip route 192.168.3.0 255.255.255.0 Serial0/0/0 150
+
+R2#sh ip ro
+R    192.168.1.0/24 [120/1] via 10.1.1.5, 00:00:10, Serial0/0/1
+
+R3(config)#router rip
+R3(config-router)#ver 2
+R3(config-router)#net 10.0.0.0
+R3(config-router)#net 192.168.3.0
+R3(config-router)#no auto-summary 
+R3(config-router)#do wr
+
+
+R2
+Gateway of last resort is not set
+
+     10.0.0.0/30 is subnetted, 2 subnets
+C       10.1.1.4 is directly connected, Serial0/0/1
+C       10.1.1.8 is directly connected, Serial0/0/0
+R    192.168.1.0/24 [120/1] via 10.1.1.5, 00:00:10, Serial0/0/1
+C    192.168.2.0/24 is directly connected, FastEthernet0/0
+S    192.168.3.0/24 is directly connected, Serial0/0/0
+
+Gateway of last resort is not set
+
+     10.0.0.0/30 is subnetted, 2 subnets
+C       10.1.1.4 is directly connected, Serial0/0/1
+C       10.1.1.8 is directly connected, Serial0/0/0
+R    192.168.1.0/24 [120/1] via 10.1.1.5, 00:00:10, Serial0/0/1
+C    192.168.2.0/24 is directly connected, FastEthernet0/0
+R    192.168.3.0/24 [120/1] via 10.1.1.10, 00:00:01, Serial0/0/0
+
+
+2001:3200:face:1000::/56
+
+R1(config)#ipv6 unicast-routing
+
+R1(config-if)#int f0/0
+R1(config-if)#ipv6 address 2001:3200:face:1000::f/56
+R1(config-if)#int s0/0/0
+R1(config-if)#ipv6 address 2001:3200:face:1300::f/56
+
+R1(config-if)#ipv6 router rip 1
+R1(config-if)#int f0/0
+R1(config-if)#ipv6 rip 1 enable
+R1(config-if)#int s0/0/0
+R1(config-if)#ipv6 rip 1 enable
+
+R2(config)#int s0/0/1
+R2(config-if)#ipv6 address 2001:3200:face:1300::2/56
+R2(config-if)#ex
+R2(config)#ipv6 unicast-routing 
+R2(config)#int s0/0/1
+R2(config-if)#ipv6 rip 1 enable
+R2(config-if)#int f0/0
+R2(config-if)#ipv6 address 2001:3200:face:1100::f/56
+R2(config-if)#ipv6 rip 1 enable
+R2(config-if)#int s0/0/0
+R2(config-if)#ipv6 address 2001:3200:face:1400::1/56
+R2(config-if)#ipv6 rip 1 enable
+R2(config-if)#do wr
+
+R3(config)#ipv6 unicast-routing 
+R3(config)#int s0/0/1
+R3(config-if)#ipv6 address 2001:3200:face:1400::2/56
+R3(config-if)#ipv6 rip 1 enable
+R3(config-if)#int f0/0
+R3(config-if)#ipv6 address 2001:3200:face:1200::f/56
+R3(config-if)#ipv6 rip 1 enable
+R3(config-if)#do wr
+
+R3#sh ipv6 ro
+
+R1#ping 2001:3200:FACE:1200::F
+ 
+part 73
+eigrp: as number 1-65535, advanced dv, max hop count 255
+  only cisco routers, dual algo., metrics,
+  k-values: bandwidth, delay, reliability, load, mtu
+  
+  criterias for adjecencies: as, r-values same, hello
+  
+  [90/456987]   [90/325698]
+  
+  fc: feasable cuccesor, backup route, topology opto 8 fs
+  fd: calculation of the advertised distance  a router
+     to the dest.
+  ad: advertised distance
+  sr: successor route makes it to the routing table
+  
+  neighbor: info. about the nei it found
+  
+  topology: has all know routes (show ip egrp topology)
+     p = passive (good thing)
+	 a = active (still looking for routers)
+  
+  routing: has best routes to destination
+    based on lowest metric
+
+  distance vector: cannot forget "no auto-summary"
+
+  administrative distance: 90
+
+R1(config)#router eigrp 300
+
+R1(config)#router eigrp 300
+R1(config-router)#net 10.0.0.0
+R1(config-router)#net 192.168.1.0
+R1(config-router)#no auto-summary 
+
+R2
+conf t
+router eigrp 300
+net 10.0.0.0
+net 192.168.2.0
+no auto-summary 
+do wr
+
+R3
+conf t
+router eigrp 300
+net 10.0.0.0
+net 192.168.3.0
+no auto-summary 
+do wr
+
+R3#sh ip ro
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+     10.0.0.0/30 is subnetted, 2 subnets
+D       10.1.1.4 [90/2681856] via 10.1.1.9, 00:00:59, Serial0/0/1
+C       10.1.1.8 is directly connected, Serial0/0/1
+D    192.168.1.0/24 [90/2684416] via 10.1.1.9, 00:00:59, Serial0/0/1
+D    192.168.2.0/24 [90/2172416] via 10.1.1.9, 00:00:59, Serial0/0/1
+C    192.168.3.0/24 is directly connected, FastEthernet0/0
+S*   0.0.0.0/0 is directly connected, Serial0/0/1
+
+R3#sh ip eigrp topology 
+
+
+P 10.1.1.4/30, 1 successors, FD is 2681856
+         via 10.1.1.9 (2681856/2169856), Serial0/0/1
+P 10.1.1.8/30, 1 successors, FD is 2169856
+         via Connected, Serial0/0/1
+P 192.168.1.0/24, 1 successors, FD is 2684416
+         via 10.1.1.9 (2684416/2172416), Serial0/0/1
+P 192.168.2.0/24, 1 successors, FD is 2172416
+         via 10.1.1.9 (2172416/28160), Serial0/0/1
+P 192.168.3.0/24, 1 successors, FD is 28160
+         via Connected, FastEthernet0/0
+
+R1(config)#ipv6 router eigrp 100
+R1(config-rtr)#no sh
+R1(config-rtr)#int f0/0
+R1(config-if)#ipv6 eigrp 100
+R1(config-if)#int s0/0/0
+R1(config-if)#ipv6 eigrp 100
+R1(config-if)#do wr
+
+R2
+conf t
+ipv6 router eigrp 100
+no sh
+int f0/0
+ipv6 eigrp 100
+int s0/0/0
+ipv6 eigrp 100
+int s0/0/1
+ipv6 eigrp 100
+do wr
+
+R3
+conf t
+ipv6 router eigrp 100
+no sh
+int f0/0
+ipv6 eigrp 100
+int s0/0/1
+ipv6 eigrp 100
+do wr
+
+sh ip eigrp neibor
+sh ip eigrp topology
+
+ 
+part 74
+
+R0
+10.0.0.0/30
+c 10.1.1.4 s0/0/0
+d 10.1.1.8 10.1.1.6 s0/0/0 
+d 10.1.1.12 10.1.1.6 s0/0/0 
+d 10.1.1.16 10.1.1.29 s0/0/1 
+d 10.1.1.20 10.1.1.29 s0/0/1 
+d 10.1.1.24 10.1.1.29 s0/0/1 
+c 10.1.1.28 s0/0/1 
+c 192.168.100.0/24 f0/0  
+d 192.168.200.0/24 10.1.1.6 
+
+int s0/0/0
+10.1.1.5/30
+
+
+R1
+int f0/0
+10.1.1.9/30
+ 
+part 75
+ 
+part 76
+ 
+part 77
+
+lo1 1.1.1.1/32
+lo2 2.2.2.2/32
+lo3 3.3.3.3/32
+lo4 4.4.4.4/32
+192.168.1.0/24
+
+conf t
+hostname R1
+int f0/0
+ip address 192.168.1.1 255.255.255.0
+no sh
+exi
+do wr
+
+conf t
+hostname R2
+int f0/0
+ip address 192.168.1.2 255.255.255.0
+no sh
+exi
+do wr
+
+conf t
+hostname R3
+int f0/0
+ip address 192.168.1.3 255.255.255.0
+no sh
+exi
+do wr
+
+conf t
+hostname R4
+int f0/0
+ip address 192.168.1.4 255.255.255.0
+no sh
+exi
+do wr
+
+R1
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R2
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R3
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R4
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+do wr
+
+R4#sh ip route 
+
+C    192.168.1.0/24 is directly connected, FastEthernet0/0
+
+R4#sh ip ospf int f0/0
+
+FastEthernet0/0 is up, line protocol is up
+  Internet address is 192.168.1.4/24, Area 0
+
+  Process ID 1, Router ID 192.168.1.4, Network Type BROADCAST, Cost: 1
+  Transmit Delay is 1 sec, State DROTHER, Priority 1
+  Designated Router (ID) 192.168.1.1, Interface address 192.168.1.1
+  Backup Designated Router (ID) 192.168.1.2, Interface address 192.168.1.2
+  
+R4#sh ip ospf neighbor 
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.1.2       1   FULL/BDR        00:00:39    192.168.1.2     FastEthernet0/0
+192.168.1.3       1   2WAY/DROTHER    00:00:33    192.168.1.3     FastEthernet0/0
+192.168.1.1       1   FULL/DR         00:00:37    192.168.1.1     FastEthernet0/0
+
+p7716.pkt
+R1#clear ip ospf process 
+
+R2
+clear ip ospf process 
+y
+
+R1(config)#int loopback 1
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface Loopback1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+
+R1(config-if)#ip address 1.1.1.1 255.255.255.255
+R1(config-if)#router ospf 1
+R1(config-router)#network 1.1.1.1 0.0.0.0 area 0
+R1(config-router)#do wr
+Building configuration...
+[OK]
+
+
+ 
+part 7
+ 
+part 7
+ 
+part 7
+ 
+part 7
+ 
+part 7
+ 
+ 
