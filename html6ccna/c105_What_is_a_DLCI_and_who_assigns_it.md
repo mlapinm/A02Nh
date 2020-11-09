@@ -4,81 +4,81 @@ D:\mailCloud\prjother\tmp\1\c105_What is a DLCI and who assigns it.md
 __|__
 --|--
 [BLANK_AUDIO]|[BLANK_AUDIO]
-Alrighty welcome back.|Alrighty welcome back.
-The next term that we're gonna talk about in frame relay is something called a DLCI.|The next term that we're gonna talk about in frame relay is something called a DLCI.
-This is actually your data link connection, whoops,|This is actually your data link connection, whoops,
-iden, whoo, identifier.|iden, whoo, identifier.
-I think that's how you spell it,|I think that's how you spell it,
-identifier.|identifier.
-This number is getting to you by your provider.|This number is getting to you by your provider.
-At the moment that you purchase your CIR.|At the moment that you purchase your CIR.
-You get your access right.|You get your access right.
-They're gonna give you a number.|They're gonna give you a number.
-This DLCI, I'll show you here in the lab.|This DLCI, I'll show you here in the lab.
-Will represent what's called a PVC.|Will represent what's called a PVC.
-Which is a permanent virtual circuit.|Which is a permanent virtual circuit.
-As you can see here in the lab, there are two networks, right?|As you can see here in the lab, there are two networks, right?
-This is one network here.|This is one network here.
-This is one network here.|This is one network here.
-This is one network here.|This is one network here.
-Obviously, we're using sub interfaces in order to create this.|Obviously, we're using sub interfaces in order to create this.
-We have only one physical connection, so we create sub interfaces.|We have only one physical connection, so we create sub interfaces.
-And, for each sub interface you'll have a data link connection identifier number.|And, for each sub interface you'll have a data link connection identifier number.
-That, that is your PVC, your permanent virtual circuit.|That, that is your PVC, your permanent virtual circuit.
-That DLCI is going to identify you to the frame relay switch or your provider.|That DLCI is going to identify you to the frame relay switch or your provider.
-All right, to the cloud.|All right, to the cloud.
-So that number will identify you to the cloud, to whoever your provider is.|So that number will identify you to the cloud, to whoever your provider is.
-So it's important.|So it's important.
-Those DLCIs, that's why I said, are local numbers.|Those DLCIs, that's why I said, are local numbers.
-They're local numbers.|They're local numbers.
-And that becomes important when you start doing things like frame relay map.|And that becomes important when you start doing things like frame relay map.
-Lot of problems with people doing,|Lot of problems with people doing,
-questions based on frame relay.|questions based on frame relay.
-Cuz you really don't configure frame relay whatsoever.|Cuz you really don't configure frame relay whatsoever.
-That's why I want you to get an understanding of what the CIR,|That's why I want you to get an understanding of what the CIR,
-the access rate, and now the DLCI.|the access rate, and now the DLCI.
-Cause you will get questions.|Cause you will get questions.
-Hey, what is the path?|Hey, what is the path?
-What DLCI.|What DLCI.
-Wow, I didn't think I touched that.|Wow, I didn't think I touched that.
-What DLCI would you use, well, I'm standing right in front of it.|What DLCI would you use, well, I'm standing right in front of it.
-Okay?|Okay?
-So, if you're trying to get from here to here.|So, if you're trying to get from here to here.
-Is the DLCI 201 to 102.|Is the DLCI 201 to 102.
-So once you identify yourself to the frame relay cloud he'll say, okay he wants to go to you know he, he's part of this company|So once you identify yourself to the frame relay cloud he'll say, okay he wants to go to you know he, he's part of this company
-and he's trying to get to that DLCI.|and he's trying to get to that DLCI.
-So you will get questions with something that looks like this and then you'll have to match up which pathway it's it's going to use.|So you will get questions with something that looks like this and then you'll have to match up which pathway it's it's going to use.
-Well in order to get over here, this will be the pathway, this will be your local DLCI number for this particular permanent|Well in order to get over here, this will be the pathway, this will be your local DLCI number for this particular permanent
-virtual circuit, for this sub-interface.|virtual circuit, for this sub-interface.
-Cuz when you're configuring frame relay,|Cuz when you're configuring frame relay,
-you do it du, let me rephrase that.|you do it du, let me rephrase that.
-The preferred method to configure frame relay.|The preferred method to configure frame relay.
-Sounds like a test question.|Sounds like a test question.
-To avoid split horizon issues, and remember what split horizon is.|To avoid split horizon issues, and remember what split horizon is.
-Split horizon is do not update me on the same interface that I just sent you information on.|Split horizon is do not update me on the same interface that I just sent you information on.
-So to avoid that split horizon issue you go ahead and create sub interfaces.|So to avoid that split horizon issue you go ahead and create sub interfaces.
-Each sub interface will be its own sub net.|Each sub interface will be its own sub net.
-It will have its own DLCI, which creates that permanent virtual circuit that will be identified to the frame relay cloud.|It will have its own DLCI, which creates that permanent virtual circuit that will be identified to the frame relay cloud.
-All right.|All right.
-And that's how we're gonna configure this particular frame relay lab.|And that's how we're gonna configure this particular frame relay lab.
-We'll take a look at it first and then we'll do it.|We'll take a look at it first and then we'll do it.
-But this DLCI represents this connection path right here.|But this DLCI represents this connection path right here.
-This DLCI is this pathway here cuz really what it's saying here is DLCI one to two.|This DLCI is this pathway here cuz really what it's saying here is DLCI one to two.
-Two to one.|Two to one.
-Two to three.|Two to three.
-Three to two.|Three to two.
+Alrighty welcome back.|Хорошо, добро пожаловать обратно.
+The next term that we're gonna talk about in frame relay is something called a DLCI.|Следующий термин, о котором мы будем говорить в Frame Relay, - это то, что называется DLCI.
+This is actually your data link connection, whoops,|На самом деле это ваше соединение для передачи данных, упс,
+iden, whoo, identifier.|идентификатор, уу, идентификатор.
+I think that's how you spell it,|Я думаю, это как вы пишете,
+identifier.|идентификатор.
+This number is getting to you by your provider.|Этот номер получает ваш провайдер.
+At the moment that you purchase your CIR.|В тот момент, когда вы покупаете CIR.
+You get your access right.|Вы получаете право доступа.
+They're gonna give you a number.|Они дадут тебе номер.
+This DLCI, I'll show you here in the lab.|Этот DLCI я покажу вам здесь, в лаборатории.
+Will represent what's called a PVC.|Будет представлять так называемый ПВХ.
+Which is a permanent virtual circuit.|Это постоянный виртуальный канал.
+As you can see here in the lab, there are two networks, right?|Как вы можете видеть здесь, в лаборатории, есть две сети, верно?
+This is one network here.|Это одна сеть.
+This is one network here.|Это одна сеть.
+This is one network here.|Это одна сеть.
+Obviously, we're using sub interfaces in order to create this.|Очевидно, мы используем субинтерфейсы для его создания.
+We have only one physical connection, so we create sub interfaces.|У нас только одно физическое соединение, поэтому мы создаем субинтерфейсы.
+And, for each sub interface you'll have a data link connection identifier number.|И для каждого подчиненного интерфейса у вас будет номер идентификатора соединения канала передачи данных.
+That, that is your PVC, your permanent virtual circuit.|Это ваш постоянный виртуальный канал, постоянный виртуальный канал.
+That DLCI is going to identify you to the frame relay switch or your provider.|Этот DLCI идентифицирует вас для коммутатора Frame Relay или вашего провайдера.
+All right, to the cloud.|Хорошо, в облако.
+So that number will identify you to the cloud, to whoever your provider is.|Таким образом, этот номер будет идентифицировать вас в облаке, независимо от вашего провайдера.
+So it's important.|Так что это важно.
+Those DLCIs, that's why I said, are local numbers.|Эти DLCI, вот почему я сказал, местные номера.
+They're local numbers.|Это местные номера.
+And that becomes important when you start doing things like frame relay map.|И это становится важным, когда вы начинаете делать такие вещи, как карта ретрансляции кадров.
+Lot of problems with people doing,|Много проблем с людьми, делающими,
+questions based on frame relay.|вопросы на основе Frame Relay.
+Cuz you really don't configure frame relay whatsoever.|Потому что вы на самом деле вообще не настраиваете Frame Relay.
+That's why I want you to get an understanding of what the CIR,|Вот почему я хочу, чтобы вы поняли, что CIR,
+the access rate, and now the DLCI.|скорость доступа, а теперь и DLCI.
+Cause you will get questions.|Потому что у вас будут вопросы.
+Hey, what is the path?|Эй, какой путь?
+What DLCI.|Что DLCI.
+Wow, I didn't think I touched that.|Вау, я не думал, что коснулся этого.
+What DLCI would you use, well, I'm standing right in front of it.|Какой DLCI вы бы использовали, я стою прямо перед ним.
+Okay?|Ладно?
+So, if you're trying to get from here to here.|Итак, если вы пытаетесь добраться отсюда сюда.
+Is the DLCI 201 to 102.|Разве DLCI от 201 до 102.
+So once you identify yourself to the frame relay cloud he'll say, okay he wants to go to you know he, he's part of this company|Итак, как только вы идентифицируете себя в облаке с ретрансляцией кадров, он скажет: «Хорошо, он хочет пойти к вам, знаете ли, он - часть этой компании
+and he's trying to get to that DLCI.|и он пытается добраться до этого DLCI.
+So you will get questions with something that looks like this and then you'll have to match up which pathway it's it's going to use.|Таким образом, вы получите вопросы с чем-то похожим на это, а затем вам нужно будет сопоставить, какой путь он будет использовать.
+Well in order to get over here, this will be the pathway, this will be your local DLCI number for this particular permanent|Что ж, чтобы добраться сюда, это будет путь, это будет ваш местный номер DLCI для этого конкретного постоянного
+virtual circuit, for this sub-interface.|виртуальный канал для этого субинтерфейса.
+Cuz when you're configuring frame relay,|Потому что, когда вы настраиваете Frame Relay,
+you do it du, let me rephrase that.|Вы делаете это du, позвольте мне перефразировать это.
+The preferred method to configure frame relay.|Предпочтительный метод настройки ретрансляции кадров.
+Sounds like a test question.|Похоже на контрольный вопрос.
+To avoid split horizon issues, and remember what split horizon is.|Чтобы избежать проблем с разделением горизонта и помнить, что такое разделение горизонта.
+Split horizon is do not update me on the same interface that I just sent you information on.|Разделение горизонта - это не обновлять меня в том же интерфейсе, о котором я только что отправил вам информацию.
+So to avoid that split horizon issue you go ahead and create sub interfaces.|Поэтому, чтобы избежать этой проблемы с разделением горизонта, вы создаете вспомогательные интерфейсы.
+Each sub interface will be its own sub net.|Каждый подчиненный интерфейс будет отдельной подсетью.
+It will have its own DLCI, which creates that permanent virtual circuit that will be identified to the frame relay cloud.|У него будет собственный DLCI, который создает постоянный виртуальный канал, который будет идентифицирован в облаке ретрансляции кадров.
+All right.|Все в порядке.
+And that's how we're gonna configure this particular frame relay lab.|Вот как мы собираемся настроить эту конкретную лабораторию Frame Relay.
+We'll take a look at it first and then we'll do it.|Мы сначала посмотрим на это, а потом займемся этим.
+But this DLCI represents this connection path right here.|Но этот DLCI представляет этот путь подключения прямо здесь.
+This DLCI is this pathway here cuz really what it's saying here is DLCI one to two.|Этот DLCI - вот этот путь, потому что на самом деле здесь говорится о DLCI один к двум.
+Two to one.|Два к одному.
+Two to three.|Два-три.
+Three to two.|Три к двум.
 And this one should be three to one.|И это должно быть три к одному.
 I have to change that.|Я должен это изменить.
 Okay?|Ладно?
 And they'll be three to one and then one to three.|И они будут три к одному, а затем один к трем.
-All right?|Отлично?
+All right?|Все в порядке?
 Now again, it's.|Опять же, это.
-Those are not gonna be the numbers that they use.|Это не будут числа, которые они используют.
+Those are not gonna be the numbers that they use.|Это не те числа, которые они используют.
 They'll use completely different numbers.|Они будут использовать совершенно другие числа.
-But this is so you understand the concept of what's going on.|Но это так, чтобы вы понимали концепцию того, что происходит.
+But this is so you understand the concept of what's going on.|Но это так, чтобы вы понимали концепцию происходящего.
 You're creating these logical paths between each particular router.|Вы создаете эти логические пути между каждым конкретным маршрутизатором.
 But again, it is your provider that gives you that DLCI number.|Но опять же, это ваш провайдер, который дает вам этот номер DLCI.
-And you will then assign it to the PVC that you choose, obviously.|И, конечно же, вы назначите его выбранному PVC.
+And you will then assign it to the PVC that you choose, obviously.|И, очевидно, вы затем назначите его выбранному PVC.
 All right, in this case, this DLCI would be on that particular PVC.|Хорошо, в этом случае этот DLCI будет на этом конкретном PVC.
 Let me just show you, let me just show you, so you can, instead of just taking a look at something there,|Позвольте мне просто показать вам, позвольте мне просто показать вам, чтобы вы могли, вместо того, чтобы просто смотреть на что-то там,
 you can see how it would come into play.|вы можете увидеть, как это повлияет на игру.
@@ -87,7 +87,7 @@ It's a lot easier to look at that.|На это намного легче смо�
 And you can see, right here.|И вы можете видеть прямо здесь.
 You're having your encapsulation.|У вас есть инкапсуляция.
 We're using frame relay.|Мы используем ретрансляцию кадров.
-All right.|Отлично.
+All right.|Все в порядке.
 In this particular sub interface, all right, which I'm using 102.|В этом конкретном субинтерфейсе все в порядке, я использую 102.
 Right, to match up to the DLCI.|Верно, чтобы соответствовать DLCI.
 I'm using the frame relay DLCI of 102.|Я использую DLCI ретрансляции кадров 102.
@@ -106,7 +106,7 @@ It doesn't broadcast, all right?|Он не транслируется, поня�
 So, that's why we do these point to point connections.|Вот почему мы делаем эти соединения точка-точка.
 This is the best way to do frame relay.|Это лучший способ использовать Frame Relay.
 It really, really is.|Это действительно так.
-Once you strike because imagine using and I don't want to get off the topic.|Как только вы нанесете удар, потому что представьте, что используете, и я не хочу уходить от темы.
+Once you strike because imagine using and I don't want to get off the topic.|Однажды вы нанесете удар, потому что представьте себе, что используете, и я не хочу уходить от темы.
 But if you are using OSPF which is also non broadcast in nature and you are using frame relay non broadcast in nature.|Но если вы используете OSPF, который также не является широковещательным по своей природе, и вы используете ретрансляцию кадров без широковещательной передачи.
 So there's a lot of different things that you may need to do in order to make that happen.|Так что есть много разных вещей, которые вам нужно сделать, чтобы это произошло.
 Goes beyond the CCNA.|Выходит за рамки CCNA.
@@ -122,7 +122,7 @@ Take a look at the screen.|Взгляните на экран.
 Take a look at the screen.|Взгляните на экран.
 You seen the encapsulation, you see the sub interface.|Вы видели инкапсуляцию, вы видите субинтерфейс.
 Now you know, again, this number does not need to match the DLCI by, but why not.|Теперь вы знаете, что это число не обязательно должно соответствовать DLCI by, но почему бы и нет.
-Just like in VLANs remember, when we did the subinterfaces in VLAN.|Точно так же, как в VLAN, помните, когда мы делали субинтерфейсы в VLAN.
+Just like in VLANs remember, when we did the subinterfaces in VLAN.|Так же, как в VLAN, помните, когда мы делали субинтерфейсы в VLAN.
 That the subinterface matched the VLAN ID,|Что субинтерфейс соответствует идентификатору VLAN,
 is that a requirement?|это требование?
 No.|Нет.
@@ -134,11 +134,11 @@ oh that's that DLCI so you know, so you know which DLCI it is.|О, это тот
 So, but this is how you would use the DLCI once the provider gives it to you.|Итак, но вот как вы будете использовать DLCI после того, как провайдер предоставит его вам.
 And that is what identifies you to a frame relay cloud.|И это то, что отличает вас от облака Frame Relay.
 But this is, I mean the configuration you can see.|Но это я имею в виду конфигурацию, которую вы видите.
-It's not that difficult, it's not that difficult.|Это не так уж и сложно, это не так уж и сложно.
-All right.|Отлично.
+It's not that difficult, it's not that difficult.|Это не так уж и сложно, это не так уж сложно.
+All right.|Все в порядке.
 So this is where you would use that DLCI,|Вот где вы могли бы использовать этот DLCI,
 the DLCI.|DLCI.
-No clock-rates you didn't see any clock-rates on there.|Никаких тактовых частот, вы не видели там никаких тактовых частот.
+No clock-rates you didn't see any clock-rates on there.|Никаких тактовых частот вы не видели там.
 Unless they had it already there by default, no clock-rates,|Если он уже не установлен по умолчанию, никаких тактовых частот,
 I don't have no clock-rates on here.|У меня здесь нет тарифов.
 The clock rate, remember your routers.|Тактовая частота, помните свои маршрутизаторы.
@@ -159,9 +159,9 @@ Or you'll plug it in straight to a fiber line or what have you.|Или вы по
 But it's not going.|Но не пойдет.
 You know, it's.|Вы знаете, это.
 No.|Нет.
-You don't provide the clocking.|Вы не обеспечиваете часы.
+You don't provide the clocking.|Вы не обеспечиваете синхронизацию.
 It's your provider.|Это ваш провайдер.
-All right?|Отлично?
+All right?|Все в порядке?
 So again, that is what your DLCI is and it is local.|Опять же, это ваш DLCI, и он локален.
 To your particular segment.|Для вашего конкретного сегмента.
 To your router.|К вашему роутеру.
