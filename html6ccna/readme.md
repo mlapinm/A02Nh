@@ -34,6 +34,8 @@
 [IP services](#IP-services)   
 [Managing Devices](#Managing-Devices)   
 [New Section Explaining EtherChannel](#New-Section-Explaining-EtherChannel)   
+[Footer](#Footer)  
+
    
 ## Cisco CCNA (200-120)_ The Complete Course Subs   
 ## Course Curriculum   
@@ -316,3 +318,12 @@ Summary of Section
 []()   
 []()   
 []()   
+
+## Footer
+[b04.txt](b04.txt)  
+[]()  
+[]()  
+[]()  
+[]()  
+
+
