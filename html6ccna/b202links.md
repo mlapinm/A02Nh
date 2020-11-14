@@ -5,7 +5,14 @@
 
 
 ## links
-
+[]()  
+[]()  
+[CCNA1 CHAPTER 1 EXAM (V5.1) 2016](https://www.ccna7.com/ccna1-v5-1/ccna1-chapter-1-exam-v5-1/)  
+[thenetworkingdoctors](https://www.thenetworkingdoctors.com/products)  
+[CCNA 200-301 Official CERT Guide Volume 1 instapdf](https://instapdf.in/download/?pdfid=4623)   
+[CCNA 200-301 vk](https://vk.com/wall-51126445_46835)  
+[]()  
+[]()  
 [Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep] - YouTube](https://www.youtube.com/watch?v=qiQR5rTSshw)   
 [EXAM DAY: Process of using onVUE App (Pearsonvue Online Exam Application) at Home or Office - YouTube](https://www.youtube.com/watch?v=otw3uO3KXpA)   
 [onVue for VMware Test Exam online with Proctor online - YouTube](https://www.youtube.com/watch?v=dyJWGGZ932Q)   
