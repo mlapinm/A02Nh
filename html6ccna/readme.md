@@ -1,5 +1,5 @@
 [Cisco CCNA (200-120)_ The Complete Course](b02course.md)  
-[part001](b001part.txt)  
+[part001](b001part.md)  
 [part006](b006part.txt)  
 [links](b202links.md)  
 []()  
