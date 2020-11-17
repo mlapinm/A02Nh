@@ -10,6 +10,8 @@
 1.3.a Одномодовое волокно, многомодовое волокно, медь   
 - 1.3.b Connections (Ethernet shared media and point-to-point)   
 1.3.b Подключения (общая среда Ethernet и точка-точка)   
+  
+  
 __|__
 --|--
 Welcome to the first chapter in your study for CCNA! This chapter begins Part I, which|Добро пожаловать в первую главу вашего исследования CCNA! Эта глава начинается с части I, в которой
