@@ -18,4 +18,14 @@ Standard | Cable Type | Max Distance
 10GBASE-LR| SM | 10km
 10GBASE-E | SM | 30km
 
+###### Table 2-5 Comparisons Between UTP, MM, and SM Ethernet Cabling
+__|__|__|__
+--|--|--|--
+Criteria | UTP | Multimode | Single-Mode
+Relative Cost of Cabling | Low | Medium | Medium
+Relative Cost of a Switch Port | Low | Medium | High
+Approximate Max Distance | 100m | 500m | 40km
+Relative Susceptibility to Interference | Some | None | None
+Relative Risk of Copying from Cable Emissions | Some | None | None
+
 ###### 3
