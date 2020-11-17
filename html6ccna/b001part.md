@@ -2,13 +2,13 @@
 Введение в сеть TCP / IP   
 ### This chapter covers the following exam topics:
 В этой главе рассматриваются следующие экзаменационные темы:   
-- 1.0 Network Fundamentals
+- 1.0 Network Fundamentals   
 1.0 Основы сети   
-- 1.3 Compare physical interface and cabling types
+- 1.3 Compare physical interface and cabling types   
 1.3 Сравните физический интерфейс и типы кабелей   
-- 1.3.a Single-mode fiber, multimode fiber, copper
+- 1.3.a Single-mode fiber, multimode fiber, copper   
 1.3.a Одномодовое волокно, многомодовое волокно, медь   
-- 1.3.b Connections (Ethernet shared media and point-to-point)
+- 1.3.b Connections (Ethernet shared media and point-to-point)   
 1.3.b Подключения (общая среда Ethernet и точка-точка)   
 __|__
 --|--
