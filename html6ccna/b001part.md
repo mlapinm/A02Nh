@@ -48,14 +48,18 @@ the companion website, includes both the answers and explanations. You can also 
 answers and explanations in the PTP testing software.|ответы и пояснения в программе тестирования PTP.
 - Table 1-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
 Таблица 1-1 «Знаю ли я это уже?» Сопоставление разделов с вопросами по основным темам   
+   
+     
 __|__
 --|--
 Foundation Topics Section Questions|Основные темы раздела Вопросы
 Perspectives on Networking None|Перспективы сетевых технологий Нет
 TCP/IP Networking Model 1–4|Сетевая модель TCP / IP 1–4
 Data Encapsulation Terminology 5–7|Терминология инкапсуляции данных 5–7
-- 1. Which of the following protocols are examples of TCP/IP transport layer protocols?
-1. Какие из следующих протоколов являются примерами протоколов транспортного уровня TCP / IP?   
+- 1. Which of the following protocols are examples of TCP/IP transport layer protocols?   
+1. Какие из следующих протоколов являются примерами протоколов транспортного уровня TCP / IP?    
+   
+   
 __|__
 --|--
 (Choose two answers.)|(Выберите два ответа.)
@@ -65,8 +69,10 @@ c. IP|c. IP
 d. UDP|d. UDP
 e. SMTP|е. SMTP
 f. TCP|f. TCP
-- 2. Which of the following protocols are examples of TCP/IP data-link layer protocols?
-2. Какие из следующих протоколов являются примерами протоколов уровня канала передачи данных TCP / IP?   
+- 2. Which of the following protocols are examples of TCP/IP data-link layer protocols?   
+2. Какие из следующих протоколов являются примерами протоколов уровня канала передачи данных TCP / IP?    
+   
+   
 __|__
 --|--
 (Choose two answers.)|(Выберите два ответа.)
@@ -77,8 +83,10 @@ d. UDP|d. UDP
 e. SMTP|е. SMTP
 f. TCP|f. TCP
 g. PPP|грамм. PPP
-- 3. The process of HTTP asking TCP to send some data and making sure that it is received
+- 3. The process of HTTP asking TCP to send some data and making sure that it is received   
 3. Процесс HTTP-запроса TCP на отправку некоторых данных и обеспечение их получения.   
+   
+   
 __|__
 --|--
 correctly is an example of what?|правильно это пример чего?
@@ -86,8 +94,10 @@ a. Same-layer interaction|а. Взаимодействие на одном ур�
 b. Adjacent-layer interaction|б. Взаимодействие смежных слоев
 c. OSI model|c. Модель OSI
 d. All of these answers are correct.|d. Все эти ответы верны.
-- 4. The process of TCP on one computer marking a TCP segment as segment 1, and the
+- 4. The process of TCP on one computer marking a TCP segment as segment 1, and the   
 4. Процесс TCP на одном компьютере, помечающий сегмент TCP как сегмент 1, и   
+   
+    
 __|__
 --|--
 receiving computer then acknowledging the receipt of TCP segment 1 is an example of|принимающий компьютер, затем подтверждающий получение сегмента TCP 1, является примером
@@ -97,8 +107,10 @@ b. Same-layer interaction|б. Взаимодействие на одном ур�
 c. Adjacent-layer interaction|c. Взаимодействие смежных слоев
 d. OSI model|d. Модель OSI
 e. All of these answers are correct.|е. Все эти ответы верны.
-- 5. The process of a web server adding a TCP header to the contents of a web page, followed by adding an IP header and then adding a data-link header and trailer, is an
-5. Процесс добавления веб-сервером заголовка TCP к содержимому веб-страницы, с последующим добавлением заголовка IP и последующим добавлением заголовка и трейлера ссылки на данные, является   
+- 5. The process of a web server adding a TCP header to the contents of a web page, followed by adding an IP header and then adding a data-link header and trailer, is an   
+5. Процесс добавления веб-сервером заголовка TCP к содержимому веб-страницы, с последующим добавлением заголовка IP и последующим добавлением заголовка и трейлера ссылки на данные, является     
+   
+   
 __|__
 --|--
 example of what?|пример чего?
@@ -106,8 +118,10 @@ a. Data encapsulation|а. Инкапсуляция данных
 b. Same-layer interaction|б. Взаимодействие на одном уровне
 c. OSI model|c. Модель OSI
 d. All of these answers are correct.|d. Все эти ответы верны.
-- 6. Which of the following terms is used specifically to identify the entity created when
-6. Какой из следующих терминов используется специально для обозначения организации, созданной при   
+- 6. Which of the following terms is used specifically to identify the entity created when   
+6. Какой из следующих терминов используется специально для обозначения организации, созданной при    
+   
+   
 __|__
 --|--
 encapsulating data inside data-link layer headers and trailers?|инкапсулируют данные внутри заголовков и трейлеров канального уровня?
