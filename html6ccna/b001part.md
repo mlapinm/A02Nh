@@ -746,8 +746,8 @@ LH Data LT|LH Data LT
 Segment|Сегмент
 Packet|Пакет
 Frame|Рамка
-Figure 1-13 Perspectives on Encapsulation and “Data”*|Рисунок 1-13 Перспективы инкапсуляции и «данных» *
-* The letters LH and LT stand for link header and link trailer, respectively, and refer to the data-link layer|* Буквы LH и LT обозначают заголовок ссылки и конец ссылки, соответственно, и относятся к уровню канала передачи данных.
+Figure 1-13 Perspectives on Encapsulation and “Data”*|Рисунок 1-13 Перспективы инкапсуляции и «данных» 
+The letters LH and LT stand for link header and link trailer, respectively, and refer to the data-link layer| Буквы LH и LT обозначают заголовок ссылки и конец ссылки, соответственно, и относятся к уровню канала передачи данных.
 header and trailer.|заголовок и трейлер.
 Figure 1-13 also shows the encapsulated data as simply “data.” When focusing on the work|На рис. 1-13 также показаны инкапсулированные данные как просто «данные». Когда сосредотачиваемся на работе
 done by a particular layer, the encapsulated data typically is unimportant. For example, an|выполняется конкретным уровнем, инкапсулированные данные обычно не важны. Например,
