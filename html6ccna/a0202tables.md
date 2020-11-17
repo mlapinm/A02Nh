@@ -9,4 +9,13 @@ Speed | Common Name | Informal IEEE | Formal IEEE | Cable Type,
 1000 Mbps | Gigabit Ethernet | 1000BASE-T | 802.3ab | Copper, 100 m
 10 Gbps | 10 Gig Ethernet | 10GBASE-T | 802.3an | Copper, 100 m
 
-###### 2
+###### Table 2-4. Table 2-4 A Sampling of IEEE 802.3 10-Gbps Fiber Standards
+__|__|__
+--|--|--
+Standard | Cable Type | Max Distance
+10GBASE-S | MM | 400m
+10GBASE-LX4 | MM | 300m
+10GBASE-LR| SM | 10km
+10GBASE-E | SM | 30km
+
+###### 3
