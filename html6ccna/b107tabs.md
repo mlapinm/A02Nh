@@ -1,4 +1,6 @@
 ###### Table 1-2 TCP/IP Architectural Model and Example Protocols
+__|__
+--|--
 TCP/IP Architecture Layer | Example Protocols
 Application | HTTP, POP3, SMTP
 Transport| TCP, UDP
