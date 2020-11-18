@@ -16,8 +16,8 @@ Adjacent-layer interaction on the same computer | On a single computer, one lowe
 
 Table end.   
 ###### Table 1-4 Chapter Review Tracking
-__|__
---|--
+__|__|__
+--|--|--
 Review Element | Review Date(s) | Resource Used
 Review key topics || Book, website
 Review key terms || Book, website
