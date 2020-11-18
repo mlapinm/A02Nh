@@ -8,19 +8,20 @@ Internet | IP, ICMP
 Data Link & Physical | Ethernet, 802.11 (Wi-Fi)  
 Table end.   
 
-Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions
-Concept Description
+###### Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions
+__|__
+--|--
+Concept | Description
 Same-layer interaction
-on different computers
-The two computers use a protocol to communicate with the same
+on different computers | The two computers use a protocol to communicate with the same
 layer on another computer. The protocol defines a header that
 communicates what each computer wants to do.
 Adjacent-layer
 interaction on the same
-computer
-On a single computer, one lower layer provides a service to the layer
+computer | On a single computer, one lower layer provides a service to the layer
 just above. The software or hardware that implements the higher
-layer requests that the next lower layer perform the needed function.
+layer requests that the next lower layer perform the needed function.    
+
 Table end.
 Table 1-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
