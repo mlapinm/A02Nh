@@ -89,99 +89,69 @@ Broadcast address | An address that means “all devices that reside on this LAN
 Multicast address | On Ethernet, a multicast address implies some subset of all devices currently on the   Ethernet LAN.   
    
    
-Table end.
+Table end.   
 ###### Table 2-8 Chapter Review Tracking
+__|__|__
+--|--|--
 Review Element | Review Date(s) | Resource Used
 Review key topics || Book, website
 Review key terms || Book, website
 Answer DIKTA questions || Book, PTP
-Review memory tables || Book, website  
+Review memory tables || Book, website   
    
    
 Table end.
 ###### Table 3-2 Different Names for a Leased Line
-Name Meaning or Reference
-Leased circuit,
-Circuit
-The words line and circuit are often used as synonyms in telco terminology;
-circuit makes reference to the electrical circuit between the two endpoints.
-Serial link,
-Serial line
-The words link and line are also often used as synonyms. Serial in this case
-refers to the fact that the bits flow serially and that routers use serial interfaces.
-Point-to-point
-link, Point-topoint
-line
-These terms refer to the fact that the topology stretches between two
-points, and two points only. (Some older leased lines allowed more than two
+__|__
+--|--
+Name | Meaning or Reference
+Leased circuit, Circuit | The words line and circuit are often used as synonyms in telco terminology; circuit makes reference to the electrical circuit between the two endpoints.
+Serial link, Serial line | The words link and line are also often used as synonyms. Serial in this case refers to the fact that the bits flow serially and that routers use serial interfaces.
+Point-to-point link, Point-topoint line |  These terms refer to the fact that the topology stretches between two points, and two points only. (Some older leased lines allowed more than two
 devices.)
-T1 This specific type of leased line transmits data at 1.544 megabits per second
-(1.544 Mbps).
-WAN link, Link Both of these terms are very general, with no reference to any specific
-technology.
-Private line This term refers to the fact that the data sent over the line cannot be copied
-by other telco customers, so the data is private.
+T1 | This specific type of leased line transmits data at 1.544 megabits per second (1.544 Mbps).
+WAN link, Link | Both of these terms are very general, with no reference to any specific technology.
+Private line | This term refers to the fact that the data sent over the line cannot be copied by other telco customers, so the data is private.   
+   
+   
 Table end.
-Table 3-3 Comparing HDLC Header Fields to Ethernet
-HDLC
-Field
-Ethernet
-Equivalent
-Description
-Flag Preamble,
-SFD
-Lists a recognizable bit pattern so that the receiving nodes realize that
-a new frame is arriving.
-Address Destination
-Address
-Identifies the destination device.
-Control N/A Mostly used for purposes no longer in use today for links between
-routers.
+###### Table 3-3 Comparing HDLC Header Fields to Ethernet
+__|__|__
+--|--|--
+HDLC Field | Ethernet Equivalent |  Description
+Flag | Preamble, SFD | Lists a recognizable bit pattern so that the receiving nodes realize that a new frame is arriving.
+Address | Destination Address | Identifies the destination device.
+Control | N/A | Mostly used for purposes no longer in use today for links between routers.
 Type Type Identifies the type of Layer 3 packet encapsulated inside the frame.
-FCS FCS Identifies a field used by the error detection process. (It is the only
-trailer field in this table.)
+FCS | FCS | Identifies a field used by the error detection process. (It is the only trailer field in this table.)   
+   
+   
 Table end.
-Table 3-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Book, website
+###### Table 3-4 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review memory tables|| Book, website   
+   
+   
 Table end.
-Table 3-5 Key Topics for Chapter 3
-Key Topic
-Element
-Description Page
-Number
-Figure 3-7 Ethernet over MPLS—physical connections 66
-List Four-step process of how routers route (forward) packets 70
-Figure 3-11 IP Routing and Encapsulation 71
-List Two statements about how IP expects IP addresses to be grouped into
-networks or subnets
-73
-List Three-step process of how routing protocols learn routes 74
-Figure 3-13 IP Routing Protocol Basic Process 75
-Figure 3-14 Example that shows the purpose and process of DNS name resolution 76
-Figure 3-15 Example of the purpose and process of ARP 78
-Key Terms You Should Know
+###### Table 4-2 Cisco IOS Software Command Help
+__|__
+--|--
+What You Enter | What Help You Get
+? | Provides help for all commands available in this mode.
+command ? | With a space between the command and the ?, the switch lists text to describe all the first parameter options for the command.
+com? | Lists commands that start with com.
+command parm? | Lists all parameters beginning with the parameter typed so far. (Notice that there is no space between parm and the ?.)
+command parm<Tab> | Pressing the Tab key causes IOS to spell out the rest of the word, assuming that you have typed enough of the word so there is only one option that begins with that string of characters.
+command parm1 ? | If a space is inserted before the question mark, the CLI lists all the next parameters and gives a brief explanation of each.  
+   
+   
 Table end.
-Table 4-2 Cisco IOS Software Command Help
-What You Enter What Help You Get
-? Provides help for all commands available in this mode.
-command ? With a space between the command and the ?, the switch lists text to
-describe all the first parameter options for the command.
-com? Lists commands that start with com.
-command parm? Lists all parameters beginning with the parameter typed so far. (Notice
-that there is no space between parm and the ?.)
-command
-parm<Tab>
-Pressing the Tab key causes IOS to spell out the rest of the word,
-assuming that you have typed enough of the word so there is only one
-option that begins with that string of characters.
-command parm1 ? If a space is inserted before the question mark, the CLI lists all the next
-parameters and gives a brief explanation of each.
-Table end.
-Table 4-3 Key Sequences for Command Edit and Recall
+###### Table 4-3 Key Sequences for Command Edit and Recall
 Keyboard Command What Happens
 Up arrow or Ctrl+P This displays the most recently used command. If you press it
 again, the next most recent command appears, until the history
