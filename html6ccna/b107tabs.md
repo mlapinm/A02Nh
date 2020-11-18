@@ -75,31 +75,31 @@ Data and Pad* | 46– 1500 | Holds data from a higher layer, typically an L3PDU 
 Frame Check Sequence (FCS) | 4 | Provides a method for the receiving NIC to determine whether the frame   experienced transmission errors.   
    
    
+Table end.  
+
+###### Table 2-7 LAN MAC Address Terminology and Features
+__|__
+--|--
+LAN Addressing Term or Feature| Description 
+MAC | Media Access Control. 802.3 (Ethernet) defines the MAC sublayer of IEEE Ethernet.
+Ethernet address, NIC address, LAN address | Other names often used instead of MAC address. These terms describe the 6-byte address of the LAN interface card.
+Burned-in address | The 6-byte address assigned by the vendor making the card.
+Unicast address | A term for a MAC address that represents a single LAN interface.
+Broadcast address | An address that means “all devices that reside on this LAN right now.”
+Multicast address | On Ethernet, a multicast address implies some subset of all devices currently on the   Ethernet LAN.   
+   
+   
 Table end.
-Table 2-7 LAN MAC Address Terminology and Features
-LAN Addressing
-Term or Feature
-Description
-MAC Media Access Control. 802.3 (Ethernet) defines the MAC sublayer of
-IEEE Ethernet.
-Ethernet address, NIC
-address, LAN address
-Other names often used instead of MAC address. These terms
-describe the 6-byte address of the LAN interface card.
-Burned-in address The 6-byte address assigned by the vendor making the card.
-Unicast address A term for a MAC address that represents a single LAN interface.
-Broadcast address An address that means “all devices that reside on this LAN right now.”
-Multicast address On Ethernet, a multicast address implies some subset of all devices
-currently on the Ethernet LAN.
+###### Table 2-8 Chapter Review Tracking
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review memory tables || Book, website  
+   
+   
 Table end.
-Table 2-8 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Book, website
-Table end.
-Table 3-2 Different Names for a Leased Line
+###### Table 3-2 Different Names for a Leased Line
 Name Meaning or Reference
 Leased circuit,
 Circuit
