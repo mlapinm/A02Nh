@@ -1,11 +1,11 @@
-43421
-Table 1-2 TCP/IP Architectural Model and Example Protocols
-TCP/IP Architecture Layer Example Protocols
-Application HTTP, POP3, SMTP
-Transport TCP, UDP
-Internet IP, ICMP
-Data Link & Physical Ethernet, 802.11 (Wi-Fi)
-Table end.
+###### Table 1-2 TCP/IP Architectural Model and Example Protocols
+TCP/IP Architecture Layer | Example Protocols
+Application | HTTP, POP3, SMTP
+Transport| TCP, UDP
+Internet | IP, ICMP
+Data Link & Physical | Ethernet, 802.11 (Wi-Fi)  
+Table end.   
+
 Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions
 Concept Description
 Same-layer interaction
@@ -43,7 +43,7 @@ Table 2-3 A 10BASE-T and 100BASE-T Pin Pairs Used
 Transmits on Pins 1,2 Transmits on Pins 3,6
 PC NICs Hubs
 Routers Switches
-Wireless access point (Ethernet interface) ó
+Wireless access point (Ethernet interface) ‚Äî
 Table end.
 Table 2-4 A Sampling of IEEE 802.3 10-Gbps Fiber Standards
 Standard Cable Type Max Distance*
@@ -75,7 +75,7 @@ Address
 6 Identifies the sender of this frame.
 Type 2 Defines the type of protocol listed inside the frame; today,
 most likely identifies IP version 4 (IPv4) or IP version 6 (IPv6).
-Data and Pad* 46ñ 1500 Holds data from a higher layer, typically an L3PDU (usually
+Data and Pad* 46‚Äì 1500 Holds data from a higher layer, typically an L3PDU (usually
 an IPv4 or IPv6 packet). The sender adds padding to meet the
 minimum length requirement for this field (46 bytes).
 Frame Check
@@ -95,7 +95,7 @@ Other names often used instead of MAC address. These terms
 describe the 6-byte address of the LAN interface card.
 Burned-in address The 6-byte address assigned by the vendor making the card.
 Unicast address A term for a MAC address that represents a single LAN interface.
-Broadcast address An address that means ìall devices that reside on this LAN right now.î
+Broadcast address An address that means ‚Äúall devices that reside on this LAN right now.‚Äù
 Multicast address On Ethernet, a multicast address implies some subset of all devices
 currently on the Ethernet LAN.
 Table end.
@@ -160,7 +160,7 @@ Key Topic
 Element
 Description Page
 Number
-Figure 3-7 Ethernet over MPLSóphysical connections 66
+Figure 3-7 Ethernet over MPLS‚Äîphysical connections 66
 List Four-step process of how routers route (forward) packets 70
 Figure 3-11 IP Routing and Encapsulation 71
 List Two statements about how IP expects IP addresses to be grouped into
@@ -206,7 +206,7 @@ Table end.
 Table 4-4 Common Switch Configuration Modes
 Prompt Name of Mode Context-Setting Command(s) to Reach
 This Mode
-hostname(config)# Global Noneófirst mode after configure terminal
+hostname(config)# Global None‚Äîfirst mode after configure terminal
 hostname(config-line)# Line line console 0
 line vty 0 15
 hostname(config-if)# Interface interface type number
@@ -241,10 +241,10 @@ for a password (no username).
 password pass-value Line (console and vty) configuration mode. Sets the password
 required on that line for login if the login command (with no
 other parameters) is also configured.
-interface type port-number Global command that changes the context to interface modeó
+interface type port-number Global command that changes the context to interface mode‚Äî
 for example, interface FastEthernet 0/1.
-hostname name Global command that sets this switchís hostname, which is also
-used as the first part of the switchís command prompt.
+hostname name Global command that sets this switch‚Äôs hostname, which is also
+used as the first part of the switch‚Äôs command prompt.
 exit Moves back to the next higher mode in configuration mode.
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -398,28 +398,28 @@ Table end.
 Table 6-6 Switch IPv4 Configuration
 Command Mode/Purpose/Description
 interface vlan number Changes the context to VLAN interface mode. For VLAN 1,
-allows the configuration of the switchís IP address.
+allows the configuration of the switch‚Äôs IP address.
 ip address ip-address
 subnet-mask
-VLAN interface mode. Statically configures the switchís IP
+VLAN interface mode. Statically configures the switch‚Äôs IP
 address and mask.
 ip address dhcp VLAN interface mode. Configures the switch as a DHCP client
 to discover its IPv4 address, mask, and default gateway.
 ip default-gateway
 address
-Global command. Configures the switchís default gateway IPv4
+Global command. Configures the switch‚Äôs default gateway IPv4
 address. Not required if the switch uses DHCP.
 ip name-server server-ip-1
-server-ip-2 Ö
+server-ip-2 ‚Ä¶
 Global command. Configures the IPv4 addresses of DNS servers,
 so any commands when logged in to the switch will use the DNS
 for name resolution.
 Table end.
 Table 6-7 Other Switch Configuration
 Command Mode/Purpose/Description
-hostname name Global command. Sets this switchís hostname, which is also used
-as the first part of the switchís command prompt.
-enable secret pass-value Global command. Sets this switchís password that is required for
+hostname name Global command. Sets this switch‚Äôs hostname, which is also used
+as the first part of the switch‚Äôs command prompt.
+enable secret pass-value Global command. Sets this switch‚Äôs password that is required for
 any user to reach enable mode.
 history size length Line config mode. Defines the number of commands held in the
 history buffer, for later recall, for users of those lines.
@@ -446,7 +446,7 @@ show running-config | begin line
 vty
 Pipes (sends) the command output to the begin command,
 which only lists output beginning with the first line that
-contains the text ìline vty.î
+contains the text ‚Äúline vty.‚Äù
 show dhcp lease Lists any information the switch acquires as a DHCP client.
 This includes IP address, subnet mask, and default gateway
 information.
@@ -457,9 +457,9 @@ show ip ssh Lists status information for the SSH server, including the
 SSH version.
 show ssh Lists status information for current SSH connections into
 and out of the local switch.
-show interfaces vlan number Lists the interface status, the switchís IPv4 address and
+show interfaces vlan number Lists the interface status, the switch‚Äôs IPv4 address and
 mask, and much more.
-show ip default-gateway Lists the switchís setting for its IPv4 default gateway.
+show ip default-gateway Lists the switch‚Äôs setting for its IPv4 default gateway.
 terminal history size x Changes the length of the history buffer for the current
 user only, only for the current login to the switch.
 show history Lists the commands in the current history buffer.
@@ -495,7 +495,7 @@ Table 7-5 Switch Interface Configuration
 Command Mode/Purpose/Description
 interface type port-number Changes context to interface mode. The type is typically
 Fast Ethernet or Gigabit Ethernet. The possible port numbers
-vary depending on the model of switchófor example, Fa0/1,
+vary depending on the model of switch‚Äîfor example, Fa0/1,
 Fa0/2, and so on.
 interface range type portnumber
 - end-port-number
@@ -532,7 +532,7 @@ the listed interface and its subcommands only
 show mac address-table dynamic
 [interface type number] [vlan vlan-id]
 Lists the dynamically learned entries in the
-switchís address (forwarding) table, with subsets
+switch‚Äôs address (forwarding) table, with subsets
 by interface and/or VLAN
 show mac address-table static [interface
 type number]
@@ -570,16 +570,16 @@ Table 8-4 VLAN Lists in the show interfaces trunk Command
 List
 Position
 Heading Reasons
-First VLANs allowed VLANs 1ñ4094, minus those removed by the switchport trunk
+First VLANs allowed VLANs 1‚Äì4094, minus those removed by the switchport trunk
 allowed command
 Second VLANs allowed
-and activeÖ
+and active‚Ä¶
 The first list, minus VLANs not defined to the local switch (that
 is, there is not a vlan global configuration command or the switch
 has not learned of the VLAN with VTP), and also minus those
 VLANs in shutdown mode
 Third VLANs in
-spanning treeÖ
+spanning tree‚Ä¶
 The second list, minus VLANs in an STP blocking state for that
 interface, and minus VLANs VTP pruned from that trunk
 Table end.
@@ -648,8 +648,8 @@ Table end.
 Table 9-2 Three Classes of Problems Caused by Not Using STP in Redundant LANs
 Problem Description
 Broadcast storms The forwarding of a frame repeatedly on the same links, consuming
-significant parts of the linksí capacities
-MAC table instability The continual updating of a switchís MAC address table with
+significant parts of the links‚Äô capacities
+MAC table instability The continual updating of a switch‚Äôs MAC address table with
 incorrect entries, in reaction to looping frames, resulting in frames
 being sent to the wrong locations
 Multiple frame
@@ -659,13 +659,13 @@ are delivered to the intended host, confusing the host
 Table end.
 Table 9-3 STP/RSTP: Reasons for Forwarding or Blocking
 Characterization of Port STP State Description
-All the root switchís ports Forwarding The root switch is always the designated switch
+All the root switch‚Äôs ports Forwarding The root switch is always the designated switch
 on all connected segments.
-Each nonroot switchís root
+Each nonroot switch‚Äôs root
 port
 Forwarding The port through which the switch has the least
 cost to reach the root switch (lowest root cost).
-Each LANís designated port Forwarding The switch forwarding the Hello on to the
+Each LAN‚Äôs designated port Forwarding The switch forwarding the Hello on to the
 segment, with the lowest root cost, is the
 designated switch for that segment.
 All other working ports Blocking The port is not used for forwarding user frames,
@@ -676,8 +676,8 @@ Table 9-4 Fields in the STP Hello BPDU
 Field Description
 Root bridge ID The bridge ID of the switch the sender of this Hello currently believes
 to be the root switch
-Senderís bridge ID The bridge ID of the switch sending this Hello BPDU
-Senderís root cost The STP/RSTP cost between this switch and the current root
+Sender‚Äôs bridge ID The bridge ID of the switch sending this Hello BPDU
+Sender‚Äôs root cost The STP/RSTP cost between this switch and the current root
 Timer values on the
 root switch
 Includes the Hello timer, MaxAge timer, and forward delay timer
@@ -733,7 +733,7 @@ Disabled No No Stable
 Table end.
 Table 9-9 Port Roles in RSTP
 Function Port Role
-Port that begins a nonroot switchís best path to the root Root port
+Port that begins a nonroot switch‚Äôs best path to the root Root port
 Port that replaces the root port when the root port fails Alternate port
 Switch port designated to forward onto a collision domain Designated port
 Port that replaces a designated port when a designated port fails Backup port
@@ -782,7 +782,7 @@ Decimal Value 16-bit Binary Equivalent Decimal Value 16-bit Binary Equivalent
 28672 0111 0000 0000 0000 61440 1111 0000 0000 0000
 Table end.
 Table 10-4 EtherChannel Load Distribution Methods
-Configuration Keyword Math UsesÖ Layer
+Configuration Keyword Math Uses‚Ä¶ Layer
 src-mac Source MAC address 2
 dst-mac Destination MAC address 2
 src-dst-mac Both source and destination MAC 2
@@ -811,13 +811,13 @@ Global configuration command to set the STP mode.
 spanning-tree [vlan vlan-number]
 root primary
 Global configuration command that changes this
-switch to the root switch. The switchís priority is
+switch to the root switch. The switch‚Äôs priority is
 changed to the lower of either 24,576 or 4096 less
 than the priority of the current root bridge when the
 command was issued.
 spanning-tree [vlan vlan-number]
 root secondary
-Global configuration command that sets this switchís
+Global configuration command that sets this switch‚Äôs
 STP base priority to 28,672.
 spanning-tree vlan vlan-id priority
 priority
@@ -856,19 +856,19 @@ C 192.168.0.0 through 192.168.255.0 256
 Table end.
 Table 11-3 First 10 Subnets, Plus the Last Few, from 172.16.0.0, 255.255.255.0
 Subnet Number IP Addresses Broadcast Address
-172.16.0.0 172.16.0.1 ñ 172.16.0.254 172.16.0.255
-172.16.1.0 172.16.1.1 ñ 172.16.1.254 172.16.1.255
-172.16.2.0 172.16.2.1 ñ 172.16.2.254 172.16.2.255
-172.16.3.0 172.16.3.1 ñ 172.16.3.254 172.16.3.255
-172.16.4.0 172.16.4.1 ñ 172.16.4.254 172.16.4.255
-172.16.5.0 172.16.5.1 ñ 172.16.5.254 172.16.5.255
-172.16.6.0 172.16.6.1 ñ 172.16.6.254 172.16.6.255
-172.16.7.0 172.16.7.1 ñ 172.16.7.254 172.16.7.255
-172.16.8.0 172.16.8.1 ñ 172.16.8.254 172.16.8.255
-172.16.9.0 172.16.9.1 ñ 172.16.9.254 172.16.9.255
-Skipping manyÖ
-172.16.254.0 172.16.254.1 ñ 172.16.254.254 172.16.254.255
-172.16.255.0 172.16.255.1 ñ 172.16.255.254 172.16.255.255
+172.16.0.0 172.16.0.1 ‚Äì 172.16.0.254 172.16.0.255
+172.16.1.0 172.16.1.1 ‚Äì 172.16.1.254 172.16.1.255
+172.16.2.0 172.16.2.1 ‚Äì 172.16.2.254 172.16.2.255
+172.16.3.0 172.16.3.1 ‚Äì 172.16.3.254 172.16.3.255
+172.16.4.0 172.16.4.1 ‚Äì 172.16.4.254 172.16.4.255
+172.16.5.0 172.16.5.1 ‚Äì 172.16.5.254 172.16.5.255
+172.16.6.0 172.16.6.1 ‚Äì 172.16.6.254 172.16.6.255
+172.16.7.0 172.16.7.1 ‚Äì 172.16.7.254 172.16.7.255
+172.16.8.0 172.16.8.1 ‚Äì 172.16.8.254 172.16.8.255
+172.16.9.0 172.16.9.1 ‚Äì 172.16.9.254 172.16.9.255
+Skipping many‚Ä¶
+172.16.254.0 172.16.254.1 ‚Äì 172.16.254.254 172.16.254.255
+172.16.255.0 172.16.255.1 ‚Äì 172.16.255.254 172.16.255.255
 Table end.
 Table 11-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
@@ -880,25 +880,25 @@ Review All the Key Topics
 Table end.
 Table 12-2 IPv4 Address Classes Based on First Octet Values
 Class First Octet Values Purpose
-A 1ñ126 Unicast (large networks)
-B 128ñ191 Unicast (medium-sized networks)
-C 192ñ223 Unicast (small networks)
-D 224ñ239 Multicast
-E 240ñ255 Reserved (formerly experimental)
+A 1‚Äì126 Unicast (large networks)
+B 128‚Äì191 Unicast (medium-sized networks)
+C 192‚Äì223 Unicast (small networks)
+D 224‚Äì239 Multicast
+E 240‚Äì255 Reserved (formerly experimental)
 Table end.
 Table 12-3 Key Facts for Classes A, B, and C
 Class A Class B Class C
-First octet range 1ñ126 128ñ191 192ñ223
-Valid network numbers 1.0.0.0ñ126.0.0.0 128.0.0.0ñ191.255.0.0 192.0.0.0ñ223.255.255.0
-Total networks 27 ñ 2 = 126 214 = 16,384 221 = 2,097,152
-Hosts per network 224 ñ 2 216 ñ 2 28 ñ 2
+First octet range 1‚Äì126 128‚Äì191 192‚Äì223
+Valid network numbers 1.0.0.0‚Äì126.0.0.0 128.0.0.0‚Äì191.255.0.0 192.0.0.0‚Äì223.255.255.0
+Total networks 27 ‚Äì 2 = 126 214 = 16,384 221 = 2,097,152
+Hosts per network 224 ‚Äì 2 216 ‚Äì 2 28 ‚Äì 2
 Octets (bits) in network part 1 (8) 2 (16) 3 (24)
 Octets (bits) in host part 3 (24) 2 (16) 1 (8)
 Default mask 255.0.0.0 255.255.0.0 255.255.255.0
 Table end.
-Table 12-4 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 12-4 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 After Reading This Chapter Before Taking the Exam
-Focus onÖ Learning how Being correct and fast
+Focus on‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 10 seconds
@@ -1033,9 +1033,9 @@ Decimal Mask Logic Binary Mask
 0 maps to 00000000
 11111111 11111000 00000000 00000000
 Table end.
-Table 13-7 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 13-7 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 Before Moving to the Next Section Before Taking the Exam
-Focus OnÖ Learning how Being correct and fast
+Focus On‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 10 seconds
@@ -1051,9 +1051,9 @@ Prefix Binary Mask Decimal
 255.254.0.0
 /27
 Table end.
-Table 13-9 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 13-9 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 Before Moving to the Next Chapter Before Taking the Exam
-Focus OnÖ Learning how Being correct and fast
+Focus On‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 15 seconds
@@ -1079,7 +1079,7 @@ Prefix Binary Mask Decimal
 /27 11111111 11111111 11111111 11100000 255.255.255.224
 Table end.
 Table 13-13 Answers to Problems from Earlier in the Chapter
-Problem /P Class N S H 2S 2H ñ 2
+Problem /P Class N S H 2S 2H ‚Äì 2
 1 8.1.4.5 255.255.254.0 23 A 8 15 9 32,768 510
 2 130.4.102.1 255.255.255.0 24 B 16 8 8 256 254
 3 199.1.1.100 255.255.255.0 24 C 24 0 8 N/A 254
@@ -1091,7 +1091,7 @@ Definition Number that represents the subnet
 Numeric Value First (smallest) number in the subnet
 Literal Synonyms Subnet number, subnet address, prefix, resident subnet
 Common-Use Synonyms Network, network ID, network number, network address
-Typically Seen InÖ Routing tables, documentation
+Typically Seen In‚Ä¶ Routing tables, documentation
 Table end.
 Table 14-3 Summary of Subnet Broadcast Address Key Facts
 Definition A reserved number in each subnet that, when used as the
@@ -1100,7 +1100,7 @@ packet to all hosts in that subnet
 Numeric Value Last (highest) number in the subnet
 Literal Synonyms Directed broadcast address
 Broader-Use Synonyms Network broadcast
-Typically Seen InÖ In calculations of the range of addresses in a subnet
+Typically Seen In‚Ä¶ In calculations of the range of addresses in a subnet
 Table end.
 Table 14-4 Subnet Analysis for Subnet with Address 8.1.4.5, Mask 255.255.0.0
 Prefix Length /16 11111111 11111111 00000000 00000000
@@ -1150,12 +1150,12 @@ Problem IP Address Mask Subnet ID
 5 172.22.55.77 255.255.254.0
 6 1.99.53.76 255.255.255.248
 Table end.
-Table 14-11 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 14-11 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 Before Moving to the Next Chapter Before Taking the Exam
-Focus OnÖ Learning how Being correct and fast
+Focus On‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
-Goal: Speed Any speed 20ñ30 seconds
+Goal: Speed Any speed 20‚Äì30 seconds
 Table end.
 Table 14-12 Reference Table: DDN Mask Values, Binary Equivalent, Magic Numbers,
 and Prefixes
@@ -1192,8 +1192,8 @@ IP Address Mask Subnet ID
 5 172.22.55.77 255.255.254.0 172.22.54.0
 6 1.99.53.76 255.255.255.248 1.99.53.72
 Table end.
-Table 14-17 Answers to Problems in the Section ìSubnet Broadcast Address Practice
-Problemsî
+Table 14-17 Answers to Problems in the Section ‚ÄúSubnet Broadcast Address Practice
+Problems‚Äù
 Subnet ID Mask Broadcast Address
 1 10.72.0.0 255.248.0.0 10.79.255.255
 2 172.30.64.0 255.255.192.0 172.30.127.255
@@ -1262,7 +1262,7 @@ Table 15-7 Chapter 15 Configuration Command Reference
 Command Description
 interface type number Global command that moves the user into configuration mode of
 the named interface.
-ip address address mask Interface subcommand that sets the routerís IPv4 address and
+ip address address mask Interface subcommand that sets the router‚Äôs IPv4 address and
 mask.
 [no] shutdown Interface subcommand that enables (no shutdown) or disables
 (shutdown) the interface.
@@ -1290,10 +1290,10 @@ Table end.
 Table 16-2 Analysis of Address Ranges for the Subnets in Example 16-8
 Subnet/Prefix Address Range
 172.16.1.1/32 172.16.1.1 (just this one address)
-172.16.1.0/24 172.16.1.0 ñ 172.16.1.255
-172.16.0.0/22 172.16.0.0 ñ 172.16.3.255
-172.16.0.0/16 172.16.0.0 ñ 172.16.255.255
-0.0.0.0/0 0.0.0.0 ñ 255.255.255.255 (all addresses)
+172.16.1.0/24 172.16.1.0 ‚Äì 172.16.1.255
+172.16.0.0/22 172.16.0.0 ‚Äì 172.16.3.255
+172.16.0.0/16 172.16.0.0 ‚Äì 172.16.255.255
+0.0.0.0/0 0.0.0.0 ‚Äì 255.255.255.255 (all addresses)
 Table end.
 Table 16-3 Descriptions of the show ip route Command Output
 Item Idea Value in
@@ -1306,7 +1306,7 @@ lists the default mask for Class A networks (/8).
 subnets
 13 subnets The number of routes for subnets of the classful
 network known to this router, from all sources,
-including local routesóthe /32 routes that match each
+including local routes‚Äîthe /32 routes that match each
 router interface IP address.
 3 Number of
 masks
@@ -1347,7 +1347,7 @@ Table end.
 Table 16-6 Chapter 16 Configuration Command Reference
 Command Description
 ip address ip-address mask Interface subcommand that assigns the
-interfaceís IP address
+interface‚Äôs IP address
 interface type number.subint Global command to create a subinterface and to
 enter configuration mode for that subinterface
 [no] ip routing Global command that enables (ip routing) or
@@ -1361,13 +1361,13 @@ static route
 Table end.
 Table 16-7 Chapter 16 EXEC Command Reference
 Command Description
-show ip route Lists the routerís entire routing table
+show ip route Lists the router‚Äôs entire routing table
 show ip route [connected |
 static | ospf]
 Lists a subset of the IP routing table
 show ip route ip-address Lists detailed information about the route that a router
 matches for the listed IP address
-show arp, show ip arp Lists the routerís IPv4 ARP table
+show arp, show ip arp Lists the router‚Äôs IPv4 ARP table
 clear ip arp [ip-address] Removes all dynamically learned ARP table entries, or if the
 command lists an IP address, removes the entry for that IP
 address only
@@ -1418,7 +1418,7 @@ interface
 Table end.
 Table 17-5 Chapter 17 EXEC Command Reference
 Command Description
-show ip route Lists the routerís entire routing table
+show ip route Lists the router‚Äôs entire routing table
 show ip route [connected] Lists a subset of the IP routing table
 show vlans Lists VLAN configuration and statistics for VLAN trunks
 configured on routers
@@ -1431,14 +1431,14 @@ show interfaces [interface type
 number] status
 Among other facts, for switch ports, lists the access
 VLAN or the fact that the interface is a trunk; or, for
-routed ports, lists ìroutedî
+routed ports, lists ‚Äúrouted‚Äù
 show interfaces interface-id
 switchport
 For switch ports, lists information about any interface
 regarding administrative settings and operational state;
 for routed ports, the output simply confirms the port is a
 routed (not switched) port
-show interfaces vlan number Lists the interface status, the switchís IPv4 address and
+show interfaces vlan number Lists the interface status, the switch‚Äôs IPv4 address and
 mask, and much more
 show etherchannel [channelgroup-
 number] summary
@@ -1460,7 +1460,7 @@ OSPF Cost The sum of all interface cost settings for all links in a route,
 with the cost defaulting to be based on interface bandwidth
 EIGRP Calculation based on
 bandwidth and delay
-Calculated based on the routeís slowest link and the
+Calculated based on the route‚Äôs slowest link and the
 cumulative delay associated with each interface in the route
 Table end.
 Table 19-3 Interior IP Routing Protocols Compared
@@ -1500,11 +1500,11 @@ Full Adjacent Neighbor
 Fully Adjacent Neighbor
 Adjacency
 Table end.
-Table 19-6 Comparing R1ís Three Alternatives for the Route to 172.16.3.0/24
+Table 19-6 Comparing R1‚Äôs Three Alternatives for the Route to 172.16.3.0/24
 Route Location in Figure 19-11 Cumulative Cost
-R1ñR7ñR8 Left 10 + 180 + 10 = 200
-R1ñR5ñR6ñR8 Middle 20 + 30 + 40 + 10 = 100
-R1ñR2ñR3ñR4ñR8 Right 30 + 60 + 20 + 5 + 10 = 125
+R1‚ÄìR7‚ÄìR8 Left 10 + 180 + 10 = 200
+R1‚ÄìR5‚ÄìR6‚ÄìR8 Middle 20 + 30 + 40 + 10 = 100
+R1‚ÄìR2‚ÄìR3‚ÄìR4‚ÄìR8 Right 30 + 60 + 20 + 5 + 10 = 125
 Table end.
 Table 19-7 OSPF Design Terminology
 Term Description
@@ -1516,7 +1516,7 @@ Backbone router A router connected to the backbone area (includes ABRs)
 Internal router A router in one area (not the backbone area)
 Area A set of routers and links that shares the same detailed LSDB
 information, but not with routers in other areas, for better efficiency
-Backbone area A special OSPF area to which all other areas must connectóarea 0
+Backbone area A special OSPF area to which all other areas must connect‚Äîarea 0
 Intra-area route A route to a subnet inside the same area as the router
 Interarea route A route to a subnet in an area of which the router is not a part
 Table end.
@@ -1716,7 +1716,7 @@ Table end.
 Table 21-8 Chapter 21 show Command Reference
 Command Description
 show ip protocols Shows routing protocol parameters and current timer values,
-including an effective copy of the routing protocolsí network
+including an effective copy of the routing protocols‚Äô network
 commands and a list of passive interfaces
 show ip ospf interface brief Lists the interfaces on which the OSPF protocol is enabled
 (based on the network commands), including passive
@@ -1735,7 +1735,7 @@ Table 22-2 IPv6 Routing Protocols
 Routing Protocol Defined By Notes
 RIPng (RIP next
 generation)
-RFC The ìnext generationî is a reference to a TV series, Star
+RFC The ‚Äúnext generation‚Äù is a reference to a TV series, Star
 Trek: the Next Generation.
 OSPFv3 (OSPF
 version 3)
@@ -1910,7 +1910,7 @@ Name
 First
 Quartet
 Scope
-Defined byÖ
+Defined by‚Ä¶
 Meaning
 Interface-
 Local
