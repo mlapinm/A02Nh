@@ -240,273 +240,164 @@ Review command tables || Book
    
    
 Table end.
-Table 5-3 Key Topics for Chapter 5
-Key Topic
-Element
-Description Page
-Number
-List Three main functions of a LAN switch 109
-Figure 5-3 Process to forward a known unicast frame 111
-Figure 5-5 Process to forward a known unicast, second switch 112
-Figure 5-6 Process to learn MAC addresses 113
-List Summary of switch forwarding logic 117
-Example 5-1 The show mac address-table dynamic command 117
+###### Table 5-4 Chapter 5 EXEC Command Reference
+__|__
+--|--
+Command | Mode/Purpose/Description
+show mac address-table | Shows all MAC table entries of all types
+show mac address-table dynamic | Shows all dynamically learned MAC table entries
+show mac address-table dynamic vlan vlan-id | Shows all dynamically learned MAC table entries in that VLAN
+show mac address-table dynamic address mac-address| Shows the dynamically learned MAC table entries with
+that MAC address show mac address-table dynamic interface interface-id | Shows all dynamically learned MAC table entries
+associated with that interface show mac address-table count | Shows the number of entries in the MAC table and the total number of remaining empty slots in the MAC table
+show mac address-table aging-time | Shows the global and per-VLAN aging timeout for inactive MAC table entries
+clear mac address-table dynamic | Empties the MAC table of all dynamic entries
+show interfaces status | Lists one line per interface on the switch, with basic status and operating information for each
+clear mac address-table dynamic vlan vlan-number interface interface-id address mac-address | Clears (removes) dynamic MAC table entries: either all (with no parameters), or a subset based on VLAN ID, interface ID, or a specific MAC address
+  
+  
 Table end.
-Table 5-4 Chapter 5 EXEC Command Reference
-Command Mode/Purpose/Description
-show mac address-table Shows all MAC table entries of all types
-show mac address-table dynamic Shows all dynamically learned MAC table entries
+###### Table 6-2 Commands Related to the History Buffer
+__|__
+--|--
+Command | Description
+show history | An EXEC command that lists the commands currently held in the history buffer.
+terminal history size x | From EXEC mode, this command allows a single user to set, just for this one login session, the size of his or her history buffer.
+history size x | A configuration command that, from console or vty line configuration mode, sets the default number of commands saved in the history buffer for the users of the console or vty lines, respectively.
+  
+  
+Table end.
+###### Table 6-3 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | Book, website
+Review key terms | Book, website
+Repeat DIKTA questions | Book, PTP
+Review config checklists | Book, website
+Do labs | Sim Lite, blog
+Review command tables | Book
+   
+   
+Table end.
+###### Table 6-5 Login Security Commands
+__|__
+--|--
+Command | Mode/Purpose/Description
+line console 0 | Changes the context to console configuration mode.
+line vty 1st-vty last-vty | Changes the context to vty configuration mode for the range of vty lines listed in the command.
+login | Console and vty configuration mode. Tells IOS to prompt for a password.
+password pass-value | Console and vty configuration mode. Lists the password required
+if the login command (with no other parameters) is configured. login local | Console and vty configuration mode. Tells IOS to prompt for a username and password, to be checked against locally configured username global configuration commands on this switch or router.
+username name secret pass-value | Global command. Defines one of possibly multiple usernames and associated passwords, used for user authentication. Used when the login local line configuration command has been used.
+crypto key generate rsa modulus 360..2048 | Global command. Creates and stores (in a hidden location in flash memory) the keys required by SSH.
+transport input {telnet  ssh  all  none} | vty line configuration mode. Defines whether Telnet/SSH access is allowed into this switch. Both values can be configured on one command to allow both Telnet and SSH access (the default).
+  
+  
+Table end.
+###### Table 6-6 Switch IPv4 Configuration
+__|__
+--|--
+Command | Mode/Purpose/Description
+interface vlan number | Changes the context to VLAN interface mode. For VLAN 1, allows the configuration of the switch’s IP address. 
+ip address ip-address subnet-mask | VLAN interface mode. Statically configures the switch’s IP address and mask.
+ip address dhcp | VLAN interface mode. Configures the switch as a DHCP client to discover its IPv4 address, mask, and default gateway.
+ip default-gateway address | Global command. Configures the switch’s default gateway IPv4 address. Not required if the switch uses DHCP.
+ip name-server server-ip-1 server-ip-2 … | Global command. Configures the IPv4 addresses of DNS servers, so any commands when logged in to the switch will use the DNS for name resolution.
+  
+  
+Table end.
+###### Table 6-7 Other Switch Configuration
+__|__
+--|--
+Command | Mode/Purpose/Description
+hostname name | Global command. Sets this switch’s hostname, which is also used as the first part of the switch’s command prompt.
+enable secret pass-value | Global command. Sets this switch’s password that is required for any user to reach enable mode.
+history size length | Line config mode. Defines the number of commands held in the history buffer, for later recall, for users of those lines.
+logging synchronous | Console or vty mode. Tells IOS to send log messages to the user at natural break points between commands rather than in the middle of a line of output.
+no logging console | Global command that disables or enables the display of log messages to the console.
+exec-timeout minutes seconds | Console or vty mode. Sets the inactivity timeout, so that after the defined period of no action, IOS closes the current user login session.
+    
+    
+Table end.
+###### Table 6-8 Chapter 6 EXEC Command Reference
+__|__
+--|--
+Command | Purpose
+show running-config | Lists the currently used configuration.
+show running-config  begin line vty | Pipes (sends) the command output to the begin command, which only lists output beginning with the first line that contains the text “line vty.”
+show dhcp lease | Lists any information the switch acquires as a DHCP client. This includes IP address, subnet mask, and default gateway information.
+show crypto key mypubkey rsa | Lists the public and shared key created for use with SSH using the crypto key generate rsa global configuration command.
+show ip ssh | Lists status information for the SSH server, including the SSH version.
+show ssh | Lists status information for current SSH connections into and out of the local switch.
+show interfaces vlan number | Lists the interface status, the switch’s IPv4 address and mask, and much more.
+show ip default-gateway | Lists the switch’s setting for its IPv4 default gateway.
+terminal history size x | Changes the length of the history buffer for the current user only, only for the current login to the switch.
+show history | Lists the commands in the current history buffer.
+  
+  
+Table end.
+###### Table 7-2 LAN Switch Interface Status Codes
+__|__|__|__
+--|--|--|--
+Line Status | Protocol Status | Interface Status | Typical Root Cause
+administratively down | down | disabled | The shutdown command is configured on the interface.
+down | down | notconnect | No cable; bad cable; wrong cable pinouts; speed mismatch; neighboring device is (a) powered off, (b) shutdown, or (c) error disabled.
+up | down | notconnect | Not expected on LAN switch physical interfaces.
+down | down (errdisabled) | err-disabled | Port security has disabled the interface.
+up | up | connected | The interface is working.
+  
+  
+Table end.
+###### Table 7-3 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review command tables || Book
+Review memory tables || Website
+Do labs || Sim Lite, blog
+Table end.
+###### Table 7-5 Switch Interface Configuration
+__|__
+--|--
+Command | Mode/Purpose/Description
+interface type port-number | Changes context to interface mode. The type is typically Fast Ethernet or Gigabit Ethernet. The possible port numbers vary depending on the model of switch—for example, Fa0/1, Fa0/2, and so on.
+interface range type portnumber - end-port-number | Changes the context to interface mode for a range of consecutively numbered interfaces. The subcommands that follow then apply to all interfaces in the range. Command Mode/Purpose/Description
+shutdown no shutdown | Interface mode. Disables or enables the interface, respectively.
+speed {10  100  1000  auto} | Interface mode. Manually sets the speed to the listed speed or, with the auto setting, automatically negotiates the speed.
+duplex {auto  full  half} | Interface mode. Manually sets the duplex to half or full, or to autonegotiate the duplex setting.
+description text | Interface mode. Lists any information text that the engineer wants to track for the interface, such as the expected device on the other end of the cable.
+no duplex no speed no description | Reverts to the default setting for each interface subcommand of speed auto, duplex auto, and the absence of a description command.
+  
+  
+Table end.
+###### Table 7-6 Chapter 7 EXEC Command Reference
+__|__
+--|--
+Command | Purpose
+show running-config | Lists the currently used configuration
+show running-config interface type number | Displays the running-configuration excerpt of the listed interface and its subcommands only
 show mac address-table dynamic
-vlan vlan-id
-Shows all dynamically learned MAC table entries in that
-VLAN
-show mac address-table dynamic
-address mac-address
-Shows the dynamically learned MAC table entries with
-that MAC address
-show mac address-table dynamic
-interface interface-id
-Shows all dynamically learned MAC table entries
-associated with that interface
-show mac address-table count Shows the number of entries in the MAC table and the
-total number of remaining empty slots in the MAC table
-show mac address-table
-aging-time
-Shows the global and per-VLAN aging timeout for
-inactive MAC table entries
-clear mac address-table dynamic Empties the MAC table of all dynamic entries
-show interfaces status Lists one line per interface on the switch, with basic
-status and operating information for each
-clear mac address-table dynamic
-[vlan vlan-number] [interface
-interface-id] [address mac-address]
-Clears (removes) dynamic MAC table entries: either all
-(with no parameters), or a subset based on VLAN ID,
-interface ID, or a specific MAC address
-Table end.
-Table 6-2 Commands Related to the History Buffer
-Command Description
-show history An EXEC command that lists the commands currently held in the history
-buffer.
-terminal history
-size x
-From EXEC mode, this command allows a single user to set, just for this
-one login session, the size of his or her history buffer.
-history size x A configuration command that, from console or vty line configuration
-mode, sets the default number of commands saved in the history buffer for
-the users of the console or vty lines, respectively.
-Table end.
-Table 6-3 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Review config checklists Book, website
-Do labs Sim Lite, blog
-Review command tables Book
-Table end.
-Table 6-4 Key Topics for Chapter 6
-Key Topic
-Element
-Description Page
-Number
-Example 6-2 Example of configuring password login security (no usernames) 132
-Figure 6-5 SSH configuration commands with related username login security 137
-Table end.
-Table 6-5 Login Security Commands
-Command Mode/Purpose/Description
-line console 0 Changes the context to console configuration mode.
-line vty 1st-vty last-vty Changes the context to vty configuration mode for the range of
-vty lines listed in the command.
-login Console and vty configuration mode. Tells IOS to prompt for a
-password.
-password pass-value Console and vty configuration mode. Lists the password required
-if the login command (with no other parameters) is configured.
-login local Console and vty configuration mode. Tells IOS to prompt
-for a username and password, to be checked against locally
-configured username global configuration commands on this
-switch or router.
-username name secret
-pass-value
-Global command. Defines one of possibly multiple usernames
-and associated passwords, used for user authentication. Used
-when the login local line configuration command has been used.
-||||||||||||||||||||
-||||||||||||||||||||
-148 CCNA 200-301 Official Cert Guide, Volume 1
-Command Mode/Purpose/Description
-crypto key generate rsa
-[modulus 360..2048]
-Global command. Creates and stores (in a hidden location in flash
-memory) the keys required by SSH.
-transport input {telnet |
-ssh | all | none}
-vty line configuration mode. Defines whether Telnet/SSH access
-is allowed into this switch. Both values can be configured on one
-command to allow both Telnet and SSH access (the default).
-Table end.
-Table 6-6 Switch IPv4 Configuration
-Command Mode/Purpose/Description
-interface vlan number Changes the context to VLAN interface mode. For VLAN 1,
-allows the configuration of the switch’s IP address.
-ip address ip-address
-subnet-mask
-VLAN interface mode. Statically configures the switch’s IP
-address and mask.
-ip address dhcp VLAN interface mode. Configures the switch as a DHCP client
-to discover its IPv4 address, mask, and default gateway.
-ip default-gateway
-address
-Global command. Configures the switch’s default gateway IPv4
-address. Not required if the switch uses DHCP.
-ip name-server server-ip-1
-server-ip-2 …
-Global command. Configures the IPv4 addresses of DNS servers,
-so any commands when logged in to the switch will use the DNS
-for name resolution.
-Table end.
-Table 6-7 Other Switch Configuration
-Command Mode/Purpose/Description
-hostname name Global command. Sets this switch’s hostname, which is also used
-as the first part of the switch’s command prompt.
-enable secret pass-value Global command. Sets this switch’s password that is required for
-any user to reach enable mode.
-history size length Line config mode. Defines the number of commands held in the
-history buffer, for later recall, for users of those lines.
-logging synchronous Console or vty mode. Tells IOS to send log messages to the user
-at natural break points between commands rather than in the
-middle of a line of output.
-[no] logging console Global command that disables or enables the display of log
-messages to the console.
-exec-timeout minutes
-[seconds]
-Console or vty mode. Sets the inactivity timeout, so that after
-the defined period of no action, IOS closes the current user
-login session.
-Technet24
-||||||||||||||||||||
-||||||||||||||||||||
-6
-Chapter 6: Configuring Basic Switch Management 149
-Table end.
-Table 6-8 Chapter 6 EXEC Command Reference
-Command Purpose
-show running-config Lists the currently used configuration.
-show running-config | begin line
-vty
-Pipes (sends) the command output to the begin command,
-which only lists output beginning with the first line that
-contains the text “line vty.”
-show dhcp lease Lists any information the switch acquires as a DHCP client.
-This includes IP address, subnet mask, and default gateway
-information.
-show crypto key mypubkey rsa Lists the public and shared key created for use with SSH
-using the crypto key generate rsa global configuration
-command.
-show ip ssh Lists status information for the SSH server, including the
-SSH version.
-show ssh Lists status information for current SSH connections into
-and out of the local switch.
-show interfaces vlan number Lists the interface status, the switch’s IPv4 address and
-mask, and much more.
-show ip default-gateway Lists the switch’s setting for its IPv4 default gateway.
-terminal history size x Changes the length of the history buffer for the current
-user only, only for the current login to the switch.
-show history Lists the commands in the current history buffer.
-Table end.
-Table 7-2 LAN Switch Interface Status Codes
-Line Status Protocol
-Status
-Interface
-Status
-Typical Root Cause
-administratively
-down
-down disabled The shutdown command is configured on the
-interface.
-down down notconnect No cable; bad cable; wrong cable pinouts; speed
-mismatch; neighboring device is (a) powered off,
-(b) shutdown, or (c) error disabled.
-up down notconnect Not expected on LAN switch physical interfaces.
-down down (errdisabled)
-err-disabled Port security has disabled the interface.
-up up connected The interface is working.
-Table end.
-Table 7-3 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review command tables Book
-Review memory tables Website
-Do labs Sim Lite, blog
-Table end.
-Table 7-5 Switch Interface Configuration
-Command Mode/Purpose/Description
-interface type port-number Changes context to interface mode. The type is typically
-Fast Ethernet or Gigabit Ethernet. The possible port numbers
-vary depending on the model of switch—for example, Fa0/1,
-Fa0/2, and so on.
-interface range type portnumber
-- end-port-number
-Changes the context to interface mode for a range of
-consecutively numbered interfaces. The subcommands that
-follow then apply to all interfaces in the range.
-||||||||||||||||||||
-||||||||||||||||||||
-170 CCNA 200-301 Official Cert Guide, Volume 1
-Command Mode/Purpose/Description
-shutdown | no shutdown Interface mode. Disables or enables the interface,
-respectively.
-speed {10 | 100 | 1000 | auto} Interface mode. Manually sets the speed to the listed speed
-or, with the auto setting, automatically negotiates the speed.
-duplex {auto | full | half} Interface mode. Manually sets the duplex to half or full, or to
-autonegotiate the duplex setting.
-description text Interface mode. Lists any information text that the engineer
-wants to track for the interface, such as the expected device
-on the other end of the cable.
-no duplex
-no speed
-no description
-Reverts to the default setting for each interface subcommand
-of speed auto, duplex auto, and the absence of a description
-command.
-Table end.
-Table 7-6 Chapter 7 EXEC Command Reference
-Command Purpose
-show running-config Lists the currently used configuration
-show running-config | interface type
-number
-Displays the running-configuration excerpt of
-the listed interface and its subcommands only
-show mac address-table dynamic
-[interface type number] [vlan vlan-id]
-Lists the dynamically learned entries in the
-switch’s address (forwarding) table, with subsets
-by interface and/or VLAN
-show mac address-table static [interface
-type number]
-Lists static MAC addresses and MAC addresses
-learned or defined with port security
-show interfaces [type number] status Lists one output line per interface (or for only
-the listed interface if included), noting the
-description, operating state, and settings for
-duplex and speed on each interface
-show interfaces [type number] Lists detailed status and statistical information
-about all interfaces (or the listed interface only)
-show interfaces description Displays one line of information per interface,
-with a two-item status (similar to the show
-interfaces command status), and includes any
-description that is configured on the interfaces
+interface type number vlan vlan-id | Lists the dynamically learned entries in the switch’s address (forwarding) table, with subsets by interface and/or VLAN
+show mac address-table static interface type number | Lists static MAC addresses and MAC addresses learned or defined with port security
+show interfaces type number status | Lists one output line per interface (or for only the listed interface if included), noting the description, operating state, and settings for duplex and speed on each interface show interfaces type number | Lists detailed status and statistical information about all interfaces (or the listed interface only)
+show interfaces description | Displays one line of information per interface, with a two-item status (similar to the show interfaces command status), and includes any description that is configured on the interfaces
+  
+  
 Table end.
 Table 8-2 Trunking Administrative Mode Options with the switchport mode Command
-Command Option Description
-access Always act as an access (nontrunk) port
-trunk Always act as a trunk port
-dynamic desirable Initiates negotiation messages and responds to negotiation messages to
-dynamically choose whether to start using trunking
-dynamic auto Passively waits to receive trunk negotiation messages, at which point
-the switch will respond and negotiate whether to use trunking
+__|__
+--|--
+Command Option | Description
+access | Always act as an access (nontrunk) port
+trunk | Always act as a trunk port
+dynamic desirable | Initiates negotiation messages and responds to negotiation messages to dynamically choose whether to start using trunking
+dynamic auto | Passively waits to receive trunk negotiation messages, at which point the switch will respond and negotiate whether to use trunking
+  
+  
 Table end.
 Table 8-3 Expected Trunking Operational Mode Based on the Configured Administrative
 Modes
