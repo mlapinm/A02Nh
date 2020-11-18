@@ -18,10 +18,10 @@ Table end.
 ###### Table 1-4 Chapter Review Tracking
 __|__
 --|--
-Review Element | Review Date(s) Resource Used
-Review key topics | Book, website
-Review key terms | Book, website
-Answer DIKTA questions | Book, PTP Online   
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP Online   
 Table end.   
 ###### Table 2-2 Examples of Types of Ethernet
 __|__
