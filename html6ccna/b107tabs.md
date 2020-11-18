@@ -11,25 +11,21 @@ Table end.
 ###### Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions
 __|__
 --|--
-Concept | Description
-Same-layer interaction
-on different computers | The two computers use a protocol to communicate with the same
-layer on another computer. The protocol defines a header that
-communicates what each computer wants to do.
-Adjacent-layer
-interaction on the same
-computer | On a single computer, one lower layer provides a service to the layer
-just above. The software or hardware that implements the higher
-layer requests that the next lower layer perform the needed function.    
+Concept | Description Same-layer interaction on different computers | The two computers use a protocol to communicate with the same layer on another computer. The protocol defines a header that communicates what each computer wants to do.
+Adjacent-layer interaction on the same computer | On a single computer, one lower layer provides a service to the layer just above. The software or hardware that implements the higher layer requests that the next lower layer perform the needed function.    
 
-Table end.
-Table 1-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP Online
-Table end.
-Table 2-2 Examples of Types of Ethernet
+Table end.   
+###### Table 1-4 Chapter Review Tracking
+__|__
+--|--
+Review Element | Review Date(s) Resource Used
+Review key topics | Book, website
+Review key terms | Book, website
+Answer DIKTA questions | Book, PTP Online   
+Table end.   
+###### Table 2-2 Examples of Types of Ethernet
+__|__
+--|--
 Speed Common Name Informal IEEE
 Standard Name
 Formal IEEE
