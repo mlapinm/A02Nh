@@ -1,0 +1,12 @@
+
+SW3
+SW1
+Archie
+Figure 9-1 Broadcast Storm
+||||||||||||||||||||
+||||||||||||||||||||
+214 CCNA 200-301 Official Cert Guide, Volume 1
+NOTE Bob’s original broadcast would also be forwarded around the other direction, with
+SW3 sending a copy of the original frame out its Gi0/1 port. To reduce clutter, Figure 9-1
+does not show that frame.
+Remember that LAN switch? That logic tells switches to flood 

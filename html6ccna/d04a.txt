@@ -1,0 +1,834 @@
+Part II
+Implementing Ethernet LANs
+Chapter 4: Using the Command-Line Interface
+Chapter 5: Analyzing Ethernet LAN Switching
+Chapter 6: Configuring Basic Switch Management
+Chapter 7: Configuring and Verifying Switch Interfaces
+Part II Review
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+Using the Command-Line Interface
+This chapter covers the following exam topics:
+None
+This chapter explains foundational skills required before you can learn about the roughly
+15 exam topics that use the verbs configure and verify. However, Cisco does not list the
+foundational skills described in this chapter as a separate exam topic, so there are no specific
+exam topics included in this chapter.
+To create an Ethernet LAN, network engineers start by planning. They consider the requirements, create a design, buy the switches, contract to install cables, and configure the switches to use the right features.
+The CCNA exam focuses on skills like understanding how LANs work, configuring different
+switch features, verifying that those features work correctly, and finding the root cause of
+the problem when a feature is not working correctly. The first skill you need to learn before
+doing all the configuration and verification tasks is to learn how to access and use the user
+interface of the switch, called the command-line interface (CLI).
+This chapter begins that process by showing the basics of how to access the switch’s CLI.
+These skills include how to access the CLI and how to issue verification commands to check
+on the status of the LAN. This chapter also includes the processes of how to configure the
+switch and how to save that configuration.
+Note that this chapter focuses on processes that provide a foundation for most every exam
+topic that includes the verbs configure and/or verify. Most of the rest of the chapters in
+Parts II and III of this book then go on to include details of the particular commands you
+can use to verify and configure different switch features.
+“Do I Know This Already?” Quiz
+Take the quiz (either here or use the PTP software) if you want to use the score to help you
+decide how much time to spend on this chapter. The letter answers are listed at the bottom
+of the page following the quiz. Appendix C, found both at the end of the book as well as on
+the companion website, includes both the answers and explanations. You can also find both
+answers and explanations in the PTP testing software.
+Table 4-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+Foundation Topics Section Questions
+Accessing the Cisco Catalyst Switch CLI 1–3
+Configuring Cisco IOS Software 4–6
+CHAPTER 4
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+1. In what modes can you type the command show mac address-table and expect to get
+a response with MAC table entries? (Choose two answers.)
+a. User mode
+b. Enable mode
+c. Global configuration mode
+d. Interface configuration mode
+2. In which of the following modes of the CLI could you type the command reload and
+expect the switch to reboot?
+a. User mode
+b. Enable mode
+c. Global configuration mode
+d. Interface configuration mode
+3. Which of the following is a difference between Telnet and SSH as supported by a
+Cisco switch?
+a. SSH encrypts the passwords used at login, but not other traffic; Telnet encrypts
+nothing.
+b. SSH encrypts all data exchange, including login passwords; Telnet encrypts
+nothing.
+c. Telnet is used from Microsoft operating systems, and SSH is used from UNIX and
+Linux operating systems.
+d. Telnet encrypts only password exchanges; SSH encrypts all data exchanges.
+4. What type of switch memory is used to store the configuration used by the switch
+when it is up and working?
+a. RAM
+b. ROM
+c. Flash
+d. NVRAM
+e. Bubble
+5. What command copies the configuration from RAM into NVRAM?
+a. copy running-config tftp
+b. copy tftp running-config
+c. copy running-config start-up-config
+d. copy start-up-config running-config
+e. copy startup-config running-config
+f. copy running-config startup-config
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+86    CCNA 200-301 Official Cert Guide, Volume 1
+6. A switch user is currently in console line configuration mode. Which of the following
+would place the user in enable mode? (Choose two answers.)
+a. Using the exit command once
+b. Using the end command once
+c. Pressing the Ctrl+Z key sequence once
+d. Using the quit command
+Foundation Topics
+Accessing the Cisco Catalyst Switch CLI
+Cisco uses the concept of a command-line interface (CLI) with its router products and most
+of its Catalyst LAN switch products. The CLI is a text-based interface in which the user, typically a network engineer, enters a text command and presses Enter. Pressing Enter sends the
+command to the switch, which tells the device to do something. The switch does what the
+command says, and in some cases, the switch replies with some messages stating the results
+of the command.
+Cisco Catalyst switches also support other methods to both monitor and configure a switch.
+For example, a switch can provide a web interface so that an engineer can open a web browser to connect to a web server running in the switch. Switches also can be controlled and
+operated using network management software.
+This book discusses only Cisco Catalyst enterprise-class switches, and in particular, how
+to use the Cisco CLI to monitor and control these switches. This first major section of the
+chapter first examines these Catalyst switches in more detail and then explains how a network engineer can get access to the CLI to issue commands.
+Cisco Catalyst Switches
+Within the Cisco Catalyst brand of LAN switches, Cisco produces a wide variety of switch
+series or families. Each switch series includes several specific models of switches that have
+similar features, similar price-versus-performance tradeoffs, and similar internal components.
+For example, at the time this book was published, the Cisco 2960-XR series of switches
+was a current switch model series. Cisco positions the 2960-XR series (family) of switches
+as full-featured, low-cost wiring closet switches for enterprises. That means that you would
+expect to use 2960-XR switches as access switches in a typical campus LAN design.
+Figure 4-1 shows a photo of 10 different models from the 2960-XR switch model series from
+Cisco. Each switch series includes several models, with a mix of features. For example, some
+of the switches have 48 RJ-45 unshielded twisted-pair (UTP) 10/100/1000 ports, meaning
+that these ports can autonegotiate the use of 10BASE-T (10 Mbps), 100BASE-T (100 Mbps),
+or 1000BASE-T (1 Gbps) Ethernet.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    87
+Figure 4-1 Cisco 2960-XR Catalyst Switch Series
+Cisco refers to a switch’s physical connectors as either interfaces or ports, with an interface
+type and interface number. The interface type, as used in commands on the switch, is either
+Ethernet, Fast Ethernet, Gigabit Ethernet, and so on for faster speeds. For Ethernet interfaces
+that support running at multiple speeds, the permanent name for the interface refers to the
+fastest supported speed. For example, a 10/100/1000 interface (that is, an interface that runs
+at 10 Mbps, 100 Mbps, or 1000 Mbps) would be called Gigabit Ethernet no matter what
+speed is currently in use.
+To uniquely number each different interface, some Catalyst switches use a two-digit
+interface number (x/y), while others have a three-digit number (x/y/z). For instance, two
+10/100/1000 ports on many older Cisco Catalyst switches would be called GigabitEthernet
+0/0 and GigabitEthernet 0/1, while on the newer 2960-XR series, two interfaces would be
+GigabitEthernet 1/0/1 and GigabitEthernet 1/0/2.
+Accessing the Cisco IOS CLI
+Like any other piece of computer hardware, Cisco switches need some kind of operating
+system software. Cisco calls this OS the Internetwork Operating System (IOS).
+Cisco IOS Software for Catalyst switches implements and controls logic and functions performed by a Cisco switch. Besides controlling the switch’s performance and behavior, Cisco IOS
+also defines an interface for humans called the CLI. The Cisco IOS CLI allows the user to use
+a terminal emulation program, which accepts text entered by the user. When the user presses
+Enter, the terminal emulator sends that text to the switch. The switch processes the text as if it
+is a command, does what the command says, and sends text back to the terminal emulator.
+The switch CLI can be accessed through three popular methods—the console, Telnet, and
+Secure Shell (SSH). Two of these methods (Telnet and SSH) use the IP network in which the
+switch resides to reach the switch. The console is a physical port built specifically to allow
+access to the CLI. Figure 4-2 depicts the options.
+Console
+User Mode
+Interface
+2960 Switch
+Telnet and SSH
+(Short) Console Cable
+RJ-45
+or USB
+Serial
+or USB
+TCP/IP Network
+Figure 4-2 CLI Access Options
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+88    CCNA 200-301 Official Cert Guide, Volume 1
+Console access requires both a physical connection between a PC (or other user device) and
+the switch’s console port, as well as some software on the PC. Telnet and SSH require software on the user’s device, but they rely on the existing TCP/IP network to transmit data. The
+next few pages detail how to connect the console and set up the software for each method
+to access the CLI.
+Cabling the Console Connection
+The physical console connection, both old and new, uses three main components: the physical console port on the switch, a physical serial port on the PC, and a cable that works with
+the console and serial ports. However, the physical cabling details have changed slowly over
+time, mainly because of advances and changes with serial interfaces on PC hardware. For this
+next topic, the text looks at three cases: newer connectors on both the PC and the switch,
+older connectors on both, and a third case with the newer (USB) connector on the PC but
+with an older connector on the switch.
+Most PCs today use a familiar standard USB cable for the console connection. Cisco has
+been including USB ports as console ports in newer routers and switches as well. All you
+have to do is look at the switch to make sure you have the correct style of USB cable end
+to match the USB console port. In the simplest form, you can use any USB port on the PC,
+with a USB cable, connected to the USB console port on the switch or router, as shown on
+the far right side of Figure 4-3.
+1
+RJ-45 Console
+Serial Port
+Rollover Cable
+SW1
+2
+RJ-45 Console
+USB Port
+USB Converter
+USB Cable
+Rollover Cable
+SW2
+3
+USB Console
+USB Port
+USB Cable
+SW3 SW1 SW2 SW3
+Figure 4-3 Console Connection to a Switch
+Older console connections use a PC serial port that pre-dates USB, a UTP cable, and an
+RJ-45 console port on the switch, as shown on the left side of Figure 4-3. The PC serial port
+typically has a D-shell connector (roughly rectangular) with nine pins (often called a DB-9).
+The console port looks like any Ethernet RJ-45 port (but is typically colored in blue and
+with the word console beside it on the switch).
+The cabling for this older-style console connection can be simple or require some effort,
+depending on what cable you use. You can use the purpose-built console cable that ships
+with new Cisco switches and routers and not think about the details. However, you can make
+Answers to the “Do I Know This Already?” quiz:
+1 A, B 2 B 3 B 4 A 5 F 6 B, C
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    89
+your own cable with a standard serial cable (with a connector that matches the PC), a standard RJ-45 to DB-9 converter plug, and a UTP cable. However, the UTP cable does not use
+the same pinouts as Ethernet; instead, the cable uses rollover cable pinouts rather than any of
+the standard Ethernet cabling pinouts. The rollover pinout uses eight wires, rolling the wire at
+pin 1 to pin 8, pin 2 to pin 7, pin 3 to pin 6, and so on.
+As it turns out, USB ports became common on PCs before Cisco began commonly using
+USB for its console ports. So, you also have to be ready to use a PC that has only a USB port
+and not an old serial port, but a router or switch that has the older RJ-45 console port (and
+no USB console port). The center of Figure 4-3 shows that case. To connect such a PC to
+a router or switch console, you need a USB converter that converts from the older console
+cable to a USB connector, and a rollover UTP cable, as shown in the middle of Figure 4-3.
+NOTE When using the USB options, you typically also need to install a software driver so
+that your PC’s OS knows that the device on the other end of the USB connection is the console
+of a Cisco device. Also, you can easily find photos of these cables and components online, with
+searches like “cisco console cable,” “cisco usb console cable,” or “console cable converter.”
+The 2960-XR series, for instance, supports both the older RJ-45 console port and a USB
+console port. Figure 4-4 points to the two console ports; you would use only one or the
+other. Note that the USB console port uses a mini-B port rather than the more commonly
+seen rectangular standard USB Type A port.
+USB Console (Mini-B)
+RJ-45 Console
+Figure 4-4 A Part of a 2960-XR Switch with Console Ports Shown
+After the PC is physically connected to the console port, a terminal emulator software package must be installed and configured on the PC. The terminal emulator software treats all
+data as text. It accepts the text typed by the user and sends it over the console connection to
+the switch. Similarly, any bits coming into the PC over the console connection are displayed
+as text for the user to read.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+90    CCNA 200-301 Official Cert Guide, Volume 1
+The emulator must be configured to use the PC’s serial port to match the settings on the
+switch’s console port settings. The default console port settings on a switch are as follows.
+Note that the last three parameters are referred to collectively as 8N1:
+■ 9600 bits/second
+■ No hardware flow control
+■ 8-bit ASCII
+■ No parity bits
+■ 1 stop bit
+Figure 4-5 shows one such terminal emulator. The image shows the window created by the
+emulator software in the background, with some output of a show command. The foreground, in the upper right, shows a settings window that lists the default console settings as
+listed just before this paragraph.
+Figure 4-5 Terminal Settings for Console Access
+Accessing the CLI with Telnet and SSH
+For many years, terminal emulator applications have supported far more than the ability to
+communicate over a serial port to a local device (like a switch’s console). Terminal emulators
+support a variety of TCP/IP applications as well, including Telnet and SSH. Telnet and SSH
+both allow the user to connect to another device’s CLI, but instead of connecting through
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    91
+a console cable to the console port, the traffic flows over the same IP network that the networking devices are helping to create.
+Telnet uses the concept of a Telnet client (the terminal application) and a Telnet server (the
+switch in this case). A Telnet client, the device that sits in front of the user, accepts keyboard
+input and sends those commands to the Telnet server. The Telnet server accepts the text,
+interprets the text as a command, and replies back.
+Cisco Catalyst switches enable a Telnet server by default, but switches need a few more configuration settings before you can successfully use Telnet to connect to a switch. Chapter 6,
+“Configuring Basic Switch Management,” covers switch configuration to support Telnet and
+SSH in detail.
+Using Telnet in a lab today makes sense, but Telnet poses a significant security risk in production networks. Telnet sends all data (including any username and password for login to
+the switch) as clear-text data. SSH gives us a much better option.
+Think of SSH as the much more secure Telnet cousin. Outwardly, you still open a terminal
+emulator, connect to the switch’s IP address, and see the switch CLI, no matter whether you
+use Telnet or SSH. The differences exist behind the scenes: SSH encrypts the contents of all
+messages, including the passwords, avoiding the possibility of someone capturing packets in
+the network and stealing the password to network devices.
+User and Enable (Privileged) Modes
+All three CLI access methods covered so far (console, Telnet, and SSH) place the user in
+an area of the CLI called user EXEC mode. User EXEC mode, sometimes also called user
+mode, allows the user to look around but not break anything. The “EXEC mode” part of the
+name refers to the fact that in this mode, when you enter a command, the switch executes
+the command and then displays messages that describe the command’s results.
+NOTE If you have not used the CLI before, you might want to experiment with the CLI
+from the Sim Lite product, or view the video about CLI basics. You can find these resources
+on the companion website as mentioned in the Introduction.
+Cisco IOS supports a more powerful EXEC mode called enable mode (also known as privileged mode or privileged EXEC mode). Enable mode gets its name from the enable command, which moves the user from user mode to enable mode, as shown in Figure 4-6. The
+other name for this mode, privileged mode, refers to the fact that powerful (or privileged)
+commands can be executed there. For example, you can use the reload command, which
+tells the switch to reinitialize or reboot Cisco IOS, only from enable mode.
+NOTE If the command prompt lists the hostname followed by a >, the user is in user mode;
+if it is the hostname followed by the #, the user is in enable mode.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+92    CCNA 200-301 Official Cert Guide, Volume 1
+User Mode
+Console
+Telnet
+SSH
+Enable (Command)
+Disable (Command)
+Enable Mode
+(Privileged Mode)
+Figure 4-6 User and Privileged Modes
+Example 4-1 demonstrates the differences between user and enable modes. The example
+shows the output that you could see in a terminal emulator window, for instance, when connecting from the console. In this case, the user sits at the user mode prompt (“Certskills1>”)
+and tries the reload command. The reload command tells the switch to reinitialize or reboot
+Cisco IOS, so IOS allows this powerful command to be used only from enable mode. IOS
+rejects the reload command when used in user mode. Then the user moves to enable mode—
+also called privileged mode—(using the enable EXEC command). At that point, IOS accepts
+the reload command now that the user is in enable mode.
+Example 4-1 Example of Privileged Mode Commands Being Rejected in User Mode
+Press RETURN to get started.
+User Access Verification
+Password:
+Certskills1>
+Certskills1> reload
+Translating "reload"
+% Unknown command or computer name, or unable to find computer address
+Certskills1> enable
+Password:
+Certskills1#
+Certskills1# reload
+Proceed with reload? [confirm] y
+00:08:42: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+NOTE The commands that can be used in either user (EXEC) mode or enable (EXEC)
+mode are called EXEC commands.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    93
+This example is the first instance of this book showing you the output from the CLI, so it is
+worth noting a few conventions. The bold text represents what the user typed, and the nonbold text is what the switch sent back to the terminal emulator. Also, the typed passwords
+do not show up on the screen for security purposes. Finally, note that this switch has been
+preconfigured with a hostname of Certskills1, so the command prompt on the left shows
+that hostname on each line.
+Password Security for CLI Access from the Console
+A Cisco switch, with default settings, remains relatively secure when locked inside a wiring closet, because by default, a switch allows console access only. By default, the console
+requires no password at all, and no password to reach enable mode for users that happened
+to connect from the console. The reason is that if you have access to the physical console
+port of the switch, you already have pretty much complete control over the switch. You
+could literally get out your screwdriver and walk off with it, or you could unplug the power,
+or follow well-published procedures to go through password recovery to break into the CLI
+and then configure anything you want to configure.
+However, many people go ahead and set up simple password protection for console users.
+Simple passwords can be configured at two points in the login process from the console:
+when the user connects from the console, and when any user moves to enable mode (using
+the enable EXEC command). You may have noticed that back in Example 4-1, the user saw a
+password prompt at both points.
+Example 4-2 shows the additional configuration commands that were configured prior to
+collecting the output in Example 4-1. The output holds an excerpt from the EXEC command
+show running-config, which lists the current configuration in the switch.
+Example 4-2 Nondefault Basic Configuration
+Certskills1# show running-config
+! Output has been formatted to show only the parts relevant to this discussion
+hostname Certskills1
+!
+enable secret love
+!
+line console 0
+ login
+ password faith
+! The rest of the output has been omitted
+Certskills1#
+Working from top to bottom, note that the first configuration command listed by the show
+running-config command sets the switch’s hostname to Certskills1. You might have noticed
+that the command prompts in Example 4-1 all began with Certskills1, and that’s why the
+command prompt begins with the hostname of the switch.
+Next, note that the lines with a ! in them are comment lines, both in the text of this book
+and in the real switch CLI.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+94    CCNA 200-301 Official Cert Guide, Volume 1
+The enable secret love configuration command defines the password that all users must use
+to reach enable mode. So, no matter whether users connect from the console, Telnet, or SSH,
+they would use the password love when prompted for a password after typing the enable
+EXEC command.
+Finally, the last three lines configure the console password. The first line (line console 0) is
+the command that identifies the console, basically meaning “these next commands apply to
+the console only.” The login command tells IOS to perform simple password checking (at the
+console). Remember, by default, the switch does not ask for a password for console users.
+Finally, the password faith command defines the password the console user must type when
+prompted.
+This example just scratches the surface of the kinds of security configuration you might
+choose to configure on a switch, but it does give you enough detail to configure switches
+in your lab and get started (which is the reason I put these details in this first chapter of Part
+II). Note that Chapter 6 shows the configuration steps to add support for Telnet and SSH
+(including password security), and Chapter 5 of the CCNA 200-301 Official Cert Guide,
+Volume 2, “Securing Network Devices,” shows additional security configuration as well.
+CLI Help Features
+If you printed the Cisco IOS Command Reference documents, you would end up with a
+stack of paper several feet tall. No one should expect to memorize all the commands—and
+no one does. You can use several very easy, convenient tools to help remember commands
+and save time typing. As you progress through your Cisco certifications, the exams will
+cover progressively more commands. However, you should know the methods of getting
+command help.
+Table 4-2 summarizes command-recall help options available at the CLI. Note that, in the
+first column, command represents any command. Likewise, parm represents a command’s
+parameter. For example, the second row lists command ?, which means that commands such
+as show ? and copy ? would list help for the show and copy commands, respectively.
+Table 4-2 Cisco IOS Software Command Help
+What You Enter What Help You Get
+? Provides help for all commands available in this mode.
+command ? With a space between the command and the ?, the switch lists text to
+describe all the first parameter options for the command.
+com? Lists commands that start with com.
+command parm? Lists all parameters beginning with the parameter typed so far. (Notice
+that there is no space between parm and the ?.)
+command
+parm<Tab>
+Pressing the Tab key causes IOS to spell out the rest of the word,
+assuming that you have typed enough of the word so there is only one
+option that begins with that string of characters.
+command parm1 ? If a space is inserted before the question mark, the CLI lists all the next
+parameters and gives a brief explanation of each.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    95
+When you enter the ?, the Cisco IOS CLI reacts immediately; that is, you don’t need to press
+the Enter key or any other keys. The device running Cisco IOS also redisplays what you
+entered before the ? to save you some keystrokes. If you press Enter immediately after the ?,
+Cisco IOS tries to execute the command with only the parameters you have entered so far.
+The information supplied by using help depends on the CLI mode. For example, when
+? is entered in user mode, the commands allowed in user mode are displayed, but commands available only in enable mode (not in user mode) are not displayed. Also, help is
+available in configuration mode, which is the mode used to configure the switch. In fact,
+configuration mode has many different subconfiguration modes, as explained in the section
+“Configuration Submodes and Contexts,” later in this chapter. So, you can get help for the
+commands available in each configuration submode as well. (Note that this might be a good
+time to use the free Sim Lite product on the companion website—open any lab, use the
+question mark, and try some commands.)
+Cisco IOS stores the commands that you enter in a history buffer, storing ten commands
+by default. The CLI allows you to move backward and forward in the historical list of commands and then edit the command before reissuing it. These key sequences can help you use
+the CLI more quickly on the exams. Table 4-3 lists the commands used to manipulate previously entered commands.
+Table 4-3 Key Sequences for Command Edit and Recall
+Keyboard Command What Happens
+Up arrow or Ctrl+P This displays the most recently used command. If you press it
+again, the next most recent command appears, until the history
+buffer is exhausted. (The P stands for previous.)
+Down arrow or Ctrl+N If you have gone too far back into the history buffer, these keys
+take you forward to the more recently entered commands. (The N
+stands for next.)
+Left arrow or Ctrl+B This moves the cursor backward in the currently displayed
+command without deleting characters. (The B stands for back.)
+Right arrow or Ctrl+F This moves the cursor forward in the currently displayed command
+without deleting characters. (The F stands for forward.)
+Backspace This moves the cursor backward in the currently displayed
+command, deleting characters.
+The debug and show Commands
+By far, the single most popular Cisco IOS command is the show command. The show command has a large variety of options, and with those options, you can find the status of
+almost every feature of Cisco IOS. Essentially, the show command lists the currently known
+facts about the switch’s operational status. The only work the switch does in reaction to
+show commands is to find the current status and list the information in messages sent to the
+user.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+96    CCNA 200-301 Official Cert Guide, Volume 1
+For example, consider the output from the show mac address-table dynamic command
+listed in Example 4-3. This show command, issued from user mode, lists the table the switch
+uses to make forwarding decisions. A switch’s MAC address table basically lists the data a
+switch uses to do its primary job.
+Example 4-3 Nondefault Basic Configuration
+Certskills1> show mac address-table dynamic
+ Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+ 31 0200.1111.1111 DYNAMIC Gi0/1
+ 31 0200.3333.3333 DYNAMIC Fa0/3
+ 31 1833.9d7b.0e9a DYNAMIC Gi0/1
+ 10 1833.9d7b.0e9a DYNAMIC Gi0/1
+ 10 30f7.0d29.8561 DYNAMIC Gi0/1
+ 1 1833.9d7b.0e9a DYNAMIC Gi0/1
+ 12 1833.9d7b.0e9a DYNAMIC Gi0/1
+Total Mac Addresses for this criterion: 7
+Certskills1>
+The debug command also tells the user details about the operation of the switch. However,
+while the show command lists status information at one instant of time—more like a photograph—the debug command acts more like a live video camera feed. Once you issue a debug
+command, IOS remembers, issuing messages that any switch user can choose to see. The
+console sees these messages by default. Most of the commands used throughout this book
+to verify operation of switches and routers are show commands.
+Configuring Cisco IOS Software
+You will want to configure every switch in an Enterprise network, even though the switches
+will forward traffic even with default configuration. This section covers the basic configuration processes, including the concept of a configuration file and the locations in which
+the configuration files can be stored. Although this section focuses on the configuration
+process, and not on the configuration commands themselves, you should know all the commands covered in this chapter for the exams, in addition to the configuration processes.
+Configuration mode is another mode for the Cisco CLI, similar to user mode and privileged
+mode. User mode lets you issue nondisruptive commands and displays some information.
+Privileged mode supports a superset of commands compared to user mode, including commands that might disrupt switch operations. However, not one of the commands in user or
+privileged mode changes the switch’s configuration. Configuration mode accepts configuration commands—commands that tell the switch the details of what to do and how to do
+it. Figure 4-7 illustrates the relationships among configuration mode, user EXEC mode, and
+privileged EXEC mode.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    97
+configure terminal
+end or Ctl-Z
+User Mode Configuration Mode
+enable
+disable
+Enable Mode
+Figure 4-7 CLI Configuration Mode Versus EXEC Modes
+Commands entered in configuration mode update the active configuration file. These changes to the configuration occur immediately each time you press the Enter key at the end of
+a command. Be careful when you enter a configuration command!
+Configuration Submodes and Contexts
+Configuration mode itself contains a multitude of commands. To help organize the configuration, IOS groups some kinds of configuration commands together. To do that, when using
+configuration mode, you move from the initial mode—global configuration mode—into
+subcommand modes. Context-setting commands move you from one configuration subcommand mode, or context, to another. These context-setting commands tell the switch the
+topic about which you will enter the next few configuration commands. More importantly,
+the context tells the switch the topic you care about right now, so when you use the ? to get
+help, the switch gives you help about that topic only.
+NOTE Context-setting is not a Cisco term. It is just a description used here to help make
+sense of configuration mode.
+The best way to learn about configuration submodes is to use them, but first, take a look
+at these upcoming examples. For instance, the interface command is one of the most commonly used context-setting configuration commands. For example, the CLI user could enter
+interface configuration mode by entering the interface FastEthernet 0/1 configuration command. Asking for help in interface configuration mode displays only commands that are useful when configuring Ethernet interfaces. Commands used in this context are called subcommands—or, in this specific case, interface subcommands. When you begin practicing with
+the CLI with real equipment, the navigation between modes can become natural. For now,
+consider Example 4-4, which shows the following:
+■ Movement from enable mode to global configuration mode by using the configure
+terminal EXEC command
+■ Using a hostname Fred global configuration command to configure the switch’s name
+■ Movement from global configuration mode to console line configuration mode (using the
+line console 0 command)
+■ Setting the console’s simple password to hope (using the password hope line
+subcommand)
+■ Movement from console configuration mode to interface configuration mode (using the
+interface type number command)
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+98    CCNA 200-301 Official Cert Guide, Volume 1
+■ Setting the speed to 100 Mbps for interface Fa0/1 (using the speed 100 interface
+subcommand)
+■ Movement from interface configuration mode back to global configuration mode (using
+the exit command)
+Example 4-4 Navigating Between Different Configuration Modes
+Switch# configure terminal
+Switch(config)# hostname Fred
+Fred(config)# line console 0
+Fred(config-line)# password hope
+Fred(config-line)# interface FastEthernet 0/1
+Fred(config-if)# speed 100
+Fred(config-if)# exit
+Fred(config)#
+The text inside parentheses in the command prompt identifies the configuration mode. For
+example, the first command prompt after you enter configuration mode lists (config), meaning global configuration mode. After the line console 0 command, the text expands to (config-line), meaning line configuration mode. Each time the command prompt changes within
+config mode, you have moved to another configuration mode.
+Table 4-4 shows the most common command prompts in configuration mode, the names of
+those modes, and the context-setting commands used to reach those modes.
+Table 4-4 Common Switch Configuration Modes
+Prompt Name of Mode Context-Setting Command(s) to Reach
+This Mode
+hostname(config)# Global None—first mode after configure terminal
+hostname(config-line)# Line line console 0
+line vty 0 15
+hostname(config-if)# Interface interface type number
+hostname(vlan)# VLAN vlan number
+You should practice until you become comfortable moving between the different configuration modes, back to enable mode, and then back into the configuration modes. However, you
+can learn these skills just doing labs about the topics in later chapters of the book. For now,
+Figure 4-8 shows most of the navigation between global configuration mode and the four
+configuration submodes listed in Table 4-4.
+NOTE You can also move directly from one configuration submode to another, without
+first using the exit command to move back to global configuration mode. Just use the commands listed in bold in the center of the figure.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    99
+interface type/number
+End or Ctl-Z
+exit
+Interface
+Mode
+configure
+terminal
+End or Ctl-Z
+Enable
+Mode
+Global
+Config
+Mode
+vlan x exit
+VLAN
+Mode
+line console 0
+exit
+Console Line
+Mode
+line vty 0 15
+exit
+VTY Line
+Mode
+Figure 4-8 Navigation In and Out of Switch Configuration Modes
+You really should stop and try navigating around these configuration modes. If you have not
+yet decided on a lab strategy, install the Pearson Sim Lite software from the companion website. It includes the simulator and a couple of lab exercises. Start any lab, ignore the instructions, and just get into configuration mode and move around between the configuration
+modes shown in Figure 4-8.
+No set rules exist for what commands are global commands or subcommands. Generally,
+however, when multiple instances of a parameter can be set in a single switch, the command
+used to set the parameter is likely a configuration subcommand. Items that are set once
+for the entire switch are likely global commands. For example, the hostname command is
+a global command because there is only one hostname per switch. Conversely, the speed
+command is an interface subcommand that applies to each switch interface that can run at
+different speeds, so it is a subcommand, applying to the particular interface under which it is
+configured.
+Storing Switch Configuration Files
+When you configure a switch, it needs to use the configuration. It also needs to be able
+to retain the configuration in case the switch loses power. Cisco switches contain randomaccess memory (RAM) to store data while Cisco IOS is using it, but RAM loses its contents
+when the switch loses power or is reloaded. To store information that must be retained when
+the switch loses power or is reloaded, Cisco switches use several types of more permanent
+memory, none of which has any moving parts. By avoiding components with moving parts
+(such as traditional disk drives), switches can maintain better uptime and availability.
+The following list details the four main types of memory found in Cisco switches, as well as
+the most common use of each type:
+■ RAM: Sometimes called DRAM, for dynamic random-access memory, RAM is used
+by the switch just as it is used by any other computer: for working storage. The running
+(active) configuration file is stored here.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+100    CCNA 200-301 Official Cert Guide, Volume 1
+■ Flash memory: Either a chip inside the switch or a removable memory card, flash memory stores fully functional Cisco IOS images and is the default location where the switch
+gets its Cisco IOS at boot time. Flash memory also can be used to store any other files,
+including backup copies of configuration files.
+■ ROM: Read-only memory (ROM) stores a bootstrap (or boothelper) program that is loaded when the switch first powers on. This bootstrap program then finds the full Cisco IOS
+image and manages the process of loading Cisco IOS into RAM, at which point Cisco
+IOS takes over operation of the switch.
+■ NVRAM: Nonvolatile RAM (NVRAM) stores the initial or startup configuration file that
+is used when the switch is first powered on and when the switch is reloaded.
+Figure 4-9 summarizes this same information in a briefer and more convenient form for
+memorization and study.
+RAM
+(Working
+Memoryand
+Running
+Configuration)
+Flash
+(Cisco IOS
+Software)
+ROM
+(Bootstrap
+Program)
+NVRAM
+(Startup
+Configuration)
+Figure 4-9 Cisco Switch Memory Types
+Cisco IOS stores the collection of configuration commands in a configuration file. In fact,
+switches use multiple configuration files—one file for the initial configuration used when
+powering on, and another configuration file for the active, currently used running configuration as stored in RAM. Table 4-5 lists the names of these two files, their purpose, and their
+storage location.
+Table 4-5 Names and Purposes of the Two Main Cisco IOS Configuration Files
+Configuration
+Filename
+Purpose Where It Is Stored
+startup-config Stores the initial configuration used anytime the
+switch reloads Cisco IOS.
+NVRAM
+running-config Stores the currently used configuration commands.
+This file changes dynamically when someone enters
+commands in configuration mode.
+RAM
+Essentially, when you use configuration mode, you change only the running-config file. This
+means that the configuration example earlier in this chapter (Example 4-4) updates only
+the running-config file. However, if the switch lost power right after that example, all that
+configuration would be lost. If you want to keep that configuration, you have to copy the
+running-config file into NVRAM, overwriting the old startup-config file.
+Example 4-5 demonstrates that commands used in configuration mode change only the running configuration in RAM. The example shows the following concepts and steps:
+Step 1. The example begins with both the running and startup-config having the same
+hostname, per the hostname hannah command.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    101
+Step 2. The hostname is changed in configuration mode using the hostname harold
+command.
+Step 3. The show running-config and show startup-config commands show the fact
+that the hostnames are now different, with the hostname harold command
+found only in the running-config.
+Example 4-5 How Configuration Mode Commands Change the Running-Config File,
+Not the Startup-Config File
+! Step 1 next (two commands)
+!
+hannah# show running-config
+! (lines omitted)
+hostname hannah
+! (rest of lines omitted)
+hannah# show startup-config
+! (lines omitted)
+hostname hannah
+! (rest of lines omitted)
+! Step 2 next. Notice that the command prompt changes immediately after
+! the hostname command.
+hannah# configure terminal
+hannah(config)# hostname harold
+harold(config)# exit
+! Step 3 next (two commands)
+!
+harold# show running-config
+! (lines omitted) - just showing the part with the hostname command
+hostname harold
+!
+harold# show startup-config
+! (lines omitted) - just showing the part with the hostname command
+hostname hannah
+Copying and Erasing Configuration Files
+The configuration process updates the running-config file, which is lost if the router
+loses power or is reloaded. Clearly, IOS needs to provide us a way to copy the running
+configuration so that it will not be lost, so it will be used the next time the switch reloads or
+powers on. For instance, Example 4-5 ended with a different running configuration (with the
+hostname harold command) versus the startup configuration.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+102    CCNA 200-301 Official Cert Guide, Volume 1
+In short, the EXEC command copy running-config startup-config backs up the runningconfig to the startup-config file. This command overwrites the current startup-config file
+with what is currently in the running-configuration file.
+In addition, in the lab, you may want to just get rid of all existing configuration and start
+over with a clean configuration. To do that, you can erase the startup-config file using three
+different commands:
+write erase
+erase startup-config
+erase nvram:
+Once the startup-config file is erased, you can reload or power off/on the switch, and it will
+boot with the now-empty startup configuration.
+Note that Cisco IOS does not have a command that erases the contents of the runningconfig file. To clear out the running-config file, simply erase the startup-config file, and then
+reload the switch, and the running-config will be empty at the end of the process.
+NOTE Cisco uses the term reload to refer to what most PC operating systems call rebooting or restarting. In each case, it is a re-initialization of the software. The reload EXEC command causes a switch to reload.
+Chapter Review
+One key to doing well on the exams is to perform repetitive spaced review sessions. Review
+this chapter’s material using either the tools in the book or on the book’s companion website. Refer to the “Your Study Plan” element section titled “Step 2: Build Your Study Habits
+Around the Chapter” for more details. Table 4-6 outlines the key review elements and where
+you can find them. To better track your study progress, record when you completed these
+activities in the second column.
+Table 4-6 Chapter Review Tracking
+Review Element Review Date(s) Resource Used
+Review key topics Book, website
+Review key terms Book, website
+Repeat DIKTA questions Book, PTP
+Review memory tables Book, website
+Review command tables Book
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+4
+Chapter 4: Using the Command-Line Interface    103
+Review All the Key Topics
+Table 4-7 Key Topics for Chapter 4
+Key Topic
+Element
+Description Page
+Number
+Figure 4-2 Three methods to access a switch CLI 87
+Figure 4-3 Cabling options for a console connection 88
+List A Cisco switch’s default console port settings 90
+Figure 4-7 Navigation between user, enable, and global config modes 97
+Table 4-4 A list of configuration mode prompts, the name of the
+configuration mode, and the command used to reach each mode
+98
+Figure 4-8 Configuration mode context-setting commands 99
+Table 4-5 The names and purposes of the two configuration files in a
+switch or router
+100
+Key Terms You Should Know
+command-line interface (CLI), Telnet, Secure Shell (SSH), enable mode, user mode, configuration mode, startup-config file, running-config file
+Command References
+Tables 4-8 and 4-9 list configuration and verification commands used in this chapter, respectively. As an easy review exercise, cover the left column in a table, read the right column, and
+try to recall the command without looking. Then repeat the exercise, covering the right column, and try to recall what the command does.
+Table 4-8 Chapter 4 Configuration Commands
+Command Mode and Purpose
+line console 0 Global command that changes the context to console
+configuration mode.
+login Line (console and vty) configuration mode. Tells IOS to prompt
+for a password (no username).
+password pass-value Line (console and vty) configuration mode. Sets the password
+required on that line for login if the login command (with no
+other parameters) is also configured.
+interface type port-number Global command that changes the context to interface mode—
+for example, interface FastEthernet 0/1.
+hostname name Global command that sets this switch’s hostname, which is also
+used as the first part of the switch’s command prompt.
+exit Moves back to the next higher mode in configuration mode.
+||||||||||||||||||||
+||||||||||||||||||||
+ptg29743230
+104    CCNA 200-301 Official Cert Guide, Volume 1
+Command Mode and Purpose
+end Exits configuration mode and goes back to enable mode from
+any of the configuration submodes.
+Ctrl+Z This is not a command, but rather a two-key combination
+(pressing the Ctrl key and the letter Z) that together do the
+same thing as the end command.
+Table 4-9 Chapter 4 EXEC Command Reference
+Command Purpose
+no debug all
+undebug all
+Enable mode EXEC command to disable all currently enabled debugs.
+reload Enable mode EXEC command that reboots the switch or router.
+copy running-config
+startup-config
+Enable mode EXEC command that saves the active config, replacing
+the startup-config file used when the switch initializes.
+copy startup-config
+running-config
+Enable mode EXEC command that merges the startup-config file with
+the currently active config file in RAM.
+show running-config Lists the contents of the running-config file.
+write erase
+erase startup-config
+erase nvram:
+These enable mode EXEC commands erase the startup-config file.
+quit EXEC command that disconnects the user from the CLI session.
+show startup-config Lists the contents of the startup-config (initial config) file.
+enable Moves the user from user mode to enable (privileged) mode and
+prompts for a password if one is configured.
+disable Moves the user from enable mode to user mode.
+configure terminal Enable mode command that moves the user into configuration mode.

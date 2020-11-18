@@ -1,0 +1,740 @@
+Part I Introduction to Networking 11
+Chapter 1 Introduction to TCP/IP Networking 12
+“Do I Know This Already?” Quiz 12
+Foundation Topics 14
+Perspectives on Networking 14
+TCP/IP Networking Model 16
+History Leading to TCP/IP 16
+Overview of the TCP/IP Networking Model 18
+TCP/IP Application Layer 19
+HTTP Overview 19
+HTTP Protocol Mechanisms 19
+TCP/IP Transport Layer 20
+TCP Error Recovery Basics 21
+Same-Layer and Adjacent-Layer Interactions 21
+||||||||||||||||||||
+||||||||||||||||||||
+xii CCNA 200-301 Official Cert Guide, Volume 1
+TCP/IP Network Layer 22
+Internet Protocol and the Postal Service 22
+Internet Protocol Addressing Basics 23
+IP Routing Basics 24
+TCP/IP Data-Link and Physical Layers 25
+Data Encapsulation Terminology 27
+Names of TCP/IP Messages 28
+OSI Networking Model and Terminology 28
+Comparing OSI and TCP/IP Layer Names and Numbers 29
+OSI Data Encapsulation Terminology 30
+Chapter Review 30
+Chapter 2 Fundamentals of Ethernet LANs 32
+“Do I Know This Already?” Quiz 32
+Foundation Topics 34
+An Overview of LANs 34
+Typical SOHO LANs 35
+Typical Enterprise LANs 36
+The Variety of Ethernet Physical Layer Standards 37
+Consistent Behavior over All Links Using the Ethernet Data-Link
+Layer 38
+Building Physical Ethernet LANs with UTP 39
+Transmitting Data Using Twisted Pairs 39
+Breaking Down a UTP Ethernet Link 40
+UTP Cabling Pinouts for 10BASE-T and 100BASE-T 42
+Straight-Through Cable Pinout 42
+Choosing the Right Cable Pinouts 44
+UTP Cabling Pinouts for 1000BASE-T 45
+Building Physical Ethernet LANs with Fiber 46
+Fiber Cabling Transmission Concepts 46
+Using Fiber with Ethernet 48
+Sending Data in Ethernet Networks 49
+Ethernet Data-Link Protocols 49
+Ethernet Addressing 50
+Identifying Network Layer Protocols with the Ethernet Type
+Field 52
+Error Detection with FCS 53
+||||||||||||||||||||
+||||||||||||||||||||
+xiii
+Sending Ethernet Frames with Switches and Hubs 53
+Sending in Modern Ethernet LANs Using Full Duplex 53
+Using Half Duplex with LAN Hubs 54
+Chapter Review 56
+Chapter 3 Fundamentals of WANs and IP Routing 58
+“Do I Know This Already?” Quiz 58
+Foundation Topics 60
+Wide-Area Networks 60
+Leased-Line WANs 61
+Physical Details of Leased Lines 61
+HDLC Data-Link Details of Leased Lines 63
+How Routers Use a WAN Data Link 64
+Ethernet as a WAN Technology 65
+Ethernet WANs That Create a Layer 2 Service 66
+How Routers Route IP Packets Using Ethernet Emulation 67
+IP Routing 68
+Network Layer Routing (Forwarding) Logic 68
+Host Forwarding Logic: Send the Packet to the Default Router 69
+R1 and R2’s Logic: Routing Data Across the Network 70
+R3’s Logic: Delivering Data to the End Destination 70
+How Network Layer Routing Uses LANs and WANs 70
+How IP Addressing Helps IP Routing 72
+Rules for Groups of IP Addresses (Networks and Subnets) 73
+The IP Header 73
+How IP Routing Protocols Help IP Routing 74
+Other Network Layer Features 75
+Using Names and the Domain Name System 76
+The Address Resolution Protocol 77
+ICMP Echo and the ping Command 78
+Chapter Review 79
+Part I Review 80
+Part II Implementing Ethernet LANs 83
+Chapter 4 Using the Command-Line Interface 84
+“Do I Know This Already?” Quiz 84
+Foundation Topics 86
+||||||||||||||||||||
+||||||||||||||||||||
+xiv CCNA 200-301 Official Cert Guide, Volume 1
+Accessing the Cisco Catalyst Switch CLI 86
+Cisco Catalyst Switches 86
+Accessing the Cisco IOS CLI 87
+Cabling the Console Connection 88
+Accessing the CLI with Telnet and SSH 90
+User and Enable (Privileged) Modes 91
+Password Security for CLI Access from the Console 93
+CLI Help Features 94
+The debug and show Commands 95
+Configuring Cisco IOS Software 96
+Configuration Submodes and Contexts 97
+Storing Switch Configuration Files 99
+Copying and Erasing Configuration Files 101
+Chapter Review 102
+Chapter 5 Analyzing Ethernet LAN Switching 106
+“Do I Know This Already?” Quiz 106
+Foundation Topics 108
+LAN Switching Concepts 108
+Overview of Switching Logic 109
+Forwarding Known Unicast Frames 110
+Learning MAC Addresses 113
+Flooding Unknown Unicast and Broadcast Frames 114
+Avoiding Loops Using Spanning Tree Protocol 114
+LAN Switching Summary 115
+Verifying and Analyzing Ethernet Switching 116
+Demonstrating MAC Learning 117
+Switch Interfaces 118
+Finding Entries in the MAC Address Table 120
+Managing the MAC Address Table (Aging, Clearing) 121
+MAC Address Tables with Multiple Switches 123
+Chapter Review 124
+Chapter 6 Configuring Basic Switch Management 126
+“Do I Know This Already?” Quiz 126
+Foundation Topics 128
+||||||||||||||||||||
+||||||||||||||||||||
+xv
+Securing the Switch CLI 128
+Securing User Mode and Privileged Mode with Simple Passwords 129
+Securing User Mode Access with Local Usernames and Passwords 133
+Securing User Mode Access with External Authentication Servers 135
+Securing Remote Access with Secure Shell 136
+Enabling IPv4 for Remote Access 139
+Host and Switch IP Settings 140
+Configuring IPv4 on a Switch 142
+Configuring a Switch to Learn Its IP Address with DHCP 143
+Verifying IPv4 on a Switch 143
+Miscellaneous Settings Useful in the Lab 144
+History Buffer Commands 144
+The logging synchronous, exec-timeout, and no ip domain-lookup
+Commands 145
+Chapter Review 146
+Chapter 7 Configuring and Verifying Switch Interfaces 150
+“Do I Know This Already?” Quiz 150
+Foundation Topics 152
+Configuring Switch Interfaces 152
+Configuring Speed, Duplex, and Description 152
+Configuring Multiple Interfaces with the interface range Command 154
+Administratively Controlling Interface State with shutdown 155
+Removing Configuration with the no Command 157
+Autonegotiation 158
+Autonegotiation Under Working Conditions 158
+Autonegotiation Results When Only One Node Uses
+Autonegotiation 160
+Autonegotiation and LAN Hubs 161
+Analyzing Switch Interface Status and Statistics 162
+Interface Status Codes and Reasons for Nonworking States 162
+Interface Speed and Duplex Issues 163
+Common Layer 1 Problems on Working Interfaces 166
+Chapter Review 168
+||||||||||||||||||||
+||||||||||||||||||||
+xvi CCNA 200-301 Official Cert Guide, Volume 1
+Part II Review 172
+Part III Implementing VLANs and STP 175
+Chapter 8 Implementing Ethernet Virtual LANs 176
+“Do I Know This Already?” Quiz 177
+Foundation Topics 179
+Virtual LAN Concepts 179
+Creating Multiswitch VLANs Using Trunking 180
+VLAN Tagging Concepts 181
+The 802.1Q and ISL VLAN Trunking Protocols 182
+Forwarding Data Between VLANs 183
+The Need for Routing Between VLANs 183
+Routing Packets Between VLANs with a Router 184
+VLAN and VLAN Trunking Configuration and Verification 185
+Creating VLANs and Assigning Access VLANs to an Interface 185
+VLAN Configuration Example 1: Full VLAN Configuration 186
+VLAN Configuration Example 2: Shorter VLAN Configuration 189
+VLAN Trunking Protocol 189
+VLAN Trunking Configuration 191
+Implementing Interfaces Connected to Phones 196
+Data and Voice VLAN Concepts 196
+Data and Voice VLAN Configuration and Verification 198
+Summary: IP Telephony Ports on Switches 200
+Troubleshooting VLANs and VLAN Trunks 200
+Access VLANs Undefined or Disabled 201
+Mismatched Trunking Operational States 202
+The Supported VLAN List on Trunks 203
+Mismatched Native VLAN on a Trunk 205
+Chapter Review 205
+Chapter 9 Spanning Tree Protocol Concepts 210
+“Do I Know This Already?” Quiz 210
+Foundation Topics 212
+STP and RSTP Basics 212
+The Need for Spanning Tree 213
+What Spanning Tree Does 215
+How Spanning Tree Works 216
+The STP Bridge ID and Hello BPDU 218
+Electing the Root Switch 218
+||||||||||||||||||||
+||||||||||||||||||||
+xvii
+Choosing Each Switch’s Root Port 220
+Choosing the Designated Port on Each LAN Segment 222
+Configuring to Influence the STP Topology 223
+Details Specific to STP (and Not RSTP) 224
+STP Activity When the Network Remains Stable 224
+STP Timers That Manage STP Convergence 225
+Changing Interface States with STP 227
+Rapid STP Concepts 228
+Comparing STP and RSTP 229
+RSTP and the Alternate (Root) Port Role 230
+RSTP States and Processes 232
+RSTP and the Backup (Designated) Port Role 233
+RSTP Port Types 233
+Optional STP Features 234
+EtherChannel 234
+PortFast 235
+BPDU Guard 236
+Chapter Review 236
+Chapter 10 RSTP and EtherChannel Configuration 238
+“Do I Know This Already?” Quiz 238
+Foundation Topics 240
+Understanding RSTP Through Configuration 240
+The Need for Multiple Spanning Trees 241
+STP Modes and Standards 242
+The Bridge ID and System ID Extension 243
+How Switches Use the Priority and System ID Extension 245
+RSTP Methods to Support Multiple Spanning Trees 246
+Other RSTP Configuration Options 247
+Configuring Layer 2 EtherChannel 247
+Configuring a Manual Layer 2 EtherChannel 248
+Configuring Dynamic EtherChannels 250
+Physical Interface Configuration and EtherChannels 251
+EtherChannel Load Distribution 253
+Configuration Options for EtherChannel Load Distribution 254
+The Effects of the EtherChannel Load Distribution Algorithm 255
+Chapter Review 257
+||||||||||||||||||||
+||||||||||||||||||||
+xviii CCNA 200-301 Official Cert Guide, Volume 1
+Part III Review 260
+Part IV IPv4 Addressing 263
+Chapter 11 Perspectives on IPv4 Subnetting 264
+“Do I Know This Already?” Quiz 264
+Foundation Topics 266
+Introduction to Subnetting 266
+Subnetting Defined Through a Simple Example 267
+Operational View Versus Design View of Subnetting 267
+Analyze Subnetting and Addressing Needs 268
+Rules About Which Hosts Are in Which Subnet 268
+Determining the Number of Subnets 270
+Determining the Number of Hosts per Subnet 271
+One Size Subnet Fits All—Or Not 272
+Defining the Size of a Subnet 272
+One Size Subnet Fits All 273
+Multiple Subnet Sizes (Variable-Length Subnet Masks) 274
+One Mask for All Subnets, or More Than One 274
+Make Design Choices 275
+Choose a Classful Network 275
+Public IP Networks 276
+Growth Exhausts the Public IP Address Space 276
+Private IP Networks 278
+Choosing an IP Network During the Design Phase 278
+Choose the Mask 279
+Classful IP Networks Before Subnetting 279
+Borrowing Host Bits to Create Subnet Bits 280
+Choosing Enough Subnet and Host Bits 281
+Example Design: 172.16.0.0, 200 Subnets, 200 Hosts 282
+Masks and Mask Formats 282
+Build a List of All Subnets 283
+Plan the Implementation 284
+Assigning Subnets to Different Locations 285
+Choose Static and Dynamic Ranges per Subnet 286
+Chapter Review 287
+||||||||||||||||||||
+||||||||||||||||||||
+xix
+Chapter 12 Analyzing Classful IPv4 Networks 288
+“Do I Know This Already?” Quiz 288
+Foundation Topics 289
+Classful Network Concepts 289
+IPv4 Network Classes and Related Facts 290
+The Number and Size of the Class A, B, and C Networks 291
+Address Formats 291
+Default Masks 292
+Number of Hosts per Network 293
+Deriving the Network ID and Related Numbers 293
+Unusual Network IDs and Network Broadcast Addresses 295
+Practice with Classful Networks 296
+Practice Deriving Key Facts Based on an IP Address 296
+Practice Remembering the Details of Address Classes 297
+Chapter Review 298
+Chapter 13 Analyzing Subnet Masks 302
+“Do I Know This Already?” Quiz 302
+Foundation Topics 304
+Subnet Mask Conversion 304
+Three Mask Formats 304
+Converting Between Binary and Prefix Masks 305
+Converting Between Binary and DDN Masks 306
+Converting Between Prefix and DDN Masks 308
+Practice Converting Subnet Masks 309
+Identifying Subnet Design Choices Using Masks 309
+Masks Divide the Subnet’s Addresses into Two Parts 311
+Masks and Class Divide Addresses into Three Parts 312
+Classless and Classful Addressing 312
+Calculations Based on the IPv4 Address Format 313
+Practice Analyzing Subnet Masks 315
+Chapter Review 315
+Chapter 14 Analyzing Existing Subnets 320
+“Do I Know This Already?” Quiz 320
+Foundation Topics 322
+Defining a Subnet 322
+An Example with Network 172.16.0.0 and Four Subnets 322
+Subnet ID Concepts 324
+||||||||||||||||||||
+||||||||||||||||||||
+xx CCNA 200-301 Official Cert Guide, Volume 1
+Subnet Broadcast Address 325
+Range of Usable Addresses 325
+Analyzing Existing Subnets: Binary 326
+Finding the Subnet ID: Binary 326
+Finding the Subnet Broadcast Address: Binary 327
+Binary Practice Problems 328
+Shortcut for the Binary Process 330
+Brief Note About Boolean Math 331
+Finding the Range of Addresses 331
+Analyzing Existing Subnets: Decimal 331
+Analysis with Easy Masks 332
+Predictability in the Interesting Octet 333
+Finding the Subnet ID: Difficult Masks 334
+Resident Subnet Example 1 334
+Resident Subnet Example 2 335
+Resident Subnet Practice Problems 336
+Finding the Subnet Broadcast Address: Difficult Masks 336
+Subnet Broadcast Example 1 337
+Subnet Broadcast Example 2 337
+Subnet Broadcast Address Practice Problems 338
+Practice Analyzing Existing Subnets 338
+A Choice: Memorize or Calculate 338
+Chapter Review 339
+Part IV Review 344
+Part V IPv4 Routing 347
+Chapter 15 Operating Cisco Routers 348
+“Do I Know This Already?” Quiz 348
+Foundation Topics 350
+Installing Cisco Routers 350
+Installing Enterprise Routers 350
+Cisco Integrated Services Routers 352
+Physical Installation 353
+Installing SOHO Routers 354
+||||||||||||||||||||
+||||||||||||||||||||
+xxi
+Enabling IPv4 Support on Cisco Router Interfaces 355
+Accessing the Router CLI 355
+Router Interfaces 356
+Interface Status Codes 358
+Router Interface IP Addresses 360
+Bandwidth and Clock Rate on Serial Interfaces 361
+Router Auxiliary Port 362
+Chapter Review 362
+Chapter 16 Configuring IPv4 Addresses and Static Routes 366
+“Do I Know This Already?” Quiz 367
+Foundation Topics 369
+IP Routing 369
+IPv4 Routing Process Reference 369
+An Example of IP Routing 371
+Host Forwards the IP Packet to the Default Router (Gateway) 372
+Routing Step 1: Decide Whether to Process the Incoming Frame 373
+Routing Step 2: De-encapsulation of the IP Packet 373
+Routing Step 3: Choosing Where to Forward the Packet 374
+Routing Step 4: Encapsulating the Packet in a New Frame 375
+Routing Step 5: Transmitting the Frame 376
+Configuring IP Addresses and Connected Routes 376
+Connected Routes and the ip address Command 376
+The ARP Table on a Cisco Router 378
+Configuring Static Routes 379
+Static Network Routes 379
+Static Host Routes 381
+Floating Static Routes 381
+Static Default Routes 383
+Troubleshooting Static Routes 384
+Troubleshooting Incorrect Static Routes That Appear in the IP
+Routing Table 385
+The Static Route Does Not Appear in the IP Routing Table 385
+The Correct Static Route Appears but Works Poorly 386
+IP Forwarding with the Longest Prefix Match 386
+Using show ip route to Find the Best Route 386
+Using show ip route address to Find the Best Route 388
+Interpreting the IP Routing Table 388
+Chapter Review 390
+||||||||||||||||||||
+||||||||||||||||||||
+xxii CCNA 200-301 Official Cert Guide, Volume 1
+Chapter 17 IP Routing in the LAN 392
+“Do I Know This Already?” Quiz 393
+Foundation Topics 395
+VLAN Routing with Router 802.1Q Trunks 395
+Configuring ROAS 396
+Verifying ROAS 398
+Troubleshooting ROAS 400
+VLAN Routing with Layer 3 Switch SVIs 401
+Configuring Routing Using Switch SVIs 401
+Verifying Routing with SVIs 403
+Troubleshooting Routing with SVIs 404
+VLAN Routing with Layer 3 Switch Routed Ports 406
+Implementing Routed Interfaces on Switches 407
+Implementing Layer 3 EtherChannels 410
+Troubleshooting Layer 3 EtherChannels 413
+Chapter Review 414
+Chapter 18 Troubleshooting IPv4 Routing 418
+“Do I Know This Already?” Quiz 418
+Foundation Topics 419
+Problem Isolation Using the ping Command 419
+Ping Command Basics 419
+Strategies and Results When Testing with the ping Command 420
+Testing Longer Routes from Near the Source of the Problem 421
+Using Extended Ping to Test the Reverse Route 423
+Testing LAN Neighbors with Standard Ping 425
+Testing LAN Neighbors with Extended Ping 426
+Testing WAN Neighbors with Standard Ping 427
+Using Ping with Names and with IP Addresses 427
+Problem Isolation Using the traceroute Command 428
+traceroute Basics 429
+How the traceroute Command Works 429
+Standard and Extended traceroute 431
+Telnet and SSH 432
+Common Reasons to Use the IOS Telnet and SSH Client 432
+IOS Telnet and SSH Examples 433
+Chapter Review 435
+||||||||||||||||||||
+||||||||||||||||||||
+xxiii
+Part V Review 436
+Part VI OSPF 439
+Chapter 19 Understanding OSPF Concepts 440
+“Do I Know This Already?” Quiz 440
+Foundation Topics 442
+Comparing Dynamic Routing Protocol Features 442
+Routing Protocol Functions 443
+Interior and Exterior Routing Protocols 444
+Comparing IGPs 445
+IGP Routing Protocol Algorithms 445
+Metrics 446
+Other IGP Comparisons 447
+Administrative Distance 448
+OSPF Concepts and Operation 449
+OSPF Overview 449
+Topology Information and LSAs 450
+Applying Dijkstra SPF Math to Find the Best Routes 451
+Becoming OSPF Neighbors 451
+The Basics of OSPF Neighbors 451
+Meeting Neighbors and Learning Their Router ID 452
+Exchanging the LSDB Between Neighbors 454
+Fully Exchanging LSAs with Neighbors 454
+Maintaining Neighbors and the LSDB 455
+Using Designated Routers on Ethernet Links 456
+Calculating the Best Routes with SPF 457
+OSPF Areas and LSAs 459
+OSPF Areas 460
+How Areas Reduce SPF Calculation Time 461
+(OSPFv2) Link-State Advertisements 462
+Router LSAs Build Most of the Intra-Area Topology 463
+Network LSAs Complete the Intra-Area Topology 464
+Chapter Review 465
+||||||||||||||||||||
+||||||||||||||||||||
+xxiv CCNA 200-301 Official Cert Guide, Volume 1
+Chapter 20 Implementing OSPF 468
+“Do I Know This Already?” Quiz 469
+Foundation Topics 470
+Implementing Single-Area OSPFv2 470
+OSPF Single-Area Configuration 471
+Wildcard Matching with the network Command 473
+Verifying OSPF Operation 475
+Verifying OSPF Configuration 478
+Configuring the OSPF Router ID 480
+Implementing Multiarea OSPF 482
+Using OSPFv2 Interface Subcommands 483
+OSPF Interface Configuration Example 483
+Verifying OSPF Interface Configuration 485
+Additional OSPFv2 Features 486
+OSPF Passive Interfaces 487
+OSPF Default Routes 489
+OSPF Metrics (Cost) 491
+Setting the Cost Directly 491
+Setting the Cost Based on Interface and Reference Bandwidth 492
+OSPF Load Balancing 494
+Chapter Review 494
+Chapter 21 OSPF Network Types and Neighbors 498
+“Do I Know This Already?” Quiz 498
+Foundation Topics 500
+OSPF Network Types 500
+The OSPF Broadcast Network Type 501
+Verifying Operations with Network Type Broadcast 502
+Configuring to Influence the DR/BDR Election 504
+The OSPF Point-to-Point Network Type 506
+OSPF Neighbor Relationships 508
+OSPF Neighbor Requirements 508
+Issues That Prevent Neighbor Adjacencies 510
+Finding Area Mismatches 511
+Finding Duplicate OSPF Router IDs 511
+Finding OSPF Hello and Dead Timer Mismatches 512
+Shutting Down the OSPF Process 513
+||||||||||||||||||||
+||||||||||||||||||||
+xxv
+Issues That Allow Adjacencies but Prevent IP Routes 515
+Mismatched MTU Settings 515
+Mismatched OSPF Network Types 515
+Chapter Review 516
+Part VI Review 518
+Part VII IP Version 6 521
+Chapter 22 Fundamentals of IP Version 6 522
+“Do I Know This Already?” Quiz 522
+Foundation Topics 524
+Introduction to IPv6 524
+The Historical Reasons for IPv6 524
+The IPv6 Protocols 526
+IPv6 Routing 527
+IPv6 Routing Protocols 529
+IPv6 Addressing Formats and Conventions 530
+Representing Full (Unabbreviated) IPv6 Addresses 530
+Abbreviating and Expanding IPv6 Addresses 531
+Abbreviating IPv6 Addresses 531
+Expanding Abbreviated IPv6 Addresses 532
+Representing the Prefix Length of an Address 533
+Calculating the IPv6 Prefix (Subnet ID) 533
+Finding the IPv6 Prefix 533
+Working with More-Difficult IPv6 Prefix Lengths 535
+Chapter Review 536
+Chapter 23 IPv6 Addressing and Subnetting 540
+“Do I Know This Already?” Quiz 540
+Foundation Topics 542
+Global Unicast Addressing Concepts 542
+Public and Private IPv6 Addresses 542
+The IPv6 Global Routing Prefix 543
+Address Ranges for Global Unicast Addresses 544
+IPv6 Subnetting Using Global Unicast Addresses 545
+Deciding Where IPv6 Subnets Are Needed 546
+The Mechanics of Subnetting IPv6 Global Unicast Addresses 546
+Listing the IPv6 Subnet Identifier 548
+||||||||||||||||||||
+||||||||||||||||||||
+xxvi CCNA 200-301 Official Cert Guide, Volume 1
+List All IPv6 Subnets 548
+Assign Subnets to the Internetwork Topology 549
+Assigning Addresses to Hosts in a Subnet 550
+Unique Local Unicast Addresses 551
+Subnetting with Unique Local IPv6 Addresses 551
+The Need for Globally Unique Local Addresses 552
+Chapter Review 553
+Chapter 24 Implementing IPv6 Addressing on Routers 554
+“Do I Know This Already?” Quiz 554
+Foundation Topics 556
+Implementing Unicast IPv6 Addresses on Routers 556
+Static Unicast Address Configuration 557
+Configuring the Full 128-Bit Address 557
+Enabling IPv6 Routing 558
+Verifying the IPv6 Address Configuration 558
+Generating a Unique Interface ID Using Modified EUI-64 560
+Dynamic Unicast Address Configuration 564
+Special Addresses Used by Routers 565
+Link-Local Addresses 566
+Link-Local Address Concepts 566
+Creating Link-Local Addresses on Routers 566
+Routing IPv6 with Only Link-Local Addresses on an Interface 568
+IPv6 Multicast Addresses 569
+Reserved Multicast Addresses 569
+Multicast Address Scopes 571
+Solicited-Node Multicast Addresses 573
+Miscellaneous IPv6 Addresses 574
+Anycast Addresses 574
+IPv6 Addressing Configuration Summary 576
+Chapter Review 576
+Chapter 25 Implementing IPv6 Routing 580
+“Do I Know This Already?” Quiz 580
+Foundation Topics 583
+Connected and Local IPv6 Routes 583
+Rules for Connected and Local Routes 583
+Example of Connected IPv6 Routes 584
+Examples of Local IPv6 Routes 585
+||||||||||||||||||||
+||||||||||||||||||||
+xxvii
+Static IPv6 Routes 586
+Static Routes Using the Outgoing Interface 587
+Static Routes Using Next-Hop IPv6 Address 588
+Example Static Route with a Global Unicast Next-Hop Address 589
+Example Static Route with a Link-Local Next-Hop Address 589
+Static Routes over Ethernet Links 591
+Static Default Routes 592
+Static IPv6 Host Routes 593
+Floating Static IPv6 Routes 593
+Troubleshooting Static IPv6 Routes 595
+Troubleshooting Incorrect Static Routes That Appear in the IPv6
+Routing Table 595
+The Static Route Does Not Appear in the IPv6 Routing Table 598
+The Neighbor Discovery Protocol 598
+Discovering Neighbor Link Addresses with NDP NS and NA 598
+Discovering Routers with NDP RS and RA 600
+Using SLAAC with NDP RS and RA 601
+Discovering Duplicate Addresses Using NDP NS and NA 602
+NDP Summary 603
+Chapter Review 603
+Part VII Review 606
+Part VIII Wireless LANs 609
+Chapter 26 Fundamentals of Wireless Networks 610
+“Do I Know This Already?” Quiz 610
+Foundation Topics 612
+Comparing Wired and Wireless Networks 612
+Wireless LAN Topologies 613
+Basic Service Set 614
+Distribution System 616
+Extended Service Set 618
+Independent Basic Service Set 619
+Other Wireless Topologies 620
+Repeater 620
+Workgroup Bridge 621
+Outdoor Bridge 621
+Mesh Network 622
+||||||||||||||||||||
+||||||||||||||||||||
+xxviii CCNA 200-301 Official Cert Guide, Volume 1
+RF Overview 623
+Wireless Bands and Channels 626
+APs and Wireless Standards 628
+Chapter Review 629
+Chapter 27 Analyzing Cisco Wireless Architectures 632
+“Do I Know This Already?” Quiz 632
+Foundation Topics 634
+Autonomous AP Architecture 634
+Cloud-based AP Architecture 636
+Split-MAC Architectures 638
+Comparing Wireless LAN Controller Deployments 642
+Cisco AP Modes 647
+Chapter Review 647
+Chapter 28 Securing Wireless Networks 650
+“Do I Know This Already?” Quiz 650
+Foundation Topics 652
+Anatomy of a Secure Connection 652
+Authentication 653
+Message Privacy 655
+Message Integrity 656
+Wireless Client Authentication Methods 656
+Open Authentication 656
+WEP 657
+802.1x/EAP 657
+LEAP 659
+EAP-FAST 659
+PEAP 659
+EAP-TLS 660
+Wireless Privacy and Integrity Methods 660
+TKIP 660
+CCMP 661
+GCMP 661
+WPA, WPA2, and WPA3 661
+Chapter Review 664
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+xxix
+Chapter 29 Building a Wireless LAN 666
+“Do I Know This Already?” Quiz 666
+Foundation Topics 668
+Connecting a Cisco AP 668
+Accessing a Cisco WLC 669
+Connecting a Cisco WLC 671
+Using WLC Ports 672
+Using WLC Interfaces 673
+Configuring a WLAN 675
+Step 1. Configure a RADIUS Server 676
+Step 2. Create a Dynamic Interface 678
+Step 3. Create a New WLAN 679
+Configuring WLAN Security 681
+Configuring WLAN QoS 683
+Configuring Advanced WLAN Settings 684
+Finalizing WLAN Configuration 685
+Chapter Review 686
+Part VIII Review 688
+Part IX Appendixes 691
+Appendix A Numeric Reference Tables 693
+Appendix B CCNA 200-301, Volume 1 Exam Updates 699
+Appendix C Answers to the “Do I Know This Already?” Quizzes 701
+Glossary 724
+Index 758
+Online Appendixes
+Appendix D Practice for Chapter 12: Analyzing Classful IPv4 Networks
+Appendix E Practice for Chapter 13: Analyzing Subnet Masks
+Appendix F Practice for Chapter 14: Analyzing Existing Subnets
+Appendix G Practice for Chapter 22: Fundamentals of IP Version 6
+Appendix H Practice for Chapter 24: Implementing IPv6 Addressing on Routers
+Appendix I Study Planner
+||||||||||||||||||||
+||||||||||||||||||||
+xxx CCNA 200-301 Official Cert Guide, Volume 1
+Appendix J Topics from Previous Editions
+Appendix K Analyzing Ethernet LAN Designs
+Appendix L Subnet Design
+Appendix M Practice for Appendix L: Subnet Design
+Appendix N Variable-Length Subnet Masks
+Appendix O Spanning Tree Protocol Implementation
+Appendix P LAN Troubleshooting
+Appendix Q Troubleshooting IPv4 Routing Protocols
+Appendix R Exam Topics Cross Reference
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+Reader Services
+To access additional content for this book, simply register your product. To start the
+registration process, go to www.ciscopress.com/register and log in or create an account*.
+Enter the product ISBN 9780135792735 and click Submit. After the process is complete,
+you will find any available bonus content under Registered Products.
+*Be sure to check the box that you would like to hear from us to receive exclusive discounts
+on future editions of this product.
+Icons Used in This Book
+Printer PC Laptop Server IP Phone
+Router Switch
+Access Point ASA Cable Modem CSU/DSU
+Hub Bridge
+Network Cloud
+Cable (Various) Serial Line Virtual Circuit Ethernet WAN
+Layer 3 Switch
+Wireless
+Command Syntax Conventions
+The conventions used to present command syntax in this book are the same conventions
+used in the IOS Command Reference. The Command Reference describes these conventions
+as follows:
+¦ Boldface indicates commands and keywords that are entered literally as shown. In
+actual configuration examples and output (not general command syntax), boldface
+indicates commands that are manually input by the user (such as a show command).
+¦ Italic indicates arguments for which you supply actual values.
+xxxi
+||||||||||||||||||||
