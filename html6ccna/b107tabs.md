@@ -152,106 +152,93 @@ command parm1 ? | If a space is inserted before the question mark, the CLI lists
    
 Table end.
 ###### Table 4-3 Key Sequences for Command Edit and Recall
+__|__
+--|--
 Keyboard Command What Happens
-Up arrow or Ctrl+P This displays the most recently used command. If you press it
-again, the next most recent command appears, until the history
-buffer is exhausted. (The P stands for previous.)
-Down arrow or Ctrl+N If you have gone too far back into the history buffer, these keys
-take you forward to the more recently entered commands. (The N
-stands for next.)
-Left arrow or Ctrl+B This moves the cursor backward in the currently displayed
-command without deleting characters. (The B stands for back.)
-Right arrow or Ctrl+F This moves the cursor forward in the currently displayed command
-without deleting characters. (The F stands for forward.)
-Backspace This moves the cursor backward in the currently displayed
-command, deleting characters.
+Up arrow or Ctrl+P | This displays the most recently used command. If you press it again, the next most recent command appears, until the history buffer is exhausted. (The P stands for previous.)
+Down arrow or Ctrl+N | If you have gone too far back into the history buffer, these keys take you forward to the more recently entered commands. (The N stands for next.)
+Left arrow or Ctrl+B | This moves the cursor backward in the currently displayed command without deleting characters. (The B stands for back.)
+Right arrow or Ctrl+F | This moves the cursor forward in the currently displayed command without deleting characters. (The F stands for forward.)
+Backspace | This moves the cursor backward in the currently displayed command, deleting characters.
+   
+   
 Table end.
-Table 4-4 Common Switch Configuration Modes
-Prompt Name of Mode Context-Setting Command(s) to Reach
-This Mode
-hostname(config)# Global None—first mode after configure terminal
-hostname(config-line)# Line line console 0
-line vty 0 15
-hostname(config-if)# Interface interface type number
-hostname(vlan)# VLAN vlan number
+###### Table 4-4 Common Switch Configuration Modes
+__|__|__
+--|--|--
+Prompt | Name of Mode | Context-Setting Command(s) to Reach This Mode
+hostname(config)# | Global | None—first mode after configure terminal
+hostname(config-line)# | Line | line console 0 line vty 0 15
+hostname(config-if)# | Interface | interface type number 
+hostname(vlan)# | VLAN | vlan number
+   
+   
 Table end.
-Table 4-5 Names and Purposes of the Two Main Cisco IOS Configuration Files
-Configuration
-Filename
-Purpose Where It Is Stored
-startup-config Stores the initial configuration used anytime the
-switch reloads Cisco IOS.
-NVRAM
-running-config Stores the currently used configuration commands.
-This file changes dynamically when someone enters
-commands in configuration mode.
-RAM
+###### Table 4-5 Names and Purposes of the Two Main Cisco IOS Configuration Files
+__|__|__
+--|--|--
+Configuration Filename |  Purpose | Where It Is Stored
+startup-config | Stores the initial configuration used anytime the switch reloads Cisco IOS. | NVRAM
+running-config | Stores the currently used configuration commands. This file changes dynamically when someone enters commands in configuration mode. | RAM
+   
+   
 Table end.
-Table 4-6 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Review memory tables Book, website
-Review command tables Book
+###### Table 4-6 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms|| Book, website
+Repeat DIKTA questions || Book, PTP
+Review memory tables || Book, website
+Review command tables || Book
+   
+   
 Table end.
-Table 4-8 Chapter 4 Configuration Commands
-Command Mode and Purpose
-line console 0 Global command that changes the context to console
-configuration mode.
-login Line (console and vty) configuration mode. Tells IOS to prompt
-for a password (no username).
-password pass-value Line (console and vty) configuration mode. Sets the password
-required on that line for login if the login command (with no
-other parameters) is also configured.
-interface type port-number Global command that changes the context to interface mode—
-for example, interface FastEthernet 0/1.
-hostname name Global command that sets this switch’s hostname, which is also
-used as the first part of the switch’s command prompt.
-exit Moves back to the next higher mode in configuration mode.
-||||||||||||||||||||
-||||||||||||||||||||
-104 CCNA 200-301 Official Cert Guide, Volume 1
-Command Mode and Purpose
-end Exits configuration mode and goes back to enable mode from
-any of the configuration submodes.
-Ctrl+Z This is not a command, but rather a two-key combination
-(pressing the Ctrl key and the letter Z) that together do the
-same thing as the end command.
+###### Table 4-8 Chapter 4 Configuration Commands
+__|__
+--|--
+Command | Mode and Purpose
+line console 0 | Global command that changes the context to console configuration mode.
+login | Line (console and vty) configuration mode. Tells IOS to prompt for a password (no username).
+password pass-value | Line (console and vty) configuration mode. Sets the password required on that line for login if the login command (with no other parameters) is also configured.
+interface type port-number | Global command that changes the context to interface mode— for example, interface FastEthernet 0/1.
+hostname name | Global command that sets this switch’s hostname, which is also used as the first part of the switch’s command prompt.
+exit | Moves back to the next higher mode in configuration mode.
+end | Exits configuration mode and goes back to enable mode from any of the configuration submodes.
+Ctrl+Z | This is not a command, but rather a two-key combination (pressing the Ctrl key and the letter Z) that together do the same thing as the end command.
+  
+  
 Table end.
-Table 4-9 Chapter 4 EXEC Command Reference
-Command Purpose
-no debug all
-undebug all
-Enable mode EXEC command to disable all currently enabled debugs.
-reload Enable mode EXEC command that reboots the switch or router.
-copy running-config
-startup-config
-Enable mode EXEC command that saves the active config, replacing
-the startup-config file used when the switch initializes.
-copy startup-config
-running-config
-Enable mode EXEC command that merges the startup-config file with
-the currently active config file in RAM.
-show running-config Lists the contents of the running-config file.
-write erase
-erase startup-config
-erase nvram:
-These enable mode EXEC commands erase the startup-config file.
-quit EXEC command that disconnects the user from the CLI session.
-show startup-config Lists the contents of the startup-config (initial config) file.
-enable Moves the user from user mode to enable (privileged) mode and
-prompts for a password if one is configured.
-disable Moves the user from enable mode to user mode.
-configure terminal Enable mode command that moves the user into configuration mode.
+###### Table 4-9 Chapter 4 EXEC Command Reference
+__|__|__
+--|--|--
+Command | Purpose
+no debug all undebug all | Enable mode EXEC command to disable all currently enabled debugs.
+reload | Enable mode EXEC command that reboots the switch or router.
+copy running-config startup-config | Enable mode EXEC command that saves the active config, replacing the startup-config file used when the switch initializes.
+copy startup-config running-config | Enable mode EXEC command that merges the startup-config file with the currently active config file in RAM.
+show running-config | Lists the contents of the running-config file.
+write erase erase startup-config erase nvram: | These enable mode EXEC commands erase the startup-config file.
+quit | EXEC command that disconnects the user from the CLI session.
+show startup-config | Lists the contents of the startup-config (initial config) file.
+enable | Moves the user from user mode to enable (privileged) mode and prompts for a password if one is configured.
+disable | Moves the user from enable mode to user mode.
+configure terminal | Enable mode command that moves the user into configuration mode.
+   
+   
 Table end.
-Table 5-2 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Do labs Book, Sim Lite, blog
-Review command tables Book
+###### Table 5-2 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Repeat DIKTA questions || Book, PTP
+Do labs || Book, Sim Lite, blog
+Review command tables || Book
+   
+   
 Table end.
 Table 5-3 Key Topics for Chapter 5
 Key Topic
