@@ -58,30 +58,23 @@ Relative Cost of Cabling Low Medium Medium
 Relative Cost of a Switch Port Low Medium High
 Approximate Max Distance 100m 500m 40km
 Relative Susceptibility to Interference Some None None
-Relative Risk of Copying from Cable Emissions Some None None
-Table end.
-Table 2-6 IEEE 802.3 Ethernet Header and Trailer Fields
-Field Bytes Description
-Preamble 7 Synchronization.
-Start Frame
-Delimiter (SFD)
-1 Signifies that the next byte begins the Destination MAC
-Address field.
-Destination
-MAC Address
-6 Identifies the intended recipient of this frame.
-Source MAC
-Address
-6 Identifies the sender of this frame.
-Type 2 Defines the type of protocol listed inside the frame; today,
-most likely identifies IP version 4 (IPv4) or IP version 6 (IPv6).
-Data and Pad* 46– 1500 Holds data from a higher layer, typically an L3PDU (usually
-an IPv4 or IPv6 packet). The sender adds padding to meet the
-minimum length requirement for this field (46 bytes).
-Frame Check
-Sequence (FCS)
-4 Provides a method for the receiving NIC to determine whether
-the frame experienced transmission errors.
+Relative Risk of Copying from Cable Emissions Some None None    
+   
+Table end.   
+   
+###### Table 2-6 IEEE 802.3 Ethernet Header and Trailer Fields
+__|__|__
+--|--|--
+Field | Bytes | Description
+Preamble | 7 | Synchronization.
+Start Frame Delimiter (SFD) | 1 | Signifies that the next byte begins the Destination MAC Address field.
+Destination MAC Address | 6 | Identifies the intended recipient of this frame.
+Source MAC Address | 6 | Identifies the sender of this frame.
+Type | 2 | Defines the type of protocol listed inside the frame; today, most likely identifies IP version 4 (IPv4) or IP version 6 (IPv6).
+Data and Pad* | 46– 1500 | Holds data from a higher layer, typically an L3PDU (usually an IPv4 or IPv6 packet). The sender adds padding to meet the minimum length requirement for this field (46 bytes).
+Frame Check Sequence (FCS) | 4 | Provides a method for the receiving NIC to determine whether the frame   experienced transmission errors.   
+   
+   
 Table end.
 Table 2-7 LAN MAC Address Terminology and Features
 LAN Addressing
