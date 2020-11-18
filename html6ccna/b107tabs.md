@@ -21,7 +21,8 @@ __|__|__
 Review Element | Review Date(s) | Resource Used
 Review key topics || Book, website
 Review key terms || Book, website
-Answer DIKTA questions || Book, PTP Online   
+Answer DIKTA questions || Book, PTP Online     
+  
 Table end.   
 ###### Table 2-2 Examples of Types of Ethernet
 __|__
