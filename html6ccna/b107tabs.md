@@ -1,32 +1,32 @@
-43421
-Table 1-2 TCP/IP Architectural Model and Example Protocols
-TCP/IP Architecture Layer Example Protocols
-Application HTTP, POP3, SMTP
-Transport TCP, UDP
-Internet IP, ICMP
-Data Link & Physical Ethernet, 802.11 (Wi-Fi)
-Table end.
-Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions
-Concept Description
-Same-layer interaction
-on different computers
-The two computers use a protocol to communicate with the same
-layer on another computer. The protocol defines a header that
-communicates what each computer wants to do.
-Adjacent-layer
-interaction on the same
-computer
-On a single computer, one lower layer provides a service to the layer
-just above. The software or hardware that implements the higher
-layer requests that the next lower layer perform the needed function.
-Table end.
-Table 1-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP Online
-Table end.
-Table 2-2 Examples of Types of Ethernet
+###### Table 1-2 TCP/IP Architectural Model and Example Protocols
+__|__
+--|--
+TCP/IP Architecture Layer | Example Protocols
+Application | HTTP, POP3, SMTP
+Transport| TCP, UDP
+Internet | IP, ICMP
+Data Link & Physical | Ethernet, 802.11 (Wi-Fi)  
+Table end.   
+
+###### Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions
+__|__
+--|--
+Concept | Description Same-layer interaction on different computers | The two computers use a protocol to communicate with the same layer on another computer. The protocol defines a header that communicates what each computer wants to do.
+Adjacent-layer interaction on the same computer | On a single computer, one lower layer provides a service to the layer just above. The software or hardware that implements the higher layer requests that the next lower layer perform the needed function.    
+
+Table end.   
+###### Table 1-4 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP Online     
+  
+Table end.   
+###### Table 2-2 Examples of Types of Ethernet
+__|__
+--|--
 Speed Common Name Informal IEEE
 Standard Name
 Formal IEEE
@@ -43,7 +43,7 @@ Table 2-3 A 10BASE-T and 100BASE-T Pin Pairs Used
 Transmits on Pins 1,2 Transmits on Pins 3,6
 PC NICs Hubs
 Routers Switches
-Wireless access point (Ethernet interface) ó
+Wireless access point (Ethernet interface) ‚Äî
 Table end.
 Table 2-4 A Sampling of IEEE 802.3 10-Gbps Fiber Standards
 Standard Cable Type Max Distance*
@@ -58,797 +58,602 @@ Relative Cost of Cabling Low Medium Medium
 Relative Cost of a Switch Port Low Medium High
 Approximate Max Distance 100m 500m 40km
 Relative Susceptibility to Interference Some None None
-Relative Risk of Copying from Cable Emissions Some None None
+Relative Risk of Copying from Cable Emissions Some None None    
+   
+Table end.   
+   
+###### Table 2-6 IEEE 802.3 Ethernet Header and Trailer Fields
+__|__|__
+--|--|--
+Field | Bytes | Description
+Preamble | 7 | Synchronization.
+Start Frame Delimiter (SFD) | 1 | Signifies that the next byte begins the Destination MAC Address field.
+Destination MAC Address | 6 | Identifies the intended recipient of this frame.
+Source MAC Address | 6 | Identifies the sender of this frame.
+Type | 2 | Defines the type of protocol listed inside the frame; today, most likely identifies IP version 4 (IPv4) or IP version 6 (IPv6).
+Data and Pad* | 46‚Äì 1500 | Holds data from a higher layer, typically an L3PDU (usually an IPv4 or IPv6 packet). The sender adds padding to meet the minimum length requirement for this field (46 bytes).
+Frame Check Sequence (FCS) | 4 | Provides a method for the receiving NIC to determine whether the frame   experienced transmission errors.   
+   
+   
+Table end.  
+
+###### Table 2-7 LAN MAC Address Terminology and Features
+__|__
+--|--
+LAN Addressing Term or Feature| Description 
+MAC | Media Access Control. 802.3 (Ethernet) defines the MAC sublayer of IEEE Ethernet.
+Ethernet address, NIC address, LAN address | Other names often used instead of MAC address. These terms describe the 6-byte address of the LAN interface card.
+Burned-in address | The 6-byte address assigned by the vendor making the card.
+Unicast address | A term for a MAC address that represents a single LAN interface.
+Broadcast address | An address that means ‚Äúall devices that reside on this LAN right now.‚Äù
+Multicast address | On Ethernet, a multicast address implies some subset of all devices currently on the   Ethernet LAN.   
+   
+   
+Table end.   
+###### Table 2-8 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review memory tables || Book, website   
+   
+   
 Table end.
-Table 2-6 IEEE 802.3 Ethernet Header and Trailer Fields
-Field Bytes Description
-Preamble 7 Synchronization.
-Start Frame
-Delimiter (SFD)
-1 Signifies that the next byte begins the Destination MAC
-Address field.
-Destination
-MAC Address
-6 Identifies the intended recipient of this frame.
-Source MAC
-Address
-6 Identifies the sender of this frame.
-Type 2 Defines the type of protocol listed inside the frame; today,
-most likely identifies IP version 4 (IPv4) or IP version 6 (IPv6).
-Data and Pad* 46ñ 1500 Holds data from a higher layer, typically an L3PDU (usually
-an IPv4 or IPv6 packet). The sender adds padding to meet the
-minimum length requirement for this field (46 bytes).
-Frame Check
-Sequence (FCS)
-4 Provides a method for the receiving NIC to determine whether
-the frame experienced transmission errors.
-Table end.
-Table 2-7 LAN MAC Address Terminology and Features
-LAN Addressing
-Term or Feature
-Description
-MAC Media Access Control. 802.3 (Ethernet) defines the MAC sublayer of
-IEEE Ethernet.
-Ethernet address, NIC
-address, LAN address
-Other names often used instead of MAC address. These terms
-describe the 6-byte address of the LAN interface card.
-Burned-in address The 6-byte address assigned by the vendor making the card.
-Unicast address A term for a MAC address that represents a single LAN interface.
-Broadcast address An address that means ìall devices that reside on this LAN right now.î
-Multicast address On Ethernet, a multicast address implies some subset of all devices
-currently on the Ethernet LAN.
-Table end.
-Table 2-8 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Book, website
-Table end.
-Table 3-2 Different Names for a Leased Line
-Name Meaning or Reference
-Leased circuit,
-Circuit
-The words line and circuit are often used as synonyms in telco terminology;
-circuit makes reference to the electrical circuit between the two endpoints.
-Serial link,
-Serial line
-The words link and line are also often used as synonyms. Serial in this case
-refers to the fact that the bits flow serially and that routers use serial interfaces.
-Point-to-point
-link, Point-topoint
-line
-These terms refer to the fact that the topology stretches between two
-points, and two points only. (Some older leased lines allowed more than two
+###### Table 3-2 Different Names for a Leased Line
+__|__
+--|--
+Name | Meaning or Reference
+Leased circuit, Circuit | The words line and circuit are often used as synonyms in telco terminology; circuit makes reference to the electrical circuit between the two endpoints.
+Serial link, Serial line | The words link and line are also often used as synonyms. Serial in this case refers to the fact that the bits flow serially and that routers use serial interfaces.
+Point-to-point link, Point-topoint line |  These terms refer to the fact that the topology stretches between two points, and two points only. (Some older leased lines allowed more than two
 devices.)
-T1 This specific type of leased line transmits data at 1.544 megabits per second
-(1.544 Mbps).
-WAN link, Link Both of these terms are very general, with no reference to any specific
-technology.
-Private line This term refers to the fact that the data sent over the line cannot be copied
-by other telco customers, so the data is private.
+T1 | This specific type of leased line transmits data at 1.544 megabits per second (1.544 Mbps).
+WAN link, Link | Both of these terms are very general, with no reference to any specific technology.
+Private line | This term refers to the fact that the data sent over the line cannot be copied by other telco customers, so the data is private.   
+   
+   
 Table end.
-Table 3-3 Comparing HDLC Header Fields to Ethernet
-HDLC
-Field
-Ethernet
-Equivalent
-Description
-Flag Preamble,
-SFD
-Lists a recognizable bit pattern so that the receiving nodes realize that
-a new frame is arriving.
-Address Destination
-Address
-Identifies the destination device.
-Control N/A Mostly used for purposes no longer in use today for links between
-routers.
+###### Table 3-3 Comparing HDLC Header Fields to Ethernet
+__|__|__
+--|--|--
+HDLC Field | Ethernet Equivalent |  Description
+Flag | Preamble, SFD | Lists a recognizable bit pattern so that the receiving nodes realize that a new frame is arriving.
+Address | Destination Address | Identifies the destination device.
+Control | N/A | Mostly used for purposes no longer in use today for links between routers.
 Type Type Identifies the type of Layer 3 packet encapsulated inside the frame.
-FCS FCS Identifies a field used by the error detection process. (It is the only
-trailer field in this table.)
+FCS | FCS | Identifies a field used by the error detection process. (It is the only trailer field in this table.)   
+   
+   
 Table end.
-Table 3-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Book, website
+###### Table 3-4 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review memory tables|| Book, website   
+   
+   
 Table end.
-Table 3-5 Key Topics for Chapter 3
-Key Topic
-Element
-Description Page
-Number
-Figure 3-7 Ethernet over MPLSóphysical connections 66
-List Four-step process of how routers route (forward) packets 70
-Figure 3-11 IP Routing and Encapsulation 71
-List Two statements about how IP expects IP addresses to be grouped into
-networks or subnets
-73
-List Three-step process of how routing protocols learn routes 74
-Figure 3-13 IP Routing Protocol Basic Process 75
-Figure 3-14 Example that shows the purpose and process of DNS name resolution 76
-Figure 3-15 Example of the purpose and process of ARP 78
-Key Terms You Should Know
+###### Table 4-2 Cisco IOS Software Command Help
+__|__
+--|--
+What You Enter | What Help You Get
+? | Provides help for all commands available in this mode.
+command ? | With a space between the command and the ?, the switch lists text to describe all the first parameter options for the command.
+com? | Lists commands that start with com.
+command parm? | Lists all parameters beginning with the parameter typed so far. (Notice that there is no space between parm and the ?.)
+command parm<Tab> | Pressing the Tab key causes IOS to spell out the rest of the word, assuming that you have typed enough of the word so there is only one option that begins with that string of characters.
+command parm1 ? | If a space is inserted before the question mark, the CLI lists all the next parameters and gives a brief explanation of each.  
+   
+   
 Table end.
-Table 4-2 Cisco IOS Software Command Help
-What You Enter What Help You Get
-? Provides help for all commands available in this mode.
-command ? With a space between the command and the ?, the switch lists text to
-describe all the first parameter options for the command.
-com? Lists commands that start with com.
-command parm? Lists all parameters beginning with the parameter typed so far. (Notice
-that there is no space between parm and the ?.)
-command
-parm<Tab>
-Pressing the Tab key causes IOS to spell out the rest of the word,
-assuming that you have typed enough of the word so there is only one
-option that begins with that string of characters.
-command parm1 ? If a space is inserted before the question mark, the CLI lists all the next
-parameters and gives a brief explanation of each.
-Table end.
-Table 4-3 Key Sequences for Command Edit and Recall
+###### Table 4-3 Key Sequences for Command Edit and Recall
+__|__
+--|--
 Keyboard Command What Happens
-Up arrow or Ctrl+P This displays the most recently used command. If you press it
-again, the next most recent command appears, until the history
-buffer is exhausted. (The P stands for previous.)
-Down arrow or Ctrl+N If you have gone too far back into the history buffer, these keys
-take you forward to the more recently entered commands. (The N
-stands for next.)
-Left arrow or Ctrl+B This moves the cursor backward in the currently displayed
-command without deleting characters. (The B stands for back.)
-Right arrow or Ctrl+F This moves the cursor forward in the currently displayed command
-without deleting characters. (The F stands for forward.)
-Backspace This moves the cursor backward in the currently displayed
-command, deleting characters.
+Up arrow or Ctrl+P | This displays the most recently used command. If you press it again, the next most recent command appears, until the history buffer is exhausted. (The P stands for previous.)
+Down arrow or Ctrl+N | If you have gone too far back into the history buffer, these keys take you forward to the more recently entered commands. (The N stands for next.)
+Left arrow or Ctrl+B | This moves the cursor backward in the currently displayed command without deleting characters. (The B stands for back.)
+Right arrow or Ctrl+F | This moves the cursor forward in the currently displayed command without deleting characters. (The F stands for forward.)
+Backspace | This moves the cursor backward in the currently displayed command, deleting characters.
+   
+   
 Table end.
-Table 4-4 Common Switch Configuration Modes
-Prompt Name of Mode Context-Setting Command(s) to Reach
-This Mode
-hostname(config)# Global Noneófirst mode after configure terminal
-hostname(config-line)# Line line console 0
-line vty 0 15
-hostname(config-if)# Interface interface type number
-hostname(vlan)# VLAN vlan number
+###### Table 4-4 Common Switch Configuration Modes
+__|__|__
+--|--|--
+Prompt | Name of Mode | Context-Setting Command(s) to Reach This Mode
+hostname(config)# | Global | None‚Äîfirst mode after configure terminal
+hostname(config-line)# | Line | line console 0 line vty 0 15
+hostname(config-if)# | Interface | interface type number 
+hostname(vlan)# | VLAN | vlan number
+   
+   
 Table end.
-Table 4-5 Names and Purposes of the Two Main Cisco IOS Configuration Files
-Configuration
-Filename
-Purpose Where It Is Stored
-startup-config Stores the initial configuration used anytime the
-switch reloads Cisco IOS.
-NVRAM
-running-config Stores the currently used configuration commands.
-This file changes dynamically when someone enters
-commands in configuration mode.
-RAM
+###### Table 4-5 Names and Purposes of the Two Main Cisco IOS Configuration Files
+__|__|__
+--|--|--
+Configuration Filename |  Purpose | Where It Is Stored
+startup-config | Stores the initial configuration used anytime the switch reloads Cisco IOS. | NVRAM
+running-config | Stores the currently used configuration commands. This file changes dynamically when someone enters commands in configuration mode. | RAM
+   
+   
 Table end.
-Table 4-6 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Review memory tables Book, website
-Review command tables Book
+###### Table 4-6 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms|| Book, website
+Repeat DIKTA questions || Book, PTP
+Review memory tables || Book, website
+Review command tables || Book
+   
+   
 Table end.
-Table 4-8 Chapter 4 Configuration Commands
-Command Mode and Purpose
-line console 0 Global command that changes the context to console
-configuration mode.
-login Line (console and vty) configuration mode. Tells IOS to prompt
-for a password (no username).
-password pass-value Line (console and vty) configuration mode. Sets the password
-required on that line for login if the login command (with no
-other parameters) is also configured.
-interface type port-number Global command that changes the context to interface modeó
-for example, interface FastEthernet 0/1.
-hostname name Global command that sets this switchís hostname, which is also
-used as the first part of the switchís command prompt.
-exit Moves back to the next higher mode in configuration mode.
-||||||||||||||||||||
-||||||||||||||||||||
-104 CCNA 200-301 Official Cert Guide, Volume 1
-Command Mode and Purpose
-end Exits configuration mode and goes back to enable mode from
-any of the configuration submodes.
-Ctrl+Z This is not a command, but rather a two-key combination
-(pressing the Ctrl key and the letter Z) that together do the
-same thing as the end command.
+###### Table 4-8 Chapter 4 Configuration Commands
+__|__
+--|--
+Command | Mode and Purpose
+line console 0 | Global command that changes the context to console configuration mode.
+login | Line (console and vty) configuration mode. Tells IOS to prompt for a password (no username).
+password pass-value | Line (console and vty) configuration mode. Sets the password required on that line for login if the login command (with no other parameters) is also configured.
+interface type port-number | Global command that changes the context to interface mode‚Äî for example, interface FastEthernet 0/1.
+hostname name | Global command that sets this switch‚Äôs hostname, which is also used as the first part of the switch‚Äôs command prompt.
+exit | Moves back to the next higher mode in configuration mode.
+end | Exits configuration mode and goes back to enable mode from any of the configuration submodes.
+Ctrl+Z | This is not a command, but rather a two-key combination (pressing the Ctrl key and the letter Z) that together do the same thing as the end command.
+  
+  
 Table end.
-Table 4-9 Chapter 4 EXEC Command Reference
-Command Purpose
-no debug all
-undebug all
-Enable mode EXEC command to disable all currently enabled debugs.
-reload Enable mode EXEC command that reboots the switch or router.
-copy running-config
-startup-config
-Enable mode EXEC command that saves the active config, replacing
-the startup-config file used when the switch initializes.
-copy startup-config
-running-config
-Enable mode EXEC command that merges the startup-config file with
-the currently active config file in RAM.
-show running-config Lists the contents of the running-config file.
-write erase
-erase startup-config
-erase nvram:
-These enable mode EXEC commands erase the startup-config file.
-quit EXEC command that disconnects the user from the CLI session.
-show startup-config Lists the contents of the startup-config (initial config) file.
-enable Moves the user from user mode to enable (privileged) mode and
-prompts for a password if one is configured.
-disable Moves the user from enable mode to user mode.
-configure terminal Enable mode command that moves the user into configuration mode.
+###### Table 4-9 Chapter 4 EXEC Command Reference
+__|__|__
+--|--|--
+Command | Purpose
+no debug all undebug all | Enable mode EXEC command to disable all currently enabled debugs.
+reload | Enable mode EXEC command that reboots the switch or router.
+copy running-config startup-config | Enable mode EXEC command that saves the active config, replacing the startup-config file used when the switch initializes.
+copy startup-config running-config | Enable mode EXEC command that merges the startup-config file with the currently active config file in RAM.
+show running-config | Lists the contents of the running-config file.
+write erase erase startup-config erase nvram: | These enable mode EXEC commands erase the startup-config file.
+quit | EXEC command that disconnects the user from the CLI session.
+show startup-config | Lists the contents of the startup-config (initial config) file.
+enable | Moves the user from user mode to enable (privileged) mode and prompts for a password if one is configured.
+disable | Moves the user from enable mode to user mode.
+configure terminal | Enable mode command that moves the user into configuration mode.
+   
+   
 Table end.
-Table 5-2 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Do labs Book, Sim Lite, blog
-Review command tables Book
+###### Table 5-2 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Repeat DIKTA questions || Book, PTP
+Do labs || Book, Sim Lite, blog
+Review command tables || Book
+   
+   
 Table end.
-Table 5-3 Key Topics for Chapter 5
-Key Topic
-Element
-Description Page
-Number
-List Three main functions of a LAN switch 109
-Figure 5-3 Process to forward a known unicast frame 111
-Figure 5-5 Process to forward a known unicast, second switch 112
-Figure 5-6 Process to learn MAC addresses 113
-List Summary of switch forwarding logic 117
-Example 5-1 The show mac address-table dynamic command 117
+###### Table 5-4 Chapter 5 EXEC Command Reference
+__|__
+--|--
+Command | Mode/Purpose/Description
+show mac address-table | Shows all MAC table entries of all types
+show mac address-table dynamic | Shows all dynamically learned MAC table entries
+show mac address-table dynamic vlan vlan-id | Shows all dynamically learned MAC table entries in that VLAN
+show mac address-table dynamic address mac-address| Shows the dynamically learned MAC table entries with
+that MAC address show mac address-table dynamic interface interface-id | Shows all dynamically learned MAC table entries
+associated with that interface show mac address-table count | Shows the number of entries in the MAC table and the total number of remaining empty slots in the MAC table
+show mac address-table aging-time | Shows the global and per-VLAN aging timeout for inactive MAC table entries
+clear mac address-table dynamic | Empties the MAC table of all dynamic entries
+show interfaces status | Lists one line per interface on the switch, with basic status and operating information for each
+clear mac address-table dynamic vlan vlan-number interface interface-id address mac-address | Clears (removes) dynamic MAC table entries: either all (with no parameters), or a subset based on VLAN ID, interface ID, or a specific MAC address
+  
+  
 Table end.
-Table 5-4 Chapter 5 EXEC Command Reference
-Command Mode/Purpose/Description
-show mac address-table Shows all MAC table entries of all types
-show mac address-table dynamic Shows all dynamically learned MAC table entries
+###### Table 6-2 Commands Related to the History Buffer
+__|__
+--|--
+Command | Description
+show history | An EXEC command that lists the commands currently held in the history buffer.
+terminal history size x | From EXEC mode, this command allows a single user to set, just for this one login session, the size of his or her history buffer.
+history size x | A configuration command that, from console or vty line configuration mode, sets the default number of commands saved in the history buffer for the users of the console or vty lines, respectively.
+  
+  
+Table end.
+###### Table 6-3 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | Book, website
+Review key terms | Book, website
+Repeat DIKTA questions | Book, PTP
+Review config checklists | Book, website
+Do labs | Sim Lite, blog
+Review command tables | Book
+   
+   
+Table end.
+###### Table 6-5 Login Security Commands
+__|__
+--|--
+Command | Mode/Purpose/Description
+line console 0 | Changes the context to console configuration mode.
+line vty 1st-vty last-vty | Changes the context to vty configuration mode for the range of vty lines listed in the command.
+login | Console and vty configuration mode. Tells IOS to prompt for a password.
+password pass-value | Console and vty configuration mode. Lists the password required
+if the login command (with no other parameters) is configured. login local | Console and vty configuration mode. Tells IOS to prompt for a username and password, to be checked against locally configured username global configuration commands on this switch or router.
+username name secret pass-value | Global command. Defines one of possibly multiple usernames and associated passwords, used for user authentication. Used when the login local line configuration command has been used.
+crypto key generate rsa modulus 360..2048 | Global command. Creates and stores (in a hidden location in flash memory) the keys required by SSH.
+transport input {telnet  ssh  all  none} | vty line configuration mode. Defines whether Telnet/SSH access is allowed into this switch. Both values can be configured on one command to allow both Telnet and SSH access (the default).
+  
+  
+Table end.
+###### Table 6-6 Switch IPv4 Configuration
+__|__
+--|--
+Command | Mode/Purpose/Description
+interface vlan number | Changes the context to VLAN interface mode. For VLAN 1, allows the configuration of the switch‚Äôs IP address. 
+ip address ip-address subnet-mask | VLAN interface mode. Statically configures the switch‚Äôs IP address and mask.
+ip address dhcp | VLAN interface mode. Configures the switch as a DHCP client to discover its IPv4 address, mask, and default gateway.
+ip default-gateway address | Global command. Configures the switch‚Äôs default gateway IPv4 address. Not required if the switch uses DHCP.
+ip name-server server-ip-1 server-ip-2 ‚Ä¶ | Global command. Configures the IPv4 addresses of DNS servers, so any commands when logged in to the switch will use the DNS for name resolution.
+  
+  
+Table end.
+###### Table 6-7 Other Switch Configuration
+__|__
+--|--
+Command | Mode/Purpose/Description
+hostname name | Global command. Sets this switch‚Äôs hostname, which is also used as the first part of the switch‚Äôs command prompt.
+enable secret pass-value | Global command. Sets this switch‚Äôs password that is required for any user to reach enable mode.
+history size length | Line config mode. Defines the number of commands held in the history buffer, for later recall, for users of those lines.
+logging synchronous | Console or vty mode. Tells IOS to send log messages to the user at natural break points between commands rather than in the middle of a line of output.
+no logging console | Global command that disables or enables the display of log messages to the console.
+exec-timeout minutes seconds | Console or vty mode. Sets the inactivity timeout, so that after the defined period of no action, IOS closes the current user login session.
+    
+    
+Table end.
+###### Table 6-8 Chapter 6 EXEC Command Reference
+__|__
+--|--
+Command | Purpose
+show running-config | Lists the currently used configuration.
+show running-config  begin line vty | Pipes (sends) the command output to the begin command, which only lists output beginning with the first line that contains the text ‚Äúline vty.‚Äù
+show dhcp lease | Lists any information the switch acquires as a DHCP client. This includes IP address, subnet mask, and default gateway information.
+show crypto key mypubkey rsa | Lists the public and shared key created for use with SSH using the crypto key generate rsa global configuration command.
+show ip ssh | Lists status information for the SSH server, including the SSH version.
+show ssh | Lists status information for current SSH connections into and out of the local switch.
+show interfaces vlan number | Lists the interface status, the switch‚Äôs IPv4 address and mask, and much more.
+show ip default-gateway | Lists the switch‚Äôs setting for its IPv4 default gateway.
+terminal history size x | Changes the length of the history buffer for the current user only, only for the current login to the switch.
+show history | Lists the commands in the current history buffer.
+  
+  
+Table end.
+###### Table 7-2 LAN Switch Interface Status Codes
+__|__|__|__
+--|--|--|--
+Line Status | Protocol Status | Interface Status | Typical Root Cause
+administratively down | down | disabled | The shutdown command is configured on the interface.
+down | down | notconnect | No cable; bad cable; wrong cable pinouts; speed mismatch; neighboring device is (a) powered off, (b) shutdown, or (c) error disabled.
+up | down | notconnect | Not expected on LAN switch physical interfaces.
+down | down (errdisabled) | err-disabled | Port security has disabled the interface.
+up | up | connected | The interface is working.
+  
+  
+Table end.
+###### Table 7-3 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review command tables || Book
+Review memory tables || Website
+Do labs || Sim Lite, blog
+Table end.
+###### Table 7-5 Switch Interface Configuration
+__|__
+--|--
+Command | Mode/Purpose/Description
+interface type port-number | Changes context to interface mode. The type is typically Fast Ethernet or Gigabit Ethernet. The possible port numbers vary depending on the model of switch‚Äîfor example, Fa0/1, Fa0/2, and so on.
+interface range type portnumber - end-port-number | Changes the context to interface mode for a range of consecutively numbered interfaces. The subcommands that follow then apply to all interfaces in the range. Command Mode/Purpose/Description
+shutdown no shutdown | Interface mode. Disables or enables the interface, respectively.
+speed {10  100  1000  auto} | Interface mode. Manually sets the speed to the listed speed or, with the auto setting, automatically negotiates the speed.
+duplex {auto  full  half} | Interface mode. Manually sets the duplex to half or full, or to autonegotiate the duplex setting.
+description text | Interface mode. Lists any information text that the engineer wants to track for the interface, such as the expected device on the other end of the cable.
+no duplex no speed no description | Reverts to the default setting for each interface subcommand of speed auto, duplex auto, and the absence of a description command.
+  
+  
+Table end.
+###### Table 7-6 Chapter 7 EXEC Command Reference
+__|__
+--|--
+Command | Purpose
+show running-config | Lists the currently used configuration
+show running-config interface type number | Displays the running-configuration excerpt of the listed interface and its subcommands only
 show mac address-table dynamic
-vlan vlan-id
-Shows all dynamically learned MAC table entries in that
-VLAN
-show mac address-table dynamic
-address mac-address
-Shows the dynamically learned MAC table entries with
-that MAC address
-show mac address-table dynamic
-interface interface-id
-Shows all dynamically learned MAC table entries
-associated with that interface
-show mac address-table count Shows the number of entries in the MAC table and the
-total number of remaining empty slots in the MAC table
-show mac address-table
-aging-time
-Shows the global and per-VLAN aging timeout for
-inactive MAC table entries
-clear mac address-table dynamic Empties the MAC table of all dynamic entries
-show interfaces status Lists one line per interface on the switch, with basic
-status and operating information for each
-clear mac address-table dynamic
-[vlan vlan-number] [interface
-interface-id] [address mac-address]
-Clears (removes) dynamic MAC table entries: either all
-(with no parameters), or a subset based on VLAN ID,
-interface ID, or a specific MAC address
-Table end.
-Table 6-2 Commands Related to the History Buffer
-Command Description
-show history An EXEC command that lists the commands currently held in the history
-buffer.
-terminal history
-size x
-From EXEC mode, this command allows a single user to set, just for this
-one login session, the size of his or her history buffer.
-history size x A configuration command that, from console or vty line configuration
-mode, sets the default number of commands saved in the history buffer for
-the users of the console or vty lines, respectively.
-Table end.
-Table 6-3 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Review config checklists Book, website
-Do labs Sim Lite, blog
-Review command tables Book
-Table end.
-Table 6-4 Key Topics for Chapter 6
-Key Topic
-Element
-Description Page
-Number
-Example 6-2 Example of configuring password login security (no usernames) 132
-Figure 6-5 SSH configuration commands with related username login security 137
-Table end.
-Table 6-5 Login Security Commands
-Command Mode/Purpose/Description
-line console 0 Changes the context to console configuration mode.
-line vty 1st-vty last-vty Changes the context to vty configuration mode for the range of
-vty lines listed in the command.
-login Console and vty configuration mode. Tells IOS to prompt for a
-password.
-password pass-value Console and vty configuration mode. Lists the password required
-if the login command (with no other parameters) is configured.
-login local Console and vty configuration mode. Tells IOS to prompt
-for a username and password, to be checked against locally
-configured username global configuration commands on this
-switch or router.
-username name secret
-pass-value
-Global command. Defines one of possibly multiple usernames
-and associated passwords, used for user authentication. Used
-when the login local line configuration command has been used.
-||||||||||||||||||||
-||||||||||||||||||||
-148 CCNA 200-301 Official Cert Guide, Volume 1
-Command Mode/Purpose/Description
-crypto key generate rsa
-[modulus 360..2048]
-Global command. Creates and stores (in a hidden location in flash
-memory) the keys required by SSH.
-transport input {telnet |
-ssh | all | none}
-vty line configuration mode. Defines whether Telnet/SSH access
-is allowed into this switch. Both values can be configured on one
-command to allow both Telnet and SSH access (the default).
-Table end.
-Table 6-6 Switch IPv4 Configuration
-Command Mode/Purpose/Description
-interface vlan number Changes the context to VLAN interface mode. For VLAN 1,
-allows the configuration of the switchís IP address.
-ip address ip-address
-subnet-mask
-VLAN interface mode. Statically configures the switchís IP
-address and mask.
-ip address dhcp VLAN interface mode. Configures the switch as a DHCP client
-to discover its IPv4 address, mask, and default gateway.
-ip default-gateway
-address
-Global command. Configures the switchís default gateway IPv4
-address. Not required if the switch uses DHCP.
-ip name-server server-ip-1
-server-ip-2 Ö
-Global command. Configures the IPv4 addresses of DNS servers,
-so any commands when logged in to the switch will use the DNS
-for name resolution.
-Table end.
-Table 6-7 Other Switch Configuration
-Command Mode/Purpose/Description
-hostname name Global command. Sets this switchís hostname, which is also used
-as the first part of the switchís command prompt.
-enable secret pass-value Global command. Sets this switchís password that is required for
-any user to reach enable mode.
-history size length Line config mode. Defines the number of commands held in the
-history buffer, for later recall, for users of those lines.
-logging synchronous Console or vty mode. Tells IOS to send log messages to the user
-at natural break points between commands rather than in the
-middle of a line of output.
-[no] logging console Global command that disables or enables the display of log
-messages to the console.
-exec-timeout minutes
-[seconds]
-Console or vty mode. Sets the inactivity timeout, so that after
-the defined period of no action, IOS closes the current user
-login session.
-Technet24
-||||||||||||||||||||
-||||||||||||||||||||
-6
-Chapter 6: Configuring Basic Switch Management 149
-Table end.
-Table 6-8 Chapter 6 EXEC Command Reference
-Command Purpose
-show running-config Lists the currently used configuration.
-show running-config | begin line
-vty
-Pipes (sends) the command output to the begin command,
-which only lists output beginning with the first line that
-contains the text ìline vty.î
-show dhcp lease Lists any information the switch acquires as a DHCP client.
-This includes IP address, subnet mask, and default gateway
-information.
-show crypto key mypubkey rsa Lists the public and shared key created for use with SSH
-using the crypto key generate rsa global configuration
-command.
-show ip ssh Lists status information for the SSH server, including the
-SSH version.
-show ssh Lists status information for current SSH connections into
-and out of the local switch.
-show interfaces vlan number Lists the interface status, the switchís IPv4 address and
-mask, and much more.
-show ip default-gateway Lists the switchís setting for its IPv4 default gateway.
-terminal history size x Changes the length of the history buffer for the current
-user only, only for the current login to the switch.
-show history Lists the commands in the current history buffer.
-Table end.
-Table 7-2 LAN Switch Interface Status Codes
-Line Status Protocol
-Status
-Interface
-Status
-Typical Root Cause
-administratively
-down
-down disabled The shutdown command is configured on the
-interface.
-down down notconnect No cable; bad cable; wrong cable pinouts; speed
-mismatch; neighboring device is (a) powered off,
-(b) shutdown, or (c) error disabled.
-up down notconnect Not expected on LAN switch physical interfaces.
-down down (errdisabled)
-err-disabled Port security has disabled the interface.
-up up connected The interface is working.
-Table end.
-Table 7-3 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review command tables Book
-Review memory tables Website
-Do labs Sim Lite, blog
-Table end.
-Table 7-5 Switch Interface Configuration
-Command Mode/Purpose/Description
-interface type port-number Changes context to interface mode. The type is typically
-Fast Ethernet or Gigabit Ethernet. The possible port numbers
-vary depending on the model of switchófor example, Fa0/1,
-Fa0/2, and so on.
-interface range type portnumber
-- end-port-number
-Changes the context to interface mode for a range of
-consecutively numbered interfaces. The subcommands that
-follow then apply to all interfaces in the range.
-||||||||||||||||||||
-||||||||||||||||||||
-170 CCNA 200-301 Official Cert Guide, Volume 1
-Command Mode/Purpose/Description
-shutdown | no shutdown Interface mode. Disables or enables the interface,
-respectively.
-speed {10 | 100 | 1000 | auto} Interface mode. Manually sets the speed to the listed speed
-or, with the auto setting, automatically negotiates the speed.
-duplex {auto | full | half} Interface mode. Manually sets the duplex to half or full, or to
-autonegotiate the duplex setting.
-description text Interface mode. Lists any information text that the engineer
-wants to track for the interface, such as the expected device
-on the other end of the cable.
-no duplex
-no speed
-no description
-Reverts to the default setting for each interface subcommand
-of speed auto, duplex auto, and the absence of a description
-command.
-Table end.
-Table 7-6 Chapter 7 EXEC Command Reference
-Command Purpose
-show running-config Lists the currently used configuration
-show running-config | interface type
-number
-Displays the running-configuration excerpt of
-the listed interface and its subcommands only
-show mac address-table dynamic
-[interface type number] [vlan vlan-id]
-Lists the dynamically learned entries in the
-switchís address (forwarding) table, with subsets
-by interface and/or VLAN
-show mac address-table static [interface
-type number]
-Lists static MAC addresses and MAC addresses
-learned or defined with port security
-show interfaces [type number] status Lists one output line per interface (or for only
-the listed interface if included), noting the
-description, operating state, and settings for
-duplex and speed on each interface
-show interfaces [type number] Lists detailed status and statistical information
-about all interfaces (or the listed interface only)
-show interfaces description Displays one line of information per interface,
-with a two-item status (similar to the show
-interfaces command status), and includes any
-description that is configured on the interfaces
+interface type number vlan vlan-id | Lists the dynamically learned entries in the switch‚Äôs address (forwarding) table, with subsets by interface and/or VLAN
+show mac address-table static interface type number | Lists static MAC addresses and MAC addresses learned or defined with port security
+show interfaces type number status | Lists one output line per interface (or for only the listed interface if included), noting the description, operating state, and settings for duplex and speed on each interface show interfaces type number | Lists detailed status and statistical information about all interfaces (or the listed interface only)
+show interfaces description | Displays one line of information per interface, with a two-item status (similar to the show interfaces command status), and includes any description that is configured on the interfaces
+  
+  
 Table end.
 Table 8-2 Trunking Administrative Mode Options with the switchport mode Command
-Command Option Description
-access Always act as an access (nontrunk) port
-trunk Always act as a trunk port
-dynamic desirable Initiates negotiation messages and responds to negotiation messages to
-dynamically choose whether to start using trunking
-dynamic auto Passively waits to receive trunk negotiation messages, at which point
-the switch will respond and negotiate whether to use trunking
+__|__
+--|--
+Command Option | Description
+access | Always act as an access (nontrunk) port
+trunk | Always act as a trunk port
+dynamic desirable | Initiates negotiation messages and responds to negotiation messages to dynamically choose whether to start using trunking
+dynamic auto | Passively waits to receive trunk negotiation messages, at which point the switch will respond and negotiate whether to use trunking
+  
+  
 Table end.
-Table 8-3 Expected Trunking Operational Mode Based on the Configured Administrative
-Modes
-Administrative Mode Access Dynamic Auto Trunk Dynamic Desirable
-access Access Access Do Not Use1 Access
-dynamic auto Access Access Trunk Trunk
-trunk Do Not Use1 Trunk Trunk Trunk
-dynamic desirable Access Trunk Trunk Trunk
+****** Table 8-3 Expected Trunking Operational Mode Based on the Configured Administrative Modes
+__|__|__|__|__
+--|--|--|--|--
+Administrative Moden| Access | Dynamic Auto | Trunk | Dynamic Desirable
+access | Access | Access | Do Not Use1 | Access
+dynamic | auto | Access | Access | Trunk | Trunk
+trunk | Do Not Use1 | Trunk | Trunk | Trunk
+dynamic | desirable | Access | Trunk | Trunk | Trunk
+  
+  
 Table end.
-Table 8-4 VLAN Lists in the show interfaces trunk Command
-List
-Position
-Heading Reasons
-First VLANs allowed VLANs 1ñ4094, minus those removed by the switchport trunk
-allowed command
-Second VLANs allowed
-and activeÖ
-The first list, minus VLANs not defined to the local switch (that
-is, there is not a vlan global configuration command or the switch
-has not learned of the VLAN with VTP), and also minus those
-VLANs in shutdown mode
-Third VLANs in
-spanning treeÖ
-The second list, minus VLANs in an STP blocking state for that
-interface, and minus VLANs VTP pruned from that trunk
+###### Table 8-4 VLAN Lists in the show interfaces trunk Command
+__|__|__
+--|--|--
+List Position | Heading | Reasons
+First | VLANs allowed | VLANs 1‚Äì4094, minus those removed by the switchport trunk allowed command
+Second | VLANs allowed and active‚Ä¶ | The first list, minus VLANs not defined to the local switch (that is, there is not a vlan global configuration command or the switch has not learned of the VLAN with VTP), and also minus those VLANs in shutdown mode
+Third | VLANs in spanning tree‚Ä¶ | The second list, minus VLANs in an STP blocking state for that interface, and minus VLANs VTP pruned from that trunk  
+  
+  
 Table end.
-Table 8-5 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review config checklists Book, website
-Review command tables Book
-Review memory tables Website
-Do labs Sim Lite, blog
-Watch video Website
+###### Table 8-5 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review config checklists || Book, website
+Review command tables || Book
+Review memory tables || Website
+Do labs || Sim Lite, blog
+Watch video || Website
+  
+  
 Table end.
-Table 8-7 Chapter 8 Configuration Command Reference
-Command Description
-vlan vlan-id Global config command that both creates the VLAN and
-puts the CLI into VLAN configuration mode
-name vlan-name VLAN subcommand that names the VLAN
-[no] shutdown VLAN mode subcommand that enables (no shutdown)
-or disables (shutdown) the VLAN
-[no] shutdown vlan vlan-id Global config command that has the same effect as the
-[no] shutdown VLAN mode subcommands
-vtp mode {server | client |
-transparent | off}
-Global config command that defines the VTP mode
-switchport mode {access |
-dynamic {auto | desirable} | trunk}
-Interface subcommand that configures the trunking
-administrative mode on the interface
-switchport access vlan vlan-id Interface subcommand that statically configures the
-interface into that one VLAN
-switchport trunk encapsulation
-{dot1q | isl | negotiate}
-Interface subcommand that defines which type of
-trunking to use, assuming that trunking is configured or
-negotiated
-switchport trunk native vlan vlanid
-Interface subcommand that defines the native VLAN for
-a trunk port
-switchport nonegotiate Interface subcommand that disables the negotiation of
-VLAN trunking
-switchport voice vlan vlan-id Interface subcommand that defines the voice VLAN on
-a port, meaning that the switch uses 802.1Q tagging for
-frames in this VLAN
+###### Table 8-7 Chapter 8 Configuration Command Reference
+__|__
+--|--
+Command | Description
+vlan vlan-id | Global config command that both creates the VLAN and puts the CLI into VLAN configuration mode
+name vlan-name | VLAN subcommand that names the VLAN 
+(no) shutdown | VLAN mode subcommand that enables (no shutdown) or disables (shutdown) the VLAN
+(no) shutdown vlan vlan-id | Global config command that has the same effect as the (no) shutdown VLAN mode subcommands
+vtp mode {server  client  transparent  off} | Global config command that defines the VTP mode
+switchport mode {access dynamic {auto  desirable}  trunk} | Interface subcommand that configures the trunking administrative mode on the interface switchport access vlan vlan-id | Interface subcommand that statically configures the interface into that one VLAN
+switchport trunk encapsulation {dot1q  isl  negotiate} | Interface subcommand that defines which type of trunking to use, assuming that trunking is configured or negotiated 
+switchport trunk native vlan vlanid | Interface subcommand that defines the native VLAN for a trunk port switchport nonegotiate | Interface subcommand that disables the negotiation of VLAN trunking 
+switchport voice vlan vlan-id | Interface subcommand that defines the voice VLAN on a port, meaning that the switch uses 802.1Q tagging for frames in this VLAN
 switchport trunk allowed vlan
-{add | all | except | remove} vlanlist
-Interface subcommand that defines the list of allowed
+{add  all  except  remove} vlanlist | Interface subcommand that defines the list of allowed
 VLANs
+  
+  
 Table end.
-Table 8-8 Chapter 8 EXEC Command Reference
-Command Description
-show interfaces interface-id
-switchport
-Lists information about any interface regarding
+###### Table 8-8 Chapter 8 EXEC Command Reference
+__|__
+--|--
+Command | Description
+show interfaces interface-id switchport | Lists information about any interface regarding
 administrative settings and operational state
-show interfaces interface-id trunk Lists information about all operational trunks (but no
-other interfaces), including the list of VLANs that can
-be forwarded over the trunk
-show vlan [brief | id vlan-id | name
-vlan-name | summary]
-Lists information about the VLAN
-show vlan [vlan] Displays VLAN information
-show vtp status Lists VTP configuration and status information
+show interfaces interface-id trunk | Lists information about all operational trunks (but no other interfaces), including the list of VLANs that can be forwarded over the trunk
+show vlan (brief  id vlan-id  name vlan-name  summary) | Lists information about the VLAN
+show vlan (vlan) | Displays VLAN information
+show vtp status | Lists VTP configuration and status information
+  
+  
 Table end.
-Table 9-2 Three Classes of Problems Caused by Not Using STP in Redundant LANs
-Problem Description
-Broadcast storms The forwarding of a frame repeatedly on the same links, consuming
-significant parts of the linksí capacities
-MAC table instability The continual updating of a switchís MAC address table with
-incorrect entries, in reaction to looping frames, resulting in frames
-being sent to the wrong locations
-Multiple frame
-transmission
-A side effect of looping frames in which multiple copies of one frame
-are delivered to the intended host, confusing the host
+###### Table 9-2 Three Classes of Problems Caused by Not Using STP in Redundant LANs
+__|__
+--|--
+Problem | Description
+Broadcast storms | The forwarding of a frame repeatedly on the same links, consuming significant parts of the links‚Äô capacities
+MAC table instability | The continual updating of a switch‚Äôs MAC address table with incorrect entries, in reaction to looping frames, resulting in frames being sent to the wrong locations
+Multiple frame transmission | A side effect of looping frames in which multiple copies of one frame are delivered to the intended host, confusing the host
+  
+  
 Table end.
-Table 9-3 STP/RSTP: Reasons for Forwarding or Blocking
-Characterization of Port STP State Description
-All the root switchís ports Forwarding The root switch is always the designated switch
-on all connected segments.
-Each nonroot switchís root
-port
-Forwarding The port through which the switch has the least
-cost to reach the root switch (lowest root cost).
-Each LANís designated port Forwarding The switch forwarding the Hello on to the
-segment, with the lowest root cost, is the
-designated switch for that segment.
-All other working ports Blocking The port is not used for forwarding user frames,
-nor are any frames received on these interfaces
-considered for forwarding.
+###### Table 9-3 STP/RSTP: Reasons for Forwarding or Blocking
+__|__|__
+--|--|--
+Characterization of Port | STP State | Description
+All the root switch‚Äôs ports | Forwarding | The root switch is always the designated switch on all connected segments.
+Each nonroot switch‚Äôs root port | Forwarding | The port through which the switch has the least cost to reach the root switch (lowest root cost).
+Each LAN‚Äôs designated port | Forwarding | The switch forwarding the Hello on to the segment, with the lowest root cost, is the designated switch for that segment.
+All other working ports | Blocking | The port is not used for forwarding user frames, nor are any frames received on these interfaces considered for forwarding.
+  
+  
 Table end.
-Table 9-4 Fields in the STP Hello BPDU
-Field Description
-Root bridge ID The bridge ID of the switch the sender of this Hello currently believes
-to be the root switch
-Senderís bridge ID The bridge ID of the switch sending this Hello BPDU
-Senderís root cost The STP/RSTP cost between this switch and the current root
-Timer values on the
-root switch
-Includes the Hello timer, MaxAge timer, and forward delay timer
+###### Table 9-4 Fields in the STP Hello BPDU
+__|__
+--|--
+Field | Description
+Root bridge ID | The bridge ID of the switch the sender of this Hello currently believes to be the root switch
+Sender‚Äôs bridge ID | The bridge ID of the switch sending this Hello BPDU
+Sender‚Äôs root cost | The STP/RSTP cost between this switch and the current root
+Timer values on the root switch | Includes the Hello timer, MaxAge timer, and forward delay timer
+  
+  
 Table end.
-Table 9-5 State of Each Interface
-Switch
-Interface
-State Reason Why the Interface Is in Forwarding State
-SW1, Gi0/1 Forwarding The interface is on the root switch, so it becomes the DP on that link.
-SW1, Gi0/2 Forwarding The interface is on the root switch, so it becomes the DP on that link.
-SW2, Gi0/2 Forwarding The root port of SW2.
-SW2, Gi0/1 Forwarding The designated port on the LAN segment to SW3.
-SW3, Gi0/1 Forwarding The root port of SW3.
-SW3, Gi0/2 Blocking Not the root port and not the designated port.
+###### Table 9-5 State of Each Interface
+__|__|__
+--|--|--
+Switch Interface | State | Reason Why the Interface Is in Forwarding State
+SW1, Gi0/1 | Forwarding | The interface is on the root switch, so it becomes the DP on that link.
+SW1, Gi0/2 | Forwarding | The interface is on the root switch, so it becomes the DP on that link.
+SW2, Gi0/2 | Forwarding | The root port of SW2.
+SW2, Gi0/1 | Forwarding | The designated port on the LAN segment to SW3.
+SW3, Gi0/1 | Forwarding | The root port of SW3.
+SW3, Gi0/2 | Blocking | Not the root port and not the designated port.
+  
 Table end.
-Table 9-6 Default Port Costs According to IEEE
-Ethernet Speed IEEE Cost: 1998 (and Before) IEEE Cost: 2004 (and After)
-10 Mbps 100 2,000,000
-100 Mbps 19 200,000
-1 Gbps 4 20,000
-10 Gbps 2 2000
-100 Gbps N/A 200
-1 Tbps N/A 20
+##### Table 9-6 Default Port Costs According to IEEE
+__|__|__
+--|--|--
+Ethernet Speed | IEEE Cost: 1998 (and Before) | IEEE Cost: 2004 (and After)
+10 Mbps | 100 | 2,000,000
+100 Mbps | 19 | 200,000
+1 Gbps | 4 | 20,000
+10 Gbps | 2 | 2000
+100 Gbps | N/A | 200
+1 Tbps | N/A | 20
+  
 Table end.
-Table 9-7 STP Timers
-Timer Default
-Value
-Description
-Hello 2 seconds The time period between Hellos created by the root.
-MaxAge 10 times
-Hello
-How long any switch should wait, after ceasing to hear Hellos,
-before trying to change the STP topology.
-Forward
-delay
-15 seconds Delay that affects the process that occurs when an interface
-changes from blocking state to forwarding state. A port stays in an
-interim listening state, and then an interim learning state, for the
-number of seconds defined by the forward delay timer.
+###### Table 9-7 STP Timers
+__|__|__
+--|--|--
+Timer | Default Value | Description
+Hello | 2 seconds | The time period between Hellos created by the root.
+MaxAge | 10 times Hello | How long any switch should wait, after ceasing to hear Hellos, before trying to change the STP topology.
+Forward delay | 15 seconds Delay that affects the process that occurs when an interface changes from blocking state to forwarding state. A port stays in an interim listening state, and then an interim learning state, for the number of seconds defined by the forward delay timer.
+  
 Table end.
-Table 9-8 IEEE STP (Not RSTP) States
-State Forwards Data
-Frames?
-Learns MACs Based on
-Received Frames?
-Transitory or
-Stable State?
-Blocking No No Stable
-Listening No No Transitory
-Learning No Yes Transitory
-Forwarding Yes Yes Stable
-Disabled No No Stable
+###### Table 9-8 IEEE STP (Not RSTP) States
+__|__|__|__
+--|--|--|--
+State | Forwards Data Frames? | Learns MACs Based on Received Frames? | Transitory or Stable State?
+Blocking | No | No | Stable
+Listening | No | No | Transitory
+Learning | No | Yes | Transitory
+Forwarding | Yes | Yes | Stable
+Disabled | No | No | Stable
+  
 Table end.
-Table 9-9 Port Roles in RSTP
-Function Port Role
-Port that begins a nonroot switchís best path to the root Root port
-Port that replaces the root port when the root port fails Alternate port
-Switch port designated to forward onto a collision domain Designated port
-Port that replaces a designated port when a designated port fails Backup port
-Port that is administratively disabled Disabled port
+###### Table 9-9 Port Roles in RSTP
+__|__
+--|--
+Function | Port Role
+Port that begins a nonroot switch‚Äôs best path to the root | Root port
+Port that replaces the root port when the root port fails | Alternate port
+Switch port designated to forward onto a collision domain | Designated port
+Port that replaces a designated port when a designated port fails | Backup port
+Port that is administratively disabled | Disabled port
+  
 Table end.
-Table 9-10 Port States Compared: STP and RSTP
-Function STP State RSTP State
-Port is administratively disabled Disabled Discarding
-Stable state that ignores incoming data frames and is not used
-to forward data frames
-Blocking Discarding
-Interim state without MAC learning and without forwarding Listening Not used
-Interim state with MAC learning and without forwarding Learning Learning
-Stable state that allows MAC learning and forwarding of data
-frames
-Forwarding Forwarding
+###### Table 9-10 Port States Compared: STP and RSTP
+__|__|__
+--|--|--
+Function | STP State | RSTP State
+Port is administratively disabled | Disabled | Discarding
+Stable state that ignores incoming data frames and is not used to forward data frames | Blocking | Discarding
+Interim state without MAC learning and without forwarding | Listening | Not used
+Interim state with MAC learning and without forwarding Learning Learning Stable state that allows MAC learning and forwarding of data frames | Forwarding | Forwarding
+  
 Table end.
-Table 9-11 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
+###### Table 9-11 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review memory tables || Website
+  
 Table end.
-Table 10-2 STP Standards and Configuration Options
-Name Based on STP
-or RSTP?
-Trees Original IEEE
-Standard
-Config Parameter
-STP STP 1 (CST) 802.1D N/A
-PVST+ STP 1/VLAN 802.1D pvst
-RSTP RSTP 1 (CST) 802.1w N/A
-Rapid PVST+ RSTP 1/VLAN 802.1w rapid-pvst
-MSTP RSTP 1 or more* 802.1s mst
+###### Table 10-2 STP Standards and Configuration Options
+__|__|__|__|__
+--|--|--|--|--
+Name | Based on STP or RSTP? | Trees | Original IEEE Standard | Config Parameter
+STP | STP | 1 (CST) | 802.1D | N/A
+PVST+ | STP | 1/VLAN | 802.1D | pvst
+RSTP | RSTP | 1 (CST) | 802.1w | N/A
+Rapid | PVST+ | RSTP 1/VLAN | 802.1w | rapid-pvst
+MSTP | RSTP | 1 or more1 | 802.1s | mst
+  
 Table end.
-Table 10-3 STP/RSTP Configurable Priority Values
-Decimal Value 16-bit Binary Equivalent Decimal Value 16-bit Binary Equivalent
-0 0000 0000 0000 0000 32768 1000 0000 0000 0000
-4096 0001 0000 0000 0000 36864 1001 0000 0000 0000
-8192 0010 0000 0000 0000 40960 1010 0000 0000 0000
-12288 0011 0000 0000 0000 45056 1011 0000 0000 0000
-16384 0100 0000 0000 0000 49152 1100 0000 0000 0000
-20480 0101 0000 0000 0000 53248 1101 0000 0000 0000
-24576 0110 0000 0000 0000 57344 1110 0000 0000 0000
-28672 0111 0000 0000 0000 61440 1111 0000 0000 0000
+###### Table 10-3 STP/RSTP Configurable Priority Values
+__|__|__|__
+--|--|--|--
+Decimal Value | 16-bit Binary Equivalent | Decimal Value | 16-bit Binary Equivalent
+0 | 0000 0000 0000 0000 | 32768 | 1000 0000 0000 0000
+4096 | 0001 0000 0000 0000 | 36864 | 1001 0000 0000 0000
+8192 | 0010 0000 0000 0000 | 40960 | 1010 0000 0000 0000
+12288 | 0011 0000 0000 0000 | 45056 | 1011 0000 0000 0000
+16384 | 0100 0000 0000 0000 | 49152 | 1100 0000 0000 0000
+20480 | 0101 0000 0000 0000 | 53248 | 1101 0000 0000 0000
+24576 | 0110 0000 0000 0000 | 57344 | 1110 0000 0000 0000
+28672 | 0111 0000 0000 0000 | 61440 | 1111 0000 0000 0000
+  
 Table end.
-Table 10-4 EtherChannel Load Distribution Methods
-Configuration Keyword Math UsesÖ Layer
-src-mac Source MAC address 2
-dst-mac Destination MAC address 2
-src-dst-mac Both source and destination MAC 2
-src-ip Source IP address 3
-dst-ip Destination IP address 3
-src-dst-ip Both source and destination IP 3
-src-port Source TCP or UDP port 4
-dst-port Destination TCP or UDP port 4
-src-dst-port Both source and destination TCP or UDP port 4
+###### Table 10-4 EtherChannel Load Distribution Methods
+__|__|__
+--|--|--
+Configuration Keyword | Math Uses‚Ä¶ | Layer
+src-mac | Source MAC address | 2
+dst-mac | Destination MAC address | 2
+src-dst-mac | Both source and destination MAC | 2
+src-ip | Source IP address | 3
+dst-ip | Destination IP address | 3
+src-dst-ip | Both source and destination IP | 3
+src-port | Source TCP or UDP port | 4
+dst-port | Destination TCP or UDP port | 4
+src-dst-port | Both source and destination TCP or UDP port | 4
+  
 Table end.
-Table 10-5 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review config checklists Book, website
-Review command tables Book
-Review memory tables Website
-Do labs Blog
+###### Table 10-5 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review config checklists || Book, website
+Review command tables || Book
+Review memory tables || Website
+Do labs || Blog
+  
 Table end.
-Table 10-7 Chapter 10 Configuration Command Reference
-Command Description
-spanning-tree mode {pvst | rapid-pvst
-| mst}
-Global configuration command to set the STP mode.
-spanning-tree [vlan vlan-number]
-root primary
-Global configuration command that changes this
-switch to the root switch. The switchís priority is
-changed to the lower of either 24,576 or 4096 less
-than the priority of the current root bridge when the
-command was issued.
-spanning-tree [vlan vlan-number]
-root secondary
-Global configuration command that sets this switchís
-STP base priority to 28,672.
-spanning-tree vlan vlan-id priority
-priority
-Global configuration command that changes the
-bridge priority of this switch for the specified VLAN.
-spanning-tree [vlan vlan-number]
-cost cost
-Interface subcommand that changes the STP cost to
-the configured value.
-spanning-tree [vlan vlan-number]
-port-priority priority
-Interface subcommand that changes the STP port
-priority in that VLAN (0 to 240, in increments of 16).
+###### Table 10-7 Chapter 10 Configuration Command Reference
+__|__
+--|--
+Command | Description
+spanning-tree mode {pvst rapid-pvst mst} | Global configuration command to set the STP mode.
+spanning-tree (vlan vlan-number) root primary | Global configuration command that changes this switch to the root switch. The switch‚Äôs priority is changed to the lower of either 24,576 or 4096 less than the priority of the current root bridge when the command was issued.
+spanning-tree (vlan vlan-number) root secondary | Global configuration command that sets this switch‚Äôs STP base priority to 28,672.
+spanning-tree vlan vlan-id priority priority | Global configuration command that changes the bridge priority of this switch for the specified VLAN.
+spanning-tree (vlan vlan-number) cost cost | Interface subcommand that changes the STP cost to the configured value.
+spanning-tree (vlan vlan-number) port-priority priority Interface subcommand that changes the STP port priority in that VLAN (0 to 240, in increments of 16).
 channel-group channel-groupnumber
-mode {auto | desirable | active
-| passive | on}
-Interface subcommand that enables EtherChannel on
-the interface.
+mode {auto  desirable  active passive  on} | Interface subcommand that enables EtherChannel on the interface.
+  
 Table end.
-Table 10-8 Chapter 10 EXEC Command Reference
-Command Description
-show spanning-tree Lists details about the state of STP on the switch,
-including the state of each port.
-show spanning-tree vlan vlan-id Lists STP information for the specified VLAN.
-show etherchannel [channel-groupnumber]
-{brief | detail | port | portchannel
-| summary}
-Lists information about the state of EtherChannels on
-this switch.
+###### Table 10-8 Chapter 10 EXEC Command Reference
+__|__
+--|--
+Command | Description
+show spanning-tree | Lists details about the state of STP on the switch, including the state of each port.
+show spanning-tree vlan vlan-id | Lists STP information for the specified VLAN.
+show etherchannel (channel-groupnumber)
+{brief  detail  port  portchannel summary} | Lists information about the state of EtherChannels on this switch.
+  
 Table end.
-Table 11-2 RFC 1918 Private Address Space
+###### Table 11-2 RFC 1918 Private Address Space
+__|__|__
+--|--|--
 Class of Networks Private IP Networks Number of Networks
 A 10.0.0.0 1
 B 172.16.0.0 through 172.31.0.0 16
@@ -856,19 +661,19 @@ C 192.168.0.0 through 192.168.255.0 256
 Table end.
 Table 11-3 First 10 Subnets, Plus the Last Few, from 172.16.0.0, 255.255.255.0
 Subnet Number IP Addresses Broadcast Address
-172.16.0.0 172.16.0.1 ñ 172.16.0.254 172.16.0.255
-172.16.1.0 172.16.1.1 ñ 172.16.1.254 172.16.1.255
-172.16.2.0 172.16.2.1 ñ 172.16.2.254 172.16.2.255
-172.16.3.0 172.16.3.1 ñ 172.16.3.254 172.16.3.255
-172.16.4.0 172.16.4.1 ñ 172.16.4.254 172.16.4.255
-172.16.5.0 172.16.5.1 ñ 172.16.5.254 172.16.5.255
-172.16.6.0 172.16.6.1 ñ 172.16.6.254 172.16.6.255
-172.16.7.0 172.16.7.1 ñ 172.16.7.254 172.16.7.255
-172.16.8.0 172.16.8.1 ñ 172.16.8.254 172.16.8.255
-172.16.9.0 172.16.9.1 ñ 172.16.9.254 172.16.9.255
-Skipping manyÖ
-172.16.254.0 172.16.254.1 ñ 172.16.254.254 172.16.254.255
-172.16.255.0 172.16.255.1 ñ 172.16.255.254 172.16.255.255
+172.16.0.0 172.16.0.1 ‚Äì 172.16.0.254 172.16.0.255
+172.16.1.0 172.16.1.1 ‚Äì 172.16.1.254 172.16.1.255
+172.16.2.0 172.16.2.1 ‚Äì 172.16.2.254 172.16.2.255
+172.16.3.0 172.16.3.1 ‚Äì 172.16.3.254 172.16.3.255
+172.16.4.0 172.16.4.1 ‚Äì 172.16.4.254 172.16.4.255
+172.16.5.0 172.16.5.1 ‚Äì 172.16.5.254 172.16.5.255
+172.16.6.0 172.16.6.1 ‚Äì 172.16.6.254 172.16.6.255
+172.16.7.0 172.16.7.1 ‚Äì 172.16.7.254 172.16.7.255
+172.16.8.0 172.16.8.1 ‚Äì 172.16.8.254 172.16.8.255
+172.16.9.0 172.16.9.1 ‚Äì 172.16.9.254 172.16.9.255
+Skipping many‚Ä¶
+172.16.254.0 172.16.254.1 ‚Äì 172.16.254.254 172.16.254.255
+172.16.255.0 172.16.255.1 ‚Äì 172.16.255.254 172.16.255.255
 Table end.
 Table 11-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
@@ -880,25 +685,25 @@ Review All the Key Topics
 Table end.
 Table 12-2 IPv4 Address Classes Based on First Octet Values
 Class First Octet Values Purpose
-A 1ñ126 Unicast (large networks)
-B 128ñ191 Unicast (medium-sized networks)
-C 192ñ223 Unicast (small networks)
-D 224ñ239 Multicast
-E 240ñ255 Reserved (formerly experimental)
+A 1‚Äì126 Unicast (large networks)
+B 128‚Äì191 Unicast (medium-sized networks)
+C 192‚Äì223 Unicast (small networks)
+D 224‚Äì239 Multicast
+E 240‚Äì255 Reserved (formerly experimental)
 Table end.
 Table 12-3 Key Facts for Classes A, B, and C
 Class A Class B Class C
-First octet range 1ñ126 128ñ191 192ñ223
-Valid network numbers 1.0.0.0ñ126.0.0.0 128.0.0.0ñ191.255.0.0 192.0.0.0ñ223.255.255.0
-Total networks 27 ñ 2 = 126 214 = 16,384 221 = 2,097,152
-Hosts per network 224 ñ 2 216 ñ 2 28 ñ 2
+First octet range 1‚Äì126 128‚Äì191 192‚Äì223
+Valid network numbers 1.0.0.0‚Äì126.0.0.0 128.0.0.0‚Äì191.255.0.0 192.0.0.0‚Äì223.255.255.0
+Total networks 27 ‚Äì 2 = 126 214 = 16,384 221 = 2,097,152
+Hosts per network 224 ‚Äì 2 216 ‚Äì 2 28 ‚Äì 2
 Octets (bits) in network part 1 (8) 2 (16) 3 (24)
 Octets (bits) in host part 3 (24) 2 (16) 1 (8)
 Default mask 255.0.0.0 255.255.0.0 255.255.255.0
 Table end.
-Table 12-4 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 12-4 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 After Reading This Chapter Before Taking the Exam
-Focus onÖ Learning how Being correct and fast
+Focus on‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 10 seconds
@@ -1033,9 +838,9 @@ Decimal Mask Logic Binary Mask
 0 maps to 00000000
 11111111 11111000 00000000 00000000
 Table end.
-Table 13-7 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 13-7 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 Before Moving to the Next Section Before Taking the Exam
-Focus OnÖ Learning how Being correct and fast
+Focus On‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 10 seconds
@@ -1051,9 +856,9 @@ Prefix Binary Mask Decimal
 255.254.0.0
 /27
 Table end.
-Table 13-9 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 13-9 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 Before Moving to the Next Chapter Before Taking the Exam
-Focus OnÖ Learning how Being correct and fast
+Focus On‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 15 seconds
@@ -1079,7 +884,7 @@ Prefix Binary Mask Decimal
 /27 11111111 11111111 11111111 11100000 255.255.255.224
 Table end.
 Table 13-13 Answers to Problems from Earlier in the Chapter
-Problem /P Class N S H 2S 2H ñ 2
+Problem /P Class N S H 2S 2H ‚Äì 2
 1 8.1.4.5 255.255.254.0 23 A 8 15 9 32,768 510
 2 130.4.102.1 255.255.255.0 24 B 16 8 8 256 254
 3 199.1.1.100 255.255.255.0 24 C 24 0 8 N/A 254
@@ -1091,7 +896,7 @@ Definition Number that represents the subnet
 Numeric Value First (smallest) number in the subnet
 Literal Synonyms Subnet number, subnet address, prefix, resident subnet
 Common-Use Synonyms Network, network ID, network number, network address
-Typically Seen InÖ Routing tables, documentation
+Typically Seen In‚Ä¶ Routing tables, documentation
 Table end.
 Table 14-3 Summary of Subnet Broadcast Address Key Facts
 Definition A reserved number in each subnet that, when used as the
@@ -1100,7 +905,7 @@ packet to all hosts in that subnet
 Numeric Value Last (highest) number in the subnet
 Literal Synonyms Directed broadcast address
 Broader-Use Synonyms Network broadcast
-Typically Seen InÖ In calculations of the range of addresses in a subnet
+Typically Seen In‚Ä¶ In calculations of the range of addresses in a subnet
 Table end.
 Table 14-4 Subnet Analysis for Subnet with Address 8.1.4.5, Mask 255.255.0.0
 Prefix Length /16 11111111 11111111 00000000 00000000
@@ -1150,12 +955,12 @@ Problem IP Address Mask Subnet ID
 5 172.22.55.77 255.255.254.0
 6 1.99.53.76 255.255.255.248
 Table end.
-Table 14-11 Keep-Reading and Take-Exam Goals for This Chapterís Topics
+Table 14-11 Keep-Reading and Take-Exam Goals for This Chapter‚Äôs Topics
 Before Moving to the Next Chapter Before Taking the Exam
-Focus OnÖ Learning how Being correct and fast
+Focus On‚Ä¶ Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
-Goal: Speed Any speed 20ñ30 seconds
+Goal: Speed Any speed 20‚Äì30 seconds
 Table end.
 Table 14-12 Reference Table: DDN Mask Values, Binary Equivalent, Magic Numbers,
 and Prefixes
@@ -1192,8 +997,8 @@ IP Address Mask Subnet ID
 5 172.22.55.77 255.255.254.0 172.22.54.0
 6 1.99.53.76 255.255.255.248 1.99.53.72
 Table end.
-Table 14-17 Answers to Problems in the Section ìSubnet Broadcast Address Practice
-Problemsî
+Table 14-17 Answers to Problems in the Section ‚ÄúSubnet Broadcast Address Practice
+Problems‚Äù
 Subnet ID Mask Broadcast Address
 1 10.72.0.0 255.248.0.0 10.79.255.255
 2 172.30.64.0 255.255.192.0 172.30.127.255
@@ -1262,7 +1067,7 @@ Table 15-7 Chapter 15 Configuration Command Reference
 Command Description
 interface type number Global command that moves the user into configuration mode of
 the named interface.
-ip address address mask Interface subcommand that sets the routerís IPv4 address and
+ip address address mask Interface subcommand that sets the router‚Äôs IPv4 address and
 mask.
 [no] shutdown Interface subcommand that enables (no shutdown) or disables
 (shutdown) the interface.
@@ -1290,10 +1095,10 @@ Table end.
 Table 16-2 Analysis of Address Ranges for the Subnets in Example 16-8
 Subnet/Prefix Address Range
 172.16.1.1/32 172.16.1.1 (just this one address)
-172.16.1.0/24 172.16.1.0 ñ 172.16.1.255
-172.16.0.0/22 172.16.0.0 ñ 172.16.3.255
-172.16.0.0/16 172.16.0.0 ñ 172.16.255.255
-0.0.0.0/0 0.0.0.0 ñ 255.255.255.255 (all addresses)
+172.16.1.0/24 172.16.1.0 ‚Äì 172.16.1.255
+172.16.0.0/22 172.16.0.0 ‚Äì 172.16.3.255
+172.16.0.0/16 172.16.0.0 ‚Äì 172.16.255.255
+0.0.0.0/0 0.0.0.0 ‚Äì 255.255.255.255 (all addresses)
 Table end.
 Table 16-3 Descriptions of the show ip route Command Output
 Item Idea Value in
@@ -1306,7 +1111,7 @@ lists the default mask for Class A networks (/8).
 subnets
 13 subnets The number of routes for subnets of the classful
 network known to this router, from all sources,
-including local routesóthe /32 routes that match each
+including local routes‚Äîthe /32 routes that match each
 router interface IP address.
 3 Number of
 masks
@@ -1347,7 +1152,7 @@ Table end.
 Table 16-6 Chapter 16 Configuration Command Reference
 Command Description
 ip address ip-address mask Interface subcommand that assigns the
-interfaceís IP address
+interface‚Äôs IP address
 interface type number.subint Global command to create a subinterface and to
 enter configuration mode for that subinterface
 [no] ip routing Global command that enables (ip routing) or
@@ -1361,13 +1166,13 @@ static route
 Table end.
 Table 16-7 Chapter 16 EXEC Command Reference
 Command Description
-show ip route Lists the routerís entire routing table
+show ip route Lists the router‚Äôs entire routing table
 show ip route [connected |
 static | ospf]
 Lists a subset of the IP routing table
 show ip route ip-address Lists detailed information about the route that a router
 matches for the listed IP address
-show arp, show ip arp Lists the routerís IPv4 ARP table
+show arp, show ip arp Lists the router‚Äôs IPv4 ARP table
 clear ip arp [ip-address] Removes all dynamically learned ARP table entries, or if the
 command lists an IP address, removes the entry for that IP
 address only
@@ -1418,7 +1223,7 @@ interface
 Table end.
 Table 17-5 Chapter 17 EXEC Command Reference
 Command Description
-show ip route Lists the routerís entire routing table
+show ip route Lists the router‚Äôs entire routing table
 show ip route [connected] Lists a subset of the IP routing table
 show vlans Lists VLAN configuration and statistics for VLAN trunks
 configured on routers
@@ -1431,14 +1236,14 @@ show interfaces [interface type
 number] status
 Among other facts, for switch ports, lists the access
 VLAN or the fact that the interface is a trunk; or, for
-routed ports, lists ìroutedî
+routed ports, lists ‚Äúrouted‚Äù
 show interfaces interface-id
 switchport
 For switch ports, lists information about any interface
 regarding administrative settings and operational state;
 for routed ports, the output simply confirms the port is a
 routed (not switched) port
-show interfaces vlan number Lists the interface status, the switchís IPv4 address and
+show interfaces vlan number Lists the interface status, the switch‚Äôs IPv4 address and
 mask, and much more
 show etherchannel [channelgroup-
 number] summary
@@ -1460,7 +1265,7 @@ OSPF Cost The sum of all interface cost settings for all links in a route,
 with the cost defaulting to be based on interface bandwidth
 EIGRP Calculation based on
 bandwidth and delay
-Calculated based on the routeís slowest link and the
+Calculated based on the route‚Äôs slowest link and the
 cumulative delay associated with each interface in the route
 Table end.
 Table 19-3 Interior IP Routing Protocols Compared
@@ -1500,11 +1305,11 @@ Full Adjacent Neighbor
 Fully Adjacent Neighbor
 Adjacency
 Table end.
-Table 19-6 Comparing R1ís Three Alternatives for the Route to 172.16.3.0/24
+Table 19-6 Comparing R1‚Äôs Three Alternatives for the Route to 172.16.3.0/24
 Route Location in Figure 19-11 Cumulative Cost
-R1ñR7ñR8 Left 10 + 180 + 10 = 200
-R1ñR5ñR6ñR8 Middle 20 + 30 + 40 + 10 = 100
-R1ñR2ñR3ñR4ñR8 Right 30 + 60 + 20 + 5 + 10 = 125
+R1‚ÄìR7‚ÄìR8 Left 10 + 180 + 10 = 200
+R1‚ÄìR5‚ÄìR6‚ÄìR8 Middle 20 + 30 + 40 + 10 = 100
+R1‚ÄìR2‚ÄìR3‚ÄìR4‚ÄìR8 Right 30 + 60 + 20 + 5 + 10 = 125
 Table end.
 Table 19-7 OSPF Design Terminology
 Term Description
@@ -1516,7 +1321,7 @@ Backbone router A router connected to the backbone area (includes ABRs)
 Internal router A router in one area (not the backbone area)
 Area A set of routers and links that shares the same detailed LSDB
 information, but not with routers in other areas, for better efficiency
-Backbone area A special OSPF area to which all other areas must connectóarea 0
+Backbone area A special OSPF area to which all other areas must connect‚Äîarea 0
 Intra-area route A route to a subnet inside the same area as the router
 Interarea route A route to a subnet in an area of which the router is not a part
 Table end.
@@ -1716,7 +1521,7 @@ Table end.
 Table 21-8 Chapter 21 show Command Reference
 Command Description
 show ip protocols Shows routing protocol parameters and current timer values,
-including an effective copy of the routing protocolsí network
+including an effective copy of the routing protocols‚Äô network
 commands and a list of passive interfaces
 show ip ospf interface brief Lists the interfaces on which the OSPF protocol is enabled
 (based on the network commands), including passive
@@ -1735,7 +1540,7 @@ Table 22-2 IPv6 Routing Protocols
 Routing Protocol Defined By Notes
 RIPng (RIP next
 generation)
-RFC The ìnext generationî is a reference to a TV series, Star
+RFC The ‚Äúnext generation‚Äù is a reference to a TV series, Star
 Trek: the Next Generation.
 OSPFv3 (OSPF
 version 3)
@@ -1910,7 +1715,7 @@ Name
 First
 Quartet
 Scope
-Defined byÖ
+Defined by‚Ä¶
 Meaning
 Interface-
 Local
