@@ -4427,7 +4427,7 @@ with no VLAN information configured)
 ¦ Configure the hostname SW1 command to set the switch hostname
 Once done, the switch starts forwarding and learning MAC addresses, as demonstrated in
 Example 5-1.
-Example 5-1 show mac address-table dynamic for Figure 5-7
+Example 5-1 Show mac address-table dynamic for Figure 5-7
 SW1# show mac address-table dynamic
 Mac Address Table
 -------------------------------------------
@@ -4475,7 +4475,7 @@ The first example assumes that you installed the switch and cabling correctly, a
 switch interfaces work. Once you do the installation and connect to the Console, you can
 easily check the status of those interfaces with the show interfaces status command, as
 shown in Example 5-2.
-Example 5-2 show interfaces status on Switch SW1
+Example 5-2 Show interfaces status on Switch SW1
 SW1# show interfaces status
 Port Name Status Vlan Duplex Speed Type
 Fa0/1 connected 1 a-full a-100 10/100BaseTX
@@ -4535,7 +4535,7 @@ for interface F0/1.
 ||||||||||||||||||||
 ||||||||||||||||||||
 120 CCNA 200-301 Official Cert Guide, Volume 1
-Example 5-3 show interfaces f0/1 counters on Switch SW1
+Example 5-3 Show interfaces f0/1 counters on Switch SW1
 SW1# show interfaces f0/1 counters
 Port InOctets InUcastPkts InMcastPkts InBcastPkts
 Fa0/1 1223303 10264 107 18
@@ -4555,7 +4555,7 @@ Example 5-4. All you have to do is include the address keyword, followed by the 
 MAC address. If the address exists, the output lists the address. Note that the output lists
 the exact same information in the exact same format, but it lists only the line for the matching
 MAC address.
-Example 5-4 show mac address-table dynamic with the address Keyword
+Example 5-4 Show mac address-table dynamic with the address Keyword
 SW1# show mac address-table dynamic address 0200.1111.1111
 Mac Address Table
 -------------------------------------------
@@ -4576,7 +4576,7 @@ Technet24
 ||||||||||||||||||||
 5
 Chapter 5: Analyzing Ethernet LAN Switching 121
-Example 5-5 show mac address-table dynamic with the interface Keyword
+Example 5-5 Show mac address-table dynamic with the interface Keyword
 SW1# show mac address-table dynamic interface fastEthernet 0/1
 Mac Address Table
 -------------------------------------------
@@ -4728,18 +4728,6 @@ Do labs Book, Sim Lite, blog
 Review command tables Book
 Table end.
 Review All the Key Topics
-Table 5-3 Key Topics for Chapter 5
-Key Topic
-Element
-Description Page
-Number
-List Three main functions of a LAN switch 109
-Figure 5-3 Process to forward a known unicast frame 111
-Figure 5-5 Process to forward a known unicast, second switch 112
-Figure 5-6 Process to learn MAC addresses 113
-List Summary of switch forwarding logic 117
-Example 5-1 The show mac address-table dynamic command 117
-Table end.
 Do Labs
 The Sim Lite software is a version of Pearson’s full simulator learning product with a subset
 of the labs, included free with this book. The subset of labs mostly relate to this part of the
@@ -5705,14 +5693,6 @@ Technet24
 6
 Chapter 6: Configuring Basic Switch Management 147
 Review All the Key Topics
-Table 6-4 Key Topics for Chapter 6
-Key Topic
-Element
-Description Page
-Number
-Example 6-2 Example of configuring password login security (no usernames) 132
-Figure 6-5 SSH configuration commands with related username login security 137
-Table end.
 Key Terms You Should Know
 Telnet, Secure Shell (SSH), local username, AAA, AAA server, enable mode, default gateway,
 VLAN interface, history buffer, DNS, name resolution, log message
@@ -7543,7 +7523,7 @@ Example 8-5 begins with SW1 configured as shown in Examples 8-2 and 8-4—that i
 has two ports each assigned to VLANs 1, 2, and 3. However, both SW1 and SW2 currently
 have all default settings on the interfaces that connect the two switches. With the default
 setting of switchport mode dynamic auto, the two switches do not trunk.
-Example 8-5 Initial (Default) State: Not Trunking Between SW1 and SW2
+Example 8-5 Initial Default State: Not Trunking Between SW1 and SW2
 SW1# show interfaces gigabit 0/1 switchport
 Name: Gi0/1
 Switchport: Enabled
@@ -15317,7 +15297,7 @@ Chapter 16: Configuring IPv4 Addresses and Static Routes 387
 the route the router will choose. To let you see how to use this option, Example 16-8 shows
 a series of overlapping routes, all created with OSPF, so the output lists only OSPF-learned
 routes.
-Example 16-8 show ip route Command with Overlapping Routes
+Example 16-8 Show ip route Command with Overlapping Routes
 R1# show ip route ospf
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
 D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
@@ -15377,7 +15357,7 @@ on the same router used in Example 24-4. The first line of (highlighted) output 
 matched route: the route to 172.16.0.0/16. The rest of the output lists the details of that particular
 route, like the outgoing interface of GigabitEthernet0/1/0 and the next-hop router of
 172.16.25.129.
-Example 16-9 show ip route Command with Overlapping Routes
+Example 16-9 Show ip route Command with Overlapping Routes
 R1# show ip route 172.16.4.3
 Routing entry for 172.16.0.0/16
 Known via "ospf 1", distance 110, metric 65, type intra area
@@ -24072,7 +24052,7 @@ Technet24
 Chapter 25: Implementing IPv6 Routing 597
 troubleshooting checklist. Look for the short comment at the end of each configuration
 command to see why each is incorrect.
-Example 25-17 ipv6 route Commands with Correct Syntax but Incorrect Ideas
+Example 25-17 IPv6 route Commands with Correct Syntax but Incorrect Ideas
 ipv6 route 2001:DB8:9:33::/64 2001:DB8:9:2::2 ! Step 1: Wrong prefix
 ipv6 route 2001:DB8:9:3::/64 G0/2 FE80::AAA9 ! Step 2A: Wrong neighbor link local
 ipv6 route 2001:DB8:9:3::/64 FE80::2 ! Step 2B: Missing outgoing interface

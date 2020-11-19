@@ -1,0 +1,148 @@
+NOTE
+Working from top to bottom, note that the first configuration command listed by the show
+The debug command also tells the user details about the operation of the switch. However,
+The text inside parentheses in the command prompt identifies the configuration mode. For
+Copying and Erasing Configuration Files
+First, focus on two columns of the table: the MAC Address and Ports columns of the table.
+Focus on the port column for a moment. As a reminder, Cisco Catalyst switches name their
+Finding Entries in the MAC Address Table
+While this information is useful, often the engineer troubleshooting a problem does not
+Finally, you may also want to find the MAC address table entries for one VLAN. You
+Managing the MAC Address Table (Aging, Clearing)
+Each switch also removes the oldest table entries, even if they are younger than the aging
+Chapter Review
+Note that the example shows the password text as if typed (faith and love), along with the enable
+Example 6-3 shows the resulting configuration in the switch per the show running-config
+NOTE
+NOTE
+Earlier, I mentioned that one useful default was that the switch defaults to support both SSH
+Enabling IPv4 for Remote Access
+On a side note, this example shows a particularly important and common command: the
+Verifying IPv4 on a Switch
+The output of the show interfaces vlan 1 command lists two very important details related
+Chapter Review
+First, focus on the mechanics of moving around in configuration mode again by looking
+Working through the output in the example:
+Administratively Controlling Interface State with shutdown
+To bring the interface back up again, all you have to do is follow the same process but use
+Removing Configuration with the no Command
+NOTE
+Although both commands in the example can be useful, only the show interfaces status
+First, note that even though SW1 had to use an autonegotiation default, the show interfaces
+The number of input errors and the number of CRC errors are just a few of the counters in
+The example begins with the show vlan brief command, confirming the default settings
+Take a moment to compare the output of the show vlan brief commands in Example 8-2
+The example surrounding Figure 8-9 uses six switch ports, all of which need to operate as
+Example 8-2 shows how a switch can dynamically create a VLAN—the equivalent of the
+First, focus on the highlighted items from the output of the show interfaces switchport
+Example 8-6 repeats the show interfaces gi0/1 switchport command seen in Example 8-5,
+For the exams, you should be ready to interpret the output of the show interfaces
+NOTE
+Working through the first three highlighted lines in the output, all those details should look
+Summary: IP Telephony Ports on Switches
+NOTE
+A different incorrect trunking configuration has an even worse result: one switch trunks,
+The output of the show interfaces trunk command creates three separate lists of VLANs,
+The Bridge ID and System ID Extension
+Table 10-3 lists all the configurable values for the STP/RSTP priority. However, do not worry
+RSTP Methods to Support Multiple Spanning Trees
+Take a few moments to look at the output in the two show commands in the example,
+Physical Interface Configuration and EtherChannels
+The messages at the top of the example specifically state what the switch does when
+Example 10-7 makes two important points:
+Example 10-9 shows yet a third variation, this time changing the load distribution method to
+Chapter Review
+NOTE
+Example 15-3 shows the output of the show protocols command. This command confirms
+One of the first actions to take when verifying whether a router is working is to find the
+Take a moment to look closely at each of the three highlighted routes in the output of show
+Thinking about how Router R1 forwards a packet to host A (172.16.1.9), over that final subnet,
+The two example ip route commands show the two different styles of forwarding instructions.
+IOS adds and removes these static routes dynamically over time, based on whether the outgoing
+Static Default Routes
+The output of the show ip route command lists a few new and interesting facts. First, it
+Note that although the permanent keyword lets the router keep the route in the routing
+To predict which of its routes a router will match, two pieces of information are required: the
+Certainly, if you have an option, just using a command to check what the router actually
+First, look at the subinterface numbers. The subinterface number begins with the period, like
+Verifying ROAS
+As for interface and subinterface state, note that the ROAS subinterface state does depend
+Additionally, the subinterface state can also be enabled and disabled independently from the
+Troubleshooting ROAS
+Verifying Routing with SVIs
+The switch would also need additional routes to the rest of the network (not shown in the
+The second big area to investigate when troubleshooting SVIs relates to the SVI state, a state
+Note that the example ends with the three VLAN interfaces in an up/down state per the
+Once configured, the routed interface will show up differently in command output in the
+So, with two options—SVI and routed ports—where should you use each?
+Of particular importance, note that although the physical interfaces and PortChannel interface
+For a final bit of verification, you can examine the EtherChannel directly with the show
+Troubleshooting Layer 3 EtherChannels
+Strategies and Results When Testing with the ping Command
+First, take a moment to review the output of the first IOS ping command. By default, the
+This particular extended ping command tests the same routes for the echo request going to
+How the traceroute Command Works
+The extended traceroute command, as shown in Example 18-6, follows the same basic
+Both the ping and traceroute commands exist on most operating systems, including Cisco
+Take the time to pay close attention to the command prompts. The example begins with the
+When you have finished using the other router, you can log out from your Telnet or SSH
+The OSPF configuration begins with the router ospf process-id global command, which
+For the specific network command in Example 20-2, any matched interfaces are assigned to
+Finally, note that OSPF uses the same wildcard mask logic as defined by Cisco IOS access
+The detail in the output mentions several important facts, and for most people, working right
+For the purposes of this book, do not be concerned about the specifics in the output of this
+Any time you want to check OSPF on a router in a small design like the ones in the book,
+The highlighted output emphasizes some of the configuration. The first highlighted line
+First, consider the show ip ospf interface brief command shown here. It lists one line per
+Each router chooses its OSPF RID when OSPF is initialized, which happens when the
+Implementing Multiarea OSPF
+Using OSPFv2 Interface Subcommands
+When reading the example, read from top to bottom, and also consider the details about
+Another small piece of different output exists in the show ip ospf interface [interface] command.
+Other than these small differences in a few show commands, the rest of the commands show
+In real internetworks, the choice of configuration style reduces to which option requires the
+OSPF Default Routes
+Keeping the focus on the command on Router R1, note that R1 indeed has a default route—
+The output also shows a cost value of 1 for the other Gigabit interfaces, which is the default
+This simple design gives us a great backdrop from which to observe the results of the broadcast
+Verifying Operations with Network Type Broadcast
+So far, this topic has described the effect of the OSPF broadcast network type by taking
+Although you would not need to configure an Ethernet interface to use the broadcast network
+The configuration shows R1’s interface priority value now as 99, and the show ip ospf
+The OSPF Point-to-Point Network Type
+Note the highlighted portions of the show command in Example 21-6. The first two highlights
+When using Ethernet WAN links that behave as a point-to-point link, consider using OSPF
+With an area mismatch error, the show ip ospf neighbor command will not list the neighbor.
+First, focus on the problem: the duplicate RIDs. The first line of the show ip ospf command
+Shutting Down the OSPF Process
+First, before the shutdown, the show ip ospf neighbor command lists two neighbors.
+As you can see, both routers list the other as an OSPF neighbor in the full state. However,
+Example 24-2 Configuring Static IPv6 Addresses on R2
+NOTE
+First, focus on the output of the two show ipv6 interface commands at the top of the
+Generating a Unique Interface ID Using Modified EUI-64
+The example uses only Ethernet interfaces, all of which have a universal MAC address to use
+Special Addresses Used by Routers
+First, examine the two pairs of highlighted entries in the example. For each of the two interfaces
+Multicast Address Scopes
+Note that in this case, R1’s global unicast address ends with 00:0001 (unabbreviated), resulting
+NOTE
+Answers to the “Do I Know This Already?” quiz:
+All three highlighted routes show the same basic kinds of information, so for discussion,
+For the highlighted local route, look for a couple of quick facts. First, look back to R1’s configuration
+While Example 25-4 shows the correct syntax of the route, if using static routes throughout
+Many options exist for verifying the existence of the static route and testing whether hosts
+This command lists many facts about the one static route on R1. First, the code “S” in the
+Static Routes Using Next-Hop IPv6 Address
+The ipv6 route command itself is relatively straightforward. Focus on R1’s route, which
+Example Static Route with a Link-Local Next-Hop Address
+Example 25-11 verifies the configuration in Example 25-10 by repeating the show ipv6
+Static Routes over Ethernet Links
+Static Default Routes
+With IPv6, the router displays the default a little more cleanly than with IPv4. The show
+Static IPv6 Host Routes
+Floating Static IPv6 Routes
+Table 25-2 lists some of the default administrative distance values used with IPv6.
+All these incorrect examples have correct syntax and would be added to R1’s IPv6 routing
+The Static Route Does Not Appear in the IPv6 Routing Table
+NOTE
