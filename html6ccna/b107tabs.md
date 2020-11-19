@@ -678,30 +678,38 @@ Skipping many…
   
 Table end.
 ###### Table 11-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
-Review All the Key Topics
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory tables | | Website
+  
 Table end.
-Table 12-2 IPv4 Address Classes Based on First Octet Values
-Class First Octet Values Purpose
-A 1–126 Unicast (large networks)
-B 128–191 Unicast (medium-sized networks)
-C 192–223 Unicast (small networks)
-D 224–239 Multicast
-E 240–255 Reserved (formerly experimental)
+###### Table 12-2 IPv4 Address Classes Based on First Octet Values
+__|__|__
+--|--|--
+Class | First Octet Values | Purpose
+A | 1–126 | Unicast (large networks)
+B | 128–191 | Unicast (medium-sized networks)
+C | 192–223 | Unicast (small networks)
+D | 224–239 | Multicast
+E | 240–255 | Reserved (formerly experimental)
+  
 Table end.
-Table 12-3 Key Facts for Classes A, B, and C
-Class A Class B Class C
-First octet range 1–126 128–191 192–223
-Valid network numbers 1.0.0.0–126.0.0.0 128.0.0.0–191.255.0.0 192.0.0.0–223.255.255.0
-Total networks 27 – 2 = 126 214 = 16,384 221 = 2,097,152
-Hosts per network 224 – 2 216 – 2 28 – 2
-Octets (bits) in network part 1 (8) 2 (16) 3 (24)
-Octets (bits) in host part 3 (24) 2 (16) 1 (8)
-Default mask 255.0.0.0 255.255.0.0 255.255.255.0
+###### Table 12-3 Key Facts for Classes A, B, and C
+__|__|__|__
+--|--|--|--
+ |Class A | Class B | Class C
+First octet range | 1–126 | 128–191 | 192–223
+Valid network numbers | 1.0.0.0–126.0.0.0 | 128.0.0.0–191.255.0.0 | 192.0.0.0–223.255.255.0
+Total networks | 27 – 2 = 126 | 214 = 16,384 | 221 = 2,097,152
+Hosts per network | 224 – 2 | 216 – 2 | 28 – 2
+Octets (bits) in network part | 1 (8) | 2 (16) | 3 (24)
+Octets (bits) in host part | 3 (24) | 2 (16) | 1 (8)
+Default mask | 255.0.0.0 | 255.255.0.0 | 255.255.255.0
+  
 Table end.
 Table 12-4 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
 After Reading This Chapter Before Taking the Exam
