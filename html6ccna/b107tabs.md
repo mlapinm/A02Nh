@@ -701,7 +701,7 @@ Table end.
 ###### Table 12-3 Key Facts for Classes A, B, and C
 __|__|__|__
 --|--|--|--
- |Class A | Class B | Class C
+_ |Class A | Class B | Class C
 First octet range | 1–126 | 128–191 | 192–223
 Valid network numbers | 1.0.0.0–126.0.0.0 | 128.0.0.0–191.255.0.0 | 192.0.0.0–223.255.255.0
 Total networks | 27 – 2 = 126 | 214 = 16,384 | 221 = 2,097,152
@@ -711,42 +711,32 @@ Octets (bits) in host part | 3 (24) | 2 (16) | 1 (8)
 Default mask | 255.0.0.0 | 255.255.0.0 | 255.255.255.0
   
 Table end.
-Table 12-4 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
-After Reading This Chapter Before Taking the Exam
-Focus on… Learning how Being correct and fast
-Tools Allowed All Your brain and a notepad
-Goal: Accuracy 90% correct 100% correct
-Goal: Speed Any speed 10 seconds
+###### Table 12-4 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
+__|__|__
+--|--|--
+_ |After Reading This Chapter | Before Taking the Exam
+Focus on… | Learning how | Being correct and fast
+Tools Allowed | All | Your brain and a notepad
+Goal: Accuracy | 90% correct | 100% correct
+Goal: Speed | Any speed | 10 seconds
+  
 Table end.
-Table 12-5 Practice Problems: Find the Network ID and Network Broadcast
-IP Address Class Network
-Octets
-Host
-Octets
-Network ID Network Broadcast
-Address
-1 1.1.1.1
-2 128.1.6.5
-3 200.1.2.3
-4 192.192.1.1
-5 126.5.4.3
-Technet24
-||||||||||||||||||||
-||||||||||||||||||||
-12
-Chapter 12: Analyzing Classful IPv4 Networks 297
-IP Address Class Network
-Octets
-Host
-Octets
-Network ID Network Broadcast
-Address
-6 200.1.9.8
-7 192.0.0.1
-8 191.255.1.47
-9 223.223.0.1
+###### Table 12-5 Practice Problems: Find the Network ID and Network Broadcast
+__|__|__|__|__|__|__
+--|--|--|--|--|--|--
+IP Address | Class | Network Octets | Host Octets | Network ID | Network Broadcast Address
+1 | 1.1.1.1
+2 | 128.1.6.5
+3 | 200.1.2.3
+4 | 192.192.1.1
+5 | 126.5.4.3
+6 | 200.1.9.8
+7 | 192.0.0.1
+8 | 191.255.1.47
+9 | 223.223.0.1
+  
 Table end.
-Table 12-6 Sparse Study Table Version of Table 12-2
+###### Table 12-6 Sparse Study Table Version of Table 12-2
 Class First Octet Values Purpose
 A
 B
