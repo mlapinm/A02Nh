@@ -737,15 +737,20 @@ IP Address | Class | Network Octets | Host Octets | Network ID | Network Broadca
   
 Table end.
 ###### Table 12-6 Sparse Study Table Version of Table 12-2
-Class First Octet Values Purpose
+__|__|__
+--|--|--
+Class | First Octet Values | Purpose
 A
 B
 C
 D
 E
+  
 Table end.
-Table 12-7 Sparse Study Table Version of Table 12-3
-Class A Class B Class C
+###### Table 12-7 Sparse Study Table Version of Table 12-3
+ __|__|__|__
+--|--|--|--
+_|Class A | Class B | Class C
 First octet range
 Valid network numbers
 Total networks
@@ -753,110 +758,112 @@ Hosts per network
 Octets (bits) in network part
 Octets (bits) in host part
 Default mask
+  
 Table end.
-Table 12-8 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
-Practice analyzing classful IPv4
-networks
-Website, Appendix D
-Review All the Key Topics
+###### Table 12-8 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory tables | | Website
+Practice analyzing classful IPv4 networks | | Website, Appendix D
+  
 Table end.
-Table 12-10 Practice Problems: Find the Network ID and Network Broadcast
-IP Address Class Network
-Octets
-Host
-Octets
-Network ID Network Broadcast
-1 1.1.1.1 A 1 3 1.0.0.0 1.255.255.255
-2 128.1.6.5 B 2 2 128.1.0.0 128.1.255.255
-3 200.1.2.3 C 3 1 200.1.2.0 200.1.2.255
-4 192.192.1.1 C 3 1 192.192.1.0 192.192.1.255
-5 126.5.4.3 A 1 3 126.0.0.0 126.255.255.255
-6 200.1.9.8 C 3 1 200.1.9.0 200.1.9.255
-7 192.0.0.1 C 3 1 192.0.0.0 192.0.0.255
-8 191.255.1.47 B 2 2 191.255.0.0 191.255.255.255
-9 223.223.0.1 C 3 1 223.223.0.0 223.223.0.255
+###### Table 12-10 Practice Problems: Find the Network ID and Network Broadcast
+__|__|__|__|__|__|__
+--|--|--|--|--|--|--
+_ |IP Address Class | Network Octets | Host Octets | Network ID | Network Broadcast
+1 | 1.1.1.1 | A | 1 | 3 | 1.0.0.0 | 1.255.255.255
+2 | 128.1.6.5 | B | 2 | 2 | 128.1.0.0 | 128.1.255.255
+3 | 200.1.2.3 | C | 3 | 1 | 200.1.2.0 | 200.1.2.255
+4 | 192.192.1.1 | C | 3 | 1 | 192.192.1.0 | 192.192.1.255
+5 | 126.5.4.3 | A | 1 | 3 | 126.0.0.0 | 126.255.255.255
+6 | 200.1.9.8 | C | 3 | 1 | 200.1.9.0 | 200.1.9.255
+7 | 192.0.0.1 | C | 3 | 1 | 192.0.0.0 | 192.0.0.255
+8 | 191.255.1.47 | B | 2 | 2 | 191.255.0.0 | 191.255.255.255
+9 | 223.223.0.1 | C | 3 | 1 | 223.223.0.0 | 223.223.0.255
+  
 Table end.
-Table 13-2 Example Conversions: Binary to Prefix
-Binary Mask Logic Prefix Mask
-11111111 11111111 11000000 00000000 Count 8 + 8 + 2 = 18 binary 1s /18
-11111111 11111111 11111111 11110000 Count 8 + 8 + 8 + 4 = 28 binary 1s /28
-11111111 11111000 00000000 00000000 Count 8 + 5 = 13 binary 1s /13
+###### Table 13-2 Example Conversions: Binary to Prefix
+__|__|__
+--|--|--
+Binary Mask | Logic | Prefix Mask
+11111111 11111111 11000000 00000000 | Count 8 + 8 + 2 = 18 binary 1s | /18
+11111111 11111111 11111111 11110000 | Count 8 + 8 + 8 + 4 = 28 binary 1s | /28
+11111111 11111000 00000000 00000000 | Count 8 + 5 = 13 binary 1s | /13
+  
 Table end.
-Table 13-3 Example Conversions: Prefix to Binary
-Prefix Mask Logic Binary Mask
-/18 Write 18 1s, then 14 0s, total 32 11111111 11111111 11000000 00000000
-/28 Write 28 1s, then 4 0s, total 32 11111111 11111111 11111111 11110000
-/13 Write 13 1s, then 19 0s, total 32 11111111 11111000 00000000 00000000
+###### Table 13-3 Example Conversions: Prefix to Binary
+__|__|__
+--|--|--
+Prefix Mask | Logic | Binary Mask
+/18 | Write 18 1s, then 14 0s, total 32 | 11111111 11111111 11000000 00000000
+/28 | Write 28 1s, then 4 0s, total 32 | 11111111 11111111 11111111 11110000
+/13 | Write 13 1s, then 19 0s, total 32 | 11111111 11111000 00000000 00000000
+  
 Table end.
-Table 13-4 Nine Possible Values in One Octet of a Subnet Mask
-Binary Mask
-Octet
-Decimal
-Equivalent
-Number of
-Binary 1s
-00000000 0 0
-10000000 128 1
-11000000 192 2
-11100000 224 3
-11110000 240 4
-11111000 248 5
-11111100 252 6
-11111110 254 7
-11111111 255 8
+###### Table 13-4 Nine Possible Values in One Octet of a Subnet Mask
+__|__|__
+--|--|--
+Binary Mask Octet | Decimal Equivalent | Number of Binary 1s
+00000000 | 0 | 0
+10000000 | 128 | 1
+11000000 | 192 | 2
+11100000 | 224 | 3
+11110000 | 240 | 4
+11111000 | 248 | 5
+11111100 | 252 | 6
+11111110 | 254 | 7
+11111111 | 255 | 8
+  
 Table end.
-Table 13-5 Conversion Example: Binary to Decimal
-Binary Mask Logic Decimal Mask
-11111111 11111111 11000000 00000000 11111111 maps to 255
-11000000 maps to 192
-00000000 maps to 0
-255.255.192.0
-11111111 11111111 11111111 11110000 11111111 maps to 255
-11110000 maps to 240
-255.255.255.240
-11111111 11111000 00000000 00000000 11111111 maps to 255
-11111000 maps to 248
-00000000 maps to 0
-255.248.0.0
+###### Table 13-5 Conversion Example: Binary to Decimal
+__|__|__
+--|--|--
+Binary Mask | Logic | Decimal Mask
+11111111 11111111 11000000 00000000 | 11111111 maps to 255 11000000 maps to 192 00000000 maps to 0 | 255.255.192.0
+11111111 11111111 11111111 11110000 | 11111111 maps to 255 11110000 maps to 240 | 255.255.255.240
+11111111 11111000 00000000 00000000 | 11111111 maps to 255 11111000 maps to 248 00000000 maps to 0 | 255.248.0.0
+  
 Table end.
-Table 13-6 Conversion Examples: Decimal to Binary
-Decimal Mask Logic Binary Mask
-255.255.192.0 255 maps to 11111111
-192 maps to 11000000
-0 maps to 00000000
-11111111 11111111 11000000 00000000
-255.255.255.240 255 maps to 11111111
-240 maps to 11110000
-11111111 11111111 11111111 11110000
-255.248.0.0 255 maps to 11111111
-248 maps to 11111000
-0 maps to 00000000
-11111111 11111000 00000000 00000000
+###### Table 13-6 Conversion Examples: Decimal to Binary
+__|__|__
+--|--|--
+Decimal Mask | Logic | Binary Mask
+255.255.192.0 | 255 maps to 11111111 192 maps to 11000000 0 maps to 00000000 | 11111111 11111111 11000000 00000000
+255.255.255.240 | 255 maps to 11111111 240 maps to 11110000 | 11111111 11111111 11111111 11110000
+255.248.0.0 | 255 maps to 11111111 248 maps to 11111000 0 maps to 00000000 | 11111111 11111000 00000000 00000000
+  
 Table end.
-Table 13-7 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
-Before Moving to the Next Section Before Taking the Exam
-Focus On… Learning how Being correct and fast
-Tools Allowed All Your brain and a notepad
-Goal: Accuracy 90% correct 100% correct
-Goal: Speed Any speed 10 seconds
+###### Table 13-7 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
+__|__|__
+--|--|--
+_ |Before Moving to the Next Section | Before Taking the Exam
+Focus On… | Learning how | Being correct and fast
+Tools Allowed | All | Your brain and a notepad
+Goal: Accuracy | 90% correct | 100% correct
+Goal: Speed | Any speed | 10 seconds
+  
 Table end.
-Table 13-8 Practice Problems: Find the Mask Values in the Other Two Formats
-Prefix Binary Mask Decimal
-11111111 11111111 11000000 00000000
-255.255.255.252
-/25
-/16
-255.0.0.0
-11111111 11111111 11111100 00000000
-255.254.0.0
-/27
+###### Table 13-8 Practice Problems: Find the Mask Values in the Other Two Formats
+__|__|__
+--|--|--
+Prefix | Binary Mask | Decimal
+_ |11111111 11111111 11000000 00000000 | _
+_ |_ |255.255.255.252
+/25 | | 
+/16 | |
+_ |_ |255.0.0.0
+_ |11111111 11111111 11111100 00000000 | _
+_ |_ |255.254.0.0
+/27 | _ | _
+  
 Table end.
-Table 13-9 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
+###### Table 13-9 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
+__|__|__
+--|--|--
 Before Moving to the Next Chapter Before Taking the Exam
 Focus On… Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
