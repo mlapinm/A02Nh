@@ -864,41 +864,50 @@ Table end.
 ###### Table 13-9 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
 __|__|__
 --|--|--
-Before Moving to the Next Chapter Before Taking the Exam
-Focus On… Learning how Being correct and fast
-Tools Allowed All Your brain and a notepad
-Goal: Accuracy 90% correct 100% correct
-Goal: Speed Any speed 15 seconds
+_ | Before Moving to the Next Chapter | Before Taking the Exam
+Focus On… | Learning how | Being correct and fast
+Tools Allowed | All | Your brain and a notepad
+Goal: Accuracy | 90% correct | 100% correct
+Goal: Speed | Any speed | 15 seconds
+  
 Table end.
-Table 13-10 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
-Practice analyzing subnet masks Website, Appendix E
-Review All the Key Topics
+###### Table 13-10 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory tables | | Website
+Practice analyzing subnet masks | | Website, Appendix E
+  
 Table end.
-Table 13-12 Answers to Problems in Table 13-8
+###### Table 13-12 Answers to Problems in Table 13-8
+__|__|__
+--|--|--
 Prefix Binary Mask Decimal
-/18 11111111 11111111 11000000 00000000 255.255.192.0
-/30 11111111 11111111 11111111 11111100 255.255.255.252
-/25 11111111 11111111 11111111 10000000 255.255.255.128
-/16 11111111 11111111 00000000 00000000 255.255.0.0
-/8 11111111 00000000 00000000 00000000 255.0.0.0
-/22 11111111 11111111 11111100 00000000 255.255.252.0
-/15 11111111 11111110 00000000 00000000 255.254.0.0
-/27 11111111 11111111 11111111 11100000 255.255.255.224
+/18 | 11111111 11111111 11000000 00000000 | 255.255.192.0
+/30 | 11111111 11111111 11111111 11111100 | 255.255.255.252
+/25 | 11111111 11111111 11111111 10000000 | 255.255.255.128
+/16 | 11111111 11111111 00000000 00000000 | 255.255.0.0
+/8 | 11111111 00000000 00000000 00000000 | 255.0.0.0
+/22 | 11111111 11111111 11111100 00000000 | 255.255.252.0
+/15 | 11111111 11111110 00000000 00000000 | 255.254.0.0
+/27 | 11111111 11111111 11111111 11100000 | 255.255.255.224
+  
 Table end.
-Table 13-13 Answers to Problems from Earlier in the Chapter
-Problem /P Class N S H 2S 2H – 2
-1 8.1.4.5 255.255.254.0 23 A 8 15 9 32,768 510
-2 130.4.102.1 255.255.255.0 24 B 16 8 8 256 254
-3 199.1.1.100 255.255.255.0 24 C 24 0 8 N/A 254
-4 130.4.102.1 255.255.252.0 22 B 16 6 10 64 1022
-5 199.1.1.100 255.255.255.224 27 C 24 3 5 8 30
+###### Table 13-13 Answers to Problems from Earlier in the Chapter
+__|__|__
+--|--|--
+_ |Problem | /P | Class | N | S | H | 2S | 2H – 2
+1 | 8.1.4.5 255.255.254.0 | 23 | A | 8 | 15 | 9 | 32,768 510
+2 | 130.4.102.1 255.255.255.0 | 24 | B | 16 | 8 | 8 | 256 | 254
+3 | 199.1.1.100 255.255.255.0 | 24 | C | 24 | 0 | 8 | N/A | 254
+4 | 130.4.102.1 255.255.252.0 | 22 | B | 16 | 6 | 10 | 64 | 1022
+5 | 199.1.1.100 255.255.255.224 | 27 | C | 24 | 3 | 5 | 8 | 30
+  
 Table end.
-Table 14-2 Summary of Subnet ID Key Facts
+###### Table 14-2 Summary of Subnet ID Key Facts
 Definition Number that represents the subnet
 Numeric Value First (smallest) number in the subnet
 Literal Synonyms Subnet number, subnet address, prefix, resident subnet
