@@ -399,297 +399,261 @@ dynamic auto | Passively waits to receive trunk negotiation messages, at which p
   
   
 Table end.
-Table 8-3 Expected Trunking Operational Mode Based on the Configured Administrative
-Modes
-Administrative Mode Access Dynamic Auto Trunk Dynamic Desirable
-access Access Access Do Not Use1 Access
-dynamic auto Access Access Trunk Trunk
-trunk Do Not Use1 Trunk Trunk Trunk
-dynamic desirable Access Trunk Trunk Trunk
+****** Table 8-3 Expected Trunking Operational Mode Based on the Configured Administrative Modes
+__|__|__|__|__
+--|--|--|--|--
+Administrative Moden| Access | Dynamic Auto | Trunk | Dynamic Desirable
+access | Access | Access | Do Not Use1 | Access
+dynamic | auto | Access | Access | Trunk | Trunk
+trunk | Do Not Use1 | Trunk | Trunk | Trunk
+dynamic | desirable | Access | Trunk | Trunk | Trunk
+  
+  
 Table end.
-Table 8-4 VLAN Lists in the show interfaces trunk Command
-List
-Position
-Heading Reasons
-First VLANs allowed VLANs 1–4094, minus those removed by the switchport trunk
-allowed command
-Second VLANs allowed
-and active…
-The first list, minus VLANs not defined to the local switch (that
-is, there is not a vlan global configuration command or the switch
-has not learned of the VLAN with VTP), and also minus those
-VLANs in shutdown mode
-Third VLANs in
-spanning tree…
-The second list, minus VLANs in an STP blocking state for that
-interface, and minus VLANs VTP pruned from that trunk
+###### Table 8-4 VLAN Lists in the show interfaces trunk Command
+__|__|__
+--|--|--
+List Position | Heading | Reasons
+First | VLANs allowed | VLANs 1–4094, minus those removed by the switchport trunk allowed command
+Second | VLANs allowed and active… | The first list, minus VLANs not defined to the local switch (that is, there is not a vlan global configuration command or the switch has not learned of the VLAN with VTP), and also minus those VLANs in shutdown mode
+Third | VLANs in spanning tree… | The second list, minus VLANs in an STP blocking state for that interface, and minus VLANs VTP pruned from that trunk  
+  
+  
 Table end.
-Table 8-5 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review config checklists Book, website
-Review command tables Book
-Review memory tables Website
-Do labs Sim Lite, blog
-Watch video Website
+###### Table 8-5 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review config checklists || Book, website
+Review command tables || Book
+Review memory tables || Website
+Do labs || Sim Lite, blog
+Watch video || Website
+  
+  
 Table end.
-Table 8-7 Chapter 8 Configuration Command Reference
-Command Description
-vlan vlan-id Global config command that both creates the VLAN and
-puts the CLI into VLAN configuration mode
-name vlan-name VLAN subcommand that names the VLAN
-[no] shutdown VLAN mode subcommand that enables (no shutdown)
-or disables (shutdown) the VLAN
-[no] shutdown vlan vlan-id Global config command that has the same effect as the
-[no] shutdown VLAN mode subcommands
-vtp mode {server | client |
-transparent | off}
-Global config command that defines the VTP mode
-switchport mode {access |
-dynamic {auto | desirable} | trunk}
-Interface subcommand that configures the trunking
-administrative mode on the interface
-switchport access vlan vlan-id Interface subcommand that statically configures the
-interface into that one VLAN
-switchport trunk encapsulation
-{dot1q | isl | negotiate}
-Interface subcommand that defines which type of
-trunking to use, assuming that trunking is configured or
-negotiated
-switchport trunk native vlan vlanid
-Interface subcommand that defines the native VLAN for
-a trunk port
-switchport nonegotiate Interface subcommand that disables the negotiation of
-VLAN trunking
-switchport voice vlan vlan-id Interface subcommand that defines the voice VLAN on
-a port, meaning that the switch uses 802.1Q tagging for
-frames in this VLAN
+###### Table 8-7 Chapter 8 Configuration Command Reference
+__|__
+--|--
+Command | Description
+vlan vlan-id | Global config command that both creates the VLAN and puts the CLI into VLAN configuration mode
+name vlan-name | VLAN subcommand that names the VLAN 
+(no) shutdown | VLAN mode subcommand that enables (no shutdown) or disables (shutdown) the VLAN
+(no) shutdown vlan vlan-id | Global config command that has the same effect as the (no) shutdown VLAN mode subcommands
+vtp mode {server  client  transparent  off} | Global config command that defines the VTP mode
+switchport mode {access dynamic {auto  desirable}  trunk} | Interface subcommand that configures the trunking administrative mode on the interface switchport access vlan vlan-id | Interface subcommand that statically configures the interface into that one VLAN
+switchport trunk encapsulation {dot1q  isl  negotiate} | Interface subcommand that defines which type of trunking to use, assuming that trunking is configured or negotiated 
+switchport trunk native vlan vlanid | Interface subcommand that defines the native VLAN for a trunk port switchport nonegotiate | Interface subcommand that disables the negotiation of VLAN trunking 
+switchport voice vlan vlan-id | Interface subcommand that defines the voice VLAN on a port, meaning that the switch uses 802.1Q tagging for frames in this VLAN
 switchport trunk allowed vlan
-{add | all | except | remove} vlanlist
-Interface subcommand that defines the list of allowed
+{add  all  except  remove} vlanlist | Interface subcommand that defines the list of allowed
 VLANs
+  
+  
 Table end.
-Table 8-8 Chapter 8 EXEC Command Reference
-Command Description
-show interfaces interface-id
-switchport
-Lists information about any interface regarding
+###### Table 8-8 Chapter 8 EXEC Command Reference
+__|__
+--|--
+Command | Description
+show interfaces interface-id switchport | Lists information about any interface regarding
 administrative settings and operational state
-show interfaces interface-id trunk Lists information about all operational trunks (but no
-other interfaces), including the list of VLANs that can
-be forwarded over the trunk
-show vlan [brief | id vlan-id | name
-vlan-name | summary]
-Lists information about the VLAN
-show vlan [vlan] Displays VLAN information
-show vtp status Lists VTP configuration and status information
+show interfaces interface-id trunk | Lists information about all operational trunks (but no other interfaces), including the list of VLANs that can be forwarded over the trunk
+show vlan (brief  id vlan-id  name vlan-name  summary) | Lists information about the VLAN
+show vlan (vlan) | Displays VLAN information
+show vtp status | Lists VTP configuration and status information
+  
+  
 Table end.
-Table 9-2 Three Classes of Problems Caused by Not Using STP in Redundant LANs
-Problem Description
-Broadcast storms The forwarding of a frame repeatedly on the same links, consuming
-significant parts of the links’ capacities
-MAC table instability The continual updating of a switch’s MAC address table with
-incorrect entries, in reaction to looping frames, resulting in frames
-being sent to the wrong locations
-Multiple frame
-transmission
-A side effect of looping frames in which multiple copies of one frame
-are delivered to the intended host, confusing the host
+###### Table 9-2 Three Classes of Problems Caused by Not Using STP in Redundant LANs
+__|__
+--|--
+Problem | Description
+Broadcast storms | The forwarding of a frame repeatedly on the same links, consuming significant parts of the links’ capacities
+MAC table instability | The continual updating of a switch’s MAC address table with incorrect entries, in reaction to looping frames, resulting in frames being sent to the wrong locations
+Multiple frame transmission | A side effect of looping frames in which multiple copies of one frame are delivered to the intended host, confusing the host
+  
+  
 Table end.
-Table 9-3 STP/RSTP: Reasons for Forwarding or Blocking
-Characterization of Port STP State Description
-All the root switch’s ports Forwarding The root switch is always the designated switch
-on all connected segments.
-Each nonroot switch’s root
-port
-Forwarding The port through which the switch has the least
-cost to reach the root switch (lowest root cost).
-Each LAN’s designated port Forwarding The switch forwarding the Hello on to the
-segment, with the lowest root cost, is the
-designated switch for that segment.
-All other working ports Blocking The port is not used for forwarding user frames,
-nor are any frames received on these interfaces
-considered for forwarding.
+###### Table 9-3 STP/RSTP: Reasons for Forwarding or Blocking
+__|__|__
+--|--|--
+Characterization of Port | STP State | Description
+All the root switch’s ports | Forwarding | The root switch is always the designated switch on all connected segments.
+Each nonroot switch’s root port | Forwarding | The port through which the switch has the least cost to reach the root switch (lowest root cost).
+Each LAN’s designated port | Forwarding | The switch forwarding the Hello on to the segment, with the lowest root cost, is the designated switch for that segment.
+All other working ports | Blocking | The port is not used for forwarding user frames, nor are any frames received on these interfaces considered for forwarding.
+  
+  
 Table end.
-Table 9-4 Fields in the STP Hello BPDU
-Field Description
-Root bridge ID The bridge ID of the switch the sender of this Hello currently believes
-to be the root switch
-Sender’s bridge ID The bridge ID of the switch sending this Hello BPDU
-Sender’s root cost The STP/RSTP cost between this switch and the current root
-Timer values on the
-root switch
-Includes the Hello timer, MaxAge timer, and forward delay timer
+###### Table 9-4 Fields in the STP Hello BPDU
+__|__
+--|--
+Field | Description
+Root bridge ID | The bridge ID of the switch the sender of this Hello currently believes to be the root switch
+Sender’s bridge ID | The bridge ID of the switch sending this Hello BPDU
+Sender’s root cost | The STP/RSTP cost between this switch and the current root
+Timer values on the root switch | Includes the Hello timer, MaxAge timer, and forward delay timer
+  
+  
 Table end.
-Table 9-5 State of Each Interface
-Switch
-Interface
-State Reason Why the Interface Is in Forwarding State
-SW1, Gi0/1 Forwarding The interface is on the root switch, so it becomes the DP on that link.
-SW1, Gi0/2 Forwarding The interface is on the root switch, so it becomes the DP on that link.
-SW2, Gi0/2 Forwarding The root port of SW2.
-SW2, Gi0/1 Forwarding The designated port on the LAN segment to SW3.
-SW3, Gi0/1 Forwarding The root port of SW3.
-SW3, Gi0/2 Blocking Not the root port and not the designated port.
+###### Table 9-5 State of Each Interface
+__|__|__
+--|--|--
+Switch Interface | State | Reason Why the Interface Is in Forwarding State
+SW1, Gi0/1 | Forwarding | The interface is on the root switch, so it becomes the DP on that link.
+SW1, Gi0/2 | Forwarding | The interface is on the root switch, so it becomes the DP on that link.
+SW2, Gi0/2 | Forwarding | The root port of SW2.
+SW2, Gi0/1 | Forwarding | The designated port on the LAN segment to SW3.
+SW3, Gi0/1 | Forwarding | The root port of SW3.
+SW3, Gi0/2 | Blocking | Not the root port and not the designated port.
+  
 Table end.
-Table 9-6 Default Port Costs According to IEEE
-Ethernet Speed IEEE Cost: 1998 (and Before) IEEE Cost: 2004 (and After)
-10 Mbps 100 2,000,000
-100 Mbps 19 200,000
-1 Gbps 4 20,000
-10 Gbps 2 2000
-100 Gbps N/A 200
-1 Tbps N/A 20
+##### Table 9-6 Default Port Costs According to IEEE
+__|__|__
+--|--|--
+Ethernet Speed | IEEE Cost: 1998 (and Before) | IEEE Cost: 2004 (and After)
+10 Mbps | 100 | 2,000,000
+100 Mbps | 19 | 200,000
+1 Gbps | 4 | 20,000
+10 Gbps | 2 | 2000
+100 Gbps | N/A | 200
+1 Tbps | N/A | 20
+  
 Table end.
-Table 9-7 STP Timers
-Timer Default
-Value
-Description
-Hello 2 seconds The time period between Hellos created by the root.
-MaxAge 10 times
-Hello
-How long any switch should wait, after ceasing to hear Hellos,
-before trying to change the STP topology.
-Forward
-delay
-15 seconds Delay that affects the process that occurs when an interface
-changes from blocking state to forwarding state. A port stays in an
-interim listening state, and then an interim learning state, for the
-number of seconds defined by the forward delay timer.
+###### Table 9-7 STP Timers
+__|__|__
+--|--|--
+Timer | Default Value | Description
+Hello | 2 seconds | The time period between Hellos created by the root.
+MaxAge | 10 times Hello | How long any switch should wait, after ceasing to hear Hellos, before trying to change the STP topology.
+Forward delay | 15 seconds Delay that affects the process that occurs when an interface changes from blocking state to forwarding state. A port stays in an interim listening state, and then an interim learning state, for the number of seconds defined by the forward delay timer.
+  
 Table end.
-Table 9-8 IEEE STP (Not RSTP) States
-State Forwards Data
-Frames?
-Learns MACs Based on
-Received Frames?
-Transitory or
-Stable State?
-Blocking No No Stable
-Listening No No Transitory
-Learning No Yes Transitory
-Forwarding Yes Yes Stable
-Disabled No No Stable
+###### Table 9-8 IEEE STP (Not RSTP) States
+__|__|__|__
+--|--|--|--
+State | Forwards Data Frames? | Learns MACs Based on Received Frames? | Transitory or Stable State?
+Blocking | No | No | Stable
+Listening | No | No | Transitory
+Learning | No | Yes | Transitory
+Forwarding | Yes | Yes | Stable
+Disabled | No | No | Stable
+  
 Table end.
-Table 9-9 Port Roles in RSTP
-Function Port Role
-Port that begins a nonroot switch’s best path to the root Root port
-Port that replaces the root port when the root port fails Alternate port
-Switch port designated to forward onto a collision domain Designated port
-Port that replaces a designated port when a designated port fails Backup port
-Port that is administratively disabled Disabled port
+###### Table 9-9 Port Roles in RSTP
+__|__
+--|--
+Function | Port Role
+Port that begins a nonroot switch’s best path to the root | Root port
+Port that replaces the root port when the root port fails | Alternate port
+Switch port designated to forward onto a collision domain | Designated port
+Port that replaces a designated port when a designated port fails | Backup port
+Port that is administratively disabled | Disabled port
+  
 Table end.
-Table 9-10 Port States Compared: STP and RSTP
-Function STP State RSTP State
-Port is administratively disabled Disabled Discarding
-Stable state that ignores incoming data frames and is not used
-to forward data frames
-Blocking Discarding
-Interim state without MAC learning and without forwarding Listening Not used
-Interim state with MAC learning and without forwarding Learning Learning
-Stable state that allows MAC learning and forwarding of data
-frames
-Forwarding Forwarding
+###### Table 9-10 Port States Compared: STP and RSTP
+__|__|__
+--|--|--
+Function | STP State | RSTP State
+Port is administratively disabled | Disabled | Discarding
+Stable state that ignores incoming data frames and is not used to forward data frames | Blocking | Discarding
+Interim state without MAC learning and without forwarding | Listening | Not used
+Interim state with MAC learning and without forwarding Learning Learning Stable state that allows MAC learning and forwarding of data frames | Forwarding | Forwarding
+  
 Table end.
-Table 9-11 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
+###### Table 9-11 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review memory tables || Website
+  
 Table end.
-Table 10-2 STP Standards and Configuration Options
-Name Based on STP
-or RSTP?
-Trees Original IEEE
-Standard
-Config Parameter
-STP STP 1 (CST) 802.1D N/A
-PVST+ STP 1/VLAN 802.1D pvst
-RSTP RSTP 1 (CST) 802.1w N/A
-Rapid PVST+ RSTP 1/VLAN 802.1w rapid-pvst
-MSTP RSTP 1 or more* 802.1s mst
+###### Table 10-2 STP Standards and Configuration Options
+__|__|__|__|__
+--|--|--|--|--
+Name | Based on STP or RSTP? | Trees | Original IEEE Standard | Config Parameter
+STP | STP | 1 (CST) | 802.1D | N/A
+PVST+ | STP | 1/VLAN | 802.1D | pvst
+RSTP | RSTP | 1 (CST) | 802.1w | N/A
+Rapid | PVST+ | RSTP 1/VLAN | 802.1w | rapid-pvst
+MSTP | RSTP | 1 or more1 | 802.1s | mst
+  
 Table end.
-Table 10-3 STP/RSTP Configurable Priority Values
-Decimal Value 16-bit Binary Equivalent Decimal Value 16-bit Binary Equivalent
-0 0000 0000 0000 0000 32768 1000 0000 0000 0000
-4096 0001 0000 0000 0000 36864 1001 0000 0000 0000
-8192 0010 0000 0000 0000 40960 1010 0000 0000 0000
-12288 0011 0000 0000 0000 45056 1011 0000 0000 0000
-16384 0100 0000 0000 0000 49152 1100 0000 0000 0000
-20480 0101 0000 0000 0000 53248 1101 0000 0000 0000
-24576 0110 0000 0000 0000 57344 1110 0000 0000 0000
-28672 0111 0000 0000 0000 61440 1111 0000 0000 0000
+###### Table 10-3 STP/RSTP Configurable Priority Values
+__|__|__|__
+--|--|--|--
+Decimal Value | 16-bit Binary Equivalent | Decimal Value | 16-bit Binary Equivalent
+0 | 0000 0000 0000 0000 | 32768 | 1000 0000 0000 0000
+4096 | 0001 0000 0000 0000 | 36864 | 1001 0000 0000 0000
+8192 | 0010 0000 0000 0000 | 40960 | 1010 0000 0000 0000
+12288 | 0011 0000 0000 0000 | 45056 | 1011 0000 0000 0000
+16384 | 0100 0000 0000 0000 | 49152 | 1100 0000 0000 0000
+20480 | 0101 0000 0000 0000 | 53248 | 1101 0000 0000 0000
+24576 | 0110 0000 0000 0000 | 57344 | 1110 0000 0000 0000
+28672 | 0111 0000 0000 0000 | 61440 | 1111 0000 0000 0000
+  
 Table end.
-Table 10-4 EtherChannel Load Distribution Methods
-Configuration Keyword Math Uses… Layer
-src-mac Source MAC address 2
-dst-mac Destination MAC address 2
-src-dst-mac Both source and destination MAC 2
-src-ip Source IP address 3
-dst-ip Destination IP address 3
-src-dst-ip Both source and destination IP 3
-src-port Source TCP or UDP port 4
-dst-port Destination TCP or UDP port 4
-src-dst-port Both source and destination TCP or UDP port 4
+###### Table 10-4 EtherChannel Load Distribution Methods
+__|__|__
+--|--|--
+Configuration Keyword | Math Uses… | Layer
+src-mac | Source MAC address | 2
+dst-mac | Destination MAC address | 2
+src-dst-mac | Both source and destination MAC | 2
+src-ip | Source IP address | 3
+dst-ip | Destination IP address | 3
+src-dst-ip | Both source and destination IP | 3
+src-port | Source TCP or UDP port | 4
+dst-port | Destination TCP or UDP port | 4
+src-dst-port | Both source and destination TCP or UDP port | 4
+  
 Table end.
-Table 10-5 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review config checklists Book, website
-Review command tables Book
-Review memory tables Website
-Do labs Blog
+###### Table 10-5 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics || Book, website
+Review key terms || Book, website
+Answer DIKTA questions || Book, PTP
+Review config checklists || Book, website
+Review command tables || Book
+Review memory tables || Website
+Do labs || Blog
+  
 Table end.
-Table 10-7 Chapter 10 Configuration Command Reference
-Command Description
-spanning-tree mode {pvst | rapid-pvst
-| mst}
-Global configuration command to set the STP mode.
-spanning-tree [vlan vlan-number]
-root primary
-Global configuration command that changes this
-switch to the root switch. The switch’s priority is
-changed to the lower of either 24,576 or 4096 less
-than the priority of the current root bridge when the
-command was issued.
-spanning-tree [vlan vlan-number]
-root secondary
-Global configuration command that sets this switch’s
-STP base priority to 28,672.
-spanning-tree vlan vlan-id priority
-priority
-Global configuration command that changes the
-bridge priority of this switch for the specified VLAN.
-spanning-tree [vlan vlan-number]
-cost cost
-Interface subcommand that changes the STP cost to
-the configured value.
-spanning-tree [vlan vlan-number]
-port-priority priority
-Interface subcommand that changes the STP port
-priority in that VLAN (0 to 240, in increments of 16).
+###### Table 10-7 Chapter 10 Configuration Command Reference
+__|__
+--|--
+Command | Description
+spanning-tree mode {pvst rapid-pvst mst} | Global configuration command to set the STP mode.
+spanning-tree (vlan vlan-number) root primary | Global configuration command that changes this switch to the root switch. The switch’s priority is changed to the lower of either 24,576 or 4096 less than the priority of the current root bridge when the command was issued.
+spanning-tree (vlan vlan-number) root secondary | Global configuration command that sets this switch’s STP base priority to 28,672.
+spanning-tree vlan vlan-id priority priority | Global configuration command that changes the bridge priority of this switch for the specified VLAN.
+spanning-tree (vlan vlan-number) cost cost | Interface subcommand that changes the STP cost to the configured value.
+spanning-tree (vlan vlan-number) port-priority priority Interface subcommand that changes the STP port priority in that VLAN (0 to 240, in increments of 16).
 channel-group channel-groupnumber
-mode {auto | desirable | active
-| passive | on}
-Interface subcommand that enables EtherChannel on
-the interface.
+mode {auto  desirable  active passive  on} | Interface subcommand that enables EtherChannel on the interface.
+  
 Table end.
-Table 10-8 Chapter 10 EXEC Command Reference
-Command Description
-show spanning-tree Lists details about the state of STP on the switch,
-including the state of each port.
-show spanning-tree vlan vlan-id Lists STP information for the specified VLAN.
-show etherchannel [channel-groupnumber]
-{brief | detail | port | portchannel
-| summary}
-Lists information about the state of EtherChannels on
-this switch.
+###### Table 10-8 Chapter 10 EXEC Command Reference
+__|__
+--|--
+Command | Description
+show spanning-tree | Lists details about the state of STP on the switch, including the state of each port.
+show spanning-tree vlan vlan-id | Lists STP information for the specified VLAN.
+show etherchannel (channel-groupnumber)
+{brief  detail  port  portchannel summary} | Lists information about the state of EtherChannels on this switch.
+  
 Table end.
-Table 11-2 RFC 1918 Private Address Space
+###### Table 11-2 RFC 1918 Private Address Space
+__|__|__
+--|--|--
 Class of Networks Private IP Networks Number of Networks
 A 10.0.0.0 1
 B 172.16.0.0 through 172.31.0.0 16
