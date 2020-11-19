@@ -636,9 +636,8 @@ spanning-tree (vlan vlan-number) root primary | Global configuration command tha
 spanning-tree (vlan vlan-number) root secondary | Global configuration command that sets this switch’s STP base priority to 28,672.
 spanning-tree vlan vlan-id priority priority | Global configuration command that changes the bridge priority of this switch for the specified VLAN.
 spanning-tree (vlan vlan-number) cost cost | Interface subcommand that changes the STP cost to the configured value.
-spanning-tree (vlan vlan-number) port-priority priority Interface subcommand that changes the STP port priority in that VLAN (0 to 240, in increments of 16).
-channel-group channel-groupnumber
-mode {auto  desirable  active passive  on} | Interface subcommand that enables EtherChannel on the interface.
+spanning-tree (vlan vlan-number) port-priority priority | Interface subcommand that changes the STP port priority in that VLAN (0 to 240, in increments of 16).
+channel-group channel-groupnumber mode {auto  desirable  active passive  on} | Interface subcommand that enables EtherChannel on the interface.
   
 Table end.
 ###### Table 10-8 Chapter 10 EXEC Command Reference
@@ -647,35 +646,38 @@ __|__
 Command | Description
 show spanning-tree | Lists details about the state of STP on the switch, including the state of each port.
 show spanning-tree vlan vlan-id | Lists STP information for the specified VLAN.
-show etherchannel (channel-groupnumber)
-{brief  detail  port  portchannel summary} | Lists information about the state of EtherChannels on this switch.
+show etherchannel (channel-groupnumber) {brief  detail  port  portchannel summary} | Lists information about the state of EtherChannels on this switch.
   
 Table end.
 ###### Table 11-2 RFC 1918 Private Address Space
 __|__|__
 --|--|--
-Class of Networks Private IP Networks Number of Networks
-A 10.0.0.0 1
-B 172.16.0.0 through 172.31.0.0 16
-C 192.168.0.0 through 192.168.255.0 256
+Class of Networks | Private IP Networks | Number of Networks
+A | 10.0.0.0 | 1
+B | 172.16.0.0 through 172.31.0.0 | 16
+C | 192.168.0.0 through 192.168.255.0 | 256
+  
 Table end.
-Table 11-3 First 10 Subnets, Plus the Last Few, from 172.16.0.0, 255.255.255.0
-Subnet Number IP Addresses Broadcast Address
-172.16.0.0 172.16.0.1 – 172.16.0.254 172.16.0.255
-172.16.1.0 172.16.1.1 – 172.16.1.254 172.16.1.255
-172.16.2.0 172.16.2.1 – 172.16.2.254 172.16.2.255
-172.16.3.0 172.16.3.1 – 172.16.3.254 172.16.3.255
-172.16.4.0 172.16.4.1 – 172.16.4.254 172.16.4.255
-172.16.5.0 172.16.5.1 – 172.16.5.254 172.16.5.255
-172.16.6.0 172.16.6.1 – 172.16.6.254 172.16.6.255
-172.16.7.0 172.16.7.1 – 172.16.7.254 172.16.7.255
-172.16.8.0 172.16.8.1 – 172.16.8.254 172.16.8.255
-172.16.9.0 172.16.9.1 – 172.16.9.254 172.16.9.255
+###### Table 11-3 First 10 Subnets, Plus the Last Few, from 172.16.0.0, 255.255.255.0
+__|__|__
+--|--|--
+Subnet Number | IP Addresses | Broadcast Address
+172.16.0.0 | 172.16.0.1 – 172.16.0.254 | 172.16.0.255
+172.16.1.0 | 172.16.1.1 – 172.16.1.254 | 172.16.1.255
+172.16.2.0 | 172.16.2.1 – 172.16.2.254 | 172.16.2.255
+172.16.3.0 | 172.16.3.1 – 172.16.3.254 | 172.16.3.255
+172.16.4.0 | 172.16.4.1 – 172.16.4.254 | 172.16.4.255
+172.16.5.0 | 172.16.5.1 – 172.16.5.254 | 172.16.5.255
+172.16.6.0 | 172.16.6.1 – 172.16.6.254 | | 172.16.6.255
+172.16.7.0 | 172.16.7.1 – 172.16.7.254 | 172.16.7.255
+172.16.8.0 | 172.16.8.1 – 172.16.8.254 | 172.16.8.255
+172.16.9.0 | 172.16.9.1 – 172.16.9.254 | 172.16.9.255
 Skipping many…
-172.16.254.0 172.16.254.1 – 172.16.254.254 172.16.254.255
-172.16.255.0 172.16.255.1 – 172.16.255.254 172.16.255.255
+172.16.254.0 | 172.16.254.1 – 172.16.254.254 | 172.16.254.255
+172.16.255.0 | 172.16.255.1 – 172.16.255.254 | 172.16.255.255
+  
 Table end.
-Table 11-4 Chapter Review Tracking
+###### Table 11-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
