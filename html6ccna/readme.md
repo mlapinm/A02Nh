@@ -2,7 +2,7 @@
 [part001](b001part.md)  
 [part006](b006part.txt)  
 [links](b202links.md)  
-[]()  
+[Figures](../html6ccna2/x151c.md)  
 []()  
 []()  
 []()  
