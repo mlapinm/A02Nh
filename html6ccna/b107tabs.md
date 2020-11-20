@@ -908,122 +908,161 @@ _ |Problem | /P | Class | N | S | H | 2S | 2H – 2
   
 Table end.
 ###### Table 14-2 Summary of Subnet ID Key Facts
-Definition Number that represents the subnet
-Numeric Value First (smallest) number in the subnet
-Literal Synonyms Subnet number, subnet address, prefix, resident subnet
-Common-Use Synonyms Network, network ID, network number, network address
-Typically Seen In… Routing tables, documentation
+__|__
+--|--
+Definition | Number that represents the subnet
+Numeric Value | First (smallest) number in the subnet
+Literal Synonyms | Subnet number, subnet address, prefix, resident subnet
+Common-Use Synonyms | Network, network ID, network number, network address
+Typically Seen In… | Routing tables, documentation
+  
 Table end.
-Table 14-3 Summary of Subnet Broadcast Address Key Facts
-Definition A reserved number in each subnet that, when used as the
-destination address of a packet, causes the device to forward the
-packet to all hosts in that subnet
-Numeric Value Last (highest) number in the subnet
-Literal Synonyms Directed broadcast address
-Broader-Use Synonyms Network broadcast
-Typically Seen In… In calculations of the range of addresses in a subnet
+###### Table 14-3 Summary of Subnet Broadcast Address Key Facts
+__|__
+--|--
+Definition | A reserved number in each subnet that, when used as the destination address of a packet, causes the device to forward the packet to all hosts in that subnet
+Numeric Value | Last (highest) number in the subnet
+Literal Synonyms | Directed broadcast address
+Broader-Use Synonyms | Network broadcast
+Typically Seen In… | In calculations of the range of addresses in a subnet
+  
 Table end.
-Table 14-4 Subnet Analysis for Subnet with Address 8.1.4.5, Mask 255.255.0.0
-Prefix Length /16 11111111 11111111 00000000 00000000
-Address 8.1.4.5 00001000 00000001 00000100 00000101
-Subnet ID 8.1.0.0 00001000 00000001 00000000 00000000
-Broadcast Address 8.1.255.255 00001000 00000001 11111111 11111111
+###### Table 14-4 Subnet Analysis for Subnet with Address 8.1.4.5, Mask 255.255.0.0
+__|__|__
+--|--|--
+Prefix Length | /16 | 11111111 11111111 00000000 00000000
+Address | 8.1.4.5 | 00001000 00000001 00000100 00000101
+Subnet ID | 8.1.0.0 | 00001000 00000001 00000000 00000000
+Broadcast Address | 8.1.255.255 | 00001000 00000001 11111111 11111111
+  
 Table end.
 Table 14-5 Subnet Analysis for Subnet with Address 130.4.102.1, Mask 255.255.255.0
-Prefix Length /24 11111111 11111111 11111111 00000000
-Address 130.4.102.1 10000010 00000100 01100110 00000001
-Subnet ID 130.4.102.0 10000010 00000100 01100110 00000000
-Broadcast Address 130.4.102.255 10000010 00000100 01100110 11111111
+__|__|__
+--|--|--
+Prefix Length | /24 | 11111111 11111111 11111111 00000000
+Address | 130.4.102.1 | 10000010 00000100 01100110 00000001
+Subnet ID | 130.4.102.0 | 10000010 00000100 01100110 00000000
+Broadcast Address | 130.4.102.255 | 10000010 00000100 01100110 11111111
+  
 Table end.
-Table 14-6 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.0
-Prefix Length /24 11111111 11111111 11111111 00000000
-Address 199.1.1.100 11000111 00000001 00000001 01100100
-Subnet ID 199.1.1.0 11000111 00000001 00000001 00000000
-Broadcast Address 199.1.1.255 11000111 00000001 00000001 11111111
+###### Table 14-6 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.0
+Prefix Length | /24 | 11111111 11111111 11111111 00000000
+Address | 199.1.1.100 | 11000111 00000001 00000001 01100100
+Subnet ID | 199.1.1.0 | 11000111 00000001 00000001 00000000
+Broadcast Address | 199.1.1.255 | 11000111 00000001 00000001 11111111
+  
 Table end.
-Table 14-7 Subnet Analysis for Subnet with Address 130.4.102.1, Mask 255.255.252.0
-Prefix Length /22 11111111 11111111 11111100 00000000
-Address 130.4.102.1 10000010 00000100 01100110 00000001
-Subnet ID 130.4.100.0 10000010 00000100 01100100 00000000
-Broadcast Address 130.4.103.255 10000010 00000100 01100111 11111111
+###### Table 14-7 Subnet Analysis for Subnet with Address 130.4.102.1, Mask 255.255.252.0
+__|__|__
+--|--|--
+Prefix Length | /22 | 11111111 11111111 11111100 00000000
+Address | 130.4.102.1 | 10000010 00000100 01100110 00000001
+Subnet ID | 130.4.100.0 | 10000010 00000100 01100100 00000000
+Broadcast Address | 130.4.103.255 | 10000010 00000100 01100111 11111111
+  
 Table end.
-Table 14-8 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.224
-Prefix Length /27 11111111 11111111 11111111 11100000
-Address 199.1.1.100 11000111 00000001 00000001 01100100
-Subnet ID 199.1.1.96 11000111 00000001 00000001 01100000
-Broadcast Address 199.1.1.127 11000111 00000001 00000001 01111111
+###### Table 14-8 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.224
+__|__|__
+--|--|--
+Prefix Length | /27 | 11111111 11111111 11111111 11100000
+Address | 199.1.1.100 | 11000111 00000001 00000001 01100100
+Subnet ID | 199.1.1.96 | 11000111 00000001 00000001 01100000
+Broadcast Address | 199.1.1.127 | 11000111 00000001 00000001 01111111
+  
 Table end.
-Table 14-9 Practice Problems: Find Subnet ID and Broadcast Address, Easy Masks
-IP Address Mask Subnet ID Broadcast Address
-1 10.77.55.3 255.255.255.0
-2 172.30.99.4 255.255.255.0
-3 192.168.6.54 255.255.255.0
-4 10.77.3.14 255.255.0.0
-5 172.22.55.77 255.255.0.0
-6 1.99.53.76 255.0.0.0
+###### Table 14-9 Practice Problems: Find Subnet ID and Broadcast Address, Easy Masks
+__|__|__|__|__
+--|--|--|--|--
+_ | IP Address | Mask | Subnet ID | Broadcast Address
+1 | 10.77.55.3 | 255.255.255.0
+2 | 172.30.99.4 | 255.255.255.0
+3 | 192.168.6.54 | 255.255.255.0
+4 | 10.77.3.14 | 255.255.0.0
+5 | 172.22.55.77 | 255.255.0.0
+6 | 1.99.53.76 | 255.0.0.0
+  
 Table end.
-Table 14-10 Practice Problems: Find Subnet ID, Difficult Masks
-Problem IP Address Mask Subnet ID
-1 10.77.55.3 255.248.0.0
-2 172.30.99.4 255.255.192.0
-3 192.168.6.54 255.255.255.252
-4 10.77.3.14 255.255.128.0
-5 172.22.55.77 255.255.254.0
-6 1.99.53.76 255.255.255.248
+###### Table 14-10 Practice Problems: Find Subnet ID, Difficult Masks
+__|__|__|__
+--|--|--|--
+Problem | IP Address | Mask | Subnet ID
+1 | 10.77.55.3 | 255.248.0.0
+2 | 172.30.99.4 | 255.255.192.0
+3 | 192.168.6.54 | 255.255.255.252
+4 | 10.77.3.14 | 255.255.128.0
+5 | 172.22.55.77 | 255.255.254.0
+6 | 1.99.53.76 | 255.255.255.248
+  
 Table end.
-Table 14-11 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
-Before Moving to the Next Chapter Before Taking the Exam
-Focus On… Learning how Being correct and fast
-Tools Allowed All Your brain and a notepad
-Goal: Accuracy 90% correct 100% correct
-Goal: Speed Any speed 20–30 seconds
+###### Table 14-11 Keep-Reading and Take-Exam Goals for This Chapter’s Topics
+__|__|__
+--|--|--
+_ | Before Moving to the Next Chapter | Before Taking the Exam
+Focus On… | Learning how | Being correct and fast
+Tools Allowed | All | Your brain and a notepad
+Goal: Accuracy | 90% correct | 100% correct
+Goal: Speed | Any speed | 20–30 seconds
+  
 Table end.
-Table 14-12 Reference Table: DDN Mask Values, Binary Equivalent, Magic Numbers,
-and Prefixes
-Prefix, interesting octet 2 /9 /10 /11 /12 /13 /14 /15 /16
-Prefix, interesting octet 3 /17 /18 /19 /20 /21 /22 /23 /24
-Prefix, interesting octet 4 /25 /26 /27 /28 /29 /30
-Magic number 128 64 32 16 8 4 2 1
-DDN mask in the interesting octet 128 192 224 240 248 252 254 255
+###### Table 14-12 Reference Table: DDN Mask Values, Binary Equivalent, Magic Numbers, and Prefixes
+__|__|__|__|__|__|__|__|__
+--|--|--|--|--|--|--|--|--
+Prefix, interesting octet 2 | /9 | /10 | /11 | /12 | /13 | /14 | /15 | /16
+Prefix, interesting octet 3 | /17 | /18 | /19 | /20 | /21 | /22 | /23 | /24
+Prefix, interesting octet 4 | /25 | /26 | /27 | /28 | /29 | /30
+Magic number | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1
+DDN mask in the interesting octet | 128 | 192 | 224 | 240 | 248 | 252 | 254 | 255
+   
 Table end.
-Table 14-13 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
-Practice mask analysis Website, Appendix F
-Practice analyzing existing subnets Website, Appendix F
+###### Table 14-13 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory tables | | Website
+Practice mask analysis | | Website, Appendix F
+Practice analyzing existing subnets | | Website, Appendix F
+  
 Table end.
-Table 14-15 Answers to Problems in Table 14-9
-IP Address Mask Subnet ID Broadcast Address
-1 10.77.55.3 255.255.255.0 10.77.55.0 10.77.55.255
-2 172.30.99.4 255.255.255.0 172.30.99.0 172.30.99.255
-3 192.168.6.54 255.255.255.0 192.168.6.0 192.168.6.255
-4 10.77.3.14 255.255.0.0 10.77.0.0 10.77.255.255
-5 172.22.55.77 255.255.0.0 172.22.0.0 172.22.255.255
-6 1.99.53.76 255.0.0.0 1.0.0.0 1.255.255.255
+###### Table 14-15 Answers to Problems in Table 14-9
+__|__|__|__|__
+--|--|--|--|--
+_ |IP Address | Mask | Subnet ID | Broadcast Address
+1 | 10.77.55.3 | 255.255.255.0 | 10.77.55.0 | 10.77.55.255
+2 | 172.30.99.4 | 255.255.255.0 | 172.30.99.0 | 172.30.99.255
+3 | 192.168.6.54 | 255.255.255.0 | 192.168.6.0 | 192.168.6.255
+4 | 10.77.3.14 | 255.255.0.0 | 10.77.0.0 | 10.77.255.255
+5 | 172.22.55.77 | 255.255.0.0 | 172.22.0.0 | 172.22.255.255
+6 | 1.99.53.76 | 255.0.0.0 | 1.0.0.0 | 1.255.255.255
+  
 Table end.
-Table 14-16 Answers to Problems in Table 14-10
-IP Address Mask Subnet ID
-1 10.77.55.3 255.248.0.0 10.72.0.0
-2 172.30.99.4 255.255.192.0 172.30.64.0
-3 192.168.6.54 255.255.255.252 192.168.6.52
-4 10.77.3.14 255.255.128.0 10.77.0.0
-5 172.22.55.77 255.255.254.0 172.22.54.0
-6 1.99.53.76 255.255.255.248 1.99.53.72
+###### Table 14-16 Answers to Problems in Table 14-10
+__|__|__|__
+--|--|--|--
+_ |IP Address | Mask | Subnet ID
+1 | 10.77.55.3 | 255.248.0.0 | 10.72.0.0
+2 | 172.30.99.4 | 255.255.192.0 | 172.30.64.0
+3 | 192.168.6.54 | 255.255.255.252 | 192.168.6.52
+4 | 10.77.3.14 | 255.255.128.0 | 10.77.0.0
+5 | 172.22.55.77 | 255.255.254.0 | 172.22.54.0
+6 | 1.99.53.76 | 255.255.255.248 | 1.99.53.72
+  
 Table end.
-Table 14-17 Answers to Problems in the Section “Subnet Broadcast Address Practice
-Problems”
-Subnet ID Mask Broadcast Address
-1 10.72.0.0 255.248.0.0 10.79.255.255
-2 172.30.64.0 255.255.192.0 172.30.127.255
-3 192.168.6.52 255.255.255.252 192.168.6.55
-4 10.77.0.0 255.255.128.0 10.77.127.255
-5 172.22.54.0 255.255.254.0 172.22.55.255
-6 1.99.53.72 255.255.255.248 1.99.53.79
+###### Table 14-17 Answers to Problems in the Section “Subnet Broadcast Address Practice Problems”
+__|__|__
+--|--|--
+_ | Subnet ID | Mask | Broadcast Address
+1 | 10.72.0.0 | 255.248.0.0 | 10.79.255.255
+2 | 172.30.64.0 | 255.255.192.0 | 172.30.127.255
+3 | 192.168.6.52 | 255.255.255.252 | 192.168.6.55
+4 | 10.77.0.0 | 255.255.128.0 | 10.77.127.255
+5 | 172.22.54.0 | | 255.255.254.0 | 172.22.55.255
+6 | 1.99.53.72 | 255.255.255.248 | 1.99.53.79
+  
 Table end.
-Table 15-2 Interface Status Codes and Their Meanings
+###### Table 15-2 Interface Status Codes and Their Meanings
 Name Location General Meaning
 Line
 status
