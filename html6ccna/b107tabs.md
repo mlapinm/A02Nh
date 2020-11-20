@@ -1327,233 +1327,184 @@ network 10.1.13.1 0.0.0.0 | Match one address: 10.1.13.1 | G0/1/0
   
 Table end.
 ###### Table 20-3 Faster Interfaces with Equal OSPF Costs
-Interface Interface Default
-Bandwidth (Kbps)
-Formula (Kbps) OSPF Cost
-Serial 1544 Kbps 100,000 / 1544 64
-Ethernet 10,000 Kbps 100,000 / 10,000 10
-Fast Ethernet 100,000 Kbps 100,000/100,000 1
-Gigabit Ethernet 1,000,000 Kbps 100,000/1,000,000 1
-10 Gigabit Ethernet 10,000,000 Kbps 100,000/10,000,000 1
-100 Gigabit Ethernet 100,000,000 Kbps 100,000/100,000,000 1
+__|__|__|__
+--|--|--|--
+Interface | Interface Default Bandwidth (Kbps) | Formula (Kbps) | OSPF Cost
+Serial | 1544 Kbps | 100,000 / 1544 | 64
+Ethernet | 10,000 Kbps | 100,000 / 10,000 | 10
+Fast Ethernet | 100,000 Kbps | 100,000/100,000 | 1
+Gigabit Ethernet | 1,000,000 Kbps | 100,000/1,000,000 | 1
+10 Gigabit Ethernet | 10,000,000 Kbps | 100,000/10,000,000 | 1
+100 Gigabit Ethernet | 100,000,000 Kbps | 100,000/100,000,000 | 1
+  
 Table end.
 ###### Table 20-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used:
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review Config Checklists Book, website
-Review command tables Book
-Do labs Blog
-Table end.
-###### Table 20-5 Key Topics for Chapter 20
-Key Terms You Should Know
-reference bandwidth, interface bandwidth, maximum paths
-Command References
-Tables 20-6 and 20-7 list configuration and verification commands used in this chapter. As an
-easy review exercise, cover the left column in a table, read the right column, and try to recall
-the command without looking. Then repeat the exercise, covering the right column, and try
-to recall what the command does.
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used:
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review Config Checklists | | Book, website
+Review command tables | | Book
+Do labs | | Blog
+  
 Table end.
 ###### Table 20-6 Chapter 20 Configuration Command Reference
-Command Description
-router ospf process-id Router subcommand that enters OSPF configuration mode
-for the listed process.
-network ip-address wildcardmask
-area area-id
-Router subcommand that enables OSPF on interfaces
-matching the address/wildcard combination and sets the
-OSPF area.
-ip ospf process-id area areanumber
-Interface subcommand to enable OSPF on the interface and
-to assign the interface to a specific OSPF area.
-||||||||||||||||||||
-||||||||||||||||||||
-496 CCNA 200-301 Official Cert Guide, Volume 1
-Command Description
-ip ospf cost interface-cost Interface subcommand that sets the OSPF cost associated
-with the interface.
-bandwidth bandwidth Interface subcommand that directly sets the interface
-bandwidth (Kbps).
-auto-cost referencebandwidth
-number
-Router subcommand that tells OSPF the numerator in the
-Reference_bandwidth / Interface_bandwidth formula used to
-calculate the OSPF cost based on the interface bandwidth.
-router-id id OSPF command that statically sets the router ID.
-interface loopback number Global command to create a loopback interface and to
-navigate to interface configuration mode for that interface.
-maximum-paths number-ofpaths
-Router subcommand that defines the maximum number of
-equal-cost routes that can be added to the routing table.
-passive-interface type
-number
-Router subcommand that makes the interface passive to
-OSPF, meaning that the OSPF process will not form neighbor
-relationships with neighbors reachable on that interface.
-passive-interface default OSPF subcommand that changes the OSPF default for
-interfaces to be passive instead of active (not passive).
-no passive-interface type
-number
-OSPF subcommand that tells OSPF to be active (not passive)
-on that interface or subinterface.
-default-information originate
-(always)
-OSPF subcommand to tell OSPF to create and advertise an
-OSPF default route, as long as the router has some default
-route (or to always advertise a default, if the always option is
-configured).
+__|__
+--|--
+Command | Description
+router ospf process-id | Router subcommand that enters OSPF configuration mode for the listed process.
+network ip-address wildcardmask area area-id | Router subcommand that enables OSPF on interfaces matching the address/wildcard combination and sets the OSPF area.
+ip ospf process-id area areanumber | Interface subcommand to enable OSPF on the interface and to assign the interface to a specific OSPF area.
+ip ospf cost interface-cost | Interface subcommand that sets the OSPF cost associated with the interface.
+bandwidth bandwidth | Interface subcommand that directly sets the interface bandwidth (Kbps).
+auto-cost referencebandwidth number | Router subcommand that tells OSPF the numerator in the Reference_bandwidth / Interface_bandwidth formula used to calculate the OSPF cost based on the interface bandwidth.
+router-id id | OSPF command that statically sets the router ID.
+interface loopback number | Global command to create a loopback interface and to navigate to interface configuration mode for that interface.
+maximum-paths number-ofpaths | Router subcommand that defines the maximum number of equal-cost routes that can be added to the routing table.
+passive-interface type number | Router subcommand that makes the interface passive to OSPF, meaning that the OSPF process will not form neighbor relationships with neighbors reachable on that interface.
+passive-interface default | OSPF subcommand that changes the OSPF default for interfaces to be passive instead of active (not passive).
+no passive-interface type number | OSPF subcommand that tells OSPF to be active (not passive) on that interface or subinterface.
+default-information originate (always) | OSPF subcommand to tell OSPF to create and advertise an OSPF default route, as long as the router has some default route (or to always advertise a default, if the always option is configured).
+  
 Table end.
 ###### Table 20-7 Chapter 20 EXEC Command Reference
-Command Description
-show ip ospf Lists information about the OSPF process running on the
-router, including the OSPF router ID, areas to which the router
-connects, and the number of interfaces in each area.
-show ip ospf interface brief Lists the interfaces on which the OSPF protocol is enabled
-(based on the network commands), including passive
-interfaces.
-show ip ospf interface (type
-number)
-Lists a long section of settings, status, and counters for OSPF
-operation on all interfaces, or on the listed interface, including
-the Hello and Dead Timers.
-show ip protocols Shows routing protocol parameters and current timer values.
+__|__
+--|--
+Command | Description
+show ip ospf | Lists information about the OSPF process running on the router, including the OSPF router ID, areas to which the router connects, and the number of interfaces in each area.
+show ip ospf interface brief | Lists the interfaces on which the OSPF protocol is enabled (based on the network commands), including passive interfaces.
+show ip ospf interface (type number) | Lists a long section of settings, status, and counters for OSPF operation on all interfaces, or on the listed interface, including the Hello and Dead Timers.
+show ip protocols | Shows routing protocol parameters and current timer values.
+  
 Table end.
 ###### Table 21-2 Two OSPF Network Types and Key Behaviors
-Network Type Keyword Dynamically Discovers Neighbors Uses a DR/BDR
-broadcast Yes Yes
-point-to-point Yes No
+__|__|__
+--|--|--
+Network Type Keyword | Dynamically Discovers Neighbors | Uses a DR/BDR
+broadcast | Yes | Yes
+point-to-point | Yes | No
+  
 Table end.
 ###### Table 21-3 Neighbor Requirements for OSPF
-Requirement Required
-for OSPF
-Neighbor
-Missing if
-Incorrect
-Interfaces must be in an up/up state. Yes Yes
-Access control lists (ACL) must not filter routing protocol messages. Yes Yes
-Interfaces must be in the same subnet. Yes Yes
-They must pass routing protocol neighbor authentication (if
-configured).
-Yes Yes
-Hello and hold/dead timers must match. Yes Yes
-Router IDs (RID) must be unique. Yes Yes
-They must be in the same area. Yes Yes
-OSPF process must not be shut down. Yes Yes
-Neighboring interfaces must use same MTU setting. Yes No
-Neighboring interfaces must use same OSPF network type. Yes No
+__|__|__
+--|--|--
+Requirement | Required for OSPF | Neighbor Missing if Incorrect
+Interfaces must be in an up/up state. | Yes | Yes
+Access control lists (ACL) must not filter routing protocol messages. | Yes | Yes
+Interfaces must be in the same subnet. | Yes | Yes
+They must pass routing protocol neighbor authentication (if configured). | Yes | Yes
+Hello and hold/dead timers must match. | Yes | Yes
+Router IDs (RID) must be unique. | Yes | Yes
+They must be in the same area. | Yes | Yes
+OSPF process must not be shut down. | Yes | Yes
+Neighboring interfaces must use same MTU setting. | Yes | No
+Neighboring interfaces must use same OSPF network type. | Yes | No
+  
 Table end.
 ###### Table 21-4 OSPF Neighbor Requirements and the Best show/debug Commands
-Requirement Best show Command
-Hello and dead timers must match. show ip ospf interface
-They must be in the same area. show ip ospf interface brief
-RIDs must be unique. show ip ospf
-They must pass any neighbor authentication. show ip ospf interface
-OSPF process must not be shut down. show ip ospf, show ip ospf interface
+__|__
+--|--
+Requirement | Best show Command
+Hello and dead timers must match. | show ip ospf interface
+They must be in the same area. | show ip ospf interface brief
+RIDs must be unique. | show ip ospf
+They must pass any neighbor authentication. | show ip ospf interface
+OSPF process must not be shut down. | show ip ospf, show ip ospf interface
+  
 Table end.
 ###### Table 21-5 Chapter Review Tracking
-Review Element Review Date(s) Resource Used:
-Review key topics Book, website
-Review command tables Book
-Review memory tables Website
-Watch video Website
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used:
+Review key topics | | Book, website
+Review command tables | | Book
+Review memory tables | | Website
+Watch video | | Website
+  
 Table end.
 ###### Table 21-7 Chapter 21 Configuration Command Reference
-Command Description
-ip ospf hello-interval seconds Interface subcommand that sets the interval for periodic Hellos
-ip ospf dead-interval number Interface subcommand that sets the OSPF dead timer
-passive-interface type number Router subcommand, for both OSPF and EIGRP, that tells
-the routing protocol to stop sending Hellos and stop trying
-to discover neighbors on that interface
-ip ospf priority value Interface subcommand that sets the OSPF priority, used
-when electing a new DR or BDR
-ip ospf network {broadcast |
-point-to-point}
-Interface subcommand used to set the OSPF network type
-on the interface
-(no) shutdown An OSPF configuration mode command to disable
-(shutdown) or enable (no shutdown) the OSPF process
+__|__
+--|--
+Command | Description
+ip ospf hello-interval seconds | Interface subcommand that sets the interval for periodic Hellos
+ip ospf dead-interval number | Interface subcommand that sets the OSPF dead timer
+passive-interface type number | Router subcommand, for both OSPF and EIGRP, that tells the routing protocol to stop sending Hellos and stop trying to discover neighbors on that interface
+ip ospf priority value | Interface subcommand that sets the OSPF priority, used when electing a new DR or BDR
+ip ospf network {broadcast / point-to-point} | Interface subcommand used to set the OSPF network type on the interface
+(no) shutdown | An OSPF configuration mode command to disable (shutdown) or enable (no shutdown) the OSPF process
+  
 Table end.
 ###### Table 21-8 Chapter 21 show Command Reference
-Command Description
-show ip protocols Shows routing protocol parameters and current timer values,
-including an effective copy of the routing protocols’ network
-commands and a list of passive interfaces
-show ip ospf interface brief Lists the interfaces on which the OSPF protocol is enabled
-(based on the network commands), including passive
-interfaces
-show ip ospf interface (type
-number)
-Lists detailed OSPF settings for all interfaces, or the listed
-interface, including Hello and dead timers and OSPF area
-show ip ospf neighbor Lists neighbors and current status with neighbors, per interface
-show ip ospf Lists a group of messages about the OSPF process itself,
-listing the OSPF Router ID in the first line
-show interfaces Lists a long set of messages, per interface, that lists
-configuration, state, and counter information
+__|__
+--|--
+Command | Description
+show ip protocols | Shows routing protocol parameters and current timer values, including an effective copy of the routing protocols’ network commands and a list of passive interfaces
+show ip ospf interface brief | Lists the interfaces on which the OSPF protocol is enabled (based on the network commands), including passive interfaces
+show ip ospf interface (type number) | Lists detailed OSPF settings for all interfaces, or the listed interface, including Hello and dead timers and OSPF area
+show ip ospf neighbor | Lists neighbors and current status with neighbors, per interface
+show ip ospf | Lists a group of messages about the OSPF process itself, listing the OSPF Router ID in the first line
+show interfaces | Lists a long set of messages, per interface, that lists configuration, state, and counter information
+  
 Table end.
 ###### Table 22-2 IPv6 Routing Protocols
-Routing Protocol Defined By Notes
-RIPng (RIP next
-generation)
-RFC The “next generation” is a reference to a TV series, Star
-Trek: the Next Generation.
-OSPFv3 (OSPF
-version 3)
-RFC The OSPF you have worked with for IPv4 is actually
+__|__|__
+--|--|--
+Routing Protocol | Defined By | Notes
+RIPng (RIP next generation) | RFC | The “next generation” is a reference to a TV series, Star Trek: the Next Generation.
+OSPFv3 (OSPF version 3) | RFC | The OSPF you have worked with for IPv4 is actually
 OSPF version 2, so the new version for IPv6 is OSPFv3.
-EIGRPv6 (EIGRP
-for IPv6)
-Cisco Cisco owns the rights to the EIGRP protocol, but Cisco
-also now publishes EIGRP as an informational RFC.
-MP BGP-4
-(Multiprotocol
-BGP version 4)
-RFC BGP version 4 was created to be highly extendable; IPv6
-support was added to BGP version 4 through one such
-enhancement, MP BGP-4.
+EIGRPv6 (EIGRP for IPv6) | Cisco | Cisco owns the rights to the EIGRP protocol, but Cisco also now publishes EIGRP as an informational RFC.
+MP BGP-4 (Multiprotocol BGP version 4) | RFC | BGP version 4 was created to be highly extendable; IPv6 support was added to BGP version 4 through one such enhancement, MP BGP-4.
+  
 Table end.
 ###### Table 22-3 Hexadecimal/Binary Conversion Chart
-Hex Binary Hex Binary
-0 0000 8 1000
-1 0001 9 1001
-2 0010 A 1010
-3 0011 B 1011
-4 0100 C 1100
-5 0101 D 1101
-6 0110 E 1110
-7 0111 F 1111
+__|__|__|__
+--|--|--|--
+Hex | Binary | Hex | Binary
+0 | 0000 | 8 | 1000
+1 | 0001 | 9 | 1001
+2 | 0010 | A | 1010
+3 | 0011 | B | 1011
+4 | 0100 | C | 1100
+5 | 0101 | D | 1101
+6 | 0110 | E | 1110
+7 | 0111 | F | 1111
+  
 Table end.
 ###### Table 22-4 IPv6 Address Abbreviation and Expansion Practice
-Full Abbreviation
-2340:0000:0010:0100:1000:ABCD:0101:1010
-30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
-2222:3333:4444:5555:0000:0000:6060:0707
-3210::
-210F:0000:0000:0000:CCCC:0000:0000:000D
-34BA:B:B::20
-FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE
-FE80::FACE:BAFF:FEBE:CAFE
+__|__
+--|--
+Full | Abbreviation
+2340:0000:0010:0100:1000:ABCD:0101:1010 |
+_ |30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
+2222:3333:4444:5555:0000:0000:6060:0707_
+_ |3210::
+210F:0000:0000:0000:CCCC:0000:0000:000D |
+_ |34BA:B:B::20
+FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE |
+_ |FE80::FACE:BAFF:FEBE:CAFE
+  
 Table end.
 ###### Table 22-5 Finding the IPv6 Prefix from an Address/Length Value
-Address/Length Prefix
+__|__
+--|--
+Address/Length | Prefix
 2340:0:10:100:1000:ABCD:101:1010/64
 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009/64
 2222:3333:4444:5555::6060:707/64
 3210::ABCD:101:1010/64
-Technet24
-||||||||||||||||||||
-||||||||||||||||||||
-22
-Chapter 22: Fundamentals of IP Version 6 535
-Address/Length Prefix
 210F::CCCC:B0B0:9999:9009/64
 34BA:B:B:0:5555:0:6060:707/64
 3124::DEAD:CAFE:FF:FE00:1/64
 2BCD::FACE:BEFF:FEBE:CAFE/64
+  
 Table end.
 ###### Table 22-6 Finding the IPv6 Prefix from an Address/Length Value
-Address/Length Prefix
+__|__
+--|--
+Address/Length | Prefix
 34BA:B:B:0:5555:0:6060:707/80
 3124::DEAD:CAFE:FF:FE00:1/80
 2BCD::FACE:BEFF:FEBE:CAFE/48
@@ -1562,332 +1513,260 @@ Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/36
 3124::DEAD:CAFE:FF:FE00:1/60
 2BCD::FACE:1:BEFF:FEBE:CAFE/56
+   
 Table end.
 ###### Table 22-7 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Review command tables Book
-Review memory table Book, website
-Review All the Key Topics
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | Book, website
+Review key terms | Book, website
+Repeat DIKTA questions | Book, PTP
+Review command tables | Book
+Review memory table | Book, website
+  
 Table end.
 ###### Table 22-8 Key Topics for Chapter 22
-Key Topic
-Element
-Description Page
-Number
-List Similarities between IPv4 and IPv6 527
-List Rules for abbreviating IPv6 addresses 531
-List Rules for expanding an abbreviated IPv6 address 532
-List Process steps to find an IPv6 prefix, based on the IPv6 address and
-prefix length
-533
+__|__|__
+--|--|--
+Key Topic Element | Description | Page Number
+List | Similarities between IPv4 and IPv6 | 527
+List | Rules for abbreviating IPv6 addresses | 531
+List | Rules for expanding an abbreviated IPv6 address | 532
+List | Process steps to find an IPv6 prefix, based on the IPv6 address and prefix length | 533
+  
 Table end.
 ###### Table 22-9 Answers to Questions in the Earlier Table 22-4
-Full Abbreviation
-2340:0000:0010:0100:1000:ABCD:0101:1010 2340:0:10:100:1000:ABCD:101:1010
-30A0:ABCD:EF12:3456:0ABC:B0B0:9999:9009 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
-2222:3333:4444:5555:0000:0000:6060:0707 2222:3333:4444:5555::6060:707
-3210:0000:0000:0000:0000:0000:0000:0000 3210::
-210F:0000:0000:0000:CCCC:0000:0000:000D 210F::CCCC:0:0:D
-34BA:000B:000B:0000:0000:0000:0000:0020 34BA:B:B::20
-FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE FE80::DEAD:BEFF:FEEF:CAFE
-FE80:0000:0000:0000:FACE:BAFF:FEBE:CAFE FE80::FACE:BAFF:FEBE:CAFE
+__|__
+--|--
+Full | Abbreviation
+2340:0000:0010:0100:1000:ABCD:0101:1010 | 2340:0:10:100:1000:ABCD:101:1010
+30A0:ABCD:EF12:3456:0ABC:B0B0:9999:9009 | 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
+2222:3333:4444:5555:0000:0000:6060:0707 | 2222:3333:4444:5555::6060:707
+3210:0000:0000:0000:0000:0000:0000:0000 | 3210::
+210F:0000:0000:0000:CCCC:0000:0000:000D | 210F::CCCC:0:0:D
+34BA:000B:000B:0000:0000:0000:0000:0020 | 34BA:B:B::20
+FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE | FE80::DEAD:BEFF:FEEF:CAFE
+FE80:0000:0000:0000:FACE:BAFF:FEBE:CAFE | FE80::FACE:BAFF:FEBE:CAFE
+  
 Table end.
 ###### Table 22-10 Answers to Questions in the Earlier Table 22-5
-Address/Length Prefix
-2340:0:10:100:1000:ABCD:101:1010/64 2340:0:10:100::/64
-30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009/64 30A0:ABCD:EF12:3456::/64
-2222:3333:4444:5555::6060:707/64 2222:3333:4444:5555::/64
-3210::ABCD:101:1010/64 3210::/64
-210F::CCCC:B0B0:9999:9009/64 210F::/64
-34BA:B:B:0:5555:0:6060:707/64 34BA:B:B::/64
-3124::DEAD:CAFE:FF:FE00:1/64 3124:0:0:DEAD::/64
-2BCD::FACE:BEFF:FEBE:CAFE/64 2BCD::/64
+__|__
+--|--
+Address/Length | Prefix
+2340:0:10:100:1000:ABCD:101:1010/64 | 2340:0:10:100::/64
+30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009/64 | 30A0:ABCD:EF12:3456::/64
+2222:3333:4444:5555::6060:707/64 | 2222:3333:4444:5555::/64
+3210::ABCD:101:1010/64 | 3210::/64
+210F::CCCC:B0B0:9999:9009/64 | 210F::/64
+34BA:B:B:0:5555:0:6060:707/64 | 34BA:B:B::/64
+3124::DEAD:CAFE:FF:FE00:1/64 | 3124:0:0:DEAD::/64
+2BCD::FACE:BEFF:FEBE:CAFE/64 | 2BCD::/64
+  
 Table end.
 ###### Table 22-11 Answers to Questions in the Earlier Table 22-6
-Address/Length Prefix
-34BA:B:B:0:5555:0:6060:707/80 34BA:B:B:0:5555::/80
-3124::DEAD:CAFE:FF:FE00:1/80 3124:0:0:DEAD:CAFE::/80
-2BCD::FACE:BEFF:FEBE:CAFE/48 2BCD::/48
-3FED:F:E0:D00:FACE:BAFF:FE00:0/48 3FED:F:E0::/48
-210F:A:B:C:CCCC:B0B0:9999:9009/40 210F:A::/40
-34BA:B:B:0:5555:0:6060:707/36 34BA:B::/36
-3124::DEAD:CAFE:FF:FE00:1/60 3124:0:0:DEA0::/60
-2BCD::FACE:1:BEFF:FEBE:CAFE/56 2BCD:0:0:FA00::/56
+__|__
+--|--
+Address/Length | Prefix
+34BA:B:B:0:5555:0:6060:707/80 | 34BA:B:B:0:5555::/80
+3124::DEAD:CAFE:FF:FE00:1/80 | 3124:0:0:DEAD:CAFE::/80
+2BCD::FACE:BEFF:FEBE:CAFE/48 | 2BCD::/48
+3FED:F:E0:D00:FACE:BAFF:FE00:0/48 | 3FED:F:E0::/48
+210F:A:B:C:CCCC:B0B0:9999:9009/40 | 210F:A::/40
+34BA:B:B:0:5555:0:6060:707/36 | 34BA:B::/36
+3124::DEAD:CAFE:FF:FE00:1/60 | 3124:0:0:DEA0::/60
+2BCD::FACE:1:BEFF:FEBE:CAFE/56 | 2BCD:0:0:FA00::/56
+  
 Table end.
 ###### Table 23-2 Some Types of IPv6 Addresses and Their First Hex Digit(s)
-Address Type First Hex Digits
-Global unicast 2 or 3 (originally); all not otherwise reserved (today)
-Unique local FD
-Multicast FF
-Link local FE80
+__|__
+--|--
+Address Type | First Hex Digits
+Global unicast | 2 or 3 (originally); all not otherwise reserved (today)
+Unique local | FD
+Multicast | FF
+Link local | FE80
+  
 Table end.
 ###### Table 23-3 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory table Website
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory table | | Website
+  
 Table end.
 ###### Table 24-2 IPv6 EUI-64 Address Creation Practice
-Prefix MAC Address Unabbreviated IPv6 Address
-2001:DB8:1:1::/64 0013.ABAB.1001
-2001:DB8:1:1::/64 AA13.ABAB.1001
-2001:DB8:1:1::/64 000C.BEEF.CAFE
-2001:DB8:1:1::/64 B80C.BEEF.CAFE
-2001:DB8:FE:FE::/64 0C0C.ABAC.CABA
-2001:DB8:FE:FE::/64 0A0C.ABAC.CABA
+__|__|__
+--|--|--
+Prefix | MAC Address | Unabbreviated IPv6 Address
+2001:DB8:1:1::/64 | 0013.ABAB.1001
+2001:DB8:1:1::/64 | AA13.ABAB.1001
+2001:DB8:1:1::/64 | 000C.BEEF.CAFE
+2001:DB8:1:1::/64 | B80C.BEEF.CAFE
+2001:DB8:FE:FE::/64 | 0C0C.ABAC.CABA
+2001:DB8:FE:FE::/64 | 0A0C.ABAC.CABA
+  
 Table end.
 ###### Table 24-3 Key IPv6 Local-Scope Multicast Addresses
-Short Name Multicast
-Address
-Meaning IPv4 Equivalent
-All-nodes FF02::1 All-nodes (all interfaces that use IPv6 that
-are on the link)
-224.0.0.1
-All-routers FF02::2 All-routers (all IPv6 router interfaces on the
-link)
-224.0.0.2
-All-OSPF, All-
-OSPF-DR
-FF02::5,
-FF02::6
-All OSPF routers and all OSPF-designated
-routers, respectively
-224.0.0.5, 224.0.0.6
-RIPng Routers FF02::9 All RIPng routers 224.0.0.9
-EIGRPv6
-Routers
-FF02::A All routers using EIGRP for IPv6 (EIGRPv6) 224.0.0.10
-DHCP Relay
-Agent
-FF02::1:2 All routers acting as a DHCPv6 relay agent None
+__|__|__|__
+--|--|--|--
+Short Name | Multicast Address | Meaning | IPv4 Equivalent
+All-nodes | FF02::1 | All-nodes (all interfaces that use IPv6 that are on the link) | 224.0.0.1
+All-routers | FF02::2 | All-routers (all IPv6 router interfaces on the link) | 224.0.0.2
+All-OSPF, All-OSPF-DR | FF02::5, FF02::6 | All OSPF routers and all OSPF-designated routers, respectively | 224.0.0.5, 224.0.0.6
+RIPng Routers | FF02::9 | All RIPng routers | 224.0.0.9
+EIGRPv6 Routers | FF02::A | All routers using EIGRP for IPv6 (EIGRPv6) | 224.0.0.10
+DHCP Relay Agent | FF02::1:2 | All routers acting as a DHCPv6 relay agent | None
+  
 Table end.
 ###### Table 24-4 IPv6 Multicast Scope Terms
-Scope
-Name
-First
-Quartet
-Scope
-Defined by…
-Meaning
-Interface-
-Local
-FF01 Derived by
-Device
-Packet remains within the device. Useful for
-internally sending packets to services running on
-that same host.
-Link-Local FF02 Derived by
-Device
-Host that creates the packet can send it onto the
-link, but no routers forward the packet.
-Site-Local FF05 Configuration
-on Routers
-Intended to be more than Link-Local, so routers
-forward, but must be less than Organization-Local;
-generally meant to limit packets so they do not
-cross WAN links.
-Organization-
-Local
-FF08 Configuration
-on Routers
-Intended to be broad, probably for an entire
-company or organization. Must be broader than
-Site-Local.
-Global FF0E No Boundaries No boundaries.
+__|__|__|__
+--|--|--|--
+Scope Name | First Quartet | Scope Defined by… | Meaning
+Interface-Local | FF01 | Derived by Device Packet remains within the device. Useful for internally sending packets to services running on that same host.
+Link-Local | FF02 | Derived by Device Host that creates the packet can send it onto the link, but no routers forward the packet.
+Site-Local | FF05 | Configuration on Routers Intended to be more than Link-Local, so routers forward, but must be less than Organization-Local; generally meant to limit packets so they do not cross WAN links.
+Organization-Local | FF08 | Configuration on Routers Intended to be broad, probably for an entire company or organization. Must be broader than Site-Local.
+Global | FF0E | No Boundaries No boundaries.
+  
 Table end.
 ###### Table 24-5 Summary of IPv6 Address Types and the Commands That Create Them
-Type Prefix/Address
-Notes
-Enabled with What Interface Subcommand
-Global unicast Many prefixes ipv6 address address/prefix-length
-ipv6 address prefix/prefix-length eui-64
-Unique Local FD00::/8 ipv6 address prefix/prefix-length eui-64
-Link local FE80::/10 ipv6 address address link-local
-Autogenerated by all ipv6 address commands
-Autogenerated by the ipv6 enable command
-All hosts multicast FF02::1 Autogenerated by all ipv6 address commands
-All routers multicast FF02::2 Autogenerated by all ipv6 address commands
-Routing protocol
-multicasts
-Various Added to the interface when the corresponding
-routing protocol is enabled on the interface
-Solicited-node
-multicast
-FF02::1:FF /104 Autogenerated by all ipv6 address commands
+__|__|__
+--|--|--
+Type | Prefix/Address Notes | Enabled with What Interface Subcommand
+Global unicast | Many prefixes | ipv6 address address/prefix-length ipv6 address prefix/prefix-length eui-64
+Unique Local | FD00::/8 | ipv6 address prefix/prefix-length eui-64
+Link local | FE80::/10 | ipv6 address address link-local Autogenerated by all ipv6 address commands Autogenerated by the ipv6 enable command
+All hosts multicast | FF02::1 | Autogenerated by all ipv6 address commands
+All routers multicast | FF02::2 | Autogenerated by all ipv6 address commands
+Routing protocol multicasts | Various | Added to the interface when the corresponding routing protocol is enabled on the interface
+Solicited-node multicast | FF02::1:FF /104 | Autogenerated by all ipv6 address commands
+  
 Table end.
 ###### Table 24-6 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review command tables Book
-Review memory tables Website
-Do labs Blog
-Watch video Website
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review command tables | | Book
+Review memory tables | | Website
+Do labs | | Blog
+Watch video | | Website
+  
 Table end.
 ###### Table 24-8 Chapter 24 Configuration Command Reference
-Command Description
-ipv6 unicast-routing Global command that enables IPv6 routing on the router.
-ipv6 address ipv6-address/
-prefix-length (eui-64)
-Interface subcommand that manually configures either the
-entire interface IP address or a /64 prefix with the router
-building the EUI-64 format interface ID automatically.
-ipv6 address ipv6-address/
-prefix-length (anycast)
-Interface subcommand that manually configures an address to
-be used as an anycast address.
-ipv6 enable Command that enables IPv6 on an interface and generates a linklocal
-address.
-ipv6 address dhcp Interface subcommand that enables IPv6 on an interface, causes
-the router to use DHCP client processes to try to lease an IPv6
-address, and creates a link-local address for the interface.
+__|__
+--|--
+Command | Description
+ipv6 unicast-routing | Global command that enables IPv6 routing on the router.
+ipv6 address ipv6-address/ prefix-length (eui-64) | Interface subcommand that manually configures either the entire interface IP address or a /64 prefix with the router building the EUI-64 format interface ID automatically.
+ipv6 address ipv6-address/ prefix-length (anycast) | Interface subcommand that manually configures an address to be used as an anycast address.
+ipv6 enable | Command that enables IPv6 on an interface and generates a linklocal address.
+ipv6 address dhcp | Interface subcommand that enables IPv6 on an interface, causes the router to use DHCP client processes to try to lease an IPv6 address, and creates a link-local address for the interface.
+  
 Table end.
 ###### Table 24-9 Chapter 24 EXEC Command Reference
-Command Description
-show ipv6 route (connected)
-(local)
-Lists IPv6 routes, or just the connected routes, or just the local
-routes.
-show ipv6 interface (type
-number)
-Lists IPv6 settings on an interface, including link-local and
-other unicast IP addresses (or for the listed interface).
-show ipv6 interface brief
-(type number)
-Lists interface status and IPv6 addresses for each interface (or
-for the listed interface).
+__|__
+--|--
+Command | Description
+show ipv6 route (connected) (local) Lists IPv6 routes, or just the connected routes, or just the local routes.
+show ipv6 interface (type number) | Lists IPv6 settings on an interface, including link-local and other unicast IP addresses (or for the listed interface).
+show ipv6 interface brief (type number) | Lists interface status and IPv6 addresses for each interface (or for the listed interface).
+  
 Table end.
 ###### Table 24-10 Answers to IPv6 EUI-64 Address Creation Practice
-Prefix MAC Address Unabbreviated IPv6 Address
-2001:DB8:1:1::/64 0013.ABAB.1001 2001:DB8:1:1:0213:ABFF:FEAB:1001
-2001:DB8:1:1::/64 AA13.ABAB.1001 2001:DB8:1:1:A813:ABFF:FEAB:1001
-2001:DB8:1:1::/64 000C.BEEF.CAFE 2001:DB8:1:1:020C:BEFF:FEEF:CAFE
-2001:DB8:1:1::/64 B80C.BEEF.CAFE 2001:DB8:1:1:BA0C:BEFF:FEEF:CAFE
-2001:DB8:FE:FE::/64 0C0C.ABAC.CABA 2001:DB8:FE:FE:0E0C:ABFF:FEAC:CABA
-2001:DB8:FE:FE::/64 0A0C.ABAC.CABA 2001:DB8:FE:FE:080C:ABFF:FEAC:CABA
+__|__|__
+--|--|--
+Prefix | MAC Address | Unabbreviated IPv6 Address
+2001:DB8:1:1::/64 | 0013.ABAB.1001 | 2001:DB8:1:1:0213:ABFF:FEAB:1001
+2001:DB8:1:1::/64 | AA13.ABAB.1001 | 2001:DB8:1:1:A813:ABFF:FEAB:1001
+2001:DB8:1:1::/64 | 000C.BEEF.CAFE | 2001:DB8:1:1:020C:BEFF:FEEF:CAFE
+2001:DB8:1:1::/64 | B80C.BEEF.CAFE | 2001:DB8:1:1:BA0C:BEFF:FEEF:CAFE
+2001:DB8:FE:FE::/64 | 0C0C.ABAC.CABA | 2001:DB8:FE:FE:0E0C:ABFF:FEAC:CABA
+2001:DB8:FE:FE::/64 | 0A0C.ABAC.CABA | 2001:DB8:FE:FE:080C:ABFF:FEAC:CABA
+  
 Table end.
 ###### Table 25-2 IOS Defaults for Administrative Distance
-Route Source Administrative Distance
-Connected routes 0
-Static routes 1
-NDP 2
-EIGRP 90
-OSPF 110
-RIP 120
-Unknown or unbelievable 255
+__|__
+--|--
+Route Source | Administrative Distance
+Connected routes | 0
+Static routes | 1
+NDP | 2
+EIGRP | 90
+OSPF | 110
+RIP | 120
+Unknown or unbelievable | 255
+  
 Table end.
 ###### Table 25-3 NDP Function Summary
-Function Protocol
-Messages
-Who
-Discovers Info
-Who
-Supplies Info
-Info Supplied
-Router
-discovery
-RS and RA Any IPv6 host Any IPv6
-router
-Link-local IPv6 address of router
-Prefix/length
-discovery
-RS and RA Any IPv6 host Any IPv6
-router
-Prefix(es) and associated prefix
-lengths used on local link
-Neighbor
-discovery
-NS and NA Any IPv6 host Any IPv6
-host
-Link-layer address (for example,
-MAC address) used by a neighbor
-Duplicate
-Address
-Detection
-NS and NA Any IPv6 host Any IPv6
-host
-Simple confirmation whether a
-unicast address is already in use
+__|__|__|__|__
+--|--|--|--|--
+Function | Protocol Messages | Who Discovers Info | Who Supplies Info | Info Supplied
+Router discovery | RS and RA | Any IPv6 host | Any IPv6 router | Link-local IPv6 address of router
+Prefix/length discovery | RS and RA | Any IPv6 host | Any IPv6 router | Prefix(es) and associated prefix lengths used on local link
+Neighbor discovery | NS and NA | Any IPv6 host | Any IPv6 host | Link-layer address (for example, MAC address) used by a neighbor
+Duplicate Address Detection | NS and NA | Any IPv6 host | Any IPv6 host | Simple confirmation whether a unicast address is already in use
+  
 Table end.
 ###### Table 25-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Answer DIKTA questions Book, PTP
-Review command tables Book
-Review memory tables Book, website
-Do labs Blog
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review command tables | | Book
+Review memory tables | | Book, website
+Do labs | | Blog
+  
 Table end.
 ###### Table 25-6 Chapter 25 Configuration Command Reference
-Command Description
-ipv6 route prefix/length nexthop-
-address
-Global command to define an IPv6 static route to a nexthop
-router IPv6 address.
-ipv6 route prefix/length
-outgoing-interface
-Global command to define an IPv6 static route, with
-packets forwarded out the local router interface listed in
-the command.
-ipv6 route prefix/length
-outgoing-interface next-hopaddress
-Global command to define an IPv6 static route, with
-both the next-hop address and local router outgoing
-interface listed.
-Technet24
-||||||||||||||||||||
-||||||||||||||||||||
-25
-Chapter 25: Implementing IPv6 Routing 605
-Command Description
-ipv6 route ::/0 {(next-hopaddress)
-(outgoing-interface)}
-Global command to define a default IPv6 static route.
-ipv6 address autoconfig (default) Interface subcommand that tells the router to use SLAAC
-to find/build its own interface IPv6 address, and with the
-default parameter, to add a default route with a next hop
-of the router that responds with the RA message.
+__|__
+--|--
+Command | Description
+ipv6 route prefix/length nexthop-address | Global command to define an IPv6 static route to a nexthop router IPv6 address.
+ipv6 route prefix/length outgoing-interface | Global command to define an IPv6 static route, with packets forwarded out the local router interface listed in the command.
+ipv6 route prefix/length outgoing-interface next-hopaddress | Global command to define an IPv6 static route, with both the next-hop address and local router outgoing interface listed.
+ipv6 route ::/0 {(next-hopaddress) (outgoing-interface)} | Global command to define a default IPv6 static route.
+ipv6 address autoconfig (default) | Interface subcommand that tells the router to use SLAAC to find/build its own interface IPv6 address, and with the default parameter, to add a default route with a next hop of the router that responds with the RA message.
+  
 Table end.
 ###### Table 25-7 Chapter 25 EXEC Command Reference
-Command Description
-show ipv6 route (connected /
-local / static)
-Lists routes in the routing table.
-show ipv6 route address Displays detailed information about the route this router
-uses to forward packets to the IPv6 address listed in the
-command.
-show ipv6 neighbors Lists the contents of the IPv6 neighbor table, which lists the
-MAC address associated with IPv6 addresses on common
-subnets.
+__|__
+--|--
+Command | Description
+show ipv6 route (connected / local / static) | Lists routes in the routing table.
+show ipv6 route address | Displays detailed information about the route this router uses to forward packets to the IPv6 address listed in the command.
+show ipv6 neighbors | Lists the contents of the IPv6 neighbor table, which lists the MAC address associated with IPv6 addresses on common subnets.
+  
 Table end.
 ###### Table 26-2 Frequency Unit Names
-Unit Abbreviation Meaning
-Hertz Hz Cycles per second
-Kilohertz kHz 1000 Hz
-Megahertz MHz 1,000,000 Hz
-Gigahertz GHz 1,000,000,000 Hz
+__|__|__
+--|--|--
+Unit | Abbreviation | Meaning
+Hertz | Hz | Cycles per second
+Kilohertz | kHz | 1000 Hz
+Megahertz | MHz | 1,000,000 Hz
+Gigahertz | GHz | 1,000,000,000 Hz
+  
 Table end.
 ###### Table 26-3 Basic Characteristics of Some IEEE 802.11 Amendments
-Amendment 2.4
-GHz
-5
-GHz
-Max Data
-Rate
-Notes
-802.11-1997 Yes No 2 Mbps The original 802.11 standard ratified in 1997
-802.11b Yes No 11 Mbps Introduced in 1999
-802.11g Yes No 54 Mbps Introduced in 2003
-802.11a No Yes 54 Mbps Introduced in 1999
-802.11n Yes Yes 600 Mbps HT (high throughput), introduced in 2009
-802.11ac No Yes 6.93 Gbps VHT (very high throughput), introduced in 2013
-802.11ax Yes Yes 4x 802.11ac High Efficiency Wireless, Wi-Fi6; expected late
-2019; will operate on other bands too, as they
-become available
+__|__|__|__|__
+--|--|--|--|--
+Amendment | 2.4 GHz | 5 GHz | Max Data Rate | Notes
+802.11-1997 | Yes | No | 2 Mbps | The original 802.11 standard ratified in 1997
+802.11b | Yes | No | 11 Mbps | Introduced in 1999
+802.11g | Yes | No | 54 Mbps | Introduced in 2003
+802.11a | No | Yes | 54 Mbps | Introduced in 1999
+802.11n | Yes | Yes | 600 Mbps | HT (high throughput), introduced in 2009
+802.11ac | No | Yes | 6.93 Gbps | VHT (very high throughput), introduced in 2013
+802.11ax | Yes | Yes | 4x 802.11ac | High Efficiency Wireless, Wi-Fi6; expected late 2019; will operate on other bands too, as they become available
+  
 Table end.
 ###### Table 26-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
