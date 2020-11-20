@@ -293,7 +293,7 @@ Application HTTP, POP3, SMTP
 Transport TCP, UDP
 Internet IP, ICMP
 Data Link & Physical Ethernet, 802.11 (Wi-Fi)
-Table end
+Table end.
 TCP/IP Application Layer
 TCP/IP application layer protocols provide services to the application software running on a
 computer. The application layer does not define the application itself, but it defines services
@@ -461,7 +461,7 @@ computer
 On a single computer, one lower layer provides a service to the layer
 just above. The software or hardware that implements the higher
 layer requests that the next lower layer perform the needed function.
-Table end
+Table end.
 TCP/IP Network Layer
 The application layer includes many protocols. The transport layer includes fewer protocols,
 most notably, TCP and UDP. The TCP/IP network layer includes a small number of protocols,
@@ -869,21 +869,8 @@ Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP Online
-Table end
+Table end.
 Review All the Key Topics
-Table 1-5 Key Topics for Chapter 1
-Key Topic
-Elements
-Description Page
-Number
-Table 1-3 Provides definitions of same-layer and adjacent-layer interaction 22
-Figure 1-10 Shows the general concept of IP routing 25
-Figure 1-11 Depicts the data-link services provided to IP for the purpose of delivering IP packets from host to host 26
-Figure 1-12 Five steps to encapsulate data on the sending host 28
-Figure 1-13 Shows the meaning of the terms segment, packet, and frame 28
-Figure 1-14 Compares the OSI and TCP/IP network models 29
-Figure 1-15 Terminology related to encapsulation 30
-Table end
 Key Terms You Should Know
 adjacent-layer interaction, de-encapsulation, encapsulation, frame, networking model, packet,
 protocol data unit (PDU), same-layer interaction, segment
@@ -1127,7 +1114,7 @@ Maximum Length
 1000 Mbps Gigabit Ethernet 1000BASE-LX 802.3z Fiber, 5000 m
 1000 Mbps Gigabit Ethernet 1000BASE-T 802.3ab Copper, 100 m
 10 Gbps 10 Gig Ethernet 10GBASE-T 802.3an Copper, 100 m
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 38 CCNA 200-301 Official Cert Guide, Volume 1
@@ -1412,12 +1399,12 @@ Crossover cable: If the endpoints transmit on the same pin pair
 Straight-through cable: If the endpoints transmit on different pin pairs
 Table 2-3 lists the devices and the pin pairs they use, assuming that they use 10BASE-T and
 100BASE-T.
-Table 2-3 10BASE-T and 100BASE-T Pin Pairs Used
+Table 2-3 A 10BASE-T and 100BASE-T Pin Pairs Used
 Transmits on Pins 1,2 Transmits on Pins 3,6
 PC NICs Hubs
 Routers Switches
 Wireless access point (Ethernet interface) —
-Table end
+Table end.
 For example, Figure 2-13 shows a campus LAN in a single building. In this case, several
 straight-through cables are used to connect PCs to switches. In addition, the cables connecting
 the switches require crossover cables.
@@ -1557,7 +1544,7 @@ Standard Cable Type Max Distance*
 10GBASE-LX4 MM 300m
 10GBASE-LR SM 10km
 10GBASE-E SM 30km
-Table end
+Table end.
 * The maximum distances are based on the IEEE standards with no repeaters.
 For instance, to build an Ethernet LAN in an office park, you might need to use some multimode
 and single-mode fiber links. In fact, many office parks might already have fiber cabling
@@ -1588,7 +1575,7 @@ Relative Cost of a Switch Port Low Medium High
 Approximate Max Distance 100m 500m 40km
 Relative Susceptibility to Interference Some None None
 Relative Risk of Copying from Cable Emissions Some None None
-Table end
+Table end.
 Sending Data in Ethernet Networks
 Although physical layer standards vary quite a bit, other parts of the Ethernet standards work
 the same regardless of the type of physical Ethernet link. Next, this final major section of this
@@ -1647,7 +1634,7 @@ Frame Check
 Sequence (FCS)
 4 Provides a method for the receiving NIC to determine whether
 the frame experienced transmission errors.
-Table end
+Table end.
 * The IEEE 802.3 specification limits the data portion of the 802.3 frame to a minimum of 46 and a maximum
 of 1500 bytes. The term maximum transmission unit (MTU) defines the maximum Layer 3 packet
 that can be sent over a medium. Because the Layer 3 packet rests inside the data portion of an Ethernet
@@ -1734,7 +1721,7 @@ Unicast address A term for a MAC address that represents a single LAN interface.
 Broadcast address An address that means “all devices that reside on this LAN right now.”
 Multicast address On Ethernet, a multicast address implies some subset of all devices
 currently on the Ethernet LAN.
-Table end
+Table end.
 Identifying Network Layer Protocols with the Ethernet Type Field
 While the Ethernet header’s address fields play an important and more obvious role in
 Ethernet LANs, the Ethernet Type field plays a much less obvious role. The Ethernet Type
@@ -1955,7 +1942,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Book, website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 Ethernet, IEEE, wired LAN, wireless LAN, Ethernet frame, 10BASE-T, 100BASE-T,
@@ -2142,7 +2129,7 @@ WAN link, Link Both of these terms are very general, with no reference to any sp
 technology.
 Private line This term refers to the fact that the data sent over the line cannot be copied
 by other telco customers, so the data is private.
-Table end
+Table end.
 To create a leased line, some physical path must exist between the two routers on the ends
 of the link. The physical cabling must leave the customer buildings where each router sits.
 However, the telco does not simply install one cable between the two buildings. Instead, it
@@ -2216,7 +2203,7 @@ routers.
 Type Type Identifies the type of Layer 3 packet encapsulated inside the frame.
 FCS FCS Identifies a field used by the error detection process. (It is the only
 trailer field in this table.)
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 64 CCNA 200-301 Official Cert Guide, Volume 1
@@ -2944,7 +2931,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Book, website
-Table end
+Table end.
 Review All the Key Topics
 Table 3-5 Key Topics for Chapter 3
 Key Topic
@@ -2962,7 +2949,7 @@ Figure 3-13 IP Routing Protocol Basic Process 75
 Figure 3-14 Example that shows the purpose and process of DNS name resolution 76
 Figure 3-15 Example of the purpose and process of ARP 78
 Key Terms You Should Know
-Table end
+Table end.
 leased line, wide-area network (WAN), telco, serial interface, HDLC, Ethernet over MPLS,
 Ethernet Line Service (E-Line), default router (default gateway), routing table, IP network, IP
 subnet, IP packet, routing protocol, dotted-decimal notation (DDN), IPv4 address, unicast IP
@@ -3457,7 +3444,7 @@ assuming that you have typed enough of the word so there is only one
 option that begins with that string of characters.
 command parm1 ? If a space is inserted before the question mark, the CLI lists all the next
 parameters and gives a brief explanation of each.
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -3495,7 +3482,7 @@ Right arrow or Ctrl+F This moves the cursor forward in the currently displayed c
 without deleting characters. (The F stands for forward.)
 Backspace This moves the cursor backward in the currently displayed
 command, deleting characters.
-Table end
+Table end.
 The debug and show Commands
 By far, the single most popular Cisco IOS command is the show command. The show command
 has a large variety of options, and with those options, you can find the status of
@@ -3621,7 +3608,7 @@ hostname(config-line)# Line line console 0
 line vty 0 15
 hostname(config-if)# Interface interface type number
 hostname(vlan)# VLAN vlan number
-Table end
+Table end.
 You should practice until you become comfortable moving between the different configuration
 modes, back to enable mode, and then back into the configuration modes. However, you
 can learn these skills just doing labs about the topics in later chapters of the book. For now,
@@ -3733,7 +3720,7 @@ running-config Stores the currently used configuration commands.
 This file changes dynamically when someone enters
 commands in configuration mode.
 RAM
-Table end
+Table end.
 Essentially, when you use configuration mode, you change only the running-config file. This
 means that the configuration example earlier in this chapter (Example 4-4) updates only
 the running-config file. However, if the switch lost power right after that example, all that
@@ -3819,7 +3806,7 @@ Review key terms Book, website
 Repeat DIKTA questions Book, PTP
 Review memory tables Book, website
 Review command tables Book
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -3857,7 +3844,7 @@ any of the configuration submodes.
 Ctrl+Z This is not a command, but rather a two-key combination
 (pressing the Ctrl key and the letter Z) that together do the
 same thing as the end command.
-Table end
+Table end.
 Table 4-9 Chapter 4 EXEC Command Reference
 Command Purpose
 no debug all
@@ -3883,7 +3870,7 @@ enable Moves the user from user mode to enable (privileged) mode and
 prompts for a password if one is configured.
 disable Moves the user from enable mode to user mode.
 configure terminal Enable mode command that moves the user into configuration mode.
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -4440,7 +4427,7 @@ with no VLAN information configured)
 ¦ Configure the hostname SW1 command to set the switch hostname
 Once done, the switch starts forwarding and learning MAC addresses, as demonstrated in
 Example 5-1.
-Example 5-1 show mac address-table dynamic for Figure 5-7
+Example 5-1 Show mac address-table dynamic for Figure 5-7
 SW1# show mac address-table dynamic
 Mac Address Table
 -------------------------------------------
@@ -4488,7 +4475,7 @@ The first example assumes that you installed the switch and cabling correctly, a
 switch interfaces work. Once you do the installation and connect to the Console, you can
 easily check the status of those interfaces with the show interfaces status command, as
 shown in Example 5-2.
-Example 5-2 show interfaces status on Switch SW1
+Example 5-2 Show interfaces status on Switch SW1
 SW1# show interfaces status
 Port Name Status Vlan Duplex Speed Type
 Fa0/1 connected 1 a-full a-100 10/100BaseTX
@@ -4548,7 +4535,7 @@ for interface F0/1.
 ||||||||||||||||||||
 ||||||||||||||||||||
 120 CCNA 200-301 Official Cert Guide, Volume 1
-Example 5-3 show interfaces f0/1 counters on Switch SW1
+Example 5-3 Show interfaces f0/1 counters on Switch SW1
 SW1# show interfaces f0/1 counters
 Port InOctets InUcastPkts InMcastPkts InBcastPkts
 Fa0/1 1223303 10264 107 18
@@ -4568,7 +4555,7 @@ Example 5-4. All you have to do is include the address keyword, followed by the 
 MAC address. If the address exists, the output lists the address. Note that the output lists
 the exact same information in the exact same format, but it lists only the line for the matching
 MAC address.
-Example 5-4 show mac address-table dynamic with the address Keyword
+Example 5-4 Show mac address-table dynamic with the address Keyword
 SW1# show mac address-table dynamic address 0200.1111.1111
 Mac Address Table
 -------------------------------------------
@@ -4589,7 +4576,7 @@ Technet24
 ||||||||||||||||||||
 5
 Chapter 5: Analyzing Ethernet LAN Switching 121
-Example 5-5 show mac address-table dynamic with the interface Keyword
+Example 5-5 Show mac address-table dynamic with the interface Keyword
 SW1# show mac address-table dynamic interface fastEthernet 0/1
 Mac Address Table
 -------------------------------------------
@@ -4739,20 +4726,8 @@ Review key terms Book, website
 Repeat DIKTA questions Book, PTP
 Do labs Book, Sim Lite, blog
 Review command tables Book
-Table end
+Table end.
 Review All the Key Topics
-Table 5-3 Key Topics for Chapter 5
-Key Topic
-Element
-Description Page
-Number
-List Three main functions of a LAN switch 109
-Figure 5-3 Process to forward a known unicast frame 111
-Figure 5-5 Process to forward a known unicast, second switch 112
-Figure 5-6 Process to learn MAC addresses 113
-List Summary of switch forwarding logic 117
-Example 5-1 The show mac address-table dynamic command 117
-Table end
 Do Labs
 The Sim Lite software is a version of Pearson’s full simulator learning product with a subset
 of the labs, included free with this book. The subset of labs mostly relate to this part of the
@@ -4802,7 +4777,7 @@ interface-id] [address mac-address]
 Clears (removes) dynamic MAC table entries: either all
 (with no parameters), or a subset based on VLAN ID,
 interface ID, or a specific MAC address
-Table end
+Table end.
 Note that this chapter also includes reference to one configuration command, so it does not
 call for the use of a separate table. For review, the command is
 mac address-table aging-time time-in-seconds [vlan vlan-number]
@@ -5643,7 +5618,7 @@ one login session, the size of his or her history buffer.
 history size x A configuration command that, from console or vty line configuration
 mode, sets the default number of commands saved in the history buffer for
 the users of the console or vty lines, respectively.
-Table end
+Table end.
 The logging synchronous, exec-timeout, and no ip domain-lookup
 Commands
 These next three configuration commands have little in common, other than the fact that
@@ -5711,21 +5686,13 @@ Repeat DIKTA questions Book, PTP
 Review config checklists Book, website
 Do labs Sim Lite, blog
 Review command tables Book
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
 6
 Chapter 6: Configuring Basic Switch Management 147
 Review All the Key Topics
-Table 6-4 Key Topics for Chapter 6
-Key Topic
-Element
-Description Page
-Number
-Example 6-2 Example of configuring password login security (no usernames) 132
-Figure 6-5 SSH configuration commands with related username login security 137
-Table end
 Key Terms You Should Know
 Telnet, Secure Shell (SSH), local username, AAA, AAA server, enable mode, default gateway,
 VLAN interface, history buffer, DNS, name resolution, log message
@@ -5770,7 +5737,7 @@ ssh | all | none}
 vty line configuration mode. Defines whether Telnet/SSH access
 is allowed into this switch. Both values can be configured on one
 command to allow both Telnet and SSH access (the default).
-Table end
+Table end.
 Table 6-6 Switch IPv4 Configuration
 Command Mode/Purpose/Description
 interface vlan number Changes the context to VLAN interface mode. For VLAN 1,
@@ -5790,7 +5757,7 @@ server-ip-2 …
 Global command. Configures the IPv4 addresses of DNS servers,
 so any commands when logged in to the switch will use the DNS
 for name resolution.
-Table end
+Table end.
 Table 6-7 Other Switch Configuration
 Command Mode/Purpose/Description
 hostname name Global command. Sets this switch’s hostname, which is also used
@@ -5814,7 +5781,7 @@ Technet24
 ||||||||||||||||||||
 6
 Chapter 6: Configuring Basic Switch Management 149
-Table end
+Table end.
 Table 6-8 Chapter 6 EXEC Command Reference
 Command Purpose
 show running-config Lists the currently used configuration.
@@ -5839,7 +5806,7 @@ show ip default-gateway Lists the switch’s setting for its IPv4 default gatewa
 terminal history size x Changes the length of the history buffer for the current
 user only, only for the current login to the switch.
 show history Lists the commands in the current history buffer.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 Chapter 7 Configuring and Verifying Switch Interfaces
@@ -6409,7 +6376,7 @@ up down notconnect Not expected on LAN switch physical interfaces.
 down down (errdisabled)
 err-disabled Port security has disabled the interface.
 up up connected The interface is working.
-Table end
+Table end.
 Examining the notconnect state for a moment, note that this state has many causes that have
 been mentioned through this book. For example, using incorrect cabling pinouts, instead
 of the correct pinouts explained in Chapter 2, “Fundamentals of Ethernet LANs,” causes a
@@ -6654,7 +6621,7 @@ Answer DIKTA questions Book, PTP
 Review command tables Book
 Review memory tables Website
 Do labs Sim Lite, blog
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -6702,7 +6669,7 @@ no description
 Reverts to the default setting for each interface subcommand
 of speed auto, duplex auto, and the absence of a description
 command.
-Table end
+Table end.
 Table 7-6 Chapter 7 EXEC Command Reference
 Command Purpose
 show running-config Lists the currently used configuration
@@ -6729,7 +6696,7 @@ show interfaces description Displays one line of information per interface,
 with a two-item status (similar to the show
 interfaces command status), and includes any
 description that is configured on the interfaces
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -7523,7 +7490,7 @@ dynamic desirable Initiates negotiation messages and responds to negotiation mes
 dynamically choose whether to start using trunking
 dynamic auto Passively waits to receive trunk negotiation messages, at which point
 the switch will respond and negotiate whether to use trunking
-Table end
+Table end.
 For example, consider the two switches shown in Figure 8-10. This figure expands the design
 shown earlier in Figure 8-9, with a trunk to a new switch (SW2) and with parts of VLANs 1
 and 3 on ports attached to SW2. The two switches use a Gigabit Ethernet link for the trunk.
@@ -7556,7 +7523,7 @@ Example 8-5 begins with SW1 configured as shown in Examples 8-2 and 8-4—that i
 has two ports each assigned to VLANs 1, 2, and 3. However, both SW1 and SW2 currently
 have all default settings on the interfaces that connect the two switches. With the default
 setting of switchport mode dynamic auto, the two switches do not trunk.
-Example 8-5 Initial (Default) State: Not Trunking Between SW1 and SW2
+Example 8-5 Initial Default State: Not Trunking Between SW1 and SW2
 SW1# show interfaces gigabit 0/1 switchport
 Name: Gi0/1
 Switchport: Enabled
@@ -7694,7 +7661,7 @@ access Access Access Do Not Use1 Access
 dynamic auto Access Access Trunk Trunk
 trunk Do Not Use1 Trunk Trunk Trunk
 dynamic desirable Access Trunk Trunk Trunk
-Table end
+Table end.
 1 When two switches configure a mode of “access” on one end and “trunk” on the other, problems occur.
 Avoid this combination.
 Finally, before leaving the discussion of configuring trunks, Cisco recommends disabling
@@ -8114,7 +8081,7 @@ Third VLANs in
 spanning tree…
 The second list, minus VLANs in an STP blocking state for that
 interface, and minus VLANs VTP pruned from that trunk
-Table end
+Table end.
 NOTE The companion website includes a video from the CCNA Exam Prep LiveLessons
 product, named “Troubleshooting VLANs Allowed on a Trunk #1,” which works through the
 three lists of VLANs in the output of the show interfaces interface-id trunk command in
@@ -8149,7 +8116,7 @@ Review command tables Book
 Review memory tables Website
 Do labs Sim Lite, blog
 Watch video Website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 802.1Q, trunk, trunking administrative mode, trunking operational mode, VLAN, VTP,
@@ -8205,7 +8172,7 @@ switchport trunk allowed vlan
 {add | all | except | remove} vlanlist
 Interface subcommand that defines the list of allowed
 VLANs
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 208 CCNA 200-301 Official Cert Guide, Volume 1
@@ -8223,7 +8190,7 @@ vlan-name | summary]
 Lists information about the VLAN
 show vlan [vlan] Displays VLAN information
 show vtp status Lists VTP configuration and status information
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -8448,7 +8415,7 @@ Multiple frame
 transmission
 A side effect of looping frames in which multiple copies of one frame
 are delivered to the intended host, confusing the host
-Table end
+Table end.
 What Spanning Tree Does
 STP/RSTP prevents loops by placing each switch port in either a forwarding state or a blocking
 state. Interfaces in the forwarding state act as normal, forwarding and receiving frames.
@@ -8554,7 +8521,7 @@ designated switch for that segment.
 All other working ports Blocking The port is not used for forwarding user frames,
 nor are any frames received on these interfaces
 considered for forwarding.
-Table end
+Table end.
 NOTE STP/RSTP only considers working interfaces (those in a connected state). Failed
 interfaces (for example, interfaces with no cable installed) or administratively shutdown
 interfaces are instead placed into an STP/RSTP disabled state. So, this section uses the term
@@ -8590,7 +8557,7 @@ Sender’s root cost The STP/RSTP cost between this switch and the current root
 Timer values on the
 root switch
 Includes the Hello timer, MaxAge timer, and forward delay timer
-Table end
+Table end.
 For the time being, just keep the first three items from Table 9-4 in mind as the following
 sections work through the three steps in how STP/RSTP chooses the interfaces to place into
 a forwarding state. Next, the text examines the three main steps in the STP/RSTP process.
@@ -8828,7 +8795,7 @@ SW2, Gi0/2 Forwarding The root port of SW2.
 SW2, Gi0/1 Forwarding The designated port on the LAN segment to SW3.
 SW3, Gi0/1 Forwarding The root port of SW3.
 SW3, Gi0/2 Blocking Not the root port and not the designated port.
-Table end
+Table end.
 Note that the examples in this section focus on the links between the switches, but switch
 ports connected to endpoint devices should become DPs and settle into a forwarding state.
 Working through the logic, each switch will forward BPDUs on each port as part of the
@@ -8867,7 +8834,7 @@ Ethernet Speed IEEE Cost: 1998 (and Before) IEEE Cost: 2004 (and After)
 10 Gbps 2 2000
 100 Gbps N/A 200
 1 Tbps N/A 20
-Table end
+Table end.
 Of note in regards to these defaults, the cost defaults based on the operating speed of the
 link, not the maximum speed. That is, if a 10/100/1000 port runs at 10 Mbps for some reason,
 its default STP cost on a Cisco switch is 100, the default cost for an interface running
@@ -8936,7 +8903,7 @@ delay
 changes from blocking state to forwarding state. A port stays in an
 interim listening state, and then an interim learning state, for the
 number of seconds defined by the forward delay timer.
-Table end
+Table end.
 If a switch does not get an expected Hello BPDU within the Hello time, the switch continues
 as normal. However, if the Hellos do not show up again within MaxAge time, the switch
 reacts by taking steps to change the STP topology. With default settings, MaxAge is 20 seconds
@@ -9060,7 +9027,7 @@ Listening No No Transitory
 Learning No Yes Transitory
 Forwarding Yes Yes Stable
 Disabled No No Stable
-Table end
+Table end.
 Rapid STP Concepts
 The original STP worked well given the assumptions about networks and networking devices
 in that era. However, as with any computing or networking standard, as time passes, hardware
@@ -9148,7 +9115,7 @@ Port that replaces the root port when the root port fails Alternate port
 Switch port designated to forward onto a collision domain Designated port
 Port that replaces a designated port when a designated port fails Backup port
 Port that is administratively disabled Disabled port
-Table end
+Table end.
 RSTP differs from STP in a few other ways as well. For instance, with STP, the root switch
 creates a Hello with all other switches, updating and forwarding the Hello. With RSTP,
 each switch independently generates its own Hellos. Additionally, RSTP allows for queries
@@ -9279,7 +9246,7 @@ Interim state with MAC learning and without forwarding Learning Learning
 Stable state that allows MAC learning and forwarding of data
 frames
 Forwarding Forwarding
-Table end
+Table end.
 RSTP also changes some processes and message content (compared to STP) to speed convergence.
 For example, STP waits for a time (forward delay) in both listening and learning states.
 The reason for this delay in STP is that, at the same time, the switches have all been told
@@ -9448,7 +9415,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -9688,7 +9655,7 @@ PVST+ STP 1/VLAN 802.1D pvst
 RSTP RSTP 1 (CST) 802.1w N/A
 Rapid PVST+ RSTP 1/VLAN 802.1w rapid-pvst
 MSTP RSTP 1 or more* 802.1s mst
-Table end
+Table end.
 * MSTP allows the definition of as many instances (multiple spanning tree instances, or MSTIs) as chosen by
 the network designer but does not require one per VLAN.
 Example 10-1 STP Status with Default STP Parameters on SW1 and SW2
@@ -9761,7 +9728,7 @@ Decimal Value 16-bit Binary Equivalent Decimal Value 16-bit Binary Equivalent
 20480 0101 0000 0000 0000 53248 1101 0000 0000 0000
 24576 0110 0000 0000 0000 57344 1110 0000 0000 0000
 28672 0111 0000 0000 0000 61440 1111 0000 0000 0000
-Table end
+Table end.
 Note that while you can set the priority to any of the 16 decimal values in Table 10-3, Cisco
 provides a convenient means to create a primary and secondary root switch concept without
 configuring an actual number. In most LAN designs, only a small number of switches
@@ -10182,7 +10149,7 @@ src-dst-ip Both source and destination IP 3
 src-port Source TCP or UDP port 4
 dst-port Destination TCP or UDP port 4
 src-dst-port Both source and destination TCP or UDP port 4
-Table end
+Table end.
 To appreciate why you might want to use different methods, you need to consider the results
 of how switches make their choice. (The discussion here focuses on the result, and not the
 logic, because the logic remains internal to the switch, and Cisco does not document how
@@ -10333,7 +10300,7 @@ Review config checklists Book, website
 Review command tables Book
 Review memory tables Website
 Do labs Blog
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 Rapid PVST+, PVST+, system ID extension, PAgP, LACP, PortChannel, Channel-group,
@@ -10381,7 +10348,7 @@ mode {auto | desirable | active
 | passive | on}
 Interface subcommand that enables EtherChannel on
 the interface.
-Table end
+Table end.
 Table 10-8 Chapter 10 EXEC Command Reference
 Command Description
 show spanning-tree Lists details about the state of STP on the switch,
@@ -10392,7 +10359,7 @@ show etherchannel [channel-groupnumber]
 | summary}
 Lists information about the state of EtherChannels on
 this switch.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 Keep track of your part review progress with the checklist shown in Table P3-1. Details on
@@ -11069,7 +11036,7 @@ Class of Networks Private IP Networks Number of Networks
 A 10.0.0.0 1
 B 172.16.0.0 through 172.31.0.0 16
 C 192.168.0.0 through 192.168.255.0 256
-Table end
+Table end.
 NOTE According to an informal survey I ran on my blog a few years back, about half of
 the respondents said that their networks use private Class A network 10.0.0.0, as opposed to
 other private networks or public networks.
@@ -11328,7 +11295,7 @@ Subnet Number IP Addresses Broadcast Address
 Skipping many…
 172.16.254.0 172.16.254.1 – 172.16.254.254 172.16.254.255
 172.16.255.0 172.16.255.1 – 172.16.255.254 172.16.255.255
-Table end
+Table end.
 After you have the network number and the mask, calculating the subnet IDs and other
 details for all subnets requires some math. In real life, most people use subnet calculators
 or subnet-planning tools. For the CCNA exam, you need to be ready to find this kind of
@@ -11479,6 +11446,7 @@ Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
 Review All the Key Topics
+Table end.
 Key Terms You Should Know
 subnet, network, classful IP network, variable-length subnet masks (VLSM), network part,
 subnet part, host part, public IP network, private IP network, subnet mask
@@ -11570,7 +11538,7 @@ B 128–191 Unicast (medium-sized networks)
 C 192–223 Unicast (small networks)
 D 224–239 Multicast
 E 240–255 Reserved (formerly experimental)
-Table end
+Table end.
 After you identify the class of a unicast address as either A, B, or C, many other related facts
 can be derived just through memorization. Table 12-3 lists that information for reference and
 later study; each of these concepts is described in this chapter.
@@ -11583,7 +11551,7 @@ Hosts per network 224 – 2 216 – 2 28 – 2
 Octets (bits) in network part 1 (8) 2 (16) 3 (24)
 Octets (bits) in host part 3 (24) 2 (16) 1 (8)
 Default mask 255.0.0.0 255.255.0.0 255.255.255.0
-Table end
+Table end.
 Note that the address ranges of all addresses that begin with 0 and all addresses that begin
 with 127 are reserved. Had they not been reserved since the creation of Class A networks, as
 listed in RFC 791 (published in 1981), then they might have been known as class A networks
@@ -11816,7 +11784,7 @@ Focus on… Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 10 seconds
-Table end
+Table end.
 Practice Deriving Key Facts Based on an IP Address
 Practice finding the various facts that can be derived from an IP address, as discussed
 throughout this chapter. To do so, complete Table 12-5.
@@ -11847,7 +11815,7 @@ Address
 7 192.0.0.1
 8 191.255.1.47
 9 223.223.0.1
-Table end
+Table end.
 The answers are listed in the section “Answers to Earlier Practice Problems,” later in this
 chapter.
 Practice Remembering the Details of Address Classes
@@ -11863,7 +11831,7 @@ B
 C
 D
 E
-Table end
+Table end.
 Table 12-7 Sparse Study Table Version of Table 12-3
 Class A Class B Class C
 First octet range
@@ -11873,7 +11841,7 @@ Hosts per network
 Octets (bits) in network part
 Octets (bits) in host part
 Default mask
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 298 CCNA 200-301 Official Cert Guide, Volume 1
@@ -11894,7 +11862,7 @@ Practice analyzing classful IPv4
 networks
 Website, Appendix D
 Review All the Key Topics
-Table end
+Table end.
 Key Terms You Should Know
 network, classful IP network, network number, network ID, network address, network broadcast
 address, network part, host part, default mask
@@ -11927,7 +11895,7 @@ Network ID Network Broadcast
 7 192.0.0.1 C 3 1 192.0.0.0 192.0.0.255
 8 191.255.1.47 B 2 2 191.255.0.0 191.255.255.255
 9 223.223.0.1 C 3 1 223.223.0.0 223.223.0.255
-Table end
+Table end.
 The class, number of network octets, and number of host octets all require you to look at
 the first octet of the IP address to determine the class. If a value is between 1 and 126, inclusive,
 the address is a Class A address, with one network and three host octets. If a value is
@@ -12126,13 +12094,13 @@ Binary Mask Logic Prefix Mask
 11111111 11111111 11000000 00000000 Count 8 + 8 + 2 = 18 binary 1s /18
 11111111 11111111 11111111 11110000 Count 8 + 8 + 8 + 4 = 28 binary 1s /28
 11111111 11111000 00000000 00000000 Count 8 + 5 = 13 binary 1s /13
-Table end
+Table end.
 Table 13-3 Example Conversions: Prefix to Binary
 Prefix Mask Logic Binary Mask
 /18 Write 18 1s, then 14 0s, total 32 11111111 11111111 11000000 00000000
 /28 Write 28 1s, then 4 0s, total 32 11111111 11111111 11111111 11110000
 /13 Write 13 1s, then 19 0s, total 32 11111111 11111000 00000000 00000000
-Table end
+Table end.
 Converting Between Binary and DDN Masks
 By definition, a dotted-decimal number (DDN) used with IPv4 addressing contains four decimal
 numbers, separated by dots. Each decimal number represents 8 bits. So, a single DDN
@@ -12180,7 +12148,7 @@ Binary 1s
 11111100 252 6
 11111110 254 7
 11111111 255 8
-Table end
+Table end.
 Many subnetting processes can be done with or without binary math. Some of those processes—
 mask conversion included—use the information in Table 13-4. You should plan to
 memorize the information in the table. I recommend making a copy of the table to keep
@@ -12206,7 +12174,7 @@ Binary Mask Logic Decimal Mask
 11111000 maps to 248
 00000000 maps to 0
 255.248.0.0
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 308 CCNA 200-301 Official Cert Guide, Volume 1
@@ -12223,7 +12191,7 @@ Decimal Mask Logic Binary Mask
 248 maps to 11111000
 0 maps to 00000000
 11111111 11111000 00000000 00000000
-Table end
+Table end.
 Converting Between Prefix and DDN Masks
 When you are learning, the best way to convert between the prefix and decimal formats is to
 first convert to binary. For example, to move from decimal to prefix, first convert decimal to
@@ -12272,6 +12240,7 @@ Focus On… Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 10 seconds
+Table end.
 Table 13-8 lists eight practice problems. The table has three columns, one for each mask format.
 Each row lists one mask, in one format. Your job is to find the mask’s value in the other
 two formats for each row. Table 13-12, located in the section “Answers to Earlier Practice
@@ -12286,7 +12255,7 @@ Prefix Binary Mask Decimal
 11111111 11111111 11111100 00000000
 255.254.0.0
 /27
-Table end
+Table end.
 Identifying Subnet Design Choices Using Masks
 Subnet masks have many purposes. In fact, if ten experienced network engineers were independently
 asked, “What is the purpose of a subnet mask?” the engineers would likely give a
@@ -12510,7 +12479,7 @@ Focus On… Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 15 seconds
-Table end
+Table end.
 On a piece of scratch paper, answer the following questions. In each case:
 ¦ Determine the structure of the addresses in each subnet based on the class and mask,
 using classful IP addressing concepts. In other words, find the size of the network, subnet,
@@ -12543,7 +12512,7 @@ Answer DIKTA questions Book, PTP
 Review memory tables Website
 Practice analyzing subnet masks Website, Appendix E
 Review All the Key Topics
-Table end
+Table end.
 Key Terms You Should Know
 binary mask, dotted-decimal notation (DDN), decimal mask, prefix mask, CIDR mask, classful
 addressing, classless addressing
@@ -12573,7 +12542,7 @@ Prefix Binary Mask Decimal
 /22 11111111 11111111 11111100 00000000 255.255.252.0
 /15 11111111 11111110 00000000 00000000 255.254.0.0
 /27 11111111 11111111 11111111 11100000 255.255.255.224
-Table end
+Table end.
 Table 13-13 lists the answers to the practice problems from the earlier section “Practice
 Analyzing Subnet Masks.”
 Table 13-13 Answers to Problems from Earlier in the Chapter
@@ -12583,7 +12552,7 @@ Problem /P Class N S H 2S 2H – 2
 3 199.1.1.100 255.255.255.0 24 C 24 0 8 N/A 254
 4 130.4.102.1 255.255.252.0 22 B 16 6 10 64 1022
 5 199.1.1.100 255.255.255.224 27 C 24 3 5 8 30
-Table end
+Table end.
 The following list reviews the problems:
 1. For 8.1.4.5, the first octet (8) is in the 1–126 range, so it is a Class A address, with 8
 network bits. Mask 255.255.254.0 converts to /23, so P – N = 15, for 15 subnet bits. H
@@ -12798,7 +12767,7 @@ Numeric Value First (smallest) number in the subnet
 Literal Synonyms Subnet number, subnet address, prefix, resident subnet
 Common-Use Synonyms Network, network ID, network number, network address
 Typically Seen In… Routing tables, documentation
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -12829,7 +12798,7 @@ Numeric Value Last (highest) number in the subnet
 Literal Synonyms Directed broadcast address
 Broader-Use Synonyms Network broadcast
 Typically Seen In… In calculations of the range of addresses in a subnet
-Table end
+Table end.
 Range of Usable Addresses
 The engineers implementing an IP internetwork need to know the range of unicast IP
 addresses in each subnet. Before you can plan which addresses to use as statically assigned
@@ -12985,31 +12954,31 @@ Prefix Length /16 11111111 11111111 00000000 00000000
 Address 8.1.4.5 00001000 00000001 00000100 00000101
 Subnet ID 8.1.0.0 00001000 00000001 00000000 00000000
 Broadcast Address 8.1.255.255 00001000 00000001 11111111 11111111
-Table end
+Table end.
 Table 14-5 Subnet Analysis for Subnet with Address 130.4.102.1, Mask 255.255.255.0
 Prefix Length /24 11111111 11111111 11111111 00000000
 Address 130.4.102.1 10000010 00000100 01100110 00000001
 Subnet ID 130.4.102.0 10000010 00000100 01100110 00000000
 Broadcast Address 130.4.102.255 10000010 00000100 01100110 11111111
-Table end
+Table end.
 Table 14-6 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.0
 Prefix Length /24 11111111 11111111 11111111 00000000
 Address 199.1.1.100 11000111 00000001 00000001 01100100
 Subnet ID 199.1.1.0 11000111 00000001 00000001 00000000
 Broadcast Address 199.1.1.255 11000111 00000001 00000001 11111111
-Table end
+Table end.
 Table 14-7 Subnet Analysis for Subnet with Address 130.4.102.1, Mask 255.255.252.0
 Prefix Length /22 11111111 11111111 11111100 00000000
 Address 130.4.102.1 10000010 00000100 01100110 00000001
 Subnet ID 130.4.100.0 10000010 00000100 01100100 00000000
 Broadcast Address 130.4.103.255 10000010 00000100 01100111 11111111
-Table end
+Table end.
 Table 14-8 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.224
 Prefix Length /27 11111111 11111111 11111111 11100000
 Address 199.1.1.100 11000111 00000001 00000001 01100100
 Subnet ID 199.1.1.96 11000111 00000001 00000001 01100000
 Broadcast Address 199.1.1.127 11000111 00000001 00000001 01111111
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 330 CCNA 200-301 Official Cert Guide, Volume 1
@@ -13154,7 +13123,7 @@ IP Address Mask Subnet ID Broadcast Address
 4 10.77.3.14 255.255.0.0
 5 172.22.55.77 255.255.0.0
 6 1.99.53.76 255.0.0.0
-Table end
+Table end.
 Predictability in the Interesting Octet
 Although three masks are easier to work with (255.0.0.0, 255.255.0.0, and 255.255.255.0), the
 rest make the decimal math a little more difficult, so we call these masks difficult masks. With
@@ -13306,7 +13275,7 @@ Problem IP Address Mask Subnet ID
 4 10.77.3.14 255.255.128.0
 5 172.22.55.77 255.255.254.0
 6 1.99.53.76 255.255.255.248
-Table end
+Table end.
 Finding the Subnet Broadcast Address: Difficult Masks
 To find a subnet’s broadcast address, a similar process can be used. For simplicity, this process
 begins with the subnet ID, rather than the IP address. If you happen to start with an IP
@@ -13406,7 +13375,7 @@ Focus On… Learning how Being correct and fast
 Tools Allowed All Your brain and a notepad
 Goal: Accuracy 90% correct 100% correct
 Goal: Speed Any speed 20–30 seconds
-Table end
+Table end.
 A Choice: Memorize or Calculate
 As described in this chapter, the decimal processes to find the subnet ID and subnet broadcast
 address do require some calculation, including the calculation of the magic number (256
@@ -13428,7 +13397,7 @@ Prefix, interesting octet 3 /17 /18 /19 /20 /21 /22 /23 /24
 Prefix, interesting octet 4 /25 /26 /27 /28 /29 /30
 Magic number 128 64 32 16 8 4 2 1
 DDN mask in the interesting octet 128 192 224 240 248 252 254 255
-Table end
+Table end.
 Chapter Review
 One key to doing well on the exams is to perform repetitive spaced review sessions. Review
 this chapter’s material using either the tools in the book or interactive tools for the same
@@ -13444,7 +13413,7 @@ Answer DIKTA questions Book, PTP
 Review memory tables Website
 Practice mask analysis Website, Appendix F
 Practice analyzing existing subnets Website, Appendix F
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 340 CCNA 200-301 Official Cert Guide, Volume 1
@@ -13470,7 +13439,7 @@ IP Address Mask Subnet ID Broadcast Address
 4 10.77.3.14 255.255.0.0 10.77.0.0 10.77.255.255
 5 172.22.55.77 255.255.0.0 172.22.0.0 172.22.255.255
 6 1.99.53.76 255.0.0.0 1.0.0.0 1.255.255.255
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -13484,7 +13453,7 @@ IP Address Mask Subnet ID
 4 10.77.3.14 255.255.128.0 10.77.0.0
 5 172.22.55.77 255.255.254.0 172.22.54.0
 6 1.99.53.76 255.255.255.248 1.99.53.72
-Table end
+Table end.
 The following list explains the answers for Table 14-16:
 1. The second octet is the interesting octet, with magic number 256 – 248 = 8. The multiples
 of 8 include 0, 8, 16, 24, …, 64, 72, and 80. 72 is closest to the IP address value
@@ -13514,7 +13483,7 @@ Subnet ID Mask Broadcast Address
 4 10.77.0.0 255.255.128.0 10.77.127.255
 5 172.22.54.0 255.255.254.0 172.22.55.255
 6 1.99.53.72 255.255.255.248 1.99.53.79
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 342 CCNA 200-301 Official Cert Guide, Volume 1
@@ -14132,7 +14101,7 @@ status code
 Refers generally to the Layer 2 status. It is always down if the line
 status is down. If the line status is up, a protocol status of down is
 usually caused by a mismatched data-link layer configuration.
-Table end
+Table end.
 Several combinations of interface status codes exist, as summarized in Table 15-3. The table
 lists the status codes in order, from being disabled on purpose by the configuration to a fully
 working state.
@@ -14154,7 +14123,7 @@ configuration problems. For example, serial links have this
 combination when one router was configured to use PPP and
 the other defaults to use HDLC.
 Up Up Layer 1 and Layer 2 of this interface are functioning.
-Table end
+Table end.
 For some examples, look back at Example 15-1’s show ip interface brief command, to the
 three interfaces in the following list. The interfaces in this list each have a different combination
 of interface status codes; the list details the specific reasons for this status code in the
@@ -14248,7 +14217,7 @@ Listed?
 show ip interface brief 1 Address Yes
 show protocols [type number] 1 or 2 Address/mask Yes
 show interfaces [type number] Many Address/mask Yes
-Table end
+Table end.
 Bandwidth and Clock Rate on Serial Interfaces
 Cisco has included serial WAN topics in the CCNA exam topic list since its inception in
 1998 until the CCNA 200-301 release in the year 2019. Because the CCNA 200-301 exam
@@ -14293,7 +14262,7 @@ Review command tables Book
 Review memory tables Website
 Do labs Blog
 Watch video Website
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -14323,7 +14292,7 @@ that sets the speed at which the router interface sends and receives
 data.
 description text An interface subcommand with which you can type a string of
 text to document information about that particular interface.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 364 CCNA 200-301 Official Cert Guide, Volume 1
@@ -14338,7 +14307,7 @@ Dynamic Host Configuration Protocol [DHCP]).
 show protocols [type number] Lists information about the listed interface (or all interfaces
 if the interface is omitted), including the IP address, mask,
 and line/protocol status.
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -15328,7 +15297,7 @@ Chapter 16: Configuring IPv4 Addresses and Static Routes 387
 the route the router will choose. To let you see how to use this option, Example 16-8 shows
 a series of overlapping routes, all created with OSPF, so the output lists only OSPF-learned
 routes.
-Example 16-8 show ip route Command with Overlapping Routes
+Example 16-8 Show ip route Command with Overlapping Routes
 R1# show ip route ospf
 Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
 D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
@@ -15358,7 +15327,7 @@ Subnet/Prefix Address Range
 172.16.0.0/22 172.16.0.0 – 172.16.3.255
 172.16.0.0/16 172.16.0.0 – 172.16.255.255
 0.0.0.0/0 0.0.0.0 – 255.255.255.255 (all addresses)
-Table end
+Table end.
 NOTE The route listed as 0.0.0.0/0 is the default route.
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -15388,7 +15357,7 @@ on the same router used in Example 24-4. The first line of (highlighted) output 
 matched route: the route to 172.16.0.0/16. The rest of the output lists the details of that particular
 route, like the outgoing interface of GigabitEthernet0/1/0 and the next-hop router of
 172.16.25.129.
-Example 16-9 show ip route Command with Overlapping Routes
+Example 16-9 Show ip route Command with Overlapping Routes
 R1# show ip route 172.16.4.3
 Routing entry for 172.16.0.0/16
 Known via "ospf 1", distance 110, metric 65, type intra area
@@ -15460,7 +15429,7 @@ route was first learned.
 interface
 Serial0/0/1 For packets matching this route, the interface out
 which the packet should be forwarded.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 390 CCNA 200-301 Official Cert Guide, Volume 1
@@ -15478,7 +15447,7 @@ Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review command tables Book
 Do labs Blog
-Table end
+Table end.
 Review All the Key Topics
 Technet24
 ||||||||||||||||||||
@@ -15507,7 +15476,7 @@ interface-type interface-number} [distance]
 [permanent]
 Global configuration command that creates a
 static route
-Table end
+Table end.
 Table 16-7 Chapter 16 EXEC Command Reference
 Command Description
 show ip route Lists the router’s entire routing table
@@ -15520,7 +15489,7 @@ show arp, show ip arp Lists the router’s IPv4 ARP table
 clear ip arp [ip-address] Removes all dynamically learned ARP table entries, or if the
 command lists an IP address, removes the entry for that IP
 address only
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 Chapter 17 IP Routing in the LAN
@@ -16550,7 +16519,7 @@ Review config checklists Book, website
 Review command tables Book
 Do labs Blog
 Watch video Website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 router-on-a-stick (ROAS), switched virtual interface (SVI), VLAN interface, Layer
@@ -16594,7 +16563,7 @@ mode {auto | desirable | active |
 passive | on}
 Interface subcommand that enables EtherChannel on the
 interface
-Table end
+Table end.
 Table 17-5 Chapter 17 EXEC Command Reference
 Command Description
 show ip route Lists the router’s entire routing table
@@ -16624,7 +16593,7 @@ number] summary
 Lists information about the state of EtherChannels on
 this switch, including whether the channel is a Layer 2 or
 Layer 3 EtherChannel
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -17416,7 +17385,7 @@ Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Watch video Website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 ping, traceroute, ICMP echo request, ICMP echo reply, extended ping, forward route, reverse
@@ -17771,7 +17740,7 @@ EIGRP Calculation based on
 bandwidth and delay
 Calculated based on the route’s slowest link and the
 cumulative delay associated with each interface in the route
-Table end
+Table end.
 A brief comparison of the metric used by the older RIP versus the metric used by OSPF
 shows some insight into why OSPF and EIGRP surpassed RIP. Figure 19-3 shows an example
 Technet24
@@ -17826,7 +17795,7 @@ Supports manual summarization Yes Yes Yes
 Cisco-proprietary No Yes1 No
 Routing updates are sent to a multicast IP address Yes Yes Yes
 Convergence Slow Fast Fast
-Table end
+Table end.
 1 Although Cisco created EIGRP and has kept it as a proprietary protocol for many years, Cisco chose to
 publish EIGRP as an informational RFC in 2013. This allows other vendors to implement EIGRP, while Cisco
 retains the rights to the protocol.
@@ -17886,7 +17855,7 @@ EIGRP (external routes) 170
 BGP (internal routes [iBGP]) 200
 DHCP default route 254
 Unusable 255
-Table end
+Table end.
 NOTE The show ip route command lists each route’s administrative distance as the first of
 the two numbers inside the brackets. The second number in brackets is the metric.
 The table shows the default administrative distance values, but IOS can be configured
@@ -18258,7 +18227,7 @@ Neighbor State Term for Neighbor Term for Relationship
 Full Adjacent Neighbor
 Fully Adjacent Neighbor
 Adjacency
-Table end
+Table end.
 Calculating the Best Routes with SPF
 OSPF LSAs contain useful information, but they do not contain the specific information
 that a router needs to add to its IPv4 routing table. In other words, a router cannot just copy
@@ -18315,7 +18284,7 @@ Route Location in Figure 19-11 Cumulative Cost
 R1–R7–R8 Left 10 + 180 + 10 = 200
 R1–R5–R6–R8 Middle 20 + 30 + 40 + 10 = 100
 R1–R2–R3–R4–R8 Right 30 + 60 + 20 + 5 + 10 = 125
-Table end
+Table end.
 As a result of the SPF algorithm’s analysis of the LSDB, R1 adds a route to subnet
 172.16.3.0/24 to its routing table, with the next-hop router of R5.
 In real OSPF networks, an engineer can do the same process by knowing the OSPF cost for
@@ -18416,7 +18385,7 @@ information, but not with routers in other areas, for better efficiency
 Backbone area A special OSPF area to which all other areas must connect—area 0
 Intra-area route A route to a subnet inside the same area as the router
 Interarea route A route to a subnet in an area of which the router is not a part
-Table end
+Table end.
 How Areas Reduce SPF Calculation Time
 Figure 19-13 shows a sample area design and some terminology related to areas, but it does
 not show the power and benefit of the areas. To understand how areas reduce the work SPF
@@ -18501,7 +18470,7 @@ Summary 3 Describe a subnet in another
 area
 Subnet ID, mask, RID of ABR that
 advertises the LSA
-Table end
+Table end.
 Router LSAs Build Most of the Intra-Area Topology
 OSPF needs very detailed topology information inside each area. The routers inside area X
 need to know all the details about the topology inside area X. And the mechanism to give
@@ -18620,7 +18589,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 convergence, Shortest Path First (SPF) algorithm, distance vector, Interior Gateway Protocol
@@ -18907,7 +18876,7 @@ G0/1/0
 G0/2/0
 network 10.1.13.0 0.0.0.255 Match addresses that begin with 10.1.13 G0/1/0
 network 10.1.13.1 0.0.0.0 Match one address: 10.1.13.1 G0/1/0
-Table end
+Table end.
 The wildcard mask gives the local router its rules for matching its own interfaces. To show
 examples of the different options, Example 20-3 shows the configuration on routers R2,
 R3, and R4, each using different wildcard masks. Note that all three routers (R2, R3, and R4)
@@ -19743,7 +19712,7 @@ Fast Ethernet 100,000 Kbps 100,000/100,000 1
 Gigabit Ethernet 1,000,000 Kbps 100,000/1,000,000 1
 10 Gigabit Ethernet 10,000,000 Kbps 100,000/10,000,000 1
 100 Gigabit Ethernet 100,000,000 Kbps 100,000/100,000,000 1
-Table end
+Table end.
 As you can see from the table, with a default reference bandwidth, all interfaces from Fast
 Ethernet’s 100 Mbps and faster tie with their default OSPF cost. As a result, OSPF would
 treat a 100-Mbps link as having the same cost as a 10- or 100-Gbps link, which is probably
@@ -19810,7 +19779,7 @@ Answer DIKTA questions Book, PTP
 Review Config Checklists Book, website
 Review command tables Book
 Do labs Blog
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -19824,6 +19793,7 @@ Tables 20-6 and 20-7 list configuration and verification commands used in this c
 easy review exercise, cover the left column in a table, read the right column, and try to recall
 the command without looking. Then repeat the exercise, covering the right column, and try
 to recall what the command does.
+Table end.
 Table 20-6 Chapter 20 Configuration Command Reference
 Command Description
 router ospf process-id Router subcommand that enters OSPF configuration mode
@@ -19872,7 +19842,7 @@ OSPF subcommand to tell OSPF to create and advertise an
 OSPF default route, as long as the router has some default
 route (or to always advertise a default, if the always option is
 configured).
-Table end
+Table end.
 Table 20-7 Chapter 20 EXEC Command Reference
 Command Description
 show ip ospf Lists information about the OSPF process running on the
@@ -19887,7 +19857,7 @@ Lists a long section of settings, status, and counters for OSPF
 operation on all interfaces, or on the listed interface, including
 the Hello and Dead Timers.
 show ip protocols Shows routing protocol parameters and current timer values.
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -20032,7 +20002,7 @@ Table 21-2 Two OSPF Network Types and Key Behaviors
 Network Type Keyword Dynamically Discovers Neighbors Uses a DR/BDR
 broadcast Yes Yes
 point-to-point Yes No
-Table end
+Table end.
 The rest of this first major section of the chapter explores each type.
 The OSPF Broadcast Network Type
 OSPF defaults to use a broadcast network type on all types of Ethernet interfaces. Note
@@ -20411,7 +20381,7 @@ They must be in the same area. Yes Yes
 OSPF process must not be shut down. Yes Yes
 Neighboring interfaces must use same MTU setting. Yes No
 Neighboring interfaces must use same OSPF network type. Yes No
-Table end
+Table end.
 First, consider the meaning of the two rightmost columns. The column labeled “Required for
 OSPF” means that the item must be working correctly for the neighbor relationship to work
 correctly. Note that all the items in this column list a “yes,” meaning that all must be correct
@@ -20447,7 +20417,7 @@ They must be in the same area. show ip ospf interface brief
 RIDs must be unique. show ip ospf
 They must pass any neighbor authentication. show ip ospf interface
 OSPF process must not be shut down. show ip ospf, show ip ospf interface
-Table end
+Table end.
 The rest of this section looks at some of the items from Table 21-3 in a little more detail.
 NOTE One configuration choice that people sometimes think is an issue, but is not, is the
 process ID as defined by the router ospf process-id command. Neighboring routers can use
@@ -20731,7 +20701,7 @@ Review key topics Book, website
 Review command tables Book
 Review memory tables Website
 Watch video Website
-Table end
+Table end.
 Review All the Key Topics
 Command References
 Tables 21-7 and 21-8 list configuration and verification commands used in this chapter. As an
@@ -20753,7 +20723,7 @@ Interface subcommand used to set the OSPF network type
 on the interface
 [no] shutdown An OSPF configuration mode command to disable
 (shutdown) or enable (no shutdown) the OSPF process
-Table end
+Table end.
 Table 21-8 Chapter 21 show Command Reference
 Command Description
 show ip protocols Shows routing protocol parameters and current timer values,
@@ -20771,7 +20741,7 @@ show ip ospf Lists a group of messages about the OSPF process itself,
 listing the OSPF Router ID in the first line
 show interfaces Lists a long set of messages, per interface, that lists
 configuration, state, and counter information
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 Keep track of your part review progress with the checklist in Table P6-1. Details about each
@@ -21206,7 +21176,7 @@ BGP version 4)
 RFC BGP version 4 was created to be highly extendable; IPv6
 support was added to BGP version 4 through one such
 enhancement, MP BGP-4.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 530 CCNA 200-301 Official Cert Guide, Volume 1
@@ -21261,7 +21231,7 @@ Hex Binary Hex Binary
 5 0101 D 1101
 6 0110 E 1110
 7 0111 F 1111
-Table end
+Table end.
 Abbreviating and Expanding IPv6 Addresses
 IPv6 also defines ways to abbreviate or shorten how you write or type an IPv6 address.
 Why? Although using a 32-digit hex number works much better than working with a 128-bit
@@ -21330,7 +21300,7 @@ Full Abbreviation
 34BA:B:B::20
 FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE
 FE80::FACE:BAFF:FEBE:CAFE
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -21425,7 +21395,7 @@ Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/64
 3124::DEAD:CAFE:FF:FE00:1/64
 2BCD::FACE:BEFF:FEBE:CAFE/64
-Table end
+Table end.
 Working with More-Difficult IPv6 Prefix Lengths
 Some prefix lengths make the math to find the prefix very easy, some mostly easy, and some
 require you to work in binary. If the prefix length is a multiple of 16, the process of copying
@@ -21466,7 +21436,7 @@ Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/36
 3124::DEAD:CAFE:FF:FE00:1/60
 2BCD::FACE:1:BEFF:FEBE:CAFE/56
-Table end
+Table end.
 Chapter Review
 One key to doing well on the exams is to perform repetitive spaced review sessions. Review
 this chapter’s material using either the tools in the book or interactive tools for the same material
@@ -21481,7 +21451,7 @@ Repeat DIKTA questions Book, PTP
 Review command tables Book
 Review memory table Book, website
 Review All the Key Topics
-Table end
+Table end.
 Table 22-8 Key Topics for Chapter 22
 Key Topic
 Element
@@ -21493,7 +21463,7 @@ List Rules for expanding an abbreviated IPv6 address 532
 List Process steps to find an IPv6 prefix, based on the IPv6 address and
 prefix length
 533
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -21524,7 +21494,7 @@ Full Abbreviation
 34BA:000B:000B:0000:0000:0000:0000:0020 34BA:B:B::20
 FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE FE80::DEAD:BEFF:FEEF:CAFE
 FE80:0000:0000:0000:FACE:BAFF:FEBE:CAFE FE80::FACE:BAFF:FEBE:CAFE
-Table end
+Table end.
 Table 22-10 Answers to Questions in the Earlier Table 22-5
 Address/Length Prefix
 2340:0:10:100:1000:ABCD:101:1010/64 2340:0:10:100::/64
@@ -21535,7 +21505,7 @@ Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/64 34BA:B:B::/64
 3124::DEAD:CAFE:FF:FE00:1/64 3124:0:0:DEAD::/64
 2BCD::FACE:BEFF:FEBE:CAFE/64 2BCD::/64
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 538 CCNA 200-301 Official Cert Guide, Volume 1
@@ -21549,7 +21519,7 @@ Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/36 34BA:B::/36
 3124::DEAD:CAFE:FF:FE00:1/60 3124:0:0:DEA0::/60
 2BCD::FACE:1:BEFF:FEBE:CAFE/56 2BCD:0:0:FA00::/56
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -21800,7 +21770,7 @@ Global unicast 2 or 3 (originally); all not otherwise reserved (today)
 Unique local FD
 Multicast FF
 Link local FE80
-Table end
+Table end.
 IPv6 Subnetting Using Global Unicast Addresses
 After an enterprise has a block of reserved global unicast addresses—in other words, a global
 routing prefix—the company needs to subdivide that large address block into subnets.
@@ -22165,7 +22135,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory table Website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 global unicast address, global routing prefix, unique local address, subnet ID (prefix ID), subnet
@@ -22632,7 +22602,7 @@ Prefix MAC Address Unabbreviated IPv6 Address
 2001:DB8:1:1::/64 B80C.BEEF.CAFE
 2001:DB8:FE:FE::/64 0C0C.ABAC.CABA
 2001:DB8:FE:FE::/64 0A0C.ABAC.CABA
-Table end
+Table end.
 Configuring a router interface to use the EUI-64 format uses the ipv6 address address/
 prefix-length eui-64 interface subcommand. The eui-64 keyword tells the router to find the
 interface MAC address and do the EUI-64 conversion math to find the interface ID.
@@ -22937,7 +22907,7 @@ FF02::A All routers using EIGRP for IPv6 (EIGRPv6) 224.0.0.10
 DHCP Relay
 Agent
 FF02::1:2 All routers acting as a DHCPv6 relay agent None
-Table end
+Table end.
 NOTE An Internet search of “IPv6 Multicast Address Space Registry” will show the IANA
 page that lists all the reserved values and the RFC that defines the use of each address.
 Example 24-8 repeats the output of the show ipv6 interface command to show the multicast
@@ -23009,7 +22979,7 @@ Intended to be broad, probably for an entire
 company or organization. Must be broader than
 Site-Local.
 Global FF0E No Boundaries No boundaries.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 572 CCNA 200-301 Official Cert Guide, Volume 1
@@ -23207,7 +23177,7 @@ routing protocol is enabled on the interface
 Solicited-node
 multicast
 FF02::1:FF /104 Autogenerated by all ipv6 address commands
-Table end
+Table end.
 Chapter Review
 One key to doing well on the exams is to perform repetitive spaced review sessions. Review
 this chapter’s material using either the tools in the book or interactive tools for the same
@@ -23229,7 +23199,7 @@ Review command tables Book
 Review memory tables Website
 Do labs Blog
 Watch video Website
-Table end
+Table end.
 Review All the Key Topics
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -23276,7 +23246,7 @@ address.
 ipv6 address dhcp Interface subcommand that enables IPv6 on an interface, causes
 the router to use DHCP client processes to try to lease an IPv6
 address, and creates a link-local address for the interface.
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -23296,7 +23266,7 @@ show ipv6 interface brief
 [type number]
 Lists interface status and IPv6 addresses for each interface (or
 for the listed interface).
-Table end
+Table end.
 Answers to Earlier Practice Problems
 Table 24-2, earlier in this chapter, listed several practice problems in which you needed to
 calculate the IPv6 address based on EUI-64 rules. Table 24-10 lists the answers to those
@@ -23309,7 +23279,7 @@ Prefix MAC Address Unabbreviated IPv6 Address
 2001:DB8:1:1::/64 B80C.BEEF.CAFE 2001:DB8:1:1:BA0C:BEFF:FEEF:CAFE
 2001:DB8:FE:FE::/64 0C0C.ABAC.CABA 2001:DB8:FE:FE:0E0C:ABFF:FEAC:CABA
 2001:DB8:FE:FE::/64 0A0C.ABAC.CABA 2001:DB8:FE:FE:080C:ABFF:FEAC:CABA
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 Chapter 25 Implementing IPv6 Routing
@@ -24015,7 +23985,7 @@ EIGRP 90
 OSPF 110
 RIP 120
 Unknown or unbelievable 255
-Table end
+Table end.
 Troubleshooting Static IPv6 Routes
 IPv6 static routes have the same potential issues and mistakes as do static IPv4 routes, as
 discussed in Chapter 16. However, IPv6 static routes do have a few small differences. This
@@ -24082,7 +24052,7 @@ Technet24
 Chapter 25: Implementing IPv6 Routing 597
 troubleshooting checklist. Look for the short comment at the end of each configuration
 command to see why each is incorrect.
-Example 25-17 ipv6 route Commands with Correct Syntax but Incorrect Ideas
+Example 25-17 IPv6 route Commands with Correct Syntax but Incorrect Ideas
 ipv6 route 2001:DB8:9:33::/64 2001:DB8:9:2::2 ! Step 1: Wrong prefix
 ipv6 route 2001:DB8:9:3::/64 G0/2 FE80::AAA9 ! Step 2A: Wrong neighbor link local
 ipv6 route 2001:DB8:9:3::/64 FE80::2 ! Step 2B: Missing outgoing interface
@@ -24377,7 +24347,7 @@ NS and NA Any IPv6 host Any IPv6
 host
 Simple confirmation whether a
 unicast address is already in use
-Table end
+Table end.
 Chapter Review
 One key to doing well on the exams is to perform repetitive spaced review sessions. Review
 this chapter’s material using either the tools in the book or interactive tools for the same
@@ -24392,7 +24362,7 @@ Answer DIKTA questions Book, PTP
 Review command tables Book
 Review memory tables Book, website
 Do labs Blog
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 604 CCNA 200-301 Official Cert Guide, Volume 1
@@ -24434,7 +24404,7 @@ ipv6 address autoconfig [default] Interface subcommand that tells the router to 
 to find/build its own interface IPv6 address, and with the
 default parameter, to add a default route with a next hop
 of the router that responds with the RA message.
-Table end
+Table end.
 Table 25-7 Chapter 25 EXEC Command Reference
 Command Description
 show ipv6 route [connected |
@@ -24446,7 +24416,7 @@ command.
 show ipv6 neighbors Lists the contents of the IPv6 neighbor table, which lists the
 MAC address associated with IPv6 addresses on common
 subnets.
-Table end
+Table end.
 ||||||||||||||||||||
 ||||||||||||||||||||
 Keep track of your part review progress with the checklist in Table P7-1. Details on each
@@ -25049,7 +25019,7 @@ Hertz Hz Cycles per second
 Kilohertz kHz 1000 Hz
 Megahertz MHz 1,000,000 Hz
 Gigahertz GHz 1,000,000,000 Hz
-Table end
+Table end.
 Figure 26-20 shows a simple representation of the continuous frequency spectrum ranging
 from 0 Hz to 1022 (or 1 followed by 22 zeros) Hz. At the low end of the spectrum are
 frequencies that are too low to be heard by the human ear, followed by audible sounds. The
@@ -25202,7 +25172,7 @@ Notes
 802.11ax Yes Yes 4x 802.11ac High Efficiency Wireless, Wi-Fi6; expected late
 2019; will operate on other bands too, as they
 become available
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -25253,7 +25223,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
-Table end
+Table end.
 Review All the Key Topics
 Key Terms You Should Know
 access point (AP), ad hoc network, Band, basic service set (BSS), Basic Service Set Identifier
@@ -25767,7 +25737,7 @@ Cloud DC 3000 32,000 Private cloud
 Embedded Access 200 4000 Small campus
 Mobility Express Other 100 2000 Branch location
 Autonomous N/A N/A N/A N/A
-Table end
+Table end.
 Technet24
 ||||||||||||||||||||
 ||||||||||||||||||||
@@ -25819,7 +25789,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
-Table end
+Table end.
 Review All the Key Topics
 Review the most important topics in this chapter, noted with the Key Topic icon in the outer
 margin of the page. Table 27-4 lists a reference of these key topics and the page numbers on
@@ -26359,7 +26329,7 @@ Authentication with 802.1x? Yes Yes Yes
 Encryption and MIC with TKIP? Yes No No
 Encryption and MIC with AES and CCMP? Yes Yes No
 Encryption and MIC with AES and GCMP? No No Yes
-Table end
+Table end.
 * WPA3 includes other features beyond WPA and WPA2, such as Simultaneous Authentication of Equals
 (SAE), Forward secrecy, and Protected management frames (PMF).
 Notice that all three WPA versions support two client authentication modes: a pre-shared
@@ -26463,7 +26433,7 @@ N/A
 GCMP Galois/Counter
 Mode Protocol
 N/A
-Table end
+Table end.
 You should also review this chapter’s material using either the tools in the book or the
 interactive tools for the same material found on the book’s companion website. Table 28-4
 outlines the key review elements and where you can find them. To better track your study
@@ -26479,7 +26449,7 @@ Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
-Table end
+Table end.
 Review All the Key Topics
 Review the most important topics in this chapter, noted with the Key Topic icon in the outer
 margin of the page. Table 28-5 lists a reference of these key topics and the page numbers on
@@ -26980,7 +26950,7 @@ Static WEP WEP key security
 Static WEP + 802.1x EAP authentication or static WEP
 CKIP Cisco Key Integrity Protocol
 None + EAP Passthrough Open authentication with remote EAP authentication
-Table end
+Table end.
 As you select a security type, be sure to remember which choices are types that have been
 deprecated or proven to be weak, and avoid them if possible. Further down the screen, you
 can select which specific WPA, WPA2, and WPA3 methods to support on the WLAN. You
@@ -27090,7 +27060,7 @@ Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
-Table end
+Table end.
 Review All the Key Topics
 Review the most important topics in this chapter, noted with the Key Topic icon in the outer
 margin of the page. Table 29-4 lists a reference of these key topics and the page numbers on

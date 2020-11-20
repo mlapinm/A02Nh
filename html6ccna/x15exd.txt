@@ -1,0 +1,2436 @@
+Example 4-1 Example of Privileged Mode Commands Being Rejected in User Mode
+Press RETURN to get started.
+User Access Verification
+Password:
+Certskills1>
+Certskills1> reload
+Translating "reload"
+% Unknown command or computer name, or unable to find computer address
+Certskills1> enable
+Password:
+Certskills1#
+Certskills1# reload
+Proceed with reload? [confirm] y
+00:08:42: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+Example 4-2 Nondefault Basic Configuration
+Certskills1# show running-config
+! Output has been formatted to show only the parts relevant to this discussion
+hostname Certskills1
+!
+enable secret love
+!
+line console 0
+login
+password faith
+! The rest of the output has been omitted
+Certskills1#
+Example 4-3 Nondefault Basic Configuration
+Certskills1> show mac address-table dynamic
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+31 0200.1111.1111 DYNAMIC Gi0/1
+31 0200.3333.3333 DYNAMIC Fa0/3
+31 1833.9d7b.0e9a DYNAMIC Gi0/1
+10 1833.9d7b.0e9a DYNAMIC Gi0/1
+10 30f7.0d29.8561 DYNAMIC Gi0/1
+1 1833.9d7b.0e9a DYNAMIC Gi0/1
+12 1833.9d7b.0e9a DYNAMIC Gi0/1
+Total Mac Addresses for this criterion: 7
+Certskills1>
+Example 4-4 Navigating Between Different Configuration Modes
+Switch# configure terminal
+Switch(config)# hostname Fred
+Fred(config)# line console 0
+Fred(config-line)# password hope
+Fred(config-line)# interface FastEthernet 0/1
+Fred(config-if)# speed 100
+Fred(config-if)# exit
+Fred(config)#
+Example 4-5 How Configuration Mode Commands Change the Running-Config File,
+Not the Startup-Config File
+! Step 1 next (two commands)
+!
+hannah# show running-config
+! (lines omitted)
+hostname hannah
+! (rest of lines omitted)
+hannah# show startup-config
+! (lines omitted)
+hostname hannah
+! (rest of lines omitted)
+! Step 2 next. Notice that the command prompt changes immediately after
+! the hostname command.
+hannah# configure terminal
+hannah(config)# hostname harold
+harold(config)# exit
+! Step 3 next (two commands)
+!
+harold# show running-config
+! (lines omitted) - just showing the part with the hostname command
+hostname harold
+!
+harold# show startup-config
+! (lines omitted) - just showing the part with the hostname command
+hostname hannah
+Example 5-1 Show mac address-table dynamic for Figure 5-7
+SW1# show mac address-table dynamic
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+1 0200.1111.1111 DYNAMIC Fa0/1
+1 0200.2222.2222 DYNAMIC Fa0/2
+1 0200.3333.3333 DYNAMIC Fa0/3
+1 0200.4444.4444 DYNAMIC Fa0/4
+Total Mac Addresses for this criterion: 4
+SW1#
+Example 5-2 Show interfaces status on Switch SW1
+SW1# show interfaces status
+Port Name Status Vlan Duplex Speed Type
+Fa0/1 connected 1 a-full a-100 10/100BaseTX
+Fa0/2 connected 1 a-full a-100 10/100BaseTX
+Fa0/3 connected 1 a-full a-100 10/100BaseTX
+Fa0/4 connected 1 a-full a-100 10/100BaseTX
+Fa0/5 notconnect 1 auto auto 10/100BaseTX
+Fa0/6 notconnect 1 auto auto 10/100BaseTX
+Fa0/7 notconnect 1 auto auto 10/100BaseTX
+Fa0/8 notconnect 1 auto auto 10/100BaseTX
+Fa0/9 notconnect 1 auto auto 10/100BaseTX
+Fa0/10 notconnect 1 auto auto 10/100BaseTX
+Fa0/11 notconnect 1 auto auto 10/100BaseTX
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+5
+Chapter 5: Analyzing Ethernet LAN Switching 119
+Fa0/12 notconnect 1 auto auto 10/100BaseTX
+Fa0/13 notconnect 1 auto auto 10/100BaseTX
+Fa0/14 notconnect 1 auto auto 10/100BaseTX
+Fa0/15 notconnect 1 auto auto 10/100BaseTX
+Fa0/16 notconnect 1 auto auto 10/100BaseTX
+Fa0/17 notconnect 1 auto auto 10/100BaseTX
+Fa0/18 notconnect 1 auto auto 10/100BaseTX
+Fa0/19 notconnect 1 auto auto 10/100BaseTX
+Fa0/20 notconnect 1 auto auto 10/100BaseTX
+Fa0/21 notconnect 1 auto auto 10/100BaseTX
+Fa0/22 notconnect 1 auto auto 10/100BaseTX
+Fa0/23 notconnect 1 auto auto 10/100BaseTX
+Fa0/24 notconnect 1 auto auto 10/100BaseTX
+Gi0/1 notconnect 1 auto auto 10/100/1000BaseTX
+Gi0/2 notconnect 1 auto auto 10/100/1000BaseTX
+SW1#
+Example 5-3 Show interfaces f0/1 counters on Switch SW1
+SW1# show interfaces f0/1 counters
+Port InOctets InUcastPkts InMcastPkts InBcastPkts
+Fa0/1 1223303 10264 107 18
+Port OutOctets OutUcastPkts OutMcastPkts OutBcastPkts
+Fa0/1 3235055 13886 22940 437
+Example 5-4 Show mac address-table dynamic with the address Keyword
+SW1# show mac address-table dynamic address 0200.1111.1111
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+1 0200.1111.1111 DYNAMIC Fa0/1
+Total Mac Addresses for this criterion: 1
+Example 5-5 Show mac address-table dynamic with the interface Keyword
+SW1# show mac address-table dynamic interface fastEthernet 0/1
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+1 0200.1111.1111 DYNAMIC Fa0/1
+Total Mac Addresses for this criterion: 1
+Example 5-6 The show mac address-table vlan Command
+SW1# show mac address-table dynamic vlan 1
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+1 0200.1111.1111 DYNAMIC Fa0/1
+1 0200.2222.2222 DYNAMIC Fa0/2
+1 0200.3333.3333 DYNAMIC Fa0/3
+1 0200.4444.4444 DYNAMIC Fa0/4
+Total Mac Addresses for this criterion: 4
+SW1#
+SW1# show mac address-table dynamic vlan 2
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+SW1#
+Example 5-7 The MAC Address Default Aging Timer Displayed
+SW1# show mac address-table aging-time
+Global Aging Time: 300
+Vlan Aging Time
+---- ----------
+SW1#
+SW1# show mac address-table count
+Mac Entries for Vlan 1:
+---------------------------
+Dynamic Address Count : 4
+Static Address Count : 0
+Total Mac Addresses : 4
+Total Mac Address Space Available: 7299
+Example 5-8 The MAC Address Table on Two Switches
+SW1# show mac address-table dynamic
+Mac Address Table
+-------------------------------------------
+Vlan Mac Address Type Ports
+---- ----------- -------- -----
+1 0200.1111.1111 DYNAMIC Fa0/1
+1 0200.2222.2222 DYNAMIC Fa0/2
+1 0200.3333.3333 DYNAMIC Gi0/1
+1 0200.4444.4444 DYNAMIC Gi0/1
+Total Mac Addresses for this criterion: 4
+! The next output is from switch SW2
+SW2# show mac address-table dynamic
+1 0200.1111.1111 DYNAMIC Gi0/2
+||||||||||||||||||||
+||||||||||||||||||||
+124 CCNA 200-301 Official Cert Guide, Volume 1
+1 0200.2222.2222 DYNAMIC Gi0/2
+1 0200.3333.3333 DYNAMIC Fa0/3
+1 0200.4444.4444 DYNAMIC Fa0/4
+Total Mac Addresses for this criterion: 4
+Example 6-1 Console Login and Movement to Enable Mode
+(User now presses enter now to start the process. This line of text does not appear.)
+User Access Verification
+Password: faith
+Switch> enable
+Password: love
+Switch#
+Example 6-2 Configuring Basic Passwords
+! Enter global configuration mode, set the enable password, and also
+! set the hostname (just because it makes sense to do so)
+!
+Switch# configure terminal
+Switch(config)# enable secret love
+!
+! At Step 2 in the checklist, enter console configuration mode, set the
+! password value to "faith" and enable simple passwords for the console.
+! The exit command moves the user back to global config mode.
+!
+Switch#(config)# line console 0
+Switch#(config-line)# password faith
+Switch#(config-line)# login
+Switch#(config-line)# exit
+!
+! The next few lines do basically the same configuration, except it is
+! for the vty lines. Telnet users will use "hope" to login.
+!
+Switch#(config)# line vty 0 15
+Switch#(config-line)# password hope
+Switch#(config-line)# login
+Switch#(config-line)# end
+Switch#
+Example 6-3 Resulting Running-Config File (Subset) Per Example 6-2 Configuration
+Switch# show running-config
+!
+Building configuration...
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+6
+Chapter 6: Configuring Basic Switch Management 133
+Current configuration: 1333 bytes
+!
+version 12.2
+!
+enable secret 5 $1$OwtI$A58c2XgqWyDNeDnv51mNR.
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+! Several lines have been omitted here - in particular, lines for
+! FastEthernet interfaces 0/3 through 0/23.
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+line con 0
+password faith
+login
+!
+line vty 0 4
+password hope
+login
+!
+line vty 5 15
+password hope
+login
+Example 6-4 Telnet Login Process After Applying Configuration in Figure 6-3
+SW2# telnet 10.9.9.19
+Trying 10.9.9.19 ... Open
+User Access Verification
+Username: wendell
+Password:
+SW1> enable
+Password:
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)#^Z
+SW1#
+*Mar 1 02:00:56.229: %SYS-5-CONFIG_I: Configured from console by wendell on vty0
+(10.9.9.19)
+Example 6-5 SSH Configuration Process to Match Figure 6-5
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+!
+! Step 1 next. The hostname is already set, but it is repeated just
+! to be obvious about the steps.
+!
+SW1(config)# hostname SW1
+SW1(config)# ip domain-name example.com
+SW1(config)# crypto key generate rsa
+The name for the keys will be: SW1.example.com
+Choose the size of the key modulus in the range of 360 to 2048 for your
+General Purpose Keys. Choosing a key modulus greater than 512 may take
+a few minutes.
+||||||||||||||||||||
+||||||||||||||||||||
+138 CCNA 200-301 Official Cert Guide, Volume 1
+How many bits in the modulus [512]: 1024
+% Generating 1024 bit RSA keys, keys will be non-exportable...
+[OK] (elapsed time was 4 seconds)
+SW1(config)#
+!
+! Optionally, set the SSH version to version 2 (only) - preferred
+!
+SW1(config)# ip ssh version 2
+!
+! Next, configure the vty lines for local username support, just like
+! with Telnet
+!
+SW1(config)# line vty 0 15
+SW1(config-line)# login local
+SW1(config-line)# exit
+!
+! Define the local usernames, just like with Telnet
+!
+SW1(config)# username wendell password odom
+SW1(config)# username chris password youdaman
+SW1(config)# ^Z
+SW1#
+Example 6-6 Displaying SSH Status
+SW1# show ip ssh
+SSH Enabled - version 2.0
+Authentication timeout: 120 secs; Authentication retries: 3
+SW1# show ssh
+Connection Version Mode Encryption Hmac State Username
+0 2.0 IN aes126-cbc hmac-sha1 Session started wendell
+0 2.0 OUT aes126-cbc hmac-sha1 Session started wendell
+%No SSHv1 server connections running.
+Example 6-7 Switch Static IP Address Configuration
+Emma# configure terminal
+Emma(config)# interface vlan 1
+Emma(config-if)# ip address 192.168.1.200 255.255.255.0
+Emma(config-if)# no shutdown
+00:25:07: %LINK-3-UPDOWN: Interface Vlan1, changed state to up
+00:25:08: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed
+state to up
+Emma(config-if)# exit
+Emma(config)# ip default-gateway 192.168.1.1
+Config
+Checklist
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+6
+Chapter 6: Configuring Basic Switch Management 143
+Example 6-8 Switch Dynamic IP Address Configuration with DHCP
+Emma# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+Emma(config)# interface vlan 1
+Emma(config-if)# ip address dhcp
+Emma(config-if)# no shutdown
+Emma(config-if)# ^Z
+Emma#
+00:38:20: %LINK-3-UPDOWN: Interface Vlan1, changed state to up
+00:38:21: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+Example 6-9 Verifying DHCP-Learned Information on a Switch
+Emma# show dhcp lease
+Temp IP addr: 192.168.1.101 for peer on Interface: Vlan1
+Temp sub net mask: 255.255.255.0
+DHCP Lease server: 192.168.1.1, state: 3 Bound
+DHCP transaction id: 1966
+Lease: 86400 secs, Renewal: 43200 secs, Rebind: 75600 secs
+Temp default-gateway addr: 192.168.1.1
+Next timer fires after: 11:59:45
+Retry count: 0 Client-ID: cisco-0019.e86a.6fc0-Vl1
+Hostname: Emma
+Emma# show interfaces vlan 1
+Vlan1 is up, line protocol is up
+Hardware is EtherSVI, address is 0019.e86a.6fc0 (bia 0019.e86a.6fc0)
+Internet address is 192.168.1.101/24
+MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+reliability 255/255, txload 1/255, rxload 1/255
+! lines omitted for brevity
+Emma# show ip default-gateway
+192.168.1.1
+Example 6-10 Commands Often Used in the Lab to Increase Productivity
+no ip domain-lookup
+!
+line console 0
+exec-timeout 0 0
+logging synchronous
+history size 20
+!
+line vty 0 15
+exec-timeout 0 0
+logging synchronous
+history size 20
+Example 7-1 Configuring speed, duplex, and description on Switch Emma
+Emma# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+Emma(config)# interface FastEthernet 0/1
+Emma(config-if)# duplex full
+Emma(config-if)# speed 100
+Emma(config-if)# description Printer on 3rd floor, Preset to 100/full
+Emma(config-if)# exit
+Emma(config)# interface range FastEthernet 0/11 - 20
+Emma(config-if-range)# description end-users connect here
+Emma(config-if-range)# ^Z
+Emma#
+Example 7-2 Displaying Interface Status
+Emma# show interfaces status
+Port Name Status Vlan Duplex Speed Type
+Fa0/1 Printer on 3rd floo notconnect 1 full 100 10/100BaseTX
+Fa0/2 notconnect 1 auto auto 10/100BaseTX
+Fa0/3 notconnect 1 auto auto 10/100BaseTX
+Fa0/4 connected 1 a-full a-100 10/100BaseTX
+Fa0/5 notconnect 1 auto auto 10/100BaseTX
+Fa0/6 connected 1 a-full a-100 10/100BaseTX
+Fa0/7 notconnect 1 auto auto 10/100BaseTX
+Fa0/8 notconnect 1 auto auto 10/100BaseTX
+Fa0/9 notconnect 1 auto auto 10/100BaseTX
+Fa0/10 notconnect 1 auto auto 10/100BaseTX
+Fa0/11 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/12 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/13 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/14 end-users connect notconnect 1 auto auto 10/100BaseTX
+||||||||||||||||||||
+||||||||||||||||||||
+154 CCNA 200-301 Official Cert Guide, Volume 1
+Fa0/15 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/16 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/17 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/18 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/19 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/20 end-users connect notconnect 1 auto auto 10/100BaseTX
+Fa0/21 notconnect 1 auto auto 10/100BaseTX
+Fa0/22 notconnect 1 auto auto 10/100BaseTX
+Fa0/23 notconnect 1 auto auto 10/100BaseTX
+Fa0/24 notconnect 1 auto auto 10/100BaseTX
+Gi0/1 notconnect 1 auto auto 10/100/1000BaseTX
+Gi0/2 notconnect 1 auto auto 10/100/1000BaseTX
+Example 7-3 How IOS Expands the Subcommands Typed After interface range
+Emma# show running-config
+! Lines omitted for brevity
+interface FastEthernet0/11
+description end-users connect here
+!
+interface FastEthernet0/12
+description end-users connect here
+! Lines omitted for brevity
+Example 7-4 Administratively Disabling an Interface with shutdown
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# interface fastEthernet 0/1
+SW1(config-if)# shutdown
+SW1(config-if)#
+*Mar 2 03:02:19.701: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to
+administratively down
+*Mar 2 03:02:20.708: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1,
+changed state to down
+Example 7-5 The Different Status Information About Shutdown in Two Different show
+Commands
+SW1# show interfaces f0/1 status
+Port Name Status Vlan Duplex Speed Type
+Fa0/1 disabled 1 auto auto 10/100BaseTX
+SW1# show interfaces f0/1
+FastEthernet0/1 is administratively down, line protocol is down (disabled)
+Hardware is Fast Ethernet, address is 1833.9d7b.0e81 (bia 1833.9d7b.0e81)
+MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+reliability 255/255, txload 1/255, rxload 1/255
+Encapsulation ARPA, loopback not set
+Keepalive set (10 sec)
+Auto-duplex, Auto-speed, media type is 10/100BaseTX
+input flow-control is off, output flow-control is unsupported
+ARP type: ARPA, ARP Timeout 04:00:00
+Last input never, output 00:00:36, output hang never
+Last clearing of "show interface" counters never
+Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+Queueing strategy: fifo
+Output queue: 0/40 (size/max)
+5 minute input rate 0 bits/sec, 0 packets/sec
+5 minute output rate 0 bits/sec, 0 packets/sec
+164 packets input, 13267 bytes, 0 no buffer
+Received 164 broadcasts (163 multicasts)
+0 runts, 0 giants, 0 throttles
+0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+0 watchdog, 163 multicast, 0 pause input
+0 input packets with dribble condition detected
+66700 packets output, 5012302 bytes, 0 underruns
+0 output errors, 0 collisions, 1 interface resets
+0 unknown protocol drops
+0 babbles, 0 late collision, 0 deferred
+0 lost carrier, 0 no carrier, 0 pause output
+0 output buffer failures, 0 output buffers swapped out
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+7 Chapter 7: Configuring and Verifying Switch Interfaces 157
+Example 7-6 Removing Various Configuration Settings Using the no Command
+SW1# show running-config interface f0/2
+Building configuration...
+Current configuration : 95 bytes
+!
+interface FastEthernet0/2
+description link to 2901-2
+shutdown
+speed 100
+duplex half
+end
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# interface fastethernet 0/2
+SW1(config-if)# no speed
+SW1(config-if)# no duplex
+SW1(config-if)# no description
+SW1(config-if)# no shutdown
+||||||||||||||||||||
+||||||||||||||||||||
+158 CCNA 200-301 Official Cert Guide, Volume 1
+SW1(config-if)# ^Z
+SW1#
+SW1# show running-config interface f0/2
+Building configuration...
+Current configuration : 33 bytes
+!
+interface FastEthernet0/2
+end
+SW1#
+Example 7-7 Displaying Speed and Duplex Settings on Switch Interfaces
+SW1# show interfaces status
+Port Name Status Vlan Duplex Speed Type
+Fa0/1 notconnect 1 auto auto 10/100BaseTX
+Fa0/2 notconnect 1 auto auto 10/100BaseTX
+Fa0/3 notconnect 1 auto auto 10/100BaseTX
+Fa0/4 connected 1 a-full a-100 10/100BaseTX
+Fa0/5 connected 1 a-full a-100 10/100BaseTX
+Fa0/6 notconnect 1 auto auto 10/100BaseTX
+Fa0/7 notconnect 1 auto auto 10/100BaseTX
+Fa0/8 notconnect 1 auto auto 10/100BaseTX
+Fa0/9 notconnect 1 auto auto 10/100BaseTX
+Fa0/10 notconnect 1 auto auto 10/100BaseTX
+Fa0/11 connected 1 a-full 10 10/100BaseTX
+Fa0/12 connected 1 half 100 10/100BaseTX
+Fa0/13 connected 1 a-full a-100 10/100BaseTX
+Fa0/14 disabled 1 auto auto 10/100BaseTX
+! Lines omitted for brevity
+SW1# show interfaces fa0/13
+FastEthernet0/13 is up, line protocol is up (connected)
+Hardware is Fast Ethernet, address is 0019.e86a.6f8d (bia 0019.e86a.6f8d)
+MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec,
+reliability 255/255, txload 1/255, rxload 1/255
+Encapsulation ARPA, loopback not set
+Keepalive set (10 sec)
+Full-duplex, 100Mbps, media type is 10/100BaseTX
+input flow-control is off, output flow-control is unsupported
+ARP type: ARPA, ARP Timeout 04:00:00
+Last input 00:00:05, output 00:00:00, output hang never
+Last clearing of "show interface" counters never
+Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+Queueing strategy: fifo
+Output queue: 0/40 (size/max)
+5 minute input rate 0 bits/sec, 0 packets/sec
+5 minute output rate 0 bits/sec, 0 packets/sec
+85022 packets input, 10008976 bytes, 0 no buffer
+Received 284 broadcasts (0 multicast)
+0 runts, 0 giants, 0 throttles
+0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+0 watchdog, 281 multicast, 0 pause input
+0 input packets with dribble condition detected
+95226 packets output, 10849674 bytes, 0 underruns
+0 output errors, 0 collisions, 1 interface resets
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+7 Chapter 7: Configuring and Verifying Switch Interfaces 165
+0 unknown protocol drops
+0 babbles, 0 late collision, 0 deferred
+0 lost carrier, 0 no carrier, 0 PAUSE output
+0 output buffer failures, 0 output buffers swapped out
+Example 7-8 Confirming Duplex Mismatch on Switch SW1
+SW1# show interfaces gi0/1 status
+Port Name Status Vlan Duplex Speed Type
+Gi0/1 connected trunk a-half a-100 10/100/1000BaseTX
+Example 7-9 Interface Counters for Layer 1 Problems
+SW1# show interfaces fa0/13
+! lines omitted for brevity
+Received 284 broadcasts (0 multicast)
+0 runts, 0 giants, 0 throttles
+0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+0 watchdog, 281 multicast, 0 pause input
+0 input packets with dribble condition detected
+95226 packets output, 10849674 bytes, 0 underruns
+0 output errors, 0 collisions, 1 interface resets
+0 unknown protocol drops
+0 babbles, 0 late collision, 0 deferred
+0 lost carrier, 0 no carrier, 0 PAUSE output
+0 output buffer failures, 0 output buffers swapped out
+Example 8-1 Configuring VLANs and Assigning VLANs to Interfaces
+SW1# show vlan brief
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4
+Fa0/5, Fa0/6, Fa0/7, Fa0/8
+Fa0/9, Fa0/10, Fa0/11, Fa0/12
+Fa0/13, Fa0/14, Fa0/15, Fa0/16
+Fa0/17, Fa0/18, Fa0/19, Fa0/20
+Fa0/21, Fa0/22, Fa0/23, Fa0/24
+Gi0/1, Gi0/2
+1002 fddi-default act/unsup
+1003 token-ring-default act/unsup
+1004 fddinet-default act/unsup
+1005 trnet-default act/unsup
+Example 8-2 Configuring VLANs and Assigning VLANs to Interfaces
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# vlan 2
+SW1(config-vlan)# name Freds-vlan
+SW1(config-vlan)# exit
+SW1(config)# interface range fastethernet 0/13 - 14
+SW1(config-if)# switchport access vlan 2
+SW1(config-if)# switchport mode access
+SW1(config-if)# end
+SW1# show vlan brief
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4
+Fa0/5, Fa0/6, Fa0/7, Fa0/8
+Fa0/9, Fa0/10, Fa0/11, Fa0/12
+Fa0/15, Fa0/16, Fa0/17, Fa0/18
+Fa0/19, Fa0/20, Fa0/21, Fa0/22
+Fa0/23, Fa0/24, Gi0/1, Gi0/2
+2 Freds-vlan active Fa0/13, Fa0/14
+1002 fddi-default act/unsup
+1003 token-ring-default act/unsup
+1004 fddinet-default act/unsup
+1005 trnet-default act/unsup
+Example 8-3 Configuring VLANs and Assigning VLANs to Interfaces
+SW1# show running-config
+! Many lines omitted for brevity
+! Early in the output:
+vlan 2
+name Freds-vlan
+!
+! more lines omitted for brevity
+interface FastEthernet0/13
+switchport access vlan 2
+switchport mode access
+!
+interface FastEthernet0/14
+switchport access vlan 2
+switchport mode access
+!
+SW1# show vlan id 2
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+2 Freds-vlan active Fa0/13, Fa0/14
+VLAN Type SAID MTU Parent RingNo BridgeNo Stp BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+2 enet 100010 1500 - - - - - 0 0
+Remote SPAN VLAN
+----------------
+Disabled
+Primary Secondary Type Ports
+------- --------- ----------------- ------------------------------------------
+Example 8-4 Shorter VLAN Configuration Example (VLAN 3)
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# interface range Fastethernet 0/15 - 16
+SW1(config-if-range)# switchport access vlan 3
+% Access VLAN does not exist. Creating vlan 3
+SW1(config-if-range)# ^Z
+SW1# show vlan brief
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4
+Fa0/5, Fa0/6, Fa0/7, Fa0/8
+Fa0/9, Fa0/10, Fa0/11, Fa0/12
+Fa0/17, Fa0/18, Fa0/19, Fa0/20
+Fa0/21, Fa0/22, Fa0/23, Fa0/24
+Gi0/1, Gi0/2
+2 Freds-vlan active Fa0/13, Fa0/14
+3 VLAN0003 active Fa0/15, Fa0/16
+1002 fddi-default act/unsup
+1003 token-ring-default act/unsup
+1004 fddinet-default act/unsup
+1005 trnet-default act/unsup
+Example 8-5 Initial Default State: Not Trunking Between SW1 and SW2
+SW1# show interfaces gigabit 0/1 switchport
+Name: Gi0/1
+Switchport: Enabled
+Administrative Mode: dynamic auto
+Operational Mode: static access
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: native
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Administrative Native VLAN tagging: enabled
+Voice VLAN: none
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Administrative Native VLAN tagging: enabled
+Voice VLAN: none
+Administrative private-vlan host-association: none
+Administrative private-vlan mapping: none
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk Native VLAN tagging: enabled
+Administrative private-vlan trunk encapsulation: dot1q
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+8
+Chapter 8: Implementing Ethernet Virtual LANs 193
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk private VLANs: none
+Operational private-vlan: none
+Trunking VLANs Enabled: ALL
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+Protected: false
+Unknown unicast blocked: disabled
+Unknown multicast blocked: disabled
+Appliance trust: none
+! Note that the next command results in a single empty line of output.
+SW1# show interfaces trunk
+SW1#
+Example 8-6 SW1 Changes from Dynamic Auto to Dynamic Desirable
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# interface gigabit 0/1
+SW1(config-if)# switchport mode dynamic desirable
+SW1(config-if)# ^Z
+SW1#
+||||||||||||||||||||
+||||||||||||||||||||
+194 CCNA 200-301 Official Cert Guide, Volume 1
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to
+down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to
+up
+SW1# show interfaces gigabit 0/1 switchport
+Name: Gi0/1
+Switchport: Enabled
+Administrative Mode: dynamic desirable
+Operational Mode: trunk
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+! lines omitted for brevity
+Example 8-7 A Closer Look at SW1’s G0/1 Trunk Port
+SW1# show interfaces trunk
+Port Mode Encapsulation Status Native vlan
+Gi0/1 desirable 802.1q trunking 1
+Port Vlans allowed on trunk
+Gi0/1 1-4094
+Port Vlans allowed and active in management domain
+Gi0/1 1-3
+Port Vlans in spanning tree forwarding state and not pruned
+Gi0/1 1-3
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+8
+Chapter 8: Implementing Ethernet Virtual LANs 195
+SW1# show vlan id 2
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+2 Freds-vlan active Fa0/13, Fa0/14, G0/1
+VLAN Type SAID MTU Parent RingNo BridgeNo Stp BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+2 enet 100010 1500 - - - - - 0 0
+Remote SPAN VLAN
+----------------
+Disabled
+Primary Secondary Type Ports
+------- --------- ----------------- ------------------------------------------
+Example 8-8 Configuring the Voice and Data VLAN on Ports Connected to Phones
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# vlan 10
+SW1(config-vlan)# vlan 11
+SW1(config-vlan)# interface range FastEthernet0/1 - 4
+SW1(config-if)# switchport mode access
+SW1(config-if)# switchport access vlan 10
+SW1(config-if)# switchport voice vlan 11
+SW1(config-if)#^Z
+SW1#
+Example 8-9 Verifying the Data VLAN (Access VLAN) and Voice VLAN
+SW1# show interfaces FastEthernet 0/4 switchport
+Name: Fa0/4
+Switchport: Enabled
+Administrative Mode: static access
+Operational Mode: static access
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: native
+Negotiation of Trunking: Off
+Access Mode VLAN: 10 (VLAN0010)
+Trunking Native Mode VLAN: 1 (default)
+Administrative Native VLAN tagging: enabled
+Voice VLAN: 11 (VLAN0011)
+! The rest of the output is omitted for brevity
+Example 8-10 Allowed VLAN List and the List of Active VLANs
+SW1# show interfaces trunk
+SW1# show interfaces F0/4 trunk
+Port Mode Encapsulation Status Native vlan
+Fa0/4 off 802.1q not-trunking 1
+Port Vlans allowed on trunk
+Fa0/4 10-11
+Port Vlans allowed and active in management domain
+Fa0/4 10-11
+Port Vlans in spanning tree forwarding state and not pruned
+Fa0/4 10-11
+Example 8-11 Enabling and Disabling VLANs on a Switch
+SW2# show vlan brief
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4
+Fa0/5, Fa0/6, Fa0/7, Fa0/8
+Fa0/9, Fa0/10, Fa0/11, Fa0/12
+Fa0/14, Fa0/15, Fa0/16, Fa0/17
+Fa0/18, Fa0/19, Fa0/20, Fa0/21
+Fa0/22, Fa0/23, Fa0/24, Gi0/1
+10 VLAN0010 act/lshut Fa0/13
+20 VLAN0020 active
+30 VLAN0030 act/lshut
+||||||||||||||||||||
+||||||||||||||||||||
+202 CCNA 200-301 Official Cert Guide, Volume 1
+40 VLAN0040 active
+1002 fddi-default act/unsup
+1003 token-ring-default act/unsup
+1004 fddinet-default act/unsup
+1005 trnet-default act/unsup
+SW2# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW2(config)# no shutdown vlan 10
+SW2(config)# shutdown vlan 20
+SW2(config)# vlan 30
+SW2(config-vlan)# no shutdown
+SW2(config-vlan)# vlan 40
+SW2(config-vlan)# shutdown
+SW2(config-vlan)#
+Example 8-12 Operational Trunking State
+SW2# show interfaces gigabit0/2 switchport
+Name: Gi0/2
+Switchport: Enabled
+Administrative Mode: dynamic auto
+Operational Mode: static access
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: native
+! lines omitted for brevity
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+8
+Chapter 8: Implementing Ethernet Virtual LANs 203
+Example 8-13 Allowed VLAN List and List of Active VLANs
+SW1# show interfaces trunk
+Port Mode Encapsulation Status Native vlan
+Gi0/1 desirable 802.1q trunking 1
+Port Vlans allowed on trunk
+Gi0/1 1-60
+Port Vlans allowed and active in management domain
+Gi0/1 1-59
+Port Vlans in spanning tree forwarding state and not pruned
+Gi0/1 1-58
+Example 10-1 STP Status with Default STP Parameters on SW1 and SW2
+SW1(config)# spanning-tree mode ?
+mst Multiple spanning tree mode
+pvst Per-Vlan spanning tree mode
+rapid-pvst Per-Vlan rapid spanning tree mode
+SW1(config)#
+Example 10-2 Help Shows Requirements for Using Increments of 4096 for Priority
+SW1(config)# spanning-tree vlan 1 priority ?
+<0-61440> bridge priority in increments of 4096
+SW1(config)#
+Example 10-3 Examining the 16-bit Priority as Interpreted in Cisco show Commands
+SW1# show spanning-tree vlan 9
+VLAN0009
+Spanning tree enabled protocol rstp
+Root ID Priority 24585
+Address 1833.9d7b.0e80
+Cost 4
+Port 25 (GigabitEthernet0/1)
+Hello Time 2 sec Max Age 20 sec Forward Delay 15 sec
+Bridge ID Priority 32777 (priority 32768 sys-id-ext 9)
+Address f47f.35cb.d780
+! Output omitted for brevity
+Example 10-4 Configuring and Monitoring EtherChannel
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# interface fa 0/14
+SW1(config-if)# channel-group 1 mode on
+SW1(config)# interface fa 0/15
+Config
+Checklist
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+10
+Chapter 10: RSTP and EtherChannel Configuration 249
+SW1(config-if)# channel-group 1 mode on
+SW1(config-if)# ^Z
+SW1# show spanning-tree vlan 3
+VLAN0003
+Spanning tree enabled protocol ieee
+Root ID Priority 28675
+Address 0019.e859.5380
+Cost 12
+Port 72 (Port-channel1)
+Hello Time 2 sec Max Age 20 sec Forward Delay 15 sec
+Bridge ID Priority 28675 (priority 28672 sys-id-ext 3)
+Address 0019.e86a.6f80
+Hello Time 2 sec Max Age 20 sec Forward Delay 15 sec
+Aging Time 300
+Interface Role Sts Cost Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Po1 Root FWD 12 128.64 P2p Peer(STP)
+SW1# show etherchannel 1 summary
+Flags: D - down P - bundled in port-channel
+I - stand-alone s - suspended
+H - Hot-standby (LACP only)
+R - Layer3 S - Layer2
+U - in use N - not in use, no aggregation
+f - failed to allocate aggregator
+M - not in use, minimum links not met
+m - not in use, port not aggregated due to minimum links not met
+u - unsuitable for bundling
+w - waiting to be aggregated
+d - default port
+A - formed by Auto LAG
+Number of channel-groups in use: 1
+Number of aggregators: 1
+Group Port-channel Protocol Ports
+------+-------------+-----------+-----------------------------------------------
+1 Po1(SU) - Fa0/14(P) Fa0/15(P)
+Example 10-5 EtherChannel Verification: PAgP Desirable Mode
+SW1# show etherchannel 1 port-channel
+Port-channels in the group:
+---------------------------
+Port-channel: Po1
+------------
+Age of the Port-channel = 0d:00h:04m:04s
+Logical slot/port = 16/1 Number of ports = 2
+GC = 0x00020001 HotStandBy port = null
+Port state = Port-channel Ag-Inuse
+Protocol = PAgP
+Port security = Disabled
+Load share deferral = Disabled
+Ports in the Port-channel:
+Index Load Port EC state No of bits
+------+------+------+------------------+-----------
+0 00 Gi0/1 Desirable-Sl 0
+0 00 Gi0/2 Desirable-Sl 0
+Time since last port bundled: 0d:00h:03m:57s Gi0/2
+Example 10-6 Local Interfaces Fail in EtherChannel Because of Mismatched STP Cost
+*Mar 1 23:18:56.132: %PM-4-ERR_DISABLE: channel-misconfig (STP) error detected on
+Po1, putting Gi0/1 in err-disable state
+*Mar 1 23:18:56.132: %PM-4-ERR_DISABLE: channel-misconfig (STP) error detected on
+Po1, putting Gi0/2 in err-disable state
+*Mar 1 23:18:56.132: %PM-4-ERR_DISABLE: channel-misconfig (STP) error detected on Po1,
+putting Po1 in err-disable state
+*Mar 1 23:18:58.120: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to
+down
+*Mar 1 23:18:58.137: %LINK-3-UPDOWN: Interface Port-channel1, changed state to down
+*Mar 1 23:18:58.137: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to
+down
+SW1# show etherchannel summary
+Flags: D - down P - bundled in port-channel
+I - stand-alone s - suspended
+H - Hot-standby (LACP only)
+R - Layer3 S - Layer2
+U - in use N - not in use, no aggregation
+f - failed to allocate aggregator
+M - not in use, minimum links not met
+m - not in use, port not aggregated due to minimum links not met
+u - unsuitable for bundling
+w - waiting to be aggregated
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+10
+Chapter 10: RSTP and EtherChannel Configuration 253
+d - default port
+A - formed by Auto LAG
+Number of channel-groups in use: 1
+Number of aggregators: 1
+Group Port-channel Protocol Ports
+------+-------------+-----------+-----------------------------------------------
+1 Po1(SD) - Gi0/1(D) Gi0/2(D)
+Example 10-7 Testing with Identical Source MACs When Using src-mac Balancing
+SW1# show etherchannel load-balance
+EtherChannel Load-Balancing Configuration:
+src-mac
+EtherChannel Load-Balancing Addresses Used Per-Protocol:
+Non-IP: Source MAC address
+IPv4: Source MAC address
+IPv6: Source MAC address
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1111
+Would select Gi1/0/22 of Po1
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1112
+Would select Gi1/0/22 of Po1
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1113
+Would select Gi1/0/22 of Po1
+Example 10-8 Testing with Source MACs with Low-Order Bit Differences
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1111
+Would select Gi1/0/22 of Po1
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0002 0200.1111.1111
+Would select Gi1/0/24 of Po1
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0003 0200.1111.1111
+Would select Gi1/0/23 of Po1
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+10
+Chapter 10: RSTP and EtherChannel Configuration 257
+Example 10-9 Evidence of Source and Destination MAC Load Distribution
+SW1# config t
+Enter configuration commands, one per line. End with CNTL/Z.
+SW1(config)# port-channel load-balance src-dst-mac
+SW1(config)# ^Z
+SW1#
+SW1# show etherchannel load-balance
+EtherChannel Load-Balancing Configuration:
+src-dst-mac
+EtherChannel Load-Balancing Addresses Used Per-Protocol:
+Non-IP: Source XOR Destination MAC address
+IPv4: Source XOR Destination MAC address
+IPv6: Source XOR Destination MAC address
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1111
+Would select Gi1/0/22 of Po1
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1112
+Would select Gi1/0/24 of Po1
+SW1# test etherchannel load-balance interface po1 mac 0200.0000.0001 0200.1111.1113
+Would select Gi1/0/23 of Po1
+Example 15-1 Listing the Interfaces in a Router
+R1# show ip interface brief
+Interface IP-Address OK? Method Status Protocol
+Embedded-Service-Engine0/0 unassigned YES NVRAM administratively down down
+GigabitEthernet0/0 172.16.1.1 YES NVRAM up up
+GigabitEthernet0/1 unassigned YES NVRAM administratively down down
+Serial0/0/0 172.16.4.1 YES manual up up
+Serial0/0/1 unassigned YES unset administratively down down
+GigabitEthernet0/1/0 172.16.5.1 YES NVRAM up up
+R1# show interfaces gigabitEthernet 0/1/0
+GigabitEthernet0/1/0 is up, line protocol is up
+Hardware is EHWIC-1GE-SFP-CU, address is 0201.a010.0001 (bia 30f7.0d29.8570)
+Description: Link in lab to R3's G0/0/0
+Internet address is 172.16.5.1/24
+||||||||||||||||||||
+||||||||||||||||||||
+358 CCNA 200-301 Official Cert Guide, Volume 1
+MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
+reliability 255/255, txload 1/255, rxload 1/255
+Encapsulation ARPA, loopback not set
+Keepalive set (10 sec)
+Full Duplex, 1Gbps, media type is RJ45
+output flow-control is XON, input flow-control is XON
+ARP type: ARPA, ARP Timeout 04:00:00
+Last input 00:00:29, output 00:00:08, output hang never
+Last clearing of "show interface" counters never
+Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+Queueing strategy: fifo
+Output queue: 0/40 (size/max)
+5 minute input rate 0 bits/sec, 0 packets/sec
+5 minute output rate 0 bits/sec, 0 packets/sec
+12 packets input, 4251 bytes, 0 no buffer
+Received 12 broadcasts (0 IP multicasts)
+0 runts, 0 giants, 0 throttles
+0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+0 watchdog, 0 multicast, 0 pause input
+55 packets output, 8098 bytes, 0 underruns
+0 output errors, 0 collisions, 0 interface resets
+0 unknown protocol drops
+0 babbles, 0 late collision, 0 deferred
+0 lost carrier, 0 no carrier, 0 pause output
+0 output buffer failures, 0 output buffers swapped out
+Example 15-2 Configuring IP Addresses on Cisco Routers
+R1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R1config)# interface G0/0
+R1(config-if)# ip address 172.16.1.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# interface S0/0/0
+R1(config-if)# ip address 172.16.4.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# interface G0/1/0
+R1(config-if)# ip address 172.16.5.1 255.255.255.0
+R1(config-if)# no shutdown
+R1(config-if)# ^Z
+R1#
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+15
+Chapter 15: Operating Cisco Routers 361
+Example 15-3 Verifying IP Addresses on Cisco Routers
+R1# show protocols
+Global values:
+Internet Protocol routing is enabled
+Embedded-Service-Engine0/0 is administratively down, line protocol is down
+GigabitEthernet0/0 is up, line protocol is up
+Internet address is 172.16.1.1/24
+GigabitEthernet0/1 is administratively down, line protocol is down
+Serial0/0/0 is up, line protocol is up
+Internet address is 172.16.4.1/24
+Serial0/0/1 is administratively down, line protocol is down
+GigabitEthernet0/1/0 is up, line protocol is up
+Internet address is 172.16.1.1/24
+Example 16-1 Connected and Local Routes on Router R1
+! Excerpt from show running-config follows...
+!
+interface GigabitEthernet0/0
+ip address 172.16.1.1 255.255.255.0
+!
+interface Serial0/0/0
+ip address 172.16.4.1 255.255.255.0
+!
+interface GigabitEthernet0/1/0
+ip address 172.16.5.1 255.255.255.0
+R1# show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2
+i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+ia - IS-IS inter area, * - candidate default, U - per-user static route
+o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+a - application route
++ - replicated route, % - next hop override, p - overrides from PfR
+Gateway of last resort is not set
+172.16.0.0/16 is variably subnetted, 6 subnets, 2 masks
+C 172.16.1.0/24 is directly connected, GigabitEthernet0/0
+L 172.16.1.1/32 is directly connected, GigabitEthernet0/0
+C 172.16.4.0/24 is directly connected, Serial0/0/0
+L 172.16.4.1/32 is directly connected, Serial0/0/0
+C 172.16.5.0/24 is directly connected, GigabitEthernet0/1/0
+L 172.16.5.1/32 is directly connected, GigabitEthernet0/1/0
+||||||||||||||||||||
+||||||||||||||||||||
+378 CCNA 200-301 Official Cert Guide, Volume 1
+Example 16-2 Displaying a Router’s IP ARP Table
+R2# show ip arp
+Protocol Address Age (min) Hardware Addr Type Interface
+Internet 172.16.1.1 - 0200.2222.2222 ARPA GigabitEthernet0/0
+Internet 172.16.1.9 35 0200.3333.3333 ARPA GigabitEthernet0/0
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+16
+Chapter 16: Configuring IPv4 Addresses and Static Routes 379
+Example 16-3 Static Routes Added to R1
+ip route 172.16.2.0 255.255.255.0 S0/0/0
+ip route 172.16.3.0 255.255.255.0 172.16.5.3
+Example 16-4 Static Routes Added to R1
+R1# show ip route static
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+! lines omitted for brevity
+Gateway of last resort is not set
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+16
+Chapter 16: Configuring IPv4 Addresses and Static Routes 381
+172.16.0.0/16 is variably subnetted, 8 subnets, 2 masks
+S 172.16.2.0/24 is directly connected, Serial0/0/0
+S 172.16.3.0/24 [1/0] via 172.16.5.3
+Example 16-5 Displaying the Administrative Distance of the Static Route
+R1# show ip route static
+! Legend omitted for brevity
+172.16.0.0/16 is variably subnetted, 6 subnets, 2 masks
+S 172.16.2.0/24 is directly connected, Serial0/0/1
+R1# show ip route 172.16.2.0
+Routing entry for 172.16.2.0/24
+Known via "static", distance 130, metric 0 (connected)
+Routing Descriptor Blocks:
+* directly connected, via Serial0/0/1
+Route metric is 0, traffic share count is 1
+Example 16-6 Adding a Static Default Route on R2 (Figure 16-13)
+R2# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R2(config)# ip route 0.0.0.0 0.0.0.0 s0/0/1
+R2(config)# ^Z
+R2# show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2
+i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+ia - IS-IS inter area, * - candidate default, U - per-user static route
+o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
++ - replicated route, % - next hop override
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+S* 0.0.0.0/0 is directly connected, Serial0/0/1
+172.16.0.0/16 is variably subnetted, 4 subnets, 2 masks
+C 172.16.2.0/24 is directly connected, GigabitEthernet0/0
+L 172.16.2.2/32 is directly connected, GigabitEthernet0/0
+C 172.16.4.0/24 is directly connected, Serial0/0/1
+L 172.16.4.2/32 is directly connected, Serial0/0/1
+Example 16-7 Permanently Adding Static Routes to the IP Routing Table (Router R1)
+ip route 172.16.2.0 255.255.255.0 S0/0/0 permanent
+ip route 172.16.3.0 255.255.255.0 172.16.5.3 permanent
+||||||||||||||||||||
+||||||||||||||||||||
+386 CCNA 200-301 Official Cert Guide, Volume 1
+Example 16-8 Show ip route Command with Overlapping Routes
+R1# show ip route ospf
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2
+i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+ia - IS-IS inter area, * - candidate default, U - per-user static route
+o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
++ - replicated route, % - next hop override
+Gateway of last resort is 172.16.25.129 to network 0.0.0.0
+172.16.0.0/16 is variably subnetted, 9 subnets, 5 masks
+O 172.16.1.1/32 [110/50] via 172.16.25.2, 00:00:04, GigabitEthernet0/0/0
+O 172.16.1.0/24 [110/100] via 172.16.25.129, 00:00:09, GigabitEthernet0/1/0
+O 172.16.0.0/22 [110/65] via 172.16.24.2, 00:00:04, GigabitEthernet0/2/0
+O 172.16.0.0/16 [110/65] via 172.16.24.129, 00:00:09, GigabitEthernet0/3/0
+O 0.0.0.0/0 [110/129] via 172.16.25.129, 00:00:09, GigabitEthernet0/0/0
+Example 16-9 Show ip route Command with Overlapping Routes
+R1# show ip route 172.16.4.3
+Routing entry for 172.16.0.0/16
+Known via "ospf 1", distance 110, metric 65, type intra area
+Last update from 10.2.2.5 on GigabitEthernet0/2/0, 14:22:06 ago
+Routing Descriptor Blocks:
+* 172.16.25.129, from 172.16.25.129, 14:22:05 ago, via GigabitEthernet0/1/0
+Route metric is 65, traffic share count is 1
+Example 17-1 Router Configuration for the 802.1Q Encapsulation Shown in Figure 17-2
+B1# show running-config
+! Only pertinent lines shown
+interface gigabitethernet 0/0
+! No IP address up here! No encapsulation up here!
+!
+interface gigabitethernet 0/0.10
+encapsulation dot1q 10
+ip address 10.1.10.1 255.255.255.0
+!
+interface gigabitethernet 0/0.20
+encapsulation dot1q 20
+ip address 10.1.20.1 255.255.255.0
+Example 17-2 Router Configuration Using Native VLAN 10 on Router B1
+! First option: put the native VLAN IP address on the physical interface
+interface gigabitethernet 0/0
+ip address 10.1.10.1 255.255.255.0
+!
+interface gigabitethernet 0/0.20
+encapsulation dot1q 20
+ip address 10.1.20.1 255.255.255.0
+! Second option: like Example 17-1, but add the native keyword
+interface gigabitethernet 0/0.10
+encapsulation dot1q 10 native
+ip address 10.1.10.1 255.255.255.0
+!
+interface gigabitethernet 0/0.20
+encapsulation dot1q 20
+ip address 10.1.20.1 255.255.255.0
+Example 17-3 Connected Routes Based on Example 17-1 Configuration
+B1# show ip route connected
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+! Legend omitted for brevity
+10.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
+C 10.1.10.0/24 is directly connected, GigabitEthernet0/0.10
+L 10.1.10.1/32 is directly connected, GigabitEthernet0/0.10
+C 10.1.20.0/24 is directly connected, GigabitEthernet0/0.20
+L 10.1.20.1/32 is directly connected, GigabitEthernet0/0.20
+Example 17-4 Subinterface State Tied to Physical Interface State
+B1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+B1(config)# interface g0/0
+B1(config-if)# shutdown
+B1(config-if)# ^Z
+B1# show ip interface brief | include 0/0
+GigabitEthernet0/0 unassigned YES manual administratively down down
+GigabitEthernet0/0.10 10.1.10.1 YES manual administratively down down
+GigabitEthernet0/0.20 10.1.20.1 YES manual administratively down down
+Example 17-5 Sample show vlans Command to Match Sample Router Trunking
+Configuration
+R1# show vlans
+Virtual LAN ID: 1 (IEEE 802.1Q Encapsulation)
+vLAN Trunk Interface: GigabitEthernet0/0
+Protocols Configured: Address: Received: Transmitted:
+Other 0 83
+69 packets, 20914 bytes input
+147 packets, 11841 bytes output
+Virtual LAN ID: 10 (IEEE 802.1Q Encapsulation)
+vLAN Trunk Interface: GigabitEthernet0/0.10
+This is configured as native Vlan for the following interface(s) :
+GigabitEthernet0/0 Native-vlan Tx-type: Untagged
+Protocols Configured: Address: Received: Transmitted:
+IP 10.1.10.1 2 3
+Other 0 1
+3 packets, 722 bytes input
+4 packets, 264 bytes output
+Virtual LAN ID: 20 (IEEE 802.1Q Encapsulation)
+vLAN Trunk Interface: GigabitEthernet0/0.20
+Protocols Configured: Address: Received: Transmitted:
+IP 10.1.20.1 0 134
+Other 0 1
+0 packets, 0 bytes input
+135 packets, 10498 bytes output
+Example 17-6 VLAN Interface Configuration for Layer 3 Switching
+ip routing
+!
+interface vlan 10
+ip address 10.1.10.1 255.255.255.0
+!
+interface vlan 20
+ip address 10.1.20.1 255.255.255.0
+!
+interface vlan 30
+ip address 10.1.30.1 255.255.255.0
+Example 17-7 Connected Routes on a Layer 3 Switch
+SW1# show ip route
+! legend omitted for brevity
+10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+C 10.1.10.0/24 is directly connected, Vlan10
+L 10.1.10.1/32 is directly connected, Vlan10
+C 10.1.20.0/24 is directly connected, Vlan20
+L 10.1.20.1/32 is directly connected, Vlan20
+C 10.1.30.0/24 is directly connected, Vlan30
+L 10.1.30.1/32 is directly connected, Vlan30
+||||||||||||||||||||
+||||||||||||||||||||
+404 CCNA 200-301 Official Cert Guide, Volume 1
+Example 17-8 Evidence That a Switch Has Not Yet Enabled IPv4 Routing
+SW1# show ip route
+^
+% Invalid input detected at '^' marker.
+SW3# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+SW3(config)# ip routing
+^
+% Invalid input detected at '^' marker.
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+17
+Chapter 17: IP Routing in the LAN 405
+Example 17-9 Three Examples That Cause VLAN Interfaces to Fail
+SW1# show interfaces status
+! Only ports related to the example are shown
+Port Name Status Vlan Duplex Speed Type
+Fa0/1 connected 10 a-full a-100 10/100BaseTX
+Fa0/2 notconnect 10 auto auto 10/100BaseTX
+Fa0/3 connected 20 a-full a-100 10/100BaseTX
+Fa0/4 connected 20 a-full a-100 10/100BaseTX
+Gi0/1 connected 30 a-full a-1000 10/100/1000BaseTX
+||||||||||||||||||||
+||||||||||||||||||||
+406 CCNA 200-301 Official Cert Guide, Volume 1
+SW1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+! Case 1: Interface F0/1, the last up/up access interface in VLAN 10, is shutdown
+SW1(config)# interface fastEthernet 0/1
+SW1(config-if)# shutdown
+SW1(config-if)#
+*Apr 2 19:54:08.784: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed
+state to down
+SW1(config-if)#
+*Apr 2 19:54:10.772: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to
+administratively down
+*Apr 2 19:54:11.779: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1,
+changed state to down
+! Case 2: VLAN 20 is deleted
+SW1(config)# no vlan 20
+SW1(config)#
+*Apr 2 19:54:39.688: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan20, changed
+state to down
+! Case 3: VLAN 30, the VLAN from the switch to the router, is shutdown
+SW1(config)# vlan 30
+SW1(config-vlan)# shutdown
+SW1(config-vlan)# exit
+SW1(config)#
+*Apr 2 19:55:25.204: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan30, changed
+state to down
+! Final status of all three VLAN interfaces are below
+SW1# show ip interface brief | include Vlan
+Vlan1 unassigned YES manual administratively down down
+Vlan10 10.1.10.1 YES manual up down
+Vlan20 10.1.20.1 YES manual up down
+Vlan30 10.1.30.1 YES manual up down
+Example 17-10 Configuring Interface G0/1 on Switch SW1 as a Routed Port
+ip routing
+!
+interface vlan 10
+ip address 10.1.10.1 255.255.255.0
+!
+interface vlan 20
+ip address 10.1.20.1 255.255.255.0
+!
+interface gigabitethernet 0/1
+no switchport
+ip address 10.1.30.1 255.255.255.0
+Example 17-11 Verification Commands for Routed Ports on Switches
+SW11# show interfaces g0/1
+GigabitEthernet0/1 is up, line protocol is up (connected)
+Hardware is Gigabit Ethernet, address is bcc4.938b.e541 (bia bcc4.938b.e541)
+Internet address is 10.1.30.1/24
+! lines omitted for brevity
+SW1# show interfaces status
+! Only ports related to the example are shown; the command lists physical only
+Port Name Status Vlan Duplex Speed Type
+Fa0/1 connected 10 a-full a-100 10/100BaseTX
+Fa0/2 notconnect 10 auto auto 10/100BaseTX
+Fa0/3 connected 20 a-full a-100 10/100BaseTX
+Fa0/4 connected 20 a-full a-100 10/100BaseTX
+Gi0/1 connected routed a-full a-1000 10/100/1000BaseTX
+SW1# show ip route
+! legend omitted for brevity
+10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+C 10.1.10.0/24 is directly connected, Vlan10
+L 10.1.10.1/32 is directly connected, Vlan10
+C 10.1.20.0/24 is directly connected, Vlan20
+L 10.1.20.1/32 is directly connected, Vlan20
+C 10.1.30.0/24 is directly connected, GigabitEthernet0/1
+L 10.1.30.1/32 is directly connected, GigabitEthernet0/1
+SW1# show interfaces g0/1 switchport
+Name: Gi0/1
+Switchport: Disabled
+Example 17-12 Layer 3 EtherChannel Configuration on Switch SW1
+interface GigabitEthernet1/0/13
+no switchport
+no ip address
+channel-group 12 mode on
+!
+interface GigabitEthernet1/0/14
+no switchport
+no ip address
+channel-group 12 mode on
+!
+interface Port-channel12
+no switchport
+ip address 10.1.12.1 255.255.255.0
+Example 17-13 Verification Commands Listing Interface Port-Channel 12 from Switch
+SW1
+SW1# show interfaces port-channel 12
+Port-channel12 is up, line protocol is up (connected)
+Hardware is EtherChannel, address is bcc4.938b.e543 (bia bcc4.938b.e543)
+Internet address is 10.1.12.1/24
+! lines omitted for brevity
+SW1# show interfaces status
+! Only ports related to the example are shown.
+Port Name Status Vlan Duplex Speed Type
+Gi1/0/13 connected routed a-full a-1000 10/100/1000BaseTX
+Gi1/0/14 connected routed a-full a-1000 10/100/1000BaseTX
+Po12 connected routed a-full a-1000
+SW1# show ip route
+! legend omitted for brevity
+10.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
+C 10.1.2.0/24 is directly connected, Vlan2
+L 10.1.2.1/32 is directly connected, Vlan2
+C 10.1.12.0/24 is directly connected, Port-channel12
+L 10.1.12.1/32 is directly connected, Port-channel12
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+17
+Chapter 17: IP Routing in the LAN 413
+Example 17-14 Verifying the EtherChannel
+SW1# show etherchannel 12 summary
+Flags: D - down P - bundled in port-channel
+I - stand-alone s - suspended
+H - Hot-standby (LACP only)
+R - Layer3 S - Layer2
+U - in use f - failed to allocate aggregator
+M - not in use, minimum links not met
+u - unsuitable for bundling
+w - waiting to be aggregated
+d - default port
+Number of channel-groups in use: 1
+Number of aggregators: 1
+Group Port-channel Protocol Ports
+------+-------------+-----------+-----------------------------------------------
+12 Po12(RU) - Gi1/0/13(P) Gi1/0/14(P)
+Example 18-1 Sample Output from Host A’s ping 172.16.2.101 Command
+Wendell-Odoms-iMac:~ wendellodom$ ping 172.16.2.101
+PING 172.16.2.101 (172.16.2.101): 56 data bytes
+64 bytes from 172.16.2.101: icmp_seq=0 ttl=64 time=1.112 ms
+64 bytes from 172.16.2.101: icmp_seq=1 ttl=64 time=0.673 ms
+64 bytes from 172.16.2.101: icmp_seq=2 ttl=64 time=0.631 ms
+64 bytes from 172.16.2.101: icmp_seq=3 ttl=64 time=0.674 ms
+64 bytes from 172.16.2.101: icmp_seq=4 ttl=64 time=0.642 ms
+64 bytes from 172.16.2.101: icmp_seq=5 ttl=64 time=0.656 ms
+^C
+--- 172.16.2.101 ping statistics ---
+6 packets transmitted, 6 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.631/0.731/1.112/0.171 ms
+Example 18-2 Router R2 Pings Host B (Two Commands)
+R1# ping 172.16.2.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.2.101, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 1/2/4 ms
+R1# ping 172.16.2.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.2.101, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
+Example 18-3 Testing the Reverse Route Using the Extended Ping
+R1# ping
+Protocol [ip]:
+Target IP address: 172.16.2.101
+Repeat count [5]:
+Datagram size [100]:
+Timeout in seconds [2]:
+Extended commands [n]: y
+Source address or interface: 172.16.1.1
+Type of service [0]:
+Set DF bit in IP header? [no]:
+Validate reply data? [no]:
+Data pattern [0xABCD]:
+Loose, Strict, Record, Timestamp, Verbose[none]:
+Sweep range of sizes [n]:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.2.101, timeout is 2 seconds:
+Packet sent with a source address of 172.16.1.1
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+18
+Chapter 18: Troubleshooting IPv4 Routing 425
+Example 18-4 Output from traceroute 172.16.2.101 on Host A
+Wendell-Odoms-iMac:~ wendellodom$ traceroute 172.16.2.101
+traceroute to 172.16.2.101, 64 hops max, 52 byte packets
+1 172.16.1.1 (172.16.1.1) 0.870 ms 0.520 ms 0.496 ms
+2 172.16.4.2 (172.16.4.2) 8.263 ms 7.518 ms 9.319 ms
+3 172.16.2.101 (172.16.2.101) 16.770 ms 9.819 ms 9.830 ms
+Example 18-5 Standard traceroute Command on R1
+R1# traceroute 172.16.2.101
+Type escape sequence to abort.
+Tracing the route to 172.16.2.101
+VRF info: (vrf in name/id, vrf out name/id)
+1 172.16.4.2 0 msec 0 msec 0 msec
+2 172.16.2.101 0 msec 0 msec *
+Example 18-6 Extended traceroute Command on R1
+R1# traceroute
+Protocol [ip]:
+Target IP address: 172.16.2.101
+Source address: 172.16.1.1
+Numeric display [n]:
+Timeout in seconds [3]:
+Probe count [3]:
+Minimum Time to Live [1]:
+Maximum Time to Live [30]:
+Port Number [33434]:
+Loose, Strict, Record, Timestamp, Verbose[none]:
+Type escape sequence to abort.
+Tracing the route to 172.16.2.101
+VRF info: (vrf in name/id, vrf out name/id)
+1 172.16.4.2 0 msec 0 msec 0 msec
+2 172.16.2.101 0 msec 0 msec *
+||||||||||||||||||||
+||||||||||||||||||||
+432 CCNA 200-301 Official Cert Guide, Volume 1
+Example 18-7 Telnet from R1 to R2 to View Interface Status on R2
+R1# telnet 10.1.2.2
+Trying 10.1.2.2 ... Open
+User Access Verification
+Username: wendell
+Password:
+R2>
+R2> show ip interface brief
+||||||||||||||||||||
+||||||||||||||||||||
+434 CCNA 200-301 Official Cert Guide, Volume 1
+Interface IP-Address OK? Method Status Protocol
+GigabitEthernet0/0 unassigned YES unset administratively down down
+GigabitEthernet0/1 10.1.3.2 YES manual up up
+GigabitEthernet0/2 10.1.2.2 YES manual up up
+GigabitEthernet0/3 unassigned YES unset administratively down down
+Example 18-8 SSH Client from R1 to R2 to View Interface Status on R2
+R1# ssh -l wendell 10.1.2.2
+Password:
+R2>
+Interface IP-Address OK? Method Status Protocol
+GigabitEthernet0/0 unassigned YES unset administratively down down
+GigabitEthernet0/1 10.1.3.2 YES manual up up
+GigabitEthernet0/2 10.1.2.2 YES manual up up
+GigabitEthernet0/3 unassigned YES unset administratively down down
+Example 20-1 IPv4 Address Configuration on R1 (Including VLAN Trunking)
+interface GigabitEthernet0/0.1
+encapsulation dot1q 1 native
+ip address 10.1.1.1 255.255.255.0
+!
+interface GigabitEthernet0/0.2
+encapsulation dot1q 2
+ip address 10.1.2.1 255.255.255.0
+!
+interface GigabitEthernet0/0/0
+ip address 10.1.12.1 255.255.255.0
+!
+interface GigabitEthernet0/1/0
+ip address 10.1.13.1 255.255.255.0
+!
+interface GigabitEthernet0/2/0
+ip address 10.1.14.1 255.255.255.0
+Example 20-2 OSPF Single-Area Configuration on R2 Using One network Command
+router ospf 1
+network 10.0.0.0 0.255.255.255 area 0
+Example 20-3 OSPF Configuration on Routers R2, R3, and R4
+! R2 configuration next - one network command enables OSPF on both interfaces
+interface GigabitEthernet0/0
+ip address 10.1.23.2 255.255.255.0
+!
+interface GigabitEthernet0/1/0
+ip address 10.1.12.2 255.255.255.0
+!
+router ospf 1
+network 10.0.0.0 0.255.255.255 area 0
+! R3 configuration next - One network command per interface
+interface GigabitEthernet0/0
+ip address 10.1.23.3 255.255.255.0
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+20 Chapter 20: Implementing OSPF 475
+!
+interface GigabitEthernet0/0/0
+ip address 10.1.13.3 255.255.255.0
+!
+router ospf 1
+network 10.1.13.3 0.0.0.0 area 0
+network 10.1.23.3 0.0.0.0 area 0
+! R4 configuration next - One network command per interface with wildcard 0.0.0.255
+interface GigabitEthernet0/1
+ip address 10.1.4.4 255.255.255.0
+!
+interface GigabitEthernet0/0/0
+ip address 10.1.14.4 255.255.255.0
+!
+router ospf 1
+network 10.1.14.0 0.0.0.255 area 0
+network 10.1.4.0 0.0.0.255 area 0
+Example 20-4 OSPF Neighbors on Router R1 from Figure 20-2
+R1# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 1 FULL/DR 00:00:37 10.1.12.2 GigabitEthernet0/0/0
+3.3.3.3 1 FULL/DR 00:00:37 10.1.13.3 GigabitEthernet0/1/0
+4.4.4.4 1 FULL/BDR 00:00:34 10.1.14.4 GigabitEthernet0/2/0
+Example 20-5 OSPF Database on Router R1 from Figure 20-2
+R1# show ip ospf database
+OSPF Router with ID (1.1.1.1) (Process ID 1)
+Router Link States (Area 0)
+Link ID ADV Router Age Seq# Checksum Link count
+1.1.1.1 1.1.1.1 431 0x8000008F 0x00DCCA 5
+2.2.2.2 2.2.2.2 1167 0x8000007F 0x009DA1 2
+3.3.3.3 3.3.3.3 441 0x80000005 0x002FB1 1
+4.4.4.4 4.4.4.4 530 0x80000004 0x007F39 2
+Net Link States (Area 0)
+Link ID ADV Router Age Seq# Checksum
+10.1.12.2 2.2.2.2 1167 0x8000007C 0x00BBD5
+10.1.13.3 3.3.3.3 453 0x80000001 0x00A161
+10.1.14.1 1.1.1.1 745 0x8000007B 0x004449
+10.1.23.3 3.3.3.3 8 0x80000001 0x00658F
+Example 20-6 IPv4 Routes Added by OSPF on Router R1 from Figure 20-2
+R4# show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2
+! Additional legend lines omitted for brevity
+Gateway of last resort is not set
+10.0.0.0/8 is variably subnetted, 9 subnets, 2 masks
+O 10.1.1.0/24 [110/2] via 10.1.14.1, 00:27:24, GigabitEthernet0/0/0
+O 10.1.2.0/24 [110/2] via 10.1.14.1, 00:27:24, GigabitEthernet0/0/0
+C 10.1.4.0/24 is directly connected, Vlan4
+L 10.1.4.4/32 is directly connected, Vlan4
+O 10.1.12.0/24 [110/2] via 10.1.14.1, 00:27:24, GigabitEthernet0/0/0
+O 10.1.13.0/24 [110/2] via 10.1.14.1, 00:25:15, GigabitEthernet0/0/0
+C 10.1.14.0/24 is directly connected, GigabitEthernet0/0/0
+L 10.1.14.4/32 is directly connected, GigabitEthernet0/0/0
+O 10.1.23.0/24 [110/3] via 10.1.14.1, 00:27:24, GigabitEthernet0/0/0
+Example 20-7 Router R3 Configuration and the show ip protocols Command
+! First, a reminder of R3's configuration per Example 20-3:
+router ospf 1
+network 10.1.13.3 0.0.0.0 area 0
+network 10.1.23.3 0.0.0.0 area 0
+!
+! The output from router R3:
+R3# show ip protocols
+*** IP Routing is NSF aware ***
+Routing Protocol is "ospf 1"
+Outgoing update filter list for all interfaces is not set
+Incoming update filter list for all interfaces is not set
+Router ID 3.3.3.3
+Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+Maximum path: 4
+Routing for Networks:
+10.1.13.3 0.0.0.0 area 0
+10.1.23.3 0.0.0.0 area 0
+Routing Information Sources:
+Gateway Distance Last Update
+1.1.1.1 110 02:05:26
+4.4.4.4 110 02:05:26
+2.2.2.2 110 01:51:16
+Distance: (default is 110)
+||||||||||||||||||||
+||||||||||||||||||||
+480 CCNA 200-301 Official Cert Guide, Volume 1
+Example 20-8 Router R1 show ip ospf interface brief Command
+R1# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/0/0 1 0 10.1.12.1/24 1 BDR 1/1
+Gi0/1/0 1 0 10.1.13.1/24 1 BDR 1/1
+Gi0/2/0 1 0 10.1.14.1/24 1 DR 1/1
+Gi0/0.2 1 0 10.1.2.1/24 1 DR 0/0
+Gi0/0.1 1 0 10.1.1.1/24 1 DR 0/0
+Example 20-9 OSPF Router ID Configuration Examples
+! R1 Configuration first
+router ospf 1
+router-id 1.1.1.1
+network 10.1.0.0 0.0.255.255 area 0
+! R2 Configuration next
+!
+interface Loopback2
+ip address 2.2.2.2 255.255.255.255
+Example 20-10 Confirming the Current OSPF Router ID
+R1# show ip ospf
+Routing Process "ospf 1" with ID 1.1.1.1
+! lines omitted for brevity
+Example 20-11 OSPF Configuration on R1, Placing Interfaces into Different Areas
+router ospf 1
+network 10.1.1.1 0.0.0.0 area 0
+network 10.1.2.1 0.0.0.0 area 0
+network 10.1.12.1 0.0.0.0 area 23
+network 10.1.13.1 0.0.0.0 area 23
+network 10.1.14.1 0.0.0.0 area 4
+Example 20-12 OSPF Single-Area Configuration on R1 Using One network Command
+R1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)# router ospf 1
+R1(config-router)# no network 10.0.0.0 0.255.255.255 area 0
+R1(config-router)#
+*Apr 8 19:35:24.994: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on GigabitEthernet0/0/0
+from FULL to DOWN, Neighbor Down: Interface down or detached
+*Apr 8 19:35:24.994: %OSPF-5-ADJCHG: Process 1, Nbr 3.3.3.3 on GigabitEthernet0/1/0
+from FULL to DOWN, Neighbor Down: Interface down or detached
+*Apr 8 19:35:24.994: %OSPF-5-ADJCHG: Process 1, Nbr 4.4.4.4 on GigabitEthernet0/2/0
+from FULL to DOWN, Neighbor Down: Interface down or detached
+R1(config-router)# interface g0/0.1
+R1(config-subif)# ip ospf 1 area 0
+R1(config-subif)# interface g0/0.2
+R1(config-subif)# ip ospf 1 area 0
+R1(config-subif)# interface g0/0/0
+R1(config-if)# ip ospf 1 area 0
+R1(config-if)#
+*Apr 8 19:35:52.970: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on GigabitEthernet0/0/0
+from LOADING to FULL, Loading Done
+R1(config-if)# interface g0/1/0
+R1(config-if)# ip ospf 1 area 0
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+20 Chapter 20: Implementing OSPF 485
+R1(config-if)#
+*Apr 8 19:36:13.362: %OSPF-5-ADJCHG: Process 1, Nbr 3.3.3.3 on GigabitEthernet0/1/0
+from LOADING to FULL, Loading Done
+R1(config-if)# interface g0/2/0
+R1(config-if)# ip ospf 1 area 0
+R1(config-if)#
+*Apr 8 19:37:05.398: %OSPF-5-ADJCHG: Process 1, Nbr 4.4.4.4 on GigabitEthernet0/2/0
+from LOADING to FULL, Loading Done
+R1(config-if)#
+Example 20-13 Differences in show ip protocols Output: Old- and New-Style OSPFv2
+Configuration
+! First, with the new interface configuration
+R1# show ip protocols
+! … beginning lines omitted for brevity
+Routing for Networks:
+Routing on Interfaces Configured Explicitly (Area 0):
+GigabitEthernet0/2/0
+GigabitEthernet0/1/0
+GigabitEthernet0/0/0
+GigabitEthernet0/0.2
+GigabitEthernet0/0.1
+Routing Information Sources:
+Gateway Distance Last Update
+||||||||||||||||||||
+||||||||||||||||||||
+486 CCNA 200-301 Official Cert Guide, Volume 1
+4.4.4.4 110 00:09:30
+2.2.2.2 110 00:10:49
+3.3.3.3 110 05:20:07
+Distance: (default is 110)
+! For comparison, the old results with the use of the OSPF network command
+R1# show ip protocols
+! … beginning lines omitted for brevity
+Routing for Networks:
+10.1.0.0 0.0.255.255 area 0
+! … ending line omitted for brevity
+Example 20-14 Differences in show ip ospf interface Output with OSPFv2 Interface
+Configuration
+! First, with the new interface configuration
+R1# show ip ospf interface g0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
+Internet Address 10.1.12.1/24, Area 0, Attached via Interface Enable
+! Lines omitted for brevity
+! For comparison, the old results with the use of the OSPF network command
+R1# show ip ospf interface g0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
+Internet Address 10.1.12.1/24, Area 0, Attached via Network Statement
+! … ending line omitted for brevity
+Example 20-15 Configuring Passive Interfaces on R1 from Figure 20-5
+! First, make each subinterface passive directly
+router ospf 1
+passive-interface GigabitEthernet0/0.1
+passive-interface GigabitEthernet0/0.2
+! Or, change the default to passive, and make the other interfaces not be passive
+router ospf 1
+passive-interface default
+no passive-interface GigabitEthernet0/0/0
+no passive-interface GigabitEthernet0/1/0
+no passive-interface GigabitEthernet0/2/0
+||||||||||||||||||||
+||||||||||||||||||||
+488 CCNA 200-301 Official Cert Guide, Volume 1
+Example 20-16 Displaying Passive Interfaces
+R1# show ip ospf interface brief
+Interface IP-Address OK? Method Status Protocol
+GigabitEthernet0/0 unassigned YES manual up up
+GigabitEthernet0/0.1 10.1.1.1 YES manual up up
+GigabitEthernet0/0.2 10.1.2.1 YES manual up up
+GigabitEthernet0/1 unassigned YES manual administratively down down
+GigabitEthernet0/0/0 10.1.12.1 YES manual up up
+GigabitEthernet0/1/0 10.1.13.1 YES manual up up
+GigabitEthernet0/2/0 10.1.14.1 YES manual up up
+R1# show ip ospf interface g0/0.1
+GigabitEthernet0/0.1 is up, line protocol is up
+Internet Address 10.1.1.1/24, Area 0, Attached via Network Statement
+Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+Topology-MTID Cost Disabled Shutdown Topology Name
+0 1 no no Base
+Transmit Delay is 1 sec, State DR, Priority 1
+Designated Router (ID) 1.1.1.1, Interface address 10.1.1.1
+No backup designated router on this network
+Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+oob-resync timeout 40
+No Hellos (Passive interface)
+! Lines omitted for brevity
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+20 Chapter 20: Implementing OSPF 489
+Example 20-17 Default Routes on Routers R1 and B1
+! The next command is from Router R1. Note the static code for the default route
+R1# show ip route static
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+! Rest of the legend omitted for brevity
+Gateway of last resort is 192.0.2.1 to network 0.0.0.0
+S* 0.0.0.0/0 [254/0] via 192.0.2.1
+! The next command is from router B01; notice the External route code for the default
+B1# show ip route ospf
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2
+! Rest of the legend omitted for brevity
+Gateway of last resort is 10.1.12.1 to network 0.0.0.0
+O*E2 0.0.0.0/0 [110/1] via 10.1.12.1, 00:20:51, GigabitEthernet0/1/0
+10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+O 10.1.3.0/24 [110/3] via 10.1.12.1, 00:20:51, GigabitEthernet0/1/0
+O 10.1.13.0/24 [110/2] via 10.1.12.1, 00:20:51, GigabitEthernet0/1/0
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+20 Chapter 20: Implementing OSPF 491
+Example 20-18 Confirming OSPF Interface Costs
+R1# conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)# interface g0/0/0
+R1(config-if)# ip ospf cost 4
+R1(config-if)# interface g0/1/0
+R1(config-if)# ip ospf cost 5
+R1(config-if)# ^Z
+R1#
+R1# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/0.2 1 0 10.1.2.1/24 1 DR 0/0
+Gi0/0.1 1 0 10.1.1.1/24 1 DR 0/0
+||||||||||||||||||||
+||||||||||||||||||||
+492 CCNA 200-301 Official Cert Guide, Volume 1
+Gi0/0/0 1 0 10.1.12.1/24 4 DR 1/1
+Gi0/1/0 1 0 10.1.13.1/24 5 BDR 1/1
+Gi0/2/0 1 0 10.1.14.1/24 1 DR 1/1
+Example 21-1 R1 OSPF Configuration to Match Figure 21-1
+router ospf 1
+router-id 1.1.1.1
+!
+interface gigabitEthernet0/0
+ip ospf 1 area 0
+!
+interface gigabitEthernet0/1
+ip ospf 1 area 0
+||||||||||||||||||||
+||||||||||||||||||||
+502 CCNA 200-301 Official Cert Guide, Volume 1
+Example 21-2 R1’s List of Neighbors
+R1# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 1 2WAY/DROTHER 00:00:35 10.1.1.2 GigabitEthernet0/0
+3.3.3.3 1 FULL/BDR 00:00:33 10.1.1.3 GigabitEthernet0/0
+4.4.4.4 1 FULL/DR 00:00:35 10.1.1.4 GigabitEthernet0/0
+Example 21-3 Router R1 OSPF Interfaces: Local Role and Neighbor Counts
+R1# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/1 1 0 10.1.11.1/24 1 DR 0/0
+Gi0/0 1 0 10.1.1.1/24 1 DROTH 2/3
+Example 21-4 Displaying OSPF Network Type Broadcast
+R1# show ip ospf interface g0/0
+GigabitEthernet0/0 is up, line protocol is up
+Internet Address 10.1.1.1/24, Area 0, Attached via Interface Enable
+Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+Topology-MTID Cost Disabled Shutdown Topology Name
+0 1 no no Base
+Enabled by interface config, including secondary ip addresses
+||||||||||||||||||||
+||||||||||||||||||||
+504 CCNA 200-301 Official Cert Guide, Volume 1
+Transmit Delay is 1 sec, State DROTHER, Priority 1
+Designated Router (ID) 4.4.4.4, Interface address 10.1.1.4
+Backup Designated router (ID) 3.3.3.3, Interface address 10.1.1.3
+Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+oob-resync timeout 40
+Hello due in 00:00:00
+Supports Link-local Signaling (LLS)
+Cisco NSF helper support enabled
+IETF NSF helper support enabled
+Index 1/1/1, flood queue length 0
+Next 0x0(0)/0x0(0)/0x0(0)
+Last flood scan length is 0, maximum is 1
+Last flood scan time is 0 msec, maximum is 0 msec
+Neighbor Count is 3, Adjacent neighbor count is 2
+Adjacent with neighbor 3.3.3.3 (Backup Designated Router)
+Adjacent with neighbor 4.4.4.4 (Designated Router)
+Suppress hello for 0 neighbor(s)
+Example 21-5 Influencing DR/BDR Election Using OSPF Priority
+R1# configure terminal
+Configuring from terminal, memory, or network [terminal]?
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)# interface g0/0
+R1(config-if)# ip ospf priority 99
+R1(config-if)# ^Z
+R1#
+R1# show ip ospf interface g0/0 | include Priority
+Transmit Delay is 1 sec, State DROTHER, Priority 99
+R1# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 1 2WAY/DROTHER 00:00:36 10.1.1.2 GigabitEthernet0/0
+3.3.3.3 1 FULL/BDR 00:00:30 10.1.1.3 GigabitEthernet0/0
+4.4.4.4 1 FULL/DR 00:00:37 10.1.1.4 GigabitEthernet0/0
+R1# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/1 1 0 10.1.11.1/24 1 DR 0/0
+Gi0/0 1 0 10.1.1.1/24 1 DROTH 2/3
+Example 21-6 Results of a Completely New DR/BDR Election
+! Not shown: LAN fails, and then recovers, causing a new OSPF Election
+R1# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 1 FULL/DROTHER 00:00:37 10.1.1.2 GigabitEthernet0/0
+3.3.3.3 1 FULL/DROTHER 00:00:38 10.1.1.3 GigabitEthernet0/0
+4.4.4.4 1 FULL/BDR 00:00:38 10.1.1.4 GigabitEthernet0/0
+R1# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/1 1 0 10.1.11.1/24 1 DR 0/0
+Gi0/0 1 0 10.1.1.1/24 1 DR 3/3
+Example 21-7 OSPF Network Type Point-to-Point on an Ethernet WAN Interface on R1
+R1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)# interface g0/0/0
+R1(config-if)# ip ospf network point-to-point
+R1(config-if)#
+R1# show ip ospf interface g0/0/0
+GigabitEthernet0/0/0 is up, line protocol is up
+Internet Address 10.1.12.1/24, Area 0, Attached via Interface Enable
+Process ID 1, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 1
+Topology-MTID Cost Disabled Shutdown Topology Name
+0 4 no no Base
+Enabled by interface config, including secondary ip addresses
+Transmit Delay is 1 sec, State POINT_TO_POINT
+Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+oob-resync timeout 40
+Hello due in 00:00:01
+Supports Link-local Signaling (LLS)
+Cisco NSF helper support enabled
+IETF NSF helper support enabled
+Index 1/3/3, flood queue length 0
+Next 0x0(0)/0x0(0)/0x0(0)
+||||||||||||||||||||
+||||||||||||||||||||
+508 CCNA 200-301 Official Cert Guide, Volume 1
+Last flood scan length is 1, maximum is 3
+Last flood scan time is 0 msec, maximum is 0 msec
+Neighbor Count is 1, Adjacent neighbor count is 1
+Adjacent with neighbor 2.2.2.2
+Suppress hello for 0 neighbor(s)
+Example 21-8 OSPF Network Type Point-to-Point on an Ethernet WAN Interface on R1
+R1# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 0 FULL/ - 00:00:39 10.1.12.2 GigabitEthernet0/0/0
+! lines omitted for brevity
+R1# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/0/0 1 0 10.1.12.1/24 4 P2P 1/1
+! lines omitted for brevity
+Example 21-9 Setting Area 1 on R2’s Interfaces, When They Should Be in Area 0
+router ospf 1
+router-id 2.2.2.2
+!
+interface gigabitEthernet0/0
+ip ospf 1 area 1
+!
+interface gigabitEthernet0/1
+ip ospf 1 area 1
+Example 21-10 Comparing OSPF Router IDs on R1 and R3
+! Next, on R3: R3 lists the RID of 1.1.1.1
+!
+R3# show ip ospf
+Routing Process "ospf 1" with ID 1.1.1.1
+Start time: 00:00:37.136, Time elapsed: 02:20:37.200
+! lines omitted for brevity
+! Back to R1: R1 also uses RID 1.1.1.1
+R1# show ip ospf
+Routing Process "ospf 1" with ID 1.1.1.1
+||||||||||||||||||||
+||||||||||||||||||||
+512 CCNA 200-301 Official Cert Guide, Volume 1
+Start time: 00:01:51.864, Time elapsed: 12:13:50.904
+! lines omitted for brevity
+*May 29 00:01:25.679: %OSPF-4-DUP_RTRID_NBR: OSPF detected duplicate router-id
+1.1.1.1 from 10.1.1.3 on interface GigabitEthernet0/0
+Example 21-11 Finding Mismatched Hello/Dead Timers
+R1# show ip ospf interface G0/0
+GigabitEthernet0/0 is up, line protocol is up
+Internet Address 10.1.1.1/24, Area 0, Attached via Network Statement
+Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+Topology-MTID Cost Disabled Shutdown Topology Name
+0 1 no no Base
+Transmit Delay is 1 sec, State DR, Priority 1
+Designated Router (ID) 1.1.1.1, Interface address 10.1.1.1
+No backup designated router on this network
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+21
+Chapter 21: OSPF Network Types and Neighbors 513
+Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+! lines omitted for brevity
+! Moving on to R4 next
+!
+R4# show ip ospf interface Gi0/0
+GigabitEthernet0/0 is up, line protocol is up
+Internet Address 10.1.1.4/24, Area 0, Attached via Network Statement
+Process ID 4, Router ID 10.1.44.4, Network Type BROADCAST, Cost: 1
+Topology-MTID Cost Disabled Shutdown Topology Name
+0 1 no no Base
+Transmit Delay is 1 sec, State DR, Priority 1
+Transmit Delay is 1 sec, State DR, Priority 1
+Designated Router (ID) 10.1.44.4, Interface address 10.1.1.4
+No backup designated router on this network
+Timer intervals configured, Hello 5, Dead 20, Wait 20, Retransmit 5
+! lines omitted for brevity
+Example 21-12 Shutting Down an OSPF Process, and the Resulting Neighbor States
+R5# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 1 FULL/DR 00:00:35 10.1.12.2 GigabitEthernet0/1
+3.3.3.3 1 FULL/DR 00:00:33 10.1.13.3 GigabitEthernet0/2
+R5# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R5(config)# router ospf 1
+R5(config-router)# shutdown
+R5(config-router)# ^Z
+*Mar 23 12:43:30.634: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on GigabitEthernet0/1
+from FULL to DOWN, Neighbor Down: Interface down or detached
+*Mar 23 12:43:30.635: %OSPF-5-ADJCHG: Process 1, Nbr 3.3.3.3 on GigabitEthernet0/2
+from FULL to DOWN, Neighbor Down: Interface down or detached
+R5# show ip ospf interface brief
+Interface PID Area IP Address/Mask Cost State Nbrs F/C
+Gi0/1 1 0 10.1.12.1/24 1 DOWN 0/0
+Gi0/2 1 0 10.1.13.1/24 1 DOWN 0/0
+R5# show ip ospf
+Routing Process "ospf 1" with ID 5.5.5.5
+Start time: 5d23h, Time elapsed: 1d04h
+Routing Process is shutdown
+! lines omitted for brevity
+R5# show ip ospf neighbor
+R5#
+R5# show ip ospf database
+OSPF Router with ID (3.3.3.3) (Process ID 1)
+R5#
+Example 21-13 Shutting Down an OSPF Process, and the Resulting Neighbor States
+*Apr 10 16:31:01.951: %OSPF-4-NET_TYPE_MISMATCH: Received Hello from 2.2.2.2 on
+GigabitEthernet0/0/0 indicating a potential network type mismatch
+R1# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+2.2.2.2 0 FULL/ - 00:00:38 10.1.12.2 GigabitEthernet0/0/0
+R1#
+R2# show ip ospf neighbor
+Neighbor ID Pri State Dead Time Address Interface
+1.1.1.1 1 FULL/BDR 00:00:30 10.1.12.1 GigabitEthernet0/1/0
+Example 24-1 Configuring Static IPv6 Addresses on R1
+ipv6 unicast-routing
+!
+interface GigabitEthernet0/0
+ipv6 address 2001:DB8:1111:1::1/64
+!
+interface GigabitEthernet0/0/0
+ipv6 address 2001:0db8:1111:0004:0000:0000:0000:0001/64
+Example 24-2 Configuring Static IPv6 Addresses on R2
+ipv6 unicast-routing
+!
+interface GigabitEthernet0/0
+ipv6 address 2001:DB8:1111:2::2/64
+!
+interface GigabitEthernet0/1/0
+ipv6 address 2001:db8:1111:4::2/64
+Example 24-3 Verifying Static IPv6 Addresses on Router R1
+! The first interface is in subnet 1
+R1# show ipv6 interface GigabitEthernet 0/0
+GigabitEthernet0/0 is up, line protocol is up
+IPv6 is enabled, link-local address is FE80::1:AAFF:FE00:1
+No Virtual link-local address(es):
+Global unicast address(es):
+2001:DB8:1111:1::1, subnet is 2001:DB8:1111:1::/64
+Joined group address(es):
+FF02::1
+FF02::2
+FF02::1:FF00:1
+MTU is 1500 bytes
+ICMP error messages limited to one every 100 milliseconds
+ICMP redirects are enabled
+ICMP unreachables are sent
+ND DAD is enabled, number of DAD attempts: 1
+ND reachable time is 30000 milliseconds (using 30000)
+ND advertised reachable time is 0 (unspecified)
+ND advertised retransmit interval is 0 (unspecified)
+ND router advertisements are sent every 200 seconds
+ND router advertisements live for 1800 seconds
+ND advertised default router preference is Medium
+Hosts use stateless autoconfig for addresses.
+R1# show ipv6 interface brief
+GigabitEthernet0/0 [up/up]
+FE80::1:AAFF:FE00:1
+2001:DB8:1111:1::1
+GigabitEthernet0/1 [administratively down/down]
+unassigned
+GigabitEthernet0/0/0 [up/up]
+FE80::32F7:DFF:FE29:8568
+2001:DB8:1111:4::1
+GigabitEthernet0/1/0 [administratively down/down]
+unassigned
+Example 24-4 Displaying Connected IPv6 Routes on Router R1
+R1# show ipv6 route connected
+IPv6 Routing Table - default - 5 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+B - BGP, HA - Home Agent, MR - Mobile Router, R - RIP
+H - NHRP, I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea
+IS - ISIS summary, D - EIGRP, EX - EIGRP external, NM - NEMO
+ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+RL - RPL, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+la - LISP alt, lr - LISP site-registrations, ld - LISP dyn-eid
+lA - LISP away, a - Application
+C 2001:DB8:1111:1::/64 [0/0]
+via GigabitEthernet0/0, directly connected
+C 2001:DB8:1111:4::/64 [0/0]
+via GigabitEthernet0/0/0, directly connected
+Example 24-5 Configuring R1’s IPv6 Interfaces Using EUI-64
+ipv6 unicast-routing
+!
+! The ipv6 address command now lists a prefix, not the full address
+interface GigabitEthernet0/0
+mac-address 0201.aa00.0001
+ipv6 address 2001:DB8:1111:1::/64 eui-64
+!
+interface GigabitEthernet0/0/0
+ipv6 address 2001:DB8:1111:4::/64 eui-64
+R1# show ipv6 interface brief
+GigabitEthernet0/0 [up/up]
+FE80::1:AAFF:FE00:1
+2001:DB8:1111:1:1:AAFF:FE00:1
+GigabitEthernet0/1 [administratively down/down]
+unassigned
+GigabitEthernet0/0/0 [up/up]
+FE80::32F7:DFF:FE29:8568
+2001:DB8:1111:4:32F7:DFF:FE29:8568
+GigabitEthernet0/0/1 [administratively down/down]
+unassigned
+Example 24-6 Router Configuration to Learn IPv6 Addresses with DHCP and SLAAC
+! This interface uses DHCP to learn its IPv6 address
+interface FastEthernet0/0
+ipv6 address dhcp
+!
+! This interface uses SLAAC to learn its IPv6 address
+interface FastEthernet0/1
+ipv6 address autoconfig
+Example 24-7 Comparing Link-Local Addresses with EUI-Generated Unicast Addresses
+R1# show ipv6 interface brief
+GigabitEthernet0/0 [up/up]
+FE80::1:AAFF:FE00:1
+2001:DB8:1111:1:1:AAFF:FE00:1
+GigabitEthernet0/1 [administratively down/down]
+unassigned
+GigabitEthernet0/0/0 [up/up]
+FE80::32F7:DFF:FE29:8568
+2001:DB8:1111:4:32F7:DFF:FE29:8568
+GigabitEthernet0/0/1 [administratively down/down]
+unassigned
+Example 24-8 Verifying Static IPv6 Addresses on Router R1
+R1# show ipv6 interface GigabitEthernet 0/0
+GigabitEthernet0/0 is up, line protocol is up
+IPv6 is enabled, link-local address is FE80::1
+No Virtual link-local address(es):
+Global unicast address(es):
+2001:DB8:1111:1::1, subnet is 2001:DB8:1111:1::/64 [EUI]
+Joined group address(es):
+FF02::1
+FF02::2
+FF02::5
+FF02::6
+FF02::1:FF00:1
+! Lines omitted for brevity
+Example 24-9 Verifying Static IPv6 Addresses on Router R1
+R1# show ipv6 interface GigabitEthernet 0/0
+GigabitEthernet0/0 is up, line protocol is up
+IPv6 is enabled, link-local address is FE80::AA:AAAA
+No Virtual link-local address(es):
+Global unicast address(es):
+2001:DB8:1111:1::1, subnet is 2001:DB8:1111:1::/64 [TEN]
+Joined group address(es):
+FF02::1
+FF02::2
+FF02::5
+FF02::1:FF00:1
+FF02::1:FFAA:AAAA
+! Lines omitted for brevity
+||||||||||||||||||||
+||||||||||||||||||||
+574 CCNA 200-301 Official Cert Guide, Volume 1
+Example 24-10 Configuring and Verifying IPv6 Anycast Addresses
+R1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)# interface gigabitEthernet 0/0
+R1(config-if)# ipv6 address 2001:1:1:1::1/64
+R1(config-if)# ipv6 address 2001:1:1:2::99/128 anycast
+R1(config-if)# ^Z
+R1#
+R1# show ipv6 interface g0/0
+GigabitEthernet0/0 is up, line protocol is up
+IPv6 is enabled, link-local address is FE80::11FF:FE11:1111
+No Virtual link-local address(es):
+Global unicast address(es):
+2001:1:1:1::1, subnet is 2001:1:1:1::/64
+2001:1:1:2::99, subnet is 2001:1:1:2::99/128 [ANY]
+! Lines omitted for brevity
+R1# show ipv6 interface brief g0/0
+GigabitEthernet0/0 [up/up]
+FE80::11FF:FE11:1111
+2001:1:1:1::1
+2001:1:1:2::99
+||||||||||||||||||||
+||||||||||||||||||||
+576 CCNA 200-301 Official Cert Guide, Volume 1
+Example 25-1 IPv6 Addressing Configuration on Router R1
+ipv6 unicast-routing
+!
+interface GigabitEthernet0/0
+ipv6 address 2001:DB8:1111:1::1/64
+!
+interface Serial0/0/0
+ipv6 address 2001:db8:1111:4::1/64
+!
+interface GigabitEthernet0/1/0
+ipv6 address 2001:db8:1111:5::1/64
+Example 25-2 Routes on Router R1 Before Adding Static Routes or Routing Protocols
+R1# show ipv6 route
+IPv6 Routing Table - default - 7 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+B - BGP, HA - Home Agent, MR - Mobile Router, R - RIP
+H - NHRP, I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea
+IS - ISIS summary, D - EIGRP, EX - EIGRP external, NM - NEMO
+ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+RL - RPL, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+la - LISP alt, lr - LISP site-registrations, ld - LISP dyn-eid
+lA - LISP away, a - Application
+C 2001:DB8:1111:1::/64 [0/0]
+via GigabitEthernet0/0, directly connected
+L 2001:DB8:1111:1::1/128 [0/0]
+via GigabitEthernet0/0, receive
+C 2001:DB8:1111:4::/64 [0/0]
+via Serial0/0/0, directly connected
+L 2001:DB8:1111:4::1/128 [0/0]
+via GigabitEthernet0/0/0, receive
+C 2001:DB8:1111:5::/64 [0/0]
+via GigabitEthernet0/1/0, directly connected
+L 2001:DB8:1111:5::1/128 [0/0]
+via GigabitEthernet0/1/0, receive
+L FF00::/8 [0/0]
+via Null0, receive
+Example 25-3 Local IPv6 Routes on Router R1
+R1# show ipv6 route local
+! Legend omitted for brevity
+L 2001:DB8:1111:1::1/128 [0/0]
+via GigabitEthernet0/0, receive
+L 2001:DB8:1111:4::1/128 [0/0]
+via Serial0/0/0, receive
+L 2001:DB8:1111:5::1/128 [0/0]
+via GigabitEthernet0/1/0, receive
+L FF00::/8 [0/0]
+via Null0, receive
+Example 25-4 Static IPv6 Routes on Router R1
+! Static route on router R1
+R1(config)# ipv6 route 2001:db8:1111:2::/64 S0/0/0
+Example 25-5 Static IPv6 Routes on Router R2
+! Static route on router R2
+R2(config)# ipv6 route 2001:db8:1111:1::/64 s0/0/1
+Example 25-6 Verification of Static Routes Only on R1
+R1# show ipv6 route static
+! Legend omitted for brevity
+S 2001:DB8:1111:2::/64 [1/0]
+via Serial0/0/0, directly connected
+Example 25-7 Displaying the Route R1 Uses to Forward to Host B
+R1# show ipv6 route 2001:db8:1111:2::22
+Routing entry for 2001:DB8:1111:2::/64
+Known via "static", distance 1, metric 0
+Route count is 1/1, share count 0
+Routing paths:
+directly connected via Serial0/0/0
+Last updated 00:01:29 ago
+Example 25-8 Static IPv6 Routes Using Global Unicast Addresses
+! The first command is on router R1, listing R2's global unicast address
+R1(config)# ipv6 route 2001:db8:1111:2::/64 2001:DB8:1111:4::2
+! The next command is on router R2, listing R1's global unicast address
+R2(config)# ipv6 route 2001:db8:1111:1::/64 2001:db8:1111:4::1
+Example 25-9 Verification of Static Routes to a Next-Hop Global Unicast Address
+R1# show ipv6 route static
+! Legend omitted for brevity
+S 2001:DB8:1111:2::/64 [1/0]
+via 2001:DB8:1111:4::2
+R1# show ipv6 route 2001:db8:1111:2::22/64
+Routing entry for 2001:DB8:1111:2::/64
+Known via "static", distance 1, metric 0
+Backup from "ospf 1 [110]"
+Route count is 1/1, share count 0
+Routing paths:
+2001:DB8:1111:4::2
+Last updated 00:07:43 ago
+Example 25-10 Static IPv6 Routes Using Link-Local Neighbor Addresses
+! The first command is on router R1, listing R2's link-local address
+R1(config)# ipv6 route 2001:db8:1111:2::/64 S0/0/0 FE80::FF:FE00:2
+! The next command is on router R2, listing R1's link-local address
+R2(config)# ipv6 route 2001:db8:1111:1::/64 S0/0/1 FE80::FF:FE00:1
+Example 25-11 Verification of Static Routes to a Next-Hop Link-Local Address
+R1# show ipv6 route static
+! Legend omitted for brevity
+S 2001:DB8:1111:2::/64 [1/0]
+via FE80::FF:FE00:2, Serial0/0/0
+R1# show ipv6 route 2001:db8:1111:2::22
+Routing entry for 2001:DB8:1111:2::/64
+Known via "static", distance 1, metric 0
+Backup from "ospf 1 [110]"
+Route count is 1/1, share count 0
+Routing paths:
+FE80::FF:FE00:2, Serial0/0/0
+Last updated 00:08:10 ago
+Technet24
+||||||||||||||||||||
+||||||||||||||||||||
+25
+Chapter 25: Implementing IPv6 Routing 591
+Example 25-12 Static IPv6 Routes with an Ethernet WAN Interface
+! The first command is on router R1, listing R3's global unicast address
+R1(config)# ipv6 route 2001:db8:1111:3::/64 2001:db8:1111:5::3
+! The next command is on router R2, listing R1's link-local address
+R2(config)# ipv6 route 2001:db8:1111:1::/64 G0/0/0 2001:db8:1111:5::1
+||||||||||||||||||||
+||||||||||||||||||||
+592 CCNA 200-301 Official Cert Guide, Volume 1
+Example 25-13 Static Default Route for Branch Router B1
+!Forward out B1's S0/0/1 local interface...
+B1(config)# ipv6 route ::/0 S0/0/1
+Example 25-14 Router B1’s Static Default Route (Using Outgoing Interface)
+B1# show ipv6 route static
+IPv6 Routing Table - default - 10 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+B - BGP, R - RIP, I1 - ISIS L1, I2 - ISIS L2
+IA - ISIS interarea, IS - ISIS summary, D - EIGRP, EX - EIGRP external
+ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2
+ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+S ::/0 [1/0]
+via Serial0/0/1, directly connected
+Example 25-15 Static Host IPv6 Routes on R1, for Host B
+! The first command lists host B's address, prefix length /128,
+! with R2's link-local address as next-hop, with an outgoing interface.
+R1(config)# ipv6 route 2001:db8:1111:2::22/128 S0/0/0 FE80::FF:FE00:2
+R1(config)#
+! The next command also lists host B's address, prefix length /128,
+! but with R2's global unicast address as next-hop, and no outgoing interface.
+R1(config)# ipv6 route 2001:db8:1111:2::22/128 2001:DB8:1111:4::2
+Example 25-16 Displaying the Administrative Distance of the Static Route
+R1# show ipv6 route static
+! Legend omitted for brevity
+S 2001:db8:1111:7::/64 [130/0]
+via 2001:db8:1111:9::3
+R1# show ipv6 route 2001:db8:1111:7::/64
+Routing entry for 2001:db8:1111:7::/64
+Known via "static", distance 130, metric 0
+Route count is 1/1, share count 0
+Routing paths:
+2001:db8:1111:9::3
+Last updated 00:00:58 ago
+Example 25-17 IPv6 route Commands with Correct Syntax but Incorrect Ideas
+ipv6 route 2001:DB8:9:33::/64 2001:DB8:9:2::2 ! Step 1: Wrong prefix
+ipv6 route 2001:DB8:9:3::/64 G0/2 FE80::AAA9 ! Step 2A: Wrong neighbor link local
+ipv6 route 2001:DB8:9:3::/64 FE80::2 ! Step 2B: Missing outgoing interface
+ipv6 route 2001:DB8:9:3::/64 2001:DB8:9:2::1 ! Step 3: Wrong neighbor address
+ipv6 route 2001:DB8:9:3::/64 G0/1 FE80::2 ! Step 4: Wrong interface on R1
+Example 25-18 IOS Rejects the ipv6 route Command with Link-Local and No Outgoing
+Interface
+R1# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)# ipv6 route 2001:DB8:9:3::/64 FE80::2
+% Interface has to be specified for a link-local nexthop
+||||||||||||||||||||
+||||||||||||||||||||
+598 CCNA 200-301 Official Cert Guide, Volume 1
+R1(config)# ^Z
+R1#
+R1# show running-config | include ipv6 route
+R1#
+Example 25-19 IPv6 Neighbor Table on Router R3
+R3# show ipv6 neighbors
+IPv6 Address Age Link-layer Addr State Interface
+2001:DB8:1111:5::1 0 0201.a010.0001 REACH Gi0/0/0
+FE80::1:A0FF:FE10:1 0 0201.a010.0001 REACH Gi0/0/0
