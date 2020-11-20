@@ -1199,188 +1199,134 @@ Watch video | | Website
   
 Table end.
 ###### Table 17-4 Chapter 17 Configuration Command Reference
-__|__
---|--
-Command | Description
-interface type number.subint Router global command to create a subinterface and to enter
-configuration mode for that subinterface
-encapsulation dot1q vlan-id
-[native]
-Router subinterface subcommand that tells the router to
-use 802.1Q trunking, for a particular VLAN, and with the
-native keyword, to not encapsulate in a trunking header
-[no] ip routing Global command that enables (ip routing) or disables (no ip
-routing) the routing of IPv4 packets on a router or Layer 3
-switch
-interface vlan vlan-id A switch global command on a Layer 3 switch to create a
-VLAN interface and to enter configuration mode for that
-VLAN interface
-sdm prefer lanbase-routing Command on some Cisco switches that reallocates
-forwarding chip memory to allow for an IPv4 routing table
-[no] switchport Layer 3 switch subcommand that makes the port act as
-a Layer 2 port (switchport) or Layer 3 routed port (no
-switchport)
-interface port-channel channelnumber
-A switch command to enter PortChannel configuration
-mode and also to create the PortChannel if not already
-created
-channel-group channel-number
-mode {auto | desirable | active |
-passive | on}
-Interface subcommand that enables EtherChannel on the
-interface
+__|__|__
+--|--|--
+Command |  Description
+interface type number.subint | Router global command to create a subinterface and to enter configuration mode for that subinterface
+encapsulation dot1q vlan-id (native) | Router subinterface subcommand that tells the router to use 802.1Q trunking, for a particular VLAN, and with the native keyword, to not encapsulate in a trunking header
+(no) ip routing | Global command that enables (ip routing) or disables (no ip routing) the routing of IPv4 packets on a router or Layer 3 switch
+interface vlan vlan-id | A switch global command on a Layer 3 switch to create a VLAN interface and to enter configuration mode for that VLAN interface sdm prefer lanbase-routing | Command on some Cisco switches that reallocates forwarding chip memory to allow for an IPv4 routing table
+(no) switchport | Layer 3 switch subcommand that makes the port act as a Layer 2 port (switchport) or Layer 3 routed port (no switchport)
+interface port-channel channelnumber | A switch command to enter PortChannel configuration mode and also to create the PortChannel if not already created 
+channel-group channel-number mode {auto / desirable / active / passive / on} | Interface subcommand that enables EtherChannel on the interface
   
 Table end.
-Table 17-5 Chapter 17 EXEC Command Reference
-Command Description
-show ip route Lists the router’s entire routing table
-show ip route [connected] Lists a subset of the IP routing table
-show vlans Lists VLAN configuration and statistics for VLAN trunks
-configured on routers
-show interfaces [interface type
-number]
-Lists detailed status and statistical information, including
-IP address and mask, about all interfaces (or the listed
-interface only)
-show interfaces [interface type
-number] status
-Among other facts, for switch ports, lists the access
-VLAN or the fact that the interface is a trunk; or, for
-routed ports, lists “routed”
-show interfaces interface-id
-switchport
-For switch ports, lists information about any interface
-regarding administrative settings and operational state;
-for routed ports, the output simply confirms the port is a
+###### Table 17-5 Chapter 17 EXEC Command Reference
+__|__|__
+--|--|--
+Command | Description
+show ip route | Lists the router’s entire routing table
+show ip route (connected) | Lists a subset of the IP routing table
+show vlans | Lists VLAN configuration and statistics for VLAN trunks configured on routers
+show interfaces (interface type number) | Lists detailed status and statistical information, including IP address and mask, about all interfaces (or the listed interface only)
+show interfaces (interface type number) status | Among other facts, for switch ports, lists the access VLAN or the fact that the interface is a trunk; or, for routed ports, lists “routed”
+show interfaces interface-id switchport | For switch ports, lists information about any interface regarding administrative settings and operational state; for routed ports, the output simply confirms the port is a
 routed (not switched) port
-show interfaces vlan number Lists the interface status, the switch’s IPv4 address and
-mask, and much more
-show etherchannel [channelgroup-
-number] summary
-Lists information about the state of EtherChannels on
-this switch, including whether the channel is a Layer 2 or
-Layer 3 EtherChannel
+show interfaces vlan number | Lists the interface status, the switch’s IPv4 address and mask, and much more 
+show etherchannel (channelgroup-number) summary | Lists information about the state of EtherChannels on this switch, including whether the channel is a Layer 2 or Layer 3 EtherChannel
+  
 Table end.
-Table 18-1 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Watch video Website
+###### Table 18-1 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Watch video | | Website
+  
 Table end.
-Table 19-2 IP IGP Metrics
-IGP Metric Description
-RIPv2 Hop count The number of routers (hops) between a router and the
-destination subnet
-OSPF Cost The sum of all interface cost settings for all links in a route,
-with the cost defaulting to be based on interface bandwidth
-EIGRP Calculation based on
-bandwidth and delay
-Calculated based on the route’s slowest link and the
-cumulative delay associated with each interface in the route
+###### Table 19-2 IP IGP Metrics
+__|__|__
+--|--|--
+IGP | Metric | Description
+RIPv2 | Hop count | The number of routers (hops) between a router and the destination subnet
+OSPF | Cost | The sum of all interface cost settings for all links in a route, with the cost defaulting to be based on interface bandwidth
+EIGRP | Calculation based on
+bandwidth and delay | Calculated based on the route’s slowest link and the cumulative delay associated with each interface in the route
+  
 Table end.
-Table 19-3 Interior IP Routing Protocols Compared
-Feature RIPv2 EIGRP OSPF
-Classless/sends mask in updates/supports VLSM Yes Yes Yes
-Algorithm (DV, advanced DV, LS) DV Advanced DV LS
-Supports manual summarization Yes Yes Yes
-Cisco-proprietary No Yes1 No
-Routing updates are sent to a multicast IP address Yes Yes Yes
-Convergence Slow Fast Fast
+###### Table 19-3 Interior IP Routing Protocols Compared
+__|__|__|__
+--|--|--|--
+Feature | RIPv2 | EIGRP | OSPF
+Classless/sends mask in updates/supports VLSM | Yes | Yes | Yes
+Algorithm (DV, advanced DV, LS) | DV | Advanced DV | LS
+Supports manual summarization | Yes | Yes | Yes
+Cisco-proprietary | No | Yes1 | No
+Routing updates are sent to a multicast IP address | Yes | Yes | Yes
+Convergence | Slow | Fast | Fast
+  
 Table end.
-Table 19-4 Default Administrative Distances
-Route Type Administrative Distance
-Connected 0
-Static 1
-BGP (external routes [eBGP]) 20
-EIGRP (internal routes) 90
-IGRP 100
-OSPF 110
-Technet24
-||||||||||||||||||||
-||||||||||||||||||||
-19
-Chapter 19: Understanding OSPF Concepts 449
-Route Type Administrative Distance
-IS-IS 115
-RIP 120
-EIGRP (external routes) 170
-BGP (internal routes [iBGP]) 200
-DHCP default route 254
-Unusable 255
+###### Table 19-4 Default Administrative Distances
+__|__
+--|--
+Route Type | Administrative Distance
+Connected | 0
+Static | 1
+BGP (external routes (eBGP)) | 20
+EIGRP (internal routes) | 90
+IGRP | 100
+OSPF | 110
+IS-IS | 115
+RIP | 120
+EIGRP (external routes) | 170
+BGP (internal routes (iBGP)) | 200
+DHCP default route | 254
+Unusable | 255
+  
 Table end.
-Table 19-5 Stable OSPF Neighbor States and Their Meanings
-Neighbor State Term for Neighbor Term for Relationship
-2-way Neighbor Neighbor Relationship
-Full Adjacent Neighbor
-Fully Adjacent Neighbor
-Adjacency
+###### Table 19-5 Stable OSPF Neighbor States and Their Meanings
+__|__|__
+--|--|--
+Neighbor State | Term for Neighbor | Term for Relationship
+2-way | Neighbor | Neighbor Relationship
+Full | Adjacent Neighbor Fully Adjacent Neighbor | Adjacency
+  
 Table end.
-Table 19-6 Comparing R1’s Three Alternatives for the Route to 172.16.3.0/24
-Route Location in Figure 19-11 Cumulative Cost
-R1–R7–R8 Left 10 + 180 + 10 = 200
-R1–R5–R6–R8 Middle 20 + 30 + 40 + 10 = 100
-R1–R2–R3–R4–R8 Right 30 + 60 + 20 + 5 + 10 = 125
+###### Table 19-6 Comparing R1’s Three Alternatives for the Route to 172.16.3.0/24
+__|__|__
+--|--|--
+Route | Location in Figure 19-11 | Cumulative Cost
+R1–R7–R8 | Left | 10 + 180 + 10 = 200
+R1–R5–R6–R8 | Middle | 20 + 30 + 40 + 10 = 100
+R1–R2–R3–R4–R8 | Right | 30 + 60 + 20 + 5 + 10 = 125
+  
 Table end.
-Table 19-7 OSPF Design Terminology
-Term Description
-Area Border Router
-(ABR)
-An OSPF router with interfaces connected to the backbone area and to
-at least one other area
-Backbone router A router connected to the backbone area (includes ABRs)
-Internal router A router in one area (not the backbone area)
-Area A set of routers and links that shares the same detailed LSDB
-information, but not with routers in other areas, for better efficiency
-Backbone area A special OSPF area to which all other areas must connect—area 0
-Intra-area route A route to a subnet inside the same area as the router
-Interarea route A route to a subnet in an area of which the router is not a part
+###### Table 19-7 OSPF Design Terminology
+__|__
+--|--
+Term | Description
+Area Border Router (ABR) | An OSPF router with interfaces connected to the backbone area and to at least one other area
+Backbone router | A router connected to the backbone area (includes ABRs)
+Internal router | A router in one area (not the backbone area)
+Area | A set of routers and links that shares the same detailed LSDB information, but not with routers in other areas, for better efficiency
+Backbone area | A special OSPF area to which all other areas must connect—area 0
+Intra-area route | A route to a subnet inside the same area as the router
+Interarea route | A route to a subnet in an area of which the router is not a part
+  
 Table end.
-Table 19-8 The Three OSPFv2 LSA Types Seen with a Multiarea OSPF Design
-LSA
-Name
-LSA
-Type
-Primary Purpose Contents of LSA
-Router 1 Describe a router RID, interfaces, IP address/mask,
+###### Table 19-8 The Three OSPFv2 LSA Types Seen with a Multiarea OSPF Design
+__|__|__|__
+--|--|--|--
+LSA Name | LSA Type | Primary Purpose | Contents of LSA
+Router | 1 | Describe a router | RID, interfaces, IP address/mask,
 current interface state (status)
-Network 2 Describe a network that has a
-DR
-DR and BDR IP addresses, subnet ID,
-mask
-Summary 3 Describe a subnet in another
-area
-Subnet ID, mask, RID of ABR that
-advertises the LSA
+Network | 2 | Describe a network that has a DR  | DR and BDR IP addresses, subnet ID, mask
+Summary | 3 | Describe a subnet in another area | Subnet ID, mask, RID of ABR that advertises the LSA
+  
 Table end.
-Table 19-9 Chapter Review Tracking
-Review Element Review Date(s) Resource Used:
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
+###### Table 20-2 Example OSPF network Commands on R3, with Expected Results
+__|__|__
+--|--|--
+Command | Logic in Command | Matched Interfaces
+network 10.1.0.0 0.0.255.255 | Match addresses that begin with 10.1 | G0/0.1 G0/0.2 G0/0/0 G0/1/0 G0/2/0
+network 10.0.0.0 0.255.255.255 | Match addresses that begin with 10 | G0/0.1 G0/0.2 G0/0/0 G0/1/0 G0/2/0
+network 0.0.0.0 255.255.255.255 | Match all addresses | G0/0.1 G0/0.2 G0/0/0 G0/1/0 G0/2/0
+network 10.1.13.0 0.0.0.255 | Match addresses that begin with 10.1.13 | G0/1/0
+network 10.1.13.1 0.0.0.0 | Match one address: 10.1.13.1 | G0/1/0
+  
 Table end.
-Table 20-2 Example OSPF network Commands on R3, with Expected Results
-Command Logic in Command Matched
-Interfaces
-network 10.1.0.0 0.0.255.255 Match addresses that begin with 10.1 G0/0.1
-G0/0.2
-G0/0/0
-G0/1/0
-G0/2/0
-network 10.0.0.0 0.255.255.255 Match addresses that begin with 10 G0/0.1
-G0/0.2
-G0/0/0
-G0/1/0
-G0/2/0
-network 0.0.0.0 255.255.255.255 Match all addresses G0/0.1
-G0/0.2
-G0/0/0
-G0/1/0
-G0/2/0
-network 10.1.13.0 0.0.0.255 Match addresses that begin with 10.1.13 G0/1/0
-network 10.1.13.1 0.0.0.0 Match one address: 10.1.13.1 G0/1/0
-Table end.
-Table 20-3 Faster Interfaces with Equal OSPF Costs
+###### Table 20-3 Faster Interfaces with Equal OSPF Costs
 Interface Interface Default
 Bandwidth (Kbps)
 Formula (Kbps) OSPF Cost
@@ -1391,7 +1337,7 @@ Gigabit Ethernet 1,000,000 Kbps 100,000/1,000,000 1
 10 Gigabit Ethernet 10,000,000 Kbps 100,000/10,000,000 1
 100 Gigabit Ethernet 100,000,000 Kbps 100,000/100,000,000 1
 Table end.
-Table 20-4 Chapter Review Tracking
+###### Table 20-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used:
 Review key topics Book, website
 Review key terms Book, website
@@ -1400,7 +1346,7 @@ Review Config Checklists Book, website
 Review command tables Book
 Do labs Blog
 Table end.
-Table 20-5 Key Topics for Chapter 20
+###### Table 20-5 Key Topics for Chapter 20
 Key Terms You Should Know
 reference bandwidth, interface bandwidth, maximum paths
 Command References
@@ -1409,7 +1355,7 @@ easy review exercise, cover the left column in a table, read the right column, a
 the command without looking. Then repeat the exercise, covering the right column, and try
 to recall what the command does.
 Table end.
-Table 20-6 Chapter 20 Configuration Command Reference
+###### Table 20-6 Chapter 20 Configuration Command Reference
 Command Description
 router ospf process-id Router subcommand that enters OSPF configuration mode
 for the listed process.
@@ -1452,13 +1398,13 @@ number
 OSPF subcommand that tells OSPF to be active (not passive)
 on that interface or subinterface.
 default-information originate
-[always]
+(always)
 OSPF subcommand to tell OSPF to create and advertise an
 OSPF default route, as long as the router has some default
 route (or to always advertise a default, if the always option is
 configured).
 Table end.
-Table 20-7 Chapter 20 EXEC Command Reference
+###### Table 20-7 Chapter 20 EXEC Command Reference
 Command Description
 show ip ospf Lists information about the OSPF process running on the
 router, including the OSPF router ID, areas to which the router
@@ -1466,19 +1412,19 @@ connects, and the number of interfaces in each area.
 show ip ospf interface brief Lists the interfaces on which the OSPF protocol is enabled
 (based on the network commands), including passive
 interfaces.
-show ip ospf interface [type
-number]
+show ip ospf interface (type
+number)
 Lists a long section of settings, status, and counters for OSPF
 operation on all interfaces, or on the listed interface, including
 the Hello and Dead Timers.
 show ip protocols Shows routing protocol parameters and current timer values.
 Table end.
-Table 21-2 Two OSPF Network Types and Key Behaviors
+###### Table 21-2 Two OSPF Network Types and Key Behaviors
 Network Type Keyword Dynamically Discovers Neighbors Uses a DR/BDR
 broadcast Yes Yes
 point-to-point Yes No
 Table end.
-Table 21-3 Neighbor Requirements for OSPF
+###### Table 21-3 Neighbor Requirements for OSPF
 Requirement Required
 for OSPF
 Neighbor
@@ -1497,7 +1443,7 @@ OSPF process must not be shut down. Yes Yes
 Neighboring interfaces must use same MTU setting. Yes No
 Neighboring interfaces must use same OSPF network type. Yes No
 Table end.
-Table 21-4 OSPF Neighbor Requirements and the Best show/debug Commands
+###### Table 21-4 OSPF Neighbor Requirements and the Best show/debug Commands
 Requirement Best show Command
 Hello and dead timers must match. show ip ospf interface
 They must be in the same area. show ip ospf interface brief
@@ -1505,14 +1451,14 @@ RIDs must be unique. show ip ospf
 They must pass any neighbor authentication. show ip ospf interface
 OSPF process must not be shut down. show ip ospf, show ip ospf interface
 Table end.
-Table 21-5 Chapter Review Tracking
+###### Table 21-5 Chapter Review Tracking
 Review Element Review Date(s) Resource Used:
 Review key topics Book, website
 Review command tables Book
 Review memory tables Website
 Watch video Website
 Table end.
-Table 21-7 Chapter 21 Configuration Command Reference
+###### Table 21-7 Chapter 21 Configuration Command Reference
 Command Description
 ip ospf hello-interval seconds Interface subcommand that sets the interval for periodic Hellos
 ip ospf dead-interval number Interface subcommand that sets the OSPF dead timer
@@ -1525,10 +1471,10 @@ ip ospf network {broadcast |
 point-to-point}
 Interface subcommand used to set the OSPF network type
 on the interface
-[no] shutdown An OSPF configuration mode command to disable
+(no) shutdown An OSPF configuration mode command to disable
 (shutdown) or enable (no shutdown) the OSPF process
 Table end.
-Table 21-8 Chapter 21 show Command Reference
+###### Table 21-8 Chapter 21 show Command Reference
 Command Description
 show ip protocols Shows routing protocol parameters and current timer values,
 including an effective copy of the routing protocols’ network
@@ -1536,8 +1482,8 @@ commands and a list of passive interfaces
 show ip ospf interface brief Lists the interfaces on which the OSPF protocol is enabled
 (based on the network commands), including passive
 interfaces
-show ip ospf interface [type
-number]
+show ip ospf interface (type
+number)
 Lists detailed OSPF settings for all interfaces, or the listed
 interface, including Hello and dead timers and OSPF area
 show ip ospf neighbor Lists neighbors and current status with neighbors, per interface
@@ -1546,7 +1492,7 @@ listing the OSPF Router ID in the first line
 show interfaces Lists a long set of messages, per interface, that lists
 configuration, state, and counter information
 Table end.
-Table 22-2 IPv6 Routing Protocols
+###### Table 22-2 IPv6 Routing Protocols
 Routing Protocol Defined By Notes
 RIPng (RIP next
 generation)
@@ -1567,7 +1513,7 @@ RFC BGP version 4 was created to be highly extendable; IPv6
 support was added to BGP version 4 through one such
 enhancement, MP BGP-4.
 Table end.
-Table 22-3 Hexadecimal/Binary Conversion Chart
+###### Table 22-3 Hexadecimal/Binary Conversion Chart
 Hex Binary Hex Binary
 0 0000 8 1000
 1 0001 9 1001
@@ -1578,7 +1524,7 @@ Hex Binary Hex Binary
 6 0110 E 1110
 7 0111 F 1111
 Table end.
-Table 22-4 IPv6 Address Abbreviation and Expansion Practice
+###### Table 22-4 IPv6 Address Abbreviation and Expansion Practice
 Full Abbreviation
 2340:0000:0010:0100:1000:ABCD:0101:1010
 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
@@ -1589,7 +1535,7 @@ Full Abbreviation
 FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE
 FE80::FACE:BAFF:FEBE:CAFE
 Table end.
-Table 22-5 Finding the IPv6 Prefix from an Address/Length Value
+###### Table 22-5 Finding the IPv6 Prefix from an Address/Length Value
 Address/Length Prefix
 2340:0:10:100:1000:ABCD:101:1010/64
 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009/64
@@ -1606,7 +1552,7 @@ Address/Length Prefix
 3124::DEAD:CAFE:FF:FE00:1/64
 2BCD::FACE:BEFF:FEBE:CAFE/64
 Table end.
-Table 22-6 Finding the IPv6 Prefix from an Address/Length Value
+###### Table 22-6 Finding the IPv6 Prefix from an Address/Length Value
 Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/80
 3124::DEAD:CAFE:FF:FE00:1/80
@@ -1617,7 +1563,7 @@ Address/Length Prefix
 3124::DEAD:CAFE:FF:FE00:1/60
 2BCD::FACE:1:BEFF:FEBE:CAFE/56
 Table end.
-Table 22-7 Chapter Review Tracking
+###### Table 22-7 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
@@ -1626,7 +1572,7 @@ Review command tables Book
 Review memory table Book, website
 Review All the Key Topics
 Table end.
-Table 22-8 Key Topics for Chapter 22
+###### Table 22-8 Key Topics for Chapter 22
 Key Topic
 Element
 Description Page
@@ -1638,7 +1584,7 @@ List Process steps to find an IPv6 prefix, based on the IPv6 address and
 prefix length
 533
 Table end.
-Table 22-9 Answers to Questions in the Earlier Table 22-4
+###### Table 22-9 Answers to Questions in the Earlier Table 22-4
 Full Abbreviation
 2340:0000:0010:0100:1000:ABCD:0101:1010 2340:0:10:100:1000:ABCD:101:1010
 30A0:ABCD:EF12:3456:0ABC:B0B0:9999:9009 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
@@ -1649,7 +1595,7 @@ Full Abbreviation
 FE80:0000:0000:0000:DEAD:BEFF:FEEF:CAFE FE80::DEAD:BEFF:FEEF:CAFE
 FE80:0000:0000:0000:FACE:BAFF:FEBE:CAFE FE80::FACE:BAFF:FEBE:CAFE
 Table end.
-Table 22-10 Answers to Questions in the Earlier Table 22-5
+###### Table 22-10 Answers to Questions in the Earlier Table 22-5
 Address/Length Prefix
 2340:0:10:100:1000:ABCD:101:1010/64 2340:0:10:100::/64
 30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009/64 30A0:ABCD:EF12:3456::/64
@@ -1660,7 +1606,7 @@ Address/Length Prefix
 3124::DEAD:CAFE:FF:FE00:1/64 3124:0:0:DEAD::/64
 2BCD::FACE:BEFF:FEBE:CAFE/64 2BCD::/64
 Table end.
-Table 22-11 Answers to Questions in the Earlier Table 22-6
+###### Table 22-11 Answers to Questions in the Earlier Table 22-6
 Address/Length Prefix
 34BA:B:B:0:5555:0:6060:707/80 34BA:B:B:0:5555::/80
 3124::DEAD:CAFE:FF:FE00:1/80 3124:0:0:DEAD:CAFE::/80
@@ -1671,21 +1617,21 @@ Address/Length Prefix
 3124::DEAD:CAFE:FF:FE00:1/60 3124:0:0:DEA0::/60
 2BCD::FACE:1:BEFF:FEBE:CAFE/56 2BCD:0:0:FA00::/56
 Table end.
-Table 23-2 Some Types of IPv6 Addresses and Their First Hex Digit(s)
+###### Table 23-2 Some Types of IPv6 Addresses and Their First Hex Digit(s)
 Address Type First Hex Digits
 Global unicast 2 or 3 (originally); all not otherwise reserved (today)
 Unique local FD
 Multicast FF
 Link local FE80
 Table end.
-Table 23-3 Chapter Review Tracking
+###### Table 23-3 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory table Website
 Table end.
-Table 24-2 IPv6 EUI-64 Address Creation Practice
+###### Table 24-2 IPv6 EUI-64 Address Creation Practice
 Prefix MAC Address Unabbreviated IPv6 Address
 2001:DB8:1:1::/64 0013.ABAB.1001
 2001:DB8:1:1::/64 AA13.ABAB.1001
@@ -1694,7 +1640,7 @@ Prefix MAC Address Unabbreviated IPv6 Address
 2001:DB8:FE:FE::/64 0C0C.ABAC.CABA
 2001:DB8:FE:FE::/64 0A0C.ABAC.CABA
 Table end.
-Table 24-3 Key IPv6 Local-Scope Multicast Addresses
+###### Table 24-3 Key IPv6 Local-Scope Multicast Addresses
 Short Name Multicast
 Address
 Meaning IPv4 Equivalent
@@ -1719,7 +1665,7 @@ DHCP Relay
 Agent
 FF02::1:2 All routers acting as a DHCPv6 relay agent None
 Table end.
-Table 24-4 IPv6 Multicast Scope Terms
+###### Table 24-4 IPv6 Multicast Scope Terms
 Scope
 Name
 First
@@ -1753,7 +1699,7 @@ company or organization. Must be broader than
 Site-Local.
 Global FF0E No Boundaries No boundaries.
 Table end.
-Table 24-5 Summary of IPv6 Address Types and the Commands That Create Them
+###### Table 24-5 Summary of IPv6 Address Types and the Commands That Create Them
 Type Prefix/Address
 Notes
 Enabled with What Interface Subcommand
@@ -1773,7 +1719,7 @@ Solicited-node
 multicast
 FF02::1:FF /104 Autogenerated by all ipv6 address commands
 Table end.
-Table 24-6 Chapter Review Tracking
+###### Table 24-6 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
@@ -1783,16 +1729,16 @@ Review memory tables Website
 Do labs Blog
 Watch video Website
 Table end.
-Table 24-8 Chapter 24 Configuration Command Reference
+###### Table 24-8 Chapter 24 Configuration Command Reference
 Command Description
 ipv6 unicast-routing Global command that enables IPv6 routing on the router.
 ipv6 address ipv6-address/
-prefix-length [eui-64]
+prefix-length (eui-64)
 Interface subcommand that manually configures either the
 entire interface IP address or a /64 prefix with the router
 building the EUI-64 format interface ID automatically.
 ipv6 address ipv6-address/
-prefix-length [anycast]
+prefix-length (anycast)
 Interface subcommand that manually configures an address to
 be used as an anycast address.
 ipv6 enable Command that enables IPv6 on an interface and generates a linklocal
@@ -1801,22 +1747,22 @@ ipv6 address dhcp Interface subcommand that enables IPv6 on an interface, causes
 the router to use DHCP client processes to try to lease an IPv6
 address, and creates a link-local address for the interface.
 Table end.
-Table 24-9 Chapter 24 EXEC Command Reference
+###### Table 24-9 Chapter 24 EXEC Command Reference
 Command Description
-show ipv6 route [connected]
-[local]
+show ipv6 route (connected)
+(local)
 Lists IPv6 routes, or just the connected routes, or just the local
 routes.
-show ipv6 interface [type
-number]
+show ipv6 interface (type
+number)
 Lists IPv6 settings on an interface, including link-local and
 other unicast IP addresses (or for the listed interface).
 show ipv6 interface brief
-[type number]
+(type number)
 Lists interface status and IPv6 addresses for each interface (or
 for the listed interface).
 Table end.
-Table 24-10 Answers to IPv6 EUI-64 Address Creation Practice
+###### Table 24-10 Answers to IPv6 EUI-64 Address Creation Practice
 Prefix MAC Address Unabbreviated IPv6 Address
 2001:DB8:1:1::/64 0013.ABAB.1001 2001:DB8:1:1:0213:ABFF:FEAB:1001
 2001:DB8:1:1::/64 AA13.ABAB.1001 2001:DB8:1:1:A813:ABFF:FEAB:1001
@@ -1825,7 +1771,7 @@ Prefix MAC Address Unabbreviated IPv6 Address
 2001:DB8:FE:FE::/64 0C0C.ABAC.CABA 2001:DB8:FE:FE:0E0C:ABFF:FEAC:CABA
 2001:DB8:FE:FE::/64 0A0C.ABAC.CABA 2001:DB8:FE:FE:080C:ABFF:FEAC:CABA
 Table end.
-Table 25-2 IOS Defaults for Administrative Distance
+###### Table 25-2 IOS Defaults for Administrative Distance
 Route Source Administrative Distance
 Connected routes 0
 Static routes 1
@@ -1835,7 +1781,7 @@ OSPF 110
 RIP 120
 Unknown or unbelievable 255
 Table end.
-Table 25-3 NDP Function Summary
+###### Table 25-3 NDP Function Summary
 Function Protocol
 Messages
 Who
@@ -1868,7 +1814,7 @@ host
 Simple confirmation whether a
 unicast address is already in use
 Table end.
-Table 25-4 Chapter Review Tracking
+###### Table 25-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Answer DIKTA questions Book, PTP
@@ -1876,7 +1822,7 @@ Review command tables Book
 Review memory tables Book, website
 Do labs Blog
 Table end.
-Table 25-6 Chapter 25 Configuration Command Reference
+###### Table 25-6 Chapter 25 Configuration Command Reference
 Command Description
 ipv6 route prefix/length nexthop-
 address
@@ -1898,18 +1844,18 @@ Technet24
 25
 Chapter 25: Implementing IPv6 Routing 605
 Command Description
-ipv6 route ::/0 {[next-hopaddress]
-[outgoing-interface]}
+ipv6 route ::/0 {(next-hopaddress)
+(outgoing-interface)}
 Global command to define a default IPv6 static route.
-ipv6 address autoconfig [default] Interface subcommand that tells the router to use SLAAC
+ipv6 address autoconfig (default) Interface subcommand that tells the router to use SLAAC
 to find/build its own interface IPv6 address, and with the
 default parameter, to add a default route with a next hop
 of the router that responds with the RA message.
 Table end.
-Table 25-7 Chapter 25 EXEC Command Reference
+###### Table 25-7 Chapter 25 EXEC Command Reference
 Command Description
-show ipv6 route [connected |
-local | static]
+show ipv6 route (connected /
+local / static)
 Lists routes in the routing table.
 show ipv6 route address Displays detailed information about the route this router
 uses to forward packets to the IPv6 address listed in the
@@ -1918,14 +1864,14 @@ show ipv6 neighbors Lists the contents of the IPv6 neighbor table, which lists t
 MAC address associated with IPv6 addresses on common
 subnets.
 Table end.
-Table 26-2 Frequency Unit Names
+###### Table 26-2 Frequency Unit Names
 Unit Abbreviation Meaning
 Hertz Hz Cycles per second
 Kilohertz kHz 1000 Hz
 Megahertz MHz 1,000,000 Hz
 Gigahertz GHz 1,000,000,000 Hz
 Table end.
-Table 26-3 Basic Characteristics of Some IEEE 802.11 Amendments
+###### Table 26-3 Basic Characteristics of Some IEEE 802.11 Amendments
 Amendment 2.4
 GHz
 5
@@ -1943,14 +1889,14 @@ Notes
 2019; will operate on other bands too, as they
 become available
 Table end.
-Table 26-4 Chapter Review Tracking
+###### Table 26-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
 Table end.
-Table 27-2 Summary of WLC Deployment Models
+###### Table 27-2 Summary of WLC Deployment Models
 Deployment
 Model
 WLC Location (DC,
@@ -1966,14 +1912,14 @@ Embedded Access 200 4000 Small campus
 Mobility Express Other 100 2000 Branch location
 Autonomous N/A N/A N/A N/A
 Table end.
-Table 27-3 Chapter Review Tracking
+###### Table 27-3 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
 Table end.
-Table 28-2 Comparing WPA, WPA2, and WPA3
+###### Table 28-2 Comparing WPA, WPA2, and WPA3
 Authentication and Encryption Feature Support WPA WPA2 WPA3*
 Authentication with Pre-Shared Keys? Yes Yes Yes
 Authentication with 802.1x? Yes Yes Yes
@@ -1981,7 +1927,7 @@ Encryption and MIC with TKIP? Yes No No
 Encryption and MIC with AES and CCMP? Yes Yes No
 Encryption and MIC with AES and GCMP? No No Yes
 Table end.
-Table 28-3 Review of Wireless Security Mechanisms and Options
+###### Table 28-3 Review of Wireless Security Mechanisms and Options
 Security
 Mechanism
 Type Type Expansion Credentials Used
@@ -2024,14 +1970,14 @@ GCMP Galois/Counter
 Mode Protocol
 N/A
 Table end.
-Table 28-4 Chapter Review Tracking
+###### Table 28-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
 Answer DIKTA questions Book, PTP
 Review memory tables Website
 Table end.
-Table 29-2 Layer 2 WLAN Security Type
+###### Table 29-2 Layer 2 WLAN Security Type
 Option Description
 None Open authentication
 WPA+WPA2 Wi-Fi protected access WPA or WPA2
@@ -2041,7 +1987,7 @@ Static WEP + 802.1x EAP authentication or static WEP
 CKIP Cisco Key Integrity Protocol
 None + EAP Passthrough Open authentication with remote EAP authentication
 Table end.
-Table 29-3 Chapter Review Tracking
+###### Table 29-3 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
 Review key topics Book, website
 Review key terms Book, website
