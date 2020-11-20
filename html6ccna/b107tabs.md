@@ -946,6 +946,8 @@ Broadcast Address | 130.4.102.255 | 10000010 00000100 01100110 11111111
   
 Table end.
 ###### Table 14-6 Subnet Analysis for Subnet with Address 199.1.1.100, Mask 255.255.255.0
+__|__|__
+--|--|--
 Prefix Length | /24 | 11111111 11111111 11111111 00000000
 Address | 199.1.1.100 | 11000111 00000001 00000001 01100100
 Subnet ID | 199.1.1.0 | 11000111 00000001 00000001 00000000
@@ -1066,8 +1068,7 @@ Table end.
 __|__|__
 --|--|--
 Name | Location | General Meaning
-Line status  | First status code | Refers to the Layer 1 status. (For example, is the cable installed, is it
-the right/wrong cable, is the device on the other end powered on?)
+Line status  | First status code | Refers to the Layer 1 status. (For example, is the cable installed, is it the right/wrong cable, is the device on the other end powered on?)
 Protocol status | Second status code | Refers generally to the Layer 2 status. It is always down if the line status is down. If the line status is up, a protocol status of down is usually caused by a mismatched data-link layer configuration.
   
 Table end.
@@ -1125,102 +1126,82 @@ show protocols (type number) | Lists information about the listed interface (or 
   
 Table end.
 ###### Table 16-2 Analysis of Address Ranges for the Subnets in Example 16-8
-Subnet/Prefix Address Range
-172.16.1.1/32 172.16.1.1 (just this one address)
-172.16.1.0/24 172.16.1.0 – 172.16.1.255
-172.16.0.0/22 172.16.0.0 – 172.16.3.255
-172.16.0.0/16 172.16.0.0 – 172.16.255.255
-0.0.0.0/0 0.0.0.0 – 255.255.255.255 (all addresses)
+__|__
+--|--
+Subnet/Prefix | Address Range
+172.16.1.1/32 | 172.16.1.1 (just this one address)
+172.16.1.0/24 | 172.16.1.0 – 172.16.1.255
+172.16.0.0/22 | 172.16.0.0 – 172.16.3.255
+172.16.0.0/16 | 172.16.0.0 – 172.16.255.255
+0.0.0.0/0 | 0.0.0.0 – 255.255.255.255 (all addresses)
+  
 Table end.
-Table 16-3 Descriptions of the show ip route Command Output
-Item Idea Value in
-the Figure
-Description
-1 Classful network 10.0.0.0/8 The routing table is organized by classful network. This
-line is the heading line for classful network 10.0.0.0; it
-lists the default mask for Class A networks (/8).
-2 Number of
-subnets
-13 subnets The number of routes for subnets of the classful
-network known to this router, from all sources,
-including local routes—the /32 routes that match each
-router interface IP address.
-3 Number of
-masks
-5 masks The number of different masks used in all routes
-known to this router inside this classful network.
-4 Legend code C, L, O A short code that identifies the source of the routing
-information. O is for OSPF, D for EIGRP, C for
-Connected, S for static, and L for local. (See Example
-16-8 for a sample of the legend.)
-5 Prefix (Subnet ID) 10.2.2.0 The subnet number of this particular route.
-6 Prefix length
-(Mask)
-/30 The prefix mask used with this subnet.
-7 Administrative
-distance
-110 If a router learns routes for the listed subnet from more
-than one source of routing information, the router
-uses the source with the lowest administrative distance
-(AD).
-8 Metric 128 The metric for this route.
-9 Next-hop router 10.2.2.5 For packets matching this route, the IP address of the
-next router to which the packet should be forwarded.
-10 Timer 14:31:52 For OSPF and EIGRP routes, this is the time since the
-route was first learned.
-11 Outgoing
-interface
-Serial0/0/1 For packets matching this route, the interface out
-which the packet should be forwarded.
+###### Table 16-3 Descriptions of the show ip route Command Output
+__|__|__|__
+--|--|--|--
+Item | Idea | Value in the Figure | Description
+1 | Classful network | 10.0.0.0/8 | The routing table is organized by classful network. This line is the heading line for classful network 10.0.0.0; it lists the default mask for Class A networks (/8).
+2 | Number of subnets | 13 subnets | The number of routes for subnets of the classful
+network known to this router, from all sources, including local routes—the /32 routes that match each router interface IP address.
+3 | Number of masks | 5 masks The number of different masks used in all routes known to this router inside this classful network.
+4 | Legend code | C, L, O | A short code that identifies the source of the routing information. O is for OSPF, D for EIGRP, C for Connected, S for static, and L for local. (See Example 16-8 for a sample of the legend.)
+5 | Prefix (Subnet ID) | 10.2.2.0 | The subnet number of this particular route.
+6 | Prefix length (Mask) | /30 | The prefix mask used with this subnet.
+7 | Administrative distance | 110  |If a router learns routes for the listed subnet from more than one source of routing information, the router uses the source with the lowest administrative distance (AD).
+8 | Metric | 128 | The metric for this route.
+9 | Next-hop router | 10.2.2.5 | For packets matching this route, the IP address of the next router to which the packet should be forwarded.
+10 | Timer | 14:31:52 | For OSPF and EIGRP routes, this is the time since the route was first learned.
+11 | Outgoing interface | Serial0/0/1 | For packets matching this route, the interface out which the packet should be forwarded.
+  
 Table end.
-Table 16-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review command tables Book
-Do labs Blog
+###### Table 16-4 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review command tables | | Book
+Do labs | | Blog
+  
 Table end.
-Table 16-6 Chapter 16 Configuration Command Reference
-Command Description
-ip address ip-address mask Interface subcommand that assigns the
-interface’s IP address
-interface type number.subint Global command to create a subinterface and to
-enter configuration mode for that subinterface
-[no] ip routing Global command that enables (ip routing) or
-disables (no ip routing) the routing of IPv4
-packets on a router or Layer 3 switch
-ip route prefix mask {ip-address |
-interface-type interface-number} [distance]
-[permanent]
-Global configuration command that creates a
-static route
+###### Table 16-6 Chapter 16 Configuration Command Reference
+__|__
+--|--
+Command | Description
+ip address ip-address mask | Interface subcommand that assigns the interface’s IP address
+interface type number.subint | Global command to create a subinterface and to enter configuration mode for that subinterface (no) ip routing | Global command that enables (ip routing) or disables (no ip routing) the routing of IPv4 packets on a router or Layer 3 switch
+ip route prefix mask {ip-address  interface-type interface-number} (distance) (permanent) | Global configuration command that creates a static route
+  
 Table end.
-Table 16-7 Chapter 16 EXEC Command Reference
-Command Description
-show ip route Lists the router’s entire routing table
-show ip route [connected |
-static | ospf]
-Lists a subset of the IP routing table
-show ip route ip-address Lists detailed information about the route that a router
-matches for the listed IP address
-show arp, show ip arp Lists the router’s IPv4 ARP table
-clear ip arp [ip-address] Removes all dynamically learned ARP table entries, or if the
-command lists an IP address, removes the entry for that IP
-address only
+###### Table 16-7 Chapter 16 EXEC Command Reference
+__|__
+--|--
+Command | Description
+show ip route | Lists the router’s entire routing table
+show ip route (connected static  ospf) | Lists a subset of the IP routing table
+show ip route ip-address | Lists detailed information about the route that a router matches for the listed IP address
+show arp, show ip arp | Lists the router’s IPv4 ARP table
+clear ip arp (ip-address) | Removes all dynamically learned ARP table entries, or if the command lists an IP address, removes the entry for that IP address only
+  
 Table end.
-Table 17-2 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Repeat DIKTA questions Book, PTP
-Review config checklists Book, website
-Review command tables Book
-Do labs Blog
-Watch video Website
+###### Table 17-2 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Repeat DIKTA questions | | Book, PTP
+Review config checklists | | Book, website
+Review command tables | | Book
+Do labs | | Blog
+Watch video | | Website
+  
 Table end.
-Table 17-4 Chapter 17 Configuration Command Reference
-Command Description
+###### Table 17-4 Chapter 17 Configuration Command Reference
+__|__
+--|--
+Command | Description
 interface type number.subint Router global command to create a subinterface and to enter
 configuration mode for that subinterface
 encapsulation dot1q vlan-id
@@ -1239,10 +1220,6 @@ forwarding chip memory to allow for an IPv4 routing table
 [no] switchport Layer 3 switch subcommand that makes the port act as
 a Layer 2 port (switchport) or Layer 3 routed port (no
 switchport)
-||||||||||||||||||||
-||||||||||||||||||||
-416 CCNA 200-301 Official Cert Guide, Volume 1
-Command Description
 interface port-channel channelnumber
 A switch command to enter PortChannel configuration
 mode and also to create the PortChannel if not already
@@ -1252,6 +1229,7 @@ mode {auto | desirable | active |
 passive | on}
 Interface subcommand that enables EtherChannel on the
 interface
+  
 Table end.
 Table 17-5 Chapter 17 EXEC Command Reference
 Command Description
