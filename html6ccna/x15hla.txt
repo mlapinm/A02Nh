@@ -1,0 +1,627 @@
+## Part I Introduction to Networking
+## Chapter 1 Introduction to TCP/IP Networking
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Perspectives on Networking
+### TCP/IP Networking Model
+#### History Leading to TCP/IP
+#### Overview of the TCP/IP Networking Model
+#### TCP/IP Application Layer
+##### HTTP Overview
+##### HTTP Protocol Mechanisms
+#### TCP/IP Transport Layer
+##### TCP Error Recovery Basics
+##### Same-Layer and Adjacent-Layer Interactions
+#### TCP/IP Network Layer
+##### Internet Protocol and the Postal Service
+##### Internet Protocol Addressing Basics
+##### IP Routing Basics
+#### TCP/IP Data-Link and Physical Layers
+### Data Encapsulation Terminology
+#### Names of TCP/IP Messages
+#### OSI Networking Model and Terminology
+##### Comparing OSI and TCP/IP Layer Names and Numbers
+##### OSI Data Encapsulation Terminology
+### Chapter Review
+## Chapter 2 Fundamentals of Ethernet LANs
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### An Overview of LANs
+#### Typical SOHO LANs
+#### Typical Enterprise LANs
+#### The Variety of Ethernet Physical Layer Standards
+#### Consistent Behavior over All Links Using the Ethernet Data-Link Layer
+### Building Physical Ethernet LANs with UTP
+#### Transmitting Data Using Twisted Pairs
+#### Breaking Down a UTP Ethernet Link
+#### UTP Cabling Pinouts for 10BASE-T and 100BASE-T
+##### Straight-Through Cable Pinout
+##### Choosing the Right Cable Pinouts
+#### UTP Cabling Pinouts for 1000BASE-T
+### Building Physical Ethernet LANs with Fiber
+#### Fiber Cabling Transmission Concepts
+#### Using Fiber with Ethernet
+### Sending Data in Ethernet Networks
+#### Ethernet Data-Link Protocols
+##### Ethernet Addressing
+##### Identifying Network Layer Protocols with the Ethernet Type Field
+##### Error Detection with FCS
+#### Sending Ethernet Frames with Switches and Hubs
+##### Sending in Modern Ethernet LANs Using Full Duplex
+##### Using Half Duplex with LAN Hubs
+### Chapter Review
+## Chapter 3 Fundamentals of WANs and IP Routing
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Wide-Area Networks
+#### Leased-Line WANs
+##### Physical Details of Leased Lines
+##### HDLC Data-Link Details of Leased Lines
+##### How Routers Use a WAN Data Link
+#### Ethernet as a WAN Technology
+##### Ethernet WANs That Create a Layer 2 Service
+##### How Routers Route IP Packets Using Ethernet Emulation
+### IP Routing
+#### Network Layer Routing (Forwarding) Logic
+##### Host Forwarding Logic: Send the Packet to the Default Router
+##### R1 and R2’s Logic: Routing Data Across the Network
+##### R3’s Logic: Delivering Data to the End Destination
+#### How Network Layer Routing Uses LANs and WANs
+#### How IP Addressing Helps IP Routing
+##### Rules for Groups of IP Addresses (Networks and Subnets)
+##### The IP Header
+#### How IP Routing Protocols Help IP Routing
+### Other Network Layer Features
+#### Using Names and the Domain Name System
+#### The Address Resolution Protocol
+#### ICMP Echo and the ping Command
+### Chapter Review
+## Part I Review
+## Part II Implementing Ethernet LANs
+## Chapter 4 Using the Command-Line Interface
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Accessing the Cisco Catalyst Switch CLI
+#### Cisco Catalyst Switches
+#### Accessing the Cisco IOS CLI
+##### Cabling the Console Connection
+##### Accessing the CLI with Telnet and SSH
+##### User and Enable \(Privileged\) Modes
+##### Password Security for CLI Access from the Console
+#### CLI Help Features
+#### The debug and show Commands
+### Configuring Cisco IOS Software
+#### Configuration Submodes and Contexts
+#### Storing Switch Configuration Files
+#### Copying and Erasing Configuration Files
+### Chapter Review
+## Chapter 5 Analyzing Ethernet LAN Switching
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### LAN Switching Concepts
+#### Overview of Switching Logic
+#### Forwarding Known Unicast Frames
+#### Learning MAC Addresses
+#### Flooding Unknown Unicast and Broadcast Frames
+#### Avoiding Loops Using Spanning Tree Protocol
+#### LAN Switching Summary
+### Verifying and Analyzing Ethernet Switching
+#### Demonstrating MAC Learning
+#### Switch Interfaces
+#### Finding Entries in the MAC Address Table
+#### Managing the MAC Address Table (Aging, Clearing)
+#### MAC Address Tables with Multiple Switches
+### Chapter Review
+## Chapter 6 Configuring Basic Switch Management
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Securing the Switch CLI
+#### Securing User Mode and Privileged Mode with Simple Passwords
+#### Securing User Mode Access with Local Usernames and Passwords
+#### Securing User Mode Access with External Authentication Servers
+#### Securing Remote Access with Secure Shell
+### Enabling IPv4 for Remote Access
+#### Host and Switch IP Settings
+#### Configuring IPv4 on a Switch
+#### Configuring a Switch to Learn Its IP Address with DHCP
+#### Verifying IPv4 on a Switch
+### Miscellaneous Settings Useful in the Lab
+#### History Buffer Commands
+#### The logging synchronous, exec-timeout, and no ip domain-lookup Commands
+### Chapter Review
+## Chapter 7 Configuring and Verifying Switch Interfaces
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Configuring Switch Interfaces
+#### Configuring Speed, Duplex, and Description
+#### Configuring Multiple Interfaces with the interface range Command
+#### Administratively Controlling Interface State with shutdown
+#### Removing Configuration with the no Command
+#### Autonegotiation
+#### Autonegotiation Under Working Conditions
+##### Autonegotiation Results When Only One Node Uses
+##### Autonegotiation
+##### Autonegotiation and LAN Hubs
+### Analyzing Switch Interface Status and Statistics
+#### Interface Status Codes and Reasons for Nonworking States
+#### Interface Speed and Duplex Issues
+#### Common Layer 1 Problems on Working Interfaces
+### Chapter Review
+## Part II Review
+## Part III Implementing VLANs and STP
+## Chapter 8 Implementing Ethernet Virtual LANs
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Virtual LAN Concepts
+#### Creating Multiswitch VLANs Using Trunking
+##### VLAN Tagging Concepts
+##### The 802.1Q and ISL VLAN Trunking Protocols
+#### Forwarding Data Between VLANs
+##### The Need for Routing Between VLANs
+##### Routing Packets Between VLANs with a Router
+### VLAN and VLAN Trunking Configuration and Verification
+#### Creating VLANs and Assigning Access VLANs to an Interface
+##### VLAN Configuration Example 1: Full VLAN Configuration
+##### VLAN Configuration Example 2: Shorter VLAN Configuration
+#### VLAN Trunking Protocol
+#### VLAN Trunking Configuration
+#### Implementing Interfaces Connected to Phones
+##### Data and Voice VLAN Concepts
+##### Data and Voice VLAN Configuration and Verification
+##### Summary: IP Telephony Ports on Switches
+### Troubleshooting VLANs and VLAN Trunks
+#### Access VLANs Undefined or Disabled
+#### Mismatched Trunking Operational States
+#### The Supported VLAN List on Trunks
+#### Mismatched Native VLAN on a Trunk
+### Chapter Review
+## Chapter 9 Spanning Tree Protocol Concepts
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### STP and RSTP Basics
+#### The Need for Spanning Tree
+#### What Spanning Tree Does
+#### How Spanning Tree Works
+##### The STP Bridge ID and Hello BPDU
+##### Electing the Root Switch
+##### Choosing Each Switch’s Root Port
+##### Choosing the Designated Port on Each LAN Segment
+#### Configuring to Influence the STP Topology
+### Details Specific to STP (and Not RSTP)
+#### STP Activity When the Network Remains Stable
+#### STP Timers That Manage STP Convergence
+#### Changing Interface States with STP
+### Rapid STP Concepts
+#### Comparing STP and RSTP
+#### RSTP and the Alternate (Root) Port Role
+#### RSTP States and Processes
+#### RSTP and the Backup (Designated) Port Role
+#### RSTP Port Types
+#### Optional STP Features
+##### EtherChannel
+##### PortFast
+##### BPDU Guard
+### Chapter Review
+## Chapter 10 RSTP and EtherChannel Configuration
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Understanding RSTP Through Configuration
+#### The Need for Multiple Spanning Trees
+#### STP Modes and Standards
+#### The Bridge ID and System ID Extension
+#### How Switches Use the Priority and System ID Extension
+#### RSTP Methods to Support Multiple Spanning Trees
+#### Other RSTP Configuration Options
+### Configuring Layer 2 EtherChannel
+#### Configuring a Manual Layer 2 EtherChannel
+#### Configuring Dynamic EtherChannels
+#### Physical Interface Configuration and EtherChannels
+#### EtherChannel Load Distribution
+##### Configuration Options for EtherChannel Load Distribution
+##### The Effects of the EtherChannel Load Distribution Algorithm
+### Chapter Review
+## Part III Review
+## Part IV IPv4 Addressing
+## Chapter 11 Perspectives on IPv4 Subnetting
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Introduction to Subnetting
+#### Subnetting Defined Through a Simple Example
+#### Operational View Versus Design View of Subnetting
+### Analyze Subnetting and Addressing Needs
+#### Rules About Which Hosts Are in Which Subnet
+#### Determining the Number of Subnets
+#### Determining the Number of Hosts per Subnet
+#### One Size Subnet Fits All—Or Not
+##### Defining the Size of a Subnet
+##### One Size Subnet Fits All
+##### Multiple Subnet Sizes (Variable-Length Subnet Masks)
+##### One Mask for All Subnets, or More Than One
+### Make Design Choices
+#### Choose a Classful Network
+##### Public IP Networks
+##### Growth Exhausts the Public IP Address Space
+##### Private IP Networks
+##### Choosing an IP Network During the Design Phase
+#### Choose the Mask
+##### Classful IP Networks Before Subnetting
+##### Borrowing Host Bits to Create Subnet Bits
+##### Choosing Enough Subnet and Host Bits
+##### Example Design: 172.16.0.0, 200 Subnets, 200 Hosts
+##### Masks and Mask Formats
+#### Build a List of All Subnets
+### Plan the Implementation
+#### Assigning Subnets to Different Locations
+#### Choose Static and Dynamic Ranges per Subnet
+### Chapter Review
+## Chapter 12 Analyzing Classful IPv4 Networks
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Classful Network Concepts
+#### IPv4 Network Classes and Related Facts
+##### The Number and Size of the Class A, B, and C Networks
+##### Address Formats
+##### Default Masks
+#### Number of Hosts per Network
+#### Deriving the Network ID and Related Numbers
+#### Unusual Network IDs and Network Broadcast Addresses
+### Practice with Classful Networks
+#### Practice Deriving Key Facts Based on an IP Address
+#### Practice Remembering the Details of Address Classes
+### Chapter Review
+## Chapter 13 Analyzing Subnet Masks
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Subnet Mask Conversion
+#### Three Mask Formats
+#### Converting Between Binary and Prefix Masks
+#### Converting Between Binary and DDN Masks
+#### Converting Between Prefix and DDN Masks
+#### Practice Converting Subnet Masks
+### Identifying Subnet Design Choices Using Masks
+#### Masks Divide the Subnet’s Addresses into Two Parts
+#### Masks and Class Divide Addresses into Three Parts
+#### Classless and Classful Addressing
+#### Calculations Based on the IPv4 Address Format
+#### Practice Analyzing Subnet Masks
+### Chapter Review
+## Chapter 14 Analyzing Existing Subnets
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Defining a Subnet
+#### An Example with Network 172.16.0.0 and Four Subnets
+#### Subnet ID Concepts
+#### Subnet Broadcast Address
+#### Range of Usable Addresses
+### Analyzing Existing Subnets: Binary
+#### Finding the Subnet ID: Binary
+#### Finding the Subnet Broadcast Address: Binary
+#### Binary Practice Problems
+#### Shortcut for the Binary Process
+#### Brief Note About Boolean Math
+#### Finding the Range of Addresses
+### Analyzing Existing Subnets: Decimal
+#### Analysis with Easy Masks
+#### Predictability in the Interesting Octet
+#### Finding the Subnet ID: Difficult Masks
+##### Resident Subnet Example 1
+##### Resident Subnet Example 2
+##### Resident Subnet Practice Problems
+#### Finding the Subnet Broadcast Address: Difficult Masks
+##### Subnet Broadcast Example 1
+##### Subnet Broadcast Example 2
+##### Subnet Broadcast Address Practice Problems
+### Practice Analyzing Existing Subnets
+#### A Choice: Memorize or Calculate
+### Chapter Review
+## Part IV Review
+## Part V IPv4 Routing
+## Chapter 15 Operating Cisco Routers
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Installing Cisco Routers
+#### Installing Enterprise Routers
+##### Cisco Integrated Services Routers
+##### Physical Installation
+#### Installing SOHO Routers
+### Enabling IPv4 Support on Cisco Router Interfaces
+#### Accessing the Router CLI
+#### Router Interfaces
+##### Interface Status Codes
+##### Router Interface IP Addresses
+##### Bandwidth and Clock Rate on Serial Interfaces
+#### Router Auxiliary Port
+### Chapter Review
+## Chapter 16 Configuring IPv4 Addresses and Static Routes
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### IP Routing
+#### IPv4 Routing Process Reference
+#### An Example of IP Routing
+##### Host Forwards the IP Packet to the Default Router (Gateway)
+##### Routing Step 1: Decide Whether to Process the Incoming Frame
+##### Routing Step 2: De-encapsulation of the IP Packet
+##### Routing Step 3: Choosing Where to Forward the Packet
+##### Routing Step 4: Encapsulating the Packet in a New Frame
+##### Routing Step 5: Transmitting the Frame
+### Configuring IP Addresses and Connected Routes
+#### Connected Routes and the ip address Command
+#### The ARP Table on a Cisco Router
+### Configuring Static Routes
+#### Static Network Routes
+#### Static Host Routes
+#### Floating Static Routes
+#### Static Default Routes
+#### Troubleshooting Static Routes
+##### Troubleshooting Incorrect Static Routes That Appear in the IP Routing Table
+##### The Static Route Does Not Appear in the IP Routing Table
+##### The Correct Static Route Appears but Works Poorly
+### IP Forwarding with the Longest Prefix Match
+#### Using show ip route to Find the Best Route
+#### Using show ip route address to Find the Best Route
+#### Interpreting the IP Routing Table
+### Chapter Review
+## Chapter 17 IP Routing in the LAN
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### VLAN Routing with Router 802.1Q Trunks
+#### Configuring ROAS
+#### Verifying ROAS
+#### Troubleshooting ROAS
+### VLAN Routing with Layer 3 Switch SVIs
+#### Configuring Routing Using Switch SVIs
+#### Verifying Routing with SVIs
+#### Troubleshooting Routing with SVIs
+### VLAN Routing with Layer 3 Switch Routed Ports
+#### Implementing Routed Interfaces on Switches
+#### Implementing Layer 3 EtherChannels
+#### Troubleshooting Layer 3 EtherChannels
+### Chapter Review
+## Chapter 18 Troubleshooting IPv4 Routing
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Problem Isolation Using the ping Command
+#### Ping Command Basics
+#### Strategies and Results When Testing with the ping Command
+##### Testing Longer Routes from Near the Source of the Problem
+##### Using Extended Ping to Test the Reverse Route
+##### Testing LAN Neighbors with Standard Ping
+##### Testing LAN Neighbors with Extended Ping
+##### Testing WAN Neighbors with Standard Ping
+#### Using Ping with Names and with IP Addresses
+### Problem Isolation Using the traceroute Command
+#### traceroute Basics
+##### How the traceroute Command Works
+##### Standard and Extended traceroute
+### Telnet and SSH
+#### Common Reasons to Use the IOS Telnet and SSH Client
+#### IOS Telnet and SSH Examples
+### Chapter Review
+## Part V Review
+## Part VI OSPF
+## Chapter 19 Understanding OSPF Concepts
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Comparing Dynamic Routing Protocol Features
+#### Routing Protocol Functions
+#### Interior and Exterior Routing Protocols
+#### Comparing IGPs
+##### IGP Routing Protocol Algorithms
+##### Metrics
+##### Other IGP Comparisons
+#### Administrative Distance
+### OSPF Concepts and Operation
+#### OSPF Overview
+##### Topology Information and LSAs
+##### Applying Dijkstra SPF Math to Find the Best Routes
+#### Becoming OSPF Neighbors
+##### The Basics of OSPF Neighbors
+##### Meeting Neighbors and Learning Their Router ID
+#### Exchanging the LSDB Between Neighbors
+##### Fully Exchanging LSAs with Neighbors
+##### Maintaining Neighbors and the LSDB
+##### Using Designated Routers on Ethernet Links
+#### Calculating the Best Routes with SPF
+### OSPF Areas and LSAs
+#### OSPF Areas
+#### How Areas Reduce SPF Calculation Time
+#### \(OSPFv2\) Link-State Advertisements
+##### Router LSAs Build Most of the Intra-Area Topology
+##### Network LSAs Complete the Intra-Area Topology
+### Chapter Review
+### Chapter 20 Implementing OSPF
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+#### Implementing Single-Area OSPFv2
+#### OSPF Single-Area Configuration
+#### Wildcard Matching with the network Command
+#### Verifying OSPF Operation
+#### Verifying OSPF Configuration
+#### Configuring the OSPF Router ID
+#### Implementing Multiarea OSPF
+### Using OSPFv2 Interface Subcommands
+#### OSPF Interface Configuration Example
+##### Verifying OSPF Interface Configuration
+### Additional OSPFv2 Features
+#### OSPF Passive Interfaces
+#### OSPF Default Routes
+#### OSPF Metrics Cost
+##### Setting the Cost Directly
+##### Setting the Cost Based on Interface and Reference Bandwidth
+#### OSPF Load Balancing
+### Chapter Review
+## Chapter 21 OSPF Network Types and Neighbors
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### OSPF Network Types
+#### The OSPF Broadcast Network Type
+##### Verifying Operations with Network Type Broadcast
+##### Configuring to Influence the DR/BDR Election
+#### The OSPF Point-to-Point Network Type
+### OSPF Neighbor Relationships
+#### OSPF Neighbor Requirements
+#### Issues That Prevent Neighbor Adjacencies
+##### Finding Area Mismatches
+##### Finding Duplicate OSPF Router IDs
+##### Finding OSPF Hello and Dead Timer Mismatches
+##### Shutting Down the OSPF Process
+#### Issues That Allow Adjacencies but Prevent IP Routes
+##### Mismatched MTU Settings
+##### Mismatched OSPF Network Types
+### Chapter Review
+## Part VI Review
+## Part VII IP Version 6
+## Chapter 22 Fundamentals of IP Version 6
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Introduction to IPv6
+#### The Historical Reasons for IPv6
+#### The IPv6 Protocols
+#### IPv6 Routing
+#### IPv6 Routing Protocols
+### IPv6 Addressing Formats and Conventions
+#### Representing Full \(Unabbreviated\) IPv6 Addresses
+#### Abbreviating and Expanding IPv6 Addresses
+##### Abbreviating IPv6 Addresses
+##### Expanding Abbreviated IPv6 Addresses
+#### Representing the Prefix Length of an Address
+#### Calculating the IPv6 Prefix \(Subnet ID\)
+#### Finding the IPv6 Prefix
+#### Working with More-Difficult IPv6 Prefix Lengths
+### Chapter Review
+## Chapter 23 IPv6 Addressing and Subnetting
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Global Unicast Addressing Concepts
+#### Public and Private IPv6 Addresses
+#### The IPv6 Global Routing Prefix
+#### Address Ranges for Global Unicast Addresses
+#### IPv6 Subnetting Using Global Unicast Addresses
+##### Deciding Where IPv6 Subnets Are Needed
+##### The Mechanics of Subnetting IPv6 Global Unicast Addresses
+##### Listing the IPv6 Subnet Identifier
+##### List All IPv6 Subnets
+##### Assign Subnets to the Internetwork Topology
+#### Assigning Addresses to Hosts in a Subnet
+### Unique Local Unicast Addresses
+#### Subnetting with Unique Local IPv6 Addresses
+#### The Need for Globally Unique Local Addresses
+### Chapter Review
+## Chapter 24 Implementing IPv6 Addressing on Routers
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Implementing Unicast IPv6 Addresses on Routers
+#### Static Unicast Address Configuration
+##### Configuring the Full 128-Bit Address
+##### Enabling IPv6 Routing
+##### Verifying the IPv6 Address Configuration
+##### Generating a Unique Interface ID Using Modified EUI-64
+#### Dynamic Unicast Address Configuration
+### Special Addresses Used by Routers
+#### Link-Local Addresses
+##### Link-Local Address Concepts
+##### Creating Link-Local Addresses on Routers
+##### Routing IPv6 with Only Link-Local Addresses on an Interface
+##### IPv6 Multicast Addresses
+##### Reserved Multicast Addresses
+##### Multicast Address Scopes
+##### Solicited-Node Multicast Addresses
+#### Miscellaneous IPv6 Addresses
+#### Anycast Addresses
+#### IPv6 Addressing Configuration Summary
+### Chapter Review
+## Chapter 25 Implementing IPv6 Routing
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Connected and Local IPv6 Routes
+#### Rules for Connected and Local Routes
+#### Example of Connected IPv6 Routes
+#### Examples of Local IPv6 Routes
+### Static IPv6 Routes
+#### Static Routes Using the Outgoing Interface
+#### Static Routes Using Next-Hop IPv6 Address
+##### Example Static Route with a Global Unicast Next-Hop Address
+##### Example Static Route with a Link-Local Next-Hop Address
+##### Static Routes over Ethernet Links
+#### Static Default Routes
+#### Static IPv6 Host Routes
+#### Floating Static IPv6 Routes
+#### Troubleshooting Static IPv6 Routes
+##### Troubleshooting Incorrect Static Routes That Appear in the IPv6 Routing Table
+##### The Static Route Does Not Appear in the IPv6 Routing Table
+### The Neighbor Discovery Protocol
+#### Discovering Neighbor Link Addresses with NDP NS and NA
+#### Discovering Routers with NDP RS and RA
+#### Using SLAAC with NDP RS and RA
+#### Discovering Duplicate Addresses Using NDP NS and NA
+#### NDP Summary
+### Chapter Review
+## Part VII Review
+## Part VIII Wireless LANs
+## Chapter 26 Fundamentals of Wireless Networks
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Comparing Wired and Wireless Networks
+### Wireless LAN Topologies
+#### Basic Service Set
+#### Distribution System
+#### Extended Service Set
+#### Independent Basic Service Set
+### Other Wireless Topologies
+#### Repeater
+#### Workgroup Bridge
+#### Outdoor Bridge
+#### Mesh Network
+### RF Overview
+#### Wireless Bands and Channels
+#### APs and Wireless Standards
+### Chapter Review
+## Chapter 27 Analyzing Cisco Wireless Architectures
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Autonomous AP Architecture
+### Cloud-based AP Architecture
+### Split-MAC Architectures
+### Comparing Wireless LAN Controller Deployments
+#### Cisco AP Modes
+### Chapter Review
+## Chapter 28 Securing Wireless Networks
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Anatomy of a Secure Connection
+#### Authentication
+#### Message Privacy
+#### Message Integrity
+### Wireless Client Authentication Methods
+#### Open Authentication
+#### WEP
+#### 802.1x/EAP
+##### LEAP
+##### EAP-FAST
+##### PEAP
+##### EAP-TLS
+### Wireless Privacy and Integrity Methods
+#### TKIP
+#### CCMP
+#### GCMP
+### WPA, WPA2, and WPA3
+### Chapter Review
+## Chapter 29 Building a Wireless LAN
+### “Do I Know This Already?” Quiz
+### Foundation Topics
+### Connecting a Cisco AP
+### Accessing a Cisco WLC
+### Connecting a Cisco WLC
+#### Using WLC Ports
+#### Using WLC Interfaces
+### Configuring a WLAN
+#### Step 1. Configure a RADIUS Server
+#### Step 2. Create a Dynamic Interface
+#### Step 3. Create a New WLAN
+#### Configuring WLAN Security
+#### Configuring WLAN QoS
+#### Configuring Advanced WLAN Settings
+#### Finalizing WLAN Configuration
+### Chapter Review
+## Part VIII Review
+## Part IX Appendixes
