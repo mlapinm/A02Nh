@@ -1769,85 +1769,61 @@ Amendment | 2.4 GHz | 5 GHz | Max Data Rate | Notes
   
 Table end.
 ###### Table 26-4 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory tables | | Website
+  
 Table end.
 ###### Table 27-2 Summary of WLC Deployment Models
-Deployment
-Model
-WLC Location (DC,
-Access, Central, AP)
-APs
-Supported
-Clients
-Supported
-Typical Use
-Unified Central 6000 64,000 Large enterprise
-Cloud DC 3000 32,000 Private cloud
-Embedded Access 200 4000 Small campus
-Mobility Express Other 100 2000 Branch location
-Autonomous N/A N/A N/A N/A
+__|__|__|__|__
+--|--|--|--|--
+Deployment Model | WLC Location (DC, Access, Central, AP) | APs Supported | Clients Supported | Typical Use
+Unified | Central | 6000 | 64,000 | Large enterprise
+Cloud | DC | 3000 | 32,000 | Private cloud
+Embedded | Access | 200 | 4000 | Small campus
+Mobility Express | Other | 100 | 2000 | Branch location
+Autonomous | N/A | N/A | N/A | N/A
+  
 Table end.
 ###### Table 27-3 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review memory tables Website
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review memory tables | | Website
+  
 Table end.
 ###### Table 28-2 Comparing WPA, WPA2, and WPA3
-Authentication and Encryption Feature Support WPA WPA2 WPA3*
-Authentication with Pre-Shared Keys? Yes Yes Yes
-Authentication with 802.1x? Yes Yes Yes
-Encryption and MIC with TKIP? Yes No No
-Encryption and MIC with AES and CCMP? Yes Yes No
-Encryption and MIC with AES and GCMP? No No Yes
+__|__|__|__
+--|--|--|--
+Authentication and Encryption Feature Support | WPA | WPA2 | WPA3*
+Authentication with Pre-Shared Keys? | Yes | Yes | Yes
+Authentication with 802.1x? | Yes | Yes | Yes
+Encryption and MIC with TKIP? | Yes | No | No
+Encryption and MIC with AES and CCMP? | Yes | Yes | No
+Encryption and MIC with AES and GCMP? | No | No | Yes
+  
 Table end.
 ###### Table 28-3 Review of Wireless Security Mechanisms and Options
-Security
-Mechanism
-Type Type Expansion Credentials Used
-Authentication
-Methods
-Open Open
-Authentication
-None, other than
-802.11 protocol
-WEP Wired Equivalent
-Privacy
-Static WEP keys
-802.1x/EAP
-(Extensible
-Authentication
-Protocol)
-LEAP Lightweight EAP Deprecated; uses
-dynamic WEP keys
-EAP-FAST EAP Flexible
-Authentication by
-Secure Tunneling
-Uses protected access
-credential (PAC)
-PEAP Protected EAP AS authenticated by
-digital certificate
-EAP-TLS EAP Transport
-Layer Security
-Client and AS
-authenticated by
-digital certificate
-Privacy &
-Integrity Methods
-TKIP Temporal Key
-Integrity Protocol
-N/A
-CCMP Counter/CBC-MAC
-Protocol
-N/A
-GCMP Galois/Counter
-Mode Protocol
-N/A
+__|__|__|__
+--|--|--|--
+Security Mechanism | Type | Type Expansion | Credentials Used
+Authentication Methods | Open | Open Authentication | None, other than 802.11 protocol
+Authentication Methods | WEP | Wired Equivalent Privacy | Static WEP keys
+Authentication Methods | 802.1x/EAP (Extensible Authentication Protocol) | LEAP | Lightweight EAP | Deprecated; uses dynamic WEP keys
+Authentication Methods | 802.1x/EAP (Extensible Authentication Protocol) | EAP-FAST EAP Flexible Authentication by Secure Tunneling | Uses protected access credential (PAC)
+Authentication Methods | 802.1x/EAP (Extensible Authentication Protocol) | PEAP | Protected EAP AS authenticated by digital certificate
+Authentication Methods | 802.1x/EAP (Extensible Authentication Protocol) | EAP-TLS EAP Transport Layer Security |  Client and AS authenticated by digital certificate
+Privacy & Integrity Methods | TKIP | TKIP | Temporal Key Integrity Protocol |  N/A
+Privacy & Integrity Methods | CCMP | Counter/CBC-MAC Protocol | N/A
+Privacy & Integrity Methods | GCMP | Galois/Counter Mode Protocol | N/A
+  
 Table end.
 ###### Table 28-4 Chapter Review Tracking
 Review Element Review Date(s) Resource Used
