@@ -1051,8 +1051,8 @@ _ |IP Address | Mask | Subnet ID
   
 Table end.
 ###### Table 14-17 Answers to Problems in the Section “Subnet Broadcast Address Practice Problems”
-__|__|__
---|--|--
+__|__|__|__
+--|--|--|--
 _ | Subnet ID | Mask | Broadcast Address
 1 | 10.72.0.0 | 255.248.0.0 | 10.79.255.255
 2 | 172.30.64.0 | 255.255.192.0 | 172.30.127.255
@@ -1063,91 +1063,68 @@ _ | Subnet ID | Mask | Broadcast Address
   
 Table end.
 ###### Table 15-2 Interface Status Codes and Their Meanings
-Name Location General Meaning
-Line
-status
-First status
-code
-Refers to the Layer 1 status. (For example, is the cable installed, is it
+__|__|__
+--|--|--
+Name | Location | General Meaning
+Line status  | First status code | Refers to the Layer 1 status. (For example, is the cable installed, is it
 the right/wrong cable, is the device on the other end powered on?)
-Protocol
-status
-Second
-status code
-Refers generally to the Layer 2 status. It is always down if the line
-status is down. If the line status is up, a protocol status of down is
-usually caused by a mismatched data-link layer configuration.
+Protocol status | Second status code | Refers generally to the Layer 2 status. It is always down if the line status is down. If the line status is up, a protocol status of down is usually caused by a mismatched data-link layer configuration.
+  
 Table end.
-Table 15-3 Typical Combinations of Interface Status Codes
-Line Status Protocol
-Status
-Typical Reasons
-Administratively
-down
-Down The interface has a shutdown command configured on it.
-Down Down The interface is not shutdown, but the physical layer has
-a problem. For example, no cable has been attached to the
-interface, or with Ethernet, the switch interface on the other
-end of the cable is shut down, or the switch is powered
-off, or the devices on the ends of the cable use a different
-transmission speed.
-Up Down Almost always refers to data-link layer problems, most often
-configuration problems. For example, serial links have this
-combination when one router was configured to use PPP and
-the other defaults to use HDLC.
-Up Up Layer 1 and Layer 2 of this interface are functioning.
+###### Table 15-3 Typical Combinations of Interface Status Codes
+__|__|__
+--|--|--
+Line Status | Protocol Status | Typical Reasons
+Administratively down | Down | The interface has a shutdown command configured on it.
+Down | Down | The interface is not shutdown, but the physical layer has a problem. For example, no cable has been attached to the interface, or with Ethernet, the switch interface on the other end of the cable is shut down, or the switch is powered off, or the devices on the ends of the cable use a different transmission speed.
+Up | Down | Almost always refers to data-link layer problems, most often configuration problems. For example, serial links have this combination when one router was configured to use PPP and the other defaults to use HDLC.
+Up | Up | Layer 1 and Layer 2 of this interface are functioning.
+  
 Table end.
-Table 15-4 Key Commands to List Router Interface Status
-Command Lines of Output
-per Interface
-IP Configuration
-Listed
-Interface Status
-Listed?
-show ip interface brief 1 Address Yes
-show protocols [type number] 1 or 2 Address/mask Yes
-show interfaces [type number] Many Address/mask Yes
+###### Table 15-4 Key Commands to List Router Interface Status
+__|__|__|__
+--|--|--|--
+Command | Lines of Output per Interface | IP Configuration Listed | Interface Status Listed?
+show ip interface brief | 1 | Address | Yes
+show protocols (type number) | 1 or 2 | Address/mask | Yes
+show interfaces (type number) | Many | Address/mask | Yes
+  
 Table end.
-Table 15-5 Chapter Review Tracking
-Review Element Review Date(s) Resource Used
-Review key topics Book, website
-Review key terms Book, website
-Answer DIKTA questions Book, PTP
-Review command tables Book
-Review memory tables Website
-Do labs Blog
-Watch video Website
+###### Table 15-5 Chapter Review Tracking
+__|__|__
+--|--|--
+Review Element | Review Date(s) | Resource Used
+Review key topics | | Book, website
+Review key terms | | Book, website
+Answer DIKTA questions | | Book, PTP
+Review command tables | | Book
+Review memory tables | | Website
+Do labs | | Blog
+Watch video | | Website
+  
 Table end.
-Table 15-7 Chapter 15 Configuration Command Reference
-Command Description
-interface type number Global command that moves the user into configuration mode of
-the named interface.
-ip address address mask Interface subcommand that sets the router’s IPv4 address and
-mask.
-[no] shutdown Interface subcommand that enables (no shutdown) or disables
-(shutdown) the interface.
-duplex {full | half | auto} Interface command that sets the duplex, or sets the use of IEEE
-autonegotiation, for router LAN interfaces that support multiple
-speeds.
-speed {10 | 100 | 1000} Interface command for router Gigabit (10/100/1000) interfaces
-that sets the speed at which the router interface sends and receives
-data.
-description text An interface subcommand with which you can type a string of
-text to document information about that particular interface.
+###### Table 15-7 Chapter 15 Configuration Command Reference
+__|__
+--|--
+Command | Description
+interface type number | Global command that moves the user into configuration mode of the named interface.
+ip address address mask | Interface subcommand that sets the router’s IPv4 address and mask.
+(no) shutdown | Interface subcommand that enables (no shutdown) or disables (shutdown) the interface.
+duplex {full  half  auto} | Interface command that sets the duplex, or sets the use of IEEE autonegotiation, for router LAN interfaces that support multiple speeds.
+speed {10  100  1000} | Interface command for router Gigabit (10/100/1000) interfaces that sets the speed at which the router interface sends and receives data.
+description text | An interface subcommand with which you can type a string of text to document information about that particular interface.
+  
 Table end.
-Table 15-8 Chapter 15 EXEC Command Reference
-Command Purpose
-show interfaces [type number] Lists a large set of informational messages about each
-interface, or about the one specifically listed interface.
-show ip interface brief Lists a single line of information about each interface,
-including the IP address, line and protocol status, and the
-method with which the address was configured (manual or
-Dynamic Host Configuration Protocol [DHCP]).
-show protocols [type number] Lists information about the listed interface (or all interfaces
-if the interface is omitted), including the IP address, mask,
-and line/protocol status.
+###### Table 15-8 Chapter 15 EXEC Command Reference
+__|__
+--|--
+Command | Purpose
+show interfaces (type number)  | Lists a large set of informational messages about each interface, or about the one specifically listed interface.
+show ip interface brief | Lists a single line of information about each interface, including the IP address, line and protocol status, and the method with which the address was configured (manual or Dynamic Host Configuration Protocol (DHCP)).
+show protocols (type number) | Lists information about the listed interface (or all interfaces if the interface is omitted), including the IP address, mask, and line/protocol status.
+  
 Table end.
-Table 16-2 Analysis of Address Ranges for the Subnets in Example 16-8
+###### Table 16-2 Analysis of Address Ranges for the Subnets in Example 16-8
 Subnet/Prefix Address Range
 172.16.1.1/32 172.16.1.1 (just this one address)
 172.16.1.0/24 172.16.1.0 – 172.16.1.255
