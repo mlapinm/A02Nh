@@ -4,7 +4,6 @@
 Глава 1 Введение в сеть TCP / IP   
 __|__
 --|--
- | 
 This chapter covers the following exam topics:|В этой главе рассматриваются следующие экзаменационные темы:
 ###### 1.0 Network Fundamentals
 1.0 Основы сети   
@@ -16,15 +15,14 @@ This chapter covers the following exam topics:|В этой главе рассм
 1.3.b Подключения (общая среда Ethernet и точка-точка)   
 __|__
 --|--
- | 
 Welcome to the first chapter in your study for CCNA! This chapter begins Part I, which focuses on the basics of networking.|Добро пожаловать в первую главу вашего исследования CCNA! Эта глава начинается с части I, в которой основное внимание уделяется основам работы в сети.
  | 
 Networks work correctly because the various devices and software follow the rules.|Сети работают правильно, потому что различные устройства и программное обеспечение подчиняются правилам.
 Those rules come in the form of standards and protocols, which are agreements of a particular part of how a network should work.|Эти правила представлены в форме стандартов и протоколов, которые являются соглашениями о том, как должна работать сеть.
 However, the sheer number of standards and protocols available can make it difficult for the average network engineer to think about and work with networks—so the world of networking has used several networking models over time.|Однако из-за огромного количества доступных стандартов и протоколов среднему сетевому инженеру сложно думать о сетях и работать с ними, поэтому в мире сетевых технологий с течением времени использовалось несколько сетевых моделей.
-|
+ | 
 Networking models define a structure and different categories (layers) of standards and protocols.|Сетевые модели определяют структуру и различные категории (уровни) стандартов и протоколов.
-|
+ | 
 As new standards and protocols emerge over time, networkers can think of those new details in the context of a working model.|По мере появления новых стандартов и протоколов сетевики могут рассматривать эти новые детали в контексте работающей модели.
 |
 You can think of a networking model as you think of a set of architectural plans for building a house.|Вы можете думать о сетевой модели, как о наборе архитектурных планов для строительства дома.
