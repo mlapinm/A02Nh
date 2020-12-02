@@ -1064,14 +1064,14 @@ a. R1 will connect to a physical Ethernet link, with the other end of the cable 
 b. R1 will connect to a physical Ethernet link, with the other end of the cable connected to a device at the WAN service provider point of presence.|б. R1 подключается к физическому каналу Ethernet, а другой конец кабеля подключается к устройству в точке присутствия поставщика услуг глобальной сети.
 c. R1 will forward data-link frames to R2 using an HDLC header/trailer.|c. R1 пересылает кадры канала данных на R2, используя заголовок / трейлер HDLC.
 d. R1 will forward data-link frames to R2 using an Ethernet header/trailer.|d. R1 пересылает кадры канала данных на R2, используя заголовок / трейлер Ethernet.
-3. Imagine a network with two routers that are connected with a point-to-point HDLC serial link.|3. Представьте сеть с двумя маршрутизаторами, соединенными последовательным каналом HDLC «точка-точка».
+3 Imagine a network with two routers that are connected with a point-to-point HDLC serial link.|3 Представьте сеть с двумя маршрутизаторами, соединенными последовательным каналом HDLC «точка-точка».
 Each router has an Ethernet, with PC1 sharing the Ethernet with Router1 and PC2 sharing the Ethernet with Router2.|У каждого маршрутизатора есть Ethernet, при этом ПК1 совместно использует Ethernet с Router1, а ПК2 использует Ethernet с Router2.
 When PC1 sends data to PC2, which of the following is true?|Когда ПК1 отправляет данные на ПК2, что из следующего верно?
 a. Router1 strips the Ethernet header and trailer off the frame received from PC1, never to be used again.|а. Router1 удаляет заголовок и трейлер Ethernet из кадра, полученного от ПК1, чтобы никогда не использовать его снова.
 b. Router1 encapsulates the Ethernet frame inside an HDLC header and sends the frame to Router2, which extracts the Ethernet frame for forwarding to PC2.|б. Маршрутизатор 1 инкапсулирует кадр Ethernet внутри заголовка HDLC и отправляет кадр маршрутизатору 2, который извлекает кадр Ethernet для пересылки на ПК2.
 c. Router1 strips the Ethernet header and trailer off the frame received from PC1, which is exactly re-created by Router2 before forwarding data to PC2.|c. Router1 удаляет заголовок и трейлер Ethernet из кадра, полученного от ПК1, который точно воссоздается Router2 перед пересылкой данных на ПК2.
 d. Router1 removes the Ethernet, IP, and TCP headers and rebuilds the appropriate headers before forwarding the packet to Router2.|d. Router1 удаляет заголовки Ethernet, IP и TCP и перестраивает соответствующие заголовки перед пересылкой пакета на Router2.
-4. Which of the following does a router normally use when making a decision about routing TCP/IP packets?|4. Что из следующего маршрутизатор обычно использует при принятии решения о маршрутизации пакетов TCP / IP?
+4 Which of the following does a router normally use when making a decision about routing TCP/IP packets?|4 Что из следующего маршрутизатор обычно использует при принятии решения о маршрутизации пакетов TCP / IP?
 a. Destination MAC address b.|а. MAC-адрес назначения b.
 Source MAC address c.|MAC-адрес источника c.
 Destination IP address d.|IP-адрес назначения d.
@@ -1082,11 +1082,11 @@ a. The host always sends packets to its default gateway.|а. Хост всегд
 b. The host never sends packets to its default gateway.|б. Хост никогда не отправляет пакеты на свой шлюз по умолчанию.
 c. The host sends packets to its default gateway if the destination IP address is in a different subnet than the host.|c. Хост отправляет пакеты на свой шлюз по умолчанию, если IP-адрес назначения находится в другой подсети, чем хост.
 d. The host sends packets to its default gateway if the destination IP address is in the same subnet as the host.|d. Хост отправляет пакеты на свой шлюз по умолчанию, если IP-адрес назначения находится в той же подсети, что и хост.
-6. Which of the following are functions of a routing protocol? (Choose two answers.)|6. Что из перечисленного является функциями протокола маршрутизации? (Выберите два ответа.)
+6 Which of the following are functions of a routing protocol? (Choose two answers.)|6 Что из перечисленного является функциями протокола маршрутизации? (Выберите два ответа.)
 a. Advertising known routes to neighboring routers b.|а. Реклама известных маршрутов к соседним маршрутизаторам b.
 Learning routes for subnets directly connected to the router c.|Изучение маршрутов для подсетей, напрямую подключенных к маршрутизатору c.
 Learning routes and putting those routes into the routing table for routes advertised to the router by its neighboring routers d.|Изучение маршрутов и занесение этих маршрутов в таблицу маршрутизации для маршрутов, объявляемых маршрутизатору его соседними маршрутизаторами d.
-Forwarding IP packets based on a packet’s destination IP address 7.|Пересылка IP-пакетов на основе IP-адреса назначения пакета 7.
+Forwarding IP packets based on a packet’s destination IP address 7|Пересылка IP-пакетов на основе IP-адреса назначения пакета 7
 A company implements a TCP/IP network, with PC1 sitting on an Ethernet LAN.|Компания реализует сеть TCP / IP, при этом ПК1 находится в локальной сети Ethernet.
 Which of the following protocols and features requires PC1 to learn information from some other server device?|Для каких из следующих протоколов и функций ПК1 должен получать информацию от другого серверного устройства?
 a. ARP b. ping c.|а. ARP б. пинг c.
