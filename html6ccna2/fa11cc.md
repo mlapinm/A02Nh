@@ -4,7 +4,6 @@
 Глава 1 Введение в сеть TCP / IP   
 __|__
 --|--
-|
 This chapter covers the following exam topics:|В этой главе рассматриваются следующие экзаменационные темы:
 ###### 1.0 Network Fundamentals
 1.0 Основы сети   
