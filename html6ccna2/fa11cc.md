@@ -15,7 +15,6 @@ This chapter covers the following exam topics:|В этой главе рассм
 1.3.b Подключения (общая среда Ethernet и точка-точка)   
 __|__
 --|--
-|
 Welcome to the first chapter in your study for CCNA! This chapter begins Part I, which focuses on the basics of networking.|Добро пожаловать в первую главу вашего исследования CCNA! Эта глава начинается с части I, в которой основное внимание уделяется основам работы в сети.
 |
 Networks work correctly because the various devices and software follow the rules.|Сети работают правильно, потому что различные устройства и программное обеспечение подчиняются правилам.
@@ -39,7 +38,6 @@ Every network built using Cisco products today supports TCP/IP. And not surprisi
 «Знаю ли я это уже?» Викторина   
 __|__
 --|--
-|
 Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.|Пройдите тест (здесь или воспользуйтесь программой PTP), если вы хотите использовать оценку, чтобы решить, сколько времени потратить на эту главу.
 The letter answers are listed at the bottom of the page following the quiz.|Ответы на письма перечислены внизу страницы после викторины.
 Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.|Приложение C, которое можно найти как в конце книги, так и на сопутствующем веб-сайте, включает как ответы, так и пояснения.
@@ -54,7 +52,6 @@ CHAPTER 1 Table 1-1 “Do I Know This Already?” Foundation Topics Section-to-Q
 Модель сети TCP / IP   
 __|__
 --|--
-|
 Data Encapsulation Terminology 5–7 1.|Терминология инкапсуляции данных 5–7 1.
 Which of the following protocols are examples of TCP/IP transport layer protocols?|Какие из следующих протоколов являются примерами протоколов транспортного уровня TCP / IP?
 |
@@ -167,7 +164,6 @@ Because the networking product vendors build their products with some networking
 История, ведущая к TCP / IP   
 __|__
 --|--
-|
 Today, the world of computer networking uses one networking model: TCP/IP. However, the world has not always been so simple.|Сегодня в мире компьютерных сетей используется одна сетевая модель: TCP / IP. Однако мир не всегда был таким простым.
 Once upon a time, networking protocols didn’t exist, including TCP/IP. Vendors created the first networking protocols; these protocols supported only that vendor’s computers.|Когда-то не существовало сетевых протоколов, включая TCP / IP. Производители создали первые сетевые протоколы; эти протоколы поддерживают только компьютеры этого производителя.
 |
@@ -182,7 +178,7 @@ Answers to the “Do I Know This Already?” quiz:|Ответы на вопро�
 |
 Figure 1-3 Historical Progression: Proprietary Models to the Open TCP/IP Model Although vendor-defined proprietary networking models often worked well, having an open, vendor-neutral networking model would aid competition and reduce complexity.|Рисунок 1-3 Историческое развитие: проприетарные модели к открытой модели TCP / IP Хотя проприетарные сетевые модели, определяемые поставщиком, часто работают хорошо, наличие открытой сетевой модели, не зависящей от поставщика, может способствовать конкуренции и снизить сложность.
 |
-The International Organization for Standardization (ISO) took on the task to create such a model, starting as early as the late 1970s, beginning work on what would become known as the Open Systems Interconnection (OSI) networking model.|Международная организация по стандартизации (ISO) взяла на себя задачу создать такую ​​модель, начиная с конца 1970-х годов, начав работу над тем, что впоследствии стало известно как сетевая модель взаимодействия открытых систем (OSI).
+The International Organization for Standardization (ISO) took on the task to create such a model, starting as early as the late 1970s, beginning work on what would become known as the Open Systems Interconnection (OSI) networking model.|Международная организация по стандартизации (ISO) взяла на себя задачу создать такую ??модель, начиная с конца 1970-х годов, начав работу над тем, что впоследствии стало известно как сетевая модель взаимодействия открытых систем (OSI).
 ISO had a noble goal for the OSI model: to standardize data networking protocols to allow communication among all computers across the entire planet.|ИСО поставила перед моделью OSI благородную цель: стандартизировать сетевые протоколы передачи данных, чтобы обеспечить связь между всеми компьютерами по всей планете.
 ISO worked toward this ambitious and noble goal, with participants from most of the technologically developed nations on Earth participating in the process.|ISO работала над достижением этой амбициозной и благородной цели, в этом процессе участвовали участники из большинства технологически развитых стран Земли.
 |
@@ -208,7 +204,6 @@ However, you will often use terms relating to OSI.|Однако вы часто 
 Обзор сетевой модели TCP / IP   
 __|__
 --|--
-|
 The TCP/IP model both defines and references a large collection of protocols that allow computers to communicate.|Модель TCP / IP определяет и ссылается на большой набор протоколов, позволяющих компьютерам обмениваться данными.
 To define a protocol, TCP/IP uses documents called Requests For Comments (RFC). (You can find these RFCs using any online search engine.) The TCP/IP model also avoids repeating work already done by some other standards body or vendor consortium by simply referring to standards or protocols created by those groups.|Для определения протокола TCP / IP использует документы, называемые запросами на комментарии (RFC). (Вы можете найти эти RFC с помощью любой поисковой системы в Интернете.) Модель TCP / IP также позволяет избежать повторения работы, уже проделанной другим органом по стандартизации или консорциумом поставщиков, просто ссылаясь на стандарты или протоколы, созданные этими группами.
 For example, the Institute of Electrical and Electronic Engineers (IEEE) defines Ethernet LANs; the TCP/IP model does not define Ethernet in RFCs, but refers to IEEE Ethernet as an option.|Например, Институт инженеров по электротехнике и электронике (IEEE) определяет локальные сети Ethernet; модель TCP / IP не определяет Ethernet в RFC, но в качестве опции ссылается на IEEE Ethernet.
@@ -241,7 +236,6 @@ Following the table, this section takes a closer look at the layers of the TCP/I
 Уровень приложений TCP / IP   
 __|__
 --|--
-|
 TCP/IP application layer protocols provide services to the application software running on a computer.|Протоколы прикладного уровня TCP / IP предоставляют услуги прикладному программному обеспечению, работающему на компьютере.
 The application layer does not define the application itself, but it defines services that applications need.|Уровень приложения не определяет само приложение, но определяет службы, которые необходимы приложениям.
 For example, application protocol HTTP defines how web browsers can pull the contents of a web page from a web server.|Например, протокол приложения HTTP определяет, как веб-браузеры могут извлекать содержимое веб-страницы с веб-сервера.
@@ -254,7 +248,6 @@ And thankfully, using a web browser is easy: You start a web browser on your com
 Обзор HTTP   
 __|__
 --|--
-|
 What really happens to allow that web page to appear on your web browser?|Что на самом деле происходит, чтобы эта веб-страница отображалась в вашем браузере?
 |
 Imagine that Bob opens his browser.|Представьте, что Боб открывает свой браузер.
@@ -269,7 +262,6 @@ Bob receives the file from Larry and displays the contents of the file in Bob’
 Механизмы протокола HTTP   
 __|__
 --|--
-|
 Taking a closer look, this example shows how applications on each endpoint computer—specifically, the web browser application and web server application—use a TCP/IP application layer protocol.|При более внимательном рассмотрении этот пример показывает, как приложения на каждом конечном компьютере - в частности, приложение веб-браузера и приложение веб-сервера - используют протокол уровня приложений TCP / IP.
 To make the request for a web page and return the contents of the web page, the applications use the Hypertext Transfer Protocol (HTTP).|Чтобы сделать запрос на веб-страницу и вернуть ее содержимое, приложения используют протокол передачи гипертекста (HTTP).
 |
@@ -296,7 +288,6 @@ Rather than wasting space by sending repeated HTTP headers that list the same in
 Транспортный уровень TCP / IP   
 __|__
 --|--
-|
 Although many TCP/IP application layer protocols exist, the TCP/IP transport layer includes a smaller number of protocols.|Хотя существует множество протоколов прикладного уровня TCP / IP, транспортный уровень TCP / IP включает меньшее количество протоколов.
 The two most commonly used transport layer protocols are the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP).|Два наиболее часто используемых протокола транспортного уровня - это протокол управления передачей (TCP) и протокол пользовательских дейтаграмм (UDP).
 |
@@ -309,7 +300,6 @@ This section introduces that general concept by focusing on a single 2, includes
 Основы восстановления после ошибок TCP   
 __|__
 --|--
-|
 To appreciate what the transport layer protocols do, you must think about the layer above the transport layer, the application layer.|Чтобы понять, что делают протоколы транспортного уровня, вы должны подумать об уровне выше транспортного уровня, о прикладном уровне.
 Why?|Зачем?
 Well, each layer provides a service to the layer above it, like the error-recovery service provided to application layer protocols by TCP.|Что ж, каждый уровень предоставляет услугу вышестоящему уровню, подобно сервису исправления ошибок, предоставляемому протоколам прикладного уровня TCP.
@@ -322,7 +312,7 @@ Well, as you might expect, in either case, the page would not have shown up in B
 TCP/IP needs a mechanism to guarantee delivery of data across a network.|TCP / IP нуждается в механизме, гарантирующем доставку данных по сети.
 Because many application layer protocols probably want a way to guarantee delivery of data across a network, the creators of TCP included an error-recovery feature.|Поскольку многим протоколам прикладного уровня, вероятно, нужен способ гарантировать доставку данных по сети, создатели TCP включили функцию восстановления после ошибок.
 To recover from errors, TCP uses the concept of acknowledgments.|Для восстановления после ошибок TCP использует концепцию подтверждений.
-Figure 1-7 outlines the basic idea behind how TCP notices lost data and asks the sender to try again.|На рис. 1-7 представлена ​​основная идея того, как TCP обнаруживает потерянные данные и просит отправителя повторить попытку.
+Figure 1-7 outlines the basic idea behind how TCP notices lost data and asks the sender to try again.|На рис. 1-7 представлена ??основная идея того, как TCP обнаруживает потерянные данные и просит отправителя повторить попытку.
 |
 Figure 1-7 TCP Error-Recovery Services as Provided to HTTP Figure 1-7 shows web server Larry sending a web page to web browser Bob, using three separate messages.|Рис. 1-7. Службы восстановления после ошибок TCP, предоставляемые HTTP. На рис. 1-7 показан веб-сервер Ларри, отправляющий веб-страницу веб-браузеру Бобу, используя три отдельных сообщения.
 Note that this figure shows the same HTTP headers as Figure 1-6, but it also shows a TCP header.|Обратите внимание, что на этом рисунке показаны те же заголовки HTTP, что и на рисунке 1-6, но также показан заголовок TCP.
@@ -334,7 +324,6 @@ That realization by Bob’s TCP logic causes Bob to send a TCP segment back to L
 Взаимодействие на одном и том же уровне и на смежном уровне   
 __|__
 --|--
-|
 Figure 1-7 also demonstrates a function called adjacent-layer interaction, which refers to the concepts of how adjacent layers in a networking model, on the same computer, work together.|На рисунке 1-7 также показана функция, называемая взаимодействием смежных уровней, которая относится к концепциям того, как смежные уровни в сетевой модели на одном компьютере работают вместе.
 In this example, the higher-layer protocol (HTTP) wants error recovery, so it uses the next lower-layer protocol (TCP) to perform the service of error recovery; the lower layer provides a service to the layer above it.|В этом примере протокол верхнего уровня (HTTP) требует восстановления после ошибок, поэтому он использует следующий протокол нижнего уровня (TCP) для выполнения услуги восстановления после ошибок; нижний уровень обслуживает более высокий уровень.
 |
@@ -351,18 +340,16 @@ Table 1-3 Summary: Same-Layer and Adjacent-Layer Interactions Table end.|Таб�
 Сетевой уровень TCP / IP   
 __|__
 --|--
-|
 The application layer includes many protocols.|Уровень приложений включает в себя множество протоколов.
 The transport layer includes fewer protocols, most notably, TCP and UDP. The TCP/IP network layer includes a small number of protocols, but only one major protocol: the Internet Protocol (IP). In fact, the name TCP/IP is simply the names of the two most common protocols (TCP and IP) separated by a /.|Транспортный уровень включает меньше протоколов, в первую очередь TCP и UDP. Сетевой уровень TCP / IP включает небольшое количество протоколов, но только один основной протокол: Интернет-протокол (IP). Фактически, имя TCP / IP - это просто имена двух наиболее распространенных протоколов (TCP и IP), разделенные знаком /.
 |
 IP provides several features, most importantly, addressing and routing.|IP предоставляет несколько функций, в первую очередь адресацию и маршрутизацию.
 This section begins by comparing IP’s addressing and routing with another commonly known system that uses addressing and routing: the postal service.|Этот раздел начинается со сравнения IP-адресации и маршрутизации с другой широко известной системой, использующей адресацию и маршрутизацию: почтовой службой.
-Following that, this section introduces IP addressing and routing. (More details follow in Chapter 3, “Fundamentals of WANs and IP Routing.”)|После этого в этом разделе рассказывается об IP-адресации и маршрутизации. (Более подробная информация представлена ​​в главе 3 «Основы WAN и IP-маршрутизации».)
+Following that, this section introduces IP addressing and routing. (More details follow in Chapter 3, “Fundamentals of WANs and IP Routing.”)|После этого в этом разделе рассказывается об IP-адресации и маршрутизации. (Более подробная информация представлена ??в главе 3 «Основы WAN и IP-маршрутизации».)
 ##### Internet Protocol and the Postal Service
 Интернет-протокол и почтовая служба   
 __|__
 --|--
-|
 Imagine that you just wrote two letters: one to a friend on the other side of the country and one to a friend on the other side of town.|Представьте, что вы только что написали два письма: одно другу на другом конце страны и одно другу на другом конце города.
 You addressed the envelopes and put on the stamps, so both are ready to give to the postal service.|Вы адресовали конверты и ставили марки, так что оба готовы отдать на почту.
 Is there much difference in how you treat each letter?|Есть ли разница в том, как вы относитесь к каждой букве?
@@ -404,7 +391,6 @@ Just as the postal service created the necessary infrastructure to deliver lette
 Основы адресации интернет-протокола   
 __|__
 --|--
-|
 IP defines addresses for several important reasons.|IP определяет адреса по нескольким важным причинам.
 First, each device that uses TCP/IP—each TCP/IP host—needs a unique address so that it can be identified in the network.|Во-первых, каждому устройству, использующему TCP / IP - каждому узлу TCP / IP - нужен уникальный адрес, чтобы его можно было идентифицировать в сети.
 IP also defines how to group addresses together, just like the postal system groups addresses based on postal codes (like ZIP codes in the United States).|IP также определяет, как группировать адреса вместе, точно так же, как почтовая система группирует адреса на основе почтовых индексов (например, почтовые индексы в США).
@@ -431,7 +417,6 @@ Routers do the equivalent of the work done by each post office site: They receiv
 Основы IP-маршрутизации   
 __|__
 --|--
-|
 The TCP/IP network layer, using the IP protocol, provides a service of forwarding IP packets from one device to another.|Сетевой уровень TCP / IP, использующий протокол IP, предоставляет услугу пересылки IP-пакетов от одного устройства к другому.
 Any device with an IP address can connect to the TCP/IP network and send packets.|Любое устройство с IP-адресом может подключаться к сети TCP / IP и отправлять пакеты.
 This section shows a basic IP routing example for perspective.|В этом разделе для перспективы показан базовый пример IP-маршрутизации.
@@ -456,7 +441,6 @@ You will learn IP in more depth than any other protocol while preparing for CCNA
 Канал передачи данных TCP / IP и физические уровни   
 __|__
 --|--
-|
 The TCP/IP model’s data-link and physical layers define the protocols and hardware required to deliver data across some physical network.|Канальный и физический уровни модели TCP / IP определяют протоколы и оборудование, необходимые для доставки данных по какой-либо физической сети.
 The two work together quite closely; in fact, some standards define both the data-link and physical layer functions.|Эти двое работают вместе довольно тесно; фактически, некоторые стандарты определяют функции как канала передачи данных, так и физического уровня.
 The physical layer defines the cabling and energy (for example, electrical signals) that flow over the cables.|Физический уровень определяет кабели и энергию (например, электрические сигналы), которые проходят по кабелям.
@@ -478,7 +462,6 @@ Larry|Ларри
 1.1.1.1   
 __|__
 --|--
-|
 Ethernet IP Packet Eth.|Ethernet IP Packet Eth.
 |
 IP Packet 1 Encapsulate 2 Transmit 3 IP Packet 4 De-encapsulate Receive R1 Header Trailer Ethernet IP Packet Eth.|IP-пакет 1 Инкапсуляция 2 Передача 3 IP-пакет 4 Деинкапсуляция Прием R1 Заголовок Прицеп Ethernet IP-пакет Eth.
@@ -516,7 +499,6 @@ functions related to the physical transmission of the data, plus the protocols a
 Терминология инкапсуляции данных   
 __|__
 --|--
-|
 As you can see from the explanations of how HTTP, TCP, IP, and Ethernet do their jobs, when sending data, each layer adds its own header (and for data-link protocols, also a trailer)|Как вы можете видеть из объяснений того, как HTTP, TCP, IP и Ethernet выполняют свою работу, при отправке данных каждый уровень добавляет свой собственный заголовок (а для протоколов передачи данных также трейлер)
 |
 to the data supplied by the higher layer.|к данным, предоставленным более высоким уровнем.
@@ -561,7 +543,6 @@ Figure 1-12 Five Steps of Data Encapsulation: TCP/IP|Рисунок 1-12 Пят�
 Имена сообщений TCP / IP   
 __|__
 --|--
-|
 One reason this chapter takes the time to show the encapsulation steps in detail has to do with terminology.|Одна из причин, по которой в этой главе уделено время подробному описанию этапов инкапсуляции, связана с терминологией.
 When talking and writing about networking, people use segment, packet, and frame to refer to the messages shown in Figure 1-13 and the related list.|Когда говорят и пишут о сети, люди используют сегмент, пакет и фрейм для ссылки на сообщения, показанные на рис. 1-13, и связанный список.
 Each term has a specific meaning, referring to the headers (and possibly trailers) defined by a particular layer and the data encapsulated following that header.|Каждый термин имеет определенное значение, относящееся к заголовкам (и, возможно, трейлерам), определенным конкретным уровнем, и данным, инкапсулированным после этого заголовка.
@@ -579,7 +560,6 @@ So, when drawing IP packets, everything after the IP header is typically shown s
 Сетевая модель и терминология OSI   
 __|__
 --|--
-|
 At one point in the history of the OSI model, many people thought that OSI would win the battle of the networking models discussed earlier.|В какой-то момент истории модели OSI многие люди думали, что OSI выиграет битву сетевых моделей, обсуждавшихся ранее.
 If that had occurred, instead of running TCP/IP on every computer in the world, those computers would be running with OSI.|Если бы это произошло, вместо запуска TCP / IP на каждом компьютере в мире эти компьютеры работали бы с OSI.
 |
@@ -595,7 +575,6 @@ So, while you will never need to work with a computer that uses OSI, to understa
 Сравнение имен и номеров уровней OSI и TCP / IP   
 __|__
 --|--
-|
 The OSI model has many similarities to the TCP/IP model from a basic conceptual perspective.|Модель OSI имеет много общего с моделью TCP / IP с базовой концептуальной точки зрения.
 |
 It has layers, and each layer defines a set of typical networking functions.|Он имеет уровни, и каждый уровень определяет набор типичных сетевых функций.
@@ -622,7 +601,6 @@ For the purposes of this book, know the mapping between the five-layer TCP/IP mo
 Терминология инкапсуляции данных OSI   
 __|__
 --|--
-|
 Like TCP/IP, each OSI layer asks for services from the next lower layer.|Как и TCP / IP, каждый уровень OSI запрашивает услуги у следующего нижнего уровня.
 To provide the services, each layer makes use of a header and possibly a trailer.|Для предоставления услуг каждый уровень использует заголовок и, возможно, трейлер.
 The lower layer encapsulates the higher layer’s data behind a header.|Нижний уровень инкапсулирует данные верхнего уровня за заголовком.
@@ -638,7 +616,6 @@ Figure 1-15 OSI Encapsulation and Protocol Data Units|Рисунок 1-15 Инк
 Обзор главы   
 __|__
 --|--
-|
 The “Your Study Plan” element, just before Chapter 1, discusses how you should study and practice the content and skills for each chapter before moving on to the next chapter.|Элемент «Ваш учебный план», расположенный непосредственно перед главой 1, обсуждает, как вы должны изучать и практиковать содержание и навыки для каждой главы, прежде чем переходить к следующей главе.
 That element introduces the tools used here at the end of each chapter.|Этот элемент знакомит с инструментами, используемыми здесь, в конце каждой главы.
 If you haven’t already done so, take a few minutes to read that section.|Если вы еще этого не сделали, уделите несколько минут, чтобы прочитать этот раздел.
@@ -655,7 +632,6 @@ Review All the Key Topics Key Terms You Should Know adjacent-layer interaction, 
 Глава 2 Основы локальных сетей Ethernet   
 __|__
 --|--
-|
 This chapter covers the following exam topics:|В этой главе рассматриваются следующие экзаменационные темы:
 ###### 1.0 Network Fundamentals
 1.0 Основы сети   
@@ -675,7 +651,6 @@ This chapter covers the following exam topics:|В этой главе рассм
 1.3.b Подключения (общая среда Ethernet и точка-точка)   
 __|__
 --|--
-|
 Most enterprise computer networks can be separated into two general types of technology:|Большинство корпоративных компьютерных сетей можно разделить на два основных типа технологий:
 |
 local-area networks (LANs) and wide-area networks (WANs).|локальные сети (LAN) и глобальные сети (WAN).
@@ -692,7 +667,6 @@ This chapter introduces Ethernet LANs, with more detailed coverage in Parts II a
 «Знаю ли я это уже?» Викторина   
 __|__
 --|--
-|
 Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.|Пройдите тест (здесь или воспользуйтесь программой PTP), если вы хотите использовать оценку, чтобы решить, сколько времени потратить на эту главу.
 The letter answers are listed at the bottom of the page following the quiz.|Ответы на письма перечислены внизу страницы после викторины.
 Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.|Приложение C, которое можно найти как в конце книги, так и на сопутствующем веб-сайте, включает как ответы, так и пояснения.
@@ -705,7 +679,6 @@ CHAPTER 2 Table 2-1 “Do I Know This Already?” Foundation Topics Section-to-Q
 Обзор локальных сетей   
 __|__
 --|--
-|
 Building Physical Ethernet LANs with UTP 3–4 Building Physical Ethernet LANs with Fiber 5 Sending Data in Ethernet Networks 6–9 1.|Создание физических локальных сетей Ethernet с использованием UTP 3–4 Создание физических локальных сетей Ethernet с использованием оптоволокна 5 Отправка данных в сетях Ethernet 6–9 1.
 In the LAN for a small office, some user devices connect to the LAN using a cable, while others connect using wireless technology (and no cable).|В локальной сети для небольшого офиса некоторые пользовательские устройства подключаются к локальной сети с помощью кабеля, а другие подключаются с помощью беспроводной технологии (без кабеля).
 Which of the following is true regarding the use of Ethernet in this LAN?|Что из следующего верно относительно использования Ethernet в этой локальной сети?
@@ -798,7 +771,6 @@ The standards, defined by the Institute of Electrical and Electronics Engineers 
 Типичные локальные сети SOHO   
 __|__
 --|--
-|
 To begin, first think about a small office/home office (SOHO) LAN today, specifically a LAN that uses only Ethernet LAN technology.|Для начала сначала подумайте о ЛВС небольшого офиса / домашнего офиса (SOHO) сегодня, особенно о ЛВС, в которой используется только технология ЛВС Ethernet.
 First, the LAN needs a device called an Ethernet LAN switch, which provides many physical ports into which cables can be connected.|Во-первых, для локальной сети требуется устройство, называемое коммутатором локальной сети Ethernet, который предоставляет множество физических портов, к которым можно подключать кабели.
 |
@@ -824,7 +796,6 @@ Figure 2-2 Typical Small Wired and Wireless SOHO LAN|Рисунок 2-2 Типи
 Типичные корпоративные локальные сети   
 __|__
 --|--
-|
 Enterprise networks have similar needs compared to a SOHO network, but on a much larger scale.|У корпоративных сетей аналогичные потребности по сравнению с сетью SOHO, но в гораздо большем масштабе.
 For example, enterprise Ethernet LANs begin with LAN switches installed in a wiring closet behind a locked door on each floor of a building.|Например, корпоративные локальные сети Ethernet начинаются с коммутаторов локальной сети, установленных в коммутационном шкафу за запертой дверью на каждом этаже здания.
 The electricians install the Ethernet cabling from that wiring closet to cubicles and conference rooms where devices might need to connect to the LAN. At the same time, most enterprises also support wireless LANs in the same space, to allow people to roam around and still work and to support a growing number of devices that do not have an Ethernet LAN interface.|Электрики устанавливают кабели Ethernet от этого коммутационного шкафа до кабинетов и конференц-залов, где устройствам может потребоваться подключение к локальной сети. В то же время большинство предприятий также поддерживают беспроводные локальные сети в том же пространстве, чтобы люди могли перемещаться и продолжать работать, а также для поддержки растущего числа устройств, не имеющих интерфейса Ethernet LAN.
@@ -844,7 +815,6 @@ The rest of this chapter focuses on Ethernet in particular.|Остальная �
 Разнообразие стандартов физического уровня Ethernet   
 __|__
 --|--
-|
 The term Ethernet refers to an entire family of standards.|Термин Ethernet относится к целому семейству стандартов.
 Some standards define the specifics of how to send data over a particular type of cabling, and at a particular speed.|Некоторые стандарты определяют особенности передачи данных по определенному типу кабеля и с определенной скоростью.
 Other standards define protocols, or rules, that the Ethernet nodes must follow to be a part of an Ethernet LAN. All these Ethernet standards come from the IEEE and include the number 802.3 as the beginning part of the standard name.|Другие стандарты определяют протоколы или правила, которым должны следовать узлы Ethernet, чтобы стать частью локальной сети Ethernet. Все эти стандарты Ethernet исходят от IEEE и включают номер 802.3 в начале названия стандарта.
@@ -879,7 +849,6 @@ Check out the Ethernet Alliance web page (www.EthernetAlliance.org) and look for
 Согласованное поведение по всем каналам с использованием уровня канала передачи данных Ethernet   
 __|__
 --|--
-|
 Although Ethernet includes many physical layer standards, Ethernet acts like a single LAN technology because it uses the same data-link layer standard over all types of Ethernet physical links.|Хотя Ethernet включает в себя множество стандартов физического уровня, Ethernet действует как технология единой локальной сети, поскольку использует один и тот же стандарт уровня канала передачи данных для всех типов физических каналов Ethernet.
 That standard defines a common Ethernet header and trailer. (As a reminder, the header and trailer are bytes of overhead data that Ethernet uses to do its job of sending data over a LAN.) No matter whether the data flows over a UTP cable or any kind of fiber cable, and no matter the speed, the data-link header and trailer use the same format.|Этот стандарт определяет общий заголовок и трейлер Ethernet. (Напоминаем, что заголовок и трейлер представляют собой байты служебных данных, которые Ethernet использует для выполнения своей работы по отправке данных по локальной сети.) Независимо от того, передаются ли данные по кабелю UTP или любому типу оптоволоконного кабеля, и speed, заголовок и трейлер канала передачи данных используют один и тот же формат.
 |
@@ -903,7 +872,6 @@ The next section examines how to build a physical Ethernet network using UTP cab
 Создание физических локальных сетей Ethernet с UTP   
 __|__
 --|--
-|
 The next section of this chapter focuses on the individual physical links between any two Ethernet nodes, specifically those that use Unshielded Twisted Pair (UTP) cabling.|Следующий раздел этой главы посвящен отдельным физическим каналам между любыми двумя узлами Ethernet, особенно тем, которые используют кабели с неэкранированной витой парой (UTP).
 Before the Ethernet network as a whole can send Ethernet frames between user devices, each node must be ready and able to send data over an individual physical link.|Прежде чем сеть Ethernet в целом сможет отправлять кадры Ethernet между пользовательскими устройствами, каждый узел должен быть готов и способен отправлять данные по отдельному физическому каналу.
 |
@@ -915,7 +883,6 @@ It then examines the specific wiring of the UTP cables used for 10-Mbps, 100-Mbp
 Передача данных с использованием витой пары   
 __|__
 --|--
-|
 While it is true that Ethernet sends data over UTP cables, the physical means to send the data uses electricity that flows over the wires inside the UTP cable.|Хотя это правда, что Ethernet отправляет данные по кабелям UTP, физические средства передачи данных используют электричество, которое течет по проводам внутри кабеля UTP.
 To better understand how Ethernet sends data using electricity, break the idea down into two parts: how to create an electrical circuit and then how to make that electrical signal communicate 1s and 0s.|Чтобы лучше понять, как Ethernet передает данные, используя электричество, разделите идею на две части: как создать электрическую цепь, а затем как заставить этот электрический сигнал передавать единицы и нули.
 |
@@ -935,7 +902,6 @@ When electrical current passes over any wire, it creates electromagnetic interfe
 Разрыв соединения UTP Ethernet   
 __|__
 --|--
-|
 The term Ethernet link refers to any physical cable between two Ethernet nodes.|Термин «канал Ethernet» относится к любому физическому кабелю между двумя узлами Ethernet.
 To learn about how a UTP Ethernet link works, it helps to break down the physical link into those basic pieces, as shown in Figure 2-6: the cable itself, the connectors on the ends of the cable, and the matching ports on the devices into which the connectors will be inserted.|Чтобы узнать, как работает канал Ethernet UTP, можно разбить физический канал на эти основные части, как показано на рис. 2-6: сам кабель, разъемы на концах кабеля и соответствующие порты на устройства, в которые будут вставляться разъемы.
 |
@@ -962,7 +928,7 @@ Figure 2-7 RJ-45 Connectors and Ports (Ethernet NIC © Oleg Begunenko/123RF, RJ-
 |
 The figure shows a connector on the left and ports on the right.|На рисунке слева показан разъем, а справа - порты.
 The left shows the eight pin positions in the end of the RJ-45 connector.|Слева показаны восемь позиций контактов на конце разъема RJ-45.
-The upper right shows an Ethernet NIC that is not yet installed in a computer.|В правом верхнем углу показана сетевая карта Ethernet, которая еще не установлена ​​на компьютере.
+The upper right shows an Ethernet NIC that is not yet installed in a computer.|В правом верхнем углу показана сетевая карта Ethernet, которая еще не установлена ??на компьютере.
 The lower-right part of the figure shows the side of a Cisco switch, with multiple RJ-45 ports, allowing multiple devices to easily connect to the Ethernet network.|В нижней правой части рисунка показана сторона коммутатора Cisco с несколькими портами RJ-45, что позволяет нескольким устройствам легко подключаться к сети Ethernet.
 |
 Finally, while RJ-45 connectors with UTP cabling can be common, Cisco LAN switches often support other types of connectors as well.|Наконец, хотя разъемы RJ-45 с кабелями UTP могут быть обычным явлением, коммутаторы Cisco LAN часто поддерживают и другие типы разъемов.
@@ -986,7 +952,6 @@ Small Form Pluggable Plus (SFP+): Same size as the SFP, but used on 10-Gbps inte
 Выводы кабелей UTP для 10BASE-T и 100BASE-T   
 __|__
 --|--
-|
 So far in this section, you have learned about the equivalent of how to drive a truck on a 1000-acre ranch: You could drive the truck all over the ranch, any place you wanted to go, and the police would not mind.|До сих пор в этом разделе вы узнали о том, как водить грузовик на ранчо площадью 1000 акров: вы можете проехать на грузовике по всему ранчо, в любое место, куда хотите, и полиция не будет возражать.
 However, as soon as you get on the public roads, the police want you to behave and follow the rules.|Однако, как только вы выезжаете на дорогу общего пользования, полиция требует, чтобы вы вели себя хорошо и соблюдали правила.
 Similarly, so far this chapter has discussed the general principles of how to send data, but it has not yet detailed some important rules for Ethernet cabling: the rules of the road so that all the devices send data using the right wires inside the cable.|Точно так же до сих пор в этой главе обсуждались общие принципы отправки данных, но еще не были подробно описаны некоторые важные правила для кабельной разводки Ethernet: правила дорожного движения, согласно которым все устройства отправляют данные, используя правильные провода внутри кабеля.
@@ -998,7 +963,6 @@ A short comparison of the wiring for 1000BASE-T (Gigabit Ethernet), which uses f
 Распиновка прямого кабеля   
 __|__
 --|--
-|
 10BASE-T and 100BASE-T use two pairs of wires in a UTP cable, one for each direction, as shown in Figure 2-9.|10BASE-T и 100BASE-T используют две пары проводов в кабеле UTP, по одной для каждого направления, как показано на Рисунке 2-9.
 The figure shows four wires, all of which sit inside a single UTP cable that connects a PC and a LAN switch.|На рисунке показаны четыре провода, каждый из которых проложен внутри одного кабеля UTP, соединяющего ПК и коммутатор LAN.
 In this example, the PC on the left transmits using the top pair, and the switch on the right transmits using the bottom pair.|В этом примере ПК слева передает с использованием верхней пары, а переключатель справа передает с использованием нижней пары.
@@ -1038,7 +1002,6 @@ Figure 2-12 Crossover Ethernet Cable|Рисунок 2-12 Перекрестны�
 Выбор правильных выводов кабеля   
 __|__
 --|--
-|
 For the exam, you should be well prepared to choose which type of cable (straight-through or crossover) is needed in each part of the network.|К экзамену вы должны быть хорошо подготовлены к тому, чтобы выбрать, какой тип кабеля (прямой или перекрестный) необходим в каждой части сети.
 The key is to know whether a device acts like a PC NIC, transmitting at pins 1 and 2, or like a switch, transmitting at pins 3 and 6.|Ключ в том, чтобы знать, действует ли устройство как сетевая карта ПК, передавая сигналы на выводах 1 и 2, или как переключатель, передавая сигналы на выводах 3 и 6.
 |
@@ -1060,7 +1023,6 @@ However, for the exams, be ready to identify whether the correct cable is shown 
 Выводы кабелей UTP для 1000BASE-T   
 __|__
 --|--
-|
 1000BASE-T (Gigabit Ethernet) differs from 10BASE-T and 100BASE-T as far as the cabling and pinouts.|1000BASE-T (Gigabit Ethernet) отличается от 10BASE-T и 100BASE-T кабельной разводкой и распиновкой.
 First, 1000BASE-T requires four wire pairs.|Во-первых, для 1000BASE-T требуется четыре пары проводов.
 Second, it uses more advanced electronics that allow both ends to transmit and receive simultaneously on each wire pair.|Во-вторых, он использует более совершенную электронику, которая позволяет обоим концам одновременно передавать и принимать по каждой паре проводов.
@@ -1076,7 +1038,6 @@ It also crosses the two new pairs as well (the pair at pins 4,5 with the pair at
 Создание физических локальных сетей Ethernet с использованием оптоволокна   
 __|__
 --|--
-|
 The capability of many UTP-based Ethernet standards to use a cable length up to 100 meters means that the majority of Ethernet cabling in an enterprise uses UTP cables.|Способность многих стандартов Ethernet на основе UTP использовать кабель длиной до 100 метров означает, что большинство кабелей Ethernet на предприятии используют кабели UTP.
 The distance from an Ethernet switch to every endpoint on the floor of a building will likely be less than 100m.|Расстояние от коммутатора Ethernet до каждой конечной точки на этаже здания, вероятно, будет менее 100 м.
 In some cases, however, an engineer might prefer to use fiber cabling for some links in an Ethernet LAN, first to reach greater distances, but for other reasons as well.|Однако в некоторых случаях инженер может предпочесть использовать оптоволоконные кабели для некоторых каналов в локальной сети Ethernet, сначала для достижения больших расстояний, но также и по другим причинам.
@@ -1085,7 +1046,6 @@ This next section examines a few of the tradeoffs after discussing the basics of
 Концепции передачи по оптоволоконным кабелям   
 __|__
 --|--
-|
 Fiber-optic cabling uses glass as the medium through which light passes, varying that light over time to encode 0s and 1s.|В волоконно-оптических кабелях стекло используется в качестве среды, через которую проходит свет, изменяя этот свет с течением времени, чтобы кодировать нули и единицы.
 It might seem strange at first to use glass given that most of us think of glass in windows.|Сначала может показаться странным использование стекла, учитывая, что большинство из нас думает о стекле в окнах.
 Window glass is hard, unbending, and if you hit or bend it enough, the glass will probably shatter—all bad characteristics for a cabling material.|Оконное стекло твердое, негнущееся, и если вы сильно ударите или согнете его, оно, вероятно, разобьется - все это плохие характеристики для материала кабельной разводки.
@@ -1107,7 +1067,7 @@ You can see how the cladding reflects the light back into the core as it travels
 Figure 2-16 Transmission on Multimode Fiber with Internal Reflection The figure shows the normal operation of a multimode fiber, characterized by the fact that the cable allows for multiple angles (modes) of light waves entering the core.|Рисунок 2-16 Передача по многомодовому волокну с внутренним отражением На рисунке показана нормальная работа многомодового волокна, характеризующаяся тем, что кабель допускает попадание световых волн в сердцевину под разными углами (модами).
 |
 In contrast, single-mode fiber uses a smaller-diameter core, around one-fifth the diameter of common multimode cables (see Figure 2-17).|В отличие от этого, в одномодовом волокне используется сердцевина меньшего диаметра, примерно в пятую часть диаметра обычных многомодовых кабелей (см. Рисунок 2-17).
-To transmit light into a much smaller core, a laser-based transmitter sends light at a single angle (hence the name single-mode).|Чтобы передать свет в ядро ​​гораздо меньшего размера, лазерный передатчик излучает свет под одним углом (отсюда и название - одномодовый).
+To transmit light into a much smaller core, a laser-based transmitter sends light at a single angle (hence the name single-mode).|Чтобы передать свет в ядро ??гораздо меньшего размера, лазерный передатчик излучает свет под одним углом (отсюда и название - одномодовый).
 |
 Figure 2-17 Transmission on Single-Mode Fiber with Laser Transmitter Both multimode and single-mode cabling have important roles in Ethernet and meet different needs.|Рисунок 2-17 Передача по одномодовому оптоволокну с лазерным передатчиком Как многомодовые, так и одномодовые кабели играют важную роль в Ethernet и удовлетворяют различные потребности.
 Multimode improves the maximum distances over UTP, and it uses less expensive transmitters as compared with single-mode.|Многомодовый улучшает максимальные расстояния по UTP и использует менее дорогие передатчики по сравнению с одномодовым.
@@ -1123,7 +1083,6 @@ Figure 2-18 Two Fiber Cables with Tx Connected to Rx on Each Cable|Рисуно�
 Использование волокна с Ethernet   
 __|__
 --|--
-|
 To use fiber with Ethernet switches, you need to use a switch with either built-in ports that support a particular optical Ethernet standard, or a switch with modular ports that allow you to change the Ethernet standard used on the port.|Чтобы использовать оптоволокно с коммутаторами Ethernet, необходимо использовать коммутатор либо со встроенными портами, поддерживающими определенный оптический стандарт Ethernet, либо коммутатор с модульными портами, которые позволяют изменять стандарт Ethernet, используемый для порта.
 Refer back to Figure 2-8, which shows a photo of a switch with two SFP+ ports, into which you could insert any of the supported SFP+ modules.|Вернитесь к рис. 2-8, на котором показана фотография коммутатора с двумя портами SFP +, в которые можно вставить любой из поддерживаемых модулей SFP +.
 Those SFP+ ports support a variety of 10-Gbps standards like those listed in Table 2-4.|Эти порты SFP + поддерживают различные стандарты 10 Гбит / с, например, перечисленные в Таблице 2-4.
@@ -1149,7 +1108,6 @@ Table 2-5 Comparisons Between UTP, MM, and SM Ethernet Cabling Table end.|Таб
 Отправка данных в сетях Ethernet   
 __|__
 --|--
-|
 Although physical layer standards vary quite a bit, other parts of the Ethernet standards work the same regardless of the type of physical Ethernet link.|Хотя стандарты физического уровня довольно сильно различаются, другие части стандартов Ethernet работают одинаково, независимо от типа физического канала Ethernet.
 Next, this final major section of this chapter looks at several protocols and rules that Ethernet uses regardless of the type of link.|Далее, в этом последнем основном разделе этой главы рассматриваются несколько протоколов и правил, которые использует Ethernet независимо от типа канала.
 In particular, this section examines the details of the Ethernet data-link layer protocol, plus how Ethernet nodes, switches, and hubs forward Ethernet frames through an Ethernet LAN.|В частности, в этом разделе подробно рассматривается протокол уровня канала передачи данных Ethernet, а также то, как узлы, коммутаторы и концентраторы Ethernet пересылают кадры Ethernet через локальную сеть Ethernet.
@@ -1157,7 +1115,6 @@ In particular, this section examines the details of the Ethernet data-link layer
 Протоколы передачи данных Ethernet   
 __|__
 --|--
-|
 One of the most significant strengths of the Ethernet family of protocols is that these protocols use the same data-link standard.|Одна из самых сильных сторон семейства протоколов Ethernet состоит в том, что в этих протоколах используется один и тот же стандарт передачи данных.
 In fact, the core parts of the data-link standard date back to the original Ethernet standards.|Фактически, основные части стандарта канала передачи данных восходят к исходным стандартам Ethernet.
 |
@@ -1176,7 +1133,6 @@ Because the Layer 3 packet rests inside the data portion of an Ethernet frame, 1
 Адресация Ethernet   
 __|__
 --|--
-|
 The source and destination Ethernet address fields play a huge role in how Ethernet LANs work.|Поля адресов Ethernet источника и назначения играют огромную роль в работе локальных сетей Ethernet.
 The general idea for each is relatively simple: the sending node puts its own address in the source address field and the intended Ethernet destination device’s address in the destination address field.|Общая идея для каждого из них относительно проста: отправляющий узел помещает свой собственный адрес в поле адреса источника и адрес предполагаемого устройства назначения Ethernet в поле адреса назначения.
 The sender transmits the frame, expecting that the Ethernet LAN, as a whole, will deliver the frame to that correct destination.|Отправитель передает кадр, ожидая, что локальная сеть Ethernet в целом доставит его в правильное место назначения.
@@ -1216,7 +1172,6 @@ Table 2-7 LAN MAC Address Terminology and Features Table end.|Таблица 2-7
 Идентификация протоколов сетевого уровня с помощью поля типа Ethernet   
 __|__
 --|--
-|
 While the Ethernet header’s address fields play an important and more obvious role in Ethernet LANs, the Ethernet Type field plays a much less obvious role.|В то время как поля адреса заголовка Ethernet играют важную и более очевидную роль в локальных сетях Ethernet, поле типа Ethernet играет гораздо менее очевидную роль.
 The Ethernet Type field, or EtherType, sits in the Ethernet data-link layer header, but its purpose is to directly help the network processing on routers and hosts.|Поле Ethernet Type, или EtherType, находится в заголовке уровня канала передачи данных Ethernet, но его цель состоит в том, чтобы напрямую помочь сетевой обработке на маршрутизаторах и хостах.
 Basically, the Type field identifies the type of network layer (Layer 3) packet that sits inside the Ethernet frame.|По сути, поле Type определяет тип пакета сетевого уровня (Layer 3), который находится внутри кадра Ethernet.
@@ -1240,7 +1195,6 @@ Figure 2-21 Use of Ethernet Type Field|Рисунок 2-21 Использова�
 Обнаружение ошибок с помощью FCS   
 __|__
 --|--
-|
 Ethernet also defines a way for nodes to find out whether a frame’s bits changed while crossing over an Ethernet link. (Usually, the bits could change because of some kind of electrical interference, or a bad NIC.) Ethernet, like most data-link protocols, uses a field in the datalink trailer for the purpose of error detection.|Ethernet также определяет способ, с помощью которого узлы узнают, изменились ли биты кадра при переходе по каналу Ethernet. (Обычно биты могут измениться из-за каких-либо электрических помех или неисправной сетевой карты.) Ethernet, как и большинство протоколов передачи данных, использует поле в трейлере канала передачи данных для обнаружения ошибок.
 |
 The Ethernet Frame Check Sequence (FCS) field in the Ethernet trailer—the only field in the Ethernet trailer—gives the receiving node a way to compare results with the sender, to discover whether errors occurred in the frame.|Поле Ethernet Frame Check Sequence (FCS) в трейлере Ethernet - единственное поле в трейлере Ethernet - дает принимающему узлу способ сравнить результаты с отправителем, чтобы определить, произошли ли ошибки в кадре.
@@ -1256,7 +1210,6 @@ Other protocols, notably TCP, recover the lost data by noticing that it is lost 
 Отправка кадров Ethernet с помощью коммутаторов и концентраторов   
 __|__
 --|--
-|
 Ethernet LANs behave slightly differently depending on whether the LAN has mostly modern devices, in particular, LAN switches instead of some older LAN devices called LAN hubs.|Локальные сети Ethernet ведут себя немного по-разному в зависимости от того, есть ли в локальной сети в основном современные устройства, в частности коммутаторы локальной сети вместо некоторых старых устройств локальной сети, называемых концентраторами локальной сети.
 Basically, the use of more modern switches allows the use of full-duplex logic, which is much faster and simpler than half-duplex logic, which is required when using hubs.|По сути, использование более современных коммутаторов позволяет использовать полнодуплексную логику, которая намного быстрее и проще, чем полудуплексная логика, которая требуется при использовании концентраторов.
 The final topic in this chapter looks at these basic differences.|В последней теме этой главы рассматриваются эти основные различия.
@@ -1264,7 +1217,6 @@ The final topic in this chapter looks at these basic differences.|В после�
 Отправка в современных локальных сетях Ethernet с использованием полного дуплекса   
 __|__
 --|--
-|
 Modern Ethernet LANs use a variety of Ethernet physical standards, but with standard Ethernet frames that can flow over any of these types of physical links.|В современных локальных сетях Ethernet используются различные физические стандарты Ethernet, но со стандартными кадрами Ethernet, которые могут передаваться по любому из этих типов физических каналов.
 Each individual link can run at a different speed, but each link allows the attached nodes to send the bits in the frame to the next node.|Каждая отдельная ссылка может работать с разной скоростью, но каждая ссылка позволяет подключенным узлам отправлять биты в кадре следующему узлу.
 They must work together to deliver the data from the sending Ethernet node to the destination node.|Они должны работать вместе, чтобы доставить данные от отправляющего узла Ethernet к узлу назначения.
@@ -1298,7 +1250,6 @@ For example, in Figure 2-22, PC1 and PC2 could send frames to each other simulta
 Использование полудуплекса с концентраторами LAN   
 __|__
 --|--
-|
 To understand the need for half-duplex logic in some cases, you have to understand a little about an older type of networking device called a LAN hub.|Чтобы понять необходимость полудуплексной логики в некоторых случаях, вам нужно немного узнать о более старом типе сетевого устройства, называемом концентратором LAN.
 When the IEEE first introduced 10BASE-T in 1990, Ethernet switches did not exist yet; instead, networks used a device called a LAN hub.|Когда IEEE впервые представил 10BASE-T в 1990 году, коммутаторов Ethernet еще не существовало; вместо этого в сети использовалось устройство, называемое концентратором LAN.
 Like a switch, a LAN hub provided a number of RJ-45 ports as a place to connect links to PCs; however, hubs used different rules for forwarding data.|Подобно коммутатору, концентратор локальной сети предоставляет несколько портов RJ-45 в качестве места для подключения каналов к ПК; однако концентраторы использовали другие правила пересылки данных.
@@ -1368,7 +1319,6 @@ Because of the full-duplex logic discussed in this section, a frame can be sent 
 Обзор главы   
 __|__
 --|--
-|
 One key to doing well on the exams is to perform repetitive spaced review sessions.|Один из ключей к успешной сдаче экзаменов - повторение повторных сессий с интервалом.
 Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.|Просмотрите материал этой главы, используя инструменты из книги или интерактивные инструменты для тех же материалов, которые можно найти на сопутствующем веб-сайте книги.
 Refer to the “Your Study Plan” element for more details.|Обратитесь к элементу «Ваш учебный план» для получения более подробной информации.
@@ -1382,7 +1332,6 @@ Review All the Key Topics Key Terms You Should Know Ethernet, IEEE, wired LAN, w
 Глава 3 Основы WAN и IP-маршрутизации   
 __|__
 --|--
-|
 This chapter covers the following exam topics:|В этой главе рассматриваются следующие экзаменационные темы:
 ###### 1.0 Network Fundamentals
 1.0 Основы сети   
@@ -1396,7 +1345,6 @@ This chapter covers the following exam topics:|В этой главе рассм
 1.2.d WAN   
 __|__
 --|--
-|
 This chapter introduces WANs and the various features of the TCP/IP network layer.|В этой главе представлены глобальные сети и различные функции сетевого уровня TCP / IP.
 |
 First, for WANs, note that the current CCNA blueprint does not examine WANs in detail as an end to themselves.|Во-первых, что касается глобальных сетей, обратите внимание, что текущая схема CCNA не рассматривает глобальные сети подробно как самоцель.
@@ -1410,7 +1358,6 @@ The final section of the chapter examines a few protocols other than IP that als
 «Знаю ли я это уже?» Викторина   
 __|__
 --|--
-|
 Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.|Пройдите тест (здесь или воспользуйтесь программой PTP), если вы хотите использовать оценку, чтобы решить, сколько времени потратить на эту главу.
 The letter answers are listed at the bottom of the page following the quiz.|Ответы на письма перечислены внизу страницы после викторины.
 Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.|Приложение C, которое можно найти как в конце книги, так и на сопутствующем веб-сайте, включает как ответы, так и пояснения.
@@ -1423,7 +1370,6 @@ Table 3-1 “Do I Know This Already?” Foundation Topics Section-to-Question Ma
 Глобальные сети   
 __|__
 --|--
-|
 IP Routing 3–6 Other Network Layer Functions 7 CHAPTER 3 1.|IP-маршрутизация 3–6 Другие функции сетевого уровня 7 ГЛАВА 3 1.
 Which of the following fields in the HDLC header used by Cisco routers does Cisco add, beyond the ISO standard HDLC?|Какие из следующих полей в заголовке HDLC, используемом маршрутизаторами Cisco, добавляет Cisco помимо стандартного ISO HDLC?
 |
@@ -1502,7 +1448,6 @@ Ethernet WAN links do use the same data-link protocols as Ethernet LANs, but the
 WAN с выделенной линией   
 __|__
 --|--
-|
 To connect LANs using a WAN, the internetwork uses a router connected to each LAN, with a WAN link between the routers.|Для подключения локальных сетей с помощью глобальной сети межсетевое взаимодействие использует маршрутизатор, подключенный к каждой локальной сети, с каналом глобальной сети между маршрутизаторами.
 First, the enterprise’s network engineer would order some kind of WAN link.|Во-первых, сетевой инженер предприятия заказывал какое-то соединение WAN.
 A router at each site connects to both the WAN link and the LAN, as shown in Figure 3-1.|Маршрутизатор на каждом сайте подключается как к каналу WAN, так и к локальной сети, как показано на рисунке 3-1.
@@ -1513,7 +1458,6 @@ Figure 3-1 Small Enterprise Network with One Leased Line This section begins by 
 Физические характеристики арендованных линий   
 __|__
 --|--
-|
 The leased line service delivers bits in both directions, at a predetermined speed, using fullduplex logic.|Услуга выделенной линии передает биты в обоих направлениях с заданной скоростью с использованием полнодуплексной логики.
 In fact, conceptually it acts as if you had a full-duplex crossover Ethernet link between two routers, as shown in Figure 3-2.|Фактически, концептуально это действует так, как если бы между двумя маршрутизаторами был установлен полнодуплексный перекрестный канал Ethernet, как показано на рисунке 3-2.
 The leased line uses two pairs of wires, one pair for each direction of sending data, which allows full-duplex operation.|В выделенной линии используются две пары проводов, по одной паре для каждого направления передачи данных, что позволяет работать в полнодуплексном режиме.
@@ -1547,7 +1491,6 @@ However, for the purposes of CCNA, you can think of any serial link as a point-t
 Подробная информация о канале передачи данных HDLC по выделенным линиям   
 __|__
 --|--
-|
 A leased line provides a Layer 1 service.|Выделенная линия предоставляет услугу уровня 1.
 In other words, it promises to deliver bits between the devices connected to the leased line.|Другими словами, он обещает передавать биты между устройствами, подключенными к выделенной линии.
 However, the leased line itself does not define a data-link layer protocol to be used on the leased line.|Однако сама выделенная линия не определяет протокол уровня канала передачи данных, который будет использоваться на выделенной линии.
@@ -1579,7 +1522,6 @@ Figure 3-4 HDLC Framing|Рисунок 3-4 Кадрирование HDLC
 Как маршрутизаторы используют канал передачи данных WAN   
 __|__
 --|--
-|
 Leased lines connect to routers, and routers focus on delivering packets to a destination host.|Выделенные линии подключаются к маршрутизаторам, и маршрутизаторы сосредоточены на доставке пакетов на хост назначения.
 |
 However, routers physically connect to both LANs and WANs, with those LANs and WANs requiring that data be sent inside data-link frames.|Однако маршрутизаторы физически подключаются как к локальным, так и к глобальным сетям, причем для этих локальных и глобальных сетей требуется, чтобы данные передавались внутри кадров канала передачи данных.
@@ -1623,7 +1565,6 @@ New faster WAN technology has been replacing leased lines for a long time, inclu
 Ethernet как технология WAN   
 __|__
 --|--
-|
 For the first several decades of the existence of Ethernet, Ethernet was only appropriate for LANs. The restrictions on cable lengths and devices might allow a LAN that stretched a kilometer or two, to support a campus LAN, but that was the limit.|В течение первых нескольких десятилетий существования Ethernet Ethernet подходил только для локальных сетей. Ограничения на длину кабелей и устройства могут позволить ЛВС протяженностью один-два километра поддерживать ЛВС кампуса, но это был предел.
 |
 As time passed, the IEEE improved Ethernet standards in ways that made Ethernet a reasonable WAN technology.|Со временем IEEE улучшил стандарты Ethernet, сделав Ethernet разумной технологией WAN.
@@ -1642,7 +1583,6 @@ Inside the SP’s network, the SP uses any technology that it wants to create th
 Сети Ethernet WAN, которые создают сервис уровня 2   
 __|__
 --|--
-|
 Ethernet WAN services include a variety of specific services that vary in ways that change how routers use those services.|Услуги Ethernet WAN включают в себя множество конкретных услуг, которые различаются способами, которые меняют способ использования этих услуг маршрутизаторами.
 However, for the purposes of CCNA, you just need to understand the most basic Ethernet WAN service, one that works much like an Ethernet crossover cable—just over a WAN. In other words:|Однако для целей CCNA вам просто нужно понять самую базовую услугу Ethernet WAN, которая работает во многом как перекрестный кабель Ethernet - только через WAN. Другими словами:
 ###### Logically, behaves like a point-to-point connection between two routers
@@ -1651,7 +1591,6 @@ However, for the purposes of CCNA, you just need to understand the most basic Et
 Физически ведет себя так, как если бы между двумя маршрутизаторами существовал физический оптоволоконный канал Ethernet.   
 __|__
 --|--
-|
 NOTE For perspective about the broad world of the service provider network shown in Figure 3-7, look for more information about the Cisco CCNA, CCNP Service Provider, and CCIE Service Provider certifications.|ПРИМЕЧАНИЕ. Чтобы получить представление о широком мире сети поставщиков услуг, показанной на рис. 3-7, поищите дополнительную информацию о сертификатах Cisco CCNA, CCNP Service Provider и CCIE Service Provider.
 See www.cisco.com/go/certifications for more details.|См. Www.cisco.com/go/certifications для получения дополнительных сведений.
 |
@@ -1676,7 +1615,6 @@ Figure 3-8 EoMPLS Acting Like a Simple Ethernet Link Between Two Routers|Рис�
 Как маршрутизаторы маршрутизируют IP-пакеты с помощью эмуляции Ethernet   
 __|__
 --|--
-|
 WANs, by their very nature, give IP routers a way to forward IP packets from a LAN at one site, over the WAN, and to another LAN at another site.|Глобальные сети по самой своей природе дают IP-маршрутизаторам возможность пересылать IP-пакеты из локальной сети на одном сайте, через глобальную сеть и в другую локальную сеть на другом сайте.
 Routing over an EoMPLS WAN link still uses the WAN like a WAN, as a way to forward IP packets from one site to another.|Маршрутизация по каналу EoMPLS WAN по-прежнему использует WAN, как WAN, как способ пересылки IP-пакетов от одного сайта к другому.
 |
@@ -1712,7 +1650,6 @@ The rest of the chapter turns our attention to a closer look at IP routing.|Ос
 IP-маршрутизация   
 __|__
 --|--
-|
 Many protocol models have existed over the years, but today the TCP/IP model dominates.|Многие модели протоколов существовали на протяжении многих лет, но сегодня модель TCP / IP доминирует.
 |
 And at the network layer of TCP/IP, two options exist for the main protocol around which all other network layer functions revolve: IP version 4 (IPv4) and IP version 6 (IPv6).|А на сетевом уровне TCP / IP существует два варианта основного протокола, вокруг которого вращаются все другие функции сетевого уровня: IP версии 4 (IPv4) и IP версии 6 (IPv6).
@@ -1735,7 +1672,6 @@ This section closes by looking at the role of IP routing protocols, which give r
 Логика маршрутизации (пересылки) сетевого уровня   
 __|__
 --|--
-|
 Routers and end-user computers (called hosts in a TCP/IP network) work together to perform IP routing.|Маршрутизаторы и компьютеры конечных пользователей (называемые хостами в сети TCP / IP) работают вместе для выполнения IP-маршрутизации.
 The host operating system (OS) has TCP/IP software, including the software that implements the network layer.|Операционная система хоста (ОС) имеет программное обеспечение TCP / IP, включая программное обеспечение, реализующее сетевой уровень.
 Hosts use that software to choose where to send IP packets, often to a nearby router.|Хосты используют это программное обеспечение, чтобы выбирать, куда отправлять IP-пакеты, часто на ближайший маршрутизатор.
@@ -1752,7 +1688,6 @@ At other times, it refers to routing protocols, specifically how routing protoco
 Логика пересылки хоста: отправьте пакет маршрутизатору по умолчанию   
 __|__
 --|--
-|
 In this example, PC1 does some basic analysis and then chooses to send the IP packet to the router so that the router will forward the packet.|В этом примере ПК1 выполняет базовый анализ, а затем решает отправить IP-пакет на маршрутизатор, чтобы маршрутизатор пересылал пакет.
 PC1 analyzes the destination address and realizes that PC2’s address (150.150.4.10) is not on the same LAN as PC1. So PC1’s logic tells it to send the packet to a device whose job it is to know where to route data: a nearby router, on the same LAN, called PC1’s default router.|ПК1 анализирует адрес назначения и понимает, что адрес ПК2 (150.150.4.10) не находится в той же локальной сети, что и ПК1. Таким образом, логика ПК1 предписывает ему отправить пакет устройству, задача которого - знать, куда направлять данные: ближайший маршрутизатор в той же локальной сети, который называется маршрутизатором ПК1 по умолчанию.
 |
@@ -1765,7 +1700,6 @@ NOTE The default router is also referred to as the default gateway.|ПРИМЕЧ
 Логика R1 и R2: маршрутизация данных по сети   
 __|__
 --|--
-|
 All routers use the same general process to route the packet.|Все маршрутизаторы используют один и тот же общий процесс для маршрутизации пакета.
 Each router keeps an IP routing table.|Каждый маршрутизатор ведет таблицу IP-маршрутизации.
 This table lists IP address groupings, called IP networks and IP subnets.|В этой таблице перечислены группы IP-адресов, называемые IP-сетями и IP-подсетями.
@@ -1785,7 +1719,6 @@ and directs each packet over the correct next LAN or WAN link (the equivalent of
 Логика R3: доставка данных в конечный пункт назначения   
 __|__
 --|--
-|
 The final router in the path, R3, uses almost the same logic as R1 and R2, but with one minor difference.|Последний маршрутизатор на пути, R3, использует почти ту же логику, что и R1 и R2, но с одним незначительным отличием.
 R3 needs to forward the packet directly to PC2, not to some other router.|R3 необходимо переслать пакет непосредственно на ПК2, а не на какой-либо другой маршрутизатор.
 On the surface, that difference seems insignificant.|На первый взгляд эта разница кажется незначительной.
@@ -1794,7 +1727,6 @@ In the next section, when you read about how the network layer uses LANs and WAN
 Как при маршрутизации на сетевом уровне используются локальные и глобальные сети   
 __|__
 --|--
-|
 While the network layer routing logic ignores the physical transmission details, the bits still have to be transmitted.|Хотя логика маршрутизации сетевого уровня игнорирует физические детали передачи, биты все же должны быть переданы.
 To do that work, the network layer logic in a host or router must hand off the packet to the data-link layer protocols, which, in turn, ask the physical layer to actually send the data.|Для выполнения этой работы логика сетевого уровня в хосте или маршрутизаторе должна передать пакет протоколам канального уровня, которые, в свою очередь, запрашивают физический уровень для фактической отправки данных.
 The data-link layer adds the appropriate header and trailer to the packet, creating a frame, before sending the frames over each physical network.|Уровень канала передачи данных добавляет к пакету соответствующий заголовок и трейлер, создавая кадр, прежде чем отправлять кадры по каждой физической сети.
@@ -1802,7 +1734,7 @@ The data-link layer adds the appropriate header and trailer to the packet, creat
 The routing process forwards the network layer packet from end to end through the network, while each data-link frame only takes a smaller part of the trip.|В процессе маршрутизации пакет сетевого уровня пересылается из конца в конец по сети, в то время как каждый кадр канала данных занимает лишь меньшую часть пути.
 Each successive datalink layer frame moves the packet to the next device that thinks about network layer logic.|Каждый последующий кадр уровня канала данных перемещает пакет к следующему устройству, которое учитывает логику сетевого уровня.
 |
-In short, the network layer thinks about the bigger view of the goal, like “Send this packet to the specified next router or host…,” while the data-link layer thinks about the specifics, like “Encapsulate the packet in a data-link frame and transmit it.” The following list summarizes the major steps in a router’s internal network layer routing for each packet beginning with the a frame arriving in a router interface:|Короче говоря, сетевой уровень думает о более широком видении цели, например, «Отправить этот пакет указанному следующему маршрутизатору или хосту…», в ​​то время как уровень канала данных думает о деталях, например «Инкапсулировать пакет в данные- связать кадр и передать его ». В следующем списке перечислены основные этапы внутренней маршрутизации сетевого уровня маршрутизатора для каждого пакета, начиная с кадра, поступающего в интерфейс маршрутизатора:
+In short, the network layer thinks about the bigger view of the goal, like “Send this packet to the specified next router or host…,” while the data-link layer thinks about the specifics, like “Encapsulate the packet in a data-link frame and transmit it.” The following list summarizes the major steps in a router’s internal network layer routing for each packet beginning with the a frame arriving in a router interface:|Короче говоря, сетевой уровень думает о более широком видении цели, например, «Отправить этот пакет указанному следующему маршрутизатору или хосту…», в ??то время как уровень канала данных думает о деталях, например «Инкапсулировать пакет в данные- связать кадр и передать его ». В следующем списке перечислены основные этапы внутренней маршрутизации сетевого уровня маршрутизатора для каждого пакета, начиная с кадра, поступающего в интерфейс маршрутизатора:
 |
 Step 1.|Шаг 1.
 Use the data-link Frame Check Sequence (FCS) field to ensure that the frame had no errors; if errors occurred, discard the frame.|Используйте поле «Последовательность проверки кадра (FCS) канала передачи данных», чтобы убедиться, что в кадре нет ошибок; если произошли ошибки, отбросьте фрейм.
@@ -1855,10 +1787,9 @@ An example of how the router determines which data-link address to use is the IP
 Как IP-адресация помогает IP-маршрутизации   
 __|__
 --|--
-|
 IP defines network layer addresses that identify any host or router interface that connects to a TCP/IP network.|IP определяет адреса сетевого уровня, которые идентифицируют любой интерфейс хоста или маршрутизатора, который подключается к сети TCP / IP.
 The idea basically works like a postal address: Any interface that expects to receive IP packets needs an IP address, just like you need a postal address before receiving mail from the postal service.|Идея в основном работает как почтовый адрес: любому интерфейсу, который ожидает получения IP-пакетов, нужен IP-адрес, точно так же, как вам нужен почтовый адрес перед получением почты от почтовой службы.
-This next short topic introduces the idea of IP networks and subnets, which are the groups of addresses defined by IP.|В следующем коротком разделе представлена ​​идея IP-сетей и подсетей, которые представляют собой группы адресов, определяемые IP.
+This next short topic introduces the idea of IP networks and subnets, which are the groups of addresses defined by IP.|В следующем коротком разделе представлена ??идея IP-сетей и подсетей, которые представляют собой группы адресов, определяемые IP.
 |
 NOTE IP defines the word network to mean a very specific concept.|ПРИМЕЧАНИЕ IP определяет слово «сеть» как очень конкретное понятие.
 To avoid confusion when writing about IP addressing, this book (and others) often avoids using the term network for other uses.|Чтобы избежать путаницы при написании об IP-адресации, в этой (и других) книгах часто избегают использования термина «сеть» для других целей.
@@ -1867,7 +1798,6 @@ In particular, this book uses the term internetwork to refer more generally to a
 Правила для групп IP-адресов (сетей и подсетей)   
 __|__
 --|--
-|
 TCP/IP groups IP addresses together so that IP addresses used on the same physical network are part of the same group.|TCP / IP группирует IP-адреса вместе, так что IP-адреса, используемые в одной физической сети, являются частью одной группы.
 IP calls these address groups an IP network or an IP subnet.|IP называет эти группы адресов IP-сетью или IP-подсетью.
 |
@@ -1888,7 +1818,6 @@ For example, Figures 3-10 and 3-11 could have used the following conventions:|Н
 Хосты в нижнем Ethernet: адреса начинаются с 150.150.4   
 __|__
 --|--
-|
 From the perspective of IP routing, the grouping of IP addresses means that the routing table can be much smaller.|С точки зрения IP-маршрутизации группировка IP-адресов означает, что таблица маршрутизации может быть намного меньше.
 A router can list one routing table entry for each IP network or subnet, instead of one entry for every single IP address.|Маршрутизатор может указать одну запись в таблице маршрутизации для каждой IP-сети или подсети вместо одной записи для каждого IP-адреса.
 |
@@ -1899,13 +1828,11 @@ However, the brief version of two of the foundational rules of subnetting can be
 Два IP-адреса, не отделенных друг от друга маршрутизатором, должны быть в одной группе.   
 __|__
 --|--
-|
 (subnet).|(подсеть).
 ###### Two IP addresses, separated from each other by at least one router, must be in different
 Два IP-адреса, отделенные друг от друга хотя бы одним маршрутизатором, должны находиться в разных   
 __|__
 --|--
-|
 groups (subnets).|группы (подсети).
 |
 It’s similar to the USPS ZIP code system and how it requires local governments to assign addresses to new buildings.|Он похож на систему почтовых индексов USPS и требует от местных органов власти присваивать адреса новым зданиям.
@@ -1917,7 +1844,6 @@ ZIP code.|Индекс.
 Заголовок IP   
 __|__
 --|--
-|
 The routing process also makes use of the IPv4 header, as shown in Figure 3-12.|В процессе маршрутизации также используется заголовок IPv4, как показано на рисунке 3-12.
 The header lists a 32-bit source IP address, as well as a 32-bit destination IP address.|В заголовке указывается 32-битный IP-адрес источника, а также 32-битный IP-адрес назначения.
 The header, of course, has other fields, a few of which matter for other discussions in this book.|В заголовке, конечно же, есть и другие поля, некоторые из которых имеют значение для других обсуждений в этой книге.
@@ -1929,7 +1855,6 @@ Figure 3-12 IPv4 Header, Organized as 4 Bytes Wide for a Total of 20 Bytes|Ри�
 Как протоколы IP-маршрутизации помогают IP-маршрутизации   
 __|__
 --|--
-|
 For routing logic to work on both hosts and routers, each host and router needs to know something about the TCP/IP internetwork.|Чтобы логика маршрутизации работала как на хостах, так и на маршрутизаторах, каждый хост и маршрутизатор должны кое-что знать об объединенной сети TCP / IP.
 Hosts need to know the IP address of their default router so that hosts can send packets to remote destinations.|Хосты должны знать IP-адрес своего маршрутизатора по умолчанию, чтобы хосты могли отправлять пакеты удаленным адресатам.
 Routers, however, need to know routes so they forward packets to each and every reachable IP network and IP subnet.|Однако маршрутизаторам необходимо знать маршруты, чтобы они пересылали пакеты в каждую доступную IP-сеть и IP-подсеть.
@@ -1985,7 +1910,6 @@ The route lists R1’s own Serial0 as the outgoing interface and R2 as the next-
 Другие функции сетевого уровня   
 __|__
 --|--
-|
 The TCP/IP network layer defines many functions beyond IP. Sure, IP plays a huge role in networking today, defining IP addressing and IP routing.|Сетевой уровень TCP / IP определяет множество функций помимо IP. Несомненно, IP сегодня играет огромную роль в сетевых технологиях, определяя IP-адресацию и IP-маршрутизацию.
 However, other protocols and standards, defined in other Requests For Comments (RFC), play an important role for network layer functions as well.|Однако другие протоколы и стандарты, определенные в других запросах на комментарии (RFC), также играют важную роль для функций сетевого уровня.
 For example, routing protocols like Open Shortest Path First (OSPF)|Например, протоколы маршрутизации, такие как Open Shortest Path First (OSPF)
@@ -2005,7 +1929,6 @@ The three topics are|Три темы
 Использование имен и системы доменных имен   
 __|__
 --|--
-|
 Can you imagine a world in which every time you used an application, you had to refer to it by IP address?|Можете ли вы представить себе мир, в котором каждый раз, когда вы использовали приложение, вам приходилось обращаться к нему по IP-адресу?
 Instead of using easy names like google.com or facebook.com, you would have to remember and type IP addresses, like 64.233.177.100. (At press time, 64.233.177.100 was an address used by Google, and you could reach Google’s website by typing that address in a browser.) Certainly, asking users to remember IP addresses would not be user friendly and could drive some people away from using computers at all.|Вместо использования простых имен, таких как google.com или facebook.com, вам нужно запомнить и ввести IP-адреса, например 64.233.177.100. (На момент публикации 64.233.177.100 был адресом, используемым Google, и вы могли попасть на веб-сайт Google, набрав этот адрес в браузере.) Конечно, просить пользователей запомнить IP-адреса было бы неудобно для пользователя и могло бы оттолкнуть некоторых людей от используя компьютеры вообще.
 |
@@ -2026,7 +1949,6 @@ At Step 3, PC11 can now send an IP packet to destination address|На шаге 3
 10.1.2.3, адрес, используемый Server1.   
 __|__
 --|--
-|
 Figure 3-14 Basic DNS Name Resolution Request Note that the example in Figure 3-14 shows a cloud for the TCP/IP network because the details of the network, including routers, do not matter to the name resolution process.|Рисунок 3-14 Базовый запрос разрешения имени DNS Обратите внимание, что в примере на рисунке 3-14 показано облако для сети TCP / IP, поскольку детали сети, включая маршрутизаторы, не имеют значения для процесса разрешения имени.
 |
 Routers treat the DNS messages just like any other IP packet, routing them based on the destination IP address.|Маршрутизаторы обрабатывают сообщения DNS так же, как любой другой IP-пакет, маршрутизируя их на основе IP-адреса назначения.
@@ -2041,7 +1963,6 @@ So, the DNS servers of the world work together, forwarding queries to each other
 Протокол разрешения адресов   
 __|__
 --|--
-|
 As discussed in depth throughout this chapter, IP routing logic requires that hosts and routers encapsulate IP packets inside data-link layer frames.|Как подробно обсуждается в этой главе, логика IP-маршрутизации требует, чтобы хосты и маршрутизаторы инкапсулировали IP-пакеты внутри кадров уровня канала данных.
 For Ethernet interfaces, how does a router know what MAC address to use for the destination?|Для интерфейсов Ethernet, как маршрутизатор узнает, какой MAC-адрес использовать для назначения?
 It uses ARP.|Он использует ARP.
@@ -2073,7 +1994,6 @@ Figure 3-15 Sample ARP Process NOTE You can see the contents of the ARP cache on
 ICMP Echo и команда ping   
 __|__
 --|--
-|
 After you have implemented a TCP/IP internetwork, you need a way to test basic IP connectivity without relying on any applications to be working.|После того, как вы внедрили объединенную сеть TCP / IP, вам понадобится способ проверить базовое IP-соединение, не полагаясь на какие-либо работающие приложения.
 The primary tool for testing basic network connectivity is the ping command.|Основным инструментом для проверки базового сетевого подключения является команда ping.
 |
@@ -2090,7 +2010,6 @@ ICMP defines many messages that devices can use to help manage and control the I
 Обзор главы   
 __|__
 --|--
-|
 The “Your Study Plan” element, just before Chapter 1, discusses how you should study and practice the content and skills for each chapter before moving on to the next chapter.|Элемент «Ваш учебный план», расположенный непосредственно перед главой 1, обсуждает, как вы должны изучать и практиковать содержание и навыки для каждой главы, прежде чем переходить к следующей главе.
 That element introduces the tools used here at the end of each chapter.|Этот элемент знакомит с инструментами, используемыми здесь, в конце каждой главы.
 If you haven’t already done so, take a few minutes to read that section.|Если вы еще этого не сделали, уделите несколько минут, чтобы прочитать этот раздел.
@@ -2109,7 +2028,6 @@ leased line, wide-area network (WAN), telco, serial interface, HDLC, Ethernet ov
 Часть I Обзор   
 __|__
 --|--
-|
 Keep track of your part review progress with the checklist shown in Table P1-1.|Следите за ходом проверки деталей с помощью контрольного списка, приведенного в Таблице P1-1.
 Details on each task follow the table.|Подробности по каждой задаче приведены в таблице.
 |
