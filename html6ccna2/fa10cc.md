@@ -1,13 +1,8 @@
 __|__
 --|--
 Building Physical Ethernet LANs with UTP 3–4 Building Physical Ethernet LANs with Fiber 5 Sending Data in Ethernet Networks 6–9 1.|Создание физических локальных сетей Ethernet с использованием UTP 3–4 Создание физических локальных сетей Ethernet с использованием оптоволокна 5 Отправка данных в сетях Ethernet 6–9 1.
-In the LAN for a small office, some user devices connect to the LAN using a cable, while others connect using wireless technology (and no cable).|В локальной сети для небольшого офиса некоторые пользовательские устройства подключаются к локальной сети с помощью кабеля, а другие подключаются с помощью беспроводной технологии (без кабеля).
-Which of the following is true regarding the use of Ethernet in this LAN?|Что из следующего верно относительно использования Ethernet в этой локальной сети?
-a. Only the devices that use cables are using Ethernet.|а. Только устройства, которые используют кабели, используют Ethernet.
-b. Only the devices that use wireless are using Ethernet.|б. Только устройства, использующие беспроводную связь, используют Ethernet.
-c. Both the devices using cables and those using wireless are using Ethernet.|c. И устройства, использующие кабели, и устройства, использующие беспроводную связь, используют Ethernet.
 d. None of the devices are using Ethernet.|d. Ни одно из устройств не использует Ethernet.
-2. Which of the following Ethernet standards defines Gigabit Ethernet over UTP cabling?|2. Какой из следующих стандартов Ethernet определяет кабели Gigabit Ethernet через UTP?
+2 Which of the following Ethernet standards defines Gigabit Ethernet over UTP cabling?|2 Какой из следующих стандартов Ethernet определяет кабели Gigabit Ethernet через UTP?
 a. 10GBASE-T b. 100BASE-T c. 1000BASE-T d.|а. 10GBASE-T б. 100BASE-T c. 1000BASE-T d.
 None of the other answers is correct.|Ни один из других ответов не верен.
 3. Which of the following is true about Ethernet crossover cables for Fast Ethernet?|3. Что из следующего верно относительно кроссоверных кабелей Ethernet для Fast Ethernet?
