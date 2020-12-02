@@ -498,23 +498,23 @@ b. It compares the unicast source address to the bridging, or MAC address, table
 c. It forwards the frame out all interfaces in the same VLAN except for the incoming interface.|c. Он пересылает кадр на все интерфейсы в той же VLAN, за исключением входящего интерфейса.
 d. It compares the destination IP address to the destination MAC address.|d. Он сравнивает IP-адрес назначения с MAC-адресом назначения.
 e. It compares the frame’s incoming interface to the source MAC entry in the MAC address table.|е. Он сравнивает входящий интерфейс кадра с записью MAC-адреса источника в таблице MAC-адресов.
-2. Which of the following statements describes part of the process of how a LAN switch decides to forward a frame destined for a broadcast MAC address?|2. Какое из следующих утверждений описывает часть процесса принятия коммутатором локальной сети решения о пересылке кадра, предназначенного для широковещательного MAC-адреса?
+2 Which of the following statements describes part of the process of how a LAN switch decides to forward a frame destined for a broadcast MAC address?|2 Какое из следующих утверждений описывает часть процесса принятия коммутатором локальной сети решения о пересылке кадра, предназначенного для широковещательного MAC-адреса?
 a. It compares the unicast destination address to the bridging, or MAC address, table.|а. Он сравнивает адрес назначения одноадресной рассылки с таблицей мостовых или MAC-адресов.
 b. It compares the unicast source address to the bridging, or MAC address, table.|б. Он сравнивает адрес источника одноадресной передачи с таблицей мостовых или MAC-адресов.
 c. It forwards the frame out all interfaces in the same VLAN except for the incoming interface.|c. Он пересылает кадр на все интерфейсы в той же VLAN, за исключением входящего интерфейса.
 d. It compares the destination IP address to the destination MAC address.|d. Он сравнивает IP-адрес назначения с MAC-адресом назначения.
 e. It compares the frame’s incoming interface to the source MAC entry in the MAC address table.|е. Он сравнивает входящий интерфейс кадра с записью MAC-адреса источника в таблице MAC-адресов.
-3. Which of the following statements best describes what a switch does with a frame destined for an unknown unicast address?|3. Какое из следующих утверждений лучше всего описывает, что коммутатор делает с кадром, предназначенным для неизвестного одноадресного адреса?
+3 Which of the following statements best describes what a switch does with a frame destined for an unknown unicast address?|3 Какое из следующих утверждений лучше всего описывает, что коммутатор делает с кадром, предназначенным для неизвестного одноадресного адреса?
 a. It forwards out all interfaces in the same VLAN except for the incoming interface.|а. Он перенаправляет все интерфейсы в той же VLAN, за исключением входящего интерфейса.
 b. It forwards the frame out the one interface identified by the matching entry in the MAC address table.|б. Он пересылает кадр через один интерфейс, идентифицированный соответствующей записью в таблице MAC-адресов.
 c. It compares the destination IP address to the destination MAC address.|c. Он сравнивает IP-адрес назначения с MAC-адресом назначения.
 d. It compares the frame’s incoming interface to the source MAC entry in the MAC address table.|d. Он сравнивает входящий интерфейс кадра с записью MAC-адреса источника в таблице MAC-адресов.
-4. Which of the following comparisons does a switch make when deciding whether a new MAC address should be added to its MAC address table?|4. Какое из следующих сравнений делает коммутатор при принятии решения о добавлении нового MAC-адреса в его таблицу MAC-адресов?
+4 Which of the following comparisons does a switch make when deciding whether a new MAC address should be added to its MAC address table?|4 Какое из следующих сравнений делает коммутатор при принятии решения о добавлении нового MAC-адреса в его таблицу MAC-адресов?
 a. It compares the unicast destination address to the bridging, or MAC address, table.|а. Он сравнивает адрес назначения одноадресной рассылки с таблицей мостовых или MAC-адресов.
 b. It compares the unicast source address to the bridging, or MAC address, table.|б. Он сравнивает адрес источника одноадресной передачи с таблицей мостовых или MAC-адресов.
 c. It compares the VLAN ID to the bridging, or MAC address, table.|c. Он сравнивает идентификатор VLAN с таблицей моста или MAC-адресов.
 d. It compares the destination IP address’s ARP cache entry to the bridging, or MAC address, table.|d. Он сравнивает запись кэша ARP IP-адреса назначения с таблицей мостовых или MAC-адресов.
-5. A Cisco Catalyst switch has 24 10/100 ports, numbered 0/1 through 0/24.|5. Коммутатор Cisco Catalyst имеет 24 порта 10/100, пронумерованных от 0/1 до 0/24.
+5 A Cisco Catalyst switch has 24 10/100 ports, numbered 0/1 through 0/24.|5 Коммутатор Cisco Catalyst имеет 24 порта 10/100, пронумерованных от 0/1 до 0/24.
 Ten PCs connect to the 10 lowest numbered ports, with those PCs working and sending data over the network.|Десять компьютеров подключаются к 10 портам с наименьшими номерами, и эти компьютеры работают и отправляют данные по сети.
 The other ports are not connected to any device.|Остальные порты не подключены ни к какому устройству.
 Which of the following answers lists facts displayed by the show interfaces status command?|В каком из следующих ответов перечислены факты, отображаемые командой show interfaces status?
@@ -522,7 +522,7 @@ a. Port Ethernet 0/1 is in a connected state.|а. Порт Ethernet 0/1 нахо
 b. Port Fast Ethernet 0/11 is in a connected state.|б. Порт Fast Ethernet 0/11 находится в подключенном состоянии.
 c. Port Fast Ethernet 0/5 is in a connected state.|c. Порт Fast Ethernet 0/5 находится в подключенном состоянии.
 d. Port Ethernet 0/15 is in a notconnected state.|d. Порт Ethernet 0/15 находится в неподключенном состоянии.
-6. Consider the following output from a Cisco Catalyst switch:|6. Рассмотрим следующие выходные данные коммутатора Cisco Catalyst:
+6 Consider the following output from a Cisco Catalyst switch:|6 Рассмотрим следующие выходные данные коммутатора Cisco Catalyst:
 SW1# show mac address-table dynamic Mac Address Table|SW1 # показать таблицу MAC-адресов динамическую таблицу Mac-адресов
 ------------------------------------------- 
 Порты типа Vlan Mac-адреса   
@@ -555,7 +555,7 @@ The LAN switch has one primary job: to forward frames to the correct destination
 And to achieve that goal, switches use logic—logic based on the source and destination MAC address in each frame’s Ethernet header.|И для достижения этой цели коммутаторы используют логику - логику, основанную на MAC-адресах источника и назначения в заголовке Ethernet каждого кадра.
 LAN switches receive Ethernet frames and then make a switching decision: either forward the frame out some other ports or ignore the frame.|Коммутаторы LAN получают кадры Ethernet, а затем принимают решение о коммутации: либо перенаправить кадр на другие порты, либо игнорировать кадр.
 To accomplish this primary mission, switches perform three actions:|Для выполнения этой основной задачи коммутаторы выполняют три действия:
-1. Deciding when to forward a frame or when to filter (not forward) a frame, based on the destination MAC address 2.|1. Решение, когда пересылать кадр или когда фильтровать (не пересылать) кадр, на основе MAC-адреса назначения 2.
+1 Deciding when to forward a frame or when to filter (not forward) a frame, based on the destination MAC address 2.|1 Решение, когда пересылать кадр или когда фильтровать (не пересылать) кадр, на основе MAC-адреса назначения 2.
 Preparing to forward frames by learning MAC addresses by examining the source MAC address of each frame received by the switch 3.|Подготовка к пересылке кадров путем изучения MAC-адресов путем изучения исходного MAC-адреса каждого кадра, полученного коммутатором 3.
 Preparing to forward only one copy of the frame to the destination by creating a (Layer 2) loop-free environment with other switches by using Spanning Tree Protocol (STP)|Подготовка к пересылке только одной копии кадра в пункт назначения путем создания среды (уровня 2) без петель с другими коммутаторами с использованием протокола связующего дерева (STP)
 The first action is the switch’s primary job, whereas the other two items are overhead functions.|Первое действие - это основная задача коммутатора, а два других элемента - служебные.
@@ -931,7 +931,7 @@ a. The ip address 172.16.2.250 255.255.255.0 command in interface vlan 1 configu
 b. The ip address 172.16.2.250 255.255.255.0 command in interface vlan 2 configuration mode.|б. Команда ip address 172.16.2.250 255.255.255.0 в режиме настройки интерфейса vlan 2.
 c. The ip default-gateway 172.16.2.254 command in global configuration mode.|c. Команда ip default-gateway 172.16.2.254 в режиме глобальной конфигурации.
 d. The switch cannot support SSH because all its ports connect to VLAN 2, and the IP address must be configured on interface VLAN 1.|d. Коммутатор не может поддерживать SSH, потому что все его порты подключаются к VLAN 2, а IP-адрес должен быть настроен на интерфейсе VLAN 1.
-6. Which of the following line subcommands tells a switch to wait until a show command’s output has completed before displaying log messages on the screen?|6. Какая из следующих подкоманд в строке указывает коммутатору дождаться завершения вывода команды show перед отображением сообщений журнала на экране?
+6 Which of the following line subcommands tells a switch to wait until a show command’s output has completed before displaying log messages on the screen?|6 Какая из следующих подкоманд в строке указывает коммутатору дождаться завершения вывода команды show перед отображением сообщений журнала на экране?
 a. logging synchronous b. no ip domain-lookup c. exec-timeout 0 0 d. history size 15 Foundation Topics Securing the Switch CLI By default, a Cisco Catalyst switch allows anyone to connect to the console port, access user mode, and then move on to enable and configuration modes without any kind of security.|а. регистрация синхронная b. нет IP-поиска домена c. exec-timeout 0 0 d. размер истории 15 Основные темы Защита интерфейса командной строки коммутатора По умолчанию коммутатор Cisco Catalyst позволяет любому подключиться к консольному порту, получить доступ к пользовательскому режиму, а затем перейти к включению и настройке режимов без какой-либо защиты.
 That default makes sense, given that if you can get to the console port of the switch, you already have control over the switch physically.|Это значение по умолчанию имеет смысл, учитывая, что если вы можете получить доступ к консольному порту коммутатора, у вас уже есть физический контроль над коммутатором.
 However, everyone needs to operate switches remotely, and the first step in that process is to secure the switch so that only the appropriate users can access the switch command-line interface (CLI).|Однако всем необходимо управлять коммутаторами удаленно, и первым шагом в этом процессе является защита коммутатора, чтобы только соответствующие пользователи могли получить доступ к интерфейсу командной строки коммутатора (CLI).
@@ -1328,7 +1328,7 @@ b. The show interfaces fa0/1 command will list the interface with two status cod
 c. The show interfaces fa0/1 command will list the interface with two status codes of up and down.|c. Команда show interfaces fa0 / 1 выведет список интерфейсов с двумя кодами состояния: up и down.
 d. The interface cannot currently be used to forward frames.|d. В настоящее время интерфейс не может использоваться для пересылки кадров.
 e. The interface can currently be used to forward frames.|е. В настоящее время интерфейс можно использовать для пересылки кадров.
-5. Switch SW1 uses its Gigabit 0/1 interface to connect to switch SW2’s Gigabit 0/2 interface.|5. Коммутатор SW1 использует интерфейс Gigabit 0/1 для подключения к интерфейсу Gigabit 0/2 коммутатора SW2.
+5 Switch SW1 uses its Gigabit 0/1 interface to connect to switch SW2’s Gigabit 0/2 interface.|5 Коммутатор SW1 использует интерфейс Gigabit 0/1 для подключения к интерфейсу Gigabit 0/2 коммутатора SW2.
 SW2’s Gi0/2 interface is configured with the speed 1000 and duplex full commands.|Интерфейс Gi0 / 2 SW2 настроен на скорость 1000 и команды полного дуплексного режима.
 SW1 uses all defaults for interface configuration commands on its Gi0/1 interface.|SW1 использует все значения по умолчанию для команд настройки интерфейса на своем интерфейсе Gi0 / 1.
 Which of the following are true about the link after it comes up? (Choose two answers.)|Что из следующего является верным относительно ссылки после того, как она появится? (Выберите два ответа.)
@@ -1336,7 +1336,7 @@ a. The link works at 1000 Mbps (1 Gbps).|а. Ссылка работает на 
 b. SW1 attempts to run at 10 Mbps because SW2 has effectively disabled IEEE standard autonegotiation.|б. SW1 пытается работать на скорости 10 Мбит / с, поскольку SW2 фактически отключил стандартное автосогласование IEEE.
 c. The link runs at 1 Gbps, but SW1 uses half duplex and SW2 uses full duplex.|c. Канал работает со скоростью 1 Гбит / с, но SW1 использует полудуплекс, а SW2 - полный дуплекс.
 d. Both switches use full duplex.|d. Оба коммутатора используют полный дуплекс.
-6. Switch SW1 connects via a cable to switch SW2’s G0/1 port.|6. Коммутатор SW1 подключается кабелем к порту G0 / 1 переключателя SW2.
+6 Switch SW1 connects via a cable to switch SW2’s G0/1 port.|6 Коммутатор SW1 подключается кабелем к порту G0 / 1 переключателя SW2.
 Which of the following conditions is the most likely to cause SW1’s late collision counter to continue to increment?|Какое из следующих условий с наибольшей вероятностью приведет к тому, что счетчик поздних столкновений SW1 будет продолжать увеличиваться?
 a. SW2’s G0/1 has been configured with a shutdown interface subcommand.|а. G0 / 1 SW2 настроен с помощью подкоманды интерфейса выключения.
 b. The two switches have been configured with different values on the speed interface subcommand.|б. Два переключателя настроены с разными значениями подкоманды интерфейса скорости.
