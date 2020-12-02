@@ -49,7 +49,7 @@ a. SSH encrypts the passwords used at login, but not other traffic; Telnet encry
 b. SSH encrypts all data exchange, including login passwords; Telnet encrypts nothing.|б. SSH шифрует весь обмен данными, включая пароли для входа; Telnet ничего не шифрует.
 c. Telnet is used from Microsoft operating systems, and SSH is used from UNIX and Linux operating systems.|c. Telnet используется в операционных системах Microsoft, а SSH используется в операционных системах UNIX и Linux.
 d. Telnet encrypts only password exchanges; SSH encrypts all data exchanges.|d. Telnet шифрует только обмен паролями; SSH шифрует все обмены данными.
-4. What type of switch memory is used to store the configuration used by the switch when it is up and working?|4. Какой тип памяти коммутатора используется для хранения конфигурации, используемой коммутатором, когда он включен и работает?
+4 What type of switch memory is used to store the configuration used by the switch when it is up and working?|4 Какой тип памяти коммутатора используется для хранения конфигурации, используемой коммутатором, когда он включен и работает?
 a. RAM b.|а. RAM b.
 ROM c.|ROM c.
 Flash d.|Вспышка d.
