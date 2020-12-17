@@ -1,0 +1,2036 @@
+## Part VII IP Version 6
+
+Part VII Review
+## Chapter 22 Fundamentals of IP Version 6
+
+This chapter covers the following exam topics:
+###### 1.0 Network Fundamentals
+###### 1.8 Configure and verify IPv6 addressing and prefix
+
+IPv4 has been a solid and highly useful part of the growth of TCP/IP and the Internet.
+For most of the long history of the Internet, and for most corporate networks that use TCP/IP, IPv4 is the core protocol that defines addressing and routing.
+However, even though IPv4 has many great qualities, it does have some shortcomings, creating the need for a replacement protocol: IP version 6 (IPv6).
+
+IPv6 defines the same general functions as IPv4, but with different methods of implementing those functions.
+For example, both IPv4 and IPv6 define addressing, the concepts of subnetting larger groups of addresses into smaller groups, headers used to create an IPv4 or IPv6 packet, and the rules for routing those packets.
+At the same time, IPv6 handles the details differently; for example, using a 128-bit IPv6 address rather than the 32-bit IPv4 address.
+
+This chapter focuses on the core network layer functions of addressing and routing.
+The first section of this chapter looks at the big concepts, while the second section looks at the specifics of how to write and type IPv6 addresses.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 22-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### Introduction to IPv6
+
+IPv6 Addressing Formats and Conventions 3–6 1.
+Which of the following was a short-term solution to the IPv4 address exhaustion problem?
+
+a. IP version 6 b.
+IP version 5 c.
+NAT/PAT d.
+ARP CHAPTER 22 2.
+A router receives an Ethernet frame that holds an IPv6 packet.
+The router then makes a decision to route the packet out a serial link.
+Which of the following statements is true about how a router forwards an IPv6 packet?
+
+a. The router discards the Ethernet data-link header and trailer of the received frame.
+
+b. The router makes the forwarding decision based on the packet’s source IPv6 address.
+
+c. The router keeps the Ethernet header, encapsulating the entire frame inside a new IPv6 packet before sending it over the serial link.
+
+d. The router uses the IPv4 routing table when choosing where to forward the packet.
+
+3. Which of the following is the shortest valid abbreviation for FE80:0000:0000:0100:
+
+0000:0000:0000:0123?
+
+a. FE80::100::123 b.
+FE8::1::123 c.
+FE80::100:0:0:0:123:4567 d.
+FE80:0:0:100::123 4.
+Which of the following is the shortest valid abbreviation for 2000:0300:0040:0005:
+
+6000:0700:0080:0009?
+
+a. 2:3:4:5:6:7:8:9 b. 2000:300:40:5:6000:700:80:9 c. 2000:300:4:5:6000:700:8:9 d. 2000:3:4:5:6:7:8:9 5.
+Which of the following is the unabbreviated version of IPv6 address 2001:DB8::200:28?
+
+a. 2001:0DB8:0000:0000:0000:0000:0200:0028 b. 2001:0DB8::0200:0028 c. 2001:0DB8:0:0:0:0:0200:0028 d. 2001:0DB8:0000:0000:0000:0000:200:0028 6.
+Which of the following is the prefix for address 2000:0000:0000:0005:6000:0700:
+
+0080:0009, assuming a mask of /64?
+
+a. 2000::5::/64 b. 2000::5:0:0:0:0/64 c. 2000:0:0:5::/64 d. 2000:0:0:5:0:0:0:0/64 Foundation Topics Introduction to IPv6 IP version 6 (IPv6) serves as the replacement protocol for IP version 4 (IPv4).
+
+Unfortunately, that one bold statement creates more questions than it answers.
+Why does IPv4 need to be replaced?
+If IPv4 needs to be replaced, when will that happen—and will it happen quickly?
+What exactly happens when a company or the Internet replaces IPv4 with IPv6?
+And the list goes on.
+
+While this introductory chapter cannot get into every detail of why IPv4 needs to eventually be replaced by IPv6, the clearest and most obvious reason for migrating TCP/IP networks to use IPv6 is growth.
+IPv4 uses a 32-bit address, which totals to a few billion addresses.
+
+Interestingly, that seemingly large number of addresses is too small.
+IPv6 increases the address to 128 bits in length.
+For perspective, IPv6 supplies more than 10,000,000,000,000,000,000,000,000,000 times as many addresses as IPv4.
+
+The fact that IPv6 uses a different size address field, with some different addressing rules, means that many other protocols and functions change as well.
+For example, IPv4 routing—in other words, the packet-forwarding process—relies on an understanding of IPv4 addresses.
+
+To support IPv6 routing, routers must understand IPv6 addresses and routing.
+To dynamically learn routes for IPv6 subnets, routing protocols must support these different IPv6 addressing rules, including rules about how IPv6 creates subnets.
+As a result, the migration from IPv4 to IPv6 is much more than changing one protocol (IP), but it impacts many protocols.
+
+This first section of the chapter discusses some of the reasons for the change from IPv4 to IPv6, along with the protocols that must change as a result.
+#### The Historical Reasons for IPv6
+
+In the last 40+ years, the Internet has gone from its infancy to being a huge influence in the world.
+It first grew through research at universities, from the ARPANET beginnings of the Internet in the late 1960s into the 1970s.
+The Internet kept growing fast in the 1980s, with the Internet’s fast growth still primarily driven by research and the universities that joined in that research.
+By the early 1990s, the Internet began to transform to allow commerce, allowing people to sell services and products over the Internet, which drove yet another steep spike upward in the growth of the Internet.
+Eventually, fixed Internet access (primarily through dial, digital subscriber line [DSL], and cable) became common, followed by the pervasive use of the Internet from mobile devices like smartphones.
+Figure 22-1 shows some of these major milestones with general dates.
+
+The incredible growth of the Internet over a fairly long time created a big problem for public IPv4 addresses: the world was running out of addresses.
+For instance, in 2011, IANA allocated the final /8 address blocks (the same size as a Class A network), allocating one final /8 block to each of the five Regional Internet Registries (RIR). At that point, RIRs could no Answers to the “Do I Know This Already?” quiz:
+
+1 C 2 A 3 D 4 B 5 A 6 C longer receive new allocations of public addresses from IANA to then turn around and assign smaller address blocks to companies or ISPs.
+
+Figure 22-1 Some Major Events in the Growth of the Internet At that point in 2011, each of the five RIRs still had public addresses to allocate or assign.
+
+However, that same year, APNIC (Asia Pacific) became the first RIR to exhaust its available IPv4 address allocation.
+In late 2015, ARIN (North America) announced that it had exhausted its supply.
+When we were revising this chapter in 2019, IANA considered all RIRs except AFRINIC to have exhausted their supply of IPv4 addresses, with AFRINIC expected to run out of IPv4 address during the year 2019.
+
+These events are significant in that the day has finally come in which new companies can attempt to connect to the Internet, but they can no longer simply use IPv4, ignoring IPv6.
+
+Their only option will be IPv6 because IPv4 has no public addresses left.
+
+NOTE You can track ARIN’s progress through this interesting transition in the history of the Internet at its IPv4 address depletion site: http://teamarin.net/category/ipv4-depletion/.
+
+You can also see a summary report at http://ipv4.potaroo.net.
+
+Even though the press has rightfully made a big deal about running out of IPv4 addresses, those who care about the Internet knew about this potential problem since the late 1980s.
+
+The problem, generally called the IPv4 address exhaustion problem, could literally have caused the huge growth of the Internet in the 1990s to have come to a screeching halt!
+
+Something had to be done.
+
+The IETF came up with several short-term solutions to make IPv4 addresses last longer, and one long-term solution: IPv6.
+However, several other tools like Network Address Translation (NAT) and classless interdomain routing (CIDR) helped extend IPv4’s life another couple of decades.
+IPv6 creates a more permanent and long-lasting solution, replacing IPv4, with a new IPv6 header and new IPv6 addresses.
+The address size supports a huge number of addresses, solving the address shortage problem for generations (we hope).
+Figure 22-2 shows some of the major address exhaustion timing.
+
+The rest of this first section examines IPv6, comparing it to IPv4, focusing on the common features of the two protocols.
+In particular, this section compares the protocols (including addresses), routing, routing protocols, and miscellaneous other related topics.
+
+NOTE You might wonder why the next version of IP is not called IP version 5.
+There was an earlier effort to create a new version of IP, and it was numbered version 5.
+IPv5 did not progress to the standards stage.
+However, to prevent any issues, because version 5 had been used in some documents, the next effort to update IP was numbered as version 6.
+
+Figure 22-2 Timeline for IPv4 Address Exhaustion and Short-/Long-Term Solutions
+#### The IPv6 Protocols
+
+The primary purpose of the core IPv6 protocol mirrors the same purpose of the IPv4 protocol.
+
+That core IPv6 protocol, as defined in RFC 2460, defines a packet concept, addresses for those packets, and the role of hosts and routers.
+These rules allow the devices to forward packets sourced by hosts, through multiple routers, so that they arrive at the correct destination host. (IPv4 defines those same concepts for IPv4 back in RFC 791.)
+
+However, because IPv6 impacts so many other functions in a TCP/IP network, many more RFCs must define details of IPv6.
+Some other RFCs define how to migrate from IPv4 to IPv6.
+Others define new versions of familiar protocols or replace old protocols with new ones.
+For example:
+
+Older OSPF Version 2 Upgraded to OSPF Version 3: The older Open Shortest Path First (OSPF) version 2 works for IPv4, but not for IPv6, so a newer version, OSPF version 3, was created to support IPv6. (Note: OSPFv3 was later upgraded to support advertising both IPv4 and IPv6 routes.)
+
+ICMP Upgraded to ICMP Version 6: Internet Control Message Protocol (ICMP) worked well with IPv4 but needed to be changed to support IPv6.
+The new name is ICMPv6.
+
+ARP Replaced by Neighbor Discovery Protocol: For IPv4, Address Resolution Protocol (ARP) discovers the MAC address used by neighbors.
+IPv6 replaces ARP with a more general Neighbor Discovery Protocol (NDP).
+
+NOTE If you go to any website that lists the RFCs, like http://www.rfc-editor.org, you can find almost 300 RFCs that have IPv6 in the title.
+
+Although the term IPv6, when used broadly, includes many protocols, the one specific protocol called IPv6 defines the new 128-bit IPv6 address.
+Of course, writing these addresses in binary would be a problem—they probably would not even fit on the width of a piece of paper!
+IPv6 defines a shorter hexadecimal format, requiring at most 32 hexadecimal digits (one hex digit per 4 bits), with methods to abbreviate the hexadecimal addresses as well.
+
+For example, all of the following are IPv6 addresses, each with 32 or fewer hex digits:
+
+2345:1111:2222:3333:4444:5555:6666:AAAA 2000:1:2:3:4:5:6:A FE80::1 The upcoming section “IPv6 Addressing Formats and Conventions” discusses the specifics of how to represent IPv6 addresses, including how to legally abbreviate the hex address values.
+
+Like IPv4, IPv6 defines a header, with places to hold both the source and destination address fields.
+Compared to IPv4, the IPv6 header does make some other changes besides simply making the address fields larger.
+However, even though the IPv6 header is larger than an IPv4 header, the IPv6 header is actually simpler (on purpose), to reduce the work done each time a router must route an IPv6 packet.
+Figure 22-3 shows the required 40-byte part of the IPv6 header.
+
+Figure 22-3 IPv6 Header
+#### IPv6 Routing
+
+As with many functions of IPv6, IPv6 routing looks just like IPv4 routing from a general perspective, with the differences being clear only once you look at the specifics.
+Keeping the discussion general for now, IPv6 uses these ideas the same way as IPv4:
+###### To be able to build and send IPv6 packets out an interface, end-user devices need an IPv6
+
+address on that interface.
+###### End-user hosts need to know the IPv6 address of a default router, to which the host sends
+
+IPv6 packets if the host is in a different subnet.
+###### IPv6 routers de-encapsulate and re-encapsulate each IPv6 packet when routing the packet.
+###### IPv6 routers make routing decisions by comparing the IPv6 packet’s destination address
+
+to the router’s IPv6 routing table; the matched route lists directions of where to send the IPv6 packet next.
+
+NOTE You could take the preceding list and replace every instance of IPv6 with IPv4, and all the statements would be true of IPv4 as well.
+
+While the list shows some concepts that should be familiar from IPv4, the next few figures show the concepts with an example.
+First, Figure 22-4 shows a few settings on a host.
+
+The host (PC1) has an address of 2345::1.
+PC1 also knows its default gateway of 2345::2.
+
+(Both values are valid abbreviations for real IPv6 addresses.) To send an IPv6 packet to host PC2, on another IPv6 subnet, PC1 creates an IPv6 packet and sends it to R1, PC1’s default gateway.
+
+Eth.
+
+Address = 2345::1 GW = 2345::2 2345::2 2345:1:2:3::2 IPv6 Packet Eth.
+
+Figure 22-4 IPv6 Host Building and Sending an IPv6 Packet The router (R1) has many small tasks to do when forwarding this IPv6 packet, but for now, focus on the work R1 does related to encapsulation.
+As seen in Step 1 of Figure 22-5, R1 receives the incoming data-link frame and extracts (de-encapsulates) the IPv6 packet from inside the frame, discarding the original data-link header and trailer.
+At Step 2, once R1 knows to forward the IPv6 packet to R2, R1 adds a correct outgoing data-link header and trailer to the IPv6 packet, encapsulating the IPv6 packet.
+
+Figure 22-5 IPv6 Router Performing Routine Encapsulation Tasks When Routing IPv6 When a router like R1 de-encapsulates the packet from the data-link frame, it must also decide what type of packet sits inside the frame.
+To do so, the router must look at a protocol type field in the data-link header, which identifies the type of packet inside the data-link frame.
+Today, most data-link frames carry either an IPv4 packet or an IPv6 packet.
+
+To route an IPv6 packet, a router must use its IPv6 routing table instead of the IPv4 routing table.
+The router must look at the packet’s destination IPv6 address and compare that address to the router’s current IPv6 routing table.
+The router uses the forwarding instructions in the matched IPv6 route to forward the IPv6 packet.
+Figure 22-6 shows the overall process.
+
+Figure 22-6 Comparing an IPv6 Packet to R1’s IPv6 Routing Table Note that again, the process works like IPv4, except that the IPv6 packet lists IPv6 addresses, and the IPv6 routing table lists routing information for IPv6 subnets (called prefixes).
+
+Finally, in most enterprise networks, the routers will route both IPv4 and IPv6 packets at the same time.
+That is, your company will not decide to adopt IPv6, and then late one weekend night turn off all IPv4 and enable IPv6 on every device.
+Instead, IPv6 allows for a slow migration, during which some or all routers forward both IPv4 and IPv6 packets. (The migration strategy of running both IPv4 and IPv6 is called dual stack.) All you have to do is configure the router to route IPv6 packets, in addition to the existing configuration for routing IPv4 packets.
+#### IPv6 Routing Protocols
+
+IPv6 routers need to learn routes for all the possible IPv6 prefixes (subnets).
+Just like with IPv4, IPv6 routers use routing protocols, with familiar names, and generally speaking, with familiar functions.
+
+None of the IPv4 routing protocols could be used to advertise IPv6 routes originally.
+They all required some kind of update to add messages, protocols, and rules to support IPv6.
+
+Over time, Routing Information Protocol (RIP), Open Shortest Path First (OSPF), Enhanced Interior Gateway Routing Protocol (EIGRP), and Border Gateway Protocol (BGP) were all updated to support IPv6.
+Table 22-2 lists the names of these routing protocols, with a few comments.
+
+Table 22-2 IPv6 Routing Protocols Table end.
+
+In addition, these routing protocols also follow the same interior gateway protocol (IGP) and exterior gateway protocol (EGP) conventions as their IPv4 cousins.
+RIPng, EIGRPv6, and OSPFv3 act as interior gateway protocols, advertising IPv6 routes inside an enterprise.
+
+As you can see from this introduction, IPv6 uses many of the same big ideas as IPv4.
+Both define headers with a source and destination address.
+Both define the routing of packets, with the routing process discarding old data-link headers and trailers when forwarding the packets.
+And routers use the same general process to make a routing decision, comparing the packet’s destination IP address to the routing table.
+
+The big differences between IPv4 and IPv6 revolve around the bigger IPv6 addresses.
+The next topic begins looking at the specifics of these IPv6 addresses.
+### IPv6 Addressing Formats and Conventions
+
+The CCNA exam requires some fundamental skills in working with IPv4 addresses.
+For example, you need to be able to interpret IPv4 addresses, like 172.21.73.14.
+You need to be able to work with prefix-style masks, like /25, and interpret what that means when used with a particular IPv4 address.
+And you need to be able to take an address and mask, like 172.21.73.14/25, and find the subnet ID.
+
+This second major section of this chapter discusses these same ideas for IPv6 addresses.
+In particular, this section looks at
+###### How to write and interpret unabbreviated 32-digit IPv6 addresses
+###### How to abbreviate IPv6 addresses and how to interpret abbreviated addresses
+###### How to interpret the IPv6 prefix length mask
+###### How to find the IPv6 prefix (subnet ID), based on an address and prefix length mask
+
+The biggest challenge with these tasks lies in the sheer size of the numbers.
+Thankfully, the math to find the subnet ID—often a challenge for IPv4—is easier for IPv6, at least to the depth discussed in this book.
+#### Representing Full \(Unabbreviated\) IPv6 Addresses
+
+IPv6 uses a convenient hexadecimal (hex) format for addresses.
+To make it more readable, IPv6 uses a format with eight sets of four hex digits, with each set of four digits separated by a colon.
+For example:
+
+2340:1111:AAAA:0001:1234:5678:9ABC:1234 NOTE For convenience, the author uses the term quartet for one set of four hex digits, with eight quartets in each IPv6 address.
+Note that the IPv6 RFCs do not use the term quartet.
+
+IPv6 addresses also have a binary format as well, but thankfully, most of the time you do not need to look at the binary version of the addresses.
+However, in those cases, converting from hex to binary is relatively easy.
+Just change each hex digit to the equivalent 4-bit value listed in Table 22-3.
+
+Table 22-3 Hexadecimal/Binary Conversion Chart Table end.
+#### Abbreviating and Expanding IPv6 Addresses
+
+IPv6 also defines ways to abbreviate or shorten how you write or type an IPv6 address.
+
+Why?
+Although using a 32-digit hex number works much better than working with a 128-bit binary number, 32 hex digits are still a lot of digits to remember, recognize in command output, and type on a command line.
+The IPv6 address abbreviation rules let you shorten these numbers.
+
+Computers and routers typically use the shortest abbreviation, even if you type all 32 hex digits of the address.
+So even if you would prefer to use the longer unabbreviated version of the IPv6 address, you need to be ready to interpret the meaning of an abbreviated IPv6 address as listed by a router or host.
+This section first looks at abbreviating addresses and then at expanding addresses.
+##### Abbreviating IPv6 Addresses
+
+Two basic rules let you, or any computer, shorten or abbreviate an IPv6 address:
+
+1. Inside each quartet of four hex digits, remove the leading 0s (0s on the left side of the quartet) in the three positions on the left. (Note: at this step, a quartet of 0000 will leave a single 0.)
+
+2. Find any string of two or more consecutive quartets of all hex 0s, and replace that set of quartets with a double colon (::).
+The :: means “two or more quartets of all 0s.”
+
+However, you can use :: only once in a single address because otherwise the exact IPv6 might not be clear.
+
+For example, consider the following IPv6 address.
+The bold digits represent digits in which the address could be abbreviated.
+
+FE00:0000:0000:0001:0000:0000:0000:0056 Applying the first rule, you would look at all eight quartets independently.
+In each, remove all the leading 0s.
+Note that five of the quartets have four 0s, so for these, remove only three 0s, leaving the following value:
+
+FE00:0:0:1:0:0:0:56 While this abbreviation is valid, the address can be abbreviated more, using the second rule.
+
+In this case, two instances exist where more than one quartet in a row has only a 0.
+Pick the longest such sequence, and replace it with ::, giving you the shortest legal abbreviation:
+
+FE00:0:0:1::56 While FE00:0:0:1::56 is indeed the shortest abbreviation, this example happens to make it easier to see the two most common mistakes when abbreviating IPv6 addresses.
+First, never remove trailing 0s in a quartet (0s on the right side of the quartet).
+In this case, the first quartet of FE00 cannot be shortened at all because the two 0s trail.
+So, the following address, which begins now with only FE in the first quartet, is not a correct abbreviation of the original IPv6 address:
+
+FE:0:0:1::56 The second common mistake is to replace all series of all 0 quartets with a double colon.
+For example, the following abbreviation would be incorrect for the original IPv6 address listed in this topic:
+
+FE00::1::56 The reason this abbreviation is incorrect is that now you do not know how many quartets of all 0s to substitute into each :: to find the original unabbreviated address.
+##### Expanding Abbreviated IPv6 Addresses
+
+To expand an IPv6 address back into its full unabbreviated 32-digit number, use two similar rules.
+The rules basically reverse the logic of the previous two rules:
+
+1. In each quartet, add leading 0s as needed until the quartet has four hex digits.
+
+2. If a double colon (::) exists, count the quartets currently shown; the total should be less than 8.
+Replace the :: with multiple quartets of 0000 so that eight total quartets exist.
+
+The best way to get comfortable with these addresses and abbreviations is to do some yourself.
+
+Table 22-4 lists some practice problems, with the full 32-digit IPv6 address on the left and the best abbreviation on the right.
+The table gives you either the expanded or abbreviated address, and you need to supply the opposite value.
+The answers sit at the end of the chapter, in the section “Answers to Earlier Practice Problems.”
+
+Table 22-4 IPv6 Address Abbreviation and Expansion Practice Table end.
+#### Representing the Prefix Length of an Address
+
+IPv6 uses a mask concept, called the prefix length, similar to IPv4 subnet masks.
+Similar to the IPv4 prefix-style mask, the IPv6 prefix length is written as a /, followed by a decimal number.
+The prefix length defines how many bits of the IPv6 address define the IPv6 prefix, which is basically the same concept as the IPv4 subnet ID.
+
+When writing an IPv6 address and prefix length in documentation, you can choose to leave a space before the /, or not, as shown in the next two examples.
+
+2222:1111:0:1:A:B:C:D/64 2222:1111:0:1:A:B:C:D /64 Finally, note that the prefix length is a number of bits, so with IPv6, the legal value range is from 0 through 128, inclusive.
+#### Calculating the IPv6 Prefix \(Subnet ID\)
+
+With IPv4, you can take an IP address and the associated subnet mask, and calculate the subnet ID. With IPv6 subnetting, you can take an IPv6 address and the associated prefix length, and calculate the IPv6 equivalent of the subnet ID: an IPv6 prefix.
+
+Like with different IPv4 subnet masks, some IPv6 prefix lengths make for an easy math problem to find the IPv6 prefix, while some prefix lengths make the math more difficult.
+This section looks at the easier cases, mainly because the size of the IPv6 address space lets us all choose to use IPv6 prefix lengths that make the math much easier.
+#### Finding the IPv6 Prefix
+
+In IPv6, a prefix represents a group of IPv6 addresses.
+For now, this section focuses on the math, and only the math, for finding the number that represents that prefix.
+Chapter 23, “IPv6 Addressing and Subnetting,” then starts putting more meaning behind the actual numbers.
+
+Each IPv6 prefix, or subnet if you prefer, has a number that represents the group.
+Per the IPv6 RFCs, the number itself is also called the prefix, but many people just call it a subnet number or subnet ID, using the same terms as IPv4.
+
+As with IPv4, you can start with an IPv6 address and prefix length, and find the prefix, with the same general rules that you use in IPv4.
+If the prefix length is /P, use these rules:
+
+1. Copy the first P bits.
+
+2. Change the rest of the bits to 0.
+
+When using a prefix length that happens to be a multiple of 4, you do not have to think in terms of bits, but in terms of hex digits.
+A prefix length that is a multiple of 4 means that each hex digit is either copied or changed to hex 0.
+Just for completeness, if the prefix length is indeed a multiple of 4, the process becomes 1.
+Identify the number of hex digits in the prefix by dividing the prefix length (which is in bits) by 4.
+
+2. Copy the hex digits determined to be in the prefix per the first step.
+
+3. Change the rest of the hex digits to 0.
+
+Figure 22-7 shows an example, with a prefix length of 64.
+In this case, Step 1 looks at the /64 prefix length and calculates that the prefix has 16 hex digits.
+Step 2 copies the first 16 digits of the IPv6 address, while Step 3 records hex 0s for the rest of the digits.
+
+Figure 22-7 Creating the IPv6 Prefix from an Address/Length After you find the IPv6 prefix, you should also be ready to abbreviate the IPv6 prefix using the same rules you use to abbreviate IPv6 addresses.
+However, you should pay extra attention to the end of the prefix because it often has several octets of all 0 values.
+As a result, the abbreviation typically ends with two colons (::).
+
+For example, consider the following IPv6 address that is assigned to a host on a LAN:
+
+2000:1234:5678:9ABC:1234:5678:9ABC:1111/64 This example shows an IPv6 address that itself cannot be abbreviated.
+After you calculate the prefix for the subnet in which the address resides, by zeroing out the last 64 bits (16 digits)
+
+of the address, you find the following prefix value:
+
+2000:1234:5678:9ABC:0000:0000:0000:0000/64 This value can be abbreviated, with four quartets of all 0s at the end, as follows:
+
+2000:1234:5678:9ABC::/64 To get better at the math, take some time to work through finding the prefix for several practice problems, as listed in Table 22-5.
+The answers sit at the end of the chapter, in the section “Answers to Earlier Practice Problems.”
+
+Table 22-5 Finding the IPv6 Prefix from an Address/Length Value Table end.
+#### Working with More-Difficult IPv6 Prefix Lengths
+
+Some prefix lengths make the math to find the prefix very easy, some mostly easy, and some require you to work in binary.
+If the prefix length is a multiple of 16, the process of copying part of the address copies entire quartets.
+If the prefix length is not a multiple of 16 but is a multiple of 4, at least the boundary sits at the edge of a hex digit, so you can avoid working in binary.
+
+Although the /64 prefix length is by far the most common prefix length, you should be ready to find the prefix when using a prefix length that is any multiple of 4.
+For example, consider the following IPv6 address and prefix length:
+
+2000:1234:5678:9ABC:1234:5678:9ABC:1111/56 Because this example uses a /56 prefix length, the prefix includes the first 56 bits, or first 14 complete hex digits, of the address.
+The rest of the hex digits will be 0, resulting in the following prefix:
+
+2000:1234:5678:9A00:0000:0000:0000:0000/56 This value can be abbreviated, with four quartets of all 0s at the end, as follows:
+
+2000:1234:5678:9A00::/56 This example shows an easy place to make a mistake.
+Sometimes, people look at the /56 and think of that as the first 14 hex digits, which is correct.
+However, they then copy the first 14 hex digits and add a double colon, showing the following:
+
+2000:1234:5678:9A::/56 This abbreviation is not correct because it removed the trailing “00” at the end of the fourth quartet.
+If you expanded the abbreviated value, it would begin with 2000:1234:5678:009A, not 2000:1234:5678:9A00.
+So, be careful when abbreviating when the boundary is not at the edge of a quartet.
+
+Once again, some extra practice can help.
+Table 22-6 uses examples that have a prefix length that is a multiple of 4, but is not on a quartet boundary, just to get some extra practice.
+The answers sit at the end of the chapter, in the section “Answers to Earlier Practice Problems.”
+
+Table 22-6 Finding the IPv6 Prefix from an Address/Length Value Table end.
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 22-7 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 22-7 Chapter Review Tracking Table end.
+
+Table 22-8 Key Topics for Chapter 22 Table end.
+
+Key Terms You Should Know IPv4 address exhaustion, IP version 6 (IPv6), OSPF version 3 (OSPFv3), EIGRP version 6 (EIGRPv6), prefix, prefix length, quartet Additional Practice for This Chapter’s Processes For additional practice with IPv6 abbreviations, you may do the same set of practice problems have two options to use:
+
+PDF: Navigate to the companion website and open the PDF for Appendix G.
+
+Application: Navigate to the companion website and use these applications:
+
+“Practice Exercise: Abbreviating and Expanding Addresses”
+
+“Practice Exercise: Calculating the IPv6 Prefix”
+
+“Practice Exercise: Calculating the IPv6 Prefix Round 2”
+
+Answers to Earlier Practice Problems This chapter includes practice problems spread around different locations in the chapter.
+The answers are located in Tables 22-9, 22-10, and 22-11.
+
+Table 22-9 Answers to Questions in the Earlier Table 22-4 Table end.
+
+Table 22-10 Answers to Questions in the Earlier Table 22-5 Table end.
+
+Table 22-11 Answers to Questions in the Earlier Table 22-6 Table end.
+## Chapter 23 IPv6 Addressing and Subnetting
+
+This chapter covers the following exam topics:
+###### 1.0 Network Fundamentals
+###### 1.8 Configure and verify IPv6 addressing and prefix
+###### 1.9 Compare and contrast IPv6 address types
+###### 1.9.a Global unicast
+###### 1.9.b Unique local
+
+IPv4 organizes the address space in a couple of ways.
+First, IPv4 splits addresses by class, with Classes A, B, and C defining unicast IPv4 addresses. (The term unicast refers to the fact that each address is used by only one interface.) Then, within the Class A, B, and C address range, the Internet Assigned Numbers Authority (IANA) and the Internet Corporation for Assigned Names and Numbers (ICANN) reserve most of the addresses as public IPv4 addresses, with a few reserved as private IPv4 addresses.
+
+IPv6 does not use any concept like the classful network concept used by IPv4.
+However, IANA does still reserve some IPv6 address ranges for specific purposes, even with some address ranges that serve as both public IPv6 addresses and private IPv6 addresses.
+IANA also attempts to take a practical approach to reserving ranges of the entire IPv6 address space for different purposes, using the wisdom gained from several decades of fast growth in the IPv4 Internet.
+
+This chapter has two major sections.
+The first examines global unicast addresses, which serve as public IPv6 addresses.
+The second major section looks at unique local addresses, which serve as private IPv6 addresses.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 23-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### Global Unicast Addressing Concepts
+
+Unique Local Unicast Addresses 5 CHAPTER 23 1.
+Which of the following IPv6 addresses appears to be a unique local unicast address, based on its first few hex digits?
+
+a. 3123:1:3:5::1 b.
+FE80::1234:56FF:FE78:9ABC c.
+FDAD::1 d.
+FF00::5 2.
+Which of the following IPv6 addresses appears to be a global unicast address, based on its first few hex digits?
+
+a. 3123:1:3:5::1 b.
+FE80::1234:56FF:FE78:9ABC c.
+FDAD::1 d.
+FF00::5 3.
+When subnetting an IPv6 address block, an engineer shows a drawing that breaks the address structure into three pieces.
+Comparing this concept to a three-part IPv4 address structure, which part of the IPv6 address structure is most like the IPv4 network part of the address?
+
+a. Subnet b.
+Interface ID c.
+Network d.
+Global routing prefix e.
+Subnet router anycast 4.
+When subnetting an IPv6 address block, an engineer shows a drawing that breaks the address structure into three pieces.
+Assuming that all subnets use the same prefix length, which of the following answers lists the name of the field on the far right side of the address?
+
+a. Subnet b.
+Interface ID c.
+Network d.
+Global routing prefix e.
+Subnet router anycast 5.
+For the IPv6 address FD00:1234:5678:9ABC:DEF1:2345:6789:ABCD, which part of the address is considered the global ID of the unique local address?
+
+a. None; this address has no global ID.
+
+b. 00:1234:5678:9ABC c.
+DEF1:2345:6789:ABCD d. 00:1234:5678 e.
+FD00 Foundation Topics Global Unicast Addressing Concepts This first major section of the chapter focuses on one type of unicast IPv6 addresses: global unicast addresses.
+As it turns out, many of the general concepts and processes behind these global unicast IPv6 addresses follow the original intent for public IPv4 addresses.
+So, this section begins with a review of some IPv4 concepts, followed by the details of how a company can use global unicast addresses.
+
+This first section also discusses IPv6 subnetting and the entire process of taking a block of global unicast addresses and creating subnets for one company.
+This process takes a globally unique global routing prefix, creates IPv6 subnets, and assigns IPv6 addresses from within each subnet, much like with IPv4.
+#### Public and Private IPv6 Addresses
+
+In the history of IPv4 addressing, the world started out with a plan that gave every single host a globally unique public IPv4 address.
+However, as discussed in several places already, the IPv4 address space had too few addresses.
+So, in the 1990s, companies started using addresses from the private IPv4 address range, as defined in RFC 1918.
+These companies either simply did not connect to the Internet, or to connect to the Internet, they used Network Address Translation (NAT), sharing a few public globally unique IPv4 addresses for all host connections into the Internet.
+
+IPv6 allows two similar options of public and private unicast addressing, beginning with global unicast addresses as the public IPv6 address space.
+Similar to public IPv4 addresses, IPv6 global unicast addresses rely on an administrative process that assigns each company a unique IPv6 address block.
+Each company then subnets this IPv6 address block and only uses addresses from within that block.
+The result: that company uses addresses that are unique across the globe as well.
+
+The second IPv6 option uses unique local IPv6 addresses, which work more like the IPv4 private addresses.
+Companies that do not plan to connect to the Internet and companies that plan to use IPv6 NAT can use these private unique local addresses.
+The process also works similarly to IPv4: The engineer can read the details in an RFC, pick some numbers, and start assigning IPv6 addresses without having to register with IANA or any other authority.
+
+The following lists summarizes the comparisons between global unicast addresses and unique local addresses:
+
+Global unicast: Addresses that work like public IPv4 addresses.
+The organization that needs IPv6 addresses asks for a registered IPv6 address block, which is assigned as a global routing prefix.
+After that, only that organization uses the addresses inside that block of addresses—that is, the addresses that begin with the assigned prefix.
+
+Unique local: Works somewhat like private IPv4 addresses, with the possibility that multiple organizations use the exact same addresses, and with no requirement for registering with any numbering authority.
+
+Answers to the “Do I Know This Already?” quiz:
+
+1 C 2 A 3 D 4 B 5 D The rest of this first major section of the chapter examines global unicast addresses in more detail, while the second major section of the chapter examines unique local addresses.
+#### The IPv6 Global Routing Prefix
+
+IPv6 global unicast addresses allow IPv6 to work more like the original design of the IPv4 Internet.
+Each organization asks for a block of IPv6 addresses, which no one else can use.
+
+That organization further subdivides the address block into smaller chunks, called subnets.
+
+Finally, to choose what IPv6 address to use for any host, the engineer chooses an address from the right subnet.
+
+That reserved block of IPv6 addresses—a set of addresses that only one company can use—
+
+is called a global routing prefix.
+Each organization that wants to connect to the Internet and use IPv6 global unicast addresses should ask for and receive a global routing prefix.
+Very generally, you can think of the global routing prefix like an IPv4 Class A, B, or C network number from the range of public IPv4 addresses.
+
+The term global routing prefix might not make you think of a block of IPv6 addresses at first.
+The term actually refers to the idea that Internet routers can have one route that refers to all the addresses inside the address block, without a need to have routes for smaller parts of that block.
+For example, Figure 23-1 shows three companies, with three different IPv6 global routing prefixes; the router on the right (R4) has one IPv6 route for each global routing prefix.
+
+Figure 23-1 Three Global Routing Prefixes, with One Route per Prefix The global routing prefix sets those IPv6 addresses apart for use by that one company, just like a public IPv4 network or CIDR address block does in IPv4.
+All IPv6 addresses inside that company should begin with that global routing prefix, to avoid using other companies’
+
+IPv6 addresses.
+No other companies should use IPv6 addresses with that same prefix.
+And thankfully, IPv6 has plenty of space to allow all companies to have a global routing prefix, with plenty of addresses.
+
+Both the IPv6 and IPv4 address assignment processes rely on the same organizations:
+
+IANA (along with ICANN), the Regional Internet Registries (RIR), and ISPs. For example, an imaginary company, Company1, received the assignment of a global routing prefix.
+The prefix means “All addresses whose first 12 hex digits are 2001:0DB8:1111,” as represented by prefix 2001:0DB8:1111::/48.
+To receive that assignment, the process shown in Figure 23-2 happened.
+
+Figure 23-2 Prefix Assignment with IANA, RIRs, and ISPs The event timeline in the figure uses a left-to-right flow; in other words, the event on the far left must happen first.
+Following the flow from left to right in the figure:
+
+1. IANA allocates ARIN prefix 2001::/16: ARIN (the RIR for North America) asks IANA for the allocation of a large block of addresses.
+In this imaginary example, IANA gives ARIN a prefix of “all addresses that begin 2001,” or 2001::/16.
+
+2. ARIN allocates NA-ISP1 prefix 2001:0DB8::/32: NA-ISP1, an imaginary ISP based in North America, asks ARIN for a new IPv6 prefix.
+ARIN takes a subset of its 2001::/16 prefix, specifically all addresses that begin with the 32 bits (8 hex digits) 2001:0DB8, and allocates it to the ISP.
+
+3. NA-ISP1 assigns Company 1 2001:0DB8:1111::/48: Company 1 decides to start supporting IPv6, so it goes to its ISP, NA-ISP1, to ask for a block of global unicast addresses.
+NA-ISP1 assigns Company 1 a “small” piece of NA-ISP1’s address block, in this case the addresses that begin with the 48 bits (12 hex digits) of 2001:0DB8:1111 (2001:0DB8:1111::/48).
+
+NOTE If you do not plan to connect to the Internet using IPv6 for a while and just want to experiment, you do not need to ask for an IPv6 global routing prefix to be assigned.
+Just make up IPv6 addresses and configure your devices, or use unique local addresses as discussed toward the end of this chapter.
+#### Address Ranges for Global Unicast Addresses
+
+Global unicast addresses make up the majority of the IPv6 address space.
+However, unlike IPv4, the rules for which IPv6 addresses fall into which category are purposefully more flexible than they were with IPv4 and the rules for IPv4 Classes A, B, C, D, and E.
+
+Originally, IANA reserved all IPv6 addresses that begin with hex 2 or 3 as global unicast addresses. (This address range can be written succinctly as prefix 2000::/3.)
+
+Later IANA made the global unicast address range wider, basically to include all IPv6 addresses not otherwise allocated for other purposes.
+For example, the unique local unicast addresses, discussed later in this chapter, all start with hex FD. So, while global unicast addresses would not include any addresses that begin with FD, any address ranges that are not specifically reserved, for now, are considered to be global unicast addresses.
+
+Finally, just because an amazingly enormous number of addresses sit within the global unicast address range, IANA does not assign prefixes from all over the address range.
+IPv4 has survived well for more than 30 years with an admittedly too-small address size because IANA has adopted good practices to conserve the IPv4 address space.
+By making smart and practical choices in assigning IPv6 addresses, the IPv6 address space could last much longer than IPv4.
+
+Table 23-2 lists the address prefixes discussed in this book and their purpose.
+
+Table 23-2 Some Types of IPv6 Addresses and Their First Hex Digit(s)
+
+Table end.
+#### IPv6 Subnetting Using Global Unicast Addresses
+
+After an enterprise has a block of reserved global unicast addresses—in other words, a global routing prefix—the company needs to subdivide that large address block into subnets.
+
+Subnetting IPv6 addresses works generally like IPv4, but with mostly simpler math (hoorah!).
+
+Because of the absolutely large number of addresses available, most everyone uses the easiest possible IPv6 prefix length: /64.
+Using /64 as the prefix length for all subnets makes the IPv6 subnetting math just as easy as using a /24 mask for all IPv4 subnets.
+In addition, the dynamic IPv6 address assignment process works better with a /64 prefix length as well; so in practice, and in this book, expect IPv6 designs to use a /64 prefix length.
+
+This section does walk you through the different parts of IPv6 subnetting, while mostly using examples that use a /64 prefix length.
+The discussion defines the rules about which addresses should be in the same subnet and which addresses need to be in different subnets.
+
+Plus this section looks at how to analyze the global routing prefix and associated prefix length to find all the IPv6 prefixes (subnet IDs) and the addresses in each subnet.
+
+NOTE If the IPv4 subnetting concepts are a little vague, you might want to reread Chapter 11, “Perspectives on IPv4 Subnetting,” which discusses the subnetting concepts for IPv4.
+##### Deciding Where IPv6 Subnets Are Needed
+
+First, IPv6 and IPv4 both use the same concepts about where a subnet is needed: one for each VLAN and one for each point-to-point WAN connection (serial and Ethernet).
+Figure 23-3 shows an example of the idea, using the small enterprise internetwork of Company 1.
+
+Company 1 has two LANs, with a point-to-point serial link connecting the sites.
+It also has an Ethernet WAN link connected to an ISP. Using the same logic you would use for IPv4, Company 1 needs four IPv6 subnets.
+
+Figure 23-3 Locations for IPv6 Subnets
+##### The Mechanics of Subnetting IPv6 Global Unicast Addresses
+
+To understand how to subnet your one large block of IPv6 addresses, you need to understand some of the theory and mechanisms IPv6 uses.
+To learn those details, it can help to compare IPv6 with some similar concepts from IPv4.
+
+With IPv4, without subnetting, an address has two parts: a network part and a host part.
+
+Class A, B, and C rules define the length of the network part, with the host part making up the rest of the 32-bit IPv4 address, as shown in Figure 23-4.
+
+Figure 23-4 Classful View of Unsubnetted IPv4 Networks To subnet an IPv4 Class A, B, or C network, the network engineer for the enterprise makes some choices.
+Conceptually, the engineer creates a three-part view of the addresses, adding a subnet field in the center while shortening the host field. (Many people call this “borrowing host bits.”) The size of the network part stays locked per the Class A, B, and C rules, with the line between the subnet and host part being flexible, based on the choice of subnet mask.
+Figure 23-5 shows the idea for a subnetted Class B network.
+
+Figure 23-5 Classful View of Subnetted IPv4 Networks IPv6 uses a similar concept, with the details in Figure 23-6.
+The structure shows three major parts, beginning with the global routing prefix, which is the initial value that must be the same in all IPv6 addresses inside the enterprise.
+The address ends with the interface ID, which acts like the IPv4 host field.
+The subnet field sits between the two other fields, used as a way to number and identify subnets, much like the subnet field in IPv4 addresses.
+
+Figure 23-6 Structure of Subnetted IPv6 Global Unicast Addresses First, just think about the general idea with IPv6, comparing Figure 23-6 to Figure 23-5.
+The IPv6 global routing prefix (the prefix/length assigned by the RIR or ISP) acts like the IPv4 network part of the address structure.
+The IPv6 subnet part acts like the IPv4 subnet part.
+
+And the right side of the IPv6, formally called the interface ID (short for interface identifier), acts like the IPv4 host field.
+
+Now focus on the IPv6 global routing prefix and its prefix length.
+Unlike IPv4, IPv6 has no concept of address classes, so no preset rules determine the prefix length of the global routing prefix.
+However, when a company applies to an ISP, RIR, or any other organization that can assign a global routing prefix, that assignment includes both the prefix and the prefix length.
+After a company receives a global routing prefix and that prefix length, the length of the prefix typically does not change over time and is basically locked. (Note that the prefix length of the global routing prefix is often between /32 and /48, or possibly as long as /56.)
+
+Next, look to the right side of Figure 23-6 to the interface ID field.
+For several reasons that become more obvious the more you learn about IPv6, this field is often 64 bits long.
+Does it have to be 64 bits long?
+No. However, using a 64-bit interface ID field works well in real networks, and there are no reasons to avoid using a 64-bit interface ID field.
+
+Finally, look to the subnet field in the center of Figure 23-6.
+Similar to IPv4, this field creates a place with which to number IPv6 subnets.
+The length of the subnet field is based on the other two facts: the length of the global routing prefix and the length of the interface ID. And with the commonly used 64-bit interface ID field, the subnet field is typically 64–P bits, with P being the length of the global routing prefix.
+
+Next, consider the structure of a specific global unicast IPv6 address, 2001:0DB8:1111:0001:0000:0000:0000:0001, as seen in Figure 23-7.
+In this case:
+###### The company was assigned prefix 2001:0DB8:1111, with prefix length /48.
+###### The company uses the usual 64-bit interface ID.
+###### The company has a subnet field of 16 bits, allowing for 216 IPv6 subnets.
+
+Figure 23-7 Address Structure for Company 1 Example The example in Figure 23-7, along with a little math, shows one reason why so many companies use a /64 prefix length for all subnets.
+With this structure, Company 1 can support 216 possible subnets (65,536).
+Few companies need that many subnets.
+Then, each subnet supports over 1018 addresses per subnet (264, minus some reserved values).
+So, for both subnets and hosts, the address structure supports far more than are needed.
+Plus, the /64 prefix length for all subnets makes the math simple because it cuts the 128-bit IPv6 address in half.
+##### Listing the IPv6 Subnet Identifier
+
+Like with IPv4, IPv6 needs to identify each IPv6 subnet with some kind of a subnet identifier, or subnet ID. Figure 23-7 lists the informal names for this number (subnet ID) and the more formal name (prefix ID). Routers then list the IPv6 subnet ID in routing tables, along with the prefix length.
+
+Chapter 22, “Fundamentals of IP Version 6,” already discussed how to find the subnet ID, given an IPv6 address and prefix length.
+The math works the same way when working with global unicast addresses, as well as the unique local addresses discussed later in the chapter.
+
+Chapter 28, “Securing Wireless Networks,” has already discussed the math, but for completeness, note that the subnet ID shown in Figure 23-7 would be 2001:DB8:1111:1::/64
+##### List All IPv6 Subnets
+
+With IPv4, if you choose to use a single subnet mask for all subnets, you can sit and write down all the subnets of a Class A, B, or C network using that one subnet mask.
+With IPv6, the same ideas apply.
+If you plan to use a single prefix length for all subnets, you can start with the global routing prefix and write down all the IPv6 subnet IDs as well.
+
+To find all the subnet IDs, you simply need to find all the unique values that will fit inside the subnet part of the IPv6 address, basically following these rules:
+###### All subnet IDs begin with the global routing prefix.
+###### Use a different value in the subnet field to identify each different subnet.
+###### All subnet IDs have all 0s in the interface ID.
+
+As an example, take the IPv6 design shown in Figure 23-7, and think about all the subnet IDs. First, all subnets will use the commonly used /64 prefix length.
+This company uses a global routing prefix of 2001:0DB8:1111::/48, which defines the first 12 hex digits of all the subnet IDs. To find all the possible IPv6 subnet IDs, think of all the combinations of unique values in the fourth quartet and then represent the last four quartets of all 0s with a :: symbol.
+
+Figure 23-8 shows the beginning of just such a list.
+
+Figure 23-8 First 16 Possible Subnets with a 16-bit Subnet Field in This Example The example allows for 65,536 subnets, so clearly the example will not list all the possible subnets.
+However, in that fourth quartet, all combinations of hex values would be allowed.
+
+NOTE The IPv6 subnet ID, more formally called the subnet router anycast address, is reserved and should not be used as an IPv6 address for any host.
+##### Assign Subnets to the Internetwork Topology
+
+After an engineer lists all the possible subnet IDs (based on the subnet design), the next step is to choose which subnet ID to use for each link that needs an IPv6 subnet.
+Just like with IPv4, each VLAN, each serial link, each Ethernet WAN link, and many other data-link instances need an IPv6 subnet.
+
+Figure 23-9 shows an example using Company 1 again.
+The figure uses the four subnets from Figure 23-8 that have check marks beside them.
+The check marks are just a reminder to not use those four subnets in other locations.
+
+Figure 23-9 Subnets in Company 1, with Global Routing Prefix of 2001:0DB8:1111::/48
+#### Assigning Addresses to Hosts in a Subnet
+
+Now that the engineer has planned which IPv6 subnet will be used in each location, the individual IPv6 addressing can be planned and implemented.
+Each address must be unique, in that no other host interface uses the same IPv6 address.
+Also, the hosts cannot use the subnet ID itself.
+
+The process of assigning IPv6 addresses to interfaces works similarly to IPv4.
+Addresses can be configured statically, along with the prefix length, default router, and Domain Name System (DNS) IPv6 addresses.
+Alternatively, hosts can learn these same settings dynamically, using either Dynamic Host Configuration Protocol (DHCP) or a built-in IPv6 mechanism called Stateless Address Autoconfiguration (SLAAC).
+
+For example, Figure 23-10 shows some static IP addresses that could be chosen for the router interfaces based on the subnet choices shown in Figure 23-9.
+In each case, the router interfaces use an interface ID that is a relatively low number, easily remembered.
+
+Figure 23-10 Example Static IPv6 Addresses Based on the Subnet Design of Figure 23-9 This chapter puts off the details of how to configure the IPv6 addresses until Chapter 24, “Implementing IPv6 Addressing on Routers.”
+### Unique Local Unicast Addresses
+
+Unique local unicast addresses act as private IPv6 addresses.
+These addresses have many similarities with global unicast addresses, particularly in how to subnet.
+The biggest difference lies in the literal number (unique local addresses begin with hex FD) and with the administrative process: the unique local prefixes are not registered with any numbering authority and can be used by multiple organizations.
+
+Although the network engineer creates unique local addresses without any registration or assignment process, the addresses still need to follow some rules, as follows:
+###### Use FD as the first two hex digits.
+###### Choose a unique 40-bit global ID.
+###### Append the global ID to FD to create a 48-bit prefix, used as the prefix for all your
+
+addresses.
+###### Use the next 16 bits as a subnet field.
+###### Note that the structure leaves a convenient 64-bit interface ID field.
+
+Figure 23-11 shows the format of these unique local unicast addresses.
+
+Figure 23-11 IPv6 Unique Local Unicast Address Format NOTE Just to be completely exact, IANA actually reserves prefix FC00::/7, and not FD00::/8, for these addresses.
+FC00::/7 includes all addresses that begin with hex FC and FD. However, an RFC (4193) requires the eighth bit of these addresses to be set to 1, which means that in practice today, the unique local addresses all begin with their first two digits as FD.
+#### Subnetting with Unique Local IPv6 Addresses
+
+Subnetting using unique local addresses works just like subnetting with global unicast addresses with a 48-bit global routing prefix.
+The only difference is that with global unicasts, you start by asking for a global routing prefix to be assigned to your company, and that global routing prefix might or might not have a /48 prefix length.
+With unique local, you create that prefix locally, and the prefix begins with /48, with the first 8 bits set and the next 40 bits randomly chosen.
+
+The process can be as simple as choosing a 40-bit value as your global ID. These 40 bits require 10 hex digits, so you can even avoid thinking in binary and just make up a unique 10-hex-digit value and add hex FD to the front.
+For example, imagine you chose a 10-hex-digit value of hex 00 0001 0001, prepend a hex FD, making the entire prefix be FD00:0001:0001::/48, or FD00:1:1::/48 when abbreviated.
+
+To create subnets, just as you did in the earlier examples with a 48-bit global routing prefix, treat the entire fourth quartet as a subnet field, as shown in Figure 23-11.
+
+Figure 23-12 shows an example subnetting plan using unique local addresses.
+The example repeats the same topology shown earlier in Figure 23-9; that figure showed subnetting with a global unicast prefix.
+This example uses the exact same numbers for the fourth quartet’s subnet field, simply replacing the 48-bit global unicast prefix with this new local unique prefix of FD00:1:1.
+
+Figure 23-12 Subnetting Using Unique Local Addresses
+#### The Need for Globally Unique Local Addresses
+
+The example in Figure 23-12 shows an easy-to-remember prefix of FD00:1:1::/48.
+Clearly, I made up the easy-to-remember global ID in this example.
+What global ID would you choose for your company?
+Would you pick a number that you could not abbreviate and make it shorter?
+If you had to pick the IPv6 prefix for your unique local addresses from the options in the following list, which would you pick for your company?
+###### FDE9:81BE:A059::/48
+###### FDF0:E1D2:C3B4::/48
+###### FD00:1:1::/48
+
+Given freedom to choose, most people would pick an easy-to-remember, short-to-type prefix, like FD00:1:1::/48.
+And in a lab or other small network used for testing, making up an easy-to-use number is reasonable.
+However, for use in real corporate networks, you should not just make up any global ID you like; you should try to follow the unique local address rules that strive to help make your addresses unique in the universe—even without registering a prefix with an ISP or RIR.
+
+RFC 4193 defines unique local addresses, and that RFC stresses the importance of choosing your global ID in a way to make it statistically unlikely to be used by other companies.
+What is the result of unique global IDs at every company?
+Making all these unique local addresses unique across the globe.
+So, if you do plan on using unique local addresses in a real network, plan on using the random number generator logic listed in RFC 4193 to create your prefix.
+
+One of the big reasons to attempt to use a unique prefix, rather than everyone using the same easy-to-remember prefixes, is to be ready for the day that your company merges with or buys another company.
+Today, with IPv4, a high percentage of companies use private IPv4 network 10.0.0.0.
+When they merge their networks, the fact that both use network 10.0.0.0 makes the network merger more painful than if the companies had used different private IPv4 networks.
+With IPv6 unique local addresses, if both companies did the right thing and randomly chose a prefix, they will most likely be using completely different prefixes, making the merger much simpler.
+However, companies that take the seemingly easy way out and choose an easy-to-remember prefix like FD00:1:1 greatly increase their risk of requiring extra effort when merging with another company that also chose to use that same prefix.
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 23-3 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 23-3 Chapter Review Tracking Table end.
+
+Review All the Key Topics Key Terms You Should Know global unicast address, global routing prefix, unique local address, subnet ID (prefix ID), subnet router anycast address
+## Chapter 24 Implementing IPv6 Addressing on Routers
+
+Routers This chapter covers the following exam topics:
+###### 1.0 Network Fundamentals
+###### 1.9 Compare and contrast IPv6 address types
+###### 1.9.a Global unicast
+###### 1.9.b Unique local
+###### 1.9.c Link local
+###### 1.9.d Anycast
+###### 1.9.e Multicast
+###### 1.9.f Modified EUI 64
+
+With IPv4 addressing, some devices, like servers and routers, typically use static predefined IPv4 addresses.
+End-user devices do not mind if their address changes from time to time, and they typically learn an IPv4 address dynamically using DHCP. IPv6 uses the same approach, with servers, routers, and other devices in the control of the IT group often using predefined IPv6 addresses, and with end-user devices using dynamically learned IPv6 addresses.
+
+This chapter focuses on IPv6 address configuration on routers.
+The chapter begins with the more obvious IPv6 addressing configuration, with features that mirror IPv4 features, showing how to configure interfaces with IPv6 addresses and view that configuration with show commands.
+The second half of the chapter introduces new IPv6 addressing concepts, showing some other addresses used by routers when doing different tasks.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 24-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### Implementing Unicast IPv6 Addresses on Routers
+
+Special Addresses Used by Routers 4–5 CHAPTER 24 1.
+Router R1 has an interface named Gigabit Ethernet 0/1, whose MAC address has been set to 0200.0001.000A.
+Which of the following commands, added in R1’s Gigabit Ethernet 0/1 configuration mode, gives this router’s G0/1 interface a unicast IPv6 address of 2001:1:1:1:1:200:1:A, with a /64 prefix length?
+
+a. ipv6 address 2001:1:1:1:1:200:1:A/64 b. ipv6 address 2001:1:1:1:1:200:1:A/64 eui-64 c. ipv6 address 2001:1:1:1:1:200:1:A /64 eui-64 d. ipv6 address 2001:1:1:1:1:200:1:A /64 e.
+None of the other answers are correct.
+
+2. Router R1 has an interface named Gigabit Ethernet 0/1, whose MAC address has been set to 5055.4444.3333.
+This interface has been configured with the ipv6 address 2000:1:1:1::/64 eui-64 subcommand.
+What unicast address will this interface use?
+
+a. 2000:1:1:1:52FF:FE55:4444:3333 b. 2000:1:1:1:5255:44FF:FE44:3333 c. 2000:1:1:1:5255:4444:33FF:FE33 d. 2000:1:1:1:200:FF:FE00:0 3.
+Router R1 currently supports IPv4, routing packets in and out all its interfaces.
+R1’s configuration needs to be migrated to support dual-stack operation, routing both IPv4 and IPv6.
+Which of the following tasks must be performed before the router can also support routing IPv6 packets? (Choose two answers.)
+
+a. Enable IPv6 on each interface using an ipv6 address interface subcommand.
+
+b. Enable support for both versions with the ip versions 4 6 global command.
+
+c. Additionally enable IPv6 routing using the ipv6 unicast-routing global command.
+
+d. Migrate to dual-stack routing using the ip routing dual-stack global command.
+
+4. Router R1 has an interface named Gigabit Ethernet 0/1, whose MAC address has been set to 0200.0001.000A.
+The interface is then configured with the ipv6 address 2001:1:1:1:200:FF:FE01:B/64 interface subcommand; no other ipv6 address commands are configured on the interface.
+Which of the following answers lists the linklocal address used on the interface?
+
+a. FE80::FF:FE01:A b.
+FE80::FF:FE01:B c.
+FE80::200:FF:FE01:A d.
+FE80::200:FF:FE01:B 5.
+Which of the following multicast addresses is defined as the address for sending packets to only the IPv6 routers on the local link?
+
+a. FF02::1 b.
+FF02::2 c.
+FF02::5 d.
+FF02::A Foundation Topics Implementing Unicast IPv6 Addresses on Routers Every company bases its enterprise network on one or more protocol models, or protocol stacks.
+In the earlier days of networking, enterprise networks used one or more protocol stacks from different vendors, as shown on the left of Figure 24-1.
+Over time, companies added TCP/IP (based on IPv4) to the mix.
+Eventually, companies migrated fully to TCP/IP as the only protocol stack in use.
+
+Figure 24-1 Migration of Enterprise Networks to Use TCP/IP Stack Only, IPv4 The emergence of IPv6 requires that IPv6 be implemented in end-user hosts, servers, routers, and other devices.
+However, corporations cannot just migrate all devices from IPv4 to IPv6 over one weekend.
+Instead, what will likely occur is some kind of long-term migration and coexistence, in which for a large number of years, most corporate networks again use multiple protocol stacks—one based on IPv4 and one based on IPv6.
+
+Eventually, over time, we might all see the day when enterprise networks run only IPv6, without any IPv4 remaining, but that day might take awhile.
+Figure 24-2 shows the progression, just to make the point, but who knows how long it will take?
+
+One way to add IPv6 support to an established IPv4-based enterprise internetwork is to implement a dual-stack strategy.
+To do so, the routers can be configured to route IPv6 packets, with IPv6 addresses on their interfaces, with a similar model to how routers support IPv4.
+Then hosts can implement IPv6 when ready, running both IPv4 and IPv6 (dual stacks).
+
+The first major section of this chapter shows how to configure and verify unicast IPv6 addresses on routers.
+
+Figure 24-2 Possible Path Through Dual-Stack (IPv4 and IPv6) over a Long Period
+#### Static Unicast Address Configuration
+
+Cisco routers give us two options for static configuration of IPv6 addresses.
+In one case, you configure the full 128-bit address, while in the other, you configure a 64-bit prefix and let the router derive the second half of the address (the interface ID). The next few pages show how to configure both options and how the router chooses the second half of the IPv6 address.
+##### Configuring the Full 128-Bit Address
+
+To statically configure the full 128-bit unicast address—either global unicast or unique local—the router needs an ipv6 address address/prefix-length interface subcommand on each interface.
+The address can be an abbreviated IPv6 address or the full 32-digit hex address.
+The command includes the prefix length value, at the end, with no space between the address and prefix length.
+
+The configuration of the router interface IPv6 address really is that simple.
+Figure 24-3, along with Examples 24-1 and 24-2, shows a basic example.
+The figure shows the global unicast IPv6 address used by two different routers, on two interfaces each.
+As usual, all subnets use a /64 prefix length.
+
+Figure 24-3 Sample 128-bit IPv6 Addresses to Be Configured on Cisco Router Interfaces Example 24-1 Configuring Static IPv6 Addresses on R1 Example end.
+
+Example 24-2 Configuring Static IPv6 Addresses on R2 Example end.
+
+NOTE The configuration on R1 in Example 24-1 uses both abbreviated and unabbreviated addresses, and both lowercase and uppercase hex digits, showing that all are allowed.
+Router show commands list the abbreviated value with uppercase hex digits.
+##### Enabling IPv6 Routing
+
+While the configurations shown in Examples 24-1 and 24-2 focus on the IPv6 address configuration, they also include an important but often overlooked step when configuring IPv6 on Cisco routers: IPv6 routing needs to be enabled.
+On Cisco routers, IPv4 routing is enabled by default, but IPv6 routing is not enabled by default.
+The solution takes only a single command—ipv6 unicast-routing—which enables IPv6 routing on the router.
+
+A router must enable IPv6 globally (ipv6 unicast-routing) and enable IPv6 on the interface (ipv6 address) before the router will attempt to route IPv6 packets in and out an interface.
+
+If you omit the ipv6 unicast-routing command but configure interface IPv6 addresses, the router will not route any received IPv6 packets, but the router will act as an IPv6 host.
+If you include the ipv6 unicast-routing command but omit all the interface IPv6 addresses, the router will be ready to route IPv6 packets but have no interfaces that have IPv6 enabled, effectively disabling IPv6 routing.
+##### Verifying the IPv6 Address Configuration
+
+IPv6 uses many show commands that mimic the syntax of IPv4 show commands.
+For example:
+###### The show ipv6 interface brief command gives you interface IPv6 address info, but not
+
+prefix length info, similar to the IPv4 show ip interface brief command.
+###### The show ipv6 interface command gives the details of IPv6 interface settings, much like
+
+the show ip interface command does for IPv4.
+
+The one notable difference in the most common commands is that the show interfaces command still lists the IPv4 address and mask but tells us nothing about IPv6.
+So, to see IPv6 interface addresses, use commands that begin with show ipv6.
+Example 24-3 lists a few samples from Router R1, with the explanations following.
+
+Example 24-3 Verifying Static IPv6 Addresses on Router R1 Example end.
+
+First, focus on the output of the two show ipv6 interface commands at the top of the example, which lists interface G0/0, showing output about that interface only.
+Note that the output lists the configured IPv6 address and prefix length, as well as the IPv6 subnet (2001:DB8:1111:1::/64), which the router calculated based on the IPv6 address.
+
+The end of the example lists the output of the show ipv6 interface brief command.
+Similar to the IPv4-focused show ip interface brief command, this command lists IPv6 addresses, but not the prefix length or prefixes.
+This command also lists all interfaces on the router, whether or not IPv6 is enabled on the interfaces.
+For example, in this case, the only two interfaces on R1 that have an IPv6 address are G0/0 and G0/0/0, as configured earlier in Example 24-1.
+
+Beyond the IPv6 addresses on the interfaces, the router also adds IPv6 connected routes to the IPv6 routing table off each interface.
+Just as with IPv4, the router keeps these connected routes in the IPv6 routing table only when the interface is in a working (up/up) state.
+But if the interface has an IPv6 unicast address configured, and the interface is working, the router adds the connected routes.
+Example 24-4 shows the connected IPv6 on Router R1 from Figure 24-3.
+
+Example 24-4 Displaying Connected IPv6 Routes on Router R1 Example end.
+##### Generating a Unique Interface ID Using Modified EUI-64
+
+IPv6 follows the same general model as IPv4 regarding which types of devices typically use static, predefined addresses and which use dynamically learned address.
+For example, routers inside an enterprise use static IPv4 addresses, while end-user devices typically learn their IPv4 address using DHCP. With IPv6, routers also typically use static IPv6 addresses, while user devices use DHCP or Stateless Address Auto Configuration (SLAAC) to dynamically learn their IPv6 address.
+
+Even though engineers typically choose to use stable and predictable IPv6 interface addresses, IOS supports two different methods to configure a stable address.
+One method uses the ipv6 address command to define the entire 128-bit address, as shown in Examples 24-1 and 24-2.
+The other method uses this same ipv6 address command, but the command configures only the 64-bit IPv6 prefix for the interface and lets the router automatically generate a unique interface ID.
+
+This second method uses rules called modified EUI-64 (extended unique identifier).
+Often, in the context of IPv6 addressing, people refer to modified EUI-64 as just EUI-64; there is no other term or concept about EUI-64 that you need to know for IPv6.
+The configuration that uses EUI-64 includes a keyword to tell the router to use EUI-64 rules, along with the 64-bit prefix.
+
+The router then uses EUI-64 rules to create the interface ID part of the address, as follows:
+
+1. Split the 6-byte (12-hex-digit) MAC address in two halves (6 hex digits each).
+
+2. Insert FFFE in between the two, making the interface ID now have a total of 16 hex digits (64 bits).
+
+3. Invert the seventh bit of the interface ID.
+
+Figure 24-4 shows the major pieces of how the address is formed.
+
+Figure 24-4 IPv6 Address Format with Interface ID and EUI-64 NOTE You can find a video about the EUI-64 process on the companion website, in the Chapter Review section for this chapter.
+
+Although this process might seem a bit convoluted, it works.
+Also, with a little practice, you can look at an IPv6 address and quickly notice the FFFE in the middle of the interface ID and then easily find the two halves of the corresponding interface’s MAC address.
+But you need to be ready to do the same math, in this case to predict the EUI-64 formatted IPv6 address on an interface.
+
+For example, if you ignore the final step of inverting the seventh bit, the rest of the steps just require that you move the pieces around.
+Figure 24-5 shows two examples, just so you see the process.
+
+Figure 24-5 Two Examples of Most of the EUI-64 Interface ID Process Both examples follow the same process.
+Each starts with the MAC address, breaking it into two halves (Step 2).
+The third step inserts FFFE in the middle, and the fourth step inserts a colon every four hex digits, keeping with IPv6 conventions.
+
+While the examples in Figure 24-5 show most of the steps, they omit the final step.
+The final step requires that you convert the first byte (first two hex digits) from hex to binary, invert the seventh of the 8 bits, and convert the bits back to hex.
+Inverting a bit means that if the bit is a 0, make it a 1; if it is a 1, make it a 0.
+Most of the time, with IPv6 addresses, the original bit will be 0 and will be inverted to a 1.
+
+For example, Figure 24-6 completes the two examples from Figure 24-5, focusing only on the first two hex digits.
+The examples show each pair of hex digits (Step 1) and the binary equivalent (Step 2).
+Step 3 shows a copy of those same 8 bits, except the seventh bit is inverted;
+
+the example on the left inverts from 0 to 1, and the example on the right inverts from 1 to 0.
+Finally, the bits are converted back to hex at Step 4.
+
+Figure 24-6 Inverting the Seventh Bit of an EUI-64 Interface ID Field NOTE If you do not remember how to do hex-to-binary conversions, take a few moments to review the process.
+If you memorize the 16 hex values for digits 0 through F, with the corresponding binary values, the conversion can be easy.
+If you do not have those handy in your memory, take a few moments to look at Table A-2 in Appendix A, “Numeric Reference Tables.”
+
+For those of you who prefer the decimal shortcuts, with a little memorization you can do the bit-flip math without doing any hex-binary conversions.
+First, note that the process to invert the seventh bit, when working with a hexadecimal IPv6 address, flips the third of 4 bits in a single hex digit.
+With only 16 single hex digits, you could memorize what each hex digit becomes if its third bit is inverted, and you can easily memorize those values with a visual process.
+
+If you want to try to memorize the values, it helps to work through the following process a few times, so grab a piece of scratch paper.
+Then write the 16 single hex digits as shown on the left side of Figure 24-7.
+That is, write them in eight rows of two numbers each, with the spacing as directed in the figure.
+
+Next, start at the top of the lists and draw arrow lines between two numbers in the same column on the top left (0 and 2).
+Then move down the left-side column, connecting the next two digits (4 and 6) with an arrow line, then 8 and A, and then C and E.
+Repeat the process on the right, re-creating the right side of Figure 24-7.
+
+Figure 24-7 A Mnemonic Device to Help Memorize Bit Inversion Shortcut The figure you drew (and the right side of Figure 24-7) shows the hex digits which, when you invert their third bit, convert to the other.
+That is, 0 converts to 2; 2 converts to 0; 1 converts to 3; 3 converts to 1; 4 converts to 6; 6 converts to 4; and so on.
+So, on the exam, if you can remember the pattern to redraw Figure 24-7, you could avoid doing binary/hexadecimal conversion.
+Use whichever approach makes you more comfortable.
+
+As usual, the best way to get comfortable with forming these EUI-64 interface IDs is to calculate some yourself.
+Table 24-2 lists some practice problems, with an IPv6 64-bit prefix in the first column and the MAC address in the second column.
+Your job is to calculate the full (unabbreviated) IPv6 address using EUI-64 rules.
+The answers are at the end of the chapter, in the section “Answers to Earlier Practice Problems.”
+
+Table 24-2 IPv6 EUI-64 Address Creation Practice Table end.
+
+Configuring a router interface to use the EUI-64 format uses the ipv6 address address/
+
+prefix-length eui-64 interface subcommand.
+The eui-64 keyword tells the router to find the interface MAC address and do the EUI-64 conversion math to find the interface ID.
+
+Example 24-5 shows a revised configuration on Router R1, as compared to the earlier Example 24-1.
+In this case, R1 uses EUI-64 formatting for its IPv6 addresses.
+
+Example 24-5 Configuring R1’s IPv6 Interfaces Using EUI-64 Example end.
+
+The example uses only Ethernet interfaces, all of which have a universal MAC address to use to create their EUI-64 interface IDs. However, in this case, the configuration includes the mac-address command under R1’s G0/0 interface, which causes IOS to use the configured MAC address instead of the universal (burned-in) MAC address.
+Interface G0/0/0 defaults to use its universal MAC address.
+Following that math:
+
+G0/0 – MAC 0201.AA00.0001 – Interface ID 0001.AAFF.FE00.0001 G0/0 – MAC 30F7.0D29.8568 – Interface ID 32F7.0DFF.FE29.8568 Also, be aware that for interfaces that do not have a MAC address, like serial interfaces, the router uses the MAC of the lowest-numbered router interface that does have a MAC.
+
+NOTE When you use EUI-64, the address value in the ipv6 address command should be the prefix, not the full 128-bit IPv6 address.
+However, if you mistakenly type the full address and still use the eui-64 keyword, IOS accepts the command and converts the address to the matching prefix before putting the command into the running config file.
+For example, IOS converts ipv6 address 2000:1:1:1::1/64 eui-64 to ipv6 address 2000:1:1:1::/64 eui-64.
+#### Dynamic Unicast Address Configuration
+
+In most cases, network engineers will configure the IPv6 addresses of router interfaces so that the addresses do not change until the engineer changes the router configuration.
+
+However, routers can be configured to use dynamically learned IPv6 addresses.
+These can be useful for routers connecting to the Internet through some types of Internet access technologies, like DSL and cable modems.
+
+Cisco routers support two ways for the router interface to dynamically learn an IPv6 address to use:
+###### Stateful DHCP
+###### Stateless Address Autoconfiguration (SLAAC)
+
+Both methods use the familiar ipv6 address command.
+Of course, neither option configures the actual IPv6 address; instead, the commands configure a keyword that tells the router which method to use to learn its IPv6 address.
+Example 24-6 shows the configuration, with one interface using stateful DHCP and one using SLAAC.
+
+Example 24-6 Router Configuration to Learn IPv6 Addresses with DHCP and SLAAC Example end.
+### Special Addresses Used by Routers
+
+IPv6 configuration on a router begins with the simple steps discussed in the first part of this chapter.
+After you configure the ipv6 unicast-routing global configuration command, to enable the function of IPv6 routing, the addition of a unicast IPv6 address on an interface causes the router to do the following:
+###### Gives the interface a unicast IPv6 address
+###### Enables the routing of IPv6 packets in/out that interface
+###### Defines the IPv6 prefix (subnet) that exists off that interface
+###### Tells the router to add a connected IPv6 route for that prefix, to the IPv6 routing table,
+
+when that interface is up/up NOTE In fact, if you pause and look at the list again, the same ideas happen for IPv4 when you configure an IPv4 address on a router interface.
+
+While all the IPv6 features in this list work much like similar features in IPv4, IPv6 also has a number of additional functions not seen in IPv4.
+Often, these additional functions use other IPv6 addresses, many of which are multicast addresses.
+This second major section of the chapter examines the additional IPv6 addresses seen on routers, with a brief description of how they are used.
+#### Link-Local Addresses
+
+IPv6 uses link-local addresses as a special kind of unicast IPv6 address.
+These addresses are not used for normal IPv6 packet flows that contain data for applications.
+Instead, these addresses are used by some overhead protocols and for routing.
+This next topic first looks at how IPv6 uses link-local addresses and then how routers create link-local addresses.
+##### Link-Local Address Concepts
+
+IPv6 defines rules so that packets sent to any link-local address should not be forwarded by any router to another subnet.
+As a result, several IPv6 protocols make use of link-local addresses when the protocol’s messages need to stay within the local LAN. For example, Neighbor Discovery Protocol (NDP), which replaces the functions of IPv4’s ARP, uses linklocal addresses.
+
+Routers also use link-local addresses as the next-hop IP addresses in IPv6 routes, as shown in Figure 24-8.
+IPv6 hosts also use a default router (default gateway) concept, like IPv4, but instead of the router address being in the same subnet, hosts refer to the router’s link-local address.
+The show ipv6 route command lists the link-local address of the neighboring router, rather than the global unicast or unique local unicast address.
+
+Figure 24-8 IPv6 Using Link-Local Addresses as the Next-Hop Address Following are some key facts about link-local addresses:
+
+Unicast (not multicast): Link-local addresses represent a single host, and packets sent to a link-local address should be processed by only that one IPv6 host.
+
+Forwarding scope is the local link only: Packets sent to a link-local address do not leave the local data link because routers do not forward packets with link-local destination addresses.
+
+Automatically generated: Every IPv6 host interface (and router interface) can create its own link-local address automatically, solving some initialization problems for hosts before they learn a dynamically learned global unicast address.
+
+Common uses: Link-local addresses are used for some overhead protocols that stay local to one subnet and as the next-hop address for IPv6 routes.
+##### Creating Link-Local Addresses on Routers
+
+IPv6 hosts and routers can calculate their own link-local address, for each interface, using some basic rules.
+First, all link-local addresses start with the same prefix, as shown on the left side of Figure 24-9.
+By definition, the first 10 bits must match prefix FE80::/10, meaning that the first three hex digits will be either FE8, FE9, FEA, or FEB. However, when following the RFC, the next 54 bits should be binary 0, so the link-local address should always start with FE80:0000:0000:0000 as the first four unabbreviated quartets.
+
+Figure 24-9 Link-Local Address Format The second half of the link-local address, in practice, can be formed using EUI-64 rules, can be randomly generated, or even configured.
+Cisco routers use the EUI-64 format to create the interface ID (see the earlier section “Generating a Unique Interface ID Using Modified EUI-64”).
+As a result, a router’s complete link-local address should be unique because the MAC address that feeds into the EUI-64 process should be unique.
+
+Alternately, some OSs create their link-local addresses by randomly generating the interface ID. For example, Microsoft OSs use a somewhat random process to choose the interface ID and change it over time in an attempt to prevent some forms of attacks.
+
+IOS creates a link-local address for any interface that has configured at least one other unicast address using the ipv6 address command (global unicast or unique local).
+To see the link-local address, just use the usual commands that also list the unicast IPv6 address: show ipv6 interface and show ipv6 interface brief.
+Note that Example 24-7 shows an example from Router R1 just after it was configured as shown in Example 24-5 (with the eui-64 keyword on the ipv6 address commands).
+
+Example 24-7 Comparing Link-Local Addresses with EUI-Generated Unicast Addresses Example end.
+
+First, examine the two pairs of highlighted entries in the example.
+For each of the two interfaces that have a global unicast address (G0/0 and G0/0/0), the output lists the global unicast, which happens to begin with 2001 in this case.
+At the same time, the output also lists the link-local address for each interface, beginning with FE80.
+
+Next, focus on the two addresses listed under interface G0/0.
+If you look closely at the second half of the two addresses listed for interface G0/0, you will see that both addresses have the same interface ID value.
+The global unicast address was configured in this case with the ipv6 address 2001:DB8:1111:1::/64 eui-64 command, so the router used EUI-64 logic to form both the global unicast address and the link-local address.
+The interface MAC address in this case is 0201.AA00.0001, so the router calculates an interface ID portion of both addresses as 0001:AAFF:FE00:0001 (unabbreviated).
+After abbreviation, Router R1’s linklocal address on interface G0/0 becomes FE80::AAFF:FE00:1.
+
+IOS can either automatically create the link-local address, or it can be configured.
+IOS chooses the link-local address for the interface based on the following rules:
+###### If configured, the router uses the value in the ipv6 address address link-local interface
+
+subcommand.
+Note that the configured link-local address must be from the correct address range for link-local addresses; that is, an address from prefix FE80::/10.
+In other words, the address must begin with FE8, FE9, FEA, or FEB.
+###### If not configured, the IOS calculates the link-local address using EUI-64 rules, as discussed
+
+and demonstrated in and around Example 24-7.
+The calculation uses EUI-64 rules even if the interface unicast address does not use EUI-64.
+##### Routing IPv6 with Only Link-Local Addresses on an Interface
+
+This chapter has shown four variations on the ipv6 address command so far.
+To review:
+
+ipv6 address address/prefix-length: Static configuration of a specific address ipv6 address prefix/prefix-length eui-64: Static configuration of a specific prefix and prefix length, with the router calculating the interface ID using EUI-64 rules ipv6 address dhcp: Dynamic learning on the address and prefix length using DHCP ipv6 address autoconfig: Dynamic learning of the prefix and prefix length, with the router calculating the interface ID using EUI-64 rules (SLAAC)
+
+This next short topic completes the list with the following command:
+
+ipv6 enable: Enables IPv6 processing and adds a link-local address, but adds no other unicast IPv6 addresses.
+
+The purpose of the ipv6 enable command will not make sense until you realize that some links, particularly WAN links, do not need a global unicast address.
+Using the backdrop of Figure 24-10, think about the destination of packets sent by hosts like PC1 and PC2. When PC1 sends PC2 an IPv6 packet, the packet holds PC1’s and PC2’s IPv6 addresses and never contains the WAN link’s IPv6 addresses.
+PC1 and PC2 may need to know the routers’ LAN IPv6 addresses, to use as their default gateway, but the hosts do not need to know the routers’
+
+WAN interface addresses.
+
+Figure 24-10 Typical Use of the ipv6 enable Command Additionally, the routers do not need to have global unicast (or unique local) addresses on the WAN links for routing to work.
+IPv6 routing protocols use link-local addresses as the next-hop address when dynamically building IPv6 routes.
+Additionally, static routes, as discussed in Chapter 25, “Implementing IPv6 Routing,” can use link-local addresses for the next-hop address.
+
+In short, creating a WAN link with no global unicast (or unique local) addresses works.
+As a result, you would not even need to assign an IPv6 subnet to each WAN link.
+Then to configure the WAN interfaces, use the ipv6 enable command, enabling IPv6 and giving each interface a generated link-local IPv6 address.
+
+To use the command, just configure the ipv6 enable command on the interfaces on both ends of the WAN link.
+##### IPv6 Multicast Addresses
+
+IPv6 uses multicast IPv6 addresses for several purposes.
+Like IPv4, IPv6 includes a range of multicast addresses that can be used by multicast applications, with many of the same fundamental concepts as IPv4 multicasts.
+For instance, IANA defines the range FF30::/12 (all IPv6 addresses that begin with FF3) as the range of addresses to be used for some types of multicast applications.
+
+Additionally, different IPv6 RFCs reserve multicast addresses for specific purposes.
+For instance, OSPFv3 uses FF02::5 and FF02::6 as the all-OSPF-routers and all-DR-Routers multicast addresses, respectively, similar to how OSPFv2 uses IPv4 addresses 224.0.0.5 and 224.0.0.6 for the equivalent purposes.
+
+This next section focuses on IPv6 multicast addresses reserved for use with different protocols.
+
+The first, link-local multicast addresses, are multicast addresses useful for communicating over a single link.
+The other type is a special overhead multicast address calculated for each host, called the solicited-node multicast address.
+##### Reserved Multicast Addresses
+
+Stop for a moment and think about some of the control plane protocols discussed throughout this book so far.
+Some of those IPv4 control plane protocols used IPv4 broadcasts, meaning that the packet destination address was either 255.255.255.255 (the address for all hosts in the local LAN) or the subnet broadcast address (the address for all hosts in that specific subnet).
+Those broadcast packets were then sent as Ethernet broadcast frames, destined to the Ethernet broadcast address of FFFF.FFFF.FFFF.
+
+While useful, the IPv4 approach of IPv4 broadcast and LAN broadcast requires every host in the VLAN to process the broadcast frame, even if only one other device needed to think about the message.
+Also, each host has to process the frame, then packet, read the type of message, and so on, before ignoring the task.
+For example, an IPv4 ARP Request—an IPv4 and LAN broadcast—requires a host to process the Ethernet, IP, and ARP details of the message before deciding whether to reply or not.
+
+IPv6, instead of using Layer 3 and Layer 2 broadcasts, instead uses Layer 3 multicast addresses, which in turn cause Ethernet frames to use Ethernet multicast addresses.
+As a result:
+###### All the hosts that should receive the message receive the message, which is necessary for
+
+the protocols to work.
+However…
+###### …Hosts that do not need to process the message can make that choice with much less
+
+processing as compared to IPv4.
+
+For instance, OSPFv3 uses IPv6 multicast addresses FF02::5 and FF02::6.
+In a subnet, the OSPFv3 routers will listen for packets sent to those addresses.
+However, all the endpoint hosts do not use OSPFv3 and should ignore those OSPFv3 messages.
+If a host receives a packet with FF02::5 as the destination IPv6 address, the host can ignore the packet because the host knows it does not care about packets sent to that multicast address.
+That check takes much less time than the equivalent checks with IPv4.
+
+Table 24-3 lists the most common reserved IPv6 multicast addresses.
+
+Table 24-3 Key IPv6 Local-Scope Multicast Addresses Table end.
+
+NOTE An Internet search of “IPv6 Multicast Address Space Registry” will show the IANA page that lists all the reserved values and the RFC that defines the use of each address.
+
+Example 24-8 repeats the output of the show ipv6 interface command to show the multicast addresses used by Router R1 on its G0/0 interface.
+In this case, the highlighted lines show the all-nodes address (FF02::1), all-routers (FF02::2), and two for OSPFv3 (FF02::5 and FF02::6).
+Note that the IPv6 multicast addresses that the router interface is listening for and processing are listed under the heading “Joined group address(es):” at the top of the highlighted section of the output.
+
+Example 24-8 Verifying Static IPv6 Addresses on Router R1 Example end.
+##### Multicast Address Scopes
+
+IPv6 RFC 4291 defines IPv6 addressing including the ideas of IPv6 address scope.
+Each scope defines a different set of rules about whether routers should or should not forward a packet, and how far routers should forward packets, based on those scopes.
+
+For instance, you read earlier in this chapter about the link-local address on an interface—a unicast IPv6 address—but with a link-local scope.
+The scope definition called “link-local”
+
+dictates that packets sent to a link-local unicast address should remain on the link and not be forwarded by any router.
+
+Most of the scope discussion in RFC 4291 applies to multicast addresses, using the term multicast scope.
+Per that RFC, the fourth digit of the multicast address identifies the scope, as noted in Table 24-4.
+
+Table 24-4 IPv6 Multicast Scope Terms Table end.
+
+Breaking down the concepts a little further, packets sent to a multicast address with a linklocal scope should stay on the local link, that is, the local subnet.
+Hosts know they can process a link-local packet if received, as do routers.
+However, routers know to not route the packet to other subnets because of the scope.
+Packets with an organization-local scope should be routed inside the organization but not out to the Internet or over a link to another company. (Note that routers can predict the boundaries of some scopes, like link-local, but they need configuration to know the boundaries of other scopes, for instance, organizationlocal.)
+
+Comparing a few of the scopes in terms of where the packets can flow, the higher the value in the fourth hex digit, the further away from the sending host the scope allows the packet to be forwarded.
+Table 24-4 shows that progression top to bottom, while Figure 24-11 shows an example with three scopes: link-local, site-local, and organization-local.
+In the figure, site-local messages do not cross the WAN, and organization-local messages do not leave the organization over the link to the Internet.
+
+Figure 24-11 IPv6 Multicast Scopes Finally, the term link-local has a couple of common uses in IPv6 and can be confusing as a result.
+The following descriptions should clarify the different uses of the term:
+
+Link-local address: An IPv6 address that begins FE80.
+This serves as a unicast address for an interface to which devices apply a link-local scope.
+Devices often create their own linklocal addresses using EUI-64 rules.
+A more complete term for comparison would be linklocal unicast address.
+
+Link-local multicast address: An IPv6 address that begins with FF02.
+This serves as a reserved multicast address to which devices apply a link-local scope.
+
+Link-local scope: A reference to the scope itself, rather than an address.
+This scope defines that routers should not forward packets sent to an address in this scope.
+##### Solicited-Node Multicast Addresses
+
+IPv6 Neighbor Discovery Protocol (NDP) replaces IPv4 ARP, as discussed in Chapter 25.
+
+NDP improves the MAC-discovery process by sending IPv6 multicast packets that can be processed by the correct host but discarded with less processing by the rest of the hosts in the subnet.
+The process uses the solicited-node multicast address associated with the unicast IPv6 address.
+
+Figure 24-12 shows how to determine the solicited node multicast address associated with a unicast address.
+Start with the predefined /104 prefix (26 hex digits) shown in Figure 24-12.
+In other words, all the solicited-node multicast addresses begin with the abbreviated FF02::1:FF. In the last 24 bits (6 hex digits), copy the last 6 hex digits of the unicast address into the solicited-node address.
+
+Figure 24-12 Solicited-Node Multicast Address Format Note that a host or router calculates a matching solicited node multicast address for every unicast address on an interface.
+Example 24-9 shows an example, in which the router interface has a unicast address of 2001:DB8:1111:1::1/64, and a link-local address of FE80::AA:AAAA. As a result, the interface has two solicited node multicast addresses, shown at the end of the output.
+
+Example 24-9 Verifying Static IPv6 Addresses on Router R1 Example end.
+
+Note that in this case, R1’s global unicast address ends with 00:0001 (unabbreviated), resulting in an unabbreviated solicited node multicast address of FF02:0000:0000:0000:0000:
+
+0001:FF00:00001.
+This value begins with the 26-hex-digit prefix shown in Figure 24-12, followed by 00:0001.
+The solicited node multicast address corresponding to link-local address FE80::AA:AAAA ends in AA:AAAA and is shown in the last line of the example.
+#### Miscellaneous IPv6 Addresses
+
+Together, this chapter and the preceding chapter have introduced most of the IPv6 addressing concepts included in this book.
+This short topic mentions a few remaining IPv6 addressing ideas and summarizes the topics for easy study.
+
+First, all IPv6 hosts can use two additional special addresses:
+###### The unknown (unspecified) IPv6 address, ::, or all 0s
+###### The loopback IPv6 address, ::1, or 127 binary 0s with a single 1
+
+A host can use the unknown address (::) when its own IPv6 address is not yet known or when the host wonders if its own IPv6 address might have problems.
+For example, hosts use the unknown address during the early stages of dynamically discovering their IPv6 address.
+
+When a host does not yet know what IPv6 address to use, it can use the :: address as its source IPv6 address.
+
+The IPv6 loopback address gives each IPv6 host a way to test its own protocol stack.
+Just like the IPv4 127.0.0.1 loopback address, packets sent to ::1 do not leave the host but are instead simply delivered down the stack to IPv6 and back up the stack to the application on the local host.
+#### Anycast Addresses
+
+Imagine that routers collectively need to implement some service.
+Rather than have one router supply that service, that service works best when implemented on several routers.
+But the hosts that use the service need to contact only the nearest such service, and the network wants to hide all these details from the hosts.
+Hosts can send just one packet to an IPv6 address, and the routers will forward the packet to the nearest router that supports that service by virtue of supporting that destination IPv6 address.
+
+IPv6 anycast addresses provide that exact function.
+The any part of the name refers to the fact that any instances of the service can be used.
+Figure 24-13 shows this big concept, with two major steps:
+
+Step 1.
+Two routers configure the exact same IPv6 address, designated as an anycast address, to support some service.
+
+Step 2.
+In the future, when any router receives a packet for that anycast address, the other routers simply route the packet to the nearest router that supports the address.
+
+Figure 24-13 IPv6 Anycast Addresses To make this anycast process work, the routers implementing the anycast address must be configured and then advertise a route for the anycast address.
+The addresses do not come from a special reserved range of addresses; instead, they are from the unicast address range.
+
+Often, the address is configured with a /128 prefix so that the routers advertise a host route for that one anycast address.
+At that point, the routing protocol advertises the route just like any other IPv6 route; the other routers cannot tell the difference.
+
+Example 24-10 shows a sample configuration on a router.
+Note that the actual address (2001:1:1:2::99) looks like any other unicast address; the value can be chosen like any other IPv6 unicast addresses.
+However, note the different anycast keyword on the ipv6 address command, telling the local router that the address has a special purpose as an anycast address.
+Finally, note that the show ipv6 interface command does identify the address as an anycast address, but the show ipv6 interface brief command does not.
+
+Example 24-10 Configuring and Verifying IPv6 Anycast Addresses Example end.
+
+NOTE The subnet router anycast address is one special anycast address in each subnet.
+
+It is reserved for use by routers as a way to send a packet to any router on the subnet.
+The address’s value in each subnet is the same number as the subnet ID; that is, the address has the same prefix value as the other addresses and all binary 0s in the interface ID.
+#### IPv6 Addressing Configuration Summary
+
+This chapter completes the discussion of various IPv6 address types, while showing how to enable IPv6 on interfaces.
+Many implementations will use the ipv6 address command on each router LAN interface, and either that same command or the ipv6 enable command on the WAN interfaces.
+For exam prep, Table 24-5 summarizes the various commands and the automatically generated IPv6 addresses in one place for review and study.
+
+Table 24-5 Summary of IPv6 Address Types and the Commands That Create Them Table end.
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 24-6 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 24-6 Chapter Review Tracking Table end.
+
+Review All the Key Topics Key Terms You Should Know anycast address, dual stacks, EUI-64, link-local address, link-local scope, link-local multicast address, site-local scope, organization-local scope, interface-local scope, IPv6 address scope, solicited-node multicast address, all-nodes multicast address, all-routers multicast address, subnet-router anycast address Additional Practice for This Chapter’s Processes For additional practice with IPv6 abbreviations, you may do the same set of practice problems using your choice of tools:
+
+For additional practice with calculating IPv6 address using EUI-64 rules and finding the solicited-node multicast address based on a unicast address, use the exercises in Appendix options to use:
+
+PDF: Navigate to the companion website and open the PDF for Appendix H.
+
+Application: Navigate to the companion website and open the application “Practice Exercise: EUI-64 and Solicited Node Multicast Problems”
+
+Additionally, you can create your own problems using any real router or simulator: Get into the router CLI, into configuration mode, and configure the mac-address address and ipv6 address prefix/64 eui-64 command.
+Then predict the IPv6 unicast address, link-local address, and solicited-node multicast address; finally, check your predictions against the show ipv6 interface command.
+
+Command References Tables 24-8 and 24-9 list configuration and verification commands used in this chapter.
+As an easy review exercise, cover the left column in a table, read the right column, and try to recall the command without looking.
+Then repeat the exercise, covering the right column, and try to recall what the command does.
+
+Table 24-8 Chapter 24 Configuration Command Reference Table end.
+
+Table 24-9 Chapter 24 EXEC Command Reference Table end.
+
+Answers to Earlier Practice Problems Table 24-2, earlier in this chapter, listed several practice problems in which you needed to calculate the IPv6 address based on EUI-64 rules.
+Table 24-10 lists the answers to those problems.
+
+Table 24-10 Answers to IPv6 EUI-64 Address Creation Practice Table end.
+## Chapter 25 Implementing IPv6 Routing
+###### 3.0 IP Connectivity
+###### 3.3 Configure and verify IPv4 and IPv6 static routing
+###### 3.3.a Default route
+###### 3.3.b Network route
+###### 3.3.c Host route
+###### 3.3.d Floating static
+
+This last chapter in Part VII of the book completes the materials about IPv6 by examining three major topics.
+The first section examines IPv6 connected and local routes, similar to IPv4, showing how a router adds both connected and local routes based on each interface IPv6 address.
+The second major section of this chapter then looks at how to configure static IPv6 routes by typing in commands, in this case using the ipv6 route command instead of IPv4’s ip route command.
+The final major section examines the Neighbor Discovery Protocol (NDP).
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 25-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### Connected and Local IPv6 Routes
+
+Static IPv6 Routes 3–6 The Neighbor Discovery Protocol 7–8 Refer to the following figure for questions 1, 3, and 4.
+
+2000:1:2:56::6 S0/1/1 R5 R6 G0/1 Subnet 2000:1:2:3:: /64 FE80::FF:FE00:6 G0/0 S0/1/0 2000:1:2:56::5 FE80::FF:FE00:5 CHAPTER 25 1.
+A router has been configured with the ipv6 address 2000:1:2:3::1/64 command on its G0/1 interface as shown in the figure.
+The router creates a link-local address of FE80::FF:FE00:1 as well.
+The interface is working.
+Which of the following routes will the router add to its IPv6 routing table? (Choose two answers.)
+
+a. A route for 2000:1:2:3::/64 b.
+A route for FE80::FF:FE00:1/64 c.
+A route for 2000:1:2:3::1/128 d.
+A route for FE80::FF:FE00:1/128 2.
+A router has been configured with the ipv6 address 3111:1:1:1::1/64 command on its G0/1 interface and ipv6 address 3222:2:2:2::1/64 on its G0/2 interface.
+Both interfaces are working.
+Which of the following routes would you expect to see in the output of the show ipv6 route connected command? (Choose two answers.)
+
+a. A route for 3111:1:1:1::/64 b.
+A route for 3111:1:1:1::1/64 c.
+A route for 3222:2:2:2::/64 d.
+A route for 3222:2:2:2::2/128 3.
+An engineer needs to add a static IPv6 route for prefix 2000:1:2:3::/64 to Router R5’s configuration, in the figure shown with question 1.
+Which of the following answers shows a valid static IPv6 route for that subnet, on Router R5?
+
+a. ipv6 route 2000:1:2:3::/64 S0/1/1 b. ipv6 route 2000:1:2:3::/64 S0/1/0 c. ip route 2000:1:2:3::/64 S0/1/1 d. ip route 2000:1:2:3::/64 S0/1/0 4.
+An engineer needs to add a static IPv6 route for prefix 2000:1:2:3::/64 to Router R5 in the figure shown with question 1.
+Which of the following answers shows a valid static IPv6 route for that subnet on Router R5?
+
+a. ipv6 route 2000:1:2:3::/64 2000:1:2:56::5 b. ipv6 route 2000:1:2:3::/64 2000:1:2:56::6 c. ipv6 route 2000:1:2:3::/64 FE80::FF:FE00:5 d. ipv6 route 2000:1:2:3::/64 FE80::FF:FE00:6 5.
+An engineer types the command ipv6 route 2001:DB8:8:8::/64 2001:DB8:9:9::9 129 in configuration mode of Router R1 and presses Enter.
+Later, a show ipv6 route command does not list any route for subnet 2001:DB8:8:8::/64.
+Which of the following could have caused the route to not be in the IPv6 routing table?
+
+a. The command should be using a next-hop link-local address instead of a global unicast.
+
+b. The command is missing an outgoing interface parameter, so IOS rejected the ipv6 route command.
+
+c. The router has no routes that match 2001:DB8:9:9::9.
+
+d. A route for 2001:DB8:8:8::/64 with administrative distance 110 already exists.
+
+6. The command output shows two routes from the longer output of the show ipv6 route command.
+Which answers are true about the output? (Choose two answers.)
+
+R1# show ipv6 route static !
+Legend omitted for brevity S 2001:DB8:2:2::/64 [1/0]
+
+via 2001:DB8:4:4::4 S ::/0 [1/0]
+
+via Serial0/0/1, directly connected a.
+The route to ::/0 is added because of an ipv6 route global command.
+
+b. The administrative distance of the route to 2001:DB8:2:2::/64 is 1.
+
+c. The route to ::/0 is added because of an ipv6 address interface subcommand.
+
+d. The route to 2001:DB8:2:2::/64 is added because of an IPv6 routing protocol.
+
+7. PC1, PC2, and Router R1 all connect to the same VLAN and IPv6 subnet.
+PC1 wants to send its first IPv6 packet to PC2. What protocol or message will PC1 use to discover the MAC address to which PC1 should send the Ethernet frame that encapsulates this IPv6 packet?
+
+a. ARP b.
+NDP NS c.
+NDP RS d.
+SLAAC 8.
+Which of the following pieces of information does a router supply in an NDP Router Advertisement (RA) message? (Choose two answers.)
+
+a. Router IPv6 address b.
+Host name of the router c.
+IPv6 prefix(es) on the link d.
+IPv6 address of DHCP server Foundation Topics Connected and Local IPv6 Routes A Cisco router adds IPv6 routes to its IPv6 routing table for several reasons.
+Many of you could predict those reasons at this point in your reading, in part because the logic mirrors the logic routers use for IPv4.
+Specifically, a router adds IPv6 routes based on the following:
+###### The configuration of IPv6 addresses on working interfaces (connected and local routes)
+###### The direct configuration of a static route (static routes)
+###### The configuration of a routing protocol, like OSPFv3, on routers that share the same data
+
+link (dynamic routes)
+
+The first two sections of this chapter examine the first of these two topics, with discussions of IPv6 routing protocols now residing in the CCNP Enterprise exams.
+#### Rules for Connected and Local Routes
+
+Routers add and remove connected routes and local routes, based on the interface configuration and the interface state.
+First, the router looks for any configured unicast addresses on any interfaces by looking for the ipv6 address command.
+Then, if the interface is working—if the interface has a “line status is up, protocol status is up” notice in the output of the show interfaces command—the router adds both a connected and local route.
+
+NOTE Routers do not create connected or local IPv6 routes for link-local addresses.
+
+The connected and local routes themselves follow the same general logic as with IPv4.
+The connected route represents the subnet connected to the interface, whereas the local route is a host route for only the specific IPv6 address configured on the interface.
+
+As an example, consider a router, with a working interface, configured with the ipv6 address 2000:1:1:1::1/64 command.
+The router will calculate the subnet ID based on this address and prefix length, and it will place a connected route for that subnet (2000:1:1:1::/64) into the routing table.
+The router also takes the listed IPv6 address and creates a host route for that address, with a /128 prefix length. (With IPv4, host routes have a /32 prefix length, while IPv6 uses a /128 prefix length, meaning “exactly this one address.”)
+
+The following list summarizes the rules about how routers create routes based on the configuration of an interface IPv6 unicast address, for easier review and study:
+
+1. Routers create IPv6 routes based on each unicast IPv6 address on an interface, as configured with the ipv6 address command, as follows:
+
+A. The router creates a route for the subnet (a connected route).
+
+B. The router creates a host route (/128 prefix length) for the router IPv6 address (a local route).
+
+2. Routers do not create routes based on the link-local addresses associated with the interface.
+
+3. Routers remove the connected and local routes for an interface if the interface fails, and they re-add these routes when the interface is again in a working (up/up) state.
+#### Example of Connected IPv6 Routes
+
+While the concept of connected and local IPv6 routes works much like IPv4 routes, seeing a few examples can certainly help.
+To show some sample routes, Figure 25-1 gives the details of one sample internetwork used in this chapter.
+The figure shows the IPv6 subnet IDs. The upcoming examples focus on the connected and local routes on Router R1.
+
+Figure 25-1 Sample Network Used to Show Connected and Local Routes To clarify the notes in Figure 25-1, note that the figure shows IPv6 prefixes (subnets), with a shorthand notation for the interface IPv6 addresses.
+The figure shows only the abbreviated interface ID portion of each interface address near each interface.
+For example, R1’s G0/0 interface address would begin with subnet ID value 2001:DB8:1111:1, added to ::1, for 2001:DB8:1111:1::1.
+
+Now on to the example of connected routes.
+To begin, consider the configuration of Router R1 from Figure 25-1, as shown in Example 25-1.
+The excerpt from the show running-config command on R1 shows three interfaces, all of which are working.
+Also note that no static route or routing protocol configuration exists.
+
+Example 25-1 IPv6 Addressing Configuration on Router R1 Example end.
+
+Answers to the “Do I Know This Already?” quiz:
+
+1 A, C 2 A, C 3 A 4 B 5 C 6 A, B 7 B 8 A, C Based on Figure 25-1 and Example 25-1, R1 should have three connected IPv6 routes, as highlighted in Example 25-2.
+
+Example 25-2 Routes on Router R1 Before Adding Static Routes or Routing Protocols Example end.
+
+All three highlighted routes show the same basic kinds of information, so for discussion, focus on the first pair of highlighted lines, which detail the connected route for subnet 2001:DB8:1111:1::/64.
+The first pair of highlighted lines state: The route is a “directly connected” route; the interface ID is GigabitEthernet0/0; and the prefix/length is 2001:DB8:1111:1::/64.
+At the far left, the code letter “C” identifies the route as a connected route (per the legend above).
+Also note that the numbers in brackets mirror the same ideas as IPv4’s show ip route command: The first number represents the administrative distance, and the second is the metric.
+#### Examples of Local IPv6 Routes
+
+Continuing this same example, three local routes should exist on R1 for the same three interfaces as the connected routes.
+Indeed, that is the case, with one extra local route for other purposes.
+Example 25-3 shows only the local routes, as listed by the show ipv6 route local command, with highlights of one particular local route for discussion.
+
+Example 25-3 Local IPv6 Routes on Router R1 Example end.
+
+For the highlighted local route, look for a couple of quick facts.
+First, look back to R1’s configuration in Example 25-1, and note R1’s IPv6 address on its G0/0 interface.
+This local route lists the exact same address.
+Also note the /128 prefix length, meaning this route matches packets sent to that address (2001:DB8:1111:1::1), and only that address.
+
+NOTE While the show ipv6 route local command shows all local IPv6 routes, the show ipv6 route connected command shows all connected routes.
+### Static IPv6 Routes
+
+While routers automatically add connected and local routes based on the interface configuration, static routes require direct configuration with the ipv6 route command.
+Simply put, someone configures the command, and the router places the details from the command into a route in the IPv6 routing table.
+
+The ipv6 route command follows the same general logic as does IPv4’s ip route command, as discussed in Chapter 16, “Configuring IPv4 Addressing and Static Routes.” For IPv4, the ip route command starts by listing the subnet ID and mask, so for IPv6, the ipv6 route command begins with the prefix and prefix length.
+Then the respective commands list the directions of how this router should forward packets toward that destination subnet or prefix by listing the outgoing interface or the address of the next-hop router.
+
+Figure 25-2 shows the concepts behind a single ipv6 route command, demonstrating the concepts behind a static route on Router R1 for the subnet on the right (subnet 2, or 2001:DB8:1111:2::/64).
+A static route on R1, for this subnet, will begin with ipv6 route 2001:DB8:1111:2::/64, followed by either the outgoing interface (S0/0/0) or the next-hop IPv6 address, or both.
+
+Now that you understand the big ideas with IPv6 static routes, the next few pages walk you through a series of examples.
+In particular, the examples look at configuring static routes with an outgoing interface, then with a next-hop global unicast address, and then with a next-hop link-local address.
+This section ends with a discussion of static IPv6 default routes.
+
+Figure 25-2 Logic Behind IPv6 Static Route Commands (IPv6 Route)
+#### Static Routes Using the Outgoing Interface
+
+This first IPv6 static route example uses the outgoing interface option.
+As a reminder, for both IPv4 and IPv6 static routes, when the command references an interface, the interface is a local interface.
+That is, it is an interface on the router where the command is added.
+In this case, as shown in Figure 25-2, R1’s ipv6 route command would use interface S0/0/0, as shown in Example 25-4.
+
+Example 25-4 Static IPv6 Routes on Router R1 Example end.
+
+While Example 25-4 shows the correct syntax of the route, if using static routes throughout this internetwork, more static routes are needed.
+For example, to support traffic between hosts A and B, R1 is now prepared.
+Host A will forward all its IPv6 packets to its default router (R1), and R1 can now route those packets out S0/0/0 to R2 next.
+However, Router R2 does not yet have a route back to host A’s subnet, subnet 1 (2001:DB8:1111:1::/64), so a complete solution requires more routes.
+
+Example 25-5 solves this problem by giving Router R2 a static route for subnet 1 (2001:DB8:1111:1::/64).
+After this route is added, hosts A and B should be able to ping each other.
+
+Example 25-5 Static IPv6 Routes on Router R2 Example end.
+
+Many options exist for verifying the existence of the static route and testing whether hosts can use the route. ping and traceroute can test connectivity.
+From the router command line, the show ipv6 route command will list all the IPv6 routes.
+The shorter output of the show ipv6 route static command, which lists only static routes, could also be used; Example 25-6 shows that output, with the legend omitted.
+
+Example 25-6 Verification of Static Routes Only on R1 Example end.
+
+This command lists many facts about the one static route on R1. First, the code “S” in the left column does identify the route as a static route. (However, the later phrase “directly connected”
+
+might mislead you to think this is a connected route; trust the “S” code.) Note that the prefix (2001:DB8:1111:2::/64) matches the configuration (in Example 25-4), as does the outgoing interface (S0/0/0).
+
+While this command lists basic information about each static route, it does not state whether this route would be used when forwarding packets to a particular destination.
+For example, if host A sent an IPv6 packet to host B (2001:DB8:1111:2::22), would R1 use this static route?
+As it turns out, R1 would use that route, as confirmed by the show ipv6 route 2001:DB8:1111:2::22 command.
+This command asks the router to list the route that the router would use when forwarding packets to that particular address.
+Example 25-7 shows an example.
+
+Example 25-7 Displaying the Route R1 Uses to Forward to Host B Example end.
+#### Static Routes Using Next-Hop IPv6 Address
+
+The previous example used a serial WAN link on purpose.
+With a point-to-point WAN link, the ipv6 route command can use the outgoing interface style of configuration Static IPv6 routes that refer to a next-hop address have two options: the unicast address on the neighboring router (global unicast or unique local) or the link-local address of that same neighboring router.
+Figure 25-3 spells out those two options with an updated version of Figure 25-2, this time showing Router R2’s global unicast as well as R2’s link-local address.
+
+Figure 25-3 Using Unicast or Link-Local as the Next-Hop Address for Static Routes The next few pages walk you through examples, first with a global unicast as a next-hop and then with a link-local as a next-hop.
+##### Example Static Route with a Global Unicast Next-Hop Address
+
+This example uses the internetwork shown in Figure 25-3, but with the earlier static routes removed.
+That is, both routers have only connected and local routes to begin the example.
+
+In Example 25-8, both R1 and R2 add static routes that refer to the neighbor’s global unicast address.
+R1 adds a route for subnet 2 (on the right), while R2 adds a route for subnet 1 (on the left).
+Note that the example shows routes in both directions so that the two hosts can send packets to each other.
+
+Example 25-8 Static IPv6 Routes Using Global Unicast Addresses Example end.
+
+The ipv6 route command itself is relatively straightforward.
+Focus on R1’s route, which matches the logic shown in Figure 25-3.
+The command lists subnet 2 (2001:DB8:1111:2::/64).
+
+It then lists R2’s global unicast address (ending in 4::2).
+
+The verification commands on R1, as shown in Example 25-9, list the usual information.
+
+Example 25-9 shows two commands, first listing R1’s only static route (the one configured in Example 25-8).
+The end of the example lists the show ipv6 route 2001:DB8:1111:2::22 command, which lists the route R1 uses when forwarding packets to Host B, proving that R1 uses this new static route when forwarding packets to that host.
+
+Example 25-9 Verification of Static Routes to a Next-Hop Global Unicast Address Example end.
+##### Example Static Route with a Link-Local Next-Hop Address
+
+Static routes that refer to a neighbor’s link-local address work a little like both of the preceding two styles of static routes.
+First, the ipv6 route command refers to a next-hop address, namely a link-local address.
+However, the command must also refer to the router’s local outgoing interface.
+Why both?
+The ipv6 route command cannot simply refer to a link-local next-hop address by itself because the link-local address does not, by itself, tell the local router which outgoing interface to use.
+
+Interestingly, when the ipv6 route command refers to a global unicast next-hop address, the router can deduce the outgoing interface.
+For example, the earlier example on R1, as shown in Example 25-8, shows R1 with a static IPv6 route with a next-hop IPv6 address of 2001:DB8:1111:4::2.
+R1 can look at its IPv6 routing table, see its connected route that includes this 2001:DB8:1111:4::2 address, and see a connected route off R1’s S0/0/0.
+As a result, with a next-hop global unicast address, R1 can deduce the correct outgoing interface (R1’s S0/0/0).
+
+With a link-local next-hop address, a router cannot work through this same logic, so the outgoing interface must also be configured.
+Example 25-10 shows the configuration of static routes on R1 and R2, replacements for the two routes previously configured in Example 25-8.
+
+Example 25-10 Static IPv6 Routes Using Link-Local Neighbor Addresses Example end.
+
+Example 25-11 verifies the configuration in Example 25-10 by repeating the show ipv6 route static and show ipv6 route 2001:DB8:1111:2::22 commands used in Example 25-9.
+
+Note that the output from both commands differs slightly in regard to the forwarding details.
+Because the new commands list both the next-hop address and outgoing interface, the show commands also list both the next-hop (link-local) address and the outgoing interface.
+
+If you refer back to Example 25-9, you will see only a next-hop address listed.
+
+Example 25-11 Verification of Static Routes to a Next-Hop Link-Local Address Example end.
+##### Static Routes over Ethernet Links
+
+You might have wondered why the chapter shows examples with a serial link, knowing that most networks use fewer and fewer serial links today.
+Using serial links in the examples avoids one complication when defining static routes that use Ethernet interfaces (LAN or WAN). The next example discusses the issues and shows configuration options for static routes when the outgoing interface is an Ethernet interface.
+
+To configure a static route that uses an Ethernet interface, the ipv6 route command’s forwarding parameters should always include a next-hop IPv6 address.
+IOS allows you to configure the ipv6 route command using only the outgoing-interface parameter, without listing a next-hop address.
+The router will accept the command; however, if that outgoing interface happens to be an Ethernet interface, the router cannot successfully forward IPv6 packets using the route.
+
+To configure the ipv6 route correctly when directing packets out an Ethernet interface, the configuration should use one of these styles:
+###### Refer to the next-hop global unicast address (or unique local address) only
+###### Refer to both the outgoing interface and next-hop global unicast address (or unique local
+
+address)
+###### Refer to both the outgoing interface and next-hop link-local address
+
+Example 25-12 shows a sample configuration from routers R1 and R3 in Figure 25-4.
+The top part of the figure shows the details for R1’s route to the subnet on the right side of the figure, with the details labeled with an “A.” The bottom half shows the details for R3’s route to the LAN subnet on the left of the figure, labeled with a “B.”.
+
+Figure 25-4 Network Details for IPv6 Static Routes on an Ethernet Interface Example 25-12 Static IPv6 Routes with an Ethernet WAN Interface Example end.
+#### Static Default Routes
+
+IPv6 supports a default route concept, similar to IPv4.
+The default route tells the router what to do with an IPv6 packet when the packet matches no other IPv6 route.
+The logic is pretty basic:
+###### With no default route, the router discards the IPv6 packet.
+###### With a default route, the router forwards the IPv6 packet based on the default route.
+
+Default routes can be particularly useful in a couple of network design cases.
+For example, with an enterprise network design that uses a single router at each branch office, with one WAN link to each branch, the branch routers have only one possible path over which to forward packets.
+In a large network, when using a routing protocol, the branch router could learn thousands of routes—all of which point back toward the core of the network over that one WAN link.
+
+Branch routers could use default routes instead of a routing protocol.
+The branch router would forward all traffic to the core of the network.
+Figure 25-5 shows just such an example, with two sample branch routers on the right and a core site router on the left.
+
+Figure 25-5 Using Static Default Routes at Branches to Forward Back to the Core To configure a static default route, use the same rules already discussed in this section of the chapter, but use a specific value to note the route as a default route: ::/0.
+Taken literally, the double colon (::) is the IPv6 abbreviation for all 0s, and the /0 means the prefix length is 0.
+
+This idea mirrors the IPv4 convention to refer to the default route as 0.0.0.0/0.
+Otherwise, just configure the ipv6 route command as normal.
+
+Example 25-13 shows one such sample static default route on Router B1 from Figure 25-5.
+
+This example uses the outgoing interface option.
+
+Example 25-13 Static Default Route for Branch Router B1 Example end.
+
+With IPv6, the router displays the default a little more cleanly than with IPv4.
+The show ipv6 route command simply includes the route in the output of the command, along with the other routes.
+Example 25-14 shows an example, with “::/0” listed to denote this route as the default route.
+
+Example 25-14 Router B1’s Static Default Route (Using Outgoing Interface)
+
+Example end.
+#### Static IPv6 Host Routes
+
+Both IPv4 and IPv6 allow the definition of static host routes—that is, a route to a single host IP address.
+With IPv4, those routes use a /32 mask, which identifies a single IPv4 address in the ip route command; with IPv6, a /128 mask identifies that single host in the ipv6 route command.
+
+A host route follows the same rules as a route for any other IPv6 subnet.
+For instance, if you refer back to Figure 25-3, host B sits on the right side of the figure.
+Earlier examples showed R1’s static routes for the subnet in which host B resides—for example, the routes for Router R1 in Examples 25-8 and 25-10.
+To create a host route on R1, referring to host B’s specific IPv6 address, just change those commands to refer to host B’s entire IPv6 address (2001:DB8:1111:2::22), with prefix length /128.
+
+Example 25-15 shows two sample host routes on Router R1. Both define a host route to host B’s IPv6 address as seen in Figure 25-3.
+One route uses Router R2’s link-local address as the next-hop address, and one route uses R2’s global unicast address as the next-hop address.
+
+Example 25-15 Static Host IPv6 Routes on R1, for Host B Example end.
+#### Floating Static IPv6 Routes
+
+Next, consider the case in which a static route competes with other static routes or routes learned by a routing protocol.
+For example, consider the topology shown in Figure 25-6, which shows a branch office with two WAN links: one very fast Gigabit Ethernet link and one rather slow (but cheap) T1. In this design, the network uses OSPFv3 to learn IPv6 routes over the primary link, learning a route for subnet 2001:DB8:1111:7::/64.
+R1 also defines a static route over the backup link to that exact same subnet, so R1 must choose whether to use the static route or the OSPF-learned route.
+
+Figure 25-6 Using a Floating Static Route to Key Subnet 2001:DB8:1111:7::/64 IOS considers static routes better than OSPF-learned routes by default due to administrative distance.
+IOS uses the same administrative distance concept and default values for IPv6 as it does for IPv4.
+As a result, a static IPv6 route over the lower path would be given an administrative distance of 1, and an OSPFv3-learned route over the top path would be given an administrative distance of 110.
+R1 would use the lower path to reach subnet 2001:DB8:1111:7::/64 in this case, which is not the intended design.
+Instead, the engineer prefers to use the OSPF-learned routes over the much-faster primary link and use the static route over the backup link only as needed when the primary link fails.
+
+To instead prefer the OSPF routes, the configuration would need to change the administrative distance settings and use what many networkers call a floating static route.
+Like an IPv4 floating static route, an IPv6 floating static route floats or moves into and out of the IPv6 routing table depending on whether the better (lower) administrative distance route learned by the routing protocol happens to exist currently.
+Basically, the router ignores the static route during times when the better routing protocol route is known.
+
+To implement an IPv6 floating static route, just override the default administrative distance on the static route, making the value larger than the default administrative distance of the routing protocol.
+For example, the ipv6 route 2001:db8:1111:7::/64 2001:db8:1111:9::3 130 command on R1 would do exactly that, setting the static route’s administrative distance to 130.
+As long as the primary link (G0/0) stays up, and OSPFv3 on R1 learns a route for 2001:db8:1111:7::/64 with OSPF’s default administrative distance of 110, R1 ignores the static route whose administrative distance is explicitly configured as 130.
+
+Finally, note that both the show ipv6 route and show ipv6 route 2001:db8:1111:7::/64 commands list the administrative distance.
+Example 25-16 shows a sample matching this most recent example.
+Note that in this case, the static route is in use in the IPv6 routing table.
+
+Example 25-16 Displaying the Administrative Distance of the Static Route Example end.
+
+Table 25-2 lists some of the default administrative distance values used with IPv6.
+
+Table 25-2 IOS Defaults for Administrative Distance Table end.
+#### Troubleshooting Static IPv6 Routes
+
+IPv6 static routes have the same potential issues and mistakes as do static IPv4 routes, as discussed in Chapter 16.
+However, IPv6 static routes do have a few small differences.
+This last part of the static route content in the chapter looks at troubleshooting IPv6 static routes, reviewing many of the same troubleshooting rules applied to IPv4 static routes, while focusing on the details specific to IPv6.
+
+This topic breaks static route troubleshooting into two perspectives: cases in which the route is in the routing table but is incorrect, and cases in which the route is not in the routing table.
+##### Troubleshooting Incorrect Static Routes That Appear in the IPv6 Routing Table
+
+A static route is only as good as the input typed into the ipv6 route command.
+IOS checks the syntax of the command, of course.
+However, IOS cannot tell if you choose the incorrect outgoing interface, incorrect next-hop address, or incorrect prefix/prefix-length in a static route.
+If the parameters pass the syntax checks, IOS places the ipv6 route command into the running-config file.
+Then, if no other problem exists (as discussed at the next heading), IOS puts the route into the IP routing table—even though the route may not work because of the poorly chosen parameters.
+
+For instance, an exam question might show a figure with Router R1 having an address of 2001:1:1:1::1 and neighboring Router R2 with an address of 2001:1:1:1::2.
+If R1 lists a static route with the command ipv6 route 3333::/64 2001:1:1:1::1, the command would be accepted by IOS with correct syntax, but it would not be effective as a route.
+Note that the command lists R1’s address as the next-hop address, and R1 cannot use its own IPv6 address as a next-hop address.
+IOS does not prevent the configuration of the command, however; it allows the command and adds the route to the IPv6 routing table, but the route cannot possibly forward packets correctly.
+
+When you see an exam question that has static routes, and you see them in the output of show ipv6 route, remember that the routes may have incorrect parameters.
+Check for these types of mistakes:
+
+Step 1.
+Prefix/Length: Does the ipv6 route command reference the correct subnet ID (prefix) and mask (prefix length)?
+
+Step 2.
+If using a next-hop IPv6 address that is a link-local address:
+
+A. Is the link-local address an address on the correct neighboring router? (It should be an address on another router on a shared link.)
+
+B. Does the ipv6 route command also refer to the correct outgoing interface on the local router?
+
+Step 3.
+If using a next-hop IPv6 address that is a global unicast or unique local address, is the address the correct unicast address of the neighboring router?
+
+Step 4.
+If referencing an outgoing interface, does the ipv6 route command reference the interface on the local router (that is, the same router where the static route is configured)?
+
+This troubleshooting checklist works through the various cases in which IOS would accept the configuration of the static IPv6 route, but the route would not work because of the incorrect parameters in context.
+It helps to see a few examples.
+Figure 25-7 shows a sample network to use for the examples; all the examples focus on routes added to Router R1, for the subnet on the far right.
+
+Figure 25-7 Sample Topology for Incorrect IPv6 Route Examples Example 25-17 shows five ipv6 route commands.
+All have correct syntax, but all have one incorrect value; that is, the route will not work because of the types of problems in the troubleshooting checklist.
+Look for the short comment at the end of each configuration command to see why each is incorrect.
+
+Example 25-17 IPv6 route Commands with Correct Syntax but Incorrect Ideas Example end.
+
+All these incorrect examples have correct syntax and would be added to R1’s IPv6 routing table if configured on R1. However, all have flaws.
+Working through the examples in order:
+
+Step 1.
+The prefix (2001:DB8:9:33::) has a typo in the fourth quartet (33 instead of 3).
+
+Step 2A.
+The figure shows R2’s G0/1 with link-local address FE80::2, but the command uses FE80::AAA9.
+
+Step 2B.
+The command uses the correct link-local address on R2’s address on the common link (FE80::2 per the figure), but it omits the outgoing interface of R1’s G0/2 interface. (See the next example for more detail.)
+
+Step 3.
+The figure shows the subnet in the center as 2001:DB8:9:2::/64, with R1 using the ::1 address and R2 using ::2.
+For the fourth command, R1’s command should use R2’s address 2001:DB8:9:2::2, but it uses R1’s own 2001:DB8:9:2::1 address instead.
+
+Step 4.
+As a command on R1, the outgoing interface references R1’s own interfaces.
+R1’s G0/1 is the interface on the left, whereas R1 should use its G0/2 interface on the right when forwarding packets to subnet 2001:DB8:9:3::/64.
+
+The key takeaway for this section is to know that a route in the IPv6 routing table may be incorrect due to poor choices for the parameters.
+The parameters should always include the neighboring router’s IPv6 addresses, but the local router’s interface type/number, and in all cases, the correct prefix/length.
+The fact that a route is in the IPv6 routing table, particularly a static route, does not mean it is a correct route.
+
+Note that of the five example commands in Example 25-17, IOS would accept all of them except the third one.
+IOS can notice the case of omitting the outgoing interface if the nexthop address is a link-local address.
+Example 25-18 shows a sample of the error message from IOS.
+
+Example 25-18 IOS Rejects the ipv6 route Command with Link-Local and No Outgoing Example end.
+##### The Static Route Does Not Appear in the IPv6 Routing Table
+
+The preceding few pages focused on IPv6 static routes that show up in the IPv6 routing table but unfortunately have incorrect parameters.
+The next page looks at IPv6 routes that have correct parameters, but IOS does not place them into the IPv6 routing table.
+
+When you add an ipv6 route command to the configuration, and the syntax is correct, IOS considers that route to be added to the IPv6 routing table.
+IOS makes the following checks before adding the route; note that IOS uses this same kind of logic for IPv4 static routes:
+###### For ipv6 route commands that list an outgoing interface, that interface must be in an
+
+up/up state.
+###### For ipv6 route commands that list a global unicast or unique local next-hop IP address
+
+(that is, not a link-local address), the local router must have a route to reach that next-hop address.
+###### If another IPv6 route exists for that exact same prefix/prefix-length, the static route must
+
+have a better (lower) administrative distance.
+### The Neighbor Discovery Protocol
+
+Similar to ICMP for IPv4, IPv6 defines the ICMP protocol for IPv6 (ICMPv6).
+However, ICMPv6 reaches further than ICMPv4, pulling in functions done by other miscellaneous protocols in IPv4.
+For instance, with IPv4, ARP works as a separate protocol; with IPv6, the Neighbor Discovery Protocol (NDP), a part of ICMPv6, performs the same functions.
+
+As it turns out, routers play a key role in several NDP protocol functions, so this final major section of the chapter explains a few of the functions of the NDP protocol (RFC 4861).
+
+Some of those NDP functions are Neighbor MAC Discovery: An IPv6 LAN-based host will need to learn the MAC address of other hosts in the same subnet.
+NDP replaces IPv4’s ARP, providing messages that replace the ARP Request and Reply messages.
+
+Router Discovery: Hosts learn the IPv6 addresses of the available IPv6 routers in the same subnet.
+
+SLAAC: When using Stateless Address Auto Configuration (SLAAC), the host uses NDP messages to learn the subnet (prefix) used on the link plus the prefix length.
+
+DAD: Before using an IPv6 address, hosts use NDP to perform a Duplicate Address Detection (DAD) process, to ensure no other host uses the same IPv6 address before attempting to use it.
+#### Discovering Neighbor Link Addresses with NDP NS and NA
+
+NDP replaces IPv4 ARP using a pair of matched solicitation and advertisement messages: the Neighbor Solicitation (NS) and Neighbor Advertisement (NA) messages.
+Basically, the NS acts like an IPv4 ARP request, asking the host with a particular unicast IPv6 address to send back a reply.
+The NA message acts like an IPv4 ARP Reply, listing that host’s MAC address.
+
+The process of sending the NS and NA messages follows the same general process with IPv4 ARP: the NS message asks for information, and the NA supplies the information, as summarized in this list:
+
+Neighbor Solicitation (NS): This message asks the host with a particular IPv6 address (the target address) to reply with an NA message that lists its MAC address.
+The NS message is sent to the solicited-node multicast address associated with the target address, so the message is processed only by hosts whose last six hex digits match the address that is being queried.
+
+Neighbor Advertisement (NA): This message lists the sender’s IPv6 and MAC addresses.
+
+It can be sent in reply to an NS message, and if so, the packet is sent to the IPv6 unicast address of the host that sent the original NS message.
+A host can also send an unsolicited NA, announcing its IPv6 and MAC addresses, in which case the message is sent to the all-
+
+IPv6-hosts local-scope multicast address FF02::1.
+
+NOTE With NDP, the word neighbor refers to the fact that the devices will be on the same data link—for example, the same VLAN.
+
+Figure 25-8 shows an example of how a host (PC1) uses an NS message to learn the MAC address used by another host.
+The NS message lists a target IPv6 unicast address, with the implied question: “What is your link address?” The NA message, in this example sent back to the original host that asked the question, lists that link address.
+
+Figure 25-8 Example NDP NS/NA Process to Find the Neighbor’s Link Addresses At Step 1 of this particular example, PC1 sends the solicitation to find PC2’s MAC address.
+
+PC1 first looks in its NDP neighbor table, the equivalent of the IPv4 ARP cache, and does not find the MAC address for IPv6 address 2001:DB8:1111:1::22.
+So, at Step 1, PC1 sends the NDP NS message to the matching solicited-node multicast address for 2001:DB8:1111:1::22 or FF02::1:FF00:22.
+Only IPv6 hosts whose address ends with 00:0022 will listen for this solicited-node multicast address.
+As a result, only a small subset of hosts on this link will process the received NDP NS message.
+
+At Step 2, PC2 reacts to the received NS message.
+PC2 sends back an NA message in reply, listing PC2’s MAC address.
+PC1 records PC2’s MAC address in PC1’s NDP neighbor table.
+
+Example 25-19 shows an example of the IPv6 neighbor table on Router R3, as seen originally back in Figure 25-1.
+In this case, R3 has learned the MAC addresses of Router R1’s WAN interface (G0/1/0)—both its global unicast address as well as the link-local address on that same interface.
+
+Example 25-19 IPv6 Neighbor Table on Router R3 Example end.
+
+NOTE To view a host’s NDP neighbor table, use these commands: (Windows) netsh interface ipv6 show neighbors; (Linux) ip -6 neighbor show; (Mac OS) ndp -an.
+#### Discovering Routers with NDP RS and RA
+
+IPv4 hosts use the concept of an IPv4 default gateway or default router.
+When the host needs to send a packet to some IPv4 subnet other than the local subnet, the host sends the IPv4 packet to the default router, expecting the router to be able to route the packet to the destination.
+Note that hosts either statically set the IP address of their default gateway or learn it from a server called a Dynamic Host Configuration Protocol (DHCP) server.
+
+IPv6 uses the same concept of a default gateway, but it improves the method for hosts to learn the identity of possible default gateways using NDP. NDP defines two messages that allow any host to discover all routers in the subnet:
+
+Router Solicitation (RS): This message is sent to the “all-IPv6-routers” local-scope multicast address of FF02::2 so that the message asks all routers, on the local link only, to identify themselves.
+
+Router Advertisement (RA): This message, sent by the router, lists many facts, including the link-local IPv6 address of the router.
+When sent in response to an RS message, it flows back to either the unicast address of the host that sent the RS or to the all-IPv6-hosts address FF02::1.
+Routers also send RA messages without being asked, sent to the all-IPv6-
+
+hosts local-scope multicast address of FF02::1.
+
+For example, Figure 25-9 shows how host PC1 can learn R1’s link-local address.
+The process is indeed simple, with PC1 first asking and R1 replying.
+
+Figure 25-9 Example NDP RS/RA Process to Find the Default Routers NOTE IPv6 allows multiple prefixes and multiple default routers to be listed in the RA message; Figure 25-9 just shows one of each for simplicity’s sake.
+
+IPv6 does not use broadcasts, but it does use multicasts.
+In this case, the RS message flows to the all-routers multicast address (FF02::2) so that all routers will receive the message.
+It has the same good effect as a broadcast with IPv4, without the negatives of a broadcast.
+In this case, only IPv6 routers will spend any CPU cycles processing the RS message, and IPv6 hosts will ignore the message.
+The RA message can flow either to the unicast IPv6 address of PC1 or to the all-nodes FF02::1 address.
+
+Note that while Figure 25-9 shows how a host can ask to learn about any routers, routers also periodically send unsolicited RA messages, even without an incoming RS. When routers send these periodic RA messages, they basically advertise details about IPv6 on the link.
+In this case, the RA messages flow to the FF02::1 all-nodes IPv6 multicast address.
+#### Using SLAAC with NDP RS and RA
+
+Both IPv4 and IPv6 support the idea of dynamic address assignment for hosts via the Dynamic Host Configuration Protocol (DHCP). To find an address to use with DHCP, the DHCP client sends messages to a DHCP server, and the server assigns a currently unused address in the correct subnet for the endpoint host to use.
+The process relies on DHCP client functions in each device and a DHCP server configured and working in the network.
+
+IPv6 supports an alternative method for IPv6 hosts to dynamically choose an unused IPv6 address to use—a process that does not require a server like a DHCP server.
+The process goes by the name Stateless Address Autoconfiguration (SLAAC). SLAAC uses a simple three-step process that begins by learning the prefix/length as shown in the figure.
+The steps are as follows:
+
+1. Learn the IPv6 prefix used on the link, from any router, using NDP RS/RA messages.
+
+2. Build an address from the prefix plus an interface ID, chosen either by using EUI-64 rules or as a random value.
+
+3. Before using the address, first use DAD to make sure that no other host is already using the same address.
+
+Figure 25-10 shows the structure of an IPv6 address created with SLACC using Steps 1 and 2 in the process, with the next topic detailing the third step (DAD).
+
+Figure 25-10 Host IPv6 Address Formation Using SLAAC
+#### Discovering Duplicate Addresses Using NDP NS and NA
+
+IPv6 uses the Duplicate Address Detection (DAD) process before using a unicast address to make sure that no other node on that link is already using the address.
+Hosts use DAD not only at the end of the SLAAC process, but also any time that a host interface initializes, no matter whether using SLAAC, DHCP, or static address configuration.
+When performing DAD, if another host already uses that address, the first host simply does not use the address until the problem is resolved.
+
+The term DAD refers to the function, but the function uses NDP NS and NA messages.
+
+Basically, a host sends an NS message for its own IPv6 address.
+No other host should be using that address, so no other host should send an NDP NA in reply.
+However, if another host already uses that address, that host will reply with an NA, identifying a duplicate use of the address.
+
+Figure 25-11 shows an example.
+PC1 initializes and does a DAD check, but PC2 happens to already be working and already be using the address.
+The figure shows the following steps:
+
+1. PC1, before using address 2001:DB8:1111:1::11, must use DAD.
+
+2. PC1 sends an NS message, listing the address PC1 now wants to use (2001:DB8:1111:1::11) as the target.
+
+3. PC2 receives the NS, sees what PC2 already uses as its own address, and sends back an NA.
+
+4. PC1, on receiving the NA message for its own IPv6 address, realizes a duplicate address exists.
+
+Figure 25-11 Example Duplicate Address Detection (DAD) with NDP NS/NA Hosts do the DAD check for each of their unicast addresses, link-local addresses included, both when the address is first used and each time the host’s interface comes up.
+#### NDP Summary
+
+This chapter explains some of the more important functions performed by NDP. NDP does more than what is listed in this chapter, and the protocol allows for addition of other functions, so NDP might continue to grow over time.
+For now, use Table 25-3 as a study reference for the four NDP features discussed here.
+
+Table 25-3 NDP Function Summary Table end.
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 25-4 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 25-4 Chapter Review Tracking Table end.
+
+Review All the Key Topics Key Terms You Should Know IPv6 host route, local route, IPv6 local route, IPv6 administrative distance, IPv6 multicast scope Command References Tables 25-6 and 25-7 list configuration and verification commands used in this chapter.
+As an easy review exercise, cover the left column in a table, read the right column, and try to recall the command without looking.
+Then repeat the exercise, covering the right column, and try to recall what the command does.
+
+Table 25-6 Chapter 25 Configuration Command Reference Table end.
+
+Table 25-7 Chapter 25 EXEC Command Reference Table end.
+
+Keep track of your part review progress with the checklist in Table P7-1.
+Details on each task follow the table.
+
+Table P7-1 Part VII Part Review Checklist Activity 1st Date Completed 2nd Date Completed Repeat All DIKTA Questions Answer Part Review Questions Review Key Topics Do Labs Watch Videos Repeat All DIKTA Questions For this task, use the PCPT software to answer the “Do I Know This Already?” questions again for the chapters in this part of the book.
+
+Answer Part Review Questions For this task, use PTP to answer the Part Review questions for this part of the book.
+
+Review Key Topics Review all key topics in all chapters in this part, either by browsing the chapters or using the Key Topics application on the companion website.
+
+Do Labs Depending on your chosen lab tool, here are some suggestions for what to do in lab:
+
+Pearson Network Simulator: If you use the full Pearson simulator, focus more on the configuration scenario and troubleshooting scenario labs associated with the topics in this part of the book.
+These types of labs include a larger set of topics and work well as Part Review activities. (See the Introduction for some details about how to find which labs are about topics in this part of the book.)
+
+Blog: Config Labs: The author’s blog includes a series of configuration-focused labs that you can do on paper, each in 10–15 minutes.
+Review and perform the labs for this part of the book, as found at http://blog.certskills.com.
+Then navigate to the Hands-on Config labs.
+## Part VII Review
+
+Other: If using other lab tools, here are a few suggestions: Configure IPv6 addresses on interfaces, and before using any show commands, predict the connected and local routes that should be added to the IPv6 routing table, and predict the link-local (unicast)
+
+address and various multicast addresses you expect to see in the output of the show ipv6 interfaces command.
+
+Watch Videos Chapter 24 mentions that the companion website’s section for Chapter 24 review includes a video about the EUI-64 address generation process, so consider using the video as a review.
+
+This book began with an overview of the fundamentals of LANs, WANs, and IP routing.
+It then described Ethernet LANs (wired LANs) in some depth over the course of seven chapters.
+
+The book then meandered through many chapters exploring the many concepts of IPv4 and IPv6 addressing, routing, and how to implement those features in Cisco devices.
+
+This final part of Volume 1 turns our attention back to the LAN, not to wired Ethernet LANs, but to IEEE 802.11 wireless LANs—in other words, Wi-Fi. The four chapters in this part of the book lay down the foundations of how wireless LANs work and then show how to implement wireless LANs using Cisco devices.
+
+Building wireless LANs requires some thought because the endpoints that use the LAN do not sit in one place and connect via a known cable and known switch port.
+To explain those details, Chapter 26 begins with the basics of how a wireless client can connect to the wireless network through a wireless access point (AP). After you learn the foundations in Chapter 26, Chapter 27 takes an architectural view of wireless LANs to discuss how you might build a wireless LAN for an enterprise, which requires much different thinking than, for instance, building a wireless LAN for your home.
+
+Chapter 28 completes the three concepts-focused wireless LAN chapters by working through the alphabet soup that is wireless LAN security.
+The fact that wireless LAN clients come and go means that the LAN may be under constant attack as an easy place for an attacker to gain access to the network, so wireless LANs must use effective security.
+Finally, Chapter 29 closes by showing how to configure an enterprise wireless LAN using Cisco APs and the Cisco Wireless LAN Controller (WLC) from the WLC’s graphical interface.

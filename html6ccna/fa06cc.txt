@@ -1,0 +1,1843 @@
+## Part VI OSPF
+
+Part VI Review
+## Chapter 19 Understanding OSPF Concepts
+
+This chapter covers the following exam topics:
+###### 3.0 IP Connectivity
+###### 3.2 Determine how a router makes a forwarding decision by default
+###### 3.2.b Administrative distance
+###### 3.2.c Routing protocol metric
+###### 3.4 Configure and verify single area OSPFv2
+###### 3.4.a Neighbor adjacencies
+###### 3.4.b Point-to-point
+###### 3.4.c Broadcast (DR/BR selection)
+###### 3.4.d Router ID
+
+This chapter takes a long look at Open Shortest Path First Version 2 (OSPFv2) concepts.
+
+OSPF runs on each router, sending and receiving OSPF messages with neighboring (nearby)
+
+routers.
+These messages give OSPF the means to exchange data about the network and to learn and add IP Version 4 (IPv4) routes to the IPv4 routing table on each router.
+
+Most enterprises over the last 25 years have used either OSPF or the Enhanced Interior Gateway Routing Protocol (EIGRP) for their primary IPv4 routing protocol.
+For perspective, both OSPF and EIGRP have been part of CCNA throughout most of its 20+ year history.
+
+For the CCNA 200-301 exam blueprint, Cisco has included OSPFv2 as the only IPv4 routing protocol. (Note that Cisco does include EIGRP in the CCNP Enterprise certification.)
+
+This chapter breaks the content into three major sections.
+The first section sets the context about routing protocols in general, defining interior and exterior routing protocols and basic routing protocol features and terms.
+The second major section presents the nuts and bolts of how OSPFv2 works, using OSPF neighbor relationships, database exchange, and then route calculation.
+The third section wraps up the discussion by looking at OSPF areas and LSAs.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+CHAPTER 19 Table 19-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### Comparing Dynamic Routing Protocol Features
+
+OSPF Concepts and Operation 4, 5 OSPF Areas and LSAs 6 1.
+Which of the following routing protocols is considered to use link-state logic?
+
+a. RIPv1 b.
+RIPv2 c.
+EIGRP d.
+OSPF 2.
+Which of the following routing protocols use a metric that is, by default, at least partially affected by link bandwidth? (Choose two answers.)
+
+a. RIPv1 b.
+RIPv2 c.
+EIGRP d.
+OSPF 3.
+Which of the following interior routing protocols support VLSM? (Choose three answers.)
+
+a. RIPv1 b.
+RIPv2 c.
+EIGRP d.
+OSPF 4.
+Two routers using OSPFv2 have become neighbors and exchanged all LSAs. As a result, Router R1 now lists some OSPF-learned routes in its routing table.
+Which of the following best describes how R1 uses those recently learned LSAs to choose which IP routes to add to its IP routing table?
+
+a. Each LSA lists a route to be copied to the routing table.
+
+b. Some LSAs list a route that can be copied to the routing table.
+
+c. Run some SPF math against the LSAs to calculate the routes.
+
+d. R1 does not use the LSAs at all when choosing what routes to add.
+
+5. Which of the following OSPF neighbor states is expected when the exchange of topology information is complete between two OSPF neighbors?
+
+a. 2-way b.
+Full c.
+Up/up d.
+Final 6.
+A company has a small/medium-sized network with 15 routers and 40 subnets and uses OSPFv2.
+Which of the following is considered an advantage of using a single-area design as opposed to a multiarea design?
+
+a. It reduces the processing overhead on most routers.
+
+b. Status changes to one link may not require SPF to run on all other routers.
+
+c. It allows for simpler planning and operations.
+
+d. It allows for route summarization, reducing the size of IP routing tables.
+
+Foundation Topics Comparing Dynamic Routing Protocol Features Routers add IP routes to their routing tables using three methods: connected routes, static routes, and routes learned by using dynamic routing protocols.
+Before we get too far into the discussion, however, it is important to define a few related terms and clear up any misconceptions about the terms routing protocol, routed protocol, and routable protocol.
+The concepts behind these terms are not that difficult, but because the terms are so similar, and because many documents pay poor attention to when each of these terms is used, they can be a bit confusing.
+These terms are generally defined as follows:
+###### Routing protocol: A set of messages, rules, and algorithms used by routers for the overall
+
+purpose of learning routes.
+This process includes the exchange and analysis of routing information.
+Each router chooses the best route to each subnet (path selection) and finally places those best routes in its IP routing table.
+Examples include RIP, EIGRP, OSPF, and BGP.
+###### Routed protocol and routable protocol: Both terms refer to a protocol that defines a
+
+packet structure and logical addressing, allowing routers to forward or route the packets.
+
+Routers forward packets defined by routed and routable protocols.
+Examples include IP Version 4 (IPv4) and IP Version 6 (IPv6).
+
+NOTE The term path selection sometimes refers to part of the job of a routing protocol, in which the routing protocol chooses the best route.
+
+Even though routing protocols (such as OSPF) are different from routed protocols (such as IP), they do work together very closely.
+The routing process forwards IP packets, but if a router does not have any routes in its IP routing table that match a packet’s destination address, the router discards the packet.
+Routers need routing protocols so that the routers can learn all the possible routes and add them to the routing table so that the routing process can forward (route) routable protocols such as IP.
+#### Routing Protocol Functions
+
+Cisco IOS software supports several IP routing protocols, performing the same general functions:
+
+1. Learn routing information about IP subnets from neighboring routers.
+
+2. Advertise routing information about IP subnets to neighboring routers.
+
+3. If more than one possible route exists to reach one subnet, pick the best route based on a metric.
+
+4. If the network topology changes—for example, a link fails—react by advertising that some routes have failed and pick a new currently best route. (This process is called convergence.)
+
+NOTE A neighboring router connects to the same link as another router, such as the same WAN link or the same Ethernet LAN.
+
+Figure 19-1 shows an example of three of the four functions in the list.
+Router R1, in the lower left of the figure, must make a decision about the best route to reach the subnet connected off router R2, on the bottom right of the figure.
+Following the steps in the figure:
+
+Step 1.
+R2 advertises a route to the lower right subnet—172.16.3.0/24—to both router R1 and R3.
+
+Step 2.
+After R3 learns about the route to 172.16.3.0/24 from R2, R3 advertises that route to R1.
+
+Step 3.
+R1 must make a decision about the two routes it learned about for reaching subnet 172.16.3.0/24—one with metric 1 from R2 and one with metric 2 from R3. R1 chooses the lower metric route through R2 (function 3).
+
+The other routing protocol function, convergence, occurs when the topology changes—that is, when either a router or link fails or comes back up again.
+When something changes, the best routes available in the network can change.
+Convergence simply refers to the process by which all the routers collectively realize something has changed, advertise the information about the changes to all the other routers, and all the routers then choose the currently best routes for each subnet.
+The ability to converge quickly, without causing loops, is one of the most important considerations when choosing which IP routing protocol to use.
+
+In Figure 19-1, convergence might occur if the link between R1 and R2 failed.
+In that case, R1 should stop using its old route for subnet 172.16.3.0/24 (directly through R2) and begin sending packets to R3.
+
+G0/0/0 G0/1 G0/1/0 G0/0/0 G0/1/0 G0/0 G0/0/0 172.16.6.252 G0/1/0 172.16.2.252 G0/0 I have a route to 172.16.3.0/24, metric 2.
+
+I have a route to 172.16.3.0/24, metric 1.
+
+I have a route to 172.16.3.0/24, metric 1.
+
+R1 IP Routing Table Subnet Out Int.
+Next-Hop Metric 172.16.3.0 G0/0/0 172.16.2.252 1 I’ll use the route out G0/0/0, because it has the lower metric.
+
+Figure 19-1 Three of the Four Basic Functions of Routing Protocols
+#### Interior and Exterior Routing Protocols
+
+IP routing protocols fall into one of two major categories: interior gateway protocols (IGP)
+
+or exterior gateway protocols (EGP). The definitions of each are as follows:
+###### IGP: A routing protocol that was designed and intended for use inside a single autonomous
+
+system (AS)
+###### EGP: A routing protocol that was designed and intended for use between different autonomous
+
+systems NOTE The terms IGP and EGP include the word gateway because routers used to be called gateways.
+
+These definitions use another new term: autonomous system (AS). An AS is a network under the administrative control of a single organization.
+For example, a network created and paid for by a single company is probably a single AS, and a network created by a single school system is probably a single AS. Other examples include large divisions of a state or national government, where different government agencies might be able to build their own networks.
+Each ISP is also typically a single different AS.
+
+Some routing protocols work best inside a single AS by design, so these routing protocols are called IGPs. Conversely, routing protocols designed to exchange routes between routers Answers to the “Do I Know This Already?” quiz:
+
+1 D 2 C, D 3 B, C, D 4 C 5 B 6 C in different autonomous systems are called EGPs. Today, Border Gateway Protocol (BGP) is the only EGP used.
+
+Each AS can be assigned a number called (unsurprisingly) an AS number (ASN). Like public IP addresses, the Internet Assigned Numbers Authority (IANA, www.iana.org) controls the worldwide rights to assigning ASNs. It delegates that authority to other organizations around the world, typically to the same organizations that assign public IP addresses.
+
+For example, in North America, the American Registry for Internet Numbers (ARIN, www.arin.net) assigns public IP address ranges and ASNs.
+
+Figure 19-2 shows a small view of the worldwide Internet.
+The figure shows two enterprises and three ISPs using IGPs (OSPF and EIGRP) inside their own networks and with BGP being used between the ASNs.
+
+Figure 19-2 Comparing Locations for Using IGPs and EGPs
+#### Comparing IGPs
+
+Organizations have several options when choosing an IGP for their enterprise network, but most companies today use either OSPF or EIGRP. This book discusses OSPFv2, with the CCNP Enterprise certification adding EIGRP. Before getting into detail on these two protocols, the next section first discusses some of the main goals of every IGP, comparing OSPF, EIGRP, plus a few other IPv4 routing protocols.
+##### IGP Routing Protocol Algorithms
+
+A routing protocol’s underlying algorithm determines how the routing protocol does its job.
+The term routing protocol algorithm simply refers to the logic and processes used by different routing protocols to solve the problem of learning all routes, choosing the best route to each subnet, and converging in reaction to changes in the internetwork.
+Three main branches of routing protocol algorithms exist for IGP routing protocols:
+###### Distance vector (sometimes called Bellman-Ford after its creators)
+###### Advanced distance vector (sometimes called “balanced hybrid”)
+###### Link-state
+
+Historically speaking, distance vector protocols were invented first, mainly in the early 1980s.
+Routing Information Protocol (RIP) was the first popularly used IP distance vector protocol, with the Cisco-proprietary Interior Gateway Routing Protocol (IGRP) being introduced a little later.
+
+By the early 1990s, distance vector protocols’ somewhat slow convergence and potential for routing loops drove the development of new alternative routing protocols that used new algorithms.
+Link-state protocols—in particular, Open Shortest Path First (OSPF) and Integrated Intermediate System to Intermediate System (IS-IS)—solved the main issues.
+They also came with a price: they required extra CPU and memory on routers, with more planning required from the network engineers.
+
+NOTE All references to OSPF in this chapter refer to OSPFv2 unless otherwise stated.
+
+Around the same time as the introduction of OSPF, Cisco created a proprietary routing protocol called Enhanced Interior Gateway Routing Protocol (EIGRP), which used some features of the earlier IGRP protocol.
+EIGRP solved the same problems as did link-state routing protocols, but EIGRP required less planning when implementing the network.
+As time went on, EIGRP was classified as a unique type of routing protocol.
+However, it used more distance vector features than link-state, so it is more commonly classified as an advanced distance vector protocol.
+##### Metrics
+
+Routing protocols choose the best route to reach a subnet by choosing the route with the lowest metric.
+For example, RIP uses a counter of the number of routers (hops) between a router and the destination subnet, as shown in the example of Figure 19-1.
+OSPF totals the cost associated with each interface in the end-to-end route, with the cost based on link bandwidth.
+Table 19-2 lists the most common IP routing protocols and some details about the metric in each case.
+
+Table 19-2 IP IGP Metrics Table end.
+
+A brief comparison of the metric used by the older RIP versus the metric used by OSPF shows some insight into why OSPF and EIGRP surpassed RIP. Figure 19-3 shows an example in which Router B has two possible routes to subnet 10.1.1.0 on the left side of the network:
+
+a shorter route over a very slow serial link at 1544 Kbps, or a longer route over two Gigabit Ethernet WAN links.
+
+Figure 19-3 RIP and OSPF Metrics Compared The left side of the figure shows the results of RIP in this network.
+Using hop count, Router B learns of a one-hop route directly to Router A through B’s S0/0/1 interface.
+B also learns of a two-hop route through Router C, through B’s G0/0 interface.
+Router B chooses the lower hop count route, which happens to go over the slow-speed serial link.
+
+The right side of the figure shows the better choice made by OSPF based on its better metric.
+
+To cause OSPF to make the right choice, the engineer could use default settings based on the correct interface bandwidth to match the actual link speeds, thereby allowing OSPF to choose the faster route. (The bandwidth interface subcommand does not change the actual physical speed of the interface.
+It just tells IOS what speed to assume the interface is using.)
+##### Other IGP Comparisons
+
+Routing protocols can be compared based on many features, some of which matter to the current CCNA exam, whereas some do not.
+Table 19-3 introduces a few more points and lists the comparison points mentioned in this book for easier study, with a few supporting comments following the table.
+
+Table 19-3 Interior IP Routing Protocols Compared Table end.
+
+1 Although Cisco created EIGRP and has kept it as a proprietary protocol for many years, Cisco chose to publish EIGRP as an informational RFC in 2013.
+This allows other vendors to implement EIGRP, while Cisco retains the rights to the protocol.
+
+Regarding the top row of the table, routing protocols can be considered to be a classless routing protocol or a classful routing protocol.
+Classless routing protocols support variablelength subnet masks (VLSM) as well as manual route summarization by sending routing protocol messages that include the subnet masks in the message.
+The older RIPv1 and IGRP routing protocols—both classful routing protocols—do not.
+
+Also, note that the older routing protocols (RIPv1, IGRP) sent routing protocol messages as IP broadcast addresses, while the newer routing protocols in the table all use IP multicast destination addresses.
+The use of multicasts makes the protocol more efficient and causes less overhead and fewer issues with the devices in the subnet that are not running the routing protocol.
+#### Administrative Distance
+
+Many companies and organizations use a single routing protocol.
+However, in some cases, a company needs to use multiple routing protocols.
+For example, if two companies connect their networks so that they can exchange information, they need to exchange some routing information.
+If one company uses OSPF and the other uses EIGRP on at least one router, both OSPF and EIGRP must be used.
+Then that router can take routes learned by OSPF and advertise them into EIGRP, and vice versa, through a process called route redistribution.
+
+Depending on the network topology, the two routing protocols might learn routes to the same subnets.
+When a single routing protocol learns multiple routes to the same subnet, the metric tells it which route is best.
+However, when two different routing protocols learn routes to the same subnet, because each routing protocol’s metric is based on different information, IOS cannot compare the metrics.
+For example, OSPF might learn a route to subnet 10.1.1.0 with metric 101, and EIGRP might learn a route to 10.1.1.0 with metric 2,195,416, but the EIGRP-learned route might be the better route—or it might not.
+There is simply no basis for comparison between the two metrics.
+
+When IOS must choose between routes learned using different routing protocols, IOS uses a concept called administrative distance.
+Administrative distance is a number that denotes how believable an entire routing protocol is on a single router.
+The lower the number, the better, or more believable, the routing protocol.
+For example, RIP has a default administrative distance of 120, OSPF uses a default of 110, and EIGRP defaults to 90.
+When using OSPF and EIGRP, the router will believe the EIGRP route instead of the OSPF route (at least by default).
+The administrative distance values are configured on a single router and are not exchanged with other routers.
+Table 19-4 lists the various sources of routing information, along with the default administrative distances.
+
+Table 19-4 Default Administrative Distances Table end.
+
+NOTE The show ip route command lists each route’s administrative distance as the first of the two numbers inside the brackets.
+The second number in brackets is the metric.
+
+The table shows the default administrative distance values, but IOS can be configured to change the administrative distance of a particular routing protocol, a particular route, or even a static route.
+For example, the command ip route 10.1.3.0 255.255.255.0
+###### 10.1.130.253 defines a static route with a default administrative distance of 1, but the command
+
+ip route 10.1.3.0 255.255.255.0 10.1.130.253 210 defines the same static route with an administrative distance of 210.
+So, you can actually create a static route that is only used when the routing protocol does not find a route, just by giving the static route a higher administrative distance.
+### OSPF Concepts and Operation
+
+Routing protocols basically exchange information so routers can learn routes.
+The routers learn information about subnets, routes to those subnets, and metric information about how good each route is compared to others.
+The routing protocol can then choose the currently best route to each subnet, building the IP routing table.
+
+Link-state protocols like OSPF take a little different approach to the particulars of what information they exchange and what the routers do with that information once learned.
+
+This next (second) major section narrows the focus to only link-state protocols, specifically OSPFv2.
+
+This section begins with an overview of what OSPF does by exchanging data about the network in data structures called link-state advertisements (LSA). Then the discussion backs up a bit to provide more details about each of three fundamental parts of how OSPF operates:
+
+how OSPF routers use neighbor relationships, how routers exchange LSAs with neighbors, and then how routers calculate the best routes once they learn all the LSAs.
+#### OSPF Overview
+
+Link-state protocols build IP routes with a couple of major steps.
+First, the routers together build a lot of information about the network: routers, links, IP addresses, status information, and so on.
+Then the routers flood the information, so all routers know the same information.
+At that point, each router can calculate routes to all subnets, but from each router’s own perspective.
+##### Topology Information and LSAs
+
+Routers using link-state routing protocols need to collectively advertise practically every detail about the internetwork to all the other routers.
+At the end of the process of flooding the information to all routers, every router in the internetwork has the exact same information about the internetwork.
+Flooding a lot of detailed information to every router sounds like a lot of work, and relative to distance vector routing protocols, it is.
+
+Open Shortest Path First (OSPF), the most popular link-state IP routing protocol, organizes topology information using LSAs and the link-state database (LSDB). Figure 19-4 represents the ideas.
+Each LSA is a data structure with some specific information about the network topology; the LSDB is simply the collection of all the LSAs known to a router.
+
+Figure 19-4 LSA and LSDB Relationship Figure 19-5 Flooding LSAs Using a Link-State Routing Protocol Figure 19-5 shows the rather basic flooding process, with R8 sending the original LSA for itself, and the other routers flooding the LSA by forwarding it until every router has a copy.
+
+The flooding process causes every router to learn the contents of the LSA while preventing the LSA from being flooded around in circles.
+Basically, before sending an LSA to yet another neighbor, routers communicate, asking “Do you already have this LSA?,” and then sending the LSA to the next neighbor only if the neighbor has not yet learned about the LSA.
+
+Once flooded, routers do occasionally reflood each LSA. Routers reflood an LSA when some information changes (for example, when a link goes up or comes down).
+They also reflood each LSA based on each LSA’s separate aging timer (default 30 minutes).
+##### Applying Dijkstra SPF Math to Find the Best Routes
+
+The link-state flooding process results in every router having an identical copy of the LSDB in memory, but the flooding process alone does not cause a router to learn what routes to add to the IP routing table.
+Although incredibly detailed and useful, the information in the LSDB does not explicitly state each router’s best route to reach a destination.
+
+To build routes, link-state routers have to do some math.
+Thankfully, you and I do not have to know the math!
+However, all link-state protocols use a type of math algorithm, called the Dijkstra Shortest Path First (SPF) algorithm, to process the LSDB. That algorithm analyzes (with math) the LSDB and builds the routes that the local router should add to the IP routing table—routes that list a subnet number and mask, an outgoing interface, and a next-hop router IP address.
+
+Now that you have the big ideas down, the next several topics walk through the three main phases of how OSPF routers accomplish the work of exchanging LSAs and calculating routes.
+Those three phases are Becoming neighbors: A relationship between two routers that connect to the same data link, created so that the neighboring routers have a means to exchange their LSDBs.
+
+Exchanging databases: The process of sending LSAs to neighbors so that all routers learn the same LSAs.
+
+Adding the best routes: The process of each router independently running SPF, on their local copy of the LSDB, calculating the best routes, and adding those to the IPv4 routing table.
+#### Becoming OSPF Neighbors
+
+Of everything you learn about OSPF in this chapter, OSPF neighbor concepts have the most to do with how you will configure and troubleshoot OSPF in Cisco routers.
+You configure OSPF to cause routers to run OSPF and become neighbors with other routers.
+Once that happens, OSPF does the rest of the work to exchange LSAs and calculate routers in the background, with no additional configuration required.
+This section discusses the fundamental concepts of OSPF neighbors.
+##### The Basics of OSPF Neighbors
+
+OSPF neighbors are routers that both use OSPF and both sit on the same data link.
+Two routers can become OSPF neighbors if connected to the same VLAN, or same serial link, or same Ethernet WAN link.
+
+Two routers need to do more than simply exist on the same link to become OSPF neighbors;
+
+they must send OSPF messages and agree to become OSPF neighbors.
+To do so, the routers send OSPF Hello messages, introducing themselves to the potential neighbor.
+Assuming the two potential neighbors have compatible OSPF parameters, the two form an OSPF neighbor relationship, and would be displayed in the output of the show ip ospf neighbor command.
+
+The OSPF neighbor relationship also lets OSPF know when a neighbor might not be a good option for routing packets right now.
+Imagine R1 and R2 form a neighbor relationship, learn LSAs, and calculate routes that send packets through the other router.
+Months later, R1 notices that the neighbor relationship with R2 fails.
+That failed neighbor connection to R2 makes R1 react: R1 refloods LSAs impacted by the failed link, and R1 runs SPF to recalculate its own routes.
+
+Finally, the OSPF neighbor model allows new routers to be dynamically discovered.
+That means new routers can be added to a network without requiring every router to be reconfigured.
+
+Instead, OSPF routers listen for OSPF Hello messages from new routers and react to those messages, attempting to become neighbors and exchange LSDBs.
+##### Meeting Neighbors and Learning Their Router ID
+
+The OSPF Hello process, by which new neighbor relationships are formed, works somewhat like when you move to a new house and meet your various neighbors.
+When you see each other outside, you might walk over, say hello, and learn each other’s name.
+After talking a bit, you form a first impression, particularly as to whether you think you’ll enjoy chatting with this neighbor occasionally, or whether you can just wave and not take the time to talk the next time you see him outside.
+
+Similarly, with OSPF, the process starts with messages called OSPF Hello messages.
+The Hellos in turn list each router’s router ID (RID), which serves as each router’s unique name or identifier for OSPF. Finally, OSPF does several checks of the information in the Hello messages to ensure that the two routers should become neighbors.
+
+OSPF RIDs are 32-bit numbers.
+As a result, most command output lists these as dotted-decimal numbers (DDN). By default, IOS chooses one of the router’s interface IPv4 addresses to use as its OSPF RID. However, the OSPF RID can be directly configured, as covered in the section “Configuring the OSPF Router ID” in Chapter 20, “Implementing OSPF.”
+
+As soon as a router has chosen its OSPF RID and some interfaces come up, the router is ready to meet its OSPF neighbors.
+OSPF routers can become neighbors if they are connected to the same subnet.
+To discover other OSPF-speaking routers, a router sends multicast OSPF Hello packets to each interface and hopes to receive OSPF Hello packets from other routers connected to those interfaces.
+Figure 19-6 outlines the basic concept.
+
+Figure 19-6 OSPF Hello Packets Routers R1 and R2 both send Hello messages onto the link.
+They continue to send Hellos at a regular interval based on their Hello timer settings.
+The Hello messages themselves have the following features:
+###### The Hello message follows the IP packet header, with IP protocol type 89.
+###### Hello packets are sent to multicast IP address 224.0.0.5, a multicast IP address intended
+
+for all OSPF-speaking routers.
+###### OSPF routers listen for packets sent to IP multicast address 224.0.0.5, in part hoping to
+
+receive Hello packets and learn about new neighbors.
+
+Taking a closer look, Figure 19-7 shows several of the neighbor states used by the early formation of an OSPF neighbor relationship.
+The figure shows the Hello messages in the center and the resulting neighbor states on the left and right edges of the figure.
+Each router keeps an OSPF state variable for how it views the neighbor.
+
+Figure 19-7 Early Neighbor States Following the steps in the figure, the scenario begins with the link down, so the routers have no knowledge of each other as OSPF neighbors.
+As a result, they have no state (status) information about each other as neighbors, and they would not list each other in the output of the show ip ospf neighbor command.
+At Step 2, R1 sends the first Hello, so R2 learns of the existence of R1 as an OSPF router.
+At that point, R2 lists R1 as a neighbor, with an interim beginning state of init.
+
+The process continues at Step 3, with R2 sending back a Hello.
+This message tells R1 that R2 exists, and it allows R1 to move through the init state and quickly to a 2-way state.
+At Step 4, R2 receives the next Hello from R1, and R2 can also move to a 2-way state.
+
+The 2-way state is a particularly important OSPF state.
+At that point, the following major facts are true:
+###### The router received a Hello from the neighbor, with that router’s own RID listed as being
+
+seen by the neighbor.
+###### The router has checked all the parameters in the Hello received from the neighbor, with
+
+no problems.
+The router is willing to become an OSPF neighbor.
+###### If both routers reach a 2-way state with each other, it means that both routers meet all
+
+OSPF configuration requirements to become neighbors.
+Effectively, at that point, they are neighbors and ready to exchange their LSDB with each other.
+#### Exchanging the LSDB Between Neighbors
+
+One purpose of forming OSPF neighbor relationships is to allow the two neighbors to exchange their databases.
+This next topic works through some of the details of OSPF database exchange.
+##### Fully Exchanging LSAs with Neighbors
+
+The OSPF neighbor state 2-way means that the router is available to exchange its LSDB with the neighbor.
+In other words, it is ready to begin a 2-way exchange of the LSDB. So, once two routers on a link reach the 2-way state, they can immediately move on to the process of database exchange.
+
+The database exchange process can be quite involved, with several OSPF messages and several interim neighbor states.
+This chapter is more concerned with a few of the messages and the final state when database exchange has completed: the full state.
+
+After two routers decide to exchange databases, they do not simply send the contents of the entire database.
+First, they tell each other a list of LSAs in their respective databases—not all the details of the LSAs, just a list. (Think of these lists as checklists.) Then each router can check which LSAs it already has and then ask the other router for only the LSAs that are not known yet.
+
+For instance, R1 might send R2 a checklist that lists 10 LSAs (using an OSPF Database Description, or DD, packet).
+R2 then checks its LSDB and finds six of those 10 LSAs. So, R2 asks R1 (using a Link-State Request packet) to send the four additional LSAs.
+
+Thankfully, most OSPFv2 work does not require detailed knowledge of these specific protocol steps.
+However, a few of the terms are used quite a bit and should be remembered.
+In particular, the OSPF messages that actually send the LSAs between neighbors are called Link-State Update (LSU) packets.
+That is, the LSU packet holds data structures called linkstate advertisements (LSA). The LSAs are not packets, but rather data structures that sit inside the LSDB and describe the topology.
+
+Figure 19-8 pulls some of these terms and processes together, with a general example.
+The story picks up the example shown in Figure 19-7, with Figure 19-8 showing an example of the database exchange process between Routers R1 and R2. The center shows the protocol messages, and the outer items show the neighbor states at different points in the process.
+
+Focus on two items in particular:
+###### The routers exchange the LSAs inside LSU packets.
+###### When finished, the routers reach a full state, meaning they have fully exchanged the contents
+
+of their LSDBs.
+
+Database Description RID 1.1.1.1 RID 2.2.2.2 Database Description LSU, with Several LSAs Exchange Loading Loading Full Full ExStart LSU, with Several LSAs ...
+
+Figure 19-8 Database Exchange Example, Ending in a Full State
+##### Maintaining Neighbors and the LSDB
+
+Once two neighbors reach a full state, they have done all the initial work to exchange OSPF information between them.
+However, neighbors still have to do some small ongoing tasks to maintain the neighbor relationship.
+
+First, routers monitor each neighbor relationship using Hello messages and two related timers:
+
+the Hello Interval and the Dead Interval.
+Routers send Hellos every Hello Interval to each neighbor.
+Each router expects to receive a Hello from each neighbor based on the Hello Interval, so if a neighbor is silent for the length of the Dead Interval (by default, four times as long as the Hello Interval), the loss of Hellos means that the neighbor has failed.
+
+Next, routers must react when the topology changes as well, and neighbors play a key role in that process.
+When something changes, one or more routers change one or more LSAs. Then the routers must flood the changed LSAs to each neighbor so that the neighbor can change its LSDB.
+
+For example, imagine a LAN switch loses power, so a router’s G0/0 interface fails from up/up to down/down.
+That router updates an LSA that shows the router’s G0/0 as being down.
+That router then sends the LSA to its neighbors, and that neighbor in turn sends it to its neighbors, until all routers again have an identical copy of the LSDB. Each router’s LSDB now reflects the fact that the original router’s G0/0 interface failed, so each router will then use SPF to recalculate any routes affected by the failed interface.
+
+A third maintenance task done by neighbors is to reflood each LSA occasionally, even when the network is completely stable.
+By default, each router that creates an LSA also has the responsibility to reflood the LSA every 30 minutes (the default), even if no changes occur.
+
+(Note that each LSA has a separate timer, based on when the LSA was created, so there is no single big event where the network is overloaded with flooding LSAs.)
+
+The following list summarizes these three maintenance tasks for easier review:
+###### Maintain neighbor state by sending Hello messages based on the Hello Interval and listening
+
+for Hellos before the Dead Interval expires
+###### Flood any changed LSAs to each neighbor
+###### Reflood unchanged LSAs as their lifetime expires (default 30 minutes)
+##### Using Designated Routers on Ethernet Links
+
+OSPF behaves differently on some types of interfaces based on a per-interface setting called the OSPF network type.
+On Ethernet links, OSPF defaults to use a network type of broadcast, which causes OSPF to elect one of the routers on the same subnet to act as the designated router (DR). The DR plays a key role in how the database exchange process works, with different rules than with point-to-point links.
+
+To see how, consider the example that begins with Figure 19-9.
+The figure shows five OSPFv2 routers on the same Ethernet VLAN. These five OSPF routers elect one router to act as the DR and one router to be a backup DR (BDR). The figure shows A and B as DR and BDR, for no other reason than the Ethernet must have one of each.
+
+Figure 19-9 Routers A and B Elected as DR and BDR The database exchange process on an Ethernet link does not happen between every pair of routers on the same VLAN/subnet.
+Instead, it happens between the DR and each of the other routers, with the DR making sure that all the other routers get a copy of each LSA. In other words, the database exchange happens over the flows shown in Figure 19-10.
+
+Figure 19-10 Database Exchange to and from the DR on an Ethernet OSPF uses the BDR concept because the DR is so important to the database exchange process.
+
+The BDR watches the status of the DR and takes over for the DR if it fails. (When the DR fails, the BDR takes over, and then a new BDR is elected.)
+
+The use of a DR/BDR, along with the use of multicast IP addresses, makes the exchange of OSPF LSDBs more efficient on networks that allow more than two routers on the same link.
+
+The DR can send a packet to all OSPF routers in the subnet by using multicast IP address 224.0.0.5.
+IANA reserves this address as the “All SPF Routers” multicast address just for this purpose.
+For instance, in Figure 19-10, the DR can send one set of messages to all the OSPF routers rather than sending one message to each router.
+
+Similarly, any OSPF router needing to send a message to the DR and also to the BDR (so it remains ready to take over for the DR) can send those messages to the “All SPF DRs” multicast address 224.0.0.6.
+So, instead of having to send one set of messages to the DR and another set to the BDR, an OSPF router can send one set of messages, making the exchange more efficient.
+
+At this point, you might be getting a little tired of some of the theory, but finally, the theory actually shows something that you may see in show commands on a router.
+Because the DR and BDR both do full database exchange with all the other OSPF routers in the LAN, they reach a full state with all neighbors.
+However, routers that are neither a DR nor a BDR—
+
+called DROthers by OSPF—never reach a full state because they do not exchange LSDBs directly with each other.
+As a result, the show ip ospf neighbor command on these DROther routers lists some neighbors in a 2-way state, remaining in that state under normal operation.
+
+For instance, with OSPF working normally on the Ethernet LAN in Figure 19-10, a show ip ospf neighbor command on router C (which is a DROther router) would show the following:
+###### Two neighbors (A and B, the DR and BDR, respectively) with a full state (called fully
+
+adjacent neighbors)
+###### Two neighbors (D and E, which are DROthers) with a 2-way state (called neighbors)
+
+OSPF requires some terms to describe all neighbors versus the subset of all neighbors that reach the full state.
+First, all OSPF routers on the same link that reach the 2-way state—that is, they send Hello messages and the parameters match—are called neighbors.
+The subset of neighbors for which the neighbor relationship continues on and reaches the full state are called adjacent neighbors.
+Additionally, OSPFv2 RFC 2328 emphasizes the connection between the full state and the term adjacent neighbor by using the synonyms of fully adjacent and fully adjacent neighbor.
+Finally, while the terms so far refer to the neighbor, two other terms refer to the relationship: neighbor relationship refers to any OSPF neighbor relationship, while the term adjacency refers to neighbor relationships that reach a full state.
+Table 19-5 details the terms.
+
+Table 19-5 Stable OSPF Neighbor States and Their Meanings Table end.
+#### Calculating the Best Routes with SPF
+
+OSPF LSAs contain useful information, but they do not contain the specific information that a router needs to add to its IPv4 routing table.
+In other words, a router cannot just copy information from the LSDB into a route in the IPv4 routing table.
+The LSAs individually are more like pieces of a jigsaw puzzle.
+So, to know what routes to add to the routing table, each router must do some SPF math to choose the best routes from that router’s perspective.
+The router then adds each route to its routing table: a route with a subnet number and mask, an outgoing interface, and a next-hop router IP address.
+
+Although engineers do not need to know the details of how SPF does the math, they do need to know how to predict which routes SPF will choose as the best route.
+The SPF algorithm calculates all the routes for a subnet—that is, all possible routes from the router to the destination subnet.
+If more than one route exists, the router compares the metrics, picking the best (lowest) metric route to add to the routing table.
+Although the SPF math can be complex, engineers with a network diagram, router status information, and simple addition can calculate the metric for each route, predicting what SPF will choose.
+
+Once SPF has identified a route, OSPF calculates the metric for a route as follows:
+
+The sum of the OSPF interface costs for all outgoing interfaces in the route.
+
+Figure 19-11 shows an example with three possible routes from R1 to Subnet X (172.16.3.0/24) at the bottom of the figure.
+
+Figure 19-11 SPF Tree to Find R1’s Route to 172.16.3.0/24 NOTE OSPF considers the costs of the outgoing interfaces (only) in each route.
+It does not add the cost for incoming interfaces in the route.
+
+Table 19-6 lists the three routes shown in Figure 19-11, with their cumulative costs, showing that R1’s best route to 172.16.3.0/24 starts by going through R5.
+
+Route Location in Figure 19-11 Cumulative Cost R1–R7–R8 Left 10 + 180 + 10 = 200 R1–R5–R6–R8 Middle 20 + 30 + 40 + 10 = 100 R1–R2–R3–R4–R8 Right 30 + 60 + 20 + 5 + 10 = 125 Table end.
+
+Table end.
+
+As a result of the SPF algorithm’s analysis of the LSDB, R1 adds a route to subnet 172.16.3.0/24 to its routing table, with the next-hop router of R5.
+
+In real OSPF networks, an engineer can do the same process by knowing the OSPF cost for each interface.
+Armed with a network diagram, the engineer can examine all routes, add the costs, and predict the metric for each route.
+### OSPF Areas and LSAs
+
+OSPF can be used in some networks with very little thought about design issues.
+You just turn on OSPF in all the routers, put all interfaces into the same area (usually area 0), and it works!
+
+Figure 19-12 shows one such network example, with 11 routers and all interfaces in area 0.
+
+Figure 19-12 Single-Area OSPF Larger OSPFv2 networks suffer with a single-area design.
+For instance, now imagine an enterprise network with 900 routers, rather than only 11, and several thousand subnets.
+As it turns out, the CPU time to run the SPF algorithm on all that topology data just takes time.
+
+As a result, OSPFv2 convergence time—the time required to react to changes in the network—
+
+can be slow.
+The routers might run low on RAM as well.
+Additional problems with a single area design include the following:
+###### A larger topology database requires more memory on each router.
+###### The SPF algorithm requires processing power that grows exponentially compared to the
+
+size of the topology database.
+###### A single interface status change anywhere in the internetwork (up to down, or down to
+
+up) forces every router to run SPF again!
+
+The solution is to take the one large LSDB and break it into several smaller LSDBs by using OSPF areas.
+With areas, each link is placed into one area.
+SPF does its complicated math on the topology inside the area, and that area’s topology only.
+For instance, an internetwork with 1000 routers and 2000 subnets, broken in 100 areas, would average 10 routers and 20 subnets per area.
+The SPF calculation on a router would have to only process topology about 10 routers and 20 links, rather than 1000 routers and 2000 links.
+
+So, how large does a network have to be before OSPF needs to use areas?
+Well, there is no set answer because the behavior of the SPF process depends largely on CPU processing speed, the amount of RAM, the size of the LSDB, and so on.
+Generally, networks larger than a few dozen routers benefit from areas, and some documents over the years have listed 50 routers as the dividing line at which a network really should use multiple OSPF areas.
+
+The next few pages look at how OSPF area design works, with more reasons as to why areas help make larger OSPF networks work better.
+#### OSPF Areas
+
+OSPF area design follows a couple of basic rules.
+To apply the rules, start with a clean drawing of the internetwork, with routers, and all interfaces.
+Then choose the area for each router interface, as follows:
+###### Put all interfaces connected to the same subnet inside the same area.
+###### An area should be contiguous.
+###### Some routers may be internal to an area, with all interfaces assigned to that single area.
+###### Some routers may be Area Border Routers (ABR) because some interfaces connect to the
+
+backbone area, and some connect to nonbackbone areas.
+###### All nonbackbone areas must have a path to reach the backbone area (area 0) by having at
+
+least one ABR connected to both the backbone area and the nonbackbone area.
+
+Figure 19-13 shows one example.
+An engineer started with a network diagram that showed all 11 routers and their links.
+On the left, the engineer put four WAN links and the LANs connected to branch routers B1 through B4 into area 1.
+Similarly, he placed the links to branches B11 through B14 and their LANs in area 2.
+Both areas need a connection to the backbone area, area 0, so he put the LAN interfaces of D1 and D2 into area 0, along with D3, creating the backbone area.
+
+The figure also shows a few important OSPF area design terms.
+Table 19-7 summarizes the meaning of these terms, plus some other related terms, but pay closest attention to the terms from the figure.
+
+Figure 19-13 Three-Area OSPF with D1 and D2 as ABRs Table 19-7 OSPF Design Terminology Table end.
+#### How Areas Reduce SPF Calculation Time
+
+Figure 19-13 shows a sample area design and some terminology related to areas, but it does not show the power and benefit of the areas.
+To understand how areas reduce the work SPF has to do, you need to understand what changes about the LSDB inside an area, as a result of the area design.
+
+SPF spends most of its processing time working through all the topology details, namely routers and the links that connect routers.
+Areas reduce SPF’s workload because, for a given area, the LSDB lists only routers and links inside that area, as shown on the left side of Figure 19-14.
+
+Figure 19-14 Smaller Area 1 LSDB Concept While the LSDB has less topology information, it still has to have information about all subnets in all areas, so that each router can create IPv4 routes for all subnets.
+So, with an area design, OSPFv2 uses very brief summary information about the subnets in other areas.
+
+These summary LSAs do not include topology information about the other areas; however, each summary LSA does list a subnet ID and mask of a subnet in some other area.
+Summary LSAs do not require much SPF processing at all.
+Instead, these subnets all appear like subnets connected to the ABR (in Figure 19-14, ABR D1).
+
+Using multiple areas improves OSPF operations in many ways for larger networks.
+The following list summarizes some of the key points arguing for the use of multiple areas in larger OSPF networks:
+###### Routers require fewer CPU cycles to process the smaller per-area LSDB with the SPF
+
+algorithm, reducing CPU overhead and improving convergence time.
+###### The smaller per-area LSDB requires less memory.
+###### Changes in the network (for example, links failing and recovering) require SPF calculations
+
+only on routers in the area where the link changed state, reducing the number of routers that must rerun SPF.
+###### Less information must be advertised between areas, reducing the bandwidth required to
+
+send LSAs.
+#### \(OSPFv2\) Link-State Advertisements
+
+Many people tend to get a little intimidated by OSPF LSAs when first learning about them.
+
+Commands that list a summary of the LSDB’s contents, like the show ip ospf database command, actually list a lot of information.
+Commands that list the details of the LSDB can list overwhelming amounts of information, and those details appear to be in some kind of code, using lots of numbers.
+It can seem like a bit of a mess.
+
+However, if you examine LSAs while thinking about OSPF areas and area design, some of the most common LSA types will make a lot more sense.
+For instance, think about the LSDB in one area.
+The topology in one area includes routers and the links between the routers.
+
+As it turns out, OSPF defines the first two types of LSAs to define those exact details, as follows:
+###### One router LSA for each router in the area
+###### One network LSA for each network that has a DR plus one neighbor of the DR
+
+Next, think about the subnets in the other areas.
+The ABR creates summary information about each subnet in one area to advertise into other areas—basically just the subnet IDs and masks—as a third type of LSA:
+###### One summary LSA for each subnet ID that exists in a different area
+
+The next few pages discuss these three LSA types in a little more detail; Table 19-8 lists some information about all three for easier reference and study.
+
+Table 19-8 The Three OSPFv2 LSA Types Seen with a Multiarea OSPF Design Table end.
+##### Router LSAs Build Most of the Intra-Area Topology
+
+OSPF needs very detailed topology information inside each area.
+The routers inside area X need to know all the details about the topology inside area X.
+And the mechanism to give routers all these details is for the routers to create and flood router (Type 1) and network (Type 2) LSAs about the routers and links in the area.
+
+Router LSAs, also known as Type 1 LSAs, describe the router in detail.
+Each lists a router’s RID, its interfaces, its IPv4 addresses and masks, its interface state, and notes about what neighbors the router knows about via each of its interfaces.
+
+To see a specific instance, first review Figure 19-15.
+It lists internetwork topology, with subnets listed.
+Because it’s a small internetwork, the engineer chose a single-area design, with all interfaces in backbone area 0.
+
+With the single-area design planned for this small internetwork, the LSDB will contain four router LSAs. Each router creates a router LSA for itself, with its own RID as the LSA identifier.
+
+The LSA lists that router’s own interfaces, IP address/mask, with pointers to neighbors.
+
+Figure 19-15 Enterprise Network with Seven IPv4 Subnets Once all four routers have copies of all four router LSAs, SPF can mathematically analyze the LSAs to create a model.
+The model looks a lot like the concept drawing in Figure 19-16.
+
+Note that the drawing shows each router with an obvious RID value.
+Each router has pointers that represent each of its interfaces, and because the LSAs identify neighbors, SPF can figure out which interfaces connect to which other routers.
+
+Figure 19-16 Type 1 LSAs, Assuming a Single-Area Design
+##### Network LSAs Complete the Intra-Area Topology
+
+Whereas router LSAs define most of the intra-area topology, network LSAs define the rest.
+
+As it turns out, when OSPF elects a DR on some subnet and that DR has at least one neighbor, OSPF treats that subnet as another node in its mathematical model of the network.
+To represent that network, the DR creates and floods a network (Type 2) LSA for that network (subnet).
+
+For instance, back in Figure 19-15, one Ethernet LAN and two Ethernet WANs exist.
+The Ethernet LAN between R2 and R3 will elect a DR, and the two routers will become neighbors;
+
+so, whichever router is the DR will create a network LSA. Similarly, R1 and R2 connect with an Ethernet WAN, so the DR on that link will create a network LSA. Likewise, the DR on the Ethernet WAN link between R1 and R3 will also create a network LSA.
+
+Figure 19-17 shows the completed version of the intra-area LSAs in area 0 with this design.
+
+Note that the router LSAs actually point to the network LSAs when they exist, which lets the SPF processes connect the pieces together.
+
+Figure 19-17 Type 1 and Type 2 LSAs in Area 0, Assuming a Single-Area Design Finally, note that in this single-area design example no summary (Type 3) LSAs exist at all.
+
+These LSAs represent subnets in other areas, and there are no other areas.
+Given that the CCNA 200-301 exam topics refer specifically to single-area OSPF designs, this section stops at showing the details of the intra-area LSAs (Types 1 and 2).
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 19-9 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 19-9 Chapter Review Tracking Table end.
+
+Review All the Key Topics Key Terms You Should Know convergence, Shortest Path First (SPF) algorithm, distance vector, Interior Gateway Protocol (IGP), link-state, link-state advertisement (LSA), link-state database (LSDB), metric, 2-way state, full state, Area Border Router (ABR), designated router (DR), backup designated router (BDR), fully adjacent, Hello Interval, Dead Interval, link-state update, neighbor, router ID (RID), topology database, internal router, backbone area
+### Chapter 20 Implementing OSPF
+
+This chapter covers the following exam topics:
+###### 3.0 IP Connectivity
+###### 3.2 Determine how a router makes a forwarding decision by default
+###### 3.2.b Administrative distance
+###### 3.2.c Routing protocol metric
+###### 3.4 Configure and verify single area OSPFv2
+###### 3.4.a Neighbor adjacencies
+###### 3.4.b Point-to-point
+###### 3.4.c Broadcast (DR/BR selection)
+###### 3.4.d Router ID
+
+OSPFv2 requires only a few configuration commands if you rely on default settings.
+To use OSPF, all you need to do is enable OSPF on each interface you intend to use in the network, and OSPF uses messages to discover neighbors and learn routes through those neighbors.
+
+However, the complexity of OSPFv2 results in a large number of show commands, many of which reveal those default settings.
+So while you can make OSPFv2 work in a lab with all default settings, to become comfortable working with it, you need to know the most common optional features as well.
+This chapter begins that process.
+
+The first major section of this chapter focuses on traditional OSPFv2 configuration using the network command, along with the large variety of associated show commands.
+This section teaches you how to make OSPFv2 operate with default settings and convince yourself that it really is working through use of those show commands.
+
+The second major section shows an alternative configuration option called OSPF interface mode, in contrast with the traditional OSPF configuration shown in the first section of the chapter.
+This mode uses the ip ospf process-id area area-number configuration command instead of the network command.
+
+The final section then moves on to discuss a variety of optional but popular configuration topics.
+The features include topics such as how to use passive interfaces, how to change OSPF costs (which influences the routes OSPF chooses), and how to create a default route advertised by OSPF.
+
+CHAPTER 20
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 20-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+#### Implementing Single-Area OSPFv2
+
+OSPFv2 Interface Configuration 4 Additional OSPFv2 Features 5, 6 1.
+Which of the following network commands, following the command router ospf 1, tells this router to start using OSPF on interfaces whose IP addresses are 10.1.1.1,
+###### 10.1.100.1, and 10.1.120.1?
+
+a. network 10.0.0.0 255.0.0.0 area 0 b. network 10.0.0.0 0.255.255.255 area 0 c. network 10.0.0.1 0.0.0.255 area 0 d. network 10.0.0.1 0.0.255.255 area 0 2.
+Which of the following network commands, following the command router ospf 1, tells this router to start using OSPF on interfaces whose IP addresses are 10.1.1.1,
+###### 10.1.100.1, and 10.1.120.1?
+
+a. network 10.1.0.0 0.0.255.255 area 0 b. network 10.0.0.0 0.255.255.0 area 0 c. network 10.1.1.0 0.x.1x.0 area 0 d. network 10.1.1.0 255.0.0.0 area 0 e. network 10.0.0.0 255.0.0.0 area 0 3.
+Which of the following commands list the OSPF neighbors off interface serial 0/0?
+
+(Choose two answers.)
+
+a. show ip ospf neighbor b. show ip ospf interface brief c. show ip neighbor d. show ip interface e. show ip ospf neighbor serial 0/0 4.
+An engineer migrates from a more traditional OSPFv2 configuration that uses network commands in OSPF configuration mode to instead use OSPFv2 interface configuration.
+
+Which of the following commands configures the area number assigned to an interface in this new configuration?
+
+a. The area command in interface configuration mode b.
+The ip ospf command in interface configuration mode c.
+The router ospf command in interface configuration mode d.
+The network command in interface configuration mode 5.
+Which of the following configuration settings on a router does not influence which IPv4 route a router chooses to add to its IPv4 routing table when using OSPFv2?
+
+a. auto-cost reference-bandwidth b. delay c. bandwidth d. ip ospf cost 6.
+OSPF interface configuration uses the ip ospf process-id area area-number configuration command.
+In which modes do you configure the following settings when using this command?
+
+a. The router ID is configured explicitly in router mode.
+
+b. The router ID is configured explicitly in interface mode.
+
+c. An interface’s area number is configured in router mode.
+
+d. An interface’s area number is configured in interface mode.
+
+Foundation Topics Implementing Single-Area OSPFv2 After an OSPF design has been chosen—a task that can be complex in larger IP internetworks—
+
+the configuration can be as simple as enabling OSPF on each router interface and placing that interface in the correct OSPF area.
+This first major section of the chapter focuses on the required configuration using the traditional OSPFv2 network command along with one optional configuration setting: how to set the OSPF router-id.
+Additionally, this section works through how to show the various lists and tables that confirm how OSPF is working.
+
+For reference and study, the following list outlines the configuration steps covered in this first major section of the chapter:
+
+Step 1.
+Use the router ospf process-id global command to enter OSPF configuration mode for a particular OSPF process.
+
+Step 2. (Optional) Configure the OSPF router ID by doing the following:
+
+A. Use the router-id id-value router subcommand to define the router ID, or B.
+Use the interface loopback number global command, along with an ip address address mask command, to configure an IP address on a loopback interface (chooses the highest IP address of all working loopbacks), or Config Checklist C.
+Rely on an interface IP address (chooses the highest IP address of all working nonloopbacks).
+
+Step 3.
+Use one or more network ip-address wildcard-mask area area-id router subcommands to enable OSPFv2 on any interfaces matched by the configured address and mask, enabling OSPF on the interface for the listed area.
+
+Figure 20-1 shows the relationship between the OSPF configuration commands, with the idea that the configuration creates a routing process in one part of the configuration, and then indirectly enables OSPF on each interface.
+The configuration does not name the interfaces on which OSPF is enabled, instead requiring IOS to apply some logic by comparing the OSPF network command to the interface ip address commands.
+The upcoming example discusses more about this logic.
+
+Figure 20-1 Organization of OSPFv2 Configuration with the network Command
+#### OSPF Single-Area Configuration
+
+Figure 20-2 shows a sample network that will be used for most examples throughout this chapter.
+All links reside in area 0, making the area design a single-area design, with four routers.
+
+You can think of Router R1 as a router at a central site, with WAN links to each remote site, and using router-on-a-stick (ROAS) to connect to two LAN subnets on the left.
+Routers R2 and R3 might be at one large remote site that needs two WAN links and two routers for WAN redundancy, with both routers connected to the LAN at that remote site.
+Router R4 might be a typical smaller remote site with a single router needed for that site.
+
+NOTE The interface numbering on Router R1, with interfaces G0/0 and G0/0/0, may seem a bit strange.
+However, real routers, like the Cisco 2901 used in the example, use this numbering.
+
+That model includes a built-in Gi0/0 and Gi0/1 port.
+Additionally, if you add one-port Gigabit WAN Interface Cards (WICs), the router numbers them G0/0/0, G0/1/0, and so on.
+
+This is just one example of how router hardware may use two-digit interface numbering, or three-digit, or both.
+
+Figure 20-2 Sample Network for OSPF Single-Area Configuration Example 20-1 shows the IPv4 addressing configuration on Router R1, before getting into the OSPF detail.
+Note that R1 enables 802.1Q trunking (ROAS) on its G0/0 interface and assigns an IP address to each subinterface.
+
+Example 20-1 IPv4 Address Configuration on R1 (Including VLAN Trunking)
+
+Example end.
+
+The OSPF configuration begins with the router ospf process-id global command, which puts the user in OSPF configuration mode, and sets the OSPF process-id value.
+The process-id number just needs to be unique on the local router, allowing the router to support multiple OSPF processes in a single router by using different process IDs. (The Answers to the “Do I Know This Already?” quiz:
+
+1 B 2 A 3 A, E 4 B 5 B 6 A, D router command uses the process-id to distinguish between the processes.) The process-id does not have to match on each router, and it can be any integer between 1 and 65,535.
+
+Second, the configuration needs one or more network commands in OSPF mode.
+These commands tell the router to find its local interfaces that match the first two parameters on the network command.
+Then, for each matched interface, the router enables OSPF on those interfaces, discovers neighbors, creates neighbor relationships, and assigns the interface to the area listed in the network command. (Note that the area can be configured as either an integer or a dotted-decimal number, but this book makes a habit of configuring the area number as an integer.
+The integer area numbers range from 0 through 4,294,967,295.)
+
+Example 20-2 shows an example configuration on router R2 from Figure 20-2.
+The router ospf 1 command enables OSPF process 1, and the single network command enables OSPF on all interfaces shown in the figure.
+
+Example 20-2 OSPF Single-Area Configuration on R2 Using One network Command Example end.
+
+For the specific network command in Example 20-2, any matched interfaces are assigned to area 0.
+However, the first two parameters—the ip_address and wildcard_mask parameter values of 10.0.0.0 and 0.255.255.255—need some explaining.
+In this case, the command matches both interfaces shown for Router R2; the next topic explains why.
+#### Wildcard Matching with the network Command
+
+The key to understanding the traditional OSPFv2 configuration shown in this first example is to understand the OSPF network command.
+The OSPF network command compares the first parameter in the command to each interface IP address on the local router, trying to find a match.
+However, rather than comparing the entire number in the network command to the entire IPv4 address on the interface, the router can compare a subset of the octets, based on the wildcard mask, as follows:
+
+Wildcard 0.0.0.0: Compare all four octets.
+In other words, the numbers must exactly match.
+
+Wildcard 0.0.0.255: Compare the first three octets only.
+Ignore the last octet when comparing the numbers.
+
+Wildcard 0.0.255.255: Compare the first two octets only.
+Ignore the last two octets when comparing the numbers.
+
+Wildcard 0.255.255.255: Compare the first octet only.
+Ignore the last three octets when comparing the numbers.
+
+Wildcard 255.255.255.255: Compare nothing; this wildcard mask means that all addresses will match the network command.
+
+Basically, a wildcard mask value of decimal 0 in an octet tells IOS to compare to see if the numbers match, and a value of 255 tells IOS to ignore that octet when comparing the numbers.
+
+The network command provides many flexible options because of the wildcard mask.
+
+For example, in Router R1, many network commands could be used, with some matching all interfaces, and some matching a subset of interfaces.
+Table 20-2 shows a sampling of options, with notes.
+
+Table 20-2 Example OSPF network Commands on R3, with Expected Results Table end.
+
+The wildcard mask gives the local router its rules for matching its own interfaces.
+To show examples of the different options, Example 20-3 shows the configuration on routers R2, R3, and R4, each using different wildcard masks.
+Note that all three routers (R2, R3, and R4)
+
+enable OSPF on all the interfaces shown in Figure 20-2.
+
+Example 20-3 OSPF Configuration on Routers R2, R3, and R4 Example end.
+
+Finally, note that OSPF uses the same wildcard mask logic as defined by Cisco IOS access control lists.
+The section titled “Finding the Right Wildcard Mask to Match a Subnet” section detail about wildcard masks.
+
+NOTE IOS will change a network command if it does not follow a particular rule: by convention, if the wildcard mask octet is 255, the matching address octet should be configured as a 0.
+Interestingly, IOS will actually accept a network command that breaks this rule, but then IOS will change that octet of the address to a 0 before putting it into the running configuration file.
+For example, IOS will change a typed command that begins with network
+###### 1.2.3.4 0.0.255.255 to network 1.2.0.0 0.0.255.255.
+#### Verifying OSPF Operation
+
+As mentioned in Chapter 19, “Understanding OSPF Concepts,” OSPF routers use a threestep process to eventually add OSPF-learned routes to the IP routing table.
+First, they create neighbor relationships.
+Then they build and flood LSAs between those neighbors so each router in the same area has a copy of the same LSDB. Finally, each router independently computes its own IP routes using the SPF algorithm and adds them to its routing table.
+This next topic works through how to display the results of each of those steps, which lets you confirm whether OSPF has worked correctly or not.
+
+The show ip ospf neighbor, show ip ospf database, and show ip route commands display information to match each of these three steps, respectively.
+Figure 20-3 summarizes the commands you can use (and others) when verifying OSPF.
+
+Many engineers begin OSPF verification by looking at the output of the show ip ospf neighbor command.
+For instance, Example 20-4 shows a sample from Router R1, which should have one neighbor relationship each with routers R2, R3, and R4. Example 20-4 shows all three.
+
+Figure 20-3 OSPF Verification Commands Example 20-4 OSPF Neighbors on Router R1 from Figure 20-2 Example end.
+
+The detail in the output mentions several important facts, and for most people, working right to left works best in this case.
+For example, look at the headings:
+
+Interface: This is the local router’s interface connected to the neighbor.
+For example, the first neighbor in the list is reachable through R1’s G0/0/0 interface.
+
+Address: This is the neighbor’s IP address on that link.
+Again, for this first neighbor, which is R1, uses IP address 10.1.13.1.
+
+State: While many possible states exist, for the details discussed in this chapter, FULL is the correct and fully working state in this case.
+
+Neighbor ID: This is the router ID of the neighbor.
+
+Once OSPF convergence has completed, a router should list each neighbor.
+On links that use a designated router (DR), the state will also list the role of the neighboring router after the /
+
+(DR, BDR, or DROTHER. As a result, the normal working states will be:
+
+FULL/ -: The neighbor state is full, with the “-“ instead of letters meaning that the link does not use a DR/BDR.
+
+FULL/DR: The neighbor state is full, and the neighbor is the DR.
+
+FULL/BDR: The neighbor state is full, and the neighbor is the backup DR (BDR).
+
+FULL/DROTHER: The neighbor state is full, and the neighbor is neither the DR nor BDR.
+
+(It also implies that the local router is a DR or BDR because the state is FULL.)
+
+2WAY/DROTHER: The neighbor state is 2-way, and the neighbor is neither the DR nor BDR—that is, a DROther router. (It also implies that the local router is also a DROther router because otherwise the state would reach a full state.)
+
+Once a router’s OSPF process forms a working neighbor relationship, the routers exchange the contents of their LSDBs, either directly or through the DR on the subnet.
+Example 20-5 shows the contents of the LSDB on Router R1. Interestingly, with a single-area design, all the routers will have the same LSDB contents once all neighbors are up and all LSAs have been exchanged.
+So, the show ip ospf database command in Example 20-5 should list the same exact information, no matter on which of the four routers it is issued.
+
+Example 20-5 OSPF Database on Router R1 from Figure 20-2 Example end.
+
+For the purposes of this book, do not be concerned about the specifics in the output of this command.
+However, for perspective, note that the LSDB should list one “Router Link State”
+
+(Type 1 Router LSA) for each of the routers in the same area, so with the design based on Figure 20-2, the output lists four Type 1 LSAs. Also, with all default settings in this design, the routers will create a total of four Type 2 Network LSAs as shown, one each for the subnets that have a DR and contain at least two routers in that subnet.
+
+Next, Example 20-6 shows R4’s IPv4 routing table with the show ip route command.
+As configured, with all links working, the design in Figure 20-2 includes seven subnets.
+R4 has connected routes to two of those subnets and should learn OSPF routes to the other five subnets.
+
+Example 20-6 IPv4 Routes Added by OSPF on Router R1 from Figure 20-2 Example end.
+
+Any time you want to check OSPF on a router in a small design like the ones in the book, you can count all the subnets, then count the subnets connected to the local router, and know that OSPF should learn routes to the rest of the subnets.
+Then just use the show ip route command and add up how many connected and OSPF routes exist as a quick check of whether all the routes have been learned or not.
+
+In this case, router R4 has two connected subnets, but seven subnets exist per the figure, so router R4 should learn five OSPF routes.
+Next look for the code of “O” on the left, which identifies a route as being learned by OSPF. The output lists five such IP routes: two for the LAN subnets off Router R1, one for the LAN subnets connected to both R2 and R3, and one each for the WAN subnets from R1 to R2 and R1 to R3.
+
+Next, take a look at the first route (to subnet 10.1.1.0/24).
+It lists the subnet ID and mask, identifying the subnet.
+It also lists two numbers in brackets.
+The first, 110, is the administrative distance of the route.
+All the OSPF routes in this example use the default of 110 (see Chapter 19’s Table 19-4 for the list of administrative distance values).
+The second number, 2, is the OSPF metric for this route.
+The route also lists the forwarding instructions: the nexthop IP address (10.1.14.1) and R4’s outgoing interface (G0/0/0).
+#### Verifying OSPF Configuration
+
+Once you can configure OSPF with confidence, you will likely verify OSPF focusing on OSPF neighbors and the IP routing table as just discussed.
+However, if OSPF does not work immediately, you may need to circle back and check the configuration.
+To do so, you can use these steps:
+###### If you have enable mode access, use the show running-config command to examine the
+
+configuration.
+###### If you have only user mode access, use the show ip protocols command to re-create the
+
+OSPF configuration.
+###### Use the show ip ospf interface [brief] command to determine whether the router enabled
+
+OSPF on the correct interfaces or not based on the configuration.
+
+NOTE The exam’s Sim and Simlet questions can restrict access to enable mode, so knowing how to extract the configuration from show commands other than show running-config can be particularly helpful for any configuration topic.
+
+The best way to verify the configuration begins with the show running-config command, of course.
+However, the show ip protocols command repeats the details of the OSPFv2 configuration and does not require enable mode access.
+To see how, consider Example 20-7, which lists the output of the show ip protocols command on router R3.
+
+Example 20-7 Router R3 Configuration and the show ip protocols Command Example end.
+
+The highlighted output emphasizes some of the configuration.
+The first highlighted line repeats the parameters on the router ospf 1 global configuration command. (The second highlighted item points out each router’s router ID, which will be discussed in the next section.)
+
+The third set of highlighted lines begins with a heading of “Routing for Networks:”
+
+followed by two lines that closely resemble the parameters on the configured network commands.
+
+In fact, closely compare those last two highlighted lines with the network configuration commands at the top of the example, and you will see that they mirror each other, but the show command just leaves out the word network.
+For instance:
+
+Configuration: network 10.1.13.3 0.0.0.0 area 0 Show Command: 10.1.13.3 0.0.0.0 area 0 IOS interprets the network commands to choose interfaces on which to run OSPF, so it could be that IOS chooses a different set of interfaces than you predicted.
+To check the list of interfaces chosen by IOS, use the show ip ospf interface brief command, which lists all interfaces that have been enabled for OSPF processing.
+Verifying the interfaces can be a useful step if you have issues with OSPF neighbors because OSPF must first be enabled on an interface before a router will attempt to discover neighbors on that interface.
+Example 20-8 shows a sample from Router R1.
+
+Example 20-8 Router R1 show ip ospf interface brief Command Example end.
+
+First, consider the show ip ospf interface brief command shown here.
+It lists one line per interface, with the list showing all the interfaces on which OSPF has been enabled.
+Each item in the list identifies the OSPF process ID (per the router ospf process-id command), the area, the interface IP address, and the number of neighbors found via each interface.
+
+More generally, note that the show ip ospf interface command with the brief keyword at the end lists a single line of output per interface, but the show ip ospf interface command (without the brief keyword) displays about 20 lines of output per interface, with much more information about various OSPF per-interface settings.
+#### Configuring the OSPF Router ID
+
+While OSPF has many other optional features, most enterprise networks that use OSPF choose to configure each router’s OSPF router ID. OSPF-speaking routers must have a router ID (RID) for proper operation.
+By default, routers will choose an interface IP address to use as the RID. However, many network engineers prefer to choose each router’s router ID, so command output from commands like show ip ospf neighbor lists more recognizable router IDs.
+
+To choose its RID, a Cisco router uses the following process when the router reloads and brings up the OSPF process.
+Note that the router stops looking for a router ID to use once one of the steps identifies a value to use.
+
+1. If the router-id rid OSPF subcommand is configured, this value is used as the RID.
+
+2. If any loopback interfaces have an IP address configured, and the interface has an interface status of up, the router picks the highest numeric IP address among these loopback interfaces.
+
+3. The router picks the highest numeric IP address from all other interfaces whose interface status code (first status code) is up. (In other words, an interface in up/down state will be included by OSPF when choosing its router ID.)
+
+The first and third criteria should make some sense right away: the RID is either configured or is taken from a working interface’s IP address.
+However, this book has not yet explained the concept of a loopback interface, as mentioned in Step 2.
+
+A loopback interface is a virtual interface that can be configured with the interface loopback interface-number command, where interface-number is an integer.
+Loopback interfaces are always in an “up and up” state unless administratively placed in a shutdown state.
+For example, a simple configuration of the command interface loopback 0, followed by ip address 2.2.2.2 255.255.255.0, would create a loopback interface and assign it an IP address.
+Because loopback interfaces do not rely on any hardware, these interfaces can be up/up whenever IOS is running, making them good interfaces on which to base an OSPF RID.
+
+Example 20-9 shows the configuration that existed in Routers R1 and R2 before the creation of the show command output earlier in this chapter.
+R1 set its router ID using the direct method, while R2 used a loopback IP address.
+
+Example 20-9 OSPF Router ID Configuration Examples Example end.
+
+Each router chooses its OSPF RID when OSPF is initialized, which happens when the router boots or when a CLI user stops and restarts the OSPF process (with the clear ip ospf process command).
+So, if OSPF comes up, and later the configuration changes in a way that would impact the OSPF RID, OSPF does not change the RID immediately.
+Instead, IOS waits until the next time the OSPF process is restarted.
+
+Example 20-10 shows the output of the show ip ospf command on R1, which identifies the OSPF RID used by R1.
+
+Example 20-10 Confirming the Current OSPF Router ID Example end.
+#### Implementing Multiarea OSPF
+
+Even though the current CCNA 200-301 exam blueprint mentions single-area OSPF and does not mention multiarea OSPF, you only need to learn one more idea to know how to configure multiarea OSPF. So, this chapter takes a brief page to show how.
+
+For example, consider a multiarea OSPF design as shown in Figure 20-4.
+It uses the same routers and IP addresses as shown earlier in Figure 20-2, on which all the examples in this chapter have been based so far.
+However, the design shows three areas instead of the singlearea design shown in Figure 20-2.
+
+Figure 20-4 Area Design for an Example Multiarea OSPF Configuration Configuring the routers in a multiarea design is almost like configuring OSPFv2 for a single area.
+To configure multiarea OSPF, all you need is a valid OSPF area design (for instance, like Figure 20-4) and a configuration that places each router interface into the correct area per that design.
+For example, both of R4’s interfaces connect to links in area 4, making R4 an internal router, so any network commands on router R4 will list area 4.
+
+Example 20-11 shows a sample configuration for Router R1. To make the configuration clear, it uses network commands with a wildcard mask of 0.0.0.0, meaning each network command matches a single interface.
+Each interface will be placed into either area 0, 23, or 4 to match the figure.
+
+Example 20-11 OSPF Configuration on R1, Placing Interfaces into Different Areas Example end.
+### Using OSPFv2 Interface Subcommands
+
+From the earliest days of OSPFv2 support in Cisco routers, the configuration used the OSPF network command as discussed in this chapter.
+However, that configuration style can be confusing, and it does require some interpretation of the network commands and interface IP addresses to decide on which interfaces IOS will enable OSPF. As a result, Cisco added another option for OSPFv2 configuration called OSPF interface configuration.
+
+The newer interface-style OSPF configuration still enables OSPF on interfaces, but it does so directly with the ip ospf interface subcommand instead of using the network command in router configuration mode.
+Basically, instead of matching interfaces with indirect logic using network commands, you directly enable OSPFv2 on interfaces by configuring an interface subcommand on each interface.
+#### OSPF Interface Configuration Example
+
+To show how OSPF interface configuration works, this example basically repeats the example shown earlier in the book using the traditional OSPFv2 configuration with network commands.
+So, before looking at the OSPFv2 interface configuration, take a moment to look back to review traditional OSPFv2 configuration with Figure 20-2 and Examples 20-2 and 20-3.
+
+After reviewing the traditional configuration, consider this checklist, which details how to convert from the old-style configuration in Examples 20-2 and 20-3 to use interface configuration:
+
+Step 1.
+Use the no network network-id area area-id subcommands in OSPF configuration mode to remove the network commands.
+
+Step 2.
+Add one ip ospf process-id area area-id command in interface configuration mode under each interface on which OSPF should operate, with the correct OSPF process (process-id) and the correct OSPF area number.
+
+Figure 20-5 repeats the design for both the original examples in this chapter and for this upcoming interface configuration example.
+
+Figure 20-5 Area Design Used in the Upcoming OSPF Interface Config Example Example 20-2 shows a single network command: network 10.0.0.0 0.255.255.255 area 0.
+
+Example 20-12 follows the steps in the migration checklist, beginning with the removal of the previous configuration using the no network 10.0.0.0 0.255.255.255 area 0 command.
+
+The example then shows the addition of the ip ospf 1 area 0 command on each of the five interfaces on Router R1, enabling OSPF process 1 on the interface and placing each interface into area 0.
+
+Example 20-12 OSPF Single-Area Configuration on R1 Using One network Command Example end.
+
+When reading the example, read from top to bottom, and also consider the details about the failed and recovered neighbor relationships shown in the log messages.
+Removing the network command disabled OSPF on all interfaces on Router R1, causing all three neighbor relationships to fail.
+The example then shows the addition of the ip ospf 1 area 0 command on the two LAN subinterfaces, which enables OSPF. Then the example shows the same command added to each of the WAN links in succession, and in each case, the OSPF neighbor available over that WAN link comes up (as noted in the log messages.)
+##### Verifying OSPF Interface Configuration
+
+OSPF operates the same way whether you use the new style or old style of configuration.
+
+The OSPF area design works the same, neighbor relationships form the same way, routers negotiate to become the DR and BDR the same way, and so on.
+However, you can see a few small differences in show command output when using the newer OSPFv2 configuration if you look closely.
+
+The show ip protocols command relists most of the routing protocol configuration, so it does list some different details if you use interface configuration versus the network command.
+
+With the newer-style configuration, the output lists the phrase “Interfaces Configured Explicitly,” with the list of interfaces configured with the new ip ospf process-id area area-id commands, as highlighted in Example 20-13.
+The example first shows the relevant parts of the show ip protocols command when using interface configuration on Router R1, and then lists the same portions of the command from when R1 used network commands.
+
+Example 20-13 Differences in show ip protocols Output: Old- and New-Style OSPFv2 Example end.
+
+Another small piece of different output exists in the show ip ospf interface [interface] command.
+
+The command lists details about OSPF settings for the interface(s) on which OSPF is enabled.
+The output also makes a subtle reference to whether that interface was enabled for OSPF with the old or new configuration style.
+Example 20-14 also begins with output based on interface configuration on Router R1, followed by the output that would exist if R1 still used the old-style network command.
+
+Example 20-14 Differences in show ip ospf interface Output with OSPFv2 Interface Example end.
+
+Other than these small differences in a few show commands, the rest of the commands show nothing different depending on the style of configuration.
+For instance, the show ip ospf interface brief command does not change depending on the configuration style, nor do the show ip ospf database, show ip ospf neighbor, or show ip route commands.
+### Additional OSPFv2 Features
+
+This final major section of the chapter discusses some very popular but optional OSPFv2 configuration features, as listed here in their order of appearance:
+###### Passive interfaces
+###### Default routes
+###### Metrics
+###### Load balancing
+#### OSPF Passive Interfaces
+
+Once OSPF has been enabled on an interface, the router tries to discover neighboring OSPF routers and form a neighbor relationship.
+To do so, the router sends OSPF Hello messages on a regular time interval (called the Hello Interval).
+The router also listens for incoming Hello messages from potential neighbors.
+
+Sometimes, a router does not need to form neighbor relationships with neighbors on an interface.
+Often, no other routers exist on a particular link, so the router has no need to keep sending those repetitive OSPF Hello messages.
+In such cases, an engineer can make the interface passive, which means
+###### OSPF continues to advertise about the subnet that is connected to the interface.
+###### OSPF no longer sends OSPF Hellos on the interface.
+###### OSPF no longer processes any received Hellos on the interface.
+
+The result of enabling OSPF on an interface but then making it passive is that OSPF still advertises about the connected subnet, but OSPF also does not form neighbor relationships over the interface.
+
+To configure an interface as passive, two options exist.
+First, you can add the following command to the configuration of the OSPF process, in router configuration mode:
+
+passive-interface type number Alternately, the configuration can change the default setting so that all interfaces are passive by default and then add a no passive-interface command for all interfaces that need to not be passive:
+
+passive-interface default no passive-interface type number For example, in the sample internetwork in Figure 20-2 (and in Figure 20-5), Router R1, on the left side of the figure, has a LAN interface configured for VLAN trunking.
+The only router connected to both VLANs is Router R1, so R1 will never discover an OSPF neighbor on these subnets.
+Example 20-15 shows two alternative configurations to make the two LAN subinterfaces passive to OSPF.
+
+Example 20-15 Configuring Passive Interfaces on R1 from Figure 20-5 Example end.
+
+In real internetworks, the choice of configuration style reduces to which option requires the least number of commands.
+For example, a router with 20 interfaces, 18 of which are passive to OSPF, has far fewer configuration commands when using the passive-interface default command to change the default to passive.
+If only two of those 20 interfaces need to be passive, use the default setting, in which all interfaces are not passive, to keep the configuration shorter.
+
+Interestingly, OSPF makes it a bit of a challenge to use show commands to find whether or not an interface is passive.
+The show running-config command lists the configuration directly, but if you cannot get into enable mode to use this command, note these two facts:
+
+The show ip ospf interface brief command lists all interfaces on which OSPF is enabled, including passive interfaces.
+
+The show ip ospf interface command lists a single line that mentions that the interface is passive.
+
+Example 20-16 shows these two commands on Router R1, based on the configuration shown in the top of Example 20-15.
+Note that subinterfaces G0/0.1 and G0/0.2 both show up in the output of show ip ospf interface brief.
+
+Example 20-16 Displaying Passive Interfaces Example end.
+#### OSPF Default Routes
+
+Chapter 16, “Configuring IPv4 Addressing and Static Routes,” showed some of the uses and benefits of default routes, with examples of static default routes.
+For those exact same reasons, networks can use OSPF to advertise default routes.
+
+The most classic case for using a routing protocol to advertise a default route has to do with an enterprise’s connection to the Internet.
+As a strategy, the enterprise engineer uses these design goals:
+###### All routers learn specific (nondefault) routes for subnets inside the company; a default
+
+route is not needed when forwarding packets to these destinations.
+###### One router connects to the Internet, and it has a default route that points toward the
+
+Internet.
+###### All routers should dynamically learn a default route, used for all traffic going to the
+
+Internet, so that all packets destined to locations in the Internet go to the one router connected to the Internet.
+
+Figure 20-6 shows the idea of how OSPF advertises the default route, with the specific OSPF configuration.
+In this case, a company connects to an ISP with its Router R1. That router has a static default route (destination 0.0.0.0, mask 0.0.0.0) with a next-hop address of the ISP router.
+Then the use of the OSPF default-information originate command (Step 2)
+
+makes the router advertise a default route using OSPF to the remote routers (B1 and B2).
+
+Figure 20-6 Using OSPF to Create and Flood a Default Route Figure 20-7 shows the default routes that result from OSPF’s advertisements in Figure 20-6.
+
+On the far left, the branch routers all have OSPF-learned default routes, pointing to R1.
+
+R1 itself also needs a default route, pointing to the ISP router, so that R1 can forward all Internet-bound traffic to the ISP.
+
+Finally, this feature gives the engineer control over when the router originates this default route.
+First, R1 needs a default route, either defined as a static default route, learned from the ISP with DHCP or learned from the ISP with a routing protocol like eBGP. The OSPF subcommand default-information originate then tells OSPF on R1 to advertise a default route when its own default route is working and to advertise the default route as down when its own default route fails.
+
+Figure 20-7 Default Routes Resulting from the default-information originate Command NOTE Interestingly, the default-information originate always router subcommand tells the router to always advertise the default route, no matter whether the router’s default route is working or not.
+
+Example 20-17 shows details of the default route on both R1 and branch router B1 from Figure 20-7.
+R1 then creates a static default route with the ISP router’s IP address of 192.0.2.1 as the next-hop address, as highlighted in the output of the show ip route static command output.
+
+Example 20-17 Default Routes on Routers R1 and B1 Example end.
+
+Keeping the focus on the command on Router R1, note that R1 indeed has a default route—
+
+that is, a route to 0.0.0.0/0.
+The “Gateway of last resort,” which refers to the default route currently used by the router, points to next-hop IP address 192.0.2.1, which is the ISP router’s IP address. (Refer to Figure 20-7 for the particulars.)
+
+Next look to the bottom half of the example and router B1’s OSPF-learned default route.
+B1 lists a route for 0.0.0.0/0 as well.
+The next-hop router in this case is 10.1.12.1, which is Router R1’s IP address on the WAN link.
+The code on the far left is O1E2, meaning an OSPF-learned route, which is a default route, and is specifically an external OSPF route.
+Finally, B1’s gateway of last resort setting uses that one OSPF-learned default route, with next-hop router
+###### 10.1.12.1.
+#### OSPF Metrics Cost
+
+The section “Calculating the Best Routes with SPF” in Chapter 19 discussed how SPF calculates the metric for each route, choosing the route with the best metric for each destination subnet.
+OSPF routers can influence that choice by changing the OSPF interface cost on any and all interfaces.
+
+Cisco routers allow three different ways to change the OSPF interface cost:
+###### Directly, using the interface subcommand ip ospf cost x.
+###### Using the default calculation per interface, and changing the interface bandwidth setting,
+
+which changes the calculated value.
+###### Using the default calculation per interface, and changing the OSPF reference bandwidth
+
+setting, which changes the calculated value.
+##### Setting the Cost Directly
+
+Setting the cost directly requires a simple configuration command, as shown in Example 20-18.
+The example sets the cost of two interfaces on Router R1. (This example uses the Figure 20-2 design, as configured in Examples 20-2 and 20-3.) The show ip ospf interface brief command that follows details the cost of each interface.
+Note that the show command confirms the cost settings.
+
+Example 20-18 Confirming OSPF Interface Costs Example end.
+
+The output also shows a cost value of 1 for the other Gigabit interfaces, which is the default OSPF cost for any interface faster than 100 Mbps.
+The next topic discusses how IOS determines the default cost values.
+##### Setting the Cost Based on Interface and Reference Bandwidth
+
+Routers use a per-interface bandwidth setting to describe the speed of the interface.
+Note that the interface bandwidth setting does not influence the actual transmission speed.
+
+Instead, the interface bandwidth acts as a configurable setting to represent the speed of the interface, with the option to configure the bandwidth to match the actual transmission speed…or not.
+To support this logic, IOS sets a default interface bandwidth value that matches the physical transmission speed when possible, but also allows the configuration of the interface bandwidth using bandwidth speed interface subcommand.
+
+OSPF (as well as other IOS features) uses the interface bandwidth to make decisions, with OSPF using the interface bandwidth in its calculation of the default OSPF cost for each interface.
+IOS uses the following formula to choose an interface’s OSPF cost if the cost for cases in which the ip ospf cost command is not configured on the interface.
+IOS puts the interface’s bandwidth in the denominator and an OSPF setting called the reference bandwidth in the numerator:
+
+Reference_bandwidth / Interface_bandwidth Note that while you can change both the interface bandwidth and reference bandwidth via configuration, because several IOS features make use of the bandwidth setting, you should avoid changing the interface bandwidth as a means to influence the default OSPF cost.
+
+That being said, many enterprises do use default cost settings while influencing the default by changing the OSPF reference bandwidth while leaving the interface bandwidth as an accurate representation of link speed.
+Cisco chose the IOS default reference bandwidth setting decades ago in an era with much slower links.
+As a result, any interface with an interface bandwidth of 100 Mbps or faster ties with a calculated OSPF cost of 1 when using the default reference bandwidth.
+So, when relying on the default OSPF cost calculation, it helps to configure the reference bandwidth to another value.
+
+To see the issue, consider Table 20-3, which lists several types of interfaces, the default interface bandwidth on those interfaces, and the OSPF cost calculated with the default OSPF reference bandwidth of 100 MBps (that is, 100,000 Kbps). (OSPF rounds up for these calculations, resulting in a lowest possible OSPF interface cost of 1.)
+
+Table 20-3 Faster Interfaces with Equal OSPF Costs Table end.
+
+As you can see from the table, with a default reference bandwidth, all interfaces from Fast Ethernet’s 100 Mbps and faster tie with their default OSPF cost.
+As a result, OSPF would treat a 100-Mbps link as having the same cost as a 10- or 100-Gbps link, which is probably not the right basis for choosing routes.
+
+You can still use OSPF’s default cost calculation (and many do) just by changing the reference bandwidth with the auto-cost reference-bandwidth speed OSPF mode subcommand.
+
+This command sets a value in a unit of megabits per second (Mbps).
+Set the reference bandwidth value to a value at least as much as the fastest link speed in the network, but preferably higher, in anticipation of adding even faster links in the future.
+
+For instance, in an enterprise whose fastest links are 10 Gbps (10,000 Mbps), you could set all routers to use auto-cost reference-bandwidth 10000, meaning 10,000 Mbps or 10 Gbps.
+
+In that case, by default, a 10-Gbps link would have an OSPF cost of 1, while a 1-Gbps link would have a cost of 10, and a 100-MBps link a cost of 100.
+
+Better still, in that same enterprise, use a reference bandwidth of a faster speed than the fastest interface in the network, to allow room for higher speeds.
+For instance, in that same enterprise, whose fastest link is 10 Gbps, set the reference bandwidth to 40 Gbps or even 100 Gbps to be ready for future upgrades to use 40-Gbps links, or even 100-Gbps links.
+
+(For example, use the auto-cost reference-bandwidth 100000 command, meaning 100,000 Mbps or 100 Gbps.) That causes 100-Gbps links to have an OSPF cost of 1, 40-Gbps links to have a cost of 4, 10-Gbps links to have a cost of 10, and 1-Gbps links to have a cost of 100.
+
+NOTE Cisco recommends making the OSPF reference bandwidth setting the same on all OSPF routers in an enterprise network.
+
+For convenient study, the following list summarizes the rules for how a router sets its OSPF interface costs:
+
+1. Set the cost explicitly, using the ip ospf cost x interface subcommand, to a value between 1 and 65,535, inclusive.
+
+2. Although it should be avoided, change the interface bandwidth with the bandwidth speed command, with speed being a number in kilobits per second (Kbps).
+
+3. Change the reference bandwidth, using router OSPF subcommand auto-cost reference-bandwidth ref-bw, with a unit of megabits per second (Mbps).
+#### OSPF Load Balancing
+
+When a router uses SPF to calculate the metric for each of several routes to reach one subnet, one route may have the lowest metric, so OSPF puts that route in the routing table.
+
+However, when the metrics tie for multiple routes to the same subnet, the router can put multiple equal-cost routes in the routing table (the default is four different routes) based on the setting of the maximum-paths number router subcommand.
+For example, if an internetwork has six possible paths between some parts of the network, and the engineer wants all routes to be used, the routers can be configured with the maximum-paths 6 subcommand under router ospf.
+
+The more challenging concept relates to how the routers use those multiple routes.
+A router could load balance the packets on a per-packet basis.
+For example, if the router has three equal-cost OSPF routes for the same subnet in the routing table, the router could send the one packet over the first route, the next packet over the second route, the next packet over the third route, and then start over with the first route for the next packet.
+Note that perpacket load balancing is generally a poor choice because it causes the most overhead work on the router.
+Alternatively, using the default (and better) method, the load balancing could be on a per-destination IP address basis.
+
+Note that the default setting of maximum-paths varies by router platform.
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 20-4 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 20-4 Chapter Review Tracking Table end.
+
+Review All the Key Topics Table 20-5 Key Topics for Chapter 20 Table end.
+
+Table 20-6 Chapter 20 Configuration Command Reference Table end.
+
+Table 20-7 Chapter 20 EXEC Command Reference Table end.
+
+Command Description show ip ospf neighbor [type number]
+
+Lists brief output about neighbors, identified by neighbor router ID, including current state, with one line per neighbor;
+
+optionally, limits the output to neighbors on the listed interface.
+
+show ip ospf neighbor neighbor-ID Lists the same output as the show ip ospf neighbor detail command, but only for the listed neighbor (by neighbor RID).
+
+show ip ospf database Lists a summary of the LSAs in the database, with one line of output per LSA. It is organized by LSA type (first type 1, then type 2, and so on).
+
+show ip route Lists all IPv4 routes.
+
+show ip route ospf Lists routes in the routing table learned by OSPF.
+
+show ip route ip-address mask Shows a detailed description of the route for the listed subnet/mask.
+
+clear ip ospf process Resets the OSPF process, resetting all neighbor relationships and also causing the process to make a choice of OSPF RID.
+## Chapter 21 OSPF Network Types and Neighbors
+
+Neighbors This chapter covers the following exam topics:
+###### 3.0 IP Connectivity
+###### 3.4 Configure and verify single area OSPFv2
+###### 3.4.a Neighbor adjacencies
+###### 3.4.b Point-to-point
+###### 3.4.c Broadcast (DR/BDR selection)
+###### 3.4.d Router ID
+
+Chapter 20, “Implementing OSPF,” discussed the required and most common optional OSPF configuration settings, along with the many verification commands to show how OSPF works with those settings.
+This chapter continues with more OSPF implementation topics, both to round out the discussion of OSPF and to focus even more on the specific CCNA 200-301 exam topics.
+
+The first of two major sections of this chapter focuses on OSPF network types, specifically types point-to-point and broadcast.
+The CCNA 200-301 exam topics mention those by name.
+Chapter 20 showed how OSPF operates on Ethernet interfaces when using their default network type (broadcast).
+This first section of the chapter discusses the meaning of OSPF network types, default settings, how to configure to use other settings, and how OSPF works differently with different settings.
+
+The second major section then focuses on neighbors and neighbor adjacencies as mentioned in yet another of the OSPF exam topics.
+OSPF routers cannot exchange LSAs with another router unless they first become neighbors.
+This second section discusses the various OSPF features that can prevent OSPF routers from becoming neighbors and how you can go about discovering if those bad conditions exist—even if you do not have access to the running configuration.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+CHAPTER 21 Table 21-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### OSPF Network Types
+
+OSPF Neighbor Relationships 4–6 1.
+Routers R1 and R2, with router IDs 1.1.1.1 and 2.2.2.2, connect over an Ethernet WAN link.
+If using all default OSPF settings, if the WAN link initializes for both routers at the same time, which of the following answers are true? (Choose two answers.)
+
+a. Router R1 will become the DR.
+
+b. Router R1 will dynamically discover the existence of router R2.
+
+c. Router R2 will be neither the DR nor the BDR.
+
+d. Router R1’s show ip ospf neighbor command will list R2 with a state of “FULL/DR.”
+
+2. Routers R1 and R2, with router IDs 1.1.1.1 and 2.2.2.2, connect over an Ethernet WAN link.
+The configuration uses all defaults, except giving R1 an interface priority of 11 and changing both routers to use OSPF network type point-to-point.
+If the WAN link initializes for both routers at the same time, which of the following answers are true?
+
+(Choose two answers.)
+
+a. Router R1 will become the DR.
+
+b. Router R1 will dynamically discover the existence of router R2.
+
+c. Router R2 will be neither the DR nor the BDR.
+
+d. Router R2’s show ip ospf neighbor command will list R1 with a state of “FULL/DR.”
+
+3. Per the command output, with how many routers is router R9 full adjacent over its Gi0/0 interface?
+
+R9# show ip ospf interface brief Interface PID Area IP Address/Mask Cost State Nbrs F/C Gi0/0 1 0 10.1.1.1/24 1 DROTH 2/5 a. 7 b. 0 c. 5 d. 2 4.
+An engineer connects routers R11 and R12 to the same Ethernet LAN and configures them to use OSPFv2.
+Which answers describe a combination of settings that would prevent the two routers from becoming OSPF neighbors? (Choose two answers.)
+
+a. R11’s interface uses area 11 while R12’s interface uses area 12.
+
+b. R11’s OSPF process uses process ID 11 while R12 uses process ID 12.
+
+c. R11’s interface uses OSPF priority 11 while R12’s uses OSPF priority 12.
+
+d. R11’s interface uses an OSPF Hello timer value of 11 while R12’s uses 12.
+
+5. An engineer connects routers R13 and R14 to the same Ethernet LAN and configures them to use OSPFv2.
+Which answers describe a combination of settings that would prevent the two routers from becoming OSPF neighbors?
+
+a. Both routers’ interface IP addresses reside in the same subnet.
+
+b. Both routers’ OSPF process uses process ID 13.
+
+c. Both routers’ OSPF process uses router ID 13.13.13.13.
+
+d. Both routers’ interfaces use an OSPF Dead interval of 40.
+
+6. Router R15 has been a working part of a network that uses OSPFv2.
+An engineer then issues the shutdown command in OSPF configuration mode on R15.
+Which of the following occurs?
+
+a. R15 empties its IP routing table of all OSPF routes but keeps its LSDB intact.
+
+b. R15 empties its LSDB but keeps OSPF neighbor relationships active.
+
+c. R15 keeps OSPF neighbors open but does not accept new OSPF neighbors.
+
+d. R15 keeps all OSPF configuration but ceases all OSPF activities (routes, LSDB, neighbors).
+
+Foundation Topics OSPF Network Types Two CCNA 200-301 exam topics might be completely misunderstood without taking a closer look at yet more default OSPF settings.
+In particular, the following exam topics refer to a specific per-interface OSPF setting called the network type—even listing the keywords used to configure the setting in the exam topics:
+###### 3.4.b: point-to-point
+###### 3.4.c: broadcast (DR/BDR selection)
+
+OSPF includes a small number of network types as a setting on each OSPF-enabled interface.
+
+The setting tells the router whether or not to dynamically discover OSPF neighbors (versus requiring the static configuration of the neighboring router’s IP address) and whether or not the router should attempt to use a designated router (DR) and backup DR (BDR) in the subnet.
+Of the two OSPF network types included in the CCNA exam topics, both cause routers to dynamically discover neighbors, but one calls for the use of a DR while the other does not.
+Table 21-2 summarizes the features of the two OSPF network types mentioned in the exam topics.
+
+Table 21-2 Two OSPF Network Types and Key Behaviors Table end.
+
+The rest of this first major section of the chapter explores each type.
+#### The OSPF Broadcast Network Type
+
+OSPF defaults to use a broadcast network type on all types of Ethernet interfaces.
+Note that all the Ethernet interfaces in examples in Chapter 20 relied on that default setting.
+
+To see all the details of how the OSPF broadcast network type works, this chapter begins with a different design than the examples in Chapter 20, instead using a single area design that connects four routers to the same subnet, as shown in Figure 21-1.
+All links reside in area 0, making the design a single area design.
+
+Figure 21-1 The Single Area Design Used in This Chapter To get a sense for how OSPF operates with the broadcast network type, imagine that all four routers use a straightforward OSPF interface configuration like the router R1 configuration shown in Example 21-1.
+Both GigabitEthernet interfaces on all four routers default to use network type broadcast.
+Note that the configuration on routers R2, R3, and R4 mirrors R1’s configuration except that they use router IDs 2.2.2.2, 3.3.3.3, and 4.4.4.4, respectively, and they use the IP addresses shown in the figure.
+
+Example 21-1 R1 OSPF Configuration to Match Figure 21-1 Example end.
+
+This simple design gives us a great backdrop from which to observe the results of the broadcast network type on each router.
+Both interfaces (G0/0 and G0/1) on each router use the broadcast network type and perform the following actions:
+###### Attempt to discover neighbors by sending OSPF Hellos to the 224.0.0.5 multicast address
+
+(an address reserved for sending packets to all OSPF routers in the subnet)
+###### Attempt to elect a DR and BDR on each subnet
+###### On the interface with no other routers on the subnet (G0/1), become the DR
+###### On the interface with three other routers on the subnet (G0/0), be either DR, BDR, or a
+
+DROther router
+###### When sending OSPF messages to the DR or BDR, send the messages to the all-OSPF-DRs
+
+multicast address 224.0.0.6 Example 21-2 shows some of the results using the show ip ospf neighbor command.
+Note that R1 lists R2, R3, and R4 as neighbors (based on their 2.2.2.2, 3.3.3.3, and 4.4.4.4 router IDs), confirming that R1 dynamically discovered the other routers.
+Also, note that the output lists 4.4.4.4 as the DR and 3.3.3.3 as the BDR.
+
+Example 21-2 R1’s List of Neighbors Example end.
+##### Verifying Operations with Network Type Broadcast
+
+As discussed in the section “Using Designated Routers on Ethernet Links” in Chapter 19, “Understanding OSPF Concepts,” all discovered routers on the link should become neighbors and at least reach the 2-way state.
+For all neighbor relationships that include the DR and/or BDR, the neighbor relationship should further reach the full state.
+That section defined the term fully adjacent as a special term that refers to neighbors that reach this full state.
+
+The design in Figure 21-1, with four routers on the same LAN, provides just enough routers so that one neighbor relationship will remain in a 2-way state and not reach the full state, as a perfectly normal way for OSPF to operate.
+Figure 21-2 shows the current conditions when the show commands in this chapter were gathered, with R4 as the DR, R3 as the BDR, and with R1 and R2 as DROther routers.
+
+Now consider router R1’s neighbors as listed in Example 21-2.
+R1 has three neighbors, all reachable out its G0/0 interface.
+However, R1’s show ip ospf neighbor command refers to the state of R1’s relationship with the neighbor: 2-way with router 2.2.2.2.
+Because both R1 and R2 currently serve as DROther routers—that is, they wait ready to become the BDR if either the DR or BDR fails—their neighbor relationship remains in a 2-way state.
+
+Figure 21-2 OSPF DR/BDR/DROther Roles in the Network Examining Example 21-2 one last time, R1, as a DROther router itself, has two neighbor relationships that reach a full state: R1’s neighbor adjacency with DR R4 and R1’s neighbor adjacency with BDR R3. But R1 has a total of three neighbors, all reachable off R1’s G0/0 interface.
+
+The idea that R1 has three neighbors off its G0/0 interface, with two being fully adjacent, is reflected on the far right of the output of the show ip ospf interface brief command output in Example 21-3.
+It shows “2/3,” meaning two neighbors in the full state off port G0/0, with three total neighbors on that interface.
+Also, note that this command’s “State” column differs from the show ip ospf neighbor commands, in that the show ip ospf interface brief command lists the local router’s role on the interface (as shown in Figure 21-2), with R1’s G0/1 acting as DR and R1’s G0/0 acting as a DROther router.
+
+Example 21-3 Router R1 OSPF Interfaces: Local Role and Neighbor Counts Example end.
+
+So far, this topic has described the effect of the OSPF broadcast network type by taking advantage of the default setting on Ethernet interfaces.
+To see the setting, use the show ip ospf interface command, as shown in Example 21-4.
+The first highlighted item identifies the network type.
+However, this command’s output restates many of the facts seen in both the show ip ospf neighbor and show ip ospf interface brief commands in Examples 21-2 and 21-3, so take the time to browse through all of Example 21-4 and focus on the additional highlights to see those familiar items.
+
+Example 21-4 Displaying OSPF Network Type Broadcast Example end.
+
+Although you would not need to configure an Ethernet interface to use the broadcast network type, some older types of interfaces over the years have used different defaults and with the option to use the broadcast network type.
+In those cases, the ip ospf network broadcast interface subcommand would configure the setting.
+##### Configuring to Influence the DR/BDR Election
+
+In some cases, you may want to influence the OSPF DR election.
+However, before deciding that makes sense in every case, note that OSPF DR/BDR election rules will not result in a specific router always being the DR, and another always being the BDR, assuming that each is up and working.
+In short, here are the rules once a DR and BDR have been elected:
+###### If the DR fails, the BDR becomes the DR, and a new BDR is elected.
+###### When a better router enters the subnet, no preemption of the existing DR or BDR occurs.
+
+As a result of these rules, while you can configure a router to be the best (highest priority)
+
+router to become the DR in an election, doing so only increases that router’s statistical chances of being the DR at a given point in time.
+If the router fails, other routers will become DR and BDR, and the best router will not be DR again until the current DR and BDR fail.
+
+NOTE If you have begun to think about STP elections, note that the rules are similar, but with two key differences.
+STP uses a lowest-is-best approach and allows new switches to preempt the existing root switch to become the root.
+OSPF uses a highest-is-best approach and does not preempt the DR as just noted.
+
+In some cases, you may want to influence the DR/BDR election with two configurable settings, listed here in order of precedence:
+###### The highest OSPF interface priority: The highest value wins during an election, with values
+
+ranging from 0 to 255.
+###### The highest OSPF Router ID: If the priority ties, the election chooses the router with the
+
+highest OSPF RID.
+
+For example, imagine all four routers in the design shown in Figure 21-1 trying to elect the DR and BDR at the same time—for instance, after a power hit in which all four routers power off and back on again.
+They all participate in the election.
+They all tie with default priority values of 1 (see Example 21-4 for R1’s priority in the show ip ospf interface command output.)
+
+In this case, R4, with the numerically highest RID of 4.4.4.4, wins the election, and R3, with the next highest RID of 3.3.3.3, becomes the BDR.
+
+To influence the election, you could set the various RIDs with your preferred router with the highest RID value.
+However, many networks choose OSPF router IDs to help identify the router easily.
+Instead, using the OSPF priority setting makes better sense.
+For instance, if an engineer preferred that R1 be the DR, the engineer could add the configuration in Example 21-5 to set R1’s interface priority to 99.
+
+Example 21-5 Influencing DR/BDR Election Using OSPF Priority Example end.
+
+The configuration shows R1’s interface priority value now as 99, and the show ip ospf interface G0/0 command that follows confirms the setting.
+However, the last two commands in the example seem to show that the DR and BDR have not changed at all—and that output is indeed correct.
+In the example, note that the show ip ospf neighbor command still lists R4’s state as DR, meaning R4 still acts as the DR, while the show ip ospf interface brief command lists R1’s State (role) as DROTH.
+
+Just to complete the process, Example 21-6 shows the results after forcing a free election (by failing the LAN switch that sits between the four routers).
+As expected, R1 wins and becomes DR due to its higher priority, with the other three routers tying based on priority.
+
+R4 wins between R2, R3, and R4 due to its higher RID to become the BDR.
+
+Example 21-6 Results of a Completely New DR/BDR Election Example end.
+#### The OSPF Point-to-Point Network Type
+
+The other OSPF network type mentioned in the CCNA 200-301 exam topics, point-to-point, works well for data links that by their nature have just two routers on the link.
+For example, consider the topology in Figure 21-3, which shows router R1 with three WAN links—two Ethernet WAN links and one serial link.
+
+Figure 21-3 Sample OSPF Design with Serial and Ethernet WAN First, focus on the serial link itself.
+To review, the jagged line represents a physical link that can at most have two devices using the link, specifically R1 and R4 in this case.
+The link does not support the ability to add a third router to the link.
+As you might guess, the datalink protocols to control a link with at most two devices can work differently than Ethernet.
+
+For instance, the data-link protocols most often used on the link (HDLC and PPP) do not support data-link broadcasts.
+
+Next, consider the OSPF point-to-point network type: it exists for serial links and other links that use a point-to-point topology.
+These links often do not support data-link broadcasts.
+
+Additionally, with only two devices on the link, using a DR/BDR is not a help, and it actually adds a little extra convergence time.
+Using a network type of point-to-point tells the router to not use a DR/BDR on the link.
+
+While you may see some serial links in networks today, the CCNA and CCNP Enterprise exams make no specific mention of serial technology at this point.
+However, you will see other point-to-point links—like some Ethernet WAN links.
+
+To connect the thoughts, note that all the Ethernet WAN links used in this book happen to use a point-to-point Ethernet WAN service called an Ethernet Private Wire Service or simply an Ethernet Line (E-Line).
+For that service, the service provider will send Ethernet frames between two devices (routers) connected to the service, but only those two devices.
+In other words, an E-line is a point-to-point service in concept.
+So while the Ethernet data-link protocol supports broadcast frames, only two devices can exist on the link, and there is no advantage to using a DR/BDR. As a result, many engineers prefer to instead use an OSPF point-topoint network type on Ethernet WAN links that in effect act as a point-to-point link.
+
+Example 21-7 shows the configuration of router R1’s G0/0/0 interface in Figure 21-3 to use OSPF network type point-to-point.
+R2, on the other end of the WAN link, would need the same configuration command on its matching interface.
+
+Example 21-7 OSPF Network Type Point-to-Point on an Ethernet WAN Interface on R1 Example end.
+
+Note the highlighted portions of the show command in Example 21-6.
+The first two highlights note the network type.
+The final highlight with two lines notes that R1 has one neighbor on the interface, a neighbor with which it has become fully adjacent per the output.
+
+Example 21-8 closes this section with a confirmation of some of those facts with two more commands.
+Note that the show ip ospf neighbor command on R1 lists router R2 (RID 2.2.2.2)
+
+with a full state, but with no DR nor BDR designation, instead listing a -.
+The - acts as a reminder that the link does not use a DR/BDR. The second command, show ip ospf interface brief, shows the state (the local router’s role) as P2P, which is short for point-to-point, with a counter of 1 for the number of fully adjacent neighbors and total number of neighbors.
+
+Example 21-8 OSPF Network Type Point-to-Point on an Ethernet WAN Interface on R1 Example end.
+
+When using Ethernet WAN links that behave as a point-to-point link, consider using OSPF network type point-to-point rather than using the default broadcast type.
+### OSPF Neighbor Relationships
+
+A router’s OSPF configuration enables OSPF on a set of interfaces.
+IOS then attempts to discover other neighbors on those interfaces by sending and listening for OSPF Hello messages.
+
+However, once discovered, two routers may not become neighbors.
+They must have compatible values for several settings as listed in the Hellos exchanged between the two routers.
+
+This second major section of the chapter examines those reasons.
+#### OSPF Neighbor Requirements
+
+After an OSPF router hears a Hello from a new neighbor, the routing protocol examines the information in the Hello and compares that information with the local router’s own settings.
+
+If the settings match, great.
+If not, the routers do not become neighbors.
+Because there is no formal term for all these items that a routing protocol considers, this book just calls them neighbor requirements.
+Table 21-3 lists the neighbor requirements for OSPF, with some comments about the various issues following the table.
+
+Table 21-3 Neighbor Requirements for OSPF Table end.
+
+First, consider the meaning of the two rightmost columns.
+The column labeled “Required for OSPF” means that the item must be working correctly for the neighbor relationship to work correctly.
+Note that all the items in this column list a “yes,” meaning that all must be correct for the neighbor relationship to work correctly.
+The last column heading states “Neighbor Missing if Incorrect.” For items listing a “yes” in this column, if that item is configured incorrectly, the neighbor will not appear in lists of OSPF neighbors—for instance, with the show ip ospf neighbor command.
+
+Next, focus on the shaded items at the top of the table.
+The symptom that occurs if either of these is a problem is that the show ip ospf neighbor command would not list the other router.
+For instance, the first item states that the router interfaces must be up and working.
+If the router interface is not working, the router cannot send any OSPF messages and discover any OSPF neighbors on that interface.
+
+The middle section of the table (the unshaded rows) focuses on some OSPF settings.
+These items must be correct, but if not, they also result in the neighbor not being listed in the output of the show ip ospf neighbor command.
+
+As you can see, using the show ip ospf neighbor command can give you a good starting point to troubleshoot OSPF on the exam and in real life.
+If you see the neighbor you expect to see, great!
+If not, the table gives you a good list to use for items to investigate.
+
+Finally, the last section (shaded) lists a couple of OSPF settings that give a different symptom when incorrect.
+Again, those two items must be correct for OSPF neighbors to work.
+
+However, for these two items, when incorrect, a router can list the other router as a neighbor, but the neighbor relationship does not work properly in that the routers do not exchange LSAs as they should.
+
+For reference, Table 21-4 relists some of the requirements from Table 21-3, along with the most useful commands with which to find the answers.
+
+Table 21-4 OSPF Neighbor Requirements and the Best show/debug Commands Table end.
+
+The rest of this section looks at some of the items from Table 21-3 in a little more detail.
+
+NOTE One configuration choice that people sometimes think is an issue, but is not, is the process ID as defined by the router ospf process-id command.
+Neighboring routers can use the same process ID values, or different process ID values, with no impact on whether two routers become OSPF neighbors.
+#### Issues That Prevent Neighbor Adjacencies
+
+The next few pages look at three of the topics from Table 21-3 for which, if a problem exists, the router does not become a neighbor (that is, the unshaded parts of the table.).
+To show the issues, this section uses the same topology shown earlier in Figure 21-1 but now with some incorrect configuration introduced.
+In other words, the configuration matches Example 21-1 that began this chapter, but with the following errors introduced:
+###### R2 has been configured with both LAN interfaces in area 1, whereas the other three routers’
+
+G0/0 interfaces are assigned to area 0.
+###### R3 is using the same RID (1.1.1.1) as R1.
+###### R4 has been configured with a Hello/dead timer of 5/20 on its G0/0 interface, instead of
+
+the 10/40 used (by default) on R1, R2, and R3.
+
+Figure 21-4 shows these same problems for reference.
+
+Figure 21-4 Summary of Problems That Prevent OSPF Neighbors on the Central LAN
+##### Finding Area Mismatches
+
+To create an area mismatch, the configuration on some router must place the interface into the wrong area per the design.
+As shown in Figure 21-4, router R2 was configured incorrectly, placing both its interfaces into area 1 instead of area 0.
+Example 21-9 shows the configuration, which uses the correct syntax (and is therefore accepted by the router) but sets the wrong area number.
+
+Example 21-9 Setting Area 1 on R2’s Interfaces, When They Should Be in Area 0 Example end.
+
+With an area mismatch error, the show ip ospf neighbor command will not list the neighbor.
+
+Because you see nothing in the OSPF neighbor table, to troubleshoot this problem, you need to find the area configuration on each interface on potentially neighboring routers.
+To do so:
+###### Check the output of show running-config to look for
+###### ip ospf process-id area area-number interface subcommands
+###### network commands in OSPF configuration mode
+###### Use the show ip ospf interface [brief] command to list the area number
+##### Finding Duplicate OSPF Router IDs
+
+Next, Example 21-10 shows R1 and R3 both trying to use RID 1.1.1.1.
+Interestingly, both routers automatically generate a log message for the duplicate OSPF RID problem between R1 and R3; the end of Example 21-10 shows one such message.
+For the exams, just use the show ip ospf commands on both R3 and R1 to easily list the RID on each router, noting that they both use the same value.
+
+Example 21-10 Comparing OSPF Router IDs on R1 and R3 Example end.
+
+First, focus on the problem: the duplicate RIDs. The first line of the show ip ospf command on the two routers quickly shows the duplicate use of 1.1.1.1.
+To solve the problem, assuming R1 should use 1.1.1.1 and R3 should use another RID (maybe 3.3.3.3), change the RID on R3 and restart the OSPF process.
+To do so, use the router-id 3.3.3.3 OSPF subcommand and use the EXEC mode command clear ip ospf process. (OSPF will not begin using a new RID value until the process restarts, either via command or reload.)
+##### Finding OSPF Hello and Dead Timer Mismatches
+
+First, as a reminder from chapters past:
+###### Hello interval/timer: The per-interface timer that tells a router how often to send OSPF
+
+Hello messages on an interface.
+###### Dead interval/timer: The per-interface timer that tells the router how long to wait without
+
+having received a Hello from a neighbor before believing that neighbor has failed.
+
+(Defaults to four times the Hello timer.)
+
+Next, consider the problem created on R4, with the configuration of a different Hello timer and dead timer (5 and 20, respectively) as compared with the default settings on R1, R2, and R3 (10 and 40, respectively).
+A Hello or Dead interval mismatch prevents R4 from becoming neighbors with any of the other three OSPF routers.
+Routers list their Hello and Dead interval settings in their Hello messages and choose to not become neighbors if the values do not match.
+As a result, none of the routers become neighbors with router R4 in this case.
+
+Example 21-11 shows the easiest way to find the mismatch using the show ip ospf interface command on both R1 and R4. This command lists the Hello and dead timers for each interface, as highlighted in the example.
+Note that R1 uses 10 and 40 (Hello and dead), whereas R4 uses 5 and 20.
+
+Example 21-11 Finding Mismatched Hello/Dead Timers Example end.
+##### Shutting Down the OSPF Process
+
+Similar to administratively disabling and enabling an interface, IOS also allows the OSPFv2 routing protocol process to be disabled and enabled with the shutdown and no shutdown router mode subcommands, respectively.
+When a routing protocol process is shut down, IOS does the following:
+###### Brings down all neighbor relationships and clears the OSPF neighbor table
+###### Clears the LSDB
+###### Clears the IP routing table of any OSPF-learned routes
+
+At the same time, shutting down OSPF does retain some important details about OSPF, in particular:
+###### IOS retains all OSPF configuration.
+###### IOS still lists all OSPF-enabled interfaces in the OSPF interface list (show ip ospf
+
+interface) but in a DOWN state.
+
+Basically, shutting down the OSPF routing protocol process gives the network engineer a way to stop using the routing protocol on that router without having to remove all the configuration.
+Once shut down, the show ip ospf interface [brief] command should still list some output, as will the show ip ospf command, but the rest of the commands will list nothing.
+
+Example 21-12 shows an example on Router R5, as shown in Figure 21-5.
+R5 is a different router than the one used in earlier examples, but it begins the example with two OSPF neighbors, R2 and R3, with router IDs 2.2.2.2 and 3.3.3.3.
+The example shows the OSPF process being shut down, the neighbors failing, and those two key OSPF show commands:
+
+show ip ospf neighbor and show ip ospf interface brief.
+
+Figure 21-5 Example Network to Demonstrate OSPF Process Shutdown Example 21-12 Shutting Down an OSPF Process, and the Resulting Neighbor States Example end.
+
+First, before the shutdown, the show ip ospf neighbor command lists two neighbors.
+
+After the shutdown, the same command lists no neighbors at all.
+Second, the show ip ospf interface brief command does list the interfaces on which OSPF is enabled, on the local router’s own IP addresses.
+However, it lists a state of DOWN, which is a reference to the local router’s state.
+Also, note that the show ip ospf command positively states that the OSPF process is in a shutdown state, while the show ip ospf database command output lists only a heading line, with no LSAs.
+#### Issues That Allow Adjacencies but Prevent IP Routes
+
+The last two issues to discuss in this section have a symptom in which the show ip ospf neighbor command does list a neighbor, but some other problem exists that prevents the eventual addition of OSPF routes to the routing table.
+The two issues: a mismatched MTU setting and a mismatched OSPF network type.
+##### Mismatched MTU Settings
+
+The MTU size defines a per-interface setting used by the router for its Layer 3 forwarding logic, defining the largest network layer packet that the router will forward out each interface.
+
+For instance, the IPv4 MTU size of an interface defines the maximum size IPv4 packet that the router can forward out an interface.
+
+Routers often use a default MTU size of 1500 bytes, with the ability to set the value as well.
+
+The ip mtu size interface subcommand defines the IPv4 MTU setting, and the ipv6 mtu size command sets the equivalent for IPv6 packets.
+
+In an odd twist, two OSPFv2 routers can actually become OSPF neighbors, be listed in the output of the show ip ospf neighbor command, and reach 2-way state, even if they happen to use different IPv4 MTU settings on their interfaces.
+However, they fail to exchange their LSDBs. Eventually, after trying and failing to exchange their LSDBs, the neighbor relationship also fails.
+So also keep a watch for MTU mismatches, although they may be unusual and obscure, by looking at the running-config and by using the show interfaces command (which lists the IP MTU).
+##### Mismatched OSPF Network Types
+
+Earlier in this chapter you read about the OSPF broadcast network type, which uses a DR/BDR, and the OSPF point-to-point network type, which does not.
+Interestingly, if you misconfigure network type settings such that one router uses broadcast, and the other uses point-to-point, the following occurs:
+###### The two routers become fully adjacent neighbors (that is, they reach a full state).
+###### They exchange their LSDBs.
+###### They do not add IP routes to the IP routing table.
+
+The reason for not adding the routes has to do with the details of LSAs and how the use of a DR (or not) changes those LSAs. Basically, the two routers expect different details in the LSAs, and the SPF algorithm notices those differences and cannot trust the LSAs because of those differences.
+
+For instance, earlier in Example 21-7, the configuration showed router R1 using network type point-to-point on its G0/0/0 interface, with the expectation that router R2 would also use point-to-point on its matching G0/1/0 interface.
+Example 21-13 shows some of the results if the engineer neglected to configure R2, leaving it with the default setting of broadcast.
+
+Example 21-13 Shutting Down an OSPF Process, and the Resulting Neighbor States Example end.
+
+As you can see, both routers list the other as an OSPF neighbor in the full state.
+However, R1, with network type point-to-point, does not list a DR or BDR role in the output, while R2 does, which is one clue for this type of problem.
+The other comes with noticing that the expected routes are not in the IP routing table.
+### Chapter Review
+
+One key to doing well on the exams is to perform repetitive spaced review sessions.
+Review this chapter’s material using either the tools in the book or interactive tools for the same material found on the book’s companion website.
+Refer to the “Your Study Plan” element for more details.
+Table 21-5 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 21-5 Chapter Review Tracking Table end.
+
+Review All the Key Topics Command References Tables 21-7 and 21-8 list configuration and verification commands used in this chapter.
+As an easy review exercise, cover the left column in a table, read the right column, and try to recall the command without looking.
+Then repeat the exercise, covering the right column, and try to recall what the command does.
+
+Table 21-7 Chapter 21 Configuration Command Reference Table end.
+
+Table 21-8 Chapter 21 show Command Reference Table end.
+
+Keep track of your part review progress with the checklist in Table P6-1.
+Details about each task follow the table.
+
+Table P6-1 Part VI Part Review Checklist Activity 1st Date Completed 2nd Date Completed Repeat All DIKTA Questions Answer Part Review Questions Review Key Topics Do Labs Watch Videos Repeat All DIKTA Questions For this task, answer the “Do I Know This Already?” questions again for the chapters in this part of the book using the PTP software.
+See the section “How to View Only DIKTA Questions by Chapter or Part” in the Introduction to this book to learn how to make the PTP software show you DIKTA questions for this part only.
+
+Answer Part Review Questions For this task, answer the Part Review questions for this part of the book using the PTP software.
+See the section “How to View Part Review Questions” in the Introduction to this book to learn how to make the PTP software show you Part Review questions for this part only.
+
+Review Key Topics Review all Key Topics in all chapters in this part, either by browsing the chapters or by using the Key Topics application on the companion website.
+
+Do Labs Depending on your chosen lab tool, here are some suggestions for what to do in lab:
+
+Pearson Network Simulator: If you use the full Pearson ICND1 or CCNA simulator, focus more on the configuration scenario and troubleshooting scenario labs associated with the topics in this part of the book.
+These types of labs include a larger set of topics and work well as Part Review activities. (See the Introduction for some details about how to find which labs are about topics in this part of the book.)
+
+Blog: Config Labs: The author’s blog includes a series of configuration-focused labs that you can do on paper, each in 10–15 minutes.
+Review and perform the labs for this part of the book, as found at http://blog.certskills.com.
+Then navigate to the Hands-on Config labs.
+## Part VI Review
+
+Other: If using other lab tools, here are a few suggestions: Make sure to experiment heavily with VLAN configuration and VLAN trunking configuration.
+
+Watch Videos Chapter 21 recommends one video from the companion website about troubleshooting OSPF neighbors.
+Take a few minutes to watch the video if you haven’t done so already.
+
+So far, this book has mostly ignored IP version 6 (IPv6).
+This part reverses the trend, collecting all the specific IPv6 topics into four chapters.
+
+The chapters in Part VII walk you through the same topics discussed throughout this book for IPv4, often using IPv4 as a point of comparison.
+Certainly, many details differ when comparing IPv4 and IPv6.
+However, many core concepts about IP addressing, subnetting, routing, and routing protocols remain the same.
+The chapters in this part build on those foundational concepts, adding the specific details about how IPv6 forwards IPv6 packets from one host to another.

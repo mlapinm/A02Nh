@@ -1,0 +1,1767 @@
+## Part VIII Wireless LANs
+
+Part VIII Review
+## Chapter 26 Fundamentals of Wireless Networks
+
+Networks This chapter covers the following exam topics:
+###### 1.0 Network Fundamentals
+###### 1.1 Explain the role and function of network components
+###### 1.1.d Access Points
+###### 1.11 Describe wireless principles
+###### 1.11.a Nonoverlapping Wi-Fi channels
+###### 1.11.b SSID
+###### 1.11.c RF
+
+Wireless communication usually involves a data exchange between two devices.
+A wireless LAN goes even further; many devices can participate in sharing the medium for data exchanges.
+Wireless LANs must transmit a signal over radio frequencies (RF) to move data from one device to another.
+Transmitters and receivers can be fixed in consistent locations, or they can be mobile and free to move around.
+This chapter explains the topologies that can be used to control access to the wireless medium and provide data exchange between devices.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 26-1 “Do I Know This Already?” Foundation Topics Section-to-Question Mapping
+### Foundation Topics
+### Comparing Wired and Wireless Networks
+### Wireless LAN Topologies
+
+Other Wireless Topologies 5–6 Wireless Bands and Channels 7–8 CHAPTER 26 1.
+Wired Ethernet and Wi-Fi are based on which two IEEE standards, respectively?
+
+a. 802.1, 802.3 b. 802.3, 802.1 c. 802.3, 802.11 d. 802.11, 802.3 2.
+Devices using a wireless LAN must operate in which one of the following modes?
+
+a. Round-robin access b.
+Half duplex c.
+Full duplex d.
+None of these answers 3.
+An access point is set up to offer wireless coverage in an office.
+Which one of the following is the correct 802.11 term for the resulting standalone network?
+
+a. BSA b.
+BSD c.
+BSS d.
+IBSS 4.
+Which one of the following is used to uniquely identify an AP and the basic service set it maintains with its associated wireless clients?
+
+a. SSID b.
+BSSID c.
+Ethernet MAC address d.
+Radio MAC address 5.
+Which one of the following can be used to provide wireless connectivity to a nonwireless device?
+
+a. Wireless repeater b.
+Workgroup bridge c.
+Transparent bridge d.
+Adaptive bridge 6.
+Which one of the following is not needed in a Cisco outdoor mesh network?
+
+a. A BSS function b.
+Ethernet cabling to each AP c.
+A workgroup bridge d.
+A backhaul network 7.
+Which of the following are frequency bands commonly used for Wi-Fi?
+
+a. 2.5 KHz b. 2.5 MHz c. 5 MHz d. 2.5 GHz e. 5 GHz 8.
+Which of the following are considered to be nonoverlapping channels?
+
+a. Channels 1, 2, and 3 in the 2.4-GHz band b.
+Channels 1, 5, and 10 in the 2.4-GHz band c.
+Channels 1, 6, and 11 in the 2.4-GHz band d.
+Channels 40, 44, and 48 in the 5-GHz band Foundation Topics Comparing Wired and Wireless Networks In a wired network, any two devices that need to communicate with each other must be connected by a wire. (That was obvious!) The “wire” might contain strands of metal or fiberoptic material that run continuously from one end to the other.
+Data that passes over the wire is bounded by the physical properties of the wire.
+In fact, the IEEE 802.3 set of standards defines strict guidelines for the Ethernet wire itself, in addition to how devices may connect, send, and receive data over the wire.
+
+Wired connections have been engineered with tight constraints and have few variables that might prevent successful communication.
+Even the type and size of the wire strands, the number of twists the strands must make around each other over a distance, and the maximum length of the wire must adhere to the standard.
+
+Therefore, a wired network is essentially a bounded medium; data must travel over whatever path the wire or cable takes between two devices.
+If the cable goes around a corner or lies in a coil, the electrical signals used to carry the data must also go around a corner or around a coil.
+Because only two devices may connect to a wire, only those two devices may send or transmit data.
+Even better: the two devices may transmit data to each other simultaneously because they each have a private, direct path to each other.
+
+Wired networks also have some shortcomings.
+When a device is connected by a wire, it cannot move around very easily or very far.
+Before a device can connect to a wired network, it must have a connector that is compatible with the one on the end of the wire.
+As devices get smaller and more mobile, it just is not practical to connect them to a wire.
+
+As its name implies, a wireless network removes the need to be tethered to a wire or cable.
+
+Convenience and mobility become paramount, enabling users to move around at will while staying connected to the network.
+A user can (and often does) bring along many different wireless devices that can all connect to the network easily and seamlessly.
+
+Wireless data must travel through free space, without the constraints and protection of a wire.
+In the free space environment, many variables can affect the data and its delivery.
+To minimize the variables, wireless engineering efforts must focus on two things:
+###### Wireless devices must adhere to a common standard (IEEE 802.11).
+###### Wireless coverage must exist in the area where devices are expected to use it.
+
+As you study for the CCNA 200-301 exam, keep in mind that the exam is geared more toward a functional view of wireless technology.
+More detailed topics like RF characteristics, antenna performance, and so on are reserved for the Implementing Cisco Enterprise Network Core Technologies ENCOR 300-401 exam.
+
+Wireless LAN Topologies Wireless communication takes place over free space through the use of radio frequency (RF) signals.
+The theory behind RF signals can be complex, and is described further in the “RF Overview” section in this chapter.
+For now, just assume that one device, the transmitter, sends RF signals to another device, the receiver.
+As Figure 26-1 shows, the transmitter can contact the receiver at any and all times, as long as both devices are tuned to the same frequency (or channel) and use the same scheme to carry the data between them.
+That all sounds simple, except that it is not really practical.
+
+Figure 26-1 Unidirectional Communication To fully leverage wireless communication, data should travel in both directions, as shown in Figure 26-2.
+Sometimes Device A needs to send data to Device B, while Device B would like to take a turn to send at other times.
+
+Figure 26-2 Bidirectional Communication Because the two devices are using the same channel, two phrases in the preceding sentence become vitally important: take a turn and send at other times.
+With wireless communication, if multiple signals are received at the same time, they can interfere with each other.
+The likelihood of interference increases as the number of wireless devices grows.
+For example, Figure 26-3 shows four devices tuned to the same channel and what might happen if some or all of them transmit at the same time.
+
+Figure 26-3 Interference from Simultaneous Transmissions All this talk about waiting turns and avoiding interference might remind you of a traditional (nonswitched) Ethernet LAN, where multiple hosts can connect to a shared media and share a common bandwidth.
+To use the media effectively, all the hosts must operate in half-duplex mode so that they try to avoid colliding with other transmissions already in progress.
+The side effect is that no host can transmit and receive at the same time on a shared medium.
+
+A wireless LAN is similar.
+Because multiple hosts can share the same channel, they also share the “airtime” or access to that channel at any given time.
+Therefore, to keep everything clean, only one device should transmit at any given time.
+To contend for use of the channel, devices based on the 802.11 standard have to determine whether the channel is clear and available before transmitting anything.
+
+NOTE IEEE 802.11 WLANs are always half duplex because transmissions between stations use the same frequency or channel.
+Only one station can transmit at any time; otherwise, collisions occur.
+To achieve full-duplex mode, one station’s transmission would have to occur on one frequency while it receives over a different frequency—much like full-duplex Ethernet links work.
+Although this is certainly possible and practical, the 802.11 standard does not permit full-duplex operation.
+Some amendments to the standard do provide a means for multiple devices to transmit on the same channel at the same time, but this is beyond the scope of this book.
+
+At the most basic level, there is no inherent organization to a wireless medium or any inherent control over the number of devices that can transmit and receive frames.
+Any device that has a wireless network adapter can power up at any time and try to communicate.
+At a minimum, a wireless network should have a way to make sure that every device using a channel can support a common set of parameters.
+Beyond that, there should be a way to control which devices (and users) are allowed to use the wireless medium and the methods that are used to secure the wireless transmissions.
+#### Basic Service Set
+
+The solution is to make every wireless service area a closed group of mobile devices that forms around a fixed device; before a device can participate, it must advertise its capabilities and then be granted permission to join.
+The 802.11 standard calls this a basic service set (BSS). At the heart of every BSS is a wireless access point (AP), as shown in Figure 26-4.
+The AP operates in infrastructure mode, which means it offers the services that are necessary to form the infrastructure of a wireless network.
+The AP also establishes its BSS over a single wireless channel.
+The AP and the members of the BSS must all use the same channel to communicate properly.
+
+Because the operation of a BSS hinges on the AP, the BSS is bounded by the area where the AP’s signal is usable.
+This is known as the basic service area (BSA) or cell.
+In Figure 26-4, the cell is shown as a simple shaded circular area that centers around the AP itself.
+Cells can Answers to the “Do I Know This Already?” quiz:
+
+1 C 2 B 3 C 4 B 5 B 6 B 7 D, E 8 C, D have other shapes too, depending on the antenna that is connected to the AP and on the physical surroundings that might affect the AP’s signals.
+
+The AP serves as a single point of contact for every device that wants to use the BSS. It advertises the existence of the BSS so that devices can find it and try to join.
+To do that, the AP uses a unique BSS identifier (BSSID) that is based on the AP’s own radio MAC address.
+
+NOTE Recall that wired Ethernet devices each have a unique MAC address to send frames from a source to a destination over a Layer 2 network.
+Wireless devices must also have unique MAC addresses to send wireless frames at Layer 2 over the air.
+
+BSS AP SSID: “MyNetwork”
+
+BSSID:
+
+d4:20:6d:90:ad:20 Figure 26-4 802.11 Basic Service Set In addition, the AP advertises the wireless network with a Service Set Identifier (SSID), which is a text string containing a logical name.
+Think of the BSSID as a machine-readable name tag that uniquely identifies the BSS ambassador (the AP), and the SSID as a nonunique, human-readable name tag that identifies the wireless service.
+
+Membership with the BSS is called an association.
+A wireless device must send an association request to the AP and the AP must either grant or deny the request.
+Once associated, a device becomes a client, or an 802.11 station (STA), of the BSS. What then?
+As long as a wireless client remains associated with a BSS, most communications to and from the client must pass through the AP, as indicated in Figure 26-5.
+By using the BSSID as a source or destination address, data frames can be relayed to or from the AP.
+
+You might be wondering why all client traffic has to traverse the AP at all.
+Why can two clients not simply transmit data frames directly to each other and bypass the middleman?
+If clients are allowed to communicate directly, then the whole idea of organizing and managing a BSS is moot.
+By sending data through the AP first, the BSS remains stable and under control.
+
+NOTE Even though data frames are meant to pass through an AP, keep in mind that other devices in the same general area that are listening on the same channel can overhear the transmissions.
+After all, wireless frames are not contained within a wire that connects a device to an AP. Instead, the frames are freely available over the air to anyone that is within range to receive them.
+If the frames are unencrypted, then anyone may inspect their contents.
+
+Only the BSSID value contained within the frames indicates that the intended sender or recipient is the AP.
+
+Figure 26-5 Traffic Flows Within a BSS
+#### Distribution System
+
+Notice that a BSS involves a single AP and no explicit connection into a regular Ethernet network.
+
+In that setting, the AP and its associated clients make up a standalone network.
+But the AP’s role at the center of the BSS does not just stop with managing the BSS; sooner or later, wireless clients will need to communicate with other devices that are not members of the BSS. Fortunately, an AP can also uplink into an Ethernet network because it has both wireless and wired capabilities.
+The 802.11 standard refers to the upstream wired Ethernet as the distribution system (DS) for the wireless BSS, as shown in Figure 26-6.
+
+You can think of an AP as a translational bridge, where frames from two dissimilar media (wireless and wired) are translated and then bridged at Layer 2.
+In simple terms, the AP is in charge of mapping a virtual local-area network (VLAN) to an SSID. In Figure 26-6, the AP maps VLAN 10 to the wireless LAN using SSID “MyNetwork.” Clients associated with the “MyNetwork” SSID will appear to be connected to VLAN 10.
+
+Figure 26-6 Distribution System Supporting a BSS This concept can be extended so that multiple VLANs are mapped to multiple SSIDs. To do this, the AP must be connected to the switch by a trunk link that carries the VLANs. In Figure 26-7, VLANs 10, 20, and 30 are trunked to the AP over the DS. The AP uses the 802.1Q tag to map the VLAN numbers to the appropriate SSIDs. For example, VLAN 10 is mapped to SSID “MyNetwork,” VLAN 20 is mapped to SSID “YourNetwork,” and VLAN 30 to SSID “Guest.”
+
+In effect, when an AP uses multiple SSIDs, it is trunking VLANs over the air, and over the same channel, to wireless clients.
+The clients must use the appropriate SSID that has been mapped to the respective VLAN when the AP was configured.
+The AP then appears as multiple logical APs—one per BSS—with a unique BSSID for each.
+With Cisco APs, this is usually accomplished by incrementing the last digit of the radio’s MAC address for each SSID.
+
+Even though an AP can advertise and support multiple logical wireless networks, each of the SSIDs covers the same geographic area.
+The reason is that the AP uses the same transmitter, receiver, antennas, and channel for every SSID that it supports.
+Beware of one misconception though: multiple SSIDs can give an illusion of scale.
+Even though wireless clients can be distributed across many SSIDs, all of those clients must share the same AP’s hardware and must contend for airtime on the same channel.
+
+Figure 26-7 Supporting Multiple SSIDs on One AP
+#### Extended Service Set
+
+Normally, one AP cannot cover the entire area where clients might be located.
+For example, you might need wireless coverage throughout an entire floor of a business, hotel, hospital, or other large building.
+To cover more area than a single AP’s cell can cover, you simply need to add more APs and spread them out geographically.
+
+When APs are placed at different geographic locations, they can all be interconnected by a switched infrastructure.
+The 802.11 standard calls this an extended service set (ESS), as shown in Figure 26-8.
+
+The idea is to make multiple APs cooperate so that the wireless service is consistent and seamless from the client’s perspective.
+Ideally, any SSIDs that are defined on one AP should be defined on all the APs in an ESS; otherwise, it would be very cumbersome and inconvenient for a client to be reconfigured each time it moves into a different AP’s cell.
+
+Notice that each cell in Figure 26-8 has a unique BSSID, but both cells share one common SSID. Regardless of a client’s location within the ESS, the SSID will remain the same but the client can always distinguish one AP from another.
+
+In an ESS, a wireless client can associate with one AP while it is physically located near that AP. If the client later moves to a different location, it can associate with a different nearby AP automatically.
+Passing from one AP to another is called roaming.
+Keep in mind that each AP offers its own BSS on its own channel, to prevent interference between the APs. As a client device roams from one AP to another, it must scan the available channels to find a new AP (and BSS) to roam toward.
+In effect, the client is roaming from BSS to BSS, and from channel to channel.
+
+Figure 26-8 Scaling Wireless Coverage with an 802.11 Extended Service Set
+#### Independent Basic Service Set
+
+Usually a wireless network leverages APs for organization, control, and scalability.
+
+Sometimes that is not possible or convenient in an impromptu situation.
+For example, two people who want to exchange electronic documents at a meeting might not be able to find a BSS available or might want to avoid having to authenticate to a production network.
+In addition, many personal printers have the capability to print documents wirelessly, without relying on a regular BSS or AP.
+
+The 802.11 standard allows two or more wireless clients to communicate directly with each other, with no other means of network connectivity.
+This is known as an ad hoc wireless network, or an independent basic service set (IBSS), as shown in Figure 26-9.
+For this to work, one of the devices must take the lead and begin advertising a network name and the necessary radio parameters, much like an AP would do.
+Any other device can then join as needed.
+
+IBSSs are meant to be organized in an impromptu, distributed fashion; therefore, they do not scale well beyond eight to ten devices.
+
+IBSS Figure 26-9 802.11 Independent Basic Service Set
+### Other Wireless Topologies
+
+Wireless APs can be configured to operate in noninfrastructure modes when a normal BSS cannot provide the functionality that is needed.
+The following sections cover the most common modes.
+#### Repeater
+
+Normally, each AP in a wireless network has a wired connection back to the DS or switched infrastructure.
+To extend wireless coverage beyond a normal AP’s cell footprint, additional APs and their wired connections can be added.
+In some scenarios, it is not possible to run a wired connection to a new AP because the cable distance is too great to support Ethernet communication.
+
+In that case, you can add an additional AP that is configured for repeater mode.
+A wireless repeater takes the signal it receives and repeats or retransmits it in a new cell area around the repeater.
+The idea is to move the repeater out away from the AP so that it is still within range of both the AP and the distant client, as shown in Figure 26-10.
+
+Figure 26-10 Extending the Range of an AP with a Wireless Repeater If the repeater has a single transmitter and receiver, it must operate on the same channel that the AP is using.
+That can create the possibility that the AP’s signal will be received and retransmitted by the repeater, only to be received again by the AP—halving the effective throughput because the channel will be kept busy twice as long as before.
+As a remedy, some repeaters can use two transmitters and receivers to keep the original and repeated signals isolated on different channels.
+One transmitter and receiver pair is dedicated to signals in the AP’s cell, while the other pair is dedicated to signals in the repeater’s own cell.
+#### Workgroup Bridge
+
+Suppose you have a device that supports a wired Ethernet link but is not capable of having a wireless connection.
+For example, some mobile medical devices might be designed with only a wired connection.
+While it is possible to plug the device into an Ethernet connection when needed, a wireless connection would be much more practical.
+You can use a workgroup bridge (WGB) to connect the device’s wired network adapter to a wireless network.
+
+Rather than providing a BSS for wireless service, a WGB becomes a wireless client of a BSS.
+
+In effect, the WGB acts as an external wireless network adapter for a device that has none.
+
+In Figure 26-11, an AP provides a BSS; Client A is a regular wireless client, while Client B is associated with the AP through a WGB.
+
+Figure 26-11 Nonwireless Device Connecting Through a Workgroup Bridge You might encounter two types of workgroup bridges:
+###### Universal workgroup bridge (uWGB): A single wired device can be bridged to a wireless
+
+network.
+###### Workgroup bridge (WGB): A Cisco-proprietary implementation that allows multiple
+
+wired devices to be bridged to a wireless network.
+#### Outdoor Bridge
+
+An AP can be configured to act as a bridge to form a single wireless link from one LAN to another over a long distance.
+Outdoor bridged links are commonly used for connectivity between buildings or between cities.
+
+If the LANs at two locations need to be bridged, a point-to-point bridged link can be used.
+
+One AP configured in bridge mode is needed on each end of the wireless link.
+Special purpose antennas are normally used with the bridges to focus their signals in one direction—
+
+toward the antenna of the AP at the far end of the link.
+This maximizes the link distance, as shown in Figure 26-12.
+
+Figure 26-12 Point-to-Point Outdoor Bridge Sometimes the LANs at multiple sites need to be bridged together.
+A point-to-multipoint bridged link allows a central site to be bridged to several other sites.
+The central site bridge is connected to an omnidirectional antenna, such that its signal is transmitted equally in all directions so that it can reach the other sites simultaneously.
+The bridges at each of the other sites can be connected to a directional antenna aimed at the central site.
+Figure 26-13 shows the point-to-multipoint scenario.
+
+Figure 26-13 Point-to-Multipoint Outdoor Bridge
+#### Mesh Network
+
+To provide wireless coverage over a very large area, it is not always practical to run Ethernet cabling to every AP that would be needed.
+Instead, you could use multiple APs configured in mesh mode.
+In a mesh topology, wireless traffic is bridged from AP to AP, in a daisy-chain fashion, using another wireless channel.
+
+Mesh APs can leverage dual radios—one using a channel in one range of frequencies and one a different range.
+Each mesh AP usually maintains a BSS on one channel, with which wireless clients can associate.
+Client traffic is then usually bridged from AP to AP over other channels as a backhaul network.
+At the edge of the mesh network, the backhaul traffic is bridged to the wired LAN infrastructure.
+Figure 26-14 shows a typical mesh network.
+With Cisco APs, you can build a mesh network indoors or outdoors.
+The mesh network runs its own dynamic routing protocol to work out the best path for backhaul traffic to take across the mesh APs.
+
+Figure 26-14 Typical Wireless Mesh Network
+### RF Overview
+
+To send data across a wired link, an electrical signal is applied at one end and carried to the other end.
+The wire itself is continuous and conductive, so the signal can propagate rather easily.
+A wireless link has no physical strands of anything to carry the signal along.
+
+How, then, can an electrical signal be sent across the air, or free space?
+Consider a simple analogy of two people standing far apart.
+One person wants to signal something to the other.
+
+They are connected by a long and somewhat loose rope; the rope represents free space.
+The sender at one end decides to lift his end of the rope high and hold it there so that the other end of the rope will also rise and notify the partner.
+After all, if the rope were a wire, he knows that he could apply a steady voltage at one end of the wire and it would appear at the other end.
+Figure 26-15 shows the end result; the rope falls back down after a tiny distance, and the receiver never notices a change.
+
+Figure 26-15 Failed Attempt to Pass a Message Down a Rope The sender tries a different strategy.
+He cannot push the rope, but when he begins to wave it up and down in a steady, regular motion, a curious thing happens.
+A continuous wave pattern appears along the entire length of the rope, as shown in Figure 26-16.
+In fact, the waves (each representing one up and down cycle of the sender’s arm) actually travel from the sender to the receiver.
+
+Figure 26-16 Sending a Continuous Wave Down a Rope In free space, a similar principle occurs.
+The sender (a transmitter) can send an alternating current into a section of wire (an antenna), which sets up moving electric and magnetic fields that propagate out and away as traveling waves.
+The electric and magnetic fields travel along together and are always at right angles to each other, as shown in Figure 26-17.
+The signal must keep changing, or alternating, by cycling up and down, to keep the electric and magnetic fields cycling and pushing ever outward.
+
+Figure 26-17 Traveling Electric and Magnetic Waves Electromagnetic waves do not travel in a straight line.
+Instead, they travel by expanding in all directions away from the antenna.
+To get a visual image, think of dropping a pebble into a pond when the surface is still.
+Where it drops in, the pebble sets the water’s surface into a cyclic motion.
+The waves that result begin small and expand outward, only to be replaced by new waves.
+In free space, the electromagnetic waves expand outward in all three dimensions.
+
+Figure 26-18 shows a simple idealistic antenna that is a single point at the end of a wire.
+The waves produced expand outward in a spherical shape.
+The waves will eventually reach the receiver, in addition to many other locations in other directions.
+
+Figure 26-18 Wave Propagation with an Idealistic Antenna At the receiving end of a wireless link, the process is reversed.
+As the electromagnetic waves reach the receiver’s antenna, they induce an electrical signal.
+If everything works right, the received signal will be a reasonable copy of the original transmitted signal.
+
+The electromagnetic waves involved in a wireless link can be measured and described in several ways.
+One fundamental property is the frequency of the wave, or the number of times the signal makes one complete up and down cycle in 1 second.
+Figure 26-19 shows how a cycle of a wave can be identified.
+A cycle can begin as the signal rises from the center line, falls through the center line, and rises again to meet the center line.
+A cycle can also be measured from the center of one peak to the center of the next peak.
+No matter where you start measuring a cycle, the signal must make a complete sequence back to its starting position where it is ready to repeat the same cyclic pattern.
+
+Figure 26-19 Cycles Within a Wave In Figure 26-19, suppose that 1 second has elapsed, as shown.
+During that 1 second, the signal progressed through four complete cycles.
+Therefore, its frequency is 4 cycles/second or 4 hertz.
+A hertz (Hz) is the most commonly used frequency unit and is nothing other than one cycle per second.
+
+Frequency can vary over a very wide range.
+As frequency increases by orders of magnitude, the numbers can become quite large.
+To keep things simple, the frequency unit name can be modified to denote an increasing number of zeros, as listed in Table 26-2.
+
+Table 26-2 Frequency Unit Names Table end.
+
+Figure 26-20 shows a simple representation of the continuous frequency spectrum ranging from 0 Hz to 1022 (or 1 followed by 22 zeros) Hz. At the low end of the spectrum are frequencies that are too low to be heard by the human ear, followed by audible sounds.
+The highest range of frequencies contains light, followed by X, gamma, and cosmic rays.
+
+Figure 26-20 Continuous Frequency Spectrum The frequency range from around 3 kHz to 300 GHz is commonly called radio frequency (RF). It includes many different types of radio communication, including low-frequency radio, AM radio, shortwave radio, television, FM radio, microwave, and radar.
+The microwave category also contains the two main frequency ranges that are used for wireless LAN communication: 2.4 and 5 GHz.
+#### Wireless Bands and Channels
+
+Because a range of frequencies might be used for the same purpose, it is customary to refer to the range as a band of frequencies.
+For example, the range from 530 kHz to around 1710 kHz is used by AM radio stations; therefore, it is commonly called the AM band or the AM broadcast band.
+
+One of the two main frequency ranges used for wireless LAN communication lies between
+###### 2.400 and 2.4835 GHz. This is usually called the 2.4-GHz band, even though it does not
+
+encompass the entire range between 2.4 and 2.5 GHz. It is much more convenient to refer to the band name instead of the specific range of frequencies included.
+
+The other wireless LAN range is usually called the 5-GHz band because it lies between
+###### 5.150 and 5.825 GHz. The 5-GHz band actually contains the following four separate and distinct
+
+bands:
+###### 5.150 to 5.250 GHz
+###### 5.250 to 5.350 GHz
+###### 5.470 to 5.725 GHz
+###### 5.725 to 5.825 GHz
+
+TIP You might have noticed that most of the 5-GHz bands are contiguous except for a gap between 5.350 and 5.470.
+At the time of this writing, this gap exists and cannot be used for wireless LANs. However, some governmental agencies have moved to reclaim the frequencies and repurpose them for wireless LANs. Efforts are also underway to add 5.825 through
+###### 5.925 GHz.
+
+It is interesting that the 5-GHz band can contain several smaller bands.
+Remember that the term band is simply a relative term that is used for convenience.
+Do not worry about memorizing the band names or exact frequency ranges; just be aware of the two main bands at 2.4 and 5 GHz.
+
+A frequency band contains a continuous range of frequencies.
+If two devices require a single frequency for a wireless link between them, which frequency can they use?
+Beyond that, how many unique frequencies can be used within a band?
+To keep everything orderly and compatible, bands are usually divided into a number of distinct channels.
+Each channel is known by a channel number and is assigned to a specific frequency.
+As long as the channels are defined by a national or international standards body, they can be used consistently in all locations.
+Figures 26-21 and 26-22 show the channel layout for the 2.4 and 5 GHz bands, respectively.
+
+Figure 26-21 Channel Layout in the 2.4-GHz Band Figure 26-22 Channel Layout in the 5-GHz Band You might assume that an AP can use any channel number without affecting any APs that use other channel numbers.
+In the 5-GHz band, this is the case because each channel is allocated a frequency range that does not encroach on or overlap the frequencies allocated for any other channel.
+In other words, the 5-GHz band consists of nonoverlapping channels.
+
+The same is not true of the 2.4-GHz band.
+Each of its channels is much too wide to avoid overlapping the next lower or upper channel number.
+In fact, each channel covers the frequency range that is allocated to more than four consecutive channels!
+Notice the width of the channel spacing in Figure 26-21 as compared to the width of one of the shaded signals centered on channels 1, 6, and 11.
+The only way to avoid any overlap between adjacent channels is to configure APs to use only channels 1, 6, and 11.
+Even though there are 14 channels available to use, you should always strive for nonoverlapping channels in your network.
+#### APs and Wireless Standards
+
+It might be obvious that wireless devices and APs should all be capable of operating on the same band.
+For example, a 5-GHz wireless phone can communicate only with an AP that offers Wi-Fi service on 5-GHz channels.
+In addition, the devices and APs must also share a compatibility with the parts of the 802.11 standard they support.
+
+As the IEEE 802.11 Wi-Fi standard evolves and develops, new amendments with new functionality get proposed.
+These amendments are known by “802.11” followed by a one- or two-letter suffix until they are accepted and rolled up into the next generation of the complete 802.11 standard.
+Even then, it is common to see the amendment suffixes still used to distinguish specific functions.
+
+You should be aware of several amendments that define important characteristics such as data rates, methods used to transmit and receive data, and so on.
+For the CCNA 200-301 exam, you should know which band each of the amendments listed in Table 26-3 uses.
+The ENCOR 300-401 exam goes further into the data rates and modulation and coding schemes used by each.
+
+Table 26-3 Basic Characteristics of Some IEEE 802.11 Amendments Table end.
+
+The 802.11 amendments are not mutually exclusive.
+Wireless client devices and APs can be compatible with one or more amendments; however, a client and an AP can communicate only if they both support and agree to use the same amendment.
+When you look at the specifications for a wireless device, you may find supported amendments listed in a single string, separated by slashes.
+For example, a device that supports 802.11b/g will support both 802.11b and 802.11g.
+One that supports b/g/a/n/ac will support 802.11b, 802.11g, 802.11n, and 802.11ac.
+You should become familiar with Table 26-3 so that you can know which bands a device can use based on its 802.11 amendment support.
+
+If a device can operate on both bands, how does it decide which band to use?
+APs can usually operate on both bands simultaneously to support any clients that might be present on each band.
+However, wireless clients typically associate with an AP on one band at a time, while scanning for potential APs on both bands.
+The band used to connect to an AP is chosen according to the operating system, wireless adapter driver, and other internal configuration.
+
+A wireless client can initiate an association with an AP on one band and then switch to the other band if the signal conditions are better there.
+
+NOTE Cisco APs have dual radios (sets of transmitters and receivers) to support BSSs on one 2.4-GHz channel and other BSSs on one 5-GHz channel simultaneously.
+Some models also have two 5-GHz radios that can be configured to operate BSSs on two different channels at the same time, providing wireless coverage to higher densities of users that are located in the same vicinity.
+
+You can configure a Cisco AP to operate on a specific channel number.
+As the number of APs grows, manual channel assignment can become a difficult task.
+Fortunately, Cisco wireless architectures can automatically and dynamically assign each AP to an appropriate channel.
+
+The architecture is covered in Chapter 27, “Analyzing Cisco Wireless Architectures,”
+
+while dynamic channel assignment is covered on the ENCOR 300-401 exam.
+
+In open space, RF signals propagate or reach further on the 2.4-GHz band than on the 5-GHz band.
+They also tend to penetrate indoor walls and objects easier at 2.4 GHz than 5 GHz.
+
+However, the 2.4-GHz band is commonly more crowded with wireless devices.
+Remember that only three nonoverlapping channels are available, so the chances of other neighboring APs using the same channels is greater.
+In contrast, the 5-GHz band has many more channels available to use, making channels less crowded and experiencing less interference.
+### Chapter Review
+
+Review this chapter’s material using either the tools in the book or the interactive tools for the same material found on the book’s companion website.
+Table 26-4 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 26-4 Chapter Review Tracking Table end.
+
+Review All the Key Topics Key Terms You Should Know access point (AP), ad hoc network, Band, basic service set (BSS), Basic Service Set Identifier (BSSID), channel, cell, distribution system (DS), extended service set (ESS), independent basic service set (IBSS), infrastructure mode, mesh network, nonoverlapping channels, pointto-
+
+point bridge, repeater, roaming, Service Set Identifier (SSID), station (STA), workgroup bridge (WGB)
+## Chapter 27 Analyzing Cisco Wireless Architectures
+
+Architectures This chapter covers the following exam topics:
+###### 2.0 Network Access
+###### 2.6 Compare Cisco Wireless Architectures and AP modes
+
+In Chapter 26, “Fundamentals of Wireless Networks,” you learned about how a single access point (AP) can provide a basic service set (BSS) for a cell area and how multiple APs can be connected to form an extended service set (ESS) for a larger network.
+In this chapter, you learn more about different approaches or architectures that allow APs to be networked together for an enterprise.
+You also learn how some architectures are more scalable than others and how to manage each type of wireless network architecture.
+
+As you work through this chapter, think about how each architecture can be applied to specific environments—how easy it would be to manage, deploy, and troubleshoot the network, how the APs can be controlled, and how data would move through the network.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 27-1 ”Do I Know This Already?” Section-to-Question Mapping
+### Foundation Topics
+### Autonomous AP Architecture
+### Cloud-based AP Architecture
+### Split-MAC Architectures
+### Comparing Wireless LAN Controller Deployments
+#### Cisco AP Modes
+
+1. Which one of the following terms best describes a Cisco wireless access point that operates in a standalone, independent manner?
+
+a. Autonomous AP b.
+Independent AP c.
+Lightweight AP d.
+Embedded AP CHAPTER 27 2.
+The Cisco Meraki cloud-based APs are most accurately described by which one of the following statements?
+
+a. Autonomous APs joined to a WLC b.
+Autonomous APs centrally managed c.
+Lightweight APs joined to a WLC d.
+Lightweight APs centrally managed 3.
+A lightweight access point is said to participate in which one of the following architectures?
+
+a. Light-MAC b.
+Tunnel-MAC c.
+Split-MAC d.
+Big-MAC 4.
+How does a lightweight access point communicate with a wireless LAN controller?
+
+a. Through an IPsec tunnel b.
+Through a CAPWAP tunnel c.
+Through a GRE tunnel d.
+Directly over Layer 2 5.
+Which one of the following is not needed for a lightweight AP in default local mode to be able to support three SSIDs that are bound to three VLANs?
+
+a. A trunk link carrying three VLANs b.
+An access link bound to a single VLAN c.
+A WLC connected to three VLANs d.
+A CAPWAP tunnel to a WLC 6.
+Which one of the following WLC deployment models would be best for a large enterprise with around 3000 lightweight APs?
+
+a. Cisco Mobility Express b.
+Embedded c.
+Unified d.
+Cloud-based 7.
+If a lightweight AP provides at least one BSS for wireless clients, which one of the following modes does it use?
+
+a. Local b.
+Normal c.
+Monitor d.
+Client 8.
+Regarding lightweight AP modes, which one of the following is true?
+
+a. An AP can operate in multiple modes at the same time.
+
+b. An AP only has one possible mode of operation.
+
+c. The Run mode is the default mode.
+
+d. The SE-Connect mode is used for spectrum analysis.
+
+Foundation Topics Autonomous AP Architecture An access point’s primary function is to bridge wireless data from the air to a normal wired network.
+An AP can accept “connections” from a number of wireless clients so that they become members of the LAN, as if the same clients were using wired connections.
+
+APs act as the central point of access (hence the AP name), controlling client access to the wireless LAN. An autonomous AP is self-contained; it is equipped with both wired and wireless hardware so that the wireless client associations can be terminated onto a wired connection locally at the AP. The APs and their data connections must be distributed across the coverage area and across the network.
+
+Autonomous APs offer one or more fully functional, standalone basic service sets (BSSs).
+
+They are also a natural extension of a switched network, connecting wireless service set identifiers (SSIDs) to wired virtual LANs (VLANs) at the access layer.
+Figure 27-1 shows the basic architecture; even though only four APs are shown across the bottom, a typical enterprise network could consist of hundreds or thousands of APs.
+
+Figure 27-1 Wireless Network Architecture with Autonomous APs 27 What exactly does an autonomous AP need to become a part of the network?
+The wireless network in Figure 27-1 consists of two SSIDs: wlan100 and wlan200.
+These correspond to wired VLANs 100 and 200, respectively.
+As shown by the shaded links, the VLANs must be trunked from the distribution layer switch (where routing commonly takes place) to the access layer, where they are extended further over a trunk link to the AP.
+
+An autonomous AP offers a short and simple path for data to travel between the wireless and wired networks.
+Data has to travel only through the AP to reach the network on the other side.
+Two wireless users that are associated to the same autonomous AP can reach each other through the AP without having to pass up into the wired network.
+As you work through the wireless architectures discussed in the rest of the chapter, notice the data path that is required for each.
+
+An autonomous AP must also be configured with a management IP address (10.10.10.10 in Figure 27-1) so that you can remotely manage it.
+After all, you will want to configure SSIDs, VLANs, and many RF parameters like the channel and transmit power to be used.
+The management address is not normally part of any of the data VLANs, so a dedicated management VLAN (i.e., VLAN 10) must be added to the trunk links to reach the AP. Each AP must be configured and maintained individually unless you leverage a management platform such as Cisco Prime Infrastructure or Cisco DNA Center.
+
+Because the data and management VLANs may need to reach every autonomous AP, the network configuration and efficiency can become cumbersome as the network scales.
+For example, you will likely want to offer the same SSID on many APs so that wireless clients can associate with that SSID in most any location or while roaming between any two APs.
+
+You might also want to extend the corresponding VLAN (and IP subnet) to each and every AP so that clients do not have to request a new IP address for each new association.
+
+Because SSIDs and their VLANs must be extended at Layer 2, you should consider how they are extended throughout the switched network.
+The shaded links in Figure 27-2 show an example of a single VLAN’s extent in the data plane.
+Working top to bottom, follow VLAN 100 as it reaches through the network.
+VLAN 100 is routed within the distribution layer and must be carried over trunk links to the access layer switches and then to each autonomous AP. In effect, VLAN 100 must extend end to end across the whole infrastructure—something that is usually considered to be a bad practice.
+
+That might sound straightforward until you have to add a new VLAN and configure every switch and AP in your network to carry and support it.
+Even worse, suppose your network has redundant links between each layer of switches.
+The Spanning Tree Protocol (STP) running on each switch becomes a vital ingredient to prevent bridging loops from forming and corrupting the network.
+For these reasons, client roaming across autonomous APs is typically limited to the Layer 2 domain, or the extent of a single VLAN. As the wireless network expands, the infrastructure becomes more difficult to configure correctly and becomes less efficient.
+
+Figure 27-2 Extent of a Data VLAN in a Network of Autonomous APs Cloud-based AP Architecture Recall that an autonomous AP needs quite a bit of configuration and management.
+To help manage more and more autonomous APs as the wireless network grows, you could place an AP management platform such as Cisco Prime Infrastructure in a central location within the enterprise.
+The management platform would need to be purchased, configured, and maintained too.
+
+A simpler approach is a cloud-based AP architecture, where the AP management function is pushed out of the enterprise and into the Internet cloud.
+Cisco Meraki is cloud-based and offers centralized management of wireless, switched, and security networks built from Meraki products.
+For example, through the cloud networking service, you can configure and manage APs, monitor wireless performance and activity, generate reports, and so on.
+
+Cisco Meraki APs can be deployed automatically, once you register with the Meraki cloud.
+
+Each AP will contact the cloud when it powers up and will self-configure.
+From that point on, you can manage the AP through the Meraki cloud dashboard.
+
+Figure 27-3 illustrates the basic cloud-based architecture.
+Notice that the network is arranged identically to that of the autonomous AP network.
+The reason is that the APs in a cloud-based network are all autonomous, too.
+The most visible difference is that all of the APs are managed, controlled, and monitored centrally from the cloud.
+
+Figure 27-3 Cisco Meraki Cloud-Based Wireless Network Architecture From the cloud, you can push out code upgrades and configuration changes to the APs in the enterprise.
+The Cisco Meraki cloud also adds the intelligence needed to automatically instruct each AP on which channel and transmit power level to use.
+It can also collect information from all of the APs about things such as RF interference, rogue or unexpected wireless devices that were overheard, and wireless usage statistics.
+
+Finally, there are a couple of things you should observe about the cloud-based architecture.
+
+The data path from the wireless network to the wired network is very short; the autonomous AP links the two networks.
+Data to and from wireless clients does not have to travel up into the cloud and back; the cloud is used to bring management functions into the data plane.
+
+Also, notice that the network in Figure 27-3 consists of two distinct paths—one for data traffic and another for management traffic, corresponding to the following two functions:
+###### A control plane: Traffic used to control, configure, manage, and monitor the AP itself
+###### A data plane: End-user traffic passing through the AP
+
+This division will become important in the following sections as other types of architecture are discussed.
+
+Split-MAC Architectures Because autonomous APs are…well, autonomous, managing their RF operation can be quite difficult.
+As a network administrator, you are in charge of selecting and configuring the channel used by each AP and detecting and dealing with any rogue APs that might be interfering.
+
+You must also manage things such as the transmit power level to make sure that the wireless coverage is sufficient, it does not overlap too much, and there aren’t any coverage holes—even when an AP’s radio fails.
+
+Managing wireless network security can also be difficult.
+Each autonomous AP handles its own security policies, with no central point of entry between the wireless and wired networks.
+
+That means there is no convenient place to monitor traffic for things such as intrusion detection and prevention, quality of service, bandwidth policing, and so on.
+
+To overcome the limitations of distributed autonomous APs, many of the functions found within autonomous APs have to be shifted toward some central location.
+In Figure 27-4, most of the activities performed by an autonomous AP on the left are broken up into two groups—management functions on the top and real-time processes on the bottom.
+
+Figure 27-4 Autonomous Versus Lightweight Access Point The real-time processes involve sending and receiving 802.11 frames, beacons, and probe messages. 802.11 data encryption is also handled in real time, on a per-packet basis.
+The AP must interact with wireless clients on some low level, known as the Media Access Control (MAC) layer.
+These functions must stay with the AP hardware, closest to the clients.
+
+The management functions are not integral to handling frames over the RF channels, but are things that should be centrally administered.
+Therefore, those functions can be moved to a centrally located platform away from the AP.
+
+27 When the functions of an autonomous AP are divided, the AP hardware is known as a lightweight access point, and performs only the real-time 802.11 operation.
+The lightweight AP gets its name because the code image and the local intelligence are stripped down, or lightweight, compared to the traditional autonomous AP.
+
+The management functions are usually performed on a wireless LAN controller (WLC), which controls many lightweight APs. This is shown in the bottom right portion of Figure 27-4.
+Notice that the AP is left with duties in Layers 1 and 2, where frames are moved into and out of the RF domain.
+The AP becomes totally dependent on the WLC for every other WLAN function, such as authenticating users, managing security policies, and even selecting RF channels and output power.
+
+NOTE Remember that a lightweight AP cannot normally operate on its own; it is very dependent on a WLC somewhere in the network.
+The only exception is the FlexConnect architecture, which is discussed later in this chapter.
+
+The lightweight AP-WLC division of labor is known as a split-MAC architecture, where the normal MAC operations are pulled apart into two distinct locations.
+This occurs for every AP in the network; each one must boot and bind itself to a WLC to support wireless clients.
+
+The WLC becomes the central hub that supports a number of APs scattered about in the network.
+
+How does a lightweight AP bind with a WLC to form a complete working access point?
+The two devices must use a tunneling protocol between them, to carry 802.11-related messages and also client data.
+Remember that the AP and WLC can be located on the same VLAN or IP subnet, but they do not have to be.
+Instead, they can be located on two entirely different IP subnets in two entirely different locations.
+
+The Control and Provisioning of Wireless Access Points (CAPWAP) tunneling protocol makes this all possible by encapsulating the data between the LAP and WLC within new IP packets.
+The tunneled data can then be switched or routed across the campus network.
+As Figure 27-5 shows, the CAPWAP relationship actually consists of two separate tunnels, as follows:
+###### CAPWAP control messages: Carries exchanges that are used to configure the AP and
+
+manage its operation.
+The control messages are authenticated and encrypted, so the AP is securely controlled by only the appropriate WLC, then transported over the control tunnel.
+###### CAPWAP data: Used for packets traveling to and from wireless clients that are associated
+
+with the AP. Data packets are transported over the data tunnel but are not encrypted by default.
+When data encryption is enabled for an AP, packets are protected with Datagram Transport Layer Security (DTLS).
+
+NOTE CAPWAP is defined in RFCs 5415, 5416, 5417, and 5418.
+CAPWAP is based on the Lightweight Access Point Protocol (LWAPP), which was a legacy Cisco proprietary solution.
+
+Figure 27-5 Linking a Lightweight AP and WLC with CAPWAP Every AP and WLC must also authenticate each other with digital certificates.
+An X.509 certificate is preinstalled in each device when it is purchased.
+By using certificates behind the scenes, every device is properly authenticated before becoming part of the wireless network.
+
+This process helps assure that no one can add an unauthorized AP to your network.
+
+The CAPWAP tunneling allows the AP and WLC to be separated geographically and logically.
+
+It also breaks the dependence on Layer 2 connectivity between them.
+For example, Figure 27-6 uses shaded areas to show the extent of VLAN 100.
+Notice how VLAN 100 exists at the WLC and in the air as SSID 100, near the wireless clients—but not in between the AP and the WLC. Instead, traffic to and from clients associated with SSID 100 is transported across the network infrastructure encapsulated inside the CAPWAP data tunnel.
+The tunnel exists between the IP address of the WLC and the IP address of the AP, which allows all of the tunneled packets to be routed at Layer 3.
+
+Also, notice how the AP is known by only a single IP address: 10.10.10.10.
+Because the AP sits on the access layer where its CAPWAP tunnels terminate, it can use one IP address for both management and tunneling.
+No trunk link is needed because all of the VLANs it supports are encapsulated and tunneled as Layer 3 IP packets, rather than individual Layer 2 VLANs.
+
+As the wireless network grows, the WLC simply builds more CAPWAP tunnels to reach more APs. Figure 27-7 depicts a network with four APs. Each AP has a control and a data tunnel back to the centralized WLC. SSID 100 can exist on every AP, and VLAN 100 can reach every AP through the network of tunnels.
+
+Figure 27-6 Extent of VLAN 100 in a Cisco Wireless Network Figure 27-7 Using CAPWAP Tunnels to Connect APs to One Central WLC Once CAPWAP tunnels are built from a WLC to one or more lightweight APs, the WLC can begin offering a variety of additional functions.
+Think of all the puzzles and shortcomings that were discussed for the traditional autonomous WLAN architecture as you read over the following list of WLC activities:
+###### Dynamic channel assignment: The WLC can automatically choose and configure the RF
+
+channel used by each AP, based on other active access points in the area.
+###### Transmit power optimization: The WLC can automatically set the transmit power of
+
+each AP based on the coverage area needed.
+###### Self-healing wireless coverage: If an AP radio dies, the coverage hole can be “healed” by
+
+turning up the transmit power of surrounding APs automatically.
+###### Flexible client roaming: Clients can roam between APs with very fast roaming times.
+###### Dynamic client load balancing: If two or more APs are positioned to cover the same geographic
+
+area, the WLC can associate clients with the least used AP. This distributes the client load across the APs.
+###### RF monitoring: The WLC manages each AP so that it scans channels to monitor the RF
+
+usage.
+By listening to a channel, the WLC can remotely gather information about RF interference, noise, signals from neighboring APs, and signals from rogue APs or ad hoc clients.
+###### Security management: The WLC can authenticate clients from a central service and can
+
+require wireless clients to obtain an IP address from a trusted DHCP server before allowing them to associate and access the WLAN.
+###### Wireless intrusion protection system: Leveraging its central location, the WLC can
+
+monitor client data to detect and prevent malicious activity.
+
+Comparing Wireless LAN Controller Deployments Suppose you want to deploy a WLC to support multiple lightweight APs in your network.
+
+Where should you put the WLC? The split-MAC concept can be applied to several different network architectures.
+Each architecture places the WLC in a different location within the network—a choice that also affects how many WLCs might be needed to support the number of APs required.
+
+One approach is to locate the WLC in a central location so that you can maximize the number of APs joined to it.
+This is usually called a unified or centralized WLC deployment, which tends to follow the concept that most of the resources users need to reach are located in a central location such as a data center or the Internet.
+Traffic to and from wireless users would travel over CAPWAP tunnels that reach into the center of the network, near the core, as shown in Figure 27-8.
+A centralized WLC also provides a convenient place to enforce security policies that affect all wireless users.
+
+Figure 27-8 WLC Location in a Unified Deployment Figure 27-8 shows four APs joined to a single WLC. Your network might have more APs—
+
+many, many more.
+A large enterprise network might have thousands of APs connected to its access layer.
+Scalability then becomes an important factor in the centralized design.
+Typical unified WLCs can support a maximum of 6000 APs. If you have more APs than the maximum, you will need to add more WLCs to the design, each located centrally.
+
+A WLC can also be located in a central position in the network, inside a data center in a private cloud, as shown in Figure 27-9.
+This is known as a cloud-based WLC deployment, where the WLC exists as a virtual machine rather than a physical device.
+If the cloud computing platform already exists, then deploying a cloud-based WLC becomes straightforward.
+
+Such a controller can typically support up to 3000 APs. If your wireless network scales beyond that, then additional WLCs can be added as more virtual machines.
+
+Figure 27-9 WLC Location in a Cloud-based Deployment For small campuses or distributed branch locations, where the number of APs is relatively small in each, the WLC can be co-located with a stack of switches, as shown in Figure 27-10.
+
+This is known as an embedded WLC deployment because the controller is embedded within the switching hardware.
+Typical Cisco embedded WLCs can support up to 200 APs. The APs do not necessarily have to be connected to the switches that host the WLC; APs connected to other switches in other locations can join the embedded WLC too.
+As the number of APs grows, additional WLCs can be added by embedding them in other switch stacks at the site.
+
+Figure 27-10 WLC Location in an Embedded Deployment Finally, in small-scale environments, such as small, midsize, or multisite branch locations, you might not want to invest in dedicated WLCs at all.
+In this case, the WLC function can be co-located with an AP that is installed at the branch site.
+This is known as a Cisco Mobility Express WLC deployment, as shown in Figure 27-11.
+The AP that hosts the WLC forms a CAPWAP tunnel with the WLC, along with any other APs at the same location.
+A Mobility Express WLC can support up to 100 APs.
+
+Figure 27-11 WLC Location in a Mobility Express Deployment See Table 27-2 for a summary of WLC deployment models, WLC locations, and a typical maximum number of APs and clients that each one supports.
+
+Table 27-2 Summary of WLC Deployment Models Table end.
+
+27 Cisco AP Modes Many Cisco APs can operate in either autonomous or lightweight mode, depending on which code image is loaded and run.
+From the WLC, you can also configure a lightweight AP to operate in one of the following special-purpose modes:
+###### Local: The default lightweight mode that offers one or more functioning BSSs on a specific
+
+channel.
+During times that it is not transmitting, the AP will scan the other channels to measure the level of noise, measure interference, discover rogue devices, and match against intrusion detection system (IDS) events.
+###### Monitor: The AP does not transmit at all, but its receiver is enabled to act as a dedicated
+
+sensor.
+The AP checks for IDS events, detects rogue access points, and determines the position of stations through location-based services.
+###### FlexConnect: An AP at a remote site can locally switch traffic between an SSID and a
+
+VLAN if its CAPWAP tunnel to the WLC is down and if it is configured to do so.
+###### Sniffer: An AP dedicates its radios to receiving 802.11 traffic from other sources, much
+
+like a sniffer or packet capture device.
+The captured traffic is then forwarded to a PC running network analyzer software such as Wildpackets OmniPeek or WireShark, where it can be analyzed further.
+###### Rogue detector: An AP dedicates itself to detecting rogue devices by correlating MAC
+
+addresses heard on the wired network with those heard over the air.
+Rogue devices are those that appear on both networks.
+###### Bridge: An AP becomes a dedicated bridge (point-to-point or point-to-multipoint)
+
+between two networks.
+Two APs in bridge mode can be used to link two locations separated by a distance.
+Multiple APs in bridge mode can form an indoor or outdoor mesh network.
+###### Flex+Bridge: FlexConnect operation is enabled on a mesh AP.
+###### SE-Connect: The AP dedicates its radios to spectrum analysis on all wireless channels.
+
+You can remotely connect a PC running software such as MetaGeek Chanalyzer or Cisco Spectrum Expert to the AP to collect and analyze the spectrum analysis data to discover sources of interference.
+
+NOTE Remember that a lightweight AP is normally in local mode when it is providing BSSs and allowing client devices to associate to wireless LANs. When an AP is configured to operate in one of the other modes, local mode (and the BSSs) is disabled.
+### Chapter Review
+
+Review this chapter’s material using either the tools in the book or the interactive tools for the same material found on the book’s companion website.
+Table 27-3 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 27-3 Chapter Review Tracking Table end.
+
+Review All the Key Topics Review the most important topics in this chapter, noted with the Key Topic icon in the outer margin of the page.
+Table 27-4 lists a reference of these key topics and the page numbers on which each is found.
+
+Key Terms You Should Know autonomous AP, CAPWAP, centralized WLC deployment, cloud-based AP, cloud-based WLC deployment, embedded WLC deployment, lightweight AP, local mode, Media Access Control (MAC) layer, Mobility Express WLC deployment, split-MAC architecture, unified WLC deployment, wireless LAN controller (WLC)
+## Chapter 28 Securing Wireless Networks
+
+This chapter covers the following exam topics:
+###### 1.0 Network Fundamentals
+###### 1.11 Describe wireless principles
+###### 1.11.d Encryption
+###### 5.0 Security Fundamentals
+###### 5.9 Describe wireless security protocols (WPA, WPA2, and WPA3)
+
+As you know by now, wireless networks are complex.
+Many technologies and protocols work behind the scenes to give end users a stable, yet mobile, connection to a wired network infrastructure.
+
+From the user’s perspective, a wireless connection should seem no different than a wired connection.
+A wired connection can give users a sense of security; data traveling over a wire is probably not going to be overheard by others.
+A wireless connection is inherently different; data traveling over the air can be overheard by anyone within range.
+
+Therefore, securing a wireless network becomes just as important as any other aspect.
+A comprehensive approach to wireless security focuses on the following areas:
+###### Identifying the endpoints of a wireless connection
+###### Identifying the end user
+###### Protecting the wireless data from eavesdroppers
+###### Protecting the wireless data from tampering
+
+The identification process is performed through various authentication schemes.
+Protecting wireless data involves security functions like encryption and frame authentication.
+
+This chapter covers many of the methods you can use to secure a wireless network.
+Be warned: wireless security can be a confusing topic because it is filled with many acronyms.
+
+Some of the acronyms rhyme like words from a children’s book.
+In fact, this chapter is a story about WEP, PSK, TKIP, MIC, AES, EAP, EAP-FAST, EAP-TLS, LEAP, PEAP, WPA, WPA2, WPA3, CCMP, GCMP, and on and on it goes.
+When you finish with this chapter, though, you will come away with a clearer view of what these terms mean and how they all fit together.
+You might even be ready to configure a wireless LAN with effective security.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+CHAPTER 28 Table 28-1 “Do I Know This Already?” Section-to-Question Mapping
+### Foundation Topics
+### Anatomy of a Secure Connection
+
+Wireless Client Authentication Methods 3–4 Wireless Privacy and Integrity Methods 5–6 WPA, WPA2, and WPA3 7–8 1.
+Which of the following are necessary components of a secure wireless connection?
+
+(Choose all that apply.)
+
+a. Encryption b.
+MIC c.
+Authentication d.
+All of these answers are correct.
+
+2. Which one of the following is used to protect the integrity of data in a wireless frame?
+
+a. WIPS b.
+WEP c.
+MIC d.
+EAP 3.
+Which one of the following is a wireless encryption method that has been found to be vulnerable and is not recommended for use?
+
+a. AES b.
+WPA c.
+EAP d.
+WEP 4.
+Which one of the following is used as the authentication framework when 802.1x is used on a WLAN?
+
+a. Open authentication b.
+WEP c.
+EAP d.
+WPA 5.
+Suppose you would like to select a method to protect the privacy and integrity of wireless data.
+Which one of the following methods should you avoid because it has been deprecated ?
+
+a. TKIP b.
+CCMP c.
+GCMP d.
+EAP 6.
+Which one of the following is the data encryption and integrity method used by WPA2?
+
+a. WEP b.
+TKIP c.
+CCMP d.
+WPA 7.
+The Wi-Fi Alliance offers which of the following certifications for wireless devices that correctly implement security standards? (Choose all that apply.)
+
+a. WEP b.
+WPA2 c. 802.11 d.
+AES 8.
+A pre-shared key is used in which of the following wireless security configurations?
+
+(Choose all that apply.)
+
+a. WPA2 personal mode b.
+WPA2 enterprise mode c.
+WPA3 personal mode d.
+WPA3 enterprise mode Foundation Topics Anatomy of a Secure Connection In the previous chapters of this book, you learned about wireless clients forming associations with wireless access points (APs) and passing data back and forth across the air.
+
+As long as all clients and APs conform to the 802.11 standard, they can all coexist—even on the same channel.
+Not every 802.11 device is friendly and trustworthy, however.
+Sometimes it is easy to forget that transmitted frames do not just go directly from the sender to the receiver, as in a wired or switched connection.
+Instead, they travel according to the transmitter’s antenna pattern, potentially reaching any receiver that is within range.
+
+Consider the scenario in Figure 28-1.
+The wireless client opens a session with some remote entity and shares a confidential password.
+Because two untrusted users are also located within range of the client’s signal, they may also learn the password by capturing frames that have been sent on the channel.
+The convenience of wireless communication also makes it easy for transmissions to be overheard and exploited by malicious users.
+
+If data is sent through open space, how can it be secured so that it stays private and intact?
+
+The 802.11 standard offers a framework of wireless security mechanisms that can be used to add trust, privacy, and integrity to a wireless network.
+The following sections give an overview of the wireless security framework.
+
+Figure 28-1 Wireless Transmissions Reaching Unintended Recipients
+#### Authentication
+
+To use a wireless network, clients must first discover a basic service set (BSS) and then request permission to associate with it.
+Clients should be authenticated by some means before they can become functioning members of the wireless LAN. Why?
+
+Suppose that your wireless network connects to corporate resources where confidential information can be accessed.
+In that case, only devices known to be trusted and expected should be given access.
+Guest users, if they are permitted at all, should be allowed to join a different guest WLAN where they can access nonconfidential or public resources.
+Rogue clients, which are not expected or welcomed, should not be permitted to associate at all.
+After all, they are not affiliated with the corporate network and are likely to be unknown devices that happen to be within range of your network.
+
+To control access, wireless networks can authenticate the client devices before they are allowed to associate.
+Potential clients must identify themselves by presenting some form of credentials to the APs. Figure 28-2 shows the basic client authentication process.
+
+Wireless authentication can take many forms.
+Some methods require only a static text string that is common across all trusted clients and APs. The text string is stored on the client device and presented directly to the AP when needed.
+What might happen if the device was stolen or lost?
+Most likely, any user who possessed the device could still authenticate to the network.
+Other more stringent authentication methods require interaction with a corporate user database.
+In those cases, the end user must enter a valid username and password—
+
+something that would not be known to a thief or an imposter.
+
+Who are you?
+
+I am Joe User.
+
+Ok.
+
+Figure 28-2 Authenticating a Wireless Client If you have ever joined a wireless network, you might have focused on authenticating your device or yourself, while implicitly trusting the nearest AP. For example, if you turn on your wireless device and find a wireless network that is available at your workplace, you probably join it without hesitating.
+The same is true for wireless networks in an airport, a hotel, a hot spot, or in your home—you expect the AP that is advertising the SSID to be owned and operated by the entity where you are located.
+But how can you be sure?
+
+Normally, the only piece of information you have is the SSID being broadcast or advertised by an AP. If the SSID looks familiar, you will likely choose to join it.
+Perhaps your computer is configured to automatically connect to a known SSID so that it associates without your intervention.
+Either way, you might unwittingly join the same SSID even if it was being advertised by an imposter.
+
+Some common attacks focus on a malicious user pretending to be an AP. The fake AP can send beacons, answer probes, and associate clients just like the real AP it is impersonating.
+
+Once a client associates with the fake AP, the attacker can easily intercept all communication to and from the client from its central position.
+A fake AP could also send spoofed management frames to disassociate or deauthenticate legitimate and active clients, just to disrupt normal network operation.
+
+To prevent this type of man-in-the-middle attack, the client should authenticate the AP before the client itself is authenticated.
+Figure 28-3 shows a simple scenario.
+Even further, any management frames received by a client should be authenticated too, as proof that they were sent by a legitimate and expected AP.
+
+Who are you?
+
+I am AP-1.
+
+These are my management frames.
+
+Ok.
+
+Figure 28-3 Authenticating a Wireless AP Answers to the “Do I Know This Already?” quiz:
+
+1 D 2 C 3 D 4 C 5 A 6 C 7 B 8 A, C
+#### Message Privacy
+
+Suppose that the client in Figure 28-3 must authenticate before joining the wireless network.
+
+It might also authenticate the AP and its management frames after it associates but before it is itself authenticated.
+The client’s relationship with the AP might become much more trusted, but data passing to and from the client is still available to eavesdroppers on the same channel.
+
+To protect data privacy on a wireless network, the data should be encrypted for its journey through free space.
+This is accomplished by encrypting the data payload in each wireless frame just prior to being transmitted, then decrypting it as it is received.
+The idea is to use an encryption method that the transmitter and receiver share, so the data can be encrypted and decrypted successfully.
+
+In wireless networks, each WLAN may support only one authentication and encryption scheme, so all clients must use the same encryption method when they associate.
+You might think that having one encryption method in common would allow every client to eavesdrop on every other client.
+That is not necessarily the case because the AP should securely negotiate a unique encryption key to use for each associated client.
+
+Ideally, the AP and a client are the only two devices that have the encryption keys in common so that they can understand each other’s data.
+No other device should know about or be able to use the same keys to eavesdrop and decrypt the data.
+In Figure 28-4, the client’s confidential password information has been encrypted before being transmitted.
+The AP can decrypt it successfully before forwarding it onto the wired network, but other wireless devices cannot.
+
+Figure 28-4 Encrypting Wireless Data to Protect Data Privacy The AP also maintains a “group key” that it uses when it needs to send encrypted data to all clients in its cell at one time.
+Each of the associated clients uses the same group key to decrypt the data.
+#### Message Integrity
+
+Encrypting data obscures it from view while it is traveling over a public or untrusted network.
+
+The intended recipient should be able to decrypt the message and recover the original contents, but what if someone managed to alter the contents along the way?
+The recipient would have a very difficult time discovering that the original data had been modified.
+
+A message integrity check (MIC) is a security tool that can protect against data tampering.
+
+You can think of a MIC as a way for the sender to add a secret stamp inside the encrypted data frame.
+The stamp is based on the contents of the data bits to be transmitted.
+Once the recipient decrypts the frame, it can compare the secret stamp to its own idea of what the stamp should be, based on the data bits that were received.
+If the two stamps are identical, the recipient can safely assume that the data has not been tampered with.
+Figure 28-5 shows the MIC process.
+
+Figure 28-5 Checking Message Integrity over a Wireless Network
+### Wireless Client Authentication Methods
+
+You can use many different methods to authenticate wireless clients as they try to associate with the network.
+The methods have been introduced over time and have evolved as security weaknesses have been exposed and wireless hardware has advanced.
+This section covers the most common authentication methods you might encounter.
+#### Open Authentication
+
+The original 802.11 standard offered only two choices to authenticate a client: open authentication and WEP.
+
+Open authentication is true to its name; it offers open access to a WLAN. The only requirement is that a client must use an 802.11 authentication request before it attempts to associate with an AP. No other credentials are needed.
+
+When would you want to use open authentication?
+After all, it does not sound very secure because it is not.
+With no challenge, any 802.11 client may authenticate to access the network.
+
+That is, in fact, the whole purpose of open authentication—to validate that a client is a valid 802.11 device by authenticating the wireless hardware and the protocol.
+Authenticating the user’s identity is handled as a true security process through other means.
+
+You have probably seen a WLAN with open authentication when you have visited a public location.
+If any client screening is used at all, it comes in the form of web authentication.
+A client can associate right away but must open a web browser to see and accept the terms for use and enter basic credentials.
+From that point, network access is opened up for the client.
+
+Most client operating systems flag such networks to warn you that your wireless data will not be secured in any way if you join.
+#### WEP
+
+As you might expect, open authentication offers nothing that can obscure or encrypt the data being sent between a client and an AP. As an alternative, the 802.11 standard has traditionally defined Wired Equivalent Privacy (WEP) as a method to make a wireless link more like or equivalent to a wired connection.
+
+WEP uses the RC4 cipher algorithm to make every wireless data frame private and hidden from eavesdroppers.
+The same algorithm encrypts data at the sender and decrypts it at the receiver.
+The algorithm uses a string of bits as a key, commonly called a WEP key, to derive other encryption keys—one per wireless frame.
+As long as the sender and receiver have an identical key, one can decrypt what the other encrypts.
+
+WEP is known as a shared-key security method.
+The same key must be shared between the sender and receiver ahead of time, so that each can derive other mutually agreeable encryption keys.
+In fact, every potential client and AP must share the same key ahead of time so that any client can associate with the AP.
+
+The WEP key can also be used as an optional authentication method as well as an encryption tool.
+Unless a client can use the correct WEP key, it cannot associate with an AP. The AP tests the client’s knowledge of the WEP key by sending it a random challenge phrase.
+
+The client encrypts the challenge phrase with WEP and returns the result to the AP. The AP can compare the client’s encryption with its own to see whether the two WEP keys yield identical results.
+
+WEP keys can be either 40 or 104 bits long, represented by a string of 10 or 26 hex digits.
+
+As a rule of thumb, longer keys offer more unique bits for the algorithm, resulting in more robust encryption.
+Except in WEP’s case, that is.
+Because WEP was defined in the original 802.11 standard in 1999, every wireless adapter was built with encryption hardware specific to WEP. In 2001, a number of weaknesses were discovered and revealed, so work began to find better wireless security methods.
+By 2004, the 802.11i amendment was ratified and WEP was officially deprecated.
+Both WEP encryption and WEP shared-key authentication are widely considered to be weak methods to secure a wireless LAN.
+#### 802.1x/EAP
+
+With only open authentication and WEP available in the original 802.11 standard, a more secure authentication method was needed.
+Client authentication generally involves some sort of challenge, a response, and then a decision to grant access.
+Behind the scenes, it can also involve an exchange of session or encryption keys, in addition to other parameters needed for client access.
+Each authentication method might have unique requirements as a unique way to pass information between the client and the AP.
+
+Rather than build additional authentication methods into the 802.11 standard, a more flexible and scalable authentication framework, the Extensible Authentication Protocol (EAP), was chosen.
+As its name implies, EAP is extensible and does not consist of any one authentication method.
+Instead, EAP defines a set of common functions that actual authentication methods can use to authenticate users.
+As you read through this section, notice how many authentication methods have EAP in their names.
+Each method is unique and different, but each one follows the EAP framework.
+
+EAP has another interesting quality: it can integrate with the IEEE 802.1x port-based access control standard.
+When 802.1x is enabled, it limits access to a network media until a client authenticates.
+This means that a wireless client might be able to associate with an AP but will not be able to pass data to any other part of the network until it successfully authenticates.
+
+With open and WEP authentication, wireless clients are authenticated locally at the AP without further intervention.
+The scenario changes with 802.1x; the client uses open authentication to associate with the AP, and then the actual client authentication process occurs at a dedicated authentication server.
+Figure 28-6 shows the three-party 802.1x arrangement that consists of the following entities:
+###### Supplicant: The client device that is requesting access
+###### Authenticator: The network device that provides access to the network (usually a wireless
+
+LAN controller [WLC])
+###### Authentication server (AS): The device that takes user or client credentials and permits
+
+or denies network access based on a user database and policies (usually a RADIUS server)
+
+AP WLC Supplicant Authenticator Authentication Server (AS)
+
+802.11 Open Authentication EAP-Based Authentication Figure 28-6 802.1x Client Authentication Roles The wireless LAN controller becomes a middleman in the client authentication process, controlling user access with 802.1x and communicating with the authentication server using the EAP framework.
+
+The following sections provide an overview of several common EAP-based authentication methods.
+The goal here is to become aware of the many methods without trying to memorize them all.
+In fact, even when you configure user authentication on a wireless LAN, you will not have to select a specific method.
+Instead, you select 802.1x on the WLC so that it is ready to handle a variety of EAP methods.
+It is then up to the client and the authentication server to use a compatible method.
+You will learn more about configuring security on a wireless LAN in Chapter 29, “Building a Wireless LAN.”
+##### LEAP
+
+As an early attempt to address the weaknesses in WEP, Cisco developed a proprietary wireless authentication method called Lightweight EAP (LEAP). To authenticate, the client must supply username and password credentials.
+Both the authentication server and the client exchange challenge messages that are then encrypted and returned.
+This provides mutual authentication; as long as the messages can be decrypted successfully, the client and the AS have essentially authenticated each other.
+
+At the time, WEP-based hardware was still widely used.
+Therefore, LEAP attempted to overcome WEP weaknesses by using dynamic WEP keys that changed frequently.
+Nevertheless, the method used to encrypt the challenge messages was found to be vulnerable, so LEAP has since been deprecated.
+Even though wireless clients and controllers still offer LEAP, you should not use it.
+##### EAP-FAST
+
+Cisco developed a more secure method called EAP Flexible Authentication by Secure Tunneling (EAP-FAST). Authentication credentials are protected by passing a protected access credential (PAC) between the AS and the supplicant.
+The PAC is a form of shared secret that is generated by the AS and used for mutual authentication.
+EAP-FAST is a sequence of three phases:
+###### Phase 0: The PAC is generated or provisioned and installed on the client.
+###### Phase 1: After the supplicant and AS have authenticated each other, they negotiate a
+
+Transport Layer Security (TLS) tunnel.
+###### Phase 2: The end user can then be authenticated through the TLS tunnel for additional
+
+security.
+
+Notice that two separate authentication processes occur in EAP-FAST—one between the AS and the supplicant and another with the end user.
+These occur in a nested fashion, as an outer authentication (outside the TLS tunnel) and an inner authentication (inside the TLS tunnel).
+
+Like other EAP-based methods, a RADIUS server is required.
+However, the RADIUS server must also operate as an EAP-FAST server to be able to generate PACs, one per user.
+##### PEAP
+
+Like EAP-FAST, the Protected EAP (PEAP) method uses an inner and outer authentication;
+
+however, the AS presents a digital certificate to authenticate itself with the supplicant in the outer authentication.
+If the supplicant is satisfied with the identity of the AS, the two will build a TLS tunnel to be used for the inner client authentication and encryption key exchange.
+
+The digital certificate of the AS consists of data in a standard format that identifies the owner and is “signed” or validated by a third party.
+The third party is known as a certificate authority (CA) and is known and trusted by both the AS and the supplicants.
+The supplicant must also possess the CA certificate just so that it can validate the one it receives from the AS. The certificate is also used to pass a public key, in plain view, which can be used to help decrypt messages from the AS.
+
+Notice that only the AS has a certificate for PEAP. That means the supplicant can readily authenticate the AS. The client does not have or use a certificate of its own, so it must be authenticated within the TLS tunnel using one of the following two methods:
+###### MSCHAPv2: Microsoft Challenge Authentication Protocol version 2
+###### GTC: Generic Token Card; a hardware device that generates one-time passwords for the
+
+user or a manually generated password
+##### EAP-TLS
+
+PEAP leverages a digital certificate on the AS as a robust method to authenticate the RADIUS server.
+It is easy to obtain and install a certificate on a single server, but the clients are left to identify themselves through other means.
+EAP Transport Layer Security (EAPTLS)
+
+goes one step further by requiring certificates on the AS and on every client device.
+
+With EAP-TLS, the AS and the supplicant exchange certificates and can authenticate each other.
+A TLS tunnel is built afterward so that encryption key material can be securely exchanged.
+
+EAP-TLS is considered to be the most secure wireless authentication method available;
+
+however, implementing it can sometimes be complex.
+Along with the AS, each wireless client must obtain and install a certificate.
+Manually installing certificates on hundreds or thousands of clients can be impractical.
+Instead, you would need to implement a Public Key Infrastructure (PKI) that could supply certificates securely and efficiently and revoke them when a client or user should no longer have access to the network.
+This usually involves setting up your own CA or building a trust relationship with a third-party CA that can supply certificates to your clients.
+
+NOTE EAP-TLS is practical only if the wireless clients can accept and use digital certificates.
+
+Many wireless devices, such as communicators, medical devices, and RFID tags, have an underlying operating system that cannot interface with a CA or use certificates.
+### Wireless Privacy and Integrity Methods
+
+The original 802.11 standard supported only one method to secure wireless data from eavesdroppers:
+
+WEP. As you have learned in this chapter, WEP has been compromised, deprecated, and can no longer be recommended.
+What other options are available to encrypt data and protect its integrity as it travels through free space?
+#### TKIP
+
+During the time when WEP was embedded in wireless client and AP hardware, yet was known to be vulnerable, the Temporal Key Integrity Protocol (TKIP) was developed.
+
+TKIP adds the following security features using legacy hardware and the underlying WEP encryption:
+###### MIC: This efficient algorithm adds a hash value to each frame as a message integrity
+
+check to prevent tampering; commonly called “Michael” as an informal reference to MIC.
+###### Time stamp: A time stamp is added into the MIC to prevent replay attacks that attempt
+
+to reuse or replay frames that have already been sent.
+###### Sender’s MAC address: The MIC also includes the sender’s MAC address as evidence of
+
+the frame source.
+###### TKIP sequence counter: This feature provides a record of frames sent by a unique MAC
+
+address, to prevent frames from being replayed as an attack.
+###### Key mixing algorithm: This algorithm computes a unique 128-bit WEP key for each
+
+frame.
+###### Longer initialization vector (IV): The IV size is doubled from 24 to 48 bits, making it virtually
+
+impossible to exhaust all WEP keys by brute-force calculation.
+
+TKIP became a reasonably secure stopgap security method, buying time until the 802.11i standard could be ratified.
+Some attacks have been created against TKIP, so it, too, should be avoided if a better method is available.
+In fact, TKIP was deprecated in the 802.11-2012 standard.
+#### CCMP
+
+The Counter/CBC-MAC Protocol (CCMP) is considered to be more secure than TKIP.
+
+CCMP consists of two algorithms:
+###### AES counter mode encryption
+###### Cipher Block Chaining Message Authentication Code (CBC-MAC) used as a message
+
+integrity check (MIC)
+
+The Advanced Encryption Standard (AES) is the current encryption algorithm adopted by U.S.
+National Institute of Standards and Technology (NIST) and the U.S. government, and widely used around the world.
+In other words, AES is open, publicly accessible, and represents the most secure encryption method available today.
+
+Before CCMP can be used to secure a wireless network, the client devices and APs must support the AES counter mode and CBC-MAC in hardware.
+CCMP cannot be used on legacy devices that support only WEP or TKIP. How can you know if a device supports CCMP?
+
+Look for the WPA2 designation, which is described in the following section.
+#### GCMP
+
+The Galois/Counter Mode Protocol (GCMP) is a robust authenticated encryption suite that is more secure and more efficient than CCMP. GCMP consists of two algorithms:
+###### AES counter mode encryption
+###### Galois Message Authentication Code (GMAC) used as a message integrity check (MIC)
+
+GCMP is used in WPA3, which is described in the following section.
+### WPA, WPA2, and WPA3
+
+This chapter covers a variety of authentication methods and encryption and message integrity algorithms.
+When it comes time to configure a WLAN with wireless security, should you try to select some combination of schemes based on which one is best or which one is not deprecated?
+Which authentication methods are compatible with which encryption algorithms?
+
+The Wi-Fi Alliance (http://wi-fi.org), a nonprofit wireless industry association, has worked out straightforward ways to do that through its Wi-Fi Protected Access (WPA) industry certifications.
+To date, there are three different versions: WPA, WPA2, and WPA3. Wireless products are tested in authorized testing labs against stringent criteria that represent correct implementation of a standard.
+As long as the Wi-Fi Alliance has certified a wireless client device and an AP and its associated WLC for the same WPA version, they should be compatible and offer the same security components.
+
+The Wi-Fi Alliance introduced its first generation WPA certification (known simply as WPA and not WPA1) while the IEEE 802.11i amendment for best practice security methods was still being developed.
+WPA was based on parts of 802.11i and included 802.1x authentication, TKIP, and a method for dynamic encryption key management.
+
+Once 802.11i was ratified and published, the Wi-Fi Alliance included it in full in its WPA Version 2 (WPA2) certification.
+WPA2 is based around the superior AES CCMP algorithms, rather than the deprecated TKIP from WPA. It should be obvious that WPA2 was meant as a replacement for WPA.
+
+In 2018, the Wi-Fi Alliance introduced WPA Version 3 (WPA3) as a future replacement for WPA2, adding several important and superior security mechanisms.
+WPA3 leverages stronger encryption by AES with the Galois/Counter Mode Protocol (GCMP). It also uses Protected Management Frames (PMF) to secure important 802.11 management frames between APs and clients, to prevent malicious activity that might spoof or tamper with a BSS’s operation.
+
+Table 28-2 summarizes the basic differences between WPA, WPA2, and WPA3. Each successive version is meant to replace prior versions by offering better security features.
+You should avoid using WPA and use WPA2 instead—at least until WPA3 becomes widely available on wireless client devices, APs, and WLCs.
+
+Table 28-2 Comparing WPA, WPA2, and WPA3 Table end.
+
+1 WPA3 includes other features beyond WPA and WPA2, such as Simultaneous Authentication of Equals (SAE), Forward secrecy, and Protected management frames (PMF).
+
+Notice that all three WPA versions support two client authentication modes: a pre-shared key (PSK) or 802.1x, based on the scale of the deployment.
+These are also known as personal mode and enterprise mode, respectively.
+With personal mode, a key string must be shared or configured on every client and AP before the clients can connect to the wireless network.
+The pre-shared key is normally kept confidential so that unauthorized users have no knowledge of it.
+The key string is never sent over the air.
+Instead, clients and APs work through a four-way handshake procedure that uses the pre-shared key string to construct and exchange encryption key material that can be openly exchanged.
+Once that process is successful, the AP can authenticate the client and the two can secure data frames that are sent over the air.
+
+With WPA-Personal and WPA2-Personal modes, a malicious user can eavesdrop and capture the four-way handshake between a client and an AP. That user can then use a dictionary attack to automate guessing the pre-shared key.
+If he is successful, he can then decrypt the wireless data or even join the network posing as a legitimate user.
+
+WPA3-Personal avoids such an attack by strengthening the key exchange between clients and APs through a method known as Simultaneous Authentication of Equals (SAE). Rather than a client authenticating against a server or AP, the client and AP can initiate the authentication process equally and even simultaneously.
+
+Even if a password or key is compromised, WPA3-Personal offers forward secrecy, which prevents attackers from being able to use a key to unencrypt data that has already been transmitted over the air.
+
+NOTE The Personal mode of any WPA version is usually easy to deploy in a small environment or with clients that are embedded in certain devices because a simple text key string is all that is needed to authenticate the clients.
+Be aware that every device using the WLAN must be configured with an identical pre-shared key.
+If you ever need to update or change the key, you must touch every device to do so.
+As well, the pre-shared key should remain a well kept secret; you should never divulge the pre-shared key to any unauthorized person.
+
+Notice from Table 28-2 that WPA, WPA2, and WPA3 also support 802.1x or enterprise authentication.
+This implies EAP-based authentication, but the WPA versions do not require any specific EAP method.
+Instead, the Wi-Fi Alliance certifies interoperability with wellknown EAP methods like EAP-TLS, PEAP, EAP-TTLS, and EAP-SIM. Enterprise authentication is more complex to deploy than personal mode because authentication servers must be set up and configured as a critical enterprise resource.
+
+NOTE The Wi-Fi Alliance has made wireless security configuration straightforward and consistent through its WPA, WPA2, and WPA3 certifications.
+Each version is meant to replace its predecessors because of improved security mechanisms.
+You should always select the highest WPA version that the clients and wireless infrastructure in your environment will support.
+### Chapter Review
+
+At this point in the chapter, you might still be a little overwhelmed with the number of acronyms and security terms to learn and keep straight in your mind.
+Spend some time reviewing Table 28-3, which lists all of the topics described in this chapter.
+The table is organized in a way that should help you remember how the acronyms and functions are grouped together.
+
+Remember that an effective wireless security strategy includes a method to authenticate clients and a method to provide data privacy and integrity.
+These two types of methods are listed in the leftmost column.
+Work your way to the right to remember what types of authentication and privacy/integrity are available.
+The table also expands the name of each acronym as a memory tool.
+
+Also remember that WPA, WPA2, and WPA3 simplify wireless network configuration and compatibility because they limit which authentication and privacy/integrity methods can be used.
+
+Table 28-3 Review of Wireless Security Mechanisms and Options Table end.
+
+You should also review this chapter’s material using either the tools in the book or the interactive tools for the same material found on the book’s companion website.
+Table 28-4 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 28-4 Chapter Review Tracking Table end.
+
+Review All the Key Topics Review the most important topics in this chapter, noted with the Key Topic icon in the outer margin of the page.
+Table 28-5 lists a reference of these key topics and the page numbers on which each is found.
+
+Key Terms You Should Know 802.1x, authentication server (AS), authenticator, certificate authority (CA), Counter/CBCMAC Protocol (CCMP), EAP Flexible Authentication by Secure Tunneling (EAP-FAST), EAP Transport Layer Security (EAP-TLS), enterprise mode, Extensible Authentication Protocol (EAP), forward secrecy, Galois/Counter Mode Protocol (GCMP), Lightweight EAP (LEAP), message integrity check (MIC), open authentication, personal mode, protected access credential (PAC), Protected EAP (PEAP), Protected Management Frame (PMF), Public Key Infrastructure (PKI), RADIUS server, Simultaneous Authentication of Equals (SAE), supplicant, Temporal Key Integrity Protocol (TKIP), Wired Equivalent Privacy (WEP), Wi-Fi Protected Access (WPA), WPA Version 2 (WPA2), WPA Version 3 (WPA3)
+## Chapter 29 Building a Wireless LAN
+
+This chapter covers the following exam topics:
+###### 2.0 Network Access
+###### 2.7 Describe physical infrastructure connections of WLAN components (AP, WLC,
+
+access/trunk ports, and LAG)
+###### 2.8 Describe AP and WLC management access connections (Telnet, SSH, HTTP, HTTPS,
+
+console, and TACACS+/RADIUS)
+###### 2.9 Configure the components of a wireless LAN access for client connectivity using GUI
+
+only, such as WLAN creation, security settings, QoS profiles, and advanced WLAN settings
+###### 5.0 Security Fundamentals
+###### 5.10 Configure WLAN using WPA2 PSK using the GUI
+
+In Chapters 26 through 28, you learned about the fundamentals of wireless networks.
+As a CCNA, you will also need to know how to apply that knowledge toward building a functioning network with APs and a WLC.
+
+In addition, based on the concepts you learned in Chapter 28, “Securing Wireless Networks,”
+
+you will be able to configure the WLAN to use WPA2-Personal.
+### “Do I Know This Already?” Quiz
+
+Take the quiz (either here or use the PTP software) if you want to use the score to help you decide how much time to spend on this chapter.
+The letter answers are listed at the bottom of the page following the quiz.
+Appendix C, found both at the end of the book as well as on the companion website, includes both the answers and explanations.
+You can also find both answers and explanations in the PTP testing software.
+
+Table 29-1 “Do I Know This Already?” Section-to-Question Mapping
+### Foundation Topics
+### Connecting a Cisco AP
+### Accessing a Cisco WLC
+### Connecting a Cisco WLC
+
+Configuring a WLAN 6–8 CHAPTER 29 1.
+Suppose you need to connect a lightweight AP to a network.
+Which one of the following link types would be necessary?
+
+a. Access mode link b.
+Trunk mode link c.
+LAG mode link d.
+EtherChannel link 2.
+An autonomous AP will be configured to support three WLANs that correspond to three VLANs. The AP will connect to the network over which one of the following?
+
+a. Access mode link b.
+Trunk mode link c.
+LAG mode link d.
+EtherChannel link 3.
+Suppose you would like to connect to a WLC to configure a new WLAN on it.
+Which one of the following is a valid method to use?
+
+a. SSH b.
+HTTPS c.
+HTTP d.
+All of these answers are correct.
+
+4. Which one of the following correctly describes the single logical link formed by bundling all of a controller’s distribution system ports together?
+
+a. PHY b.
+DSP c.
+LAG d.
+GEC 5.
+Which one of the following controller interfaces maps a WLAN to a VLAN?
+
+a. Bridge interface b.
+Virtual interface c.
+WLAN interface d.
+Dynamic interface 6.
+Which two of the following things are bound together when a new WLAN is created?
+
+a. VLAN b.
+AP c.
+Controller interface d.
+SSID 7.
+What is the maximum number of WLANs you can configure on a Cisco wireless controller?
+
+a. 8 b. 16 c. 512 d. 1024 8.
+Which of the following parameters are necessary when creating a new WLAN with the controller GUI? (Choose all that apply.)
+
+a. SSID b.
+VLAN number c.
+Interface d.
+BSSID e.
+IP subnet Foundation Topics Connecting a Cisco AP A Cisco wireless network can consist of autonomous APs or lightweight APs that are coupled with one or more wireless LAN controllers.
+Both types of APs are covered in Chapter 27, “Analyzing Cisco Wireless Architectures,” from a functional perspective.
+You should also understand how to connect the wired side of each type of AP so that it can pass traffic between the appropriate VLANs and WLANs.
+
+Recall that an autonomous AP is a standalone device; nothing else is needed to forward Ethernet frames from a wired VLAN to a wireless LAN, and vice versa.
+In effect, the AP maps each VLAN to a WLAN and BSS. The autonomous AP has a single wired Ethernet interface, as shown in the left portion of Figure 29-1, which means that multiple VLANs must be brought to it over a trunk link.
+
+NOTE A switch port providing a wired connection to an AP must be configured to support either access or trunk mode.
+In trunk mode, 802.1Q encapsulation tags each frame according to the VLAN number it came from.
+The wireless side of an AP inherently trunks 802.11 frames by marking them with the BSSID of the WLAN where they belong.
+
+A lightweight AP also has a single wired Ethernet interface; however, it must be paired with a WLC to be fully functional.
+Wired VLANs that terminate at the WLC can be mapped to WLANs that emerge at the AP. Even though multiple VLANs are being extended from the WLC to the AP, they are all carried over the CAPWAP tunnel between the two.
+That means the AP needs only an access link to connect to the network infrastructure and terminate its end of the tunnel, as shown in the right portion of Figure 29-1.
+
+Figure 29-1 Comparing Connections to Autonomous and Lightweight APs To configure and manage Cisco APs, you can connect a serial console cable from your PC to the console port on the AP. Once the AP is operational and has an IP address, you can also use Telnet or SSH to connect to its CLI over the wired network.
+Autonomous APs support browser-based management sessions via HTTP and HTTPS. You can manage lightweight APs from a browser session to the WLC.
+
+Accessing a Cisco WLC To connect and configure a WLC, you will need to open a web browser to the WLC’s management address with either HTTP or HTTPS. This can be done only after the WLC has an initial configuration and a management IP address assigned to its management interface.
+The web-based GUI provides an effective way to monitor, configure, and troubleshoot a wireless network.
+You can also connect to a WLC with an SSH session, where you can use its CLI to monitor, configure, and debug activity.
+
+Both the web-based GUI and the CLI require management users to log in.
+Users can be authenticated against an internal list of local usernames or against an authentication, authorization, and accounting (AAA) server, such as TACACS+ or RADIUS.
+
+When you first open a web browser to the management address, you will see the initial login screen.
+Click on the Login button, as shown in Figure 29-2; then enter your user credentials as you are prompted for them.
+
+Figure 29-2 Accessing a WLC with a Web Browser NOTE The CCNA exam objectives focus on using the WLC GUI to configure a WLAN and a security suite.
+Therefore, the examples in this section assume that someone has already entered an initial configuration to give the WLC a working IP address for management.
+
+When you are successfully logged in, the WLC will display a monitoring dashboard similar to the one shown in Figure 29-3.
+You will not be able to make any configuration changes there, so you must click on the Advanced link in the upper-right corner.
+This will bring up the full WLC GUI, as shown in Figure 29-4.
+
+Notice the tabs across the top of the screen in Figure 29-4.
+You can select categories of functions from among Monitor, WLANs, Controller, Wireless, Security, and so on.
+As you select one of these categories, the vertical list of functions at the left side of the screen will change accordingly.
+You can expand the list entries if needed and select one to work on.
+The main screen area will display all of the relevant fields and options you can edit as you make configuration changes.
+You will get a feel for which tabs and list items you should use as you work through the remainder of the chapter.
+
+Figure 29-3 Accessing the Advanced Configuration Interface Figure 29-4 The Advanced WLC Configuration GUI Connecting a Cisco WLC Connecting a Cisco wireless LAN controller to the network is not quite as straightforward because it has several different types of connections.
+From your work with Cisco routers and switches, you probably know that the terms interface and port are usually interchangeable.
+
+For example, switches can come in 48-port models, and you apply configuration changes to the corresponding interfaces.
+Cisco wireless controllers differ a bit; ports and interfaces refer to different concepts.
+
+Controller ports are physical connections made to an external wired or switched network, whereas interfaces are logical connections made internally within the controller.
+The following sections explain each connection type in more detail.
+You will learn more about configuring ports and interfaces in the “Configuring a WLAN” section later in the chapter.
+#### Using WLC Ports
+
+You can connect several different types of controller ports to your network, as shown in Figure 29-5 and discussed in the following list:
+###### Service port: Used for out-of-band management, system recovery, and initial boot functions;
+
+always connects to a switch port in access mode
+###### Distribution system port: Used for all normal AP and management traffic; usually connects
+
+to a switch port in 802.1Q trunk mode
+###### Console port: Used for out-of-band management, system recovery, and initial boot functions;
+
+asynchronous connection to a terminal emulator (9600 baud, 8 data bits, 1 stop bit, by default)
+###### Redundancy port: Used to connect to a peer controller for high availability (HA).
+
+Figure 29-5 Cisco Wireless LAN Controller Ports Controllers can have a single service port that must be connected to a switched network.
+
+Usually, the service port is assigned to a management VLAN so that you can access the controller with SSH or a web browser to perform initial configuration or for maintenance.
+
+Notice that the service port supports only a single VLAN, so the corresponding switch port must be configured for access mode only.
+
+Controllers also have multiple distribution system ports that you must connect to the network.
+
+These ports carry most of the data coming to and going from the controller.
+For example, the CAPWAP tunnels (control and data) that extend to each of a controller’s APs pass across the distribution system ports.
+Client data also passes from wireless LANs to wired VLANs over the ports.
+In addition, any management traffic using a web browser, SSH, Simple Network Management Protocol (SNMP), Trivial File Transfer Protocol (TFTP), and so on, normally reaches the controller in-band through the ports.
+
+NOTE You might be thinking that distribution system ports is an odd name for what appear to be regular data ports.
+Recall from the section titled “Wireless LAN Topologies”
+
+in Chapter 26, “Fundamentals of Wireless Networks,” that the wired network that connects APs together is called the distribution system (DS). With the split MAC architecture, the point where APs touch the DS is moved upstream to the WLC instead.
+
+Because the distribution system ports must carry data that is associated with many different VLANs, VLAN tags and numbers become very important.
+For that reason, the distribution system ports always operate in 802.1Q trunking mode.
+When you connect the ports to a switch, you should also configure the switch ports for unconditional 802.1Q trunk mode.
+
+The distribution system ports can operate independently, each one transporting multiple VLANs to a unique group of internal controller interfaces.
+For resiliency, you can configure distribution system ports in redundant pairs.
+One port is primarily used; if it fails, a backup port is used instead.
+
+To get the most use out of each distribution system port, you can configure all of them to operate as a single logical group, much like an EtherChannel or port-channel on a switch.
+
+Controller distribution system ports can be configured as a link aggregation group (LAG)
+
+such that they are bundled together to act as one larger link.
+In Figure 29-5, the four distribution system ports are configured as a LAG. With a LAG configuration, traffic can be load-balanced across the individual ports that make up the LAG. In addition, LAG offers resiliency; if one individual port fails, traffic will be redirected to the remaining working ports instead.
+
+NOTE Be aware that even though the LAG acts as a traditional EtherChannel, Cisco WLCs do not support any link aggregation negotiation protocol, like LACP or PaGP, at all.
+Therefore, you must configure the switch ports as an unconditional or always-on EtherChannel.
+#### Using WLC Interfaces
+
+Through its distribution system ports, a controller can connect to multiple VLANs on the switched network.
+Internally, the controller must somehow map those wired VLANs to equivalent logical wireless networks.
+For example, suppose that VLAN 10 is set aside for wireless users in the Engineering division of a company.
+That VLAN must be connected to a unique wireless LAN that exists on a controller and its associated APs. The wireless LAN must then be extended to every client that associates with the Service Set Identifier (SSID)
+
+“Engineering.”
+
+Cisco wireless controllers provide the necessary connectivity through internal logical interfaces, which must be configured with an IP address, subnet mask, default gateway, and a Dynamic Host Configuration Protocol (DHCP) server.
+Each interface is then assigned to a physical port and a VLAN ID. You can think of an interface as a Layer 3 termination on a VLAN.
+
+Cisco controllers support the following interface types, also shown in Figure 29-6.
+###### Management interface: Used for normal management traffic, such as RADIUS user
+
+authentication, WLC-to-WLC communication, web-based and SSH sessions, SNMP, Network Time Protocol (NTP), syslog, and so on.
+The management interface is also used to terminate CAPWAP tunnels between the controller and its APs.
+###### Redundancy management: The management IP address of a redundant WLC that is part
+
+of a high availability pair of controllers.
+The active WLC uses the management interface address, while the standby WLC uses the redundancy management address.
+###### Virtual interface: IP address facing wireless clients when the controller is relaying client
+
+DHCP requests, performing client web authentication, and supporting client mobility.
+###### Service port interface: Bound to the service port and used for out-of-band management.
+###### Dynamic interface: Used to connect a VLAN to a WLAN.
+
+Figure 29-6 Cisco Wireless LAN Controller Interfaces The management interface faces the switched network, where management users and APs are located.
+Management traffic will usually consist of protocols like HTTPS, SSH, SNMP, NTP, TFTP, and so on.
+In addition, management interface traffic consists of CAPWAP packets that carry control and data tunnels to and from the APs.
+
+The virtual interface is used only for certain client-facing operations.
+For example, when a wireless client issues a request to obtain an IP address, the controller can relay the request on to an actual DHCP server that can provide the appropriate IP address.
+From the client’s perspective, the DHCP server appears to be the controller’s virtual interface address.
+Clients may see the virtual interface’s address, but that address is never used when the controller communicates with other devices on the switched network.
+
+Because the virtual interface is used only for some client management functions, you should configure it with a unique, nonroutable address.
+For example, you might use 10.1.1.1 because it is within a private address space defined in RFC 1918.
+
+NOTE Traditionally, many people have assigned IP address 1.1.1.1 to the virtual interface.
+
+Although it is a unique address, it is routable and already in use elsewhere on the Internet.
+
+A better practice is to use an IP address from the RFC 1918 private address space that is unused or reserved, such as 192.168.1.1.
+You could also use a reserved address from RFC 5737 (192.0.2.0/24) that is set aside for documentation purposes and is never used.
+
+The virtual interface address is also used to support client mobility.
+For that reason, every controller that exists in the same mobility group should be configured with a virtual address that is identical to the others.
+By using one common virtual address, all the controllers will appear to operate as a cluster as clients roam from controller to controller.
+
+Dynamic interfaces map WLANs to VLANs, making the logical connections between wireless and wired networks.
+You will configure one dynamic interface for each wireless LAN that is offered by the controller’s APs and then map the interface to the WLAN. Each dynamic interface must also be configured with its own IP address and can act as a DHCP relay for wireless clients.
+To filter traffic passing through a dynamic interface, you can configure an optional access list.
+### Configuring a WLAN
+
+A wireless LAN controller and an access point work in concert to provide network connectivity to wireless clients.
+From a wireless perspective, the AP advertises a Service Set Identifier (SSID) for the client to join.
+From a wired perspective, the controller connects to a virtual LAN (VLAN) through one of its dynamic interfaces.
+To complete the path between the SSID and the VLAN, as illustrated in Figure 29-7, you must first define a WLAN on the controller.
+
+NOTE Two of the CCNA exam objectives involve configuring a WLAN for client connectivity with WPA2 and a PSK using only the controller GUI. As you work through this section, you will find that it presents a complete WLAN example that is based on the topology shown in Figure 29-7 using the WPA2-Personal (PSK) security model.
+
+Figure 29-7 Connecting Wired and Wireless Networks with a WLAN The controller will bind the WLAN to one of its interfaces and then push the WLAN configuration out to all of its APs by default.
+From that point on, wireless clients will be able to learn about the new WLAN by receiving its beacons and will be able to probe and join the new BSS.
+
+Like VLANs, you can use WLANs to segregate wireless users and their traffic into logical networks.
+Users associated with one WLAN cannot cross over into another one unless their traffic is bridged or routed from one VLAN to another through the wired network infrastructure.
+
+Before you begin to create new WLANs, it is usually wise to plan your wireless network first.
+In a large enterprise, you might have to support a wide variety of wireless devices, user communities, security policies, and so on.
+You might be tempted to create a new WLAN for every occasion, just to keep groups of users isolated from each other or to support different types of devices.
+Although that is an appealing strategy, you should be aware of two limitations:
+###### Cisco controllers support a maximum of 512 WLANs, but only 16 of them can be actively
+
+configured on an AP.
+###### Advertising each WLAN to potential wireless clients uses up valuable airtime.
+
+Every AP must broadcast beacon management frames at regular intervals to advertise the existence of a BSS. Because each WLAN is bound to a BSS, each WLAN must be advertised with its own beacons.
+Beacons are normally sent 10 times per second, or once every 100 ms, at the lowest mandatory data rate.
+The more WLANs you have created, the more beacons you will need to announce them.
+
+Even further, the lower the mandatory data rate, the more time each beacon will take to be transmitted.
+The end result is this: if you create too many WLANs, a channel can be starved of any usable airtime.
+Clients will have a hard time transmitting their own data because the channel is overly busy with beacon transmissions coming from the AP. As a rule of thumb, always limit the number of WLANs to five or fewer; a maximum of three WLANs is best.
+
+By default, a controller has a limited initial configuration, so no WLANs are defined.
+Before you create a new WLAN, think about the following parameters it will need to have:
+###### SSID string
+###### Controller interface and VLAN number
+###### Type of wireless security needed
+
+As you work through this section, you will create the appropriate dynamic controller interface to support the new WLAN; then you will enter the necessary WLAN parameters.
+Each configuration step is performed using a web browser session that is connected to the WLC’s management IP address.
+#### Step 1. Configure a RADIUS Server
+
+If your new WLAN will use a security scheme that requires a RADIUS server, such as WPA2-Enterprise or WPA3-Enterprise, you will need to define the server first.
+Select Security > AAA > RADIUS > Authentication to see a list of servers that have already been configured, as shown in Figure 29-8.
+If multiple servers are defined, the controller will try them in sequential order.
+Click New to create a new server.
+
+Next, enter the server’s IP address, shared secret key, and port number, as shown in Figure 29-9.
+Because the controller already had two other RADIUS servers configured, the server at 192.168.200.30 will be index number 3.
+Be sure to set the server status to Enabled so that the controller can begin using it.
+At the bottom of the page, you can select the type of user that will be authenticated with the server.
+Check Network User to authenticate wireless clients or Management to authenticate wireless administrators that will access the controller’s management functions.
+Click Apply to complete the server configuration.
+
+Figure 29-8 Displaying the List of RADIUS Authentication Servers Figure 29-9 Configuring a New RADIUS Server
+#### Step 2. Create a Dynamic Interface
+
+In the “Using WLC Interfaces” section of this chapter, you learned about the different types of controller interfaces.
+A dynamic interface is used to connect the controller to a VLAN on the wired network.
+When you create a WLAN, you will bind the dynamic interface (and VLAN) to a wireless network.
+
+To create a new dynamic interface, navigate to Controller > Interfaces.
+You should see a list of all the controller interfaces that are currently configured.
+In Figure 29-10, two interfaces named “management” and “virtual” already exist.
+Click the New button to define a new interface.
+Enter a name for the interface and the VLAN number it will be bound to.
+In Figure 29-11, the interface named Engineering is mapped to wired VLAN 100.
+Click the Apply button.
+
+Figure 29-10 Displaying a List of Dynamic Interfaces Figure 29-11 Defining a Dynamic Interface Name and VLAN ID Next, enter the IP address, subnet mask, and gateway address for the interface.
+You should also define primary and secondary DHCP server addresses that the controller will use when it relays DHCP requests from clients that are bound to the interface.
+Figure 29-12 shows how the interface named Engineering has been configured with IP address 192.168.100.10, subnet mask 255.255.255.0, gateway 192.168.100.1, and DHCP servers 192.168.1.17 and 192.168.1.18.
+Click the Apply button to complete the interface configuration and return to the list of interfaces.
+
+Figure 29-12 Editing the Dynamic Interface Parameters
+#### Step 3. Create a New WLAN
+
+You can display a list of the currently defined WLANs by selecting WLANs from the top menu bar.
+In Figure 29-13, the controller does not have any WLANs already defined.
+You can create a new WLAN by selecting Create New from the drop-down menu and then clicking the Go button.
+
+Figure 29-13 Displaying a List of WLANs Next, enter a descriptive name as the profile name and the SSID text string.
+In Figure 29-14, the profile name and SSID are identical, just to keep things straightforward.
+The ID number is used as an index into the list of WLANs that are defined on the controller.
+The ID number becomes useful when you use templates in Prime Infrastructure (PI) to configure WLANs on multiple controllers at the same time.
+
+NOTE WLAN templates are applied to specific WLAN ID numbers on controllers.
+The WLAN ID is only locally significant and is not passed between controllers.
+As a rule, you should keep the sequence of WLAN names and IDs consistent across multiple controllers so that any configuration templates you use in the future will be applied to the same WLANs on each controller.
+
+Figure 29-14 Creating a New WLAN Click the Apply button to create the new WLAN. The next page will allow you to edit four categories of parameters, corresponding to the tabs across the top as shown in Figure 29-15.
+
+By default, the General tab is selected.
+
+Figure 29-15 Configuring the General WLAN Parameters You can control whether the WLAN is enabled or disabled with the Status check box.
+Even though the General page shows a specific security policy for the WLAN (the default WPA2 with 802.1x), you can make changes in a later step through the Security tab.
+
+Under Radio Policy, select the type of radio that will offer the WLAN. By default, the WLAN will be offered on all radios that are joined with the controller.
+You can select a more specific policy with 802.11a only, 802.11a/g only, 802.11g only, or 802.11b/g only.
+For example, if you are creating a new WLAN for devices that have only a 2.4-GHz radio, it probably does not make sense to advertise the WLAN on both 2.4- and 5-GHz AP radios.
+
+Next, select which of the controller’s dynamic interfaces will be bound to the WLAN. By default, the management interface is selected.
+The drop-down list contains all the interface names that are available.
+In Figure 29-15, the new engineering WLAN will be bound to the Engineering interface.
+
+Finally, use the Broadcast SSID check box to select whether the APs should broadcast the SSID name in the beacons they transmit.
+Broadcasting SSIDs is usually more convenient for users because their devices can learn and display the SSID names automatically.
+In fact, most devices actually need the SSID in the beacons to understand that the AP is still available for that SSID. Hiding the SSID name, by not broadcasting it, does not really provide any worthwhile security.
+Instead, it just prevents user devices from discovering an SSID and trying to use it as a default network.
+#### Configuring WLAN Security
+
+Select the Security tab to configure the security settings.
+By default, the Layer 2 Security tab is selected.
+From the Layer 2 Security drop-down menu, select the appropriate security scheme to use.
+Table 29-2 lists the types that are available.
+
+Table 29-2 Layer 2 WLAN Security Type Table end.
+
+As you select a security type, be sure to remember which choices are types that have been deprecated or proven to be weak, and avoid them if possible.
+Further down the screen, you can select which specific WPA, WPA2, and WPA3 methods to support on the WLAN. You can select more than one, if you need to support different types of wireless clients that require several security methods.
+
+In Figure 29-16, WPA+WPA2 has been selected from the pull-down menu; then only WPA2 and AES encryption have been selected.
+WPA and TKIP have been avoided because they are legacy, deprecated methods.
+Under the Authentication Key Management section, you can select the authentication methods the WLAN will use.
+Only PSK has been selected in the figure, so the WLAN will allow only WPA2-Personal with pre-shared key authentication.
+
+Figure 29-16 Configuring Layer 2 WLAN Security To use WPA2-Enterprise, the 802.1X option would be selected.
+In that case, 802.1x and EAP would be used to authenticate wireless clients against one or more RADIUS servers.
+The controller would use servers from the global list you have defined under Security > AAA >
+
+RADIUS > Authentication, as described in the “Step 1.
+Configure a RADIUS Server” section in this chapter.
+To specify which servers the WLAN should use, you would select the Security tab and then the AAA Servers tab in the WLAN edit screen.
+You can identify up to six specific RADIUS servers in the WLAN configuration.
+Beside each server, select a specific server IP address from the drop-down menu of globally defined servers.
+The servers are tried in sequential order until one of them responds.
+Although the example in this chapter uses WPA2-Personal, Figure 29-17 shows what a WLAN configured for WPA2-Enterprise might look like, with servers 1 through 3 being set to 192.168.200.28, 192.168.200.29, and 192.168.200.30, respectively.
+
+By default, a controller will contact a RADIUS server from its management interface.
+You can override this behavior by checking the box next to Radius Server Overwrite Interface so that the controller sources RADIUS requests from the dynamic interface that is associated with the WLAN.
+
+Figure 29-17 Selecting RADIUS Servers for WLAN Authentication
+#### Configuring WLAN QoS
+
+Select the QoS tab to configure quality of service settings for the WLAN, as shown in Figure 29-18.
+By default, the controller will consider all frames in the WLAN to be normal data, to be handled in a “best effort” manner.
+You can set the Quality of Service (QoS) dropdown menu to classify all frames in one of the following ways:
+###### Platinum (voice)
+###### Gold (video)
+###### Silver (best effort)
+###### Bronze (background).
+
+Figure 29-18 Configuring QoS Settings You can also set the Wi-Fi Multimedia (WMM) policy, call admission control (CAC) policies, and bandwidth parameters on the QoS page.
+You can learn more about QoS in the
+#### Configuring Advanced WLAN Settings
+
+Finally, you can select the Advanced tab to configure a variety of advanced WLAN settings.
+
+From the page shown in Figure 29-19, you can enable functions such as coverage hole detection, peer-to-peer blocking, client exclusion, client load limits, and so on.
+
+Figure 29-19 Configuring Advanced WLAN Settings Although most of the advanced settings are beyond the scope of the CCNA objectives, you should be aware of a few defaults that might affect your wireless clients.
+
+By default, client sessions with the WLAN are limited to 1800 seconds (30 minutes).
+Once that session time expires, a client will be required to reauthenticate.
+This setting is controlled by the Enable Session Timeout check box and the Timeout field.
+
+A controller maintains a set of security policies that are used to detect potentially malicious wireless clients.
+If a client exhibits a certain behavior, the controller can exclude it from the WLAN for a period of time.
+By default, all clients are subject to the policies configured under Security > Wireless Protection Policies > Client Exclusion Policies.
+These policies include excessive 802.11 association failures, 802.11 authentication failures, 802.1x authentication failures, web authentication failures, and IP address theft or reuse.
+Offending clients will be automatically excluded or blocked for 60 seconds, as a deterrent to attacks on the wireless network.
+
+NOTE Is 60 seconds really enough time to deter an attack coming from a wireless client?
+
+In the case of a brute-force attack, where passwords are guessed from a dictionary of possibilities, 60 seconds is enough to disrupt and delay an attacker’s progress.
+What might have taken 2 minutes to find a matching password without an exclusion policy would take 15 years with one.
+#### Finalizing WLAN Configuration
+
+When you are satisfied with the settings in each of the WLAN configuration tabs, click the Apply button in the upper-right corner of the WLAN Edit screen.
+The WLAN will be created and added to the controller configuration.
+In Figure 29-20, the Engineering WLAN has been added as WLAN ID 1 and is enabled for use.
+
+Figure 29-20 Displaying WLANs Configured on a Controller Be aware that, by default, a controller will not allow management traffic that is initiated from a WLAN. That means you (or anybody else) cannot access the controller GUI or CLI from a wireless device that is associated to the WLAN. This is considered to be a good security practice because the controller is kept isolated from networks that might be easily accessible or where someone might eavesdrop on the management session traffic.
+Instead, you can access the controller through its wired interfaces.
+
+You can change the default behavior on a global basis (all WLANs) by selecting the Management tab and then selecting Mgmt Via Wireless, as shown in Figure 29-21.
+Check the box to allow management sessions from any WLAN that is configured on the controller.
+
+Figure 29-21 Configuring Management Access from Wireless Networks
+### Chapter Review
+
+Review this chapter’s material using either the tools in the book or the interactive tools for the same material found on the book’s companion website.
+Table 29-3 outlines the key review elements and where you can find them.
+To better track your study progress, record when you completed these activities in the second column.
+
+Table 29-3 Chapter Review Tracking Table end.
+
+Review All the Key Topics Review the most important topics in this chapter, noted with the Key Topic icon in the outer margin of the page.
+Table 29-4 lists a reference of these key topics and the page numbers on which each is found.
+## Part VIII Review
+
+Keep track of your part review progress with the checklist in Table P8-1.
+Details on each task follow the table.
+
+Table P8-1 Part VIII Part Review Checklist Activity 1st Date Completed 2nd Date Completed Repeat All DIKTA Questions Answer Part Review Questions Review Key Topics Repeat All DIKTA Questions For this task, use the PCPT software to answer the “Do I Know This Already?” questions again for the chapters in this part of the book.
+
+Answer Part Review Questions For this task, use PTP to answer the Part Review questions for this part of the book.
+
+Review Key Topics Review all key topics in all chapters in this part, either by browsing the chapters or using the Key Topics application on the companion website.
+## Part IX Appendixes
+
+Glossary Appendix A Numeric Reference Tables Appendix B Exam Updates Appendix C Answers to the “Do I Know This Already?” Quizzes APPENDIX A Numeric Reference Tables This appendix provides several useful reference tables that list numbers used throughout this book.
+Specifically:
+
+Table A-1: A decimal-binary cross reference, useful when converting from decimal to binary and vice versa.
